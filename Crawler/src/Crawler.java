@@ -1,5 +1,8 @@
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import java.util.HashSet;
@@ -13,14 +16,16 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 public class Crawler implements Runnable {
+	
 	public int Max_size;
 	private HashSet <String> fetched;
-	private LinkedList<String> tovisit;
-	public Crawler(HashSet <String> fetched, LinkedList<String> tovisit){
+	private HashSet <String> tofetch;
+	private static int count = 0;
+	
+	public Crawler(HashSet <String> fetched, HashSet <String> tofetch){
 		this.fetched = fetched;
-		this.tovisit = tovisit;
+		this.tofetch = tofetch;
 		this.Max_size=4000;
-		
 	}
      
 	public void set_size(int n){
@@ -31,19 +36,29 @@ public class Crawler implements Runnable {
 	} 
 
 	public void run(){
-		while(this.fetched.size()<this.Max_size){
+		
+		while(this.fetched.size() + this.tofetch.size() < this.Max_size){
 			Document doc;
 			String to_fetch="";
-			System.out.println(fetched.size());
-			if (this.tovisit.isEmpty())
-				break;
+			//System.out.println(this.fetched.size() + this.tofetch.size());
 			
-			synchronized (tovisit) {// synchronize on tovisit to avoid race conditions
-				if (this.tovisit.size()>0)
-				to_fetch = this.tovisit.remove(0);
+			synchronized (tofetch) {// synchronize on tofetch to avoid race conditions
+				if (this.tofetch.isEmpty())
+					break;
+				to_fetch = this.tofetch.iterator().next();
+				tofetch.remove(to_fetch);
 			}
+			
 			try {
+				// fetch the document
 				doc = Jsoup.connect(to_fetch).get();
+				
+				// add fetchd page to fetched hashset
+				synchronized (fetched) {
+					fetched.add(to_fetch); 
+				}
+				
+				// get all URLs inside that page
 				Elements links = doc.select("a");
 				for (Element url: links){
 					String absHref = url.attr("abs:href");
@@ -60,22 +75,33 @@ public class Crawler implements Runnable {
 					}
 					absHref = absHref.toLowerCase().replaceFirst("www.", "");
 					
-					synchronized(fetched) {	// synchronize on fetched to avoid race conditions
+					synchronized(tofetch) {	// synchronize on fetched to avoid race conditions
 						
 						//check if the link for file or site
-						try {	// catch wrong URL
+						try {	
+							
+							// catch wrong URL
 							URL u = new URL(absHref);
-							boolean added = this.fetched.add(u.toString());
-							if(added){
-								this.tovisit.add(u.toString());
-								//System.out.println(absHref);
-							}
+							this.tofetch.add(u.toString());
 						}
 						catch (MalformedURLException ex){
 							System.out.println(ex.getMessage());
 						}
 					}
 				}
+				
+				// write page to file
+				String docName="";
+				synchronized(this){
+					docName = "documents\\doc" + count + ".txt";
+					count++;
+				}
+				
+				PrintStream out = new PrintStream(new File(docName));
+				out.println(to_fetch);
+				out.print(doc.body());
+				out.close();
+				
 			} catch (IllegalArgumentException e) {
 				System.out.println("Bad URL: " + to_fetch);
 				//e.printStackTrace();
@@ -88,7 +114,44 @@ public class Crawler implements Runnable {
 			}
 
 		}
-		System.out.println(this.fetched.size());
+		
+		// fetch and save not fetched pages
+		save();
+	}
+	
+	public void save() {
+		// Write rest of pages to files
+		for (int i=0; i < tofetch.size(); i++) {
+			try {
+				
+				String docName="", to_fetch="";
+				synchronized (tofetch) {// synchronize on tofetch to avoid race conditions
+					to_fetch = this.tofetch.iterator().next();
+					tofetch.remove(to_fetch);
+					fetched.add(to_fetch); 
+				}
+				
+				synchronized(this){
+					docName = "documents\\doc" + count + ".txt";
+					count++;
+				}
+				
+				// write page to file
+				PrintStream output = new PrintStream(new File(docName));
+				output.println(to_fetch);
+				output.print(Jsoup.connect(to_fetch).get().body());
+				output.close();
+				
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getMessage());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+			}
+			System.out.println(tofetch.size());	// debugining
+		}
+		
 	}
 
 }
