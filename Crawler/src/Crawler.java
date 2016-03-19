@@ -79,9 +79,13 @@ public class Crawler implements Runnable {
 						
 						//check if the link for file or site
 						try {	
-							
 							// catch wrong URL
 							URL u = new URL(absHref);
+							
+							// if fetched before, do not add it to tofetch
+							if (fetched.contains(u.toString()))
+								continue;
+							
 							this.tofetch.add(u.toString());
 						}
 						catch (MalformedURLException ex){
