@@ -132,7 +132,6 @@ public class Crawler implements Runnable {
 				synchronized (tofetch) {// synchronize on tofetch to avoid race conditions
 					to_fetch = this.tofetch.iterator().next();
 					tofetch.remove(to_fetch);
-					fetched.add(to_fetch); 
 				}
 				
 				synchronized(this){
@@ -145,6 +144,11 @@ public class Crawler implements Runnable {
 				output.println(to_fetch);
 				output.print(Jsoup.connect(to_fetch).get().body());
 				output.close();
+				
+				// add to fetched
+				synchronized (fetched) {
+					fetched.add(to_fetch); 
+				}
 				
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
