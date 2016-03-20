@@ -6,9 +6,6 @@ import java.io.PrintStream;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
 import java.net.URL;
 
 import org.jsoup.Jsoup;
@@ -103,7 +100,7 @@ public class Crawler implements Runnable {
 				
 				PrintStream out = new PrintStream(new File(docName));
 				out.println(to_fetch);
-				out.print(doc.body());
+				out.print(doc.html());
 				out.close();
 				
 			} catch (IllegalArgumentException e) {
@@ -142,7 +139,7 @@ public class Crawler implements Runnable {
 				// write page to file
 				PrintStream output = new PrintStream(new File(docName));
 				output.println(to_fetch);
-				output.print(Jsoup.connect(to_fetch).get().body());
+				output.print(Jsoup.connect(to_fetch).get().html());
 				output.close();
 				
 				// add to fetched
