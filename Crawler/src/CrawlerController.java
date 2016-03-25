@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 public class CrawlerController {
 	
-	public void Crawle(String seedFile, int threadCount, int size) {
+	public void Crawl(String seedFile, int threadCount, int size) {
 		
-		HashSet<String> fetched = new HashSet<String>();
-		HashSet <String> tofetch = new HashSet<String>();
+		HashSet<String> fetched = new HashSet<>();
+		HashSet <String> tofetch = new HashSet<>();
 		
 		Scanner seed=null;
 		try {
@@ -21,6 +21,7 @@ public class CrawlerController {
 		}
 		
 		// read the seed URLs
+		assert seed != null;
 		while(seed.hasNextLine()){
 			String url = seed.nextLine();
 			tofetch.add(url);
@@ -47,7 +48,7 @@ public class CrawlerController {
 		
 		try {
 			// write the list of fetched URLs in a file
-			PrintStream out = new PrintStream(new File("Results.txt"));
+			PrintStream out = new PrintStream(new File("Crawler/Results.txt"));
 		
 			System.out.println("Total Fetched URLs: " + fetched.size());
 			for (int i=0; i < fetched.size(); i++){
