@@ -8,11 +8,19 @@ import java.util.Scanner;
 
 public class CrawlerController {
 	
+<<<<<<< HEAD
 	private void seed(String seedFile) {
 		// insert the seed into DB
 		Connection connection = null; // manages connection
 	    Statement statement = null; // query statement
 	    
+=======
+	public void Crawl(String seedFile, int threadCount, int size) {
+		
+		HashSet<String> fetched = new HashSet<>();
+		HashSet <String> tofetch = new HashSet<>();
+		
+>>>>>>> abd5658109e0280f01c693344ff66af23d6aed64
 		Scanner seed=null;
 		try {
 			seed = new Scanner(new File(seedFile));
@@ -47,7 +55,16 @@ public class CrawlerController {
 	
 	public void crawle(String seedFile, int threadCount, int size, int threadURLCount) {
 		
+<<<<<<< HEAD
 		seed(seedFile);
+=======
+		// read the seed URLs
+		assert seed != null;
+		while(seed.hasNextLine()){
+			String url = seed.nextLine();
+			tofetch.add(url);
+		}
+>>>>>>> abd5658109e0280f01c693344ff66af23d6aed64
 		
 		Crawler.configure(threadCount, threadURLCount);
 		
@@ -71,7 +88,7 @@ public class CrawlerController {
 		
 	/*	try {
 			// write the list of fetched URLs in a file
-			PrintStream out = new PrintStream(new File("Results.txt"));
+			PrintStream out = new PrintStream(new File("Crawler/Results.txt"));
 		
 			System.out.println("Total Fetched URLs: " + fetched.size());
 			for (int i=0; i < fetched.size(); i++){
