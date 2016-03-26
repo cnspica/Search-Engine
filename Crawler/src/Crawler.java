@@ -1,62 +1,91 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintStream;
-import java.net.MalformedURLException;
-import java.net.SocketTimeoutException;
-import java.util.HashSet;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.Statement;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+
 public class Crawler implements Runnable {
 	
-	public int Max_size;
-	private HashSet <String> fetched;
-	private HashSet <String> tofetch;
-	private static int count = 0;
+	public int maxSize;
+	private static AtomicInteger totalFetchedURLs;
+	private static AtomicInteger fetchedPagesCount;
+	private LinkedList<String> queue;
+	private static int threadURLCount;
+	private static int threadCount = 1;
+	private Connection connection = null;
+	private Statement statement = null;
+	private Statement statementNonQuery = null;
 	
-	public Crawler(HashSet <String> fetched, HashSet <String> tofetch){
-		this.fetched = fetched;
-		this.tofetch = tofetch;
-		this.Max_size=4000;
+	
+	public Crawler(String db, String username, String pass){
+		this.maxSize = 4000;
+		queue = new LinkedList<String>();
+		
+		// establish connection to database                              
+	    try {
+			connection = DriverManager.getConnection(db, username, pass);
+	
+			// create Statement for querying database
+			statement = connection.createStatement();
+			statementNonQuery = connection.createStatement();
+	    } catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
      
-	public void set_size(int n){
-		this.Max_size=n;	
+	public static void configure(int threadCount, int threadURLCount){
+		Crawler.threadCount = threadCount;
+		Crawler.threadURLCount = threadURLCount;
+		Crawler.totalFetchedURLs = new AtomicInteger();
+		Crawler.fetchedPagesCount = new AtomicInteger();
 	}
-	public int get_size(){
-		return this.Max_size;
+	
+	public void setSize(int n){
+		this.maxSize=n;	
+	}
+	public int getSize(){
+		return this.maxSize;
 	} 
 
 	public void run(){
 		
-		while(this.fetched.size() + this.tofetch.size() < this.Max_size){
-			Document doc;
-			String to_fetch="";
-			//System.out.println(this.fetched.size() + this.tofetch.size());
-			
-			synchronized (tofetch) {// synchronize on tofetch to avoid race conditions
-				if (this.tofetch.isEmpty())
+		while(true){
+			// check if queue is empty
+			if (queue.size() == 0 && Crawler.totalFetchedURLs.get() < this.maxSize){
+				int z = waitForData();
+				if (z == 2)	// all threads are waiting then break
 					break;
-				to_fetch = this.tofetch.iterator().next();
-				tofetch.remove(to_fetch);
 			}
 			
+			// fetch URL
 			try {
 				// fetch the document
-				doc = Jsoup.connect(to_fetch).get();
+				String toFetch = queue.removeFirst();
+				Document doc = Jsoup.connect(toFetch).get();
 				
-				// add fetchd page to fetched hashset
-				synchronized (fetched) {
-					fetched.add(to_fetch); 
+				// save document and continue
+				saveDocument(doc, toFetch);
+				if (Crawler.totalFetchedURLs.get() >= this.maxSize) {
+					continue;
 				}
 				
-				// get all URLs inside that page
+				// fetch the URLs
 				Elements links = doc.select("a");
+				System.out.println(links.size() + " " + toFetch);
 				for (Element url: links){
 					String absHref = url.attr("abs:href");
 					if (!absHref.startsWith("https://") && !absHref.startsWith("http://"))
@@ -71,92 +100,164 @@ public class Crawler implements Runnable {
 						absHref=f;
 					}
 					absHref = absHref.toLowerCase().replaceFirst("www.", "");
-					
-					synchronized(tofetch) {	// synchronize on fetched to avoid race conditions
-						
-						//check if the link for file or site
-						try {	
-							// catch wrong URL
-							URL u = new URL(absHref);
-							
-							// if fetched before, do not add it to tofetch
-							if (fetched.contains(u.toString()))
-								continue;
-							
-							this.tofetch.add(u.toString());
-						}
-						catch (MalformedURLException ex){
-							System.out.println(ex.getMessage());
-						}
+					URL u = new URL(absHref);
+					int result;
+					synchronized(totalFetchedURLs){
+						// insert into DB
+						result = insertURLIntoDB(u.toString());
 					}
+					
+					// increment totalFetchedURLs
+					if (result == 1)
+						totalFetchedURLs.incrementAndGet();
+					
+					// debugging
+					//System.out.println(totalFetchedURLs.get());
 				}
 				
-				// write page to file
-				String docName="";
-				synchronized(this){
-					docName = "documents\\doc" + count + ".txt";
-					count++;
-				}
+				//check for ending condition
+				if (queue.size() == 0 && totalFetchedURLs.get() >= maxSize)
+					break;
 				
-				PrintStream out = new PrintStream(new File(docName));
-				out.println(to_fetch);
-				out.print(doc.html());
-				out.close();
-				
-			} catch (IllegalArgumentException e) {
-				System.out.println("Bad URL: " + to_fetch);
-				//e.printStackTrace();
-			} catch (SocketTimeoutException e){
-				System.out.println("Read Time Out");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println(e.getMessage());
-				//e.printStackTrace();
+			} catch (Exception ex){
+				System.out.println(ex.getMessage());
 			}
-
+			
+			
 		}
-		
+		System.out.println(totalFetchedURLs.get());
 		// fetch and save not fetched pages
-		save();
+		try {
+			fetchPages();
+		}
+		catch (Exception e){
+			
+		} finally {
+			// close connection
+			try                                                        
+	         {                                                                                               
+	            statement.close();                                      
+	            connection.close();                                     
+	         } // end try                                               
+	         catch ( Exception exception )                              
+	         {                                                          
+	            exception.printStackTrace();                            
+	         } // end catch             
+		}
 	}
 	
-	public void save() {
-		// Write rest of pages to files
-		for (int i=0; i < tofetch.size(); i++) {
-			try {
-				
-				String docName="", to_fetch="";
-				synchronized (tofetch) {// synchronize on tofetch to avoid race conditions
-					to_fetch = this.tofetch.iterator().next();
-					tofetch.remove(to_fetch);
-				}
-				
-				synchronized(this){
-					docName = "documents\\doc" + count + ".txt";
-					count++;
-				}
-				
-				// write page to file
-				PrintStream output = new PrintStream(new File(docName));
-				output.println(to_fetch);
-				output.print(Jsoup.connect(to_fetch).get().html());
-				output.close();
-				
-				// add to fetched
-				synchronized (fetched) {
-					fetched.add(to_fetch); 
-				}
-				
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				System.out.println(e.getMessage());
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				//e.printStackTrace();
+	private int insertURLIntoDB(String url){
+		return executeNonQuery("INSERT INTO URLs(URL, beingFetched) VALUES ('" + url + "', false)");
+	}
+	
+	private boolean getURLsFromDB(int n){
+		// fetch URLs
+		//System.out.println("SELECT URL, id FROM URLs WHERE beingFetched = false LIMIT " + n);
+	    String query = "SELECT URL, id FROM URLs WHERE beingFetched = false LIMIT " + n;
+	    boolean found = false;
+	    ResultSet resultSet = null;
+	    int ID = 0;
+		try { 
+		    // query database                                        
+			resultSet = executeQuery(query);
+			while (resultSet.next()) {
+				queue.add(resultSet.getObject("URL").toString());
+			    ID = resultSet.getInt("id");
+			    executeNonQuery("UPDATE URLs SET beingFetched = true WHERE id = " + ID);
+			    found = true;
 			}
-			System.out.println(tofetch.size());	// debugining
-		}
-		
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return found;
 	}
 
+	public void fetchPages() {
+		// get pages URLs from DB
+		int total = (totalFetchedURLs.get() - fetchedPagesCount.get())/Crawler.threadCount;
+		synchronized(totalFetchedURLs){
+			Crawler.threadCount--;
+			getURLsFromDB(total);
+		}
+		// Write rest of pages to files
+		System.out.println(Thread.currentThread().getName() + " has just started fetching actual pages(" + queue.size() + ")");
+		while (this.queue.size() > 0){
+			try {
+				// fetch page
+				String toFetch = queue.removeFirst();
+				Document doc;
+				doc = Jsoup.connect(toFetch).get();
+			
+				// write page to file
+				saveDocument(doc, toFetch);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		System.out.println(Thread.currentThread().getName() + " has finished");
+	}
+	
+	public int waitForData(){
+		// sleep fore 1 second then try fetching data if nothing is returened sleep again
+		// try this for 10 times if it fails
+		// return 2
+		// when 2 is returned the thread break from the fetching loop and start fetching actual documents then stop
+		int c = 0;
+		boolean found = false;
+		while (!found) {
+			try {
+				Thread.sleep(1000);
+				c++;
+				synchronized(totalFetchedURLs){
+					found = getURLsFromDB(threadURLCount);
+				}
+				if (c == 100)
+					return 2;
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		return 1;
+	}
+	
+	private void saveDocument(Document doc, String url){
+		String docName = "documents\\doc" + fetchedPagesCount.incrementAndGet() + ".txt";
+		PrintStream out;
+		try {
+			out = new PrintStream(new File(docName));
+			out.println(url);
+			out.print(doc.html());
+			out.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ResultSet executeQuery(String query){
+		ResultSet resultSet = null;
+	    try {
+		     // query database                                        
+		     resultSet = statement.executeQuery(query);
+		     
+		     
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+	    
+	    return resultSet;
+	}
+	
+	public int executeNonQuery(String query){
+		
+	    int result = 100;
+	    try {
+		    // query database                                        
+		    result = statementNonQuery.executeUpdate(query);
+		    
+		} catch (Exception ex) {
+			//System.out.println(ex.getMessage());
+		} 
+	    return result;
+	}
 }

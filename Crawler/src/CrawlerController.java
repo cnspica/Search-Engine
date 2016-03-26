@@ -1,17 +1,18 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintStream;
-import java.util.HashSet;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.util.Scanner;
 
 
 public class CrawlerController {
 	
-	public void Crawle(String seedFile, int threadCount, int size) {
-		
-		HashSet<String> fetched = new HashSet<String>();
-		HashSet <String> tofetch = new HashSet<String>();
-		
+	private void seed(String seedFile) {
+		// insert the seed into DB
+		Connection connection = null; // manages connection
+	    Statement statement = null; // query statement
+	    
 		Scanner seed=null;
 		try {
 			seed = new Scanner(new File(seedFile));
@@ -19,19 +20,42 @@ public class CrawlerController {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		try {
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/APT", "root", "");
+			// create Statement for querying database
+			statement = connection.createStatement();
+			// read the seed URLs
+			while(seed.hasNextLine()){
+				String url = seed.nextLine();
+				statement.executeUpdate("INSERT INTO URLs(URL, beingFetched) VALUES ('" + url + "', false)");
+			}
+		} catch (Exception ex){
+			
+		}  finally // ensure resultSet, statement and connection are closed
+	      {                                                             
+	         try                                                        
+	         {                                                                                              
+	            statement.close();                                      
+	            connection.close();                                     
+	         } // end try                                               
+	         catch ( Exception exception )                              
+	         {                                                          
+	            exception.printStackTrace();                            
+	         } // end catch                                             
+	      } // end finally       
+	}
+	
+	public void crawle(String seedFile, int threadCount, int size, int threadURLCount) {
 		
-		// read the seed URLs
-		while(seed.hasNextLine()){
-			String url = seed.nextLine();
-			tofetch.add(url);
-		}
+		seed(seedFile);
 		
+		Crawler.configure(threadCount, threadURLCount);
 		
 		// create threadCount threads to fetch URLS
 		Thread[] t = new Thread[threadCount];
 		for (int i=0; i < threadCount; i++){
-			Crawler test = new Crawler(fetched, tofetch);
-			test.set_size(size);
+			Crawler test = new Crawler("jdbc:mysql://localhost:3306/APT", "root", "");
+			test.setSize(size);
 			t[i]=new Thread(test);
 			t[i].start();
 		}
@@ -45,7 +69,7 @@ public class CrawlerController {
 			} 	
 		}
 		
-		try {
+	/*	try {
 			// write the list of fetched URLs in a file
 			PrintStream out = new PrintStream(new File("Results.txt"));
 		
@@ -60,6 +84,6 @@ public class CrawlerController {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		} */
 	}
 }
