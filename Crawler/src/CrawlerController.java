@@ -8,24 +8,15 @@ import java.util.Scanner;
 
 public class CrawlerController {
 	
-<<<<<<< HEAD
+
 	private void seed(String seedFile) {
 		// insert the seed into DB
 		Connection connection = null; // manages connection
 	    Statement statement = null; // query statement
-	    
-=======
-	public void Crawl(String seedFile, int threadCount, int size) {
-		
-		HashSet<String> fetched = new HashSet<>();
-		HashSet <String> tofetch = new HashSet<>();
-		
->>>>>>> abd5658109e0280f01c693344ff66af23d6aed64
 		Scanner seed=null;
 		try {
 			seed = new Scanner(new File(seedFile));
 		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		try {
@@ -55,17 +46,7 @@ public class CrawlerController {
 	
 	public void crawle(String seedFile, int threadCount, int size, int threadURLCount) {
 		
-<<<<<<< HEAD
-		seed(seedFile);
-=======
-		// read the seed URLs
-		assert seed != null;
-		while(seed.hasNextLine()){
-			String url = seed.nextLine();
-			tofetch.add(url);
-		}
->>>>>>> abd5658109e0280f01c693344ff66af23d6aed64
-		
+		seed(seedFile);		
 		Crawler.configure(threadCount, threadURLCount);
 		
 		// create threadCount threads to fetch URLS
