@@ -6,9 +6,6 @@ public class Test {
 		CrawlerController crawler = new CrawlerController();
 
 		crawler.crawle("seed.txt", 4, 200, 1);
-
-
-		
 	}
 	
 }

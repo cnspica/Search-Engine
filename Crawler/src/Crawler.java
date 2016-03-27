@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
@@ -14,6 +13,7 @@ import java.sql.Statement;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import com.trigonic.jrobotx.RobotExclusion;
 import org.jsoup.select.Elements;
 
 
@@ -28,12 +28,12 @@ public class Crawler implements Runnable {
 	private Connection connection = null;
 	private Statement statement = null;
 	private Statement statementNonQuery = null;
+	private Lock lock;
 	
-	
-	public Crawler(String db, String username, String pass){
+	public Crawler(String db, String username, String pass, Lock lock){
 		this.maxSize = 4000;
 		queue = new LinkedList<String>();
-		
+		this.lock = lock;
 		// establish connection to database                              
 	    try {
 			connection = DriverManager.getConnection(db, username, pass);
@@ -59,67 +59,92 @@ public class Crawler implements Runnable {
 	}
 	public int getSize(){
 		return this.maxSize;
-	} 
+	}
+
+	public String isValidURL(String absHref){
+		if (!absHref.startsWith("https://") && !absHref.startsWith("http://"))
+			return "";
+		if(absHref.endsWith(".pdf") || absHref.endsWith(".jpeg") || absHref.endsWith(".jpg")
+				|| absHref.endsWith(".gif") || absHref.endsWith(".docx") || absHref.endsWith(".ppt")
+				|| absHref.endsWith(".xls") || absHref.endsWith(".PNG") || absHref.endsWith(".GIF"))
+			return "";
+
+		int ind=absHref.indexOf('#');
+		if(ind!=-1){
+			String f=absHref.substring(0, ind);
+			absHref=f;
+		}
+		return absHref.toLowerCase().replaceFirst("www.", "");
+	}
 
 	public void run(){
-		
+		RobotExclusion robotExclusion = new RobotExclusion();
 		while(true){
 			// check if queue is empty
 			if (queue.size() == 0 && Crawler.totalFetchedURLs.get() < this.maxSize){
-				int z = waitForData();
-				if (z == 2)	// all threads are waiting then break
-					break;
+				waitForData(threadURLCount);
 			}
 			
 			// fetch URL
 			try {
 				// fetch the document
+				if (queue.size() == 0) {
+					System.out.println(Thread.currentThread().getName() + " has just finished fetching URLs.");
+					break;
+				}
 				String toFetch = queue.removeFirst();
 				Document doc = Jsoup.connect(toFetch).get();
-				
+
+				// fetch the URLs
+				Elements links = doc.select("a");
+
+				// update outCount of url and title
+				incrementURLOutCount(toFetch, links.size());
+				updateTitle(toFetch, doc.title());
+
 				// save document and continue
 				saveDocument(doc, toFetch);
 				if (Crawler.totalFetchedURLs.get() >= this.maxSize) {
 					continue;
 				}
-				
-				// fetch the URLs
-				Elements links = doc.select("a");
+
+				// debugging
 				System.out.println(links.size() + " " + toFetch);
+
+				// add urls to DB
 				for (Element url: links){
 					String absHref = url.attr("abs:href");
-					if (!absHref.startsWith("https://") && !absHref.startsWith("http://"))
+					absHref = isValidURL(absHref);
+					if (absHref.equals(""))		// check if valid URL
 						continue;
-					if(absHref.endsWith(".pdf") || absHref.endsWith(".jpeg") || absHref.endsWith(".jpg")
-							|| absHref.endsWith(".gif") || absHref.endsWith(".docx") || absHref.endsWith(".ppt")
-							|| absHref.endsWith(".xls") || absHref.endsWith(".PNG") || absHref.endsWith(".GIF"))
+					URL checkedURL = new URL(absHref);
+					if(!robotExclusion.allows(checkedURL,"*")){
+						System.out.println("Not allowed URL "+ checkedURL);
 						continue;
-					int ind=absHref.indexOf('#');
-					if(ind!=-1){
-						String f=absHref.substring(0, ind);
-						absHref=f;
 					}
-					absHref = absHref.toLowerCase().replaceFirst("www.", "");
-					URL u = new URL(absHref);
 					int result;
-					synchronized(totalFetchedURLs){
+					synchronized(lock){
 						// insert into DB
-						result = insertURLIntoDB(u.toString());
+						result = insertURLIntoDB(checkedURL.toString());
+						// increment totalFetchedURLs
+						if (result == 1) {
+							totalFetchedURLs.incrementAndGet();
+							lock.notifyAll();
+						}
+						else
+							incrementURLInCount(checkedURL.toString());
 					}
-					
-					// increment totalFetchedURLs
-					if (result == 1)
-						totalFetchedURLs.incrementAndGet();
-					
+
 					// debugging
 					//System.out.println(totalFetchedURLs.get());
+
+					//check for ending condition
+					if (totalFetchedURLs.get() >= maxSize)
+						break;
 				}
 				
-				//check for ending condition
-				if (queue.size() == 0 && totalFetchedURLs.get() >= maxSize)
-					break;
-				
 			} catch (Exception ex){
+				//ex.printStackTrace();
 				System.out.println(ex.getMessage());
 			}
 			
@@ -147,13 +172,25 @@ public class Crawler implements Runnable {
 	}
 	
 	private int insertURLIntoDB(String url){
-		return executeNonQuery("INSERT INTO URLs(URL, beingFetched) VALUES ('" + url + "', false)");
+		return executeNonQuery("INSERT INTO URLs(URL, fetched, inCount) VALUES ('" + url + "', false, 1)");
+	}
+
+	private int incrementURLInCount(String url){
+		return executeNonQuery("UPDATE URLs SET inCount = inCount + 1 WHERE URL = '" + url + "'");
+	}
+
+	private int incrementURLOutCount(String url, int count){
+		return executeNonQuery("UPDATE URLs SET outCount = " + count + " WHERE URL = '" + url + "'");
+	}
+
+	private int updateTitle(String url, String title) {
+		return executeNonQuery("UPDATE URLs SET title = '" + title.replaceAll("'", "\\'") + "' WHERE URL = '" + url + "'");
 	}
 	
 	private boolean getURLsFromDB(int n){
 		// fetch URLs
-		//System.out.println("SELECT URL, id FROM URLs WHERE beingFetched = false LIMIT " + n);
-	    String query = "SELECT URL, id FROM URLs WHERE beingFetched = false LIMIT " + n;
+		//System.out.println("SELECT URL, id FROM URLs WHERE fetched = false LIMIT " + n);
+	    String query = "SELECT URL, id FROM URLs WHERE fetched = false LIMIT " + n;
 	    boolean found = false;
 	    ResultSet resultSet = null;
 	    int ID = 0;
@@ -163,7 +200,7 @@ public class Crawler implements Runnable {
 			while (resultSet.next()) {
 				queue.add(resultSet.getObject("URL").toString());
 			    ID = resultSet.getInt("id");
-			    executeNonQuery("UPDATE URLs SET beingFetched = true WHERE id = " + ID);
+			    executeNonQuery("UPDATE URLs SET fetched = true WHERE id = " + ID);
 			    found = true;
 			}
 		} catch (Exception e) {
@@ -173,46 +210,55 @@ public class Crawler implements Runnable {
 	}
 
 	public void fetchPages() {
-		// get pages URLs from DB
-		int total = (totalFetchedURLs.get() - fetchedPagesCount.get())/Crawler.threadCount;
-		synchronized(totalFetchedURLs){
-			Crawler.threadCount--;
-			getURLsFromDB(total);
-		}
+		int total = (Crawler.totalFetchedURLs.get() - Crawler.fetchedPagesCount.get())/Crawler.threadCount;
+		getURLsFromDB(total);
+
 		// Write rest of pages to files
 		System.out.println(Thread.currentThread().getName() + " has just started fetching actual pages(" + queue.size() + ")");
-		while (this.queue.size() > 0){
+		while (this.queue.size() > 0) {
 			try {
 				// fetch page
 				String toFetch = queue.removeFirst();
 				Document doc;
 				doc = Jsoup.connect(toFetch).get();
-			
+				Elements links = doc.select("a");
+				incrementURLOutCount(toFetch, links.size());    // update outCount
+				updateTitle(toFetch, doc.title());    // update title
+
+				// update inCount of each url in the fetched page
+				for (Element url: links){
+					String u = isValidURL(url.attr("abs:href"));
+					if (u.equals(""))
+						continue;
+					incrementURLInCount(new URL(u).toString());
+				}
+
 				// write page to file
 				saveDocument(doc, toFetch);
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
+				//e.printStackTrace();
 			}
 		}
+
 		System.out.println(Thread.currentThread().getName() + " has finished");
 	}
 	
-	public int waitForData(){
+	public int waitForData(int n){
 		// sleep fore 1 second then try fetching data if nothing is returened sleep again
 		// try this for 10 times if it fails
 		// return 2
 		// when 2 is returned the thread break from the fetching loop and start fetching actual documents then stop
-		int c = 0;
+
 		boolean found = false;
 		while (!found) {
 			try {
-				Thread.sleep(1000);
-				c++;
-				synchronized(totalFetchedURLs){
-					found = getURLsFromDB(threadURLCount);
+
+				synchronized(lock) {
+					found = getURLsFromDB(n);
+					if (found) break;
+					lock.wait();
 				}
-				if (c == 100)
-					return 2;
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
