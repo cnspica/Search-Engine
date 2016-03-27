@@ -120,6 +120,7 @@ public class Crawler implements Runnable {
 				// update outCount of url and title
 				incrementURLOutCount(toFetch, links.size());
 				updateTitle(toFetch, doc.title());
+				updateInCountBatch(toFetch, links);
 
 				// save document and continue
 				saveDocument(doc, toFetch);
@@ -150,8 +151,8 @@ public class Crawler implements Runnable {
 							totalFetchedURLs.incrementAndGet();
 							lock.notifyAll();
 						}
-						else
-							incrementURLInCount(checkedURL.toString());
+						//else
+							//incrementURLInCount(checkedURL.toString());
 					}
 
 					// debugging
@@ -243,15 +244,8 @@ public class Crawler implements Runnable {
 				Elements links = doc.select("a");
 				incrementURLOutCount(toFetch, links.size());    // update outCount
 				updateTitle(toFetch, doc.title());    // update title
+				updateInCountBatch(toFetch, links);		// update inCount
 
-				/*// update inCount of each url in the fetched page
-				for (Element url: links){
-					String u = isValidURL(url.attr("abs:href"));
-					if (u.equals(""))
-						continue;
-					incrementURLInCount(new URL(u).toString());
-				}*/
-				updateInCountBatch(toFetch, links);
 				// write page to file
 				saveDocument(doc, toFetch);
 			} catch (Exception e) {
