@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.net.MalformedURLException;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -75,6 +76,25 @@ public class Crawler implements Runnable {
 			absHref=f;
 		}
 		return absHref.toLowerCase().replaceFirst("www.", "");
+	}
+
+	private void updateInCountBatch(String url, Elements links) {
+		String query = "Update URLs SET inCount = inCount + 1 WHERE URL in (";
+		for (Element link: links){
+			String u = isValidURL(link.attr("abs:href"));
+			if (u.equals(""))
+				continue;
+			try {
+				u = new URL(u).toString();
+				query += "'" + u.toString() + "', ";
+			} catch (MalformedURLException e) {
+				//e.printStackTrace();
+			}
+
+		}
+		query = query.substring(0, query.length() - 2) + ")";
+		System.out.println(query);
+		executeNonQuery(query);
 	}
 
 	public void run(){
@@ -225,14 +245,14 @@ public class Crawler implements Runnable {
 				incrementURLOutCount(toFetch, links.size());    // update outCount
 				updateTitle(toFetch, doc.title());    // update title
 
-				// update inCount of each url in the fetched page
+				/*// update inCount of each url in the fetched page
 				for (Element url: links){
 					String u = isValidURL(url.attr("abs:href"));
 					if (u.equals(""))
 						continue;
 					incrementURLInCount(new URL(u).toString());
-				}
-
+				}*/
+				updateInCountBatch(toFetch, links);
 				// write page to file
 				saveDocument(doc, toFetch);
 			} catch (Exception e) {
