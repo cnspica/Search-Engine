@@ -93,7 +93,6 @@ public class Crawler implements Runnable {
 
 		}
 		query = query.substring(0, query.length() - 2) + ")";
-		System.out.println(query);
 		executeNonQuery(query);
 	}
 
