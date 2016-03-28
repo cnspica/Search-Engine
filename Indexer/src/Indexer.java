@@ -1,9 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 
-import java.nio.file.Paths;
+import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,22 +19,17 @@ import org.tartarus.snowball.SnowballStemmer;
  */
 public class Indexer implements Runnable{
     private static Indexer indexer;
-    private HashSet<String> urls;
+    private HashSet<File> crawlerOutputFiles;
     private HashSet<String> excludedKeywords;
     private HashSet<String> excludedTags;
-    private final Object urlsLock = new Object();
+    private final Object filesLock = new Object();
+    private static final String specialCharacters=" |\\.|:|!|\\?|\\)|\\(|,|\\{|\\}|\\]|\\[|/|\\+|\"|_|'|`|\'|'\'";
     private Controller dbController;
-    private String pathtoDocFolder;
-    private AtomicInteger countofdocFiles;
-    //regex for excluding delimiters that may be found in html page
-    private final String undesiredDelimiters=" |\\.|:|!|\\?|\\)|\\(|,|\\{|\\}|\\]|\\[|/|\\+|\"|_|'|`|\'|'\'";
 
     /**
      * Search for and load the excluded keywords file once indexer is created
      */
     private Indexer() {
-        //configuring the connection with the database
-        dbController=new Controller();
         File excludedKeywordsFile = new File("Indexer/excludedKeywords.txt");
         File excludedTagsFile = new File("Indexer/excludedTags.txt");
         excludedKeywords = new HashSet<>();
@@ -60,12 +54,12 @@ public class Indexer implements Runnable{
             System.out.println("EXCLUDED TAGS FILE WAS NOT FOUND: NO TAGS WILL BE EXCLUDED");
         }
 
-        pathtoDocFolder=    Paths.get("").toAbsolutePath().toString()+"/documents";
-        countofdocFiles=new AtomicInteger(new File(pathtoDocFolder).listFiles().length);
+        File documentsFolder = new File("Documents/");
+        crawlerOutputFiles = new HashSet<>();
+        assert (documentsFolder.exists() && documentsFolder.isDirectory());
+        Collections.addAll(crawlerOutputFiles, documentsFolder.listFiles());
 
-
-
-
+        dbController = new Controller();
     }
 
     /** Facade pattern
@@ -78,80 +72,68 @@ public class Indexer implements Runnable{
         return indexer;
     }
 
-    public void setUrls(HashSet<String> urls) {
-        synchronized (urlsLock){
-            this.urls = urls;
+    public void setFiles(HashSet<File> files) {
+        synchronized (filesLock){
+            this.crawlerOutputFiles = files;
         }
     }
 
 
     /**
-     * use only this to check if there are remaining urls
-     * Avoid race conditions on urlsLock
+     * use this to check if there are remaining files in the documents folder
+     * Avoids race conditions
      */
-    public boolean hasNextURL(){
-        synchronized (urlsLock) {
-            return urls.iterator().hasNext();
+    public boolean hasMoreFiles(){
+        synchronized (filesLock) {
+            return crawlerOutputFiles.iterator().hasNext();
         }
     }
 
     /**
-     * use only this to get next url
-     * Avoid race conditions on urlsLock
+     * use this to get next file
+     * Avoids race conditions
      */
-    public String nextURL(){
-        synchronized (urlsLock){
-            String url = urls.iterator().next();
-            urls.remove(url);
-            return url;
+    public File nextFile(){
+        synchronized (filesLock){
+            File file = crawlerOutputFiles.iterator().next();
+            crawlerOutputFiles.remove(file);
+            return file;
         }
     }
 
     @Override
     public void run(){
 
-        String url=" ";
+        String url;
         Document doc;
         Elements elements;
-      synchronized (this.countofdocFiles){
-        while(this.countofdocFiles.decrementAndGet()>=0){
 
-            String FilePath=pathtoDocFolder+"/doc"+countofdocFiles+".txt";
-            File CrawlerOutputFile=new File(FilePath);
+        while(hasMoreFiles()){
 
-            Scanner scan=null;
-            try  {
-                scan = new Scanner(CrawlerOutputFile);
-                if(scan.hasNext())
-                {  url=scan.next();
-
-                 //  dbController.insertURL(url);
-                }
-
-                doc=Jsoup.parse(CrawlerOutputFile,"UTF-8",url);
-                elements=doc.getAllElements();
+            try {
+                File file = nextFile();
+                Scanner scanner = new Scanner(file);
+                url = scanner.nextLine();
+                doc = Jsoup.parse(file, "UTF-8", url);
+                elements = doc.getAllElements();
                 PageIndexedData pageData = new PageIndexedData(url);
-                int counter = 0;   //for each web page for determining the position of the word
-
-                for (Element element:elements){
-
+                int counter = 0;
+                for (Element element : elements) {
 
                     // Filtering Tags
                     if (excludedTags.contains(element.tagName()))
                         continue;
 
                     // Filtering Keywords
-                    for(String keyword:element.text().split(this.undesiredDelimiters)){
-                        keyword=this.Stem(keyword);
+                    for (String keyword : element.text().split(specialCharacters)) {
+                        keyword = Stem(keyword);
 
-                        if(keyword.equals(""))
+                        if (keyword.equals(""))
                             continue;
                         counter++;
 
-                        if(!excludedKeywords.contains(keyword)) {
-                            pageData.add(keyword,element.tagName(),counter);
-
-
+                        if (!excludedKeywords.contains(keyword)) {
+                            pageData.add(keyword, element.tagName(), counter);
 
                         }
                     }
@@ -160,26 +142,18 @@ public class Indexer implements Runnable{
                 //for inserting each page keywords with its related data
                 pageData.storeIntoSearchIndex(dbController);
 
-               // TESTING: PRINTING PAGE SUMMARY
+                // TESTING: PRINTING PAGE SUMMARY
+                //  pageData.print();
 
-              //  System.out.println(this.countofdocFiles);
-              //  pageData.print();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            catch(Exception exc){
-
-                exc.printStackTrace();
-            }
-
         }
-      }
     }
 
 
-
-
-    /*
-    * this function is mainly used for stemming english words using snowball.jar
-    **& it converts keywords to LowerCase
+    /**
+     * This function is mainly used for stemming english words
      */
     public String Stem(String keyword){
 
