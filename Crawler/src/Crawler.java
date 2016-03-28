@@ -78,7 +78,7 @@ public class Crawler implements Runnable {
 		return absHref.toLowerCase().replaceFirst("www.", "");
 	}
 
-	private void updateInCountBatch(String url, Elements links) {
+	private void updateInCountBatch(Elements links) {
 		String query = "Update URLs SET inCount = inCount + 1 WHERE URL in (";
 		for (Element link: links){
 			String u = isValidURL(link.attr("abs:href"));
@@ -120,13 +120,15 @@ public class Crawler implements Runnable {
 				// update outCount of url and title
 				incrementURLOutCount(toFetch, links.size());
 				updateTitle(toFetch, doc.title());
-				updateInCountBatch(toFetch, links);
+				updateInCountBatch(links);
 
 				// save document and continue
 				saveDocument(doc, toFetch);
 				if (Crawler.totalFetchedURLs.get() >= this.maxSize) {
 					continue;
 				}
+
+				updateFetchedField(toFetch);	// mark as fetched
 
 				// debugging
 				System.out.println(links.size() + " " + toFetch);
@@ -151,8 +153,6 @@ public class Crawler implements Runnable {
 							totalFetchedURLs.incrementAndGet();
 							lock.notifyAll();
 						}
-						//else
-							//incrementURLInCount(checkedURL.toString());
 					}
 
 					// debugging
@@ -195,10 +195,6 @@ public class Crawler implements Runnable {
 		return executeNonQuery("INSERT INTO URLs(URL, fetched, inCount) VALUES ('" + url + "', false, 1)");
 	}
 
-	private int incrementURLInCount(String url){
-		return executeNonQuery("UPDATE URLs SET inCount = inCount + 1 WHERE URL = '" + url + "'");
-	}
-
 	private int incrementURLOutCount(String url, int count){
 		return executeNonQuery("UPDATE URLs SET outCount = " + count + " WHERE URL = '" + url + "'");
 	}
@@ -206,11 +202,15 @@ public class Crawler implements Runnable {
 	private int updateTitle(String url, String title) {
 		return executeNonQuery("UPDATE URLs SET title = '" + title.replaceAll("'", "\\'") + "' WHERE URL = '" + url + "'");
 	}
-	
+
+	private int updateFetchedField(String url){
+		return executeNonQuery("UPDATE URLs SET fetched = 2 WHERE url = '" + url + "'");
+	}
+
 	private boolean getURLsFromDB(int n){
 		// fetch URLs
-		//System.out.println("SELECT URL, id FROM URLs WHERE fetched = false LIMIT " + n);
-	    String query = "SELECT URL, id FROM URLs WHERE fetched = false LIMIT " + n;
+	    String query = "SELECT URL, id FROM URLs WHERE fetched = 0 LIMIT " + n; // 0 is not visited URL, 1 fetched to Crawler memory but
+		// not downloaded, 2 fetched and downloaded
 	    boolean found = false;
 	    ResultSet resultSet = null;
 	    int ID = 0;
@@ -220,7 +220,7 @@ public class Crawler implements Runnable {
 			while (resultSet.next()) {
 				queue.add(resultSet.getObject("URL").toString());
 			    ID = resultSet.getInt("id");
-			    executeNonQuery("UPDATE URLs SET fetched = true WHERE id = " + ID);
+			    executeNonQuery("UPDATE URLs SET fetched = 1 WHERE id = " + ID);
 			    found = true;
 			}
 		} catch (Exception e) {
@@ -244,10 +244,11 @@ public class Crawler implements Runnable {
 				Elements links = doc.select("a");
 				incrementURLOutCount(toFetch, links.size());    // update outCount
 				updateTitle(toFetch, doc.title());    // update title
-				updateInCountBatch(toFetch, links);		// update inCount
+				updateInCountBatch(links);		// update inCount
 
 				// write page to file
 				saveDocument(doc, toFetch);
+				updateFetchedField(toFetch);	// mark as fetched
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 				//e.printStackTrace();
