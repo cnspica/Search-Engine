@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.*;
 
 /**
  * Author : mostafa
@@ -30,6 +29,19 @@ public class PageIndexedData {
         }
     }
 
+    public void storeIntoSearchIndex(Controller c){
+
+     for(String Keyword:mapper.keySet()){
+            /*insert the keyword first if it was not inserted*/
+           c.insertKeyWord(Keyword);
+
+           /*insert the keyword occurency in the Search index
+           * keywordID,URLID,TermFreq,ListofLocations
+           * */
+           c.insertIntoSearchIndex(Keyword,url,mapper.get(Keyword).getPositions().size(),mapper.get(Keyword).formatForStoringinDB());
+       //  System.out.println(mapper.get(Keyword).formatForStoringinDB());
+      }
+    }
     /**
      * For testing purposes
      */
@@ -37,17 +49,17 @@ public class PageIndexedData {
         System.out.println("PAGE URL: " + url);
         for (Map.Entry entry: mapper.entrySet()) {
             KeywordData value = (KeywordData)entry.getValue();
-            System.out.println(entry.getKey() + " " + value.getPositions().size()
-                                + " "+ value.getPositions()+" " + value.getTags());
+            System.out.println(entry.getKey() + " " + value.getPositions().size()+
+                               value.getPositions() + " " + value.getTags());
         }
     }
 }
 
 class KeywordData{
     private ArrayList<Integer> positions;
-    private ArrayList<String> tags;
+    private HashSet<String> tags;
 
-    public ArrayList<String> getTags() {
+    public HashSet<String> getTags() {
         return tags;
     }
 
@@ -57,12 +69,35 @@ class KeywordData{
 
     public KeywordData(){
         positions = new ArrayList<>();
-        tags = new ArrayList<>();
+        tags = new HashSet<>();
     }
 
     public KeywordData addPosition(int pos, String tag){
+
         positions.add(pos);
         tags.add(tag);
         return this;
     }
+
+    public String formatForStoringinDB(){
+
+        StringBuilder locationsInWebpage=new StringBuilder();
+        String x;
+
+
+
+        // create an iterator
+        Iterator iterator = tags.iterator();
+
+
+        while(iterator.hasNext()){
+            x=iterator.next()+" ";
+            locationsInWebpage.append(x);
+        }
+
+
+        return locationsInWebpage.toString();
+
+    }
+
 }

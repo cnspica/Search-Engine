@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -7,6 +8,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.tartarus.snowball.SnowballStemmer;
+
 
 /**
  * Author : mostafa mahmoud
@@ -16,10 +19,12 @@ import org.jsoup.select.Elements;
  */
 public class Indexer implements Runnable{
     private static Indexer indexer;
-    private HashSet<String> urls;
+    private HashSet<File> crawlerOutputFiles;
     private HashSet<String> excludedKeywords;
     private HashSet<String> excludedTags;
-    private final Object urlsLock = new Object();
+    private final Object filesLock = new Object();
+    private static final String specialCharacters=" |\\.|:|!|\\?|\\)|\\(|,|\\{|\\}|\\]|\\[|/|\\+|\"|_|'|`|\'|'\'";
+    private Controller dbController;
 
     /**
      * Search for and load the excluded keywords file once indexer is created
@@ -48,6 +53,13 @@ public class Indexer implements Runnable{
         } catch (FileNotFoundException e) {
             System.out.println("EXCLUDED TAGS FILE WAS NOT FOUND: NO TAGS WILL BE EXCLUDED");
         }
+
+        File documentsFolder = new File("Documents/");
+        crawlerOutputFiles = new HashSet<>();
+        assert (documentsFolder.exists() && documentsFolder.isDirectory());
+        Collections.addAll(crawlerOutputFiles, documentsFolder.listFiles());
+
+        dbController = new Controller();
     }
 
     /** Facade pattern
@@ -60,69 +72,106 @@ public class Indexer implements Runnable{
         return indexer;
     }
 
-    public void setUrls(HashSet<String> urls) {
-        synchronized (urlsLock){
-            this.urls = urls;
+    public void setFiles(HashSet<File> files) {
+        synchronized (filesLock){
+            this.crawlerOutputFiles = files;
+        }
+    }
+
+
+    /**
+     * use this to check if there are remaining files in the documents folder
+     * Avoids race conditions
+     */
+    public boolean hasMoreFiles(){
+        synchronized (filesLock) {
+            return crawlerOutputFiles.iterator().hasNext();
         }
     }
 
     /**
-     * use only this to check if there are remaining urls
-     * Avoid race conditions on urlsLock
+     * use this to get next file
+     * Avoids race conditions
      */
-    public boolean hasNextURL(){
-        synchronized (urlsLock) {
-            return urls.iterator().hasNext();
-        }
-    }
-
-    /**
-     * use only this to get next url
-     * Avoid race conditions on urlsLock
-     */
-    public String nextURL(){
-        synchronized (urlsLock){
-            String url = urls.iterator().next();
-            urls.remove(url);
-            return url;
+    public File nextFile(){
+        synchronized (filesLock){
+            File file = crawlerOutputFiles.iterator().next();
+            crawlerOutputFiles.remove(file);
+            return file;
         }
     }
 
     @Override
-    public void run() {
+    public void run(){
+
         String url;
         Document doc;
         Elements elements;
 
-        while (hasNextURL()) {
+        while(hasMoreFiles()){
+
             try {
-                url = nextURL();
-                doc = Jsoup.connect(url).get();
-                elements = doc.body().select("*");
+                File file = nextFile();
+                Scanner scanner = new Scanner(file);
+                url = scanner.nextLine();
+                doc = Jsoup.parse(file, "UTF-8", url);
+                elements = doc.getAllElements();
                 PageIndexedData pageData = new PageIndexedData(url);
                 int counter = 0;
-
-                for (Element element:elements){
+                for (Element element : elements) {
 
                     // Filtering Tags
                     if (excludedTags.contains(element.tagName()))
                         continue;
 
                     // Filtering Keywords
-                    for(String keyword:element.text().split(" ")){
+                    for (String keyword : element.text().split(specialCharacters)) {
+                        keyword = Stem(keyword);
+
+                        if (keyword.equals(""))
+                            continue;
                         counter++;
-                        if(!excludedKeywords.contains(keyword)) {
-                            pageData.add(keyword,element.tagName(),counter);
+
+                        if (!excludedKeywords.contains(keyword)) {
+                            pageData.add(keyword, element.tagName(), counter);
+
                         }
                     }
                 }
 
+                //for inserting each page keywords with its related data
+                pageData.storeIntoSearchIndex(dbController);
+
                 // TESTING: PRINTING PAGE SUMMARY
-                pageData.print();
+                //  pageData.print();
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+
+    /**
+     * This function is mainly used for stemming english words
+     */
+    public String Stem(String keyword){
+
+      //  keyword=keyword.toLowerCase().replaceAll("\\s+","");
+          keyword=keyword.replaceAll("[^a-zA-Z|\\- ]", "").toLowerCase().trim();
+        try{
+
+        Class stemClass=Class.forName("org.tartarus.snowball.ext.englishStemmer");
+        SnowballStemmer stemmer=(SnowballStemmer)stemClass.newInstance();
+        stemmer.setCurrent(keyword);
+        stemmer.stem();
+        keyword=stemmer.getCurrent();
+
+        }
+        catch(Exception exc){
+
+            exc.printStackTrace();
+        }
+        return keyword;
     }
 }
