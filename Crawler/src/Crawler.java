@@ -26,6 +26,7 @@ public class Crawler implements Runnable {
 	private LinkedList<String> queue;
 	private static int threadURLCount;
 	private static int threadCount = 1;
+	private int totalFetchedByMe = 0;
 	private Connection connection = null;
 	private Statement statement = null;
 	private Statement statementNonQuery = null;
@@ -78,6 +79,10 @@ public class Crawler implements Runnable {
 		return absHref.toLowerCase().replaceFirst("www.", "");
 	}
 
+	private int deleteURL(String url) {
+		return executeNonQuery("DELETE FROM URLs WHERE URL = '" + url + "'");
+	}
+
 	private void updateInCountBatch(Elements links) {
 		String query = "Update URLs SET inCount = inCount + 1 WHERE URL in (";
 		for (Element link: links){
@@ -105,13 +110,14 @@ public class Crawler implements Runnable {
 			}
 			
 			// fetch URL
+			String toFetch="";
 			try {
 				// fetch the document
 				if (queue.size() == 0) {
-					System.out.println(Thread.currentThread().getName() + " has just finished fetching URLs.");
+					System.out.printf(Thread.currentThread().getName() + " has just finished fetching URLs(%d).", totalFetchedByMe);
 					break;
 				}
-				String toFetch = queue.removeFirst();
+				toFetch = queue.removeFirst();
 				Document doc = Jsoup.connect(toFetch).get();
 
 				// fetch the URLs
@@ -152,6 +158,7 @@ public class Crawler implements Runnable {
 						if (result == 1) {
 							totalFetchedURLs.incrementAndGet();
 							lock.notifyAll();
+							totalFetchedByMe++;
 						}
 					}
 
@@ -165,7 +172,8 @@ public class Crawler implements Runnable {
 				
 			} catch (Exception ex){
 				//ex.printStackTrace();
-				System.out.println(ex.getMessage());
+				//System.out.println(ex.getMessage());
+				deleteURL(toFetch);
 			}
 			
 			
@@ -200,7 +208,7 @@ public class Crawler implements Runnable {
 	}
 
 	private int updateTitle(String url, String title) {
-		return executeNonQuery("UPDATE URLs SET title = '" + title.replaceAll("'", "\\'") + "' WHERE URL = '" + url + "'");
+		return executeNonQuery("UPDATE URLs SET title = '" + title.replaceAll("'", "\'") + "' WHERE URL = '" + url + "'");
 	}
 
 	private int updateFetchedField(String url){
@@ -231,14 +239,17 @@ public class Crawler implements Runnable {
 
 	public void fetchPages() {
 		int total = (Crawler.totalFetchedURLs.get() - Crawler.fetchedPagesCount.get())/Crawler.threadCount;
-		getURLsFromDB(total);
+		synchronized (lock) {
+			getURLsFromDB(total);
+		}
 
 		// Write rest of pages to files
 		System.out.println(Thread.currentThread().getName() + " has just started fetching actual pages(" + queue.size() + ")");
 		while (this.queue.size() > 0) {
+			String toFetch="";
 			try {
 				// fetch page
-				String toFetch = queue.removeFirst();
+				toFetch = queue.removeFirst();
 				Document doc;
 				doc = Jsoup.connect(toFetch).get();
 				Elements links = doc.select("a");
@@ -251,6 +262,7 @@ public class Crawler implements Runnable {
 				updateFetchedField(toFetch);	// mark as fetched
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
+				deleteURL(toFetch);
 				//e.printStackTrace();
 			}
 		}

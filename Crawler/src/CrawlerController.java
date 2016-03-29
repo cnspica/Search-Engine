@@ -28,10 +28,12 @@ public class CrawlerController {
 
 
 			// read the seed URLs
+			String query = "INSERT INTO URLs(URL, fetched, inCount) VALUES";
 			while(seed.hasNextLine()){
 				String url = seed.nextLine();
-				statement.executeUpdate("INSERT INTO URLs(URL, fetched, inCount) VALUES ('" + url + "', false, 1)");
+				query += "('" + url + "', 0, 1), ";
 			}
+			System.out.println(statement.executeUpdate(query.substring(0, query.length()-2)));
 		} catch (Exception ex){
 			
 		}  finally // ensure resultSet, statement and connection are closed
@@ -70,22 +72,6 @@ public class CrawlerController {
 				e.printStackTrace();
 			} 	
 		}
-		
-	/*	try {
-			// write the list of fetched URLs in a file
-			PrintStream out = new PrintStream(new File("Crawler/Results.txt"));
-		
-			System.out.println("Total Fetched URLs: " + fetched.size());
-			for (int i=0; i < fetched.size(); i++){
-				String url = fetched.iterator().next();
-				fetched.remove(url);
-				out.println(url);
-			}
-			out.close();
-			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} */
+
 	}
 }

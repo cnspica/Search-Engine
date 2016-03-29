@@ -11,7 +11,7 @@ import java.net.URL;
 
 public class Robot {
     public static void main(String[] args){
-        RobotExclusion robotExclusion = new RobotExclusion();
+        /*RobotExclusion robotExclusion = new RobotExclusion();
         URL url= null;
         try {
             url = new URL("https://stackexchange.com");
@@ -27,6 +27,7 @@ public class Robot {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
+        }*/
+        String x = "\"jgjgjgjgj\"";
     }
 }
