@@ -130,11 +130,10 @@ public class Crawler implements Runnable {
 
 				// save document and continue
 				saveDocument(doc, toFetch);
+				updateFetchedField(toFetch);	// mark as fetched
 				if (Crawler.totalFetchedURLs.get() >= this.maxSize) {
 					continue;
 				}
-
-				updateFetchedField(toFetch);	// mark as fetched
 
 				// debugging
 				System.out.println(links.size() + " " + toFetch);
@@ -162,9 +161,6 @@ public class Crawler implements Runnable {
 						}
 					}
 
-					// debugging
-					//System.out.println(totalFetchedURLs.get());
-
 					//check for ending condition
 					if (totalFetchedURLs.get() >= maxSize)
 						break;
@@ -178,7 +174,7 @@ public class Crawler implements Runnable {
 			
 			
 		}
-		System.out.println(totalFetchedURLs.get());
+		//System.out.println(totalFetchedURLs.get());
 		// fetch and save not fetched pages
 		try {
 			fetchPages();
