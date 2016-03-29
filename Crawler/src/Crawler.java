@@ -2,14 +2,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.net.MalformedURLException;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Statement;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -27,26 +23,14 @@ public class Crawler implements Runnable {
 	private static int threadURLCount;
 	private static int threadCount = 1;
 	private int totalFetchedByMe = 0;
-	private Connection connection = null;
-	private Statement statement = null;
-	private Statement statementNonQuery = null;
 	private Lock lock;
+	private DBManager dbManager;
 	
 	public Crawler(String db, String username, String pass, Lock lock){
 		this.maxSize = 4000;
 		queue = new LinkedList<String>();
 		this.lock = lock;
-		// establish connection to database                              
-	    try {
-			connection = DriverManager.getConnection(db, username, pass);
-	
-			// create Statement for querying database
-			statement = connection.createStatement();
-			statementNonQuery = connection.createStatement();
-	    } catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		dbManager = new DBManager(db, username, pass);
 	}
      
 	public static void configure(int threadCount, int threadURLCount){
@@ -79,8 +63,8 @@ public class Crawler implements Runnable {
 		return absHref.toLowerCase().replaceFirst("www.", "");
 	}
 
-	private int deleteURL(String url) {
-		return executeNonQuery("DELETE FROM URLs WHERE URL = '" + url + "'");
+	private boolean deleteURL(String url) {
+		return dbManager.ExecuteNonQuery("DELETE FROM URLs WHERE URL = '" + url + "'");
 	}
 
 	private void updateInCountBatch(Elements links) {
@@ -98,7 +82,7 @@ public class Crawler implements Runnable {
 
 		}
 		query = query.substring(0, query.length() - 2) + ")";
-		executeNonQuery(query);
+		dbManager.ExecuteNonQuery(query);
 	}
 
 	public void run(){
@@ -114,7 +98,7 @@ public class Crawler implements Runnable {
 			try {
 				// fetch the document
 				if (queue.size() == 0) {
-					System.out.printf(Thread.currentThread().getName() + " has just finished fetching URLs(%d).", totalFetchedByMe);
+					System.out.printf(Thread.currentThread().getName() + " has just finished fetching URLs(%d).\n", totalFetchedByMe);
 					break;
 				}
 				toFetch = queue.removeFirst();
@@ -146,15 +130,15 @@ public class Crawler implements Runnable {
 						continue;
 					URL checkedURL = new URL(absHref);
 					if(!robotExclusion.allows(checkedURL,"*")){
-						System.out.println("Not allowed URL "+ checkedURL);
+						//System.out.println("Not allowed URL "+ checkedURL);
 						continue;
 					}
-					int result;
+					boolean result;
 					synchronized(lock){
 						// insert into DB
 						result = insertURLIntoDB(checkedURL.toString());
 						// increment totalFetchedURLs
-						if (result == 1) {
+						if (result) {
 							totalFetchedURLs.incrementAndGet();
 							lock.notifyAll();
 							totalFetchedByMe++;
@@ -176,39 +160,24 @@ public class Crawler implements Runnable {
 		}
 		//System.out.println(totalFetchedURLs.get());
 		// fetch and save not fetched pages
-		try {
-			fetchPages();
-		}
-		catch (Exception e){
-			
-		} finally {
-			// close connection
-			try                                                        
-	         {                                                                                               
-	            statement.close();                                      
-	            connection.close();                                     
-	         } // end try                                               
-	         catch ( Exception exception )                              
-	         {                                                          
-	            exception.printStackTrace();                            
-	         } // end catch             
-		}
+		fetchPages();
+		dbManager.TerminateConnection();
 	}
 	
-	private int insertURLIntoDB(String url){
-		return executeNonQuery("INSERT INTO URLs(URL, fetched, inCount) VALUES ('" + url + "', false, 1)");
+	private boolean insertURLIntoDB(String url){
+		return dbManager.ExecuteNonQuery("INSERT INTO URLs(URL, fetched, inCount) VALUES ('" + url + "', false, 1)");
 	}
 
-	private int incrementURLOutCount(String url, int count){
-		return executeNonQuery("UPDATE URLs SET outCount = " + count + " WHERE URL = '" + url + "'");
+	private boolean incrementURLOutCount(String url, int count){
+		return dbManager.ExecuteNonQuery("UPDATE URLs SET outCount = " + count + " WHERE URL = '" + url + "'");
 	}
 
-	private int updateTitle(String url, String title) {
-		return executeNonQuery("UPDATE URLs SET title = '" + title.replaceAll("'", "\'") + "' WHERE URL = '" + url + "'");
+	private boolean updateTitle(String url, String title) {
+		return dbManager.ExecuteNonQuery("UPDATE URLs SET title = '" + title.replaceAll("'", "\'") + "' WHERE URL = '" + url + "'");
 	}
 
-	private int updateFetchedField(String url){
-		return executeNonQuery("UPDATE URLs SET fetched = 2 WHERE url = '" + url + "'");
+	private boolean updateFetchedField(String url){
+		return dbManager.ExecuteNonQuery("UPDATE URLs SET fetched = 2 WHERE url = '" + url + "'");
 	}
 
 	private boolean getURLsFromDB(int n){
@@ -220,11 +189,11 @@ public class Crawler implements Runnable {
 	    int ID = 0;
 		try { 
 		    // query database                                        
-			resultSet = executeQuery(query);
+			resultSet = dbManager.ExecuteQuery(query);
 			while (resultSet.next()) {
 				queue.add(resultSet.getObject("URL").toString());
 			    ID = resultSet.getInt("id");
-			    executeNonQuery("UPDATE URLs SET fetched = 1 WHERE id = " + ID);
+				dbManager.ExecuteNonQuery("UPDATE URLs SET fetched = 1 WHERE id = " + ID);
 			    found = true;
 			}
 		} catch (Exception e) {
@@ -240,7 +209,7 @@ public class Crawler implements Runnable {
 		}
 
 		// Write rest of pages to files
-		System.out.println(Thread.currentThread().getName() + " has just started fetching actual pages(" + queue.size() + ")");
+		System.out.println(Thread.currentThread().getName() + " has just started fetching actual pages(" + queue.size() + ").");
 		while (this.queue.size() > 0) {
 			String toFetch="";
 			try {
@@ -259,7 +228,6 @@ public class Crawler implements Runnable {
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 				deleteURL(toFetch);
-				//e.printStackTrace();
 			}
 		}
 
@@ -267,11 +235,6 @@ public class Crawler implements Runnable {
 	}
 	
 	public int waitForData(int n){
-		// sleep fore 1 second then try fetching data if nothing is returened sleep again
-		// try this for 10 times if it fails
-		// return 2
-		// when 2 is returned the thread break from the fetching loop and start fetching actual documents then stop
-
 		boolean found = false;
 		while (!found) {
 			try {
@@ -301,31 +264,8 @@ public class Crawler implements Runnable {
 			e.printStackTrace();
 		}
 	}
-	
-	public ResultSet executeQuery(String query){
-		ResultSet resultSet = null;
-	    try {
-		     // query database                                        
-		     resultSet = statement.executeQuery(query);
-		     
-		     
-		} catch (Exception ex) {
-			System.out.println(ex.getMessage());
-		}
-	    
-	    return resultSet;
-	}
-	
-	public int executeNonQuery(String query){
-		
-	    int result = 100;
-	    try {
-		    // query database                                        
-		    result = statementNonQuery.executeUpdate(query);
-		    
-		} catch (Exception ex) {
-			//System.out.println(ex.getMessage());
-		} 
-	    return result;
+
+	public static int getTotalFetchedPages() {
+		return fetchedPagesCount.get();
 	}
 }

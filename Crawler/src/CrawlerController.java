@@ -1,8 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 import java.util.Scanner;
 
 
@@ -10,48 +7,30 @@ public class CrawlerController {
 
 	private void seed(String seedFile) {
 		// insert the seed into DB
-		Connection connection = null; // manages connection
-	    Statement statement = null; // query statement
+		DBManager dbManager = new DBManager("jdbc:mysql://localhost:3306/APT", "root", "");
 		Scanner seed=null;
 		try {
 			seed = new Scanner(new File(seedFile));
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
-		try {
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/APT", "root", "");
-			// create Statement for querying database
-			statement = connection.createStatement();
 
-			// set fetched, inCount, outCount to 0 in URLs Table
-			statement.executeUpdate("UPDATE URLs SET fetched = false, inCount = 0, outCount = 0, title = NULL");
+		// set fetched, inCount, outCount to 0 in URLs Table
+		dbManager.ExecuteNonQuery("UPDATE URLs SET fetched = false, inCount = 0, outCount = 0, title = NULL");
 
 
-			// read the seed URLs
-			String query = "INSERT INTO URLs(URL, fetched, inCount) VALUES";
-			while(seed.hasNextLine()){
-				String url = seed.nextLine();
-				query += "('" + url + "', 0, 1), ";
-			}
-			System.out.println(statement.executeUpdate(query.substring(0, query.length()-2)));
-		} catch (Exception ex){
-			
-		}  finally // ensure resultSet, statement and connection are closed
-	      {                                                             
-	         try                                                        
-	         {                                                                                              
-	            statement.close();                                      
-	            connection.close();                                     
-	         } // end try                                               
-	         catch ( Exception exception )                              
-	         {                                                          
-	            exception.printStackTrace();                            
-	         } // end catch                                             
-	      } // end finally       
+		// read the seed URLs
+		String query = "INSERT INTO URLs(URL, fetched, inCount) VALUES";
+		while(seed.hasNextLine()){
+			String url = seed.nextLine();
+			query += "('" + url + "', 0, 1), ";
+		}
+		dbManager.ExecuteNonQuery(query.substring(0, query.length()-2));
+		dbManager.TerminateConnection();
 	}
 	
 	public void crawle(String seedFile, int threadCount, int size, int threadURLCount) {
-		
+		long startTime = System.currentTimeMillis();	// get start time to calculate total runtime
 		seed(seedFile);		
 		Crawler.configure(threadCount, threadURLCount);
 		
@@ -72,6 +51,7 @@ public class CrawlerController {
 				e.printStackTrace();
 			} 	
 		}
-
+		System.out.println("Fetched " + Crawler.getTotalFetchedPages() + " pages in "
+				+ (System.currentTimeMillis() - startTime)/(60.0 * 1000) + " minutes.");
 	}
 }
