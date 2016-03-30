@@ -57,9 +57,9 @@ public class PageIndexedData {
 
 class KeywordData{
     private ArrayList<Integer> positions;
-    private HashSet<String> tags;
+    private ArrayList<String> tags;
 
-    public HashSet<String> getTags() {
+    public ArrayList<String> getTags() {
         return tags;
     }
 
@@ -69,7 +69,7 @@ class KeywordData{
 
     public KeywordData(){
         positions = new ArrayList<>();
-        tags = new HashSet<>();
+        tags = new ArrayList<>();
     }
 
     public KeywordData addPosition(int pos, String tag){
@@ -81,22 +81,10 @@ class KeywordData{
 
     public String formatForStoringinDB(){
 
-        StringBuilder locationsInWebpage=new StringBuilder();
-        String x;
 
 
 
-        // create an iterator
-        Iterator iterator = tags.iterator();
-
-
-        while(iterator.hasNext()){
-            x=iterator.next()+" ";
-            locationsInWebpage.append(x);
-        }
-
-
-        return locationsInWebpage.toString();
+        return this.getTags().toString();
 
     }
 
