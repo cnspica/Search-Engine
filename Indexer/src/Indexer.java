@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.*;
 
 import org.jsoup.Jsoup;
@@ -19,11 +20,12 @@ import org.tartarus.snowball.SnowballStemmer;
  */
 public class Indexer implements Runnable{
     private static Indexer indexer;
-    private HashSet<File> crawlerOutputFiles;
+
     private HashSet<String> excludedKeywords;
     private HashSet<String> excludedTags;
     private final Object filesLock = new Object();
-
+    private String pathtoDocFolder;
+    private int countofdocFiles;
     private static final String specialCharacters=" |\\.|:|!|\\?|\\)|\\(|,|\\{|\\}|\\]|\\[|/|\\+|\"|_|'|`|\'|'\'";
     private Controller dbController;
 
@@ -55,10 +57,10 @@ public class Indexer implements Runnable{
             System.out.println("EXCLUDED TAGS FILE WAS NOT FOUND: NO TAGS WILL BE EXCLUDED");
         }
 
-        File documentsFolder = new File("documents/");
-        crawlerOutputFiles = new HashSet<>();
-        assert (documentsFolder.exists() && documentsFolder.isDirectory());
-        Collections.addAll(crawlerOutputFiles, documentsFolder.listFiles());
+
+        pathtoDocFolder=    Paths.get("").toAbsolutePath().toString()+"/documents";
+        countofdocFiles=(new File(pathtoDocFolder).listFiles().length);
+        System.out.println(countofdocFiles);
 
         dbController = new Controller();
     }
@@ -73,11 +75,7 @@ public class Indexer implements Runnable{
         return indexer;
     }
 
-    public void setFiles(HashSet<File> files) {
-        synchronized (filesLock){
-            this.crawlerOutputFiles = files;
-        }
-    }
+
 
 
     /**
@@ -86,7 +84,8 @@ public class Indexer implements Runnable{
      */
     public boolean hasMoreFiles(){
         synchronized (filesLock) {
-            return crawlerOutputFiles.iterator().hasNext();
+          //  return crawlerOutputFiles.iterator().hasNext();
+             return countofdocFiles>=0;
         }
     }
 
@@ -96,10 +95,14 @@ public class Indexer implements Runnable{
      */
     public File nextFile(){
         synchronized (filesLock){
-            File file = crawlerOutputFiles.iterator().next();
-            crawlerOutputFiles.remove(file);
-            System.out.println(this.crawlerOutputFiles.size());
-            return file;
+           // File file = crawlerOutputFiles.iterator().next();
+           // crawlerOutputFiles.remove(file);
+          //System.out.println(this.crawlerOutputFiles.size());
+            countofdocFiles--;
+            String FilePath=pathtoDocFolder+"/doc"+countofdocFiles+".txt";
+            File CrawlerOutputFile=new File(FilePath);
+           System.out.println(this.countofdocFiles);
+            return CrawlerOutputFile;
         }
     }
 

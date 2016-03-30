@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-       HashSet<String> urls = new HashSet<>();
+       //HashSet<String> urls = new HashSet<>();
       // Indexer indexer = Indexer.getInstance();
        int numberOfThreads;
 
@@ -34,8 +34,8 @@ public class Main {
 
 
         //testing retrieval from the index
-        SearchResult SR=new SearchResult("contact",new Controller());
-        SR.Print();
+//        SearchResult SR=new SearchResult("contact",new Controller());
+//        SR.Print();
 
     }
 }
