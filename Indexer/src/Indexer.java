@@ -23,6 +23,7 @@ public class Indexer implements Runnable{
     private HashSet<String> excludedKeywords;
     private HashSet<String> excludedTags;
     private final Object filesLock = new Object();
+
     private static final String specialCharacters=" |\\.|:|!|\\?|\\)|\\(|,|\\{|\\}|\\]|\\[|/|\\+|\"|_|'|`|\'|'\'";
     private Controller dbController;
 
@@ -54,7 +55,7 @@ public class Indexer implements Runnable{
             System.out.println("EXCLUDED TAGS FILE WAS NOT FOUND: NO TAGS WILL BE EXCLUDED");
         }
 
-        File documentsFolder = new File("Documents/");
+        File documentsFolder = new File("documents/");
         crawlerOutputFiles = new HashSet<>();
         assert (documentsFolder.exists() && documentsFolder.isDirectory());
         Collections.addAll(crawlerOutputFiles, documentsFolder.listFiles());
@@ -97,6 +98,7 @@ public class Indexer implements Runnable{
         synchronized (filesLock){
             File file = crawlerOutputFiles.iterator().next();
             crawlerOutputFiles.remove(file);
+            System.out.println(this.crawlerOutputFiles.size());
             return file;
         }
     }
@@ -107,7 +109,7 @@ public class Indexer implements Runnable{
         String url;
         Document doc;
         Elements elements;
-
+        String Stemmedword;
         while(hasMoreFiles()){
 
             try {
@@ -126,21 +128,30 @@ public class Indexer implements Runnable{
 
                     // Filtering Keywords
                     for (String keyword : element.text().split(specialCharacters)) {
-                        keyword = Stem(keyword);
+
+
+                        keyword = formatKeyword(keyword);
+
 
                         if (keyword.equals(""))
                             continue;
                         counter++;
 
                         if (!excludedKeywords.contains(keyword)) {
+                            //perform full stemming
+                            Stemmedword=Stem(keyword);
                             pageData.add(keyword, element.tagName(), counter);
 
+                            if(!Stemmedword.equals(keyword)){
+                                pageData.add(Stemmedword, element.tagName(), counter);
+                            }
                         }
                     }
                 }
 
                 //for inserting each page keywords with its related data
-                pageData.storeIntoSearchIndex(dbController);
+              pageData.storeIntoSearchIndex(dbController);
+
 
                 // TESTING: PRINTING PAGE SUMMARY
                 //  pageData.print();
@@ -149,6 +160,14 @@ public class Indexer implements Runnable{
                 e.printStackTrace();
             }
         }
+
+        this.dbController.calculateIDF();
+
+    }
+
+    public String formatKeyword(String Keyword){
+
+        return Keyword.replaceAll("[^a-zA-Z|\\- ]", "").toLowerCase().trim();
     }
 
 
@@ -156,9 +175,9 @@ public class Indexer implements Runnable{
      * This function is mainly used for stemming english words
      */
     public String Stem(String keyword){
-
+        ///
       //  keyword=keyword.toLowerCase().replaceAll("\\s+","");
-          keyword=keyword.replaceAll("[^a-zA-Z|\\- ]", "").toLowerCase().trim();
+
         try{
 
         Class stemClass=Class.forName("org.tartarus.snowball.ext.englishStemmer");

@@ -100,6 +100,7 @@ public class Controller {
         String UpdateIDF;
        try{
             while(rset.next()){
+              //  System.out.println(rset.getString("keyword"));
                UpdateIDF="call updateIDF('"+rset.getString("keyword")+"')";
                this.db.ExecuteNonQuery(UpdateIDF);
             }
@@ -109,8 +110,35 @@ public class Controller {
             e.printStackTrace();
       }
 
+    }
 
+    public float getIDF(String Keyword){
+        String Query="call getIDF('"+Keyword+"')";
+        ResultSet rset=db.ExecuteQuery(Query);
+        try{
+            if(rset.next()){
+                if(rset.getString("IDF") != null){
+                return (float)Double.parseDouble(rset.getString("IDF"));
+                   }
 
+            }
+
+        }
+        catch(Exception exc){
+            exc.printStackTrace();
+
+        }
+        return 0;
+    }
+
+    public ResultSet getSearchResult(String Keyword,String stemmedWord){
+
+        String Query="call LoadSearchResults('"+Keyword+"','"+stemmedWord+"')";
+
+        return this.db.ExecuteQuery(Query);
 
     }
+
+
+
 }

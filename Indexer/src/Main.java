@@ -33,7 +33,9 @@ public class Main {
         }
 
 
-
+        //testing retrieval from the index
+        SearchResult SR=new SearchResult("contact",new Controller());
+        SR.Print();
 
     }
 }
