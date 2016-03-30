@@ -19,6 +19,7 @@ public class Crawler implements Runnable {
 	public int maxSize;
 	private static AtomicInteger totalFetchedURLs;
 	private static AtomicInteger fetchedPagesCount;
+	private static AtomicInteger fetchedPagesCount1;
 	private LinkedList<String> queue;
 	private static int threadURLCount;
 	private static int threadCount = 1;
@@ -38,6 +39,7 @@ public class Crawler implements Runnable {
 		Crawler.threadURLCount = threadURLCount;
 		Crawler.totalFetchedURLs = new AtomicInteger();
 		Crawler.fetchedPagesCount = new AtomicInteger();
+		Crawler.fetchedPagesCount1 = new AtomicInteger();
 	}
 	
 	public void setSize(int n){
@@ -60,7 +62,10 @@ public class Crawler implements Runnable {
 			String f=absHref.substring(0, ind);
 			absHref=f;
 		}
-		return absHref.toLowerCase().replaceFirst("www.", "");
+		absHref = absHref.toLowerCase().replaceFirst("www.", "");
+		//if (absHref.endsWith("index.html"))
+		//	absHref = absHref.substring(0, absHref.length()-10);
+		return absHref;
 	}
 
 	private boolean deleteURL(String url) {
@@ -68,21 +73,19 @@ public class Crawler implements Runnable {
 	}
 
 	private void updateInCountBatch(Elements links) {
-		String query = "Update URLs SET inCount = inCount + 1 WHERE URL in (";
+		StringBuilder query = new StringBuilder("UPDATE URLs SET inCount = inCount + 1 WHERE URL in (");
 		for (Element link: links){
 			String u = isValidURL(link.attr("abs:href"));
 			if (u.equals(""))
 				continue;
 			try {
 				u = new URL(u).toString();
-				query += "'" + u.toString() + "', ";
+				query.append("'" + u.toString() + "', ");
 			} catch (MalformedURLException e) {
 				//e.printStackTrace();
 			}
-
 		}
-		query = query.substring(0, query.length() - 2) + ")";
-		dbManager.ExecuteNonQuery(query);
+		dbManager.ExecuteNonQuery(query.substring(0, query.length() - 2));
 	}
 
 	public void run(){
@@ -115,6 +118,7 @@ public class Crawler implements Runnable {
 				// save document and continue
 				saveDocument(doc, toFetch);
 				updateFetchedField(toFetch);	// mark as fetched
+				fetchedPagesCount1.incrementAndGet();
 				if (Crawler.totalFetchedURLs.get() >= this.maxSize) {
 					continue;
 				}
@@ -203,7 +207,7 @@ public class Crawler implements Runnable {
 	}
 
 	public void fetchPages() {
-		int total = (Crawler.totalFetchedURLs.get() - Crawler.fetchedPagesCount.get())/Crawler.threadCount;
+		int total = (Crawler.totalFetchedURLs.get() - Crawler.fetchedPagesCount1.get())/Crawler.threadCount;
 		synchronized (lock) {
 			getURLsFromDB(total);
 		}

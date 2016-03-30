@@ -18,18 +18,17 @@ public class CrawlerController {
 		// set fetched, inCount, outCount to 0 in URLs Table
 		dbManager.ExecuteNonQuery("UPDATE URLs SET fetched = false, inCount = 0, outCount = 0, title = NULL");
 
-
 		// read the seed URLs
-		String query = "INSERT INTO URLs(URL, fetched, inCount) VALUES";
+		StringBuilder query = new StringBuilder("INSERT INTO URLs(URL, fetched, inCount) VALUES");
 		while(seed.hasNextLine()){
 			String url = seed.nextLine();
-			query += "('" + url + "', 0, 1), ";
+			query.append("('" + url + "', 0, 1), ");
 		}
 		dbManager.ExecuteNonQuery(query.substring(0, query.length()-2));
 		dbManager.TerminateConnection();
 	}
 	
-	public void crawle(String seedFile, int threadCount, int size, int threadURLCount) {
+	public void crawel(String seedFile, int threadCount, int size, int threadURLCount) {
 		long startTime = System.currentTimeMillis();	// get start time to calculate total runtime
 		seed(seedFile);		
 		Crawler.configure(threadCount, threadURLCount);
