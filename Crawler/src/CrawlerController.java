@@ -28,10 +28,10 @@ public class CrawlerController {
 		dbManager.TerminateConnection();
 	}
 	
-	public void crawel(String seedFile, int threadCount, int size, int threadURLCount) {
+	public void crawel(String seedFile, int threadCount, int size, int threadURLCount, int seedSize) {
 		long startTime = System.currentTimeMillis();	// get start time to calculate total runtime
 		seed(seedFile);		
-		Crawler.configure(threadCount, threadURLCount);
+		Crawler.configure(threadCount, threadURLCount, seedSize);
 		
 		// create threadCount threads to fetch URLS
 		Thread[] t = new Thread[threadCount];

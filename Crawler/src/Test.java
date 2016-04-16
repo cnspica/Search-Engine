@@ -5,7 +5,7 @@ public class Test {
 		
 		CrawlerController crawler = new CrawlerController();
 
-		crawler.crawel("seed.txt", 8, 1000, 2);
+		crawler.crawel("seed.txt", 8, 200, 2, 200);
 	}
 	
 }

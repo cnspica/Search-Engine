@@ -34,10 +34,10 @@ public class Crawler implements Runnable {
 		dbManager = new DBManager(db, username, pass);
 	}
      
-	public static void configure(int threadCount, int threadURLCount){
+	public static void configure(int threadCount, int threadURLCount, int seedSize){
 		Crawler.threadCount = threadCount;
 		Crawler.threadURLCount = threadURLCount;
-		Crawler.totalFetchedURLs = new AtomicInteger();
+		Crawler.totalFetchedURLs = new AtomicInteger(seedSize);
 		Crawler.fetchedPagesCount = new AtomicInteger();
 		Crawler.fetchedPagesCount1 = new AtomicInteger();
 	}
@@ -63,8 +63,6 @@ public class Crawler implements Runnable {
 			absHref=f;
 		}
 		absHref = absHref.toLowerCase().replaceFirst("www.", "");
-		//if (absHref.endsWith("index.html"))
-		//	absHref = absHref.substring(0, absHref.length()-10);
 		return absHref;
 	}
 
@@ -85,7 +83,7 @@ public class Crawler implements Runnable {
 				//e.printStackTrace();
 			}
 		}
-		dbManager.ExecuteNonQuery(query.substring(0, query.length() - 2));
+		dbManager.ExecuteNonQuery(query.substring(0, query.length() - 2) + ")");
 	}
 
 	public void run(){
