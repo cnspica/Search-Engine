@@ -1,0 +1,579 @@
+http://tutorialspoint.com/apache_spark/apache_spark_core_programming.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Apache Spark Core Programming</title> 
+  <meta name="description" content="Apache Spark Core Programming - Learn Apache Spark in simple and easy steps starting from Introduction, RDD, Installation, Core Programming, Deployment, Advanced Spark Programming."> 
+  <meta name="keywords" content="Apache Spark, Tutorial, Learning, Beginners, Introduction, RDD, Installation, Core Programming, Deployment, Advanced Spark Programming."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #e77215 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #e77215 !important;}
+.submenu-item{ border-bottom: 2px solid #e77215 !important; border-top: 2px solid #e77215 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/apache_spark/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/apache_spark/images/apache-spark-mini-logo.jpg" alt="Apache Spark Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Apache Spark Tutorial</li> 
+        <li><a href="/apache_spark/index.htm">Apache Spark - Home</a></li> 
+        <li><a href="/apache_spark/apache_spark_introduction.htm">Apache Spark - Introduction</a></li> 
+        <li><a href="/apache_spark/apache_spark_rdd.htm">Apache Spark - RDD</a></li> 
+        <li><a href="/apache_spark/apache_spark_installation.htm">Apache Spark - Installation</a></li> 
+        <li><a href="/apache_spark/apache_spark_core_programming.htm">Apache Spark - Core Programming</a></li> 
+        <li><a href="/apache_spark/apache_spark_deployment.htm">Apache Spark - Deployment</a></li> 
+        <li><a href="/apache_spark/advanced_spark_programming.htm">Advanced Spark Programming</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Apache Spark Useful Resources</li> 
+        <li><a href="/apache_spark/apache_spark_quick_guide.htm">Apache Spark - Quick Guide</a></li> 
+        <li><a href="/apache_spark/apache_spark_useful_resources.htm">Apache Spark - Useful Resources</a></li> 
+        <li><a href="/apache_spark/apache_spark_discussion.htm">Apache Spark - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Apache Spark - Core Programming</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/apache_spark/apache_spark_installation.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/apache_spark/apache_spark_deployment.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>Spark Core is the base of the whole project. It provides distributed task dispatching, scheduling, and basic I/O functionalities. Spark uses a specialized fundamental data structure known as RDD (Resilient Distributed Datasets) that is a logical collection of data partitioned across machines. RDDs can be created in two ways; one is by referencing datasets in external storage systems and second is by applying transformations (e.g. map, filter, reducer, join) on existing RDDs.</p> 
+        <p>The RDD abstraction is exposed through a language-integrated API. This simplifies programming complexity because the way applications manipulate RDDs is similar to manipulating local collections of data.</p> 
+        <h2>Spark Shell</h2> 
+        <p>Spark provides an interactive shell − a powerful tool to analyze data interactively. It is available in either Scala or Python language. Spark’s primary abstraction is a distributed collection of items called a Resilient Distributed Dataset (RDD). RDDs can be created from Hadoop Input Formats (such as HDFS files) or by transforming other RDDs.</p> 
+        <h3>Open Spark Shell</h3> 
+        <p>The following command is used to open Spark shell.</p> 
+        <pre class="result notranslate">
+$ spark-shell
+</pre> 
+        <h3>Create simple RDD</h3> 
+        <p>Let us create a simple RDD from the text file. Use the following command to create a simple RDD.</p> 
+        <pre class="prettyprint notranslate">
+scala&gt; val inputfile = sc.textFile(“input.txt”)
+</pre> 
+        <p>The output for the above command is</p> 
+        <pre class="result notranslate">
+inputfile: org.apache.spark.rdd.RDD[String] = input.txt MappedRDD[1] at textFile at &lt;console&gt;:12
+</pre> 
+        <p>The Spark RDD API introduces few <b>Transformations</b> and few <b>Actions</b> to manipulate RDD.</p> 
+        <h2>RDD Transformations</h2> 
+        <p>RDD transformations returns pointer to new RDD and allows you to create dependencies between RDDs. Each RDD in dependency chain (String of Dependencies) has a function for calculating its data and has a pointer (dependency) to its parent RDD.</p> 
+        <p>Spark is lazy, so nothing will be executed unless you call some transformation or action that will trigger job creation and execution. Look at the following snippet of the word-count example.</p> 
+        <p>Therefore, RDD transformation is not a set of data but is a step in a program (might be the only step) telling Spark how to get data and what to do with it.</p> 
+        <p>Given below is a list of RDD transformations. </p>
+        <table class="table table-bordered"> 
+         <tbody>
+          <tr> 
+           <th>S.No</th> 
+           <th style="text-align:center;">Transformations &amp; Meaning</th> 
+          </tr> 
+          <tr> 
+           <td>1</td> 
+           <td> <p><b>map(func)</b></p> <p>Returns a new distributed dataset, formed by passing each element of the source through a function <b>func</b>.</p></td> 
+          </tr> 
+          <tr> 
+           <td>2</td> 
+           <td> <p><b>filter(func)</b></p> <p>Returns a new dataset formed by selecting those elements of the source on which <b>func</b> returns true.</p></td> 
+          </tr> 
+          <tr> 
+           <td>3</td> 
+           <td> <p><b>flatMap(func)</b></p> <p>Similar to map, but each input item can be mapped to 0 or more output items (so <i>func</i> should return a Seq rather than a single item).</p></td> 
+          </tr> 
+          <tr> 
+           <td>4</td> 
+           <td> <p><b>mapPartitions(func)</b></p> <p>Similar to map, but runs separately on each partition (block) of the RDD, so <b>func</b> must be of type Iterator&lt;T&gt; ⇒ Iterator&lt;U&gt; when running on an RDD of type T.</p></td> 
+          </tr> 
+          <tr> 
+           <td>5</td> 
+           <td> <p><b>mapPartitionsWithIndex(func)</b></p> <p>Similar to map Partitions, but also provides <b>func</b> with an integer value representing the index of the partition, so <b>func</b> must be of type (Int, Iterator&lt;T&gt;) ⇒ Iterator&lt;U&gt; when running on an RDD of type T.</p></td> 
+          </tr> 
+          <tr> 
+           <td>6</td> 
+           <td> <p><b>sample(withReplacement, fraction, seed)</b></p> <p>Sample a <b>fraction</b> of the data, with or without replacement, using a given random number generator seed.</p></td> 
+          </tr> 
+          <tr> 
+           <td>7</td> 
+           <td> <p><b>union(otherDataset)</b></p> <p>Returns a new dataset that contains the union of the elements in the source dataset and the argument.</p></td> 
+          </tr> 
+          <tr> 
+           <td>8</td> 
+           <td> <p><b>intersection(otherDataset)</b></p> <p>Returns a new RDD that contains the intersection of elements in the source dataset and the argument.</p></td> 
+          </tr> 
+          <tr> 
+           <td>9</td> 
+           <td> <p><b>distinct([numTasks])</b></p> <p>Returns a new dataset that contains the distinct elements of the source dataset.</p></td> 
+          </tr> 
+          <tr> 
+           <td>10</td> 
+           <td> <p><b>groupByKey([numTasks])</b></p> <p>When called on a dataset of (K, V) pairs, returns a dataset of (K, Iterable&lt;V&gt;) pairs.</p> <p><b>Note</b> − If you are grouping in order to perform an aggregation (such as a sum or average) over each key, using reduceByKey or aggregateByKey will yield much better performance.</p></td> 
+          </tr> 
+          <tr> 
+           <td>11</td> 
+           <td> <p><b>reduceByKey(func, [numTasks])</b></p> <p>When called on a dataset of (K, V) pairs, returns a dataset of (K, V) pairs where the values for each key are aggregated using the given reduce function <i>func</i>, which must be of type (V, V) ⇒ V. Like in groupByKey, the number of reduce tasks is configurable through an optional second argument.</p></td> 
+          </tr> 
+          <tr> 
+           <td>12</td> 
+           <td> <p><b>aggregateByKey(zeroValue)(seqOp, combOp, [numTasks])</b></p> <p>When called on a dataset of (K, V) pairs, returns a dataset of (K, U) pairs where the values for each key are aggregated using the given combine functions and a neutral "zero" value. Allows an aggregated value type that is different from the input value type, while avoiding unnecessary allocations. Like in groupByKey, the number of reduce tasks is configurable through an optional second argument.</p></td> 
+          </tr> 
+          <tr> 
+           <td>13</td> 
+           <td> <p><b>sortByKey([ascending], [numTasks])</b></p> <p>When called on a dataset of (K, V) pairs where K implements Ordered, returns a dataset of (K, V) pairs sorted by keys in ascending or descending order, as specified in the Boolean ascending argument.</p></td> 
+          </tr> 
+          <tr> 
+           <td>14</td> 
+           <td> <p><b>join(otherDataset, [numTasks])</b></p> <p>When called on datasets of type (K, V) and (K, W), returns a dataset of (K, (V, W)) pairs with all pairs of elements for each key. Outer joins are supported through leftOuterJoin, rightOuterJoin, and fullOuterJoin.</p></td> 
+          </tr> 
+          <tr> 
+           <td>15</td> 
+           <td> <p><b>cogroup(otherDataset, [numTasks])</b></p> <p>When called on datasets of type (K, V) and (K, W), returns a dataset of (K, (Iterable&lt;V&gt;, Iterable&lt;W&gt;)) tuples. This operation is also called group With.</p></td> 
+          </tr> 
+          <tr> 
+           <td>16</td> 
+           <td> <p><b>cartesian(otherDataset)</b></p> <p>When called on datasets of types T and U, returns a dataset of (T, U) pairs (all pairs of elements).</p></td> 
+          </tr> 
+          <tr> 
+           <td>17</td> 
+           <td> <p><b>pipe(command, [envVars])</b></p> <p>Pipe each partition of the RDD through a shell command, e.g. a Perl or bash script. RDD elements are written to the process's stdin and lines output to its stdout are returned as an RDD of strings.</p></td> 
+          </tr> 
+          <tr> 
+           <td>18</td> 
+           <td> <p><b>coalesce(numPartitions)</b></p> <p>Decrease the number of partitions in the RDD to numPartitions. Useful for running operations more efficiently after filtering down a large dataset.</p></td> 
+          </tr> 
+          <tr> 
+           <td>19</td> 
+           <td> <p><b>repartition(numPartitions)</b></p> <p>Reshuffle the data in the RDD randomly to create either more or fewer partitions and balance it across them. This always shuffles all data over the network.</p></td> 
+          </tr> 
+          <tr> 
+           <td>20</td> 
+           <td> <p><b>repartitionAndSortWithinPartitions(partitioner)</b></p> <p>Repartition the RDD according to the given partitioner and, within each resulting partition, sort records by their keys. This is more efficient than calling repartition and then sorting within each partition because it can push the sorting down into the shuffle machinery.</p></td> 
+          </tr> 
+         </tbody>
+        </table> 
+        <h2>Actions</h2> 
+        <p>The following table gives a list of Actions, which return values.</p> 
+        <table class="table table-bordered"> 
+         <tbody>
+          <tr> 
+           <th>S.No</th> 
+           <th style="text-align:center;">Action &amp; Meaning</th> 
+          </tr> 
+          <tr> 
+           <td>1</td> 
+           <td> <p><b>reduce(func)</b></p> <p>Aggregate the elements of the dataset using a function <b>func</b> (which takes two arguments and returns one). The function should be commutative and associative so that it can be computed correctly in parallel.</p></td> 
+          </tr> 
+          <tr> 
+           <td>2</td> 
+           <td> <p><b>collect()</b></p> <p>Returns all the elements of the dataset as an array at the driver program. This is usually useful after a filter or other operation that returns a sufficiently small subset of the data.</p></td> 
+          </tr> 
+          <tr> 
+           <td>3</td> 
+           <td> <p><b>count()</b></p> <p>Returns the number of elements in the dataset.</p></td> 
+          </tr> 
+          <tr> 
+           <td>4</td> 
+           <td> <p><b>first()</b></p> <p>Returns the first element of the dataset (similar to take (1)).</p></td> 
+          </tr> 
+          <tr> 
+           <td>5</td> 
+           <td> <p><b>take(n)</b></p> <p>Returns an array with the first <b>n</b> elements of the dataset.</p></td> 
+          </tr> 
+          <tr> 
+           <td>6</td> 
+           <td> <p><b>takeSample (withReplacement,num, [seed])</b></p> <p>Returns an array with a random sample of <b>num</b> elements of the dataset, with or without replacement, optionally pre-specifying a random number generator seed.</p></td> 
+          </tr> 
+          <tr> 
+           <td>7</td> 
+           <td> <p><b>takeOrdered(n, [ordering])</b></p> <p>Returns the first <b>n</b> elements of the RDD using either their natural order or a custom comparator.</p></td> 
+          </tr> 
+          <tr> 
+           <td>8</td> 
+           <td> <p><b>saveAsTextFile(path)</b></p> <p>Writes the elements of the dataset as a text file (or set of text files) in a given directory in the local filesystem, HDFS or any other Hadoop-supported file system. Spark calls toString on each element to convert it to a line of text in the file.</p></td> 
+          </tr> 
+          <tr> 
+           <td>9</td> 
+           <td> <p><b>saveAsSequenceFile(path) (Java and Scala)</b></p> <p>Writes the elements of the dataset as a Hadoop SequenceFile in a given path in the local filesystem, HDFS or any other Hadoop-supported file system. This is available on RDDs of key-value pairs that implement Hadoop's Writable interface. In Scala, it is also available on types that are implicitly convertible to Writable (Spark includes conversions for basic types like Int, Double, String, etc).</p></td> 
+          </tr> 
+          <tr> 
+           <td>10</td> 
+           <td> <p><b>saveAsObjectFile(path) (Java and Scala)</b></p> <p>Writes the elements of the dataset in a simple format using Java serialization, which can then be loaded using SparkContext.objectFile().</p></td> 
+          </tr> 
+          <tr> 
+           <td>11</td> 
+           <td> <p><b>countByKey()</b></p> <p>Only available on RDDs of type (K, V). Returns a hashmap of (K, Int) pairs with the count of each key.</p></td> 
+          </tr> 
+          <tr> 
+           <td>12</td> 
+           <td> <p><b>foreach(func)</b></p> <p>Runs a function <b>func</b> on each element of the dataset. This is usually, done for side effects such as updating an Accumulator or interacting with external storage systems.</p> <p><b>Note</b> − modifying variables other than Accumulators outside of the foreach() may result in undefined behavior. See Understanding closures for more details.</p></td> 
+          </tr> 
+         </tbody>
+        </table> 
+        <h2>Programming with RDD</h2> 
+        <p>Let us see the implementations of few RDD transformations and actions in RDD programming with the help of an example.</p> 
+        <h3>Example</h3> 
+        <p>Consider a word count example − It counts each word appearing in a document. Consider the following text as an input and is saved as an <b>input.txt</b> file in a home directory.</p> 
+        <p><b>input.txt</b> − input file.</p> 
+        <pre class="result notranslate">
+people are not as beautiful as they look, 
+as they walk or as they talk.
+they are only as beautiful  as they love, 
+as they care as they share.
+</pre> 
+        <p>Follow the procedure given below to execute the given example.</p> 
+        <h3>Open Spark-Shell</h3> 
+        <p>The following command is used to open spark shell. Generally, spark is built using Scala. Therefore, a Spark program runs on Scala environment.</p> 
+        <pre class="result notranslate">
+$ spark-shell
+</pre> 
+        <p>If Spark shell opens successfully then you will find the following output. Look at the last line of the output “Spark context available as sc” means the Spark container is automatically created spark context object with the name <b>sc</b>. Before starting the first step of a program, the SparkContext object should be created.</p> 
+        <pre class="result notranslate">
+Spark assembly has been built with Hive, including Datanucleus jars on classpath 
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties 
+15/06/04 15:25:22 INFO SecurityManager: Changing view acls to: hadoop 
+15/06/04 15:25:22 INFO SecurityManager: Changing modify acls to: hadoop 
+15/06/04 15:25:22 INFO SecurityManager: SecurityManager: authentication disabled;
+   ui acls disabled; users with view permissions: Set(hadoop); users with modify permissions: Set(hadoop) 
+15/06/04 15:25:22 INFO HttpServer: Starting HTTP Server 
+15/06/04 15:25:23 INFO Utils: Successfully started service 'HTTP class server' on port 43292. 
+Welcome to 
+      ____              __ 
+     / __/__  ___ _____/ /__ 
+    _\ \/ _ \/ _ `/ __/  '_/ 
+   /___/ .__/\_,_/_/ /_/\_\   version 1.4.0 
+      /_/  
+		
+Using Scala version 2.10.4 (Java HotSpot(TM) 64-Bit Server VM, Java 1.7.0_71) 
+Type in expressions to have them evaluated. 
+Spark context available as sc 
+scala&gt;
+</pre> 
+        <h3>Create an RDD</h3> 
+        <p>First, we have to read the input file using Spark-Scala API and create an RDD.</p> 
+        <p>The following command is used for reading a file from given location. Here, new RDD is created with the name of inputfile. The String which is given as an argument in the textFile(“”) method is absolute path for the input file name. However, if only the file name is given, then it means that the input file is in the current location.</p> 
+        <pre class="result notranslate">
+scala&gt; val inputfile = sc.textFile("input.txt")
+</pre> 
+        <h3>Execute Word count Transformation</h3> 
+        <p>Our aim is to count the words in a file. Create a flat map for splitting each line into words (<b>flatMap(line ⇒ line.split(“ ”)</b>).</p> 
+        <p>Next, read each word as a key with a value <b>‘1’</b> (&lt;key, value&gt; = &lt;word,1&gt;)using map function (<b>map(word ⇒ (word, 1)</b>).</p> 
+        <p>Finally, reduce those keys by adding values of similar keys (<b>reduceByKey(_+_)</b>).</p> 
+        <p>The following command is used for executing word count logic. After executing this, you will not find any output because this is not an action, this is a transformation; pointing a new RDD or tell spark to what to do with the given data)</p> 
+        <pre class="result notranslate">
+scala&gt; val counts = inputfile.flatMap(line =&gt; line.split(" ")).map(word =&gt; (word, 1)).reduceByKey(_+_);
+</pre> 
+        <h3>Current RDD</h3> 
+        <p>While working with the RDD, if you want to know about current RDD, then use the following command. It will show you the description about current RDD and its dependencies for debugging.</p> 
+        <pre class="result notranslate">
+scala&gt; counts.toDebugString
+</pre> 
+        <h3>Caching the Transformations</h3> 
+        <p>You can mark an RDD to be persisted using the persist() or cache() methods on it. The first time it is computed in an action, it will be kept in memory on the nodes. Use the following command to store the intermediate transformations in memory.</p> 
+        <pre class="result notranslate">
+scala&gt; counts.cache()
+</pre> 
+        <h3>Applying the Action</h3> 
+        <p>Applying an action, like store all the transformations, results into a text file. The String argument for saveAsTextFile(“ ”) method is the absolute path of output folder. Try the following command to save the output in a text file. In the following example, ‘output’ folder is in current location.</p> 
+        <pre class="result notranslate">
+scala&gt; counts.saveAsTextFile("output")
+</pre> 
+        <h3>Checking the Output</h3> 
+        <p>Open another terminal to go to home directory (where spark is executed in the other terminal). Use the following commands for checking output directory.</p> 
+        <pre class="result notranslate">
+[hadoop@localhost ~]$ cd output/ 
+[hadoop@localhost output]$ ls -1 
+ 
+part-00000 
+part-00001 
+_SUCCESS
+</pre> 
+        <p>The following command is used to see output from <b>Part-00000</b> files.</p> 
+        <pre class="result notranslate">
+[hadoop@localhost output]$ cat part-00000
+</pre> 
+        <h3>Output</h3> 
+        <pre class="result notranslate">
+(people,1) 
+(are,2) 
+(not,1) 
+(as,8) 
+(beautiful,2) 
+(they, 7) 
+(look,1) 
+</pre> 
+        <p>The following command is used to see output from <b>Part-00001</b> files.</p> 
+        <pre class="result notranslate">
+[hadoop@localhost output]$ cat part-00001 
+</pre> 
+        <h3>Output</h3> 
+        <pre class="result notranslate">
+(walk, 1) 
+(or, 1) 
+(talk, 1) 
+(only, 1) 
+(love, 1) 
+(care, 1) 
+(share, 1) 
+</pre> 
+        <h2>UN Persist the Storage</h2> 
+        <p>Before UN-persisting, if you want to see the storage space that is used for this application, then use the following URL in your browser.</p> 
+        <pre class="result notranslate">
+http://localhost:4040
+</pre> 
+        <p>You will see the following screen, which shows the storage space used for the application, which are running on the Spark shell.</p> 
+        <img src="/apache_spark/images/storage_space.jpg" alt="storage space"> 
+        <p>If you want to UN-persist the storage space of particular RDD, then use the following command.</p> 
+        <pre class="result notranslate">
+Scala&gt; counts.unpersist()
+</pre> 
+        <p>You will see the output as follows −</p> 
+        <pre class="result notranslate">
+15/06/27 00:57:33 INFO ShuffledRDD: Removing RDD 9 from persistence list 
+15/06/27 00:57:33 INFO BlockManager: Removing RDD 9 
+15/06/27 00:57:33 INFO BlockManager: Removing block rdd_9_1 
+15/06/27 00:57:33 INFO MemoryStore: Block rdd_9_1 of size 480 dropped from memory (free 280061810) 
+15/06/27 00:57:33 INFO BlockManager: Removing block rdd_9_0 
+15/06/27 00:57:33 INFO MemoryStore: Block rdd_9_0 of size 296 dropped from memory (free 280062106) 
+res7: cou.type = ShuffledRDD[9] at reduceByKey at &lt;console&gt;:14
+</pre> 
+        <p>For verifying the storage space in the browser, use the following URL.</p> 
+        <pre class="result notranslate">
+http://localhost:4040/
+</pre> 
+        <p>You will see the following screen. It shows the storage space used for the application, which are running on the Spark shell.</p> 
+        <img src="/apache_spark/images/storage_space_for_application.jpg" alt="Storage space for application"> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/apache_spark/apache_spark_installation.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/apache_spark/apache_spark_deployment.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/apache_spark/apache_spark_core_programming.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/apache_spark/apache_spark_core_programming.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/apache_spark/apache_spark_core_programming.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/apache_spark/apache_spark_core_programming.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/apache_spark/apache_spark_core_programming.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/apache_spark/apache_spark_core_programming.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

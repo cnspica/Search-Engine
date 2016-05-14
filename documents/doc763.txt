@@ -1,0 +1,339 @@
+http://tutorialspoint.com/cpanel/index.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>cPanel Tutorial</title> 
+  <meta name="description" content="cPanel Tutorial - Learn cPanel starting from Overview, Registering a Domain Name, Getting Web Hosting, Setting Up Nameserver, Logging into cPanel Dashboard, Changing Password, Styles, Contact Information, Home, Statistics and Dashboard, User Manager, File Manager, File Permissions, Images Scaler, Image Converter, Directory Privacy, Disk Usage, FTP Sessions, Backup Wizard, MySQL Databases, Wizard, phpMyAdmin, Remote MySQL, Subdomains, Aliases, Addon Domain, Redirect, Simple Zone Editor, Advance Zone Editor, Email Accounts, Forwarders, Webmail, MX Entry, Autoresponders, Track Delivery, Email Filters, Authentications, Address Importer, Encryption, Apache Spamassassin, Visitors, Errors, Bandwidth, Webalizer, Raw Access, CPU and Connection Usage, IP Blocker, SSH/TLS, Hotlink Protection, Ruby on Rails, Optimize Website, Cron Jobs, Track DNS, Indexes, Error Pages, MIME Types, Virus Scanner, Softaculous Apps Installer, Installing WordPress, FileZilla FTP Client, CloudFlare."> 
+  <meta name="keywords" content="cPanel, Tutorial, Overview, Registering a Domain Name, Getting Web Hosting, Setting Up Nameserver, Logging into cPanel Dashboard, Changing Password, Styles, Contact Information, Home, Statistics and Dashboard, User Manager, File Manager, File Permissions, Images Scaler, Image Converter, Directory Privacy, Disk Usage, FTP Sessions, Backup Wizard, MySQL Databases, Wizard, phpMyAdmin, Remote MySQL, Subdomains, Aliases, Addon Domain, Redirect, Simple Zone Editor, Advance Zone Editor, Email Accounts, Forwarders, Webmail, MX Entry, Autoresponders, Track Delivery, Email Filters, Authentications, Address Importer, Encryption, Apache Spamassassin, Visitors, Errors, Bandwidth, Webalizer, Raw Access, CPU and Connection Usage, IP Blocker, SSH/TLS, Hotlink Protection, Ruby on Rails, Optimize Website, Cron Jobs, Track DNS, Indexes, Error Pages, MIME Types, Virus Scanner, Softaculous Apps Installer, Installing WordPress, FileZilla FTP Client, CloudFlare."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #e94701 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #e94701 !important;}
+.submenu-item{ border-bottom: 2px solid #e94701 !important; border-top: 2px solid #e94701 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/cpanel/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/cpanel/images/cpanel-mini-logo.jpg" alt="cPanel Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">cPanel Tutorial</li> 
+        <li><a href="/cpanel/index.htm">cPanel - Home</a></li> 
+        <li><a href="/cpanel/cpanel_overview.htm">cPanel - Overview</a></li> 
+        <li><a href="/cpanel/cpanel_registering_domain_name.htm">cPanel - Registering a Domain Name</a></li> 
+        <li><a href="/cpanel/cpanel_getting_web_hosting.htm">cPanel - Getting Web Hosting</a></li> 
+        <li><a href="/cpanel/cpanel_setting_up_nameserver.htm">cPanel - Setting Up Nameserver</a></li> 
+        <li><a href="/cpanel/cpanel_logging_cpanel_dashboard.htm">cPanel - Logging cPanel Dashboard</a></li> 
+        <li><a href="/cpanel/cpanel_changing_password.htm">cPanel - Changing Password</a></li> 
+        <li><a href="/cpanel/cpanel_styles.htm">cPanel - Styles</a></li> 
+        <li><a href="/cpanel/cpanel_contact_information.htm">cPanel - Contact Information</a></li> 
+        <li><a href="/cpanel/cpanel_home.htm">cPanel - Home</a></li> 
+        <li><a href="/cpanel/cpanel_statistics_dashboard.htm">cPanel - Statistics &amp; Dashboard</a></li> 
+        <li><a href="/cpanel/cpanel_user_manager.htm">cPanel - User Manager</a></li> 
+        <li><a href="/cpanel/cpanel_file_manager.htm">cPanel - File Manager</a></li> 
+        <li><a href="/cpanel/cpanel_file_permissions.htm">cPanel - File Permissions</a></li> 
+        <li><a href="/cpanel/cpanel_images.htm">cPanel - Images</a></li> 
+        <li><a href="/cpanel/cpanel_image_scaler.htm">cPanel - Image Scaler</a></li> 
+        <li><a href="/cpanel/cpanel_image_converter.htm">cPanel - Image Converter</a></li> 
+        <li><a href="/cpanel/cpanel_directory_privacy.htm">cPanel - Directory Privacy</a></li> 
+        <li><a href="/cpanel/cpanel_disk_usage.htm">cPanel - Disk Usage</a></li> 
+        <li><a href="/cpanel/cpanel_ftp.htm">cPanel - FTP</a></li> 
+        <li><a href="/cpanel/cpanel_ftp_sessions.htm">cPanel - FTP Sessions</a></li> 
+        <li><a href="/cpanel/cpanel_backup.htm">cPanel - Backup</a></li> 
+        <li><a href="/cpanel/cpanel_backup_wizard.htm">cPanel - Backup Wizard</a></li> 
+        <li><a href="/cpanel/cpanel_mysql_databases.htm">cPanel - MySQL Databases</a></li> 
+        <li><a href="/cpanel/cpanel_mysql_database_wizard.htm">cPanel - MySQL Database Wizard</a></li> 
+        <li><a href="/cpanel/cpanel_phpmyadmin.htm">cPanel - phpMyAdmin</a></li> 
+        <li><a href="/cpanel/cpanel_remote_mysql.htm">cPanel - Remote MySQL</a></li> 
+        <li><a href="/cpanel/cpanel_subdomains.htm">cPanel - Subdomains</a></li> 
+        <li><a href="/cpanel/cpanel_aliases.htm">cPanel - Aliases</a></li> 
+        <li><a href="/cpanel/cpanel_addon_domain.htm">cPanel - Addon Domain</a></li> 
+        <li><a href="/cpanel/cpanel_redirect.htm">cPanel - Redirect</a></li> 
+        <li><a href="/cpanel/cpanel_simple_zone_editor.htm">cPanel - Simple Zone Editor</a></li> 
+        <li><a href="/cpanel/cpanel_advance_zone_editor.htm">cPanel - Advance Zone Editor</a></li> 
+        <li><a href="/cpanel/cpanel_email_accounts.htm">cPanel - Email Accounts</a></li> 
+        <li><a href="/cpanel/cpanel_email_forwarders.htm">cPanel - Email Forwarders</a></li> 
+        <li><a href="/cpanel/cpanel_webmail.htm">cPanel - Webmail</a></li> 
+        <li><a href="/cpanel/cpanel_mx_entry.htm">cPanel - MX Entry</a></li> 
+        <li><a href="/cpanel/cpanel_autoresponders.htm">cPanel - Autoresponders</a></li> 
+        <li><a href="/cpanel/cpanel_track_delivery.htm">cPanel - Track Delivery</a></li> 
+        <li><a href="/cpanel/cpanel_email_filters.htm">cPanel - Email Filters</a></li> 
+        <li><a href="/cpanel/cpanel_authentications.htm">cPanel - Authentications</a></li> 
+        <li><a href="/cpanel/cpanel_address_importer.htm">cPanel - Address Importer</a></li> 
+        <li><a href="/cpanel/cpanel_encryption.htm">cPanel - Encryption</a></li> 
+        <li><a href="/cpanel/cpanel_apache_spamassassin.htm">cPanel - Apache Spamassassin</a></li> 
+        <li><a href="/cpanel/cpanel_visitors.htm">cPanel - Visitors</a></li> 
+        <li><a href="/cpanel/cpanel_errors.htm">cPanel - Errors</a></li> 
+        <li><a href="/cpanel/cpanel_bandwidth.htm">cPanel - Bandwidth</a></li> 
+        <li><a href="/cpanel/cpanel_webalizer.htm">cPanel - Webalizer</a></li> 
+        <li><a href="/cpanel/cpanel_raw_access.htm">cPanel - Raw Access</a></li> 
+        <li><a href="/cpanel/cpanel_cpu_connection_usage.htm">cPanel - CPU and Connection Usage</a></li> 
+        <li><a href="/cpanel/cpanel_ip_blocker.htm">cPanel - IP Blocker</a></li> 
+        <li><a href="/cpanel/cpanel_ssh_tls.htm">cPanel - SSH/TLS</a></li> 
+        <li><a href="/cpanel/cpanel_hotlink_protection.htm">cPanel - Hotlink Protection</a></li> 
+        <li><a href="/cpanel/cpanel_ruby_on_rails.htm">cPanel - Ruby on Rails</a></li> 
+        <li><a href="/cpanel/cpanel_optimize_website.htm">cPanel - Optimize Website</a></li> 
+        <li><a href="/cpanel/cpanel_cron_jobs.htm">cPanel - Cron Jobs</a></li> 
+        <li><a href="/cpanel/cpanel_track_dns.htm">cPanel - Track DNS</a></li> 
+        <li><a href="/cpanel/cpanel_indexes.htm">cPanel - Indexes</a></li> 
+        <li><a href="/cpanel/cpanel_error_pages.htm">cPanel - Error Pages</a></li> 
+        <li><a href="/cpanel/cpanel_mime_types.htm">cPanel - MIME Types</a></li> 
+        <li><a href="/cpanel/cpanel_virus_scanner.htm">cPanel - Virus Scanner</a></li> 
+        <li><a href="/cpanel/cpanel_softaculous_apps_installer.htm">cPanel - Softaculous Apps Installer</a></li> 
+        <li><a href="/cpanel/cpanel_installing_wordPress.htm">cPanel - Installing WordPress</a></li> 
+        <li><a href="/cpanel/cpanel_filezilla_ftp_client.htm">cPanel - FileZilla FTP Client</a></li> 
+        <li><a href="/cpanel/cpanel_cloudflare.htm">cPanel - CloudFlare</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">cPanel Useful Resources</li> 
+        <li><a href="/cpanel/cpanel_quick_guide.htm">cPanel - Quick Guide</a></li> 
+        <li><a href="/cpanel/cpanel_useful_resources.htm">cPanel - Useful Resources</a></li> 
+        <li><a href="/cpanel/cpanel_discussion.htm">cPanel - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <div class="cover"> 
+         <img class="img-responsive" src="/cpanel/images/cpanel.jpg" alt="cPanel Tutorial"> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/cpanel/cpanel_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <h1>cPanel Tutorial</h1> 
+        <div class="center-aligned tutorial-menu"> 
+         <form action="/job_search.php" method="POST"> 
+          <input type="hidden" name="search_string" value="cPanel"> 
+          <button type="button" class="btn btn-default btn-sm btn-buy-tutorial"><i class="icon icon-file-pdf-o"></i><a href="/cpanel/cpanel_pdf_version.htm"> PDF Version</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-quick-guide"><i class="icon  icon-book"></i><a href="/cpanel/cpanel_quick_guide.htm"> Quick Guide</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon icon-external-link"></i><a href="/cpanel/cpanel_useful_resources.htm"> Resources</a></button> 
+          <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="icon icon-suitcase"></i> Job Search</button> 
+          <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="fa fa-wechat"></i><a href="/cpanel/cpanel_discussion.htm"> Discussion</a></button> 
+         </form> 
+        </div> 
+        <p>cPanel is a Linux-based web hosting control panel. It provides graphical user interface and is packed with lots of features that automates the process of hosting a website. It is a premium software, which is developed by a private company, cPanel Inc.</p> 
+        <p>cPanel has been written in Perl and was first released in March 21, 1996. It can only be installed in Linux servers, it supports CentOS, RHEL and CloudLinux operating software.</p> 
+        <p>Nowadays most of the Linux webhosting servers use cPanel to host and manage websites on their servers. If a person purchases the hosting from companies like GoDaddy, Hostgator or even from smaller local companies, it is more likely that the hosting will come with cPanel.</p> 
+        <p>In this tutorial, we will learn about managing and hosting a website with ease. This tutorial is divided as per the sections of cPanel and each section has the explanation of the functions it contains.</p> 
+        <h1>Audience</h1> 
+        <p>This tutorial is prepared for anyone who has basic knowledge of computers as well as of websites. It will help all those readers who wish to host and manage a website using cPanel. After completing this tutorial, you will have a moderate level of expertise in using the automation tools available in cPanel.</p> 
+        <h1>Prerequisites</h1> 
+        <p>Before starting this tutorial, we assume that you have a domain and cPanel hosting already setup. If not, then we will also cover those topics briefly in the following chapters.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/cpanel/cpanel_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/cpanel/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/cpanel/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/cpanel/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/cpanel/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/cpanel/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/cpanel/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

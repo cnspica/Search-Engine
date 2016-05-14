@@ -1,0 +1,655 @@
+https://stackexchange.com/newsletters/newsletter?site=programmers.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Programmers Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dprogrammers.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dprogrammers.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 52, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 52, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Programmers Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://programmers.stackexchange.com">Programmers</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #fff; background-image: url('//sstatic.net/stackexchange/Img/newsletters/programmers-bg.png'); font-family: Tahoma,Geneva,Arial,sans-serif;" background="//sstatic.net/stackexchange/Img/newsletters/programmers-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/programmers-header.png" alt="Programmers Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/317956/how-to-avoid-typical-dynamic-language-mistakes" target="_blank" style="color: #326AB3!important;">How to avoid typical "dynamic language mistakes"?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I've recently poured a couple of hours into JavaScript because I wanted to benefit from the massive userbase. Doing that I have noticed a pattern that most people attribute to dynamic languages. You ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/javascript" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">javascript</a> <a href="http://programmers.stackexchange.com/questions/tagged/programming-practices" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">programming-practices</a> <a href="http://programmers.stackexchange.com/questions/tagged/dynamic-typing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">dynamic-typing</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e9aed854fcd666aba1316ef908ad5913?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/227694/tomtom" target="_blank" style="color: #B64D27;">TomTom</a> 34 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0f8600457a40e08507eed1900aaca27a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/138903/vinarrow" target="_blank" style="color: #B64D27;">VinArrow</a> 30 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/317786/should-there-be-unit-tests-for-complex-regular-expressions" target="_blank" style="color: #326AB3!important;">Should there be unit tests for complex regular expressions?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">Should I write unit tests for complex regular expressions in my application? On the one hand: they are easy to test because input and output format is often simple and well-defined, and they can ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/unit-testing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">unit-testing</a> <a href="http://programmers.stackexchange.com/questions/tagged/testing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">testing</a> <a href="http://programmers.stackexchange.com/questions/tagged/regular-expressions" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">regular-expressions</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/88963e7cc58eabf150447e7b78a24793?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/35437/lii" target="_blank" style="color: #B64D27;">Lii</a> 30 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/fd633bcdc4aad15ea62e836d61f0dd8f?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/172693/jacquesb" target="_blank" style="color: #B64D27;">JacquesB</a> 94 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/318226/should-we-avoid-custom-objects-as-parameters" target="_blank" style="color: #326AB3!important;">Should we avoid custom objects as parameters?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">suppose I have a custom object: public class Student{ public int _id; public String name; public int age; public float score; } and a Window that used to show information of ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/design-patterns" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">design-patterns</a> <a href="http://programmers.stackexchange.com/questions/tagged/object-oriented" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">object-oriented</a> <a href="http://programmers.stackexchange.com/questions/tagged/parameters" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">parameters</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/92bddcbca981d155e42c2c7e1d2afc28?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/196142/amuse" target="_blank" style="color: #B64D27;">amuse</a> 28 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/36fb4daf9dbfc9dd3c3bd665fd345839?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/56655/euphoric" target="_blank" style="color: #B64D27;">Euphoric</a> 88 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/317977/why-do-we-need-enums-in-dynamically-typed-languages" target="_blank" style="color: #326AB3!important;">Why do we need enums in dynamically typed languages?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I was reading some code here and saw that an enum is used to store names of html tags. Why do we ever need to do this? What benefit do I get using this strategy? I know that how useful enums are in ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/object-oriented" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">object-oriented</a> <a href="http://programmers.stackexchange.com/questions/tagged/javascript" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">javascript</a> <a href="http://programmers.stackexchange.com/questions/tagged/programming-practices" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">programming-practices</a> <a href="http://programmers.stackexchange.com/questions/tagged/encapsulation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">encapsulation</a> <a href="http://programmers.stackexchange.com/questions/tagged/enum" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">enum</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/eGr4R.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/198298/codeyogi" target="_blank" style="color: #B64D27;">CodeYogi</a> 27 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/B3RDi.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/6644/whatsisname" target="_blank" style="color: #B64D27;">whatsisname</a> 51 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful" target="_blank" style="color: #326AB3!important;">Why would the 'final' keyword ever be useful?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">It seems Java has had the power to declare classes not-derivable for ages, and now C++ has it too. However, in the light of the Open/Close principle in SOLID, why would that be useful? To me, the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/solid" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">solid</a> <a href="http://programmers.stackexchange.com/questions/tagged/c%2b%2b11" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">c++11</a> <a href="http://programmers.stackexchange.com/questions/tagged/final" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">final</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/065408758852145010d28c2aa811ca68?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/54268/vorac" target="_blank" style="color: #B64D27;">Vorac</a> 22 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/fbf2421aadfca785f0c591afe75197f1?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/7422/kilian-foth" target="_blank" style="color: #B64D27;">Kilian Foth</a> 64 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/317966/wouldnt-it-be-beneficial-to-write-tests-during-code-review" target="_blank" style="color: #326AB3!important;">Wouldn't it be beneficial to write tests during code review?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">A colleague of mine came up with an idea that I found interesting. Wouldn't it be beneficial to write tests during code review, by the person doing the review assuming that we don't do TDD? For ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/programming-practices" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">programming-practices</a> <a href="http://programmers.stackexchange.com/questions/tagged/unit-testing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">unit-testing</a> <a href="http://programmers.stackexchange.com/questions/tagged/testing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">testing</a> <a href="http://programmers.stackexchange.com/questions/tagged/teamwork" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">teamwork</a> <a href="http://programmers.stackexchange.com/questions/tagged/workflows" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">workflows</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c8ecc672791bc2996c4403fcc4c5669d?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/188802/sok-pomaranczowy" target="_blank" style="color: #B64D27;">Sok Pomaranczowy</a> 21 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/cPPKQ.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/142319/rubberduck" target="_blank" style="color: #B64D27;">RubberDuck</a> 17 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/317873/how-does-rust-diverge-from-the-concurrency-facilities-of-c" target="_blank" style="color: #326AB3!important;">How does Rust diverge from the concurrency facilities of C++?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I am trying to decide whether Rust fundamentally, sufficiently improves upon the concurrency facilities of C++ that I should spend the time to learn Rust. In light of Stackexchange's format, I should ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/c%2b%2b" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">c++</a> <a href="http://programmers.stackexchange.com/questions/tagged/concurrency" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">concurrency</a> <a href="http://programmers.stackexchange.com/questions/tagged/rust" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">rust</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/cb781e5bd49c5d403228b98859d8b6dd?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/53118/thb" target="_blank" style="color: #B64D27;">thb</a> 13 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ce3278f4dfbb7287c89d749c95d6f805?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/7043/delnan" target="_blank" style="color: #B64D27;">delnan</a> 18 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/38691/difference-between-web-api-and-web-service" target="_blank" style="color: #326AB3!important;">Difference between Web API and Web Service?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I have heard about Web Services and Web API's a lot, is there any difference between them or are the same? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/web-development" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">web-development</a> <a href="http://programmers.stackexchange.com/questions/tagged/terminology" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">terminology</a> <a href="http://programmers.stackexchange.com/questions/tagged/api" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">api</a> <a href="http://programmers.stackexchange.com/questions/tagged/web-services" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">web-services</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/240b1db1684c2089ab57dab84a0c11d9?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/10153/harish-kurup" target="_blank" style="color: #B64D27;">Harish Kurup</a> 51 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/8a289f51484ac873a9efbe8c1caf29ad?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/11827/slawek" target="_blank" style="color: #B64D27;">Slawek</a> 49 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/307467/what-are-good-habits-for-designing-command-line-arguments" target="_blank" style="color: #326AB3!important;">What are good habits for designing command line arguments?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">While developing the application I started to wonder - How should I design command line arguments? A lot of programs are using formula like this -argument value or /argument value. Solution which ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/design" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">design</a> <a href="http://programmers.stackexchange.com/questions/tagged/parameters" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">parameters</a> <a href="http://programmers.stackexchange.com/questions/tagged/cli" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">cli</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e71bf1b70a07f6c0d876979575f110ad?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/210140/filip-hazubski" target="_blank" style="color: #B64D27;">Filip Hazubski</a> 122 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/8Jssg.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://programmers.stackexchange.com/users/40065/basile-starynkevitch" target="_blank" style="color: #B64D27;">Basile Starynkevitch</a> 179 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/318282/have-the-unit-test-using-the-project-or-just-have-same-namespace" target="_blank" style="color: #326AB3!important;">Have the unit test "using" the project, or just have same namespace?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">Background I am working on a project with C# .NET, and I've just added a new unit test project to my solution in Visual Studio. The way that I always have been doing this is: Create a new unit test ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/c%23" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">c#</a> <a href="http://programmers.stackexchange.com/questions/tagged/unit-testing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">unit-testing</a> <a href="http://programmers.stackexchange.com/questions/tagged/visual-studio" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">visual-studio</a> <a href="http://programmers.stackexchange.com/questions/tagged/project" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">project</a> <a href="http://programmers.stackexchange.com/questions/tagged/project-structure" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">project-structure</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/DiKfh.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/219569/steviev" target="_blank" style="color: #B64D27;">StevieV</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/317867/when-do-i-reset-two-factor-authentication-secret-keys" target="_blank" style="color: #326AB3!important;">When do I reset Two Factor Authentication secret keys?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I have built a simple authentication system for my web application that makes use of the open-source time-based OTP algorithm (RFC 6238). The key for each user is generated when the user is registered ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/web-applications" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">web-applications</a> <a href="http://programmers.stackexchange.com/questions/tagged/security" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">security</a> <a href="http://programmers.stackexchange.com/questions/tagged/authentication" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">authentication</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/gqmmp.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/82704/mike-rockett" target="_blank" style="color: #B64D27;">Mike Rockett</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e6e6e6;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 17px; margin: 0.4em 0 !important; font-weight: normal;"> <a href="http://programmers.stackexchange.com/questions/318219/how-to-deal-with-read-requests-bigger-than-buffer" target="_blank" style="color: #326AB3!important;">How to deal with Read requests bigger than buffer</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I'm working on something that transfers data from a device that only interfaces with USB flash drives. My bridge connects to that MassStorageDevice host through USB and connects to a PChost also ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://programmers.stackexchange.com/questions/tagged/c" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">c</a> <a href="http://programmers.stackexchange.com/questions/tagged/embedded-systems" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">embedded-systems</a> <a href="http://programmers.stackexchange.com/questions/tagged/file-systems" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">file-systems</a> <a href="http://programmers.stackexchange.com/questions/tagged/buffers" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; line-height: 15px; margin: 2px 2px 6px 0; text-decoration: none; height: 18px; padding: 2px 4px 1px 6px; color: #5D5D5D; border: 2px solid #CCC;">buffers</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/569f65c281673aba28d1374e6be100a0?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://programmers.stackexchange.com/users/227559/entimaniac" target="_blank" style="color: #B64D27;">entimaniac</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #B64D27; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #B64D27;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #B64D27;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #B64D27;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #B64D27;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

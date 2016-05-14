@@ -1,0 +1,560 @@
+http://tutorialspoint.com/nodejs/nodejs_restful_api.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Node.js RESTful API</title> 
+  <meta name="description" content="Node.js RESTful API - Learn Node.js framework in simple and easy steps starting from Introduction, Environment Setup, Node Package Manager, Node Callbacks Concept, Node Buffers Module, Node Streams, Node File System, Node Utility Modules, Node Web Module, Node Express Application, Node RESTFul API, Node Scaling Application"> 
+  <meta name="keywords" content="Introduction, Environment Setup, Node Package Manager, Global vs Local Installation, Node Callbacks Concept, locking vs non-blocking Code, Event Driven Programming, Event Loop Overview, Event Emitters, Implementing Callbacks, Node Buffers Module,JSON to JS Objects, JS Objects to JSON, Buffer Objects, Node Streams, Reading Stream, Writing Stream, Piping Stream, Node File System, File System Module, Synchronous vs Asynchronous Node, Utility Modules,Node Console Module, Node Process Module, Node OS Module, Node Path Module, Node Net Module, Node DNS Module, Node Domain Module, Node Web Module,HTTP Servers with Node.js, HTTP Clients with Node.js, Node Express Application, Express Overview, Installing Express, Express Generator, Node RESTFul API, Node Scaling Application,The exec function,The spawn function,The fork function"> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/nodejs/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #82af25 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #82af25 !important;}
+.submenu-item{ border-bottom: 2px solid #82af25 !important; border-top: 2px solid #82af25 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/nodejs/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/nodejs/images/nodejs-mini-logo.jpg" alt="Node.js Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Node.js Tutorial</li> 
+        <li><a href="/nodejs/index.htm">Node.js Home</a></li> 
+        <li><a href="/nodejs/nodejs_introduction.htm">Node.js Introduction</a></li> 
+        <li><a href="/nodejs/nodejs_environment_setup.htm">Node.js Environment Setup</a></li> 
+        <li><a href="/nodejs/nodejs_first_application.htm">Node.js First Application</a></li> 
+        <li><a href="/nodejs/nodejs_repl_terminal.htm">Node.js REPL Terminal</a></li> 
+        <li><a href="/nodejs/nodejs_npm.htm">Node.js Package Manager (NPM)</a></li> 
+        <li><a href="/nodejs/nodejs_callbacks_concept.htm">Node.js Callbacks Concept</a></li> 
+        <li><a href="/nodejs/nodejs_event_loop.htm">Node.js Event Loop</a></li> 
+        <li><a href="/nodejs/nodejs_event_emitter.htm">Node.js Event Emitter</a></li> 
+        <li><a href="/nodejs/nodejs_buffers.htm">Node.js Buffers</a></li> 
+        <li><a href="/nodejs/nodejs_streams.htm">Node.js Streams</a></li> 
+        <li><a href="/nodejs/nodejs_file_system.htm">Node.js File System</a></li> 
+        <li><a href="/nodejs/nodejs_global_objects.htm">Node.js Global Objects</a></li> 
+        <li><a href="/nodejs/nodejs_utitlity_module.htm">Node.js Utility Modules</a></li> 
+        <li><a href="/nodejs/nodejs_web_module.htm">Node.js Web Module</a></li> 
+        <li><a href="/nodejs/nodejs_express_framework.htm">Node.js Express Framework</a></li> 
+        <li><a href="/nodejs/nodejs_restful_api.htm">Node.js RESTFul API</a></li> 
+        <li><a href="/nodejs/nodejs_scaling_application.htm">Node.js Scaling Application</a></li> 
+        <li><a href="/nodejs/nodejs_packaging.htm">Node.js Packaging</a></li> 
+        <li class="heading">Node.js Useful Resources</li> 
+        <li><a href="/nodejs/nodejs_questions_answers.htm">Node.js - Questions and Answers</a></li> 
+        <li><a href="/nodejs/nodejs_quick_guide.htm">Node.js - Quick Guide</a></li> 
+        <li><a href="/nodejs/nodejs_useful_resources.htm">Node.js - Useful Resources</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Node.js - RESTful API</h1> 
+        <hr> 
+        <div class="topgooglead"> 
+         <div class="topadtag">
+          Advertisements
+         </div> 
+         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+         <ins class="adsbygoogle top_ad_slot" style="display:inline-block;" data-ad-client="ca-pub-7133395778201029" data-ad-slot="2813390526"> </ins> 
+         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/nodejs/nodejs_express_framework.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/nodejs/nodejs_scaling_application.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <h2>What is REST architecture?</h2> 
+        <p>REST stands for REpresentational State Transfer. REST is web standards based architecture and uses HTTP Protocol. It revolves around resource where every component is a resource and a resource is accessed by a common interface using HTTP standard methods. REST was first introduced by Roy Fielding in 2000.</p> 
+        <p>A REST Server simply provides access to resources and REST client accesses and modifies the resources using HTTP protocol. Here each resource is identified by URIs/ global IDs. REST uses various representation to represent a resource like text, JSON, XML but JSON is the most popular one.</p> 
+        <h3>HTTP methods</h3> 
+        <p>Following four HTTP methods are commonly used in REST based architecture.</p> 
+        <ul class="list"> 
+         <li><p><b>GET</b> - This is used to provide a read only access to a resource.</p></li> 
+         <li><p><b>PUT</b> - This is used to create a new resource.</p></li> 
+         <li><p><b>DELETE</b> - This is used to remove a resource.</p></li> 
+         <li><p><b>POST</b> - This is used to update a existing resource or create a new resource.</p></li> 
+        </ul> 
+        <h2>RESTful Web Services</h2> 
+        <p>A web service is a collection of open protocols and standards used for exchanging data between applications or systems. Software applications written in various programming languages and running on various platforms can use web services to exchange data over computer networks like the Internet in a manner similar to inter-process communication on a single computer. This interoperability (e.g., communication between Java and Python, or Windows and Linux applications) is due to the use of open standards.</p> 
+        <p>Web services based on REST Architecture are known as RESTful web services. These webservices uses HTTP methods to implement the concept of REST architecture. A RESTful web service usually defines a URI, Uniform Resource Identifier a service, which provides resource representation such as JSON and set of HTTP Methods.</p> 
+        <h2>Creating RESTful for A Library</h2> 
+        <p>Consider we have a JSON based database of users having the following users in a file <b>users.json</b>:</p> 
+        <pre class="prettyprint notranslate">
+{
+   "user1" : {
+      "name" : "mahesh",
+	  "password" : "password1",
+	  "profession" : "teacher",
+	  "id": 1
+   },
+   "user2" : {
+      "name" : "suresh",
+	  "password" : "password2",
+	  "profession" : "librarian",
+	  "id": 2
+   },
+   "user3" : {
+      "name" : "ramesh",
+	  "password" : "password3",
+	  "profession" : "clerk",
+	  "id": 3
+   }
+}
+</pre> 
+        <p>Based on this information we are going to provide following RESTful APIs.</p> 
+        <table class="src"> 
+         <tbody>
+          <tr>
+           <th>S. N.</th>
+           <th>URI</th>
+           <th>HTTP Method</th>
+           <th>POST body</th>
+           <th>Result</th> 
+          </tr>
+          <tr>
+           <td>1</td>
+           <td>listUsers</td>
+           <td>GET</td>
+           <td>empty</td>
+           <td>Show list of all the users.</td> 
+          </tr>
+          <tr>
+           <td>2</td>
+           <td>addUser</td>
+           <td>POST</td>
+           <td>JSON String</td>
+           <td>Add details of new user.</td> 
+          </tr>
+          <tr>
+           <td>3</td>
+           <td>deleteUser</td>
+           <td>DELETE</td>
+           <td>JSON String</td>
+           <td>Delete an existing user.</td> 
+          </tr>
+          <tr>
+           <td>4</td>
+           <td>:id</td>
+           <td>GET</td>
+           <td>empty</td>
+           <td>Show details of a user.</td> 
+          </tr>
+         </tbody>
+        </table> 
+        <p>I'm keeping most of the part of all the examples in the form of hard coding assuming you already know how to pass values from front end using Ajax or simple form data and how to process them using express <b>Request</b> object.</p> 
+        <h2>List Users</h2> 
+        <p>Let's implement our first RESTful API <b>listUsers</b> using the following code in a server.js file:</p> 
+        <pre class="prettyprint notranslate">
+var express = require('express');
+var app = express();
+var fs = require("fs");
+
+app.get('/listUsers', function (req, res) {
+   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+       console.log( data );
+       res.end( data );
+   });
+})
+
+var server = app.listen(8081, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("Example app listening at http://%s:%s", host, port)
+
+})
+</pre> 
+        <p>Now try to access defined API using <i>http://127.0.0.1:8081/listUsers</i> on local machine. This should produce following result:</p> 
+        <p>You can change given IP address when you will put the solution in production environment.</p> 
+        <pre class="prettyprint notranslate">
+{
+   "user1" : {
+      "name" : "mahesh",
+      "password" : "password1",
+      "profession" : "teacher",
+      "id": 1
+   },
+   "user2" : {
+      "name" : "suresh",
+      "password" : "password2",
+      "profession" : "librarian",
+      "id": 2
+   },
+   "user3" : {
+      "name" : "ramesh",
+      "password" : "password3",
+      "profession" : "clerk",
+      "id": 3
+   }
+}
+</pre> 
+        <h2>Add User</h2> 
+        <p>Following API will show you how to add new user in the list. Following is the detail of the new user:</p> 
+        <pre class="prettyprint notranslate">
+user = {
+   "user4" : {
+      "name" : "mohit",
+      "password" : "password4",
+      "profession" : "teacher",
+      "id": 4
+   }
+}
+</pre> 
+        <p>You can accept the same input in the form of JSON using Ajax call but for teaching point of view, we are making it hard coded here. Following is the <b>addUser</b> API to a new user in the database:</p> 
+        <pre class="prettyprint notranslate">
+var express = require('express');
+var app = express();
+var fs = require("fs");
+
+var user = {
+   "user4" : {
+      "name" : "mohit",
+      "password" : "password4",
+      "profession" : "teacher",
+      "id": 4
+   }
+}
+
+app.get('/addUser', function (req, res) {
+   // First read existing users.
+   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+       data = JSON.parse( data );
+       data["user4"] = user["user4"];
+       console.log( data );
+       res.end( JSON.stringify(data));
+   });
+})
+
+var server = app.listen(8081, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+  console.log("Example app listening at http://%s:%s", host, port)
+
+})
+</pre> 
+        <p>Now try to access defined API using <i>http://127.0.0.1:8081/addUsers</i> on local machine. This should produce following result:</p> 
+        <pre class="prettyprint notranslate">
+{ user1:
+   { name: 'mahesh',
+     password: 'password1',
+     profession: 'teacher',
+     id: 1 },
+  user2:
+   { name: 'suresh',
+     password: 'password2',
+     profession: 'librarian',
+     id: 2 },
+  user3:
+   { name: 'ramesh',
+     password: 'password3',
+     profession: 'clerk',
+     id: 3 },
+  user4:
+   { name: 'mohit',
+     password: 'password4',
+     profession: 'teacher',
+     id: 4 } 
+}
+</pre> 
+        <h2>Show Detail</h2> 
+        <p>Now we will implement an API which will be called using user ID and it will display the detail of the corresponding user.</p> 
+        <pre class="prettyprint notranslate">
+var express = require('express');
+var app = express();
+var fs = require("fs");
+
+app.get('/:id', function (req, res) {
+   // First read existing users.
+   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+       users = JSON.parse( data );
+       var user = users["user" + req.params.id] 
+       console.log( user );
+       res.end( JSON.stringify(user));
+   });
+})
+
+var server = app.listen(8081, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+  console.log("Example app listening at http://%s:%s", host, port)
+
+})
+</pre> 
+        <p>Now let's call above service using <i>http://127.0.0.1:8081/2</i> on local machine. This should produce following result:</p> 
+        <pre class="result notranslate">
+{
+   "name":"suresh",
+   "password":"password2",
+   "profession":"librarian",
+   "id":2
+}
+</pre> 
+        <h2>Delete User</h2> 
+        <p>This API is very similar to addUser API where we receive input data through req.body and then based on user ID we delete that user from the database. To keep our program simple we assume we are going to delete user with ID 2.</p> 
+        <pre class="prettyprint notranslate">
+var express = require('express');
+var app = express();
+var fs = require("fs");
+
+var id = 2;
+
+app.get('/deleteUser', function (req, res) {
+
+   // First read existing users.
+   fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
+       data = JSON.parse( data );
+       delete data["user" + 2];
+       
+       console.log( data );
+       res.end( JSON.stringify(data));
+   });
+})
+
+var server = app.listen(8081, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+  console.log("Example app listening at http://%s:%s", host, port)
+
+})
+</pre> 
+        <p>Now let's call above service using <i>http://127.0.0.1:8081/deleteUser</i> on local machine. This should produce following result:</p> 
+        <pre class="result notranslate">
+{ user1:
+   { name: 'mahesh',
+     password: 'password1',
+     profession: 'teacher',
+     id: 1 },
+  user3:
+   { name: 'ramesh',
+     password: 'password3',
+     profession: 'clerk',
+     id: 3 } 
+}
+</pre> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/nodejs/nodejs_express_application.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div>
+        <div class="print-btn"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="pdf-btn"> 
+         <a href="/nodejs/pdf/nodejs_restful_api.pdf" title="Node.js RESTful API" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/nodejs/nodejs_scaling_application.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/nodejs/nodejs_restful_api.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('/nodejs/try_nodejs.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

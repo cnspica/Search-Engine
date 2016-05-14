@@ -1,0 +1,622 @@
+https://stackexchange.com/newsletters/newsletter?site=opendata.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Open Data Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dopendata.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dopendata.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 245, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 245, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Open Data Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://opendata.stackexchange.com">Open Data</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-image: url('//sstatic.net/stackexchange/Img/newsletters/beta-bg.png');" background="//sstatic.net/stackexchange/Img/newsletters/beta-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> 
+      <table border="0" cellpadding="0" cellspacing="0"> 
+       <tbody>
+        <tr> 
+         <td width="600" align="left"> <h1 style="color: #8FD8F6; font-size: 24px!important; font-weight: normal!important;"><span style="color: #3E5583; font-weight: bold!important;">Open Data</span> newsletter</h1> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #FDFDFD; border-top: 1px solid #E6E6E6; border-left: 1px solid #E6E6E6; border-right: 1px solid #E6E6E6;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7736/roadworks-datasets-or-api-services" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Roadworks datasets or API services</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Hi guys I need to integrate into my app data about road conditions for major cities in Europe and U.S. initially. I'm looking for data about roadworks mainly but would be cool to find a feed for road ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/data-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">data-request</a> <a href="http://opendata.stackexchange.com/questions/tagged/usa" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">usa</a> <a href="http://opendata.stackexchange.com/questions/tagged/api-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">api-request</a> <a href="http://opendata.stackexchange.com/questions/tagged/europe" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">europe</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/h5BWE.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/11292/alessio-nunzi" target="_blank" style="color: #4E82C2; text-decoration: none;">Alessio Nunzi</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7731/implications-of-for-official-use-only" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Implications of "For official use only"</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Certain US government websites (fpds.gov, sam.gov, among others) have a footer saying something along the lines This is a U.S. General Services Administration Federal Government computer system ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/usa" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">usa</a> <a href="http://opendata.stackexchange.com/questions/tagged/government" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">government</a> <a href="http://opendata.stackexchange.com/questions/tagged/releasing-data" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">releasing-data</a> <a href="http://opendata.stackexchange.com/questions/tagged/uses-of-open-data" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">uses-of-open-data</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/d952a7c79dd2e31960a04428f65f7eb1?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/1052/anton-tarasenko" target="_blank" style="color: #4E82C2; text-decoration: none;">Anton Tarasenko</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f8be37c64e75ae2d41b36fb223e13c93?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://opendata.stackexchange.com/users/3937/pndfam05" target="_blank" style="color: #4E82C2; text-decoration: none;">pndfam05</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7750/images-of-cars-with-license-plates-from-respective-counties" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Images of Cars with License Plates from Respective Counties</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am looking for a database of images of cars with license plates from one country, like France or the USA. Thanks a lot. </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/data-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">data-request</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/7965e4b8c53dab9cb13348bf4af93eff?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/10359/jenny" target="_blank" style="color: #4E82C2; text-decoration: none;">jenny</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7729/wikidata-when-will-it-be-possible-to-query-for-wikipedia-page-links" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">wikidata: (when) will it be possible to query for wikipedia page links?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">(When) will the following be possible: For a wikipedia page: get the list of all wikipedia links on that page with their respective wikidata IDs in a single query/API call. Receive additional ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/wikidata" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">wikidata</a> <a href="http://opendata.stackexchange.com/questions/tagged/wikipedia" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">wikipedia</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/3fe8072e684b0069cd856c6b6f2956b6?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/11262/g-l-merebet" target="_blank" style="color: #4E82C2; text-decoration: none;">G. L. Merebet</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7734/wiki-site-for-consumer-medical-device-feature-comparison-tables" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Wiki site for consumer medical device feature comparison tables?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">With the increased marketing of sophisticated medical devices to consumers, it would seem that a central repository for public, wiki-based feature comparison tables would be a big help. But AFAICS, ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/healthcare" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">healthcare</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e2fdca33e3f9feb02ac472823f6b19dc?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/11288/humanengr" target="_blank" style="color: #4E82C2; text-decoration: none;">humanengr</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7754/gtins-global-trade-item-numbers-database-new-requirement-for-google-shopping" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">GTINs (Global Trade Item Numbers) - Database New requirement for Google shopping</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I recently realized that Google will make it mandatory to have a list of GTIN numbers for each product you do e-commerce for on Google Shopping (See details here). Is there any way to easily obtain ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/data-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">data-request</a> <a href="http://opendata.stackexchange.com/questions/tagged/products" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">products</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Uu14r.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/10080/johan855" target="_blank" style="color: #4E82C2; text-decoration: none;">johan855</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7748/plastics-dataset-us" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Plastics dataset (US)</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm looking for any type of plastics data in the US. Is there a dataset around the waste or use of plastic materials? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/data-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">data-request</a> <a href="http://opendata.stackexchange.com/questions/tagged/usa" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">usa</a> <a href="http://opendata.stackexchange.com/questions/tagged/environment" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">environment</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5d7d7f368f83b3694f51f4c784f15c0e?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/5476/lulu" target="_blank" style="color: #4E82C2; text-decoration: none;">lulu</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5e5dc50d094bb9ffef17666a64cba349?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://opendata.stackexchange.com/users/10342/user37317" target="_blank" style="color: #4E82C2; text-decoration: none;">user37317</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/1796/database-with-monthly-climate-weather-data-by-country" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Database with monthly climate/weather data by country</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am searching for a online database for climate data (especially temperature) for non-european countries on a monthly basis. 1990-2014 would be nice. Thank you! </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/data-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">data-request</a> <a href="http://opendata.stackexchange.com/questions/tagged/weather" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">weather</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e083e57ce309ada3c1345a8871c5ca8b?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/2475/daniel-ryback" target="_blank" style="color: #4E82C2; text-decoration: none;">Daniel Ryback</a> 13 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/xBbuE.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://opendata.stackexchange.com/users/1667/andrew-opengeocode" target="_blank" style="color: #4E82C2; text-decoration: none;">Andrew - OpenGeoCode</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/1440/amazon-price-history-dataset" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Amazon price history dataset</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Are there any datasets on Amazon products' price history? http://camelcamelcamel.com/ doesn't make it available and the Amazon Product Advertising API doesn't seem to give access to the price history. ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/data-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">data-request</a> <a href="http://opendata.stackexchange.com/questions/tagged/historical" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">historical</a> <a href="http://opendata.stackexchange.com/questions/tagged/products" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">products</a> <a href="http://opendata.stackexchange.com/questions/tagged/prices" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">prices</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Z99mk.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/1652/franck-dernoncourt" target="_blank" style="color: #4E82C2; text-decoration: none;">Franck Dernoncourt</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/I3w7w.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://opendata.stackexchange.com/users/505/tasos" target="_blank" style="color: #4E82C2; text-decoration: none;">Tasos</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7760/machine-learning-data-sets-searchable-by-statistical-properties" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Machine Learning Data Sets searchable by statistical properties</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">There are a number of collections of open example data sets for machine learning, e.g., the one of the UC Irvine. However, they are usually organized by source or topic. Does anyone know of a list or ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/data-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">data-request</a> <a href="http://opendata.stackexchange.com/questions/tagged/machine-learning" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">machine-learning</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/d76a4d5faa71a3d305f4e2c872d4f4c6?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/8896/mightycurious" target="_blank" style="color: #4E82C2; text-decoration: none;">MightyCurious</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7752/wisconsin-breast-cancer-data-difficulty-in-understanding-the-features" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Wisconsin - Breast Cancer Data - Difficulty in understanding the features</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I obtained the data set to solve a machine learning problem of predicting breast cancer from here : ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/machine-learning" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">machine-learning</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/d204d6df43dd7367138664ba192a1129?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/11316/anchit-virmani" target="_blank" style="color: #4E82C2; text-decoration: none;">Anchit Virmani</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://opendata.stackexchange.com/questions/7743/how-much-effort-do-people-spend-on-reporting-fixing-a-bug" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How much effort do people spend on reporting/fixing a bug?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I need some good dataset from which I could extract how much effort do people spend on an average software bug worldwide. We assume that there is some interface between users and developers and wish ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://opendata.stackexchange.com/questions/tagged/data-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">data-request</a> <a href="http://opendata.stackexchange.com/questions/tagged/software" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">software</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/207570794ac77eea1add740ec4955eb0?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://opendata.stackexchange.com/users/11303/mark-mcgregor" target="_blank" style="color: #4E82C2; text-decoration: none;">Mark McGregor</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;color: #444;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #4E82C2; text-decoration: none; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #4E82C2; text-decoration: none;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #4E82C2; text-decoration: none;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #4E82C2; text-decoration: none;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #4E82C2; text-decoration: none;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

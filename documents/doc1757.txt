@@ -1,0 +1,601 @@
+https://stackexchange.com/newsletters/newsletter?site=networkengineering.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Network Engineering Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dnetworkengineering.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dnetworkengineering.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 243, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 243, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Network Engineering Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://networkengineering.stackexchange.com">Network Engineering</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #fff; font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/networkengineering-header.png" alt="Network Engineering Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #f6f6f6; -moz-box-shadow: 0 1px 1px #ccc; -webkit-box-shadow: 0 1px 1px #ccc; box-shadow: 0 1px 1px #ccc; border-radius: 6px;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/30265/switch-buffer-sizing" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Switch Buffer Sizing</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">What is the relationship between a switches buffer size and the effect it has on latency? I am aware of the bufferbloat issue and understand that buffers that are too large in networks of slower BW ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/switching" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">switching</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/bandwidth" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">bandwidth</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/latency" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">latency</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/speed" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">speed</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5e8e4763b35a0ce8f1bbfd4d6050ee27?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/19636/earnthis" target="_blank" style="color: #009DDD; text-decoration: none!important;">earnThis</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/4UKoC.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/8499/ron-maupin" target="_blank" style="color: #009DDD; text-decoration: none!important;">Ron Maupin</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/30302/when-why-to-use-ospf" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">When/Why to use OSPF?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">This question has been hanging around in my head for a while; all the way from back in 2012, when we replaced our core network switch. This switch was actually a stacked pair of old 3Com 4900sx, and ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/routing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">routing</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/ospf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">ospf</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/61d2a0f034915fa9d2acd6f6b145bba8?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/1375/joel-coehoorn" target="_blank" style="color: #009DDD; text-decoration: none!important;">Joel Coehoorn</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/4UKoC.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/8499/ron-maupin" target="_blank" style="color: #009DDD; text-decoration: none!important;">Ron Maupin</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/30240/eigrp-metric-explanation" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">EIGRP metric explanation</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I'm looking for an understanding of how the metrics are structured within EIGRP, this includes the routing table, and also the topology table. I'm sure I'm not the only one that finds the concepts of ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/cisco" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">cisco</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/eigrp" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">eigrp</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0e7d62cc897ccccb7a063450b7e3acf3?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/23950/luca-a" target="_blank" style="color: #009DDD; text-decoration: none!important;">Luca A</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/bd5b2672e3e176f57a24e5f6a0af8c3c?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/3675/eddie" target="_blank" style="color: #009DDD; text-decoration: none!important;">Eddie</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/30358/advertise-non-transitive-routes-in-quagga" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Advertise Non-Transitive Routes in Quagga</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I have two ebgp peers connected to my quagga 1.0.20160315 router. One of those peers (peer1) is advertising routes with flag 0x800 (Optional Non-Transitive) in the MP_REACH_NLRI path attribute. Also ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/bgp" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">bgp</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/quagga" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">quagga</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2379cab373aa87f672c4a195f7cebd17?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/25339/sidhant101" target="_blank" style="color: #009DDD; text-decoration: none!important;">Sidhant101</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/9779292d93f35522a49b453267c71a81?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/20657/hankofficer" target="_blank" style="color: #009DDD; text-decoration: none!important;">Hankofficer</a> 0 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/30328/default-interface-cmd-on-cisco-nexus-5k" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">default interface cmd on cisco nexus 5k</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">Does anyone know of an equivalent "default interface X" comand for the Cisco Nexus 5000 platform? switch&gt;en switch# conf t switch#(config)# default interface x -&gt; dead thread here about ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/cisco" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">cisco</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/cli" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">cli</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/cisco-nexus" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">cisco-nexus</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/6fe8e265bdbd4854e7a05481751ade07?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/1316/max" target="_blank" style="color: #009DDD; text-decoration: none!important;">Max</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ba9e2bb16fd59ef912af2fc9186b9098?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/3875/waza-ari" target="_blank" style="color: #009DDD; text-decoration: none!important;">waza-ari</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/30340/cisco-ip-fragments-acl-strange-behavior" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Cisco IP Fragments ACL strange behavior</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I am testing following ACL on Cisco 3850 L3 switch : C3850#show ip access-lists 101 Extended IP access list 101 10 deny ip any any fragments 20 permit ip any any (268 matches) I applied ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/cisco" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">cisco</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/firewall" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">firewall</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/acl" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">acl</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/7db426b3117f455e7b3e56d67ecb42a6?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/17285/satish" target="_blank" style="color: #009DDD; text-decoration: none!important;">Satish</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/4UKoC.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/8499/ron-maupin" target="_blank" style="color: #009DDD; text-decoration: none!important;">Ron Maupin</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/30314/communicate-between-router-on-different-subnet" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Communicate between router on different subnet</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">This is my first question on Network Engineering SE, so I apologize if it is not up to par. I am trying to help a local business with their network setup, and I have hit a road block. Basically, they ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/routing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">routing</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/ipv4" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">ipv4</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/1WxPj.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/25305/dub-stylee" target="_blank" style="color: #009DDD; text-decoration: none!important;">dub stylee</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/4UKoC.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/8499/ron-maupin" target="_blank" style="color: #009DDD; text-decoration: none!important;">Ron Maupin</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/24068/why-do-we-need-a-3-way-handshake-why-not-just-2-way" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Why do we need a 3-way handshake? Why not just 2-way?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">The TCP 3-way handshake works like this: Client ------SYN-----&gt; Server Client &lt;---ACK/SYN---- Server Client ------ACK-----&gt; Server Why not just this? Client ------SYN-----&gt; Server ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/tcp" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">tcp</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/8ccbe08a132ba61eae9ff8984ca44e81?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/13856/smwikipedia" target="_blank" style="color: #009DDD; text-decoration: none!important;">smwikipedia</a> 48 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/bd5b2672e3e176f57a24e5f6a0af8c3c?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/3675/eddie" target="_blank" style="color: #009DDD; text-decoration: none!important;">Eddie</a> 71 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/7157/technical-difference-between-a-collision-and-broadcast-domain" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Technical difference between a Collision and Broadcast Domain</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">Many people new to networking wonder what the technical differences between a broadcast domain and a collision domain are. Specifically: What criteria is used to know the boundaries of a collision ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/ethernet" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">ethernet</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/protocol-theory" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">protocol-theory</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/duplex" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">duplex</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/broadcast" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">broadcast</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ce84c3fb1d8cbce03a2f03f0011f52d3?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/775/mike-pennington" target="_blank" style="color: #009DDD; text-decoration: none!important;">Mike Pennington</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ce84c3fb1d8cbce03a2f03f0011f52d3?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://networkengineering.stackexchange.com/users/775/mike-pennington" target="_blank" style="color: #009DDD; text-decoration: none!important;">Mike Pennington</a> 12 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer this?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://networkengineering.stackexchange.com/questions/30282/spurious-restransmission-to-a-server-behind-pfsense-nat" target="_blank" style="color: #009DDD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Spurious restransmission to a server behind pfsense NAT</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">i'm trying to connect to my ssh test server that i setup behind a pfsense firewall via nat on port 22. When I sniff packet on my laptop (WAN side of pfsense) trying to connect to the server, SYN is ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://networkengineering.stackexchange.com/questions/tagged/nat" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">nat</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/tcp" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">tcp</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/lan" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">lan</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/wireshark" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">wireshark</a> <a href="http://networkengineering.stackexchange.com/questions/tagged/pfsense" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #6d6e70; background-color: #f6f6f6; border: 1px solid #dedfe3; padding-left: 7px; padding-right: 7px; border-radius: 15px;">pfsense</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/dcba132df12cd89f315b305c1379d344?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://networkengineering.stackexchange.com/users/25276/aurel" target="_blank" style="color: #009DDD; text-decoration: none!important;">aurel</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #009DDD; text-decoration: none!important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #009DDD; text-decoration: none!important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #009DDD; text-decoration: none!important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #009DDD; text-decoration: none!important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #009DDD; text-decoration: none!important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

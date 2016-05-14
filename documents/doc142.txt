@@ -1,0 +1,331 @@
+http://tutorialspoint.com/nodejs/nodejs_useful_resources.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Node.js Useful Resources</title> 
+  <meta name="description" content="Node.js Tutorial for beginners - Learn Node.js framework in simple and easy steps starting from Introduction, Environment Setup, Node Package Manager, Node Callbacks Concept, Node Buffers Module, Node Streams, Node File System, Node Utility Modules, Node Web Module, Node Express Application, Node RESTFul API, Node Scaling Application"> 
+  <meta name="keywords" content="Introduction, Environment Setup, Node Package Manager, Global vs Local Installation, Node Callbacks Concept, locking vs non-blocking Code, Event Driven Programming, Event Loop Overview, Event Emitters, Implementing Callbacks, Node Buffers Module,JSON to JS Objects, JS Objects to JSON, Buffer Objects, Node Streams, Reading Stream, Writing Stream, Piping Stream, Node File System, File System Module, Synchronous vs Asynchronous Node, Utility Modules,Node Console Module, Node Process Module, Node OS Module, Node Path Module, Node Net Module, Node DNS Module, Node Domain Module, Node Web Module,HTTP Servers with Node.js, HTTP Clients with Node.js, Node Express Application, Express Overview, Installing Express, Express Generator, Node RESTFul API, Node Scaling Application,The exec function,The spawn function,The fork function"> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/nodejs/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #82af25 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #82af25 !important;}
+.submenu-item{ border-bottom: 2px solid #82af25 !important; border-top: 2px solid #82af25 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/nodejs/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/nodejs/images/nodejs-mini-logo.jpg" alt="Node.js Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Node.js Tutorial</li> 
+        <li><a href="/nodejs/index.htm">Node.js Home</a></li> 
+        <li><a href="/nodejs/nodejs_introduction.htm">Node.js Introduction</a></li> 
+        <li><a href="/nodejs/nodejs_environment_setup.htm">Node.js Environment Setup</a></li> 
+        <li><a href="/nodejs/nodejs_first_application.htm">Node.js First Application</a></li> 
+        <li><a href="/nodejs/nodejs_repl_terminal.htm">Node.js REPL Terminal</a></li> 
+        <li><a href="/nodejs/nodejs_npm.htm">Node.js Package Manager (NPM)</a></li> 
+        <li><a href="/nodejs/nodejs_callbacks_concept.htm">Node.js Callbacks Concept</a></li> 
+        <li><a href="/nodejs/nodejs_event_loop.htm">Node.js Event Loop</a></li> 
+        <li><a href="/nodejs/nodejs_event_emitter.htm">Node.js Event Emitter</a></li> 
+        <li><a href="/nodejs/nodejs_buffers.htm">Node.js Buffers</a></li> 
+        <li><a href="/nodejs/nodejs_streams.htm">Node.js Streams</a></li> 
+        <li><a href="/nodejs/nodejs_file_system.htm">Node.js File System</a></li> 
+        <li><a href="/nodejs/nodejs_global_objects.htm">Node.js Global Objects</a></li> 
+        <li><a href="/nodejs/nodejs_utitlity_module.htm">Node.js Utility Modules</a></li> 
+        <li><a href="/nodejs/nodejs_web_module.htm">Node.js Web Module</a></li> 
+        <li><a href="/nodejs/nodejs_express_framework.htm">Node.js Express Framework</a></li> 
+        <li><a href="/nodejs/nodejs_restful_api.htm">Node.js RESTFul API</a></li> 
+        <li><a href="/nodejs/nodejs_scaling_application.htm">Node.js Scaling Application</a></li> 
+        <li><a href="/nodejs/nodejs_packaging.htm">Node.js Packaging</a></li> 
+        <li class="heading">Node.js Useful Resources</li> 
+        <li><a href="/nodejs/nodejs_questions_answers.htm">Node.js - Questions and Answers</a></li> 
+        <li><a href="/nodejs/nodejs_quick_guide.htm">Node.js - Quick Guide</a></li> 
+        <li><a href="/nodejs/nodejs_useful_resources.htm">Node.js - Useful Resources</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Node.js - Useful Resources</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/nodejs/nodejs_quick_guide.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/nodejs/nodejs_discussion.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>If you want to list down your website, book or any other resource on this page then please contact at webmaster@tutorialspoint.com</p> 
+        <h2>Websites on Node.js</h2> 
+        <ul class="list"> 
+         <li><p><a target="_blank" rel="nofollow" href="http://nodejs.org/">Node.js</a> - Node.js official home page</p></li> 
+         <li><p><a target="_blank" rel="nofollow" href="http://en.wikipedia.org/wiki/Node.js">Node.js - Wiki</a> - This site details the basics of Node.js.</p></li> 
+        </ul> 
+        <h2>Books on Node.js</h2> 
+        <div class="row"> 
+         <div class="col-md-4"> 
+          <div class="box"> 
+           <a target="_blank" rel="nofollow" href="http://www.amazon.com/Practical-Node-js-Building-Real-World-Scalable/dp/1430265957/ref=sr_1_1?ie=UTF8&amp;qid=1423930300&amp;sr=8-1&amp;keywords=nodejs"><img src="http://ecx.images-amazon.com/images/I/41pquei3uWL._AA160_.jpg" alt="Practical Node.js: Building Real-World Scalable Web Apps" style="width:150px; height:200px"></a> 
+          </div> 
+         </div> 
+         <div class="col-md-4"> 
+          <div class="box"> 
+           <a target="_blank" rel="nofollow" href="http://www.amazon.com/Node-js-Right-Way-Server-Side-JavaScript/dp/1937785734/ref=sr_1_2?ie=UTF8&amp;qid=1423930300&amp;sr=8-2&amp;keywords=nodejs"><img src="http://ecx.images-amazon.com/images/I/51csKbX1NhL._AA160_.jpg" alt="Node.js the Right Way: Practical, Server-Side JavaScript That Scales" style="width:150px; height:200px"></a> 
+          </div> 
+         </div> 
+         <div class="col-md-4"> 
+          <div class="box"> 
+           <a target="_blank" rel="nofollow" href="http://www.amazon.com/What-Node-Brett-McLaughlin-ebook/dp/B005ISQ7JC/ref=sr_1_3?ie=UTF8&amp;qid=1423930300&amp;sr=8-3&amp;keywords=nodejs"><img src="http://ecx.images-amazon.com/images/I/4132A%2BxjhgL._AA160_.jpg" alt="What Is Node?" style="width:150px; height:200px"></a> 
+          </div> 
+         </div> 
+         <div class="col-md-4"> 
+          <div class="box"> 
+           <a target="_blank" rel="nofollow" href="http://www.amazon.com/Node-js-Practice-Alex-R-Young/dp/1617290939/ref=sr_1_4?ie=UTF8&amp;qid=1423930300&amp;sr=8-4&amp;keywords=nodejs"><img src="http://ecx.images-amazon.com/images/I/41VOn%2BlkB3L._AA160_.jpg" alt="Node.js in Practice" style="width:150px; height:200px"></a> 
+          </div> 
+         </div> 
+         <div class="col-md-4"> 
+          <div class="box"> 
+           <a target="_blank" rel="nofollow" href="http://www.amazon.com/Web-Development-Node-Express-Leveraging/dp/1491949309/ref=sr_1_6?ie=UTF8&amp;qid=1423930300&amp;sr=8-6&amp;keywords=nodejs"><img src="http://ecx.images-amazon.com/images/I/51L%2Biq%2Bh6EL._AA160_.jpg" alt="Web Development with Node and Express: Leveraging the JavaScript Stack" style="width:150px; height:200px"></a> 
+          </div> 
+         </div> 
+         <div class="col-md-4"> 
+          <div class="box"> 
+           <a target="_blank" rel="nofollow" href="http://www.amazon.com/Node-js-Action-Mike-Cantelon/dp/1617290572/ref=sr_1_5?ie=UTF8&amp;qid=1423930300&amp;sr=8-5&amp;keywords=nodejs"><img src="http://ecx.images-amazon.com/images/I/51twwFigyiL._AA160_.jpg" alt="Node.js in Action" style="width:150px; height:200px"></a> 
+          </div> 
+         </div> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/nodejs/nodejs_quick_guide.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/nodejs/nodejs_discussion.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/nodejs/nodejs_useful_resources.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/nodejs/nodejs_useful_resources.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/nodejs/nodejs_useful_resources.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/nodejs/nodejs_useful_resources.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/nodejs/nodejs_useful_resources.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/nodejs/nodejs_useful_resources.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('/nodejs/try_nodejs.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

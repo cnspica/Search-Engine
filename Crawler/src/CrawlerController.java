@@ -7,7 +7,7 @@ public class CrawlerController {
 
 	private void seed(String seedFile) {
 		// insert the seed into DB
-		DBManager dbManager = new DBManager("jdbc:mysql://localhost:3306/APT", "root", "");
+		DBManager dbManager = new DBManager("jdbc:mysql://localhost/search_engine", "root", "");
 		Scanner seed=null;
 		try {
 			seed = new Scanner(new File(seedFile));
@@ -16,16 +16,16 @@ public class CrawlerController {
 		}
 
 		// set fetched, inCount, outCount to 0 in URLs Table
-		dbManager.ExecuteNonQuery("UPDATE URLs SET fetched = false, inCount = 0, outCount = 0, title = NULL");
+		boolean b = dbManager.ExecuteNonQuery("UPDATE URLs SET status = 0, inCount = 0, outCount = 0, title = NULL, doc=NULL");
 
 		// read the seed URLs
-		StringBuilder query = new StringBuilder("INSERT INTO URLs(URL, fetched, inCount) VALUES");
+		StringBuilder query = new StringBuilder("INSERT INTO URLs(URL, status, inCount) VALUES");
 		while(seed.hasNextLine()){
 			String url = seed.nextLine();
 			query.append("('" + url + "', 0, 1), ");
 		}
-		dbManager.ExecuteNonQuery(query.substring(0, query.length()-2));
-		dbManager.TerminateConnection();
+        b = dbManager.ExecuteNonQuery(query.substring(0, query.length() - 2));
+        dbManager.TerminateConnection();
 	}
 	
 	public void crawel(String seedFile, int threadCount, int size, int threadURLCount, int seedSize) {
@@ -37,7 +37,7 @@ public class CrawlerController {
 		Thread[] t = new Thread[threadCount];
 		Lock lock = new Lock();
 		for (int i=0; i < threadCount; i++){
-			Crawler test = new Crawler("jdbc:mysql://localhost:3306/APT", "root", "", lock);
+			Crawler test = new Crawler("jdbc:mysql://localhost/search_engine", "root", "", lock);
 			test.setSize(size);
 			t[i]=new Thread(test);
 			t[i].start();

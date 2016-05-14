@@ -57,9 +57,9 @@ public class PageIndexedData {
 
 class KeywordData{
     private ArrayList<Integer> positions;
-    private ArrayList<String> tags;
+    private HashSet<String> tags;
 
-    public ArrayList<String> getTags() {
+    public HashSet<String> getTags() {
         return tags;
     }
 
@@ -69,7 +69,7 @@ class KeywordData{
 
     public KeywordData(){
         positions = new ArrayList<>();
-        tags = new ArrayList<>();
+        tags = new HashSet<>();
     }
 
     public KeywordData addPosition(int pos, String tag){
@@ -80,9 +80,6 @@ class KeywordData{
     }
 
     public String formatForStoringinDB(){
-
-
-
 
         return this.getTags().toString();
 

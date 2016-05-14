@@ -1,0 +1,647 @@
+https://stackexchange.com/newsletters/newsletter?site=salesforce.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Salesforce Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dsalesforce.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dsalesforce.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 213, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 213, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Salesforce Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://salesforce.stackexchange.com">Salesforce</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #f7f7f7; font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/salesforce-header.png" alt="Salesforce Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); -moz-box-shadow: 0 1px 1px #ccc; -webkit-box-shadow: 0 1px 1px #ccc; box-shadow: 0 1px 1px #ccc; border-radius: 6px;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/121350/why-does-apex-with-sharing-allow-updates-to-a-read-only-object" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Why does apex with sharing allow updates to a read only object?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">It appears that Visualforce with Apex is behaving different than native Salesforce pages with regards to sharing. I have a custom object Test Object with an Org-wide Default of "Private" I have a ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/apex" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">apex</a> <a href="http://salesforce.stackexchange.com/questions/tagged/visualforce" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">visualforce</a> <a href="http://salesforce.stackexchange.com/questions/tagged/sharing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">sharing</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/4439f83a23e4af4ff69dfd44424aec83?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/9867/fehays" target="_blank" style="color: #008ad6; text-decoration: none!important;">fehays</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/uJx8g.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://salesforce.stackexchange.com/users/19118/susanoo-chidori" target="_blank" style="color: #008ad6; text-decoration: none!important;">susanoo chidori</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/121073/is-it-possible-to-have-test-starttest-and-test-stoptest-in-a-loop" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Is it possible to have Test.startTest() and Test.stopTest() in a loop?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">First of all, sorry that I couldn't frame the question better. But I will try my best to explain why I am asking what I am asking: There are multiple custom objects like Client_1__c, Client_2__c, ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/apex" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">apex</a> <a href="http://salesforce.stackexchange.com/questions/tagged/unit-test" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">unit-test</a> <a href="http://salesforce.stackexchange.com/questions/tagged/governorlimits" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">governorlimits</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/53ea8511b4e13d8e98e9900c5bf3a4cb?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/16582/kal" target="_blank" style="color: #008ad6; text-decoration: none!important;">Kal</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Qvgta.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://salesforce.stackexchange.com/users/2984/sfdcfox" target="_blank" style="color: #008ad6; text-decoration: none!important;">sfdcfox</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/120935/visualforce-multiline-utf-8-csv" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">VisualForce MultiLine UTF-8 CSV</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">Goal is to generate a CSV file from VF that contains UTF-8 chars and multiline text fields. All users are Mac users. Controller public class MultiLineUtf8CsvMac { public String utf8Bom {get ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/visualforce" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">visualforce</a> <a href="http://salesforce.stackexchange.com/questions/tagged/csv" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">csv</a> <a href="http://salesforce.stackexchange.com/questions/tagged/character-encoding" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">character-encoding</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/tE1do.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/2602/cropredy" target="_blank" style="color: #008ad6; text-decoration: none!important;">cropredy</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/120885/how-to-make-field-visible-only-when-opportunity-reaches-90-probability" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to make field visible only when opportunity reaches 90% probability</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I have a requirement where i have to make some field visible only when the probability reaches 90 %. Field is on opportunity Is doing through workflow rule is the best way to do that. Or any other ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/opportunity" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">opportunity</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0e8a10e27f895387381d13571410e6b4?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/29281/david-mycka" target="_blank" style="color: #008ad6; text-decoration: none!important;">David Mycka</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/774a39790f8c87fa74da23cb8cde8c9a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://salesforce.stackexchange.com/users/7505/sfdcjameson" target="_blank" style="color: #008ad6; text-decoration: none!important;">sfdcJameson</a> 14 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/120932/dmlexception-getdmlfields-fails-when-inserting-list-of-sobjects" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">DMLException.getDmlFields Fails When Inserting List of SObjects?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">When a DML operation on a list of records of a concrete object type, e.g. Account fails, calling getDmlFields on the thrown DMLException returns the fields that caused the failure, as described in the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/apex" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">apex</a> <a href="http://salesforce.stackexchange.com/questions/tagged/dmlexception" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">dmlexception</a> <a href="http://salesforce.stackexchange.com/questions/tagged/sobjectfield" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">sobjectfield</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/7ab152b5e895caab3725643d1adbe758?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/240/xn" target="_blank" style="color: #008ad6; text-decoration: none!important;">xn.</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/7ab152b5e895caab3725643d1adbe758?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://salesforce.stackexchange.com/users/240/xn" target="_blank" style="color: #008ad6; text-decoration: none!important;">xn.</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/120905/cannot-query-userrecordaccess-for-tasks" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Cannot query UserRecordAccess for Tasks</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I am running my query using the Rest API, but I have reproduced the issue in Workbench as well. The below query works for Account, Opportunity, and Contact, but fails for Task: SELECT ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/soql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">soql</a> <a href="http://salesforce.stackexchange.com/questions/tagged/rest-api" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">rest-api</a> <a href="http://salesforce.stackexchange.com/questions/tagged/tasks" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">tasks</a> <a href="http://salesforce.stackexchange.com/questions/tagged/userrecordaccess" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">userrecordaccess</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2236a955920bbe658fe0a49d047cf15a?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/31321/user31321" target="_blank" style="color: #008ad6; text-decoration: none!important;">user31321</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Qvgta.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://salesforce.stackexchange.com/users/2984/sfdcfox" target="_blank" style="color: #008ad6; text-decoration: none!important;">sfdcfox</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/121497/cant-i-use-all-rows-in-asynchronous-salesforce-queries" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Can't I use ALL ROWS in asynchronous Salesforce queries?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I would like to perform asynchronous queries that could retrieve deleted rows as well. However, if I submit a batch with SOQL like select Id, IsDeleted, Name from Account where IsDeleted = true and ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/bulk-api" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">bulk-api</a> <a href="http://salesforce.stackexchange.com/questions/tagged/asyncapexjob" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">asyncapexjob</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c7c5f45c27a7ecce6de1a8867da53be6?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/21869/gabrielbr" target="_blank" style="color: #008ad6; text-decoration: none!important;">GabrielBR</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/58e10335e298098566f0368728b4aee4?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://salesforce.stackexchange.com/users/102/daniel-ballinger" target="_blank" style="color: #008ad6; text-decoration: none!important;">Daniel Ballinger</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/5776/deleting-triggers-classes-from-production" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Deleting Triggers/Classes from Production</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I was recently told ( Deleting a Class with IDE - cannot delete from Production? ): You cannot delete a class in production directly. You will need delete *the class from your sandbox* and then ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/apex" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">apex</a> <a href="http://salesforce.stackexchange.com/questions/tagged/trigger" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">trigger</a> <a href="http://salesforce.stackexchange.com/questions/tagged/class" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">class</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/X8vEW.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/517/amm" target="_blank" style="color: #008ad6; text-decoration: none!important;">AMM</a> 23 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Q5kyp.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://salesforce.stackexchange.com/users/645/mohith-shrivastava" target="_blank" style="color: #008ad6; text-decoration: none!important;">Mohith Shrivastava</a> 36 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/482/how-can-i-execute-javascript-on-a-sfdc-standard-detail-page" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How can I execute JavaScript on a SFDC Standard Detail Page?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">*NOTE: This is not feasible as of the latest SFDC Releases. * I have a requirement to execute some JavaScript on a SFDC Standard Detail page. Specifically we would like to remove the ability for ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/javascript" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">javascript</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/n28uA.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/232/corycowgill" target="_blank" style="color: #008ad6; text-decoration: none!important;">CoryCowgill</a> 18 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/507e04af95d98f544fbd6c69da3aedf7?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://salesforce.stackexchange.com/users/294/rajat-paharia" target="_blank" style="color: #008ad6; text-decoration: none!important;">Rajat Paharia</a> 20 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/121303/enable-apex-classes-sometimes-only-global-sometimes-includes-public" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Enable Apex Classes - Sometimes Only Global, Sometimes Includes Public</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I have a managed package that I distribute to clients and I'm running into a curious situation trying to help one install. I have noticed that in the Enable Apex Classes for their System Administrator ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/managed-package" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">managed-package</a> <a href="http://salesforce.stackexchange.com/questions/tagged/class" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">class</a> <a href="http://salesforce.stackexchange.com/questions/tagged/profile" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">profile</a> <a href="http://salesforce.stackexchange.com/questions/tagged/security" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">security</a> <a href="http://salesforce.stackexchange.com/questions/tagged/permissions" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">permissions</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://graph.facebook.com/100000114099781/picture?type=large" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/9859/louis-pujol" target="_blank" style="color: #008ad6; text-decoration: none!important;">Louis Pujol</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/120996/some-permission-are-not-available-in-profile" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Some permission are not available in profile?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">When I am migration profiles from one organization to another that time I need some permission in Target organization, but in target organization these permissions are not available. Can anyone tell ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/profile" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">profile</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2f7c9bfcfa8dbdf30c4f9a226ab4a660?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/8774/ravikant-kedia" target="_blank" style="color: #008ad6; text-decoration: none!important;">Ravikant Kedia</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://salesforce.stackexchange.com/questions/121468/how-to-embed-a-salesforce-marketing-cloud-microsite-in-3rd-party-website-page" target="_blank" style="color: #008ad6!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to embed a salesforce marketing cloud microsite in 3rd party website page?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">QUESTION: I have a microsite (web page) with some fields on it that I am submitting / saving in a data extension. With the help of triggered send, I am sending an email to the user that is being added ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://salesforce.stackexchange.com/questions/tagged/marketing-cloud" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">marketing-cloud</a> <a href="http://salesforce.stackexchange.com/questions/tagged/api" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">api</a> <a href="http://salesforce.stackexchange.com/questions/tagged/microsites" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;border: 1px solid #e4e7e9; padding: 4px 8px; min-width: 36px; border-radius: 0; margin: 2px 2px 2px 0; text-decoration: none; text-align: center; font-size: 11px; font-weight: 600; white-space: nowrap; line-height: 1.4em; display: inline-block; color: #475f67; background: #f9f9f9;">microsites</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/9dc73721fb6401c374a4e1cc6dee2286?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://salesforce.stackexchange.com/users/31442/lkum" target="_blank" style="color: #008ad6; text-decoration: none!important;">lkum</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #008ad6; text-decoration: none!important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #008ad6; text-decoration: none!important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #008ad6; text-decoration: none!important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #008ad6; text-decoration: none!important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #008ad6; text-decoration: none!important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

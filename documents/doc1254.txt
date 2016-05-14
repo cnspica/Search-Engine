@@ -1,0 +1,1089 @@
+https://stackexchange.com/leagues/13/alltime/gamedev
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - Game Development - All Time - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/13/alltime/gamedev/2010-07-14"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/13/AllTime/2010-07-14/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f13%2falltime%2fgamedev#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f13%2falltime%2fgamedev">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/alltime/stackoverflow/2010-07-14?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/alltime/superuser/2010-07-14?sort=reputationchange"> Super User </option> <option value="/leagues/21/alltime/math/2010-07-14?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/alltime/askubuntu/2010-07-14?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/alltime/serverfault/2010-07-14?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/alltime/english/2010-07-14?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/alltime/unix/2010-07-14?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/alltime/apple/2010-07-14?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/alltime/gaming/2010-07-14?sort=reputationchange"> Arqade </option> <option value="/leagues/52/alltime/programmers/2010-07-14?sort=reputationchange"> Programmers </option> <option value="/leagues/29/alltime/tex/2010-07-14?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/alltime/android/2010-07-14?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/alltime/meta/2010-07-14?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/alltime/electronics/2010-07-14?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/alltime/physics/2010-07-14?sort=reputationchange"> Physics </option> <option value="/leagues/19/alltime/stats/2010-07-14?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/alltime/dba/2010-07-14?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/alltime/ru-stackoverflow/2010-07-14?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/alltime/security/2010-07-14?sort=reputationchange"> Information Security </option> <option value="/leagues/86/alltime/codereview/2010-07-14?sort=reputationchange"> Code Review </option> <option value="/leagues/42/alltime/wordpress/2010-07-14?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/alltime/gis/2010-07-14?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/alltime/scifi/2010-07-14?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/alltime/mathoverflow/2010-07-14?sort=reputationchange"> MathOverflow </option> <option value="/leagues/23/alltime/diy/2010-07-14?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/alltime/webapps/2010-07-14?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/alltime/sharepoint/2010-07-14?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/alltime/cooking/2010-07-14?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/alltime/graphicdesign/2010-07-14?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange" selected> Game Development </option> <option value="/leagues/99/alltime/drupal/2010-07-14?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/alltime/ux/2010-07-14?sort=reputationchange"> User Experience </option> <option value="/leagues/229/alltime/ell/2010-07-14?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/alltime/pt-stackoverflow/2010-07-14?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/alltime/webmasters/2010-07-14?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/alltime/magento/2010-07-14?sort=reputationchange"> Magento </option> <option value="/leagues/191/alltime/academia/2010-07-14?sort=reputationchange"> Academia </option> <option value="/leagues/125/alltime/travel/2010-07-14?sort=reputationchange"> Travel </option> <option value="/leagues/213/alltime/salesforce/2010-07-14?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/alltime/workplace/2010-07-14?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/alltime/photo/2010-07-14?sort=reputationchange"> Photography </option> <option value="/leagues/177/alltime/mathematica/2010-07-14?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/alltime/raspberrypi/2010-07-14?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/alltime/money/2010-07-14?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/alltime/movies/2010-07-14?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/alltime/rpg/2010-07-14?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/alltime/cs/2010-07-14?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/alltime/codegolf/2010-07-14?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/alltime/chemistry/2010-07-14?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/alltime/mechanics/2010-07-14?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/alltime/bicycles/2010-07-14?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/alltime/blender/2010-07-14?sort=reputationchange"> Blender </option> <option value="/leagues/359/alltime/rus/2010-07-14?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/alltime/music/2010-07-14?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/alltime/biology/2010-07-14?sort=reputationchange"> Biology </option> <option value="/leagues/139/alltime/christianity/2010-07-14?sort=reputationchange"> Christianity </option> <option value="/leagues/95/alltime/skeptics/2010-07-14?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/alltime/anime/2010-07-14?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/alltime/crypto/2010-07-14?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/alltime/bitcoin/2010-07-14?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/alltime/parenting/2010-07-14?sort=reputationchange"> Parenting </option> <option value="/leagues/243/alltime/networkengineering/2010-07-14?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/alltime/cstheory/2010-07-14?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/327/alltime/worldbuilding/2010-07-14?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/307/alltime/puzzling/2010-07-14?sort=reputationchange"> Puzzling </option> <option value="/leagues/113/alltime/judaism/2010-07-14?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/alltime/fitness/2010-07-14?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/alltime/german/2010-07-14?sort=reputationchange"> German Language </option> <option value="/leagues/275/alltime/aviation/2010-07-14?sort=reputationchange"> Aviation </option> <option value="/leagues/288/alltime/arduino/2010-07-14?sort=reputationchange"> Arduino </option> <option value="/leagues/60/alltime/boardgames/2010-07-14?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/alltime/dsp/2010-07-14?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/alltime/sqa/2010-07-14?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/alltime/softwarerecs/2010-07-14?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/alltime/philosophy/2010-07-14?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/alltime/history/2010-07-14?sort=reputationchange"> History </option> <option value="/leagues/123/alltime/gardening/2010-07-14?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/alltime/japanese/2010-07-14?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/alltime/writers/2010-07-14?sort=reputationchange"> Writers </option> <option value="/leagues/37/alltime/stackapps/2010-07-14?sort=reputationchange"> Stack Apps </option> <option value="/leagues/211/alltime/islam/2010-07-14?sort=reputationchange"> Islam </option> <option value="/leagues/259/alltime/sound/2010-07-14?sort=reputationchange"> Sound Design </option> <option value="/leagues/93/alltime/pm/2010-07-14?sort=reputationchange"> Project Management </option> <option value="/leagues/91/alltime/quant/2010-07-14?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/341/alltime/lifehacks/2010-07-14?sort=reputationchange"> Lifehacks </option> <option value="/leagues/333/alltime/ja-stackoverflow/2010-07-14?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/137/alltime/french/2010-07-14?sort=reputationchange"> French Language </option> <option value="/leagues/165/alltime/scicomp/2010-07-14?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/alltime/spanish/2010-07-14?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/alltime/productivity/2010-07-14?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/alltime/pets/2010-07-14?sort=reputationchange"> Pets </option> <option value="/leagues/255/alltime/space/2010-07-14?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/alltime/datascience/2010-07-14?sort=reputationchange"> Data Science </option> <option value="/leagues/64/alltime/homebrew/2010-07-14?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/alltime/expressionengine/2010-07-14?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/alltime/hermeneutics/2010-07-14?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/alltime/video/2010-07-14?sort=reputationchange"> Video Production </option> <option value="/leagues/197/alltime/windowsphone/2010-07-14?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/alltime/outdoors/2010-07-14?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/alltime/emacs/2010-07-14?sort=reputationchange"> Emacs </option> <option value="/leagues/189/alltime/sports/2010-07-14?sort=reputationchange"> Sports </option> <option value="/leagues/237/alltime/reverseengineering/2010-07-14?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/alltime/chinese/2010-07-14?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/alltime/cogsci/2010-07-14?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/alltime/chess/2010-07-14?sort=reputationchange"> Chess </option> <option value="/leagues/143/alltime/linguistics/2010-07-14?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/alltime/astronomy/2010-07-14?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/alltime/robotics/2010-07-14?sort=reputationchange"> Robotics </option> <option value="/leagues/245/alltime/opendata/2010-07-14?sort=reputationchange"> Open Data </option> <option value="/leagues/215/alltime/patents/2010-07-14?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/alltime/es-stackoverflow/2010-07-14?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/alltime/tor/2010-07-14?sort=reputationchange"> Tor </option> <option value="/leagues/223/alltime/politics/2010-07-14?sort=reputationchange"> Politics </option> <option value="/leagues/315/alltime/hinduism/2010-07-14?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/alltime/freelancing/2010-07-14?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/alltime/vi/2010-07-14?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/alltime/craftcms/2010-07-14?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/alltime/joomla/2010-07-14?sort=reputationchange"> Joomla </option> <option value="/leagues/321/alltime/startups/2010-07-14?sort=reputationchange"> Startups </option> <option value="/leagues/343/alltime/engineering/2010-07-14?sort=reputationchange"> Engineering </option> <option value="/leagues/313/alltime/buddhism/2010-07-14?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/alltime/russian/2010-07-14?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/alltime/economics/2010-07-14?sort=reputationchange"> Economics </option> <option value="/leagues/363/alltime/law/2010-07-14?sort=reputationchange"> Law </option> <option value="/leagues/155/alltime/bricks/2010-07-14?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/alltime/expatriates/2010-07-14?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/alltime/tridion/2010-07-14?sort=reputationchange"> Tridion </option> <option value="/leagues/291/alltime/matheducators/2010-07-14?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/alltime/earthscience/2010-07-14?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/alltime/martialarts/2010-07-14?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/alltime/elementaryos/2010-07-14?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/alltime/ham/2010-07-14?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/alltime/civicrm/2010-07-14?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/alltime/health/2010-07-14?sort=reputationchange"> Health </option> <option value="/leagues/277/alltime/ebooks/2010-07-14?sort=reputationchange"> Ebooks </option> <option value="/leagues/351/alltime/woodworking/2010-07-14?sort=reputationchange"> Woodworking </option> <option value="/leagues/231/alltime/sustainability/2010-07-14?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/386/alltime/ethereum/2010-07-14?sort=reputationchange"> Ethereum </option> <option value="/leagues/217/alltime/genealogy/2010-07-14?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/alltime/italian/2010-07-14?sort=reputationchange"> Italian Language </option> <option value="/leagues/173/alltime/poker/2010-07-14?sort=reputationchange"> Poker </option> <option value="/leagues/279/alltime/alcohol/2010-07-14?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/365/alltime/opensource/2010-07-14?sort=reputationchange"> Open Source </option> <option value="/leagues/335/alltime/hsm/2010-07-14?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/alltime/musicfans/2010-07-14?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/alltime/coffee/2010-07-14?sort=reputationchange"> Coffee </option> <option value="/leagues/371/alltime/portuguese/2010-07-14?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/alltime/hardwarerecs/2010-07-14?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/alltime/computergraphics/2010-07-14?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/alltime/communitybuilding/2010-07-14?sort=reputationchange"> Community Building </option> <option value="/leagues/361/alltime/mythology/2010-07-14?sort=reputationchange"> Mythology </option> <option value="/leagues/384/alltime/3dprinting/2010-07-14?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/alltime/latin/2010-07-14?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/alltime/retrocomputing/2010-07-14?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/alltime/languagelearning/2010-07-14?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/13/week/gamedev">Week</a> 
+        <a href="/leagues/13/month/gamedev">Month</a> 
+        <a href="/leagues/13/quarter/gamedev">Quarter</a> 
+        <a href="/leagues/13/year/gamedev">Year</a> 
+        <a href="/leagues/13/alltime/gamedev" class="youarehere">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://gamedev.stackexchange.com"> 
+        <div class="site-bubble" style="background-color: #f4f28d; border-color: #f4f28d;"> 
+         <img src="http://cdn.sstatic.net/Sites/gamedev/img/icon-48.png?v=f4f28d" alt="Game Development" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://gamedev.stackexchange.com">Game Development</a></h2> 
+        <p> Q&amp;A for professional and independent game developers <span class="league-user-count">(63,301 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>All Time</h3> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="1430"></a> 
+        <div class="user user-1430"> 
+         <a href="http://gamedev.stackexchange.com/users/1430/josh-petrie">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/GHEjZ.png?s=128&amp;g=1&amp;s=48" title="Josh Petrie">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/1430/josh-petrie">Josh Petrie</a></h2> 
+          <span title="12 gold badges"><span class="badge1"></span><span class="badgecount">12</span></span> 
+          <span title="145 silver badges"><span class="badge2"></span><span class="badgecount">145</span></span> 
+          <span title="247 bronze badges"><span class="badge3"></span><span class="badgecount">247</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/1430?sort=reputationchange#1430">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">64,060</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="7191"></a> 
+        <div class="user user-7191"> 
+         <a href="http://gamedev.stackexchange.com/users/7191/byte56">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/961348f37a1c15dd0a50723cab14e013?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Byte56">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/7191/byte56">Byte56</a></h2> 
+          <span title="11 gold badges"><span class="badge1"></span><span class="badgecount">11</span></span> 
+          <span title="139 silver badges"><span class="badge2"></span><span class="badgecount">139</span></span> 
+          <span title="225 bronze badges"><span class="badge3"></span><span class="badgecount">225</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/7191?sort=reputationchange#7191">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">59,298</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="7697"></a> 
+        <div class="user user-7697"> 
+         <a href="http://gamedev.stackexchange.com/users/7697/sean-middleditch">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/75a39ed05f3fccdceed285a8009b117e?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Sean Middleditch">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/7697/sean-middleditch">Sean Middleditch</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="50 silver badges"><span class="badge2"></span><span class="badgecount">50</span></span> 
+          <span title="95 bronze badges"><span class="badge3"></span><span class="badgecount">95</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/7697?sort=reputationchange#7697">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">32,615</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="21890"></a> 
+        <div class="user user-21890"> 
+         <a href="http://gamedev.stackexchange.com/users/21890/philipp">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/24231f169c1ed55850339ec5d62047c5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Philipp">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/21890/philipp">Philipp</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="79 silver badges"><span class="badge2"></span><span class="badgecount">79</span></span> 
+          <span title="121 bronze badges"><span class="badge3"></span><span class="badgecount">121</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/21890?sort=reputationchange#21890">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">32,593</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="9894"></a> 
+        <div class="user user-9894"> 
+         <a href="http://gamedev.stackexchange.com/users/9894/nathan-reed">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/a8433b04cb41dd57113740b779f61acb?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Nathan Reed">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/9894/nathan-reed">Nathan Reed</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="55 silver badges"><span class="badge2"></span><span class="badgecount">55</span></span> 
+          <span title="93 bronze badges"><span class="badge3"></span><span class="badgecount">93</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/9894?sort=reputationchange#9894">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">28,657</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="51"></a> 
+        <div class="user user-51"> 
+         <a href="http://gamedev.stackexchange.com/users/51/tetrad">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/80d284e717d5720063a38d8e49739c87?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Tetrad">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/51/tetrad">Tetrad</a></h2> 
+          <span title="11 gold badges"><span class="badge1"></span><span class="badgecount">11</span></span> 
+          <span title="75 silver badges"><span class="badge2"></span><span class="badgecount">75</span></span> 
+          <span title="136 bronze badges"><span class="badge3"></span><span class="badgecount">136</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/51?sort=reputationchange#51">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">27,907</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1101"></a> 
+        <div class="user user-1101"> 
+         <a href="http://gamedev.stackexchange.com/users/1101/kylotan">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/cf13ca370e0d7b84b4a20912abe076a4?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Kylotan">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/1101/kylotan">Kylotan</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span> 
+          <span title="86 bronze badges"><span class="badge3"></span><span class="badgecount">86</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/1101?sort=reputationchange#1101">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">21,527</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="11686"></a> 
+        <div class="user user-11686"> 
+         <a href="http://gamedev.stackexchange.com/users/11686/david-gouveia">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/374af9e28a7950b7001f4b6fae2e0e59?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="David Gouveia">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/11686/david-gouveia">David Gouveia</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="66 silver badges"><span class="badge2"></span><span class="badgecount">66</span></span> 
+          <span title="100 bronze badges"><span class="badge3"></span><span class="badgecount">100</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/11686?sort=reputationchange#11686">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">21,044</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="20"></a> 
+        <div class="user user-20"> 
+         <a href="http://gamedev.stackexchange.com/users/20/bummzack">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/3a2ce3d78e90948707302a6bbe7c6a49?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="bummzack">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/20/bummzack">bummzack</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="45 silver badges"><span class="badge2"></span><span class="badgecount">45</span></span> 
+          <span title="77 bronze badges"><span class="badge3"></span><span class="badgecount">77</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/20?sort=reputationchange#20">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20,934</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="8240"></a> 
+        <div class="user user-8240"> 
+         <a href="http://gamedev.stackexchange.com/users/8240/nicol-bolas">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/a356923f858fbe363dad1dc566837fc6?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Nicol Bolas">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/8240/nicol-bolas">Nicol Bolas</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="52 silver badges"><span class="badge2"></span><span class="badgecount">52</span></span> 
+          <span title="88 bronze badges"><span class="badge3"></span><span class="badgecount">88</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/8240?sort=reputationchange#8240">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20,890</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="288"></a> 
+        <div class="user user-288"> 
+         <a href="http://gamedev.stackexchange.com/users/288/andrew-russell">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/eac2e824ea361ad482a00e73214b7e6c?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Andrew Russell">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/288/andrew-russell">Andrew Russell</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="41 silver badges"><span class="badge2"></span><span class="badgecount">41</span></span> 
+          <span title="93 bronze badges"><span class="badge3"></span><span class="badgecount">93</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/288?sort=reputationchange#288">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">19,362</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="5864"></a> 
+        <div class="user user-5864"> 
+         <a href="http://gamedev.stackexchange.com/users/5864/sam-hocevar">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/50e8566ae648791d494e7316ed51bbbe?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="sam hocevar">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/5864/sam-hocevar">sam hocevar</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="38 silver badges"><span class="badge2"></span><span class="badgecount">38</span></span> 
+          <span title="79 bronze badges"><span class="badge3"></span><span class="badgecount">79</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/5864?sort=reputationchange#5864">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">19,244</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="5473"></a> 
+        <div class="user user-5473"> 
+         <a href="http://gamedev.stackexchange.com/users/5473/arcane-engineer">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/AclTC.jpg?s=128&amp;g=1&amp;s=48" title="Arcane Engineer">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/5473/arcane-engineer">Arcane Engineer</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="37 silver badges"><span class="badge2"></span><span class="badgecount">37</span></span> 
+          <span title="87 bronze badges"><span class="badge3"></span><span class="badgecount">87</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/5473?sort=reputationchange#5473">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">18,849</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="7728"></a> 
+        <div class="user user-7728"> 
+         <a href="http://gamedev.stackexchange.com/users/7728/trevor-powell">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/015bfdee553b9a80bd9c3811b49b0b30?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Trevor Powell">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/7728/trevor-powell">Trevor Powell</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="44 silver badges"><span class="badge2"></span><span class="badgecount">44</span></span> 
+          <span title="79 bronze badges"><span class="badge3"></span><span class="badgecount">79</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/7728?sort=reputationchange#7728">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">18,028</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6588"></a> 
+        <div class="user user-6588"> 
+         <a href="http://gamedev.stackexchange.com/users/6588/jhocking">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f49c4d1727ec35ea010fe255c9a45bf9?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="jhocking">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/6588/jhocking">jhocking</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span> 
+          <span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/6588?sort=reputationchange#6588">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">13,519</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="39518"></a> 
+        <div class="user user-39518"> 
+         <a href="http://gamedev.stackexchange.com/users/39518/dmgregory">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/DjCnH.png?s=128&amp;g=1&amp;s=48" title="DMGregory">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/39518/dmgregory">DMGregory</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="27 silver badges"><span class="badge2"></span><span class="badgecount">27</span></span> 
+          <span title="51 bronze badges"><span class="badge3"></span><span class="badgecount">51</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/39518?sort=reputationchange#39518">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,498</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="189"></a> 
+        <div class="user user-189"> 
+         <a href="http://gamedev.stackexchange.com/users/189/ricket">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/0087f137790db9fb677130c0d03f74e7?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Ricket">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/189/ricket">Ricket</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="49 silver badges"><span class="badge2"></span><span class="badgecount">49</span></span> 
+          <span title="78 bronze badges"><span class="badge3"></span><span class="badgecount">78</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/189?sort=reputationchange#189">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,382</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="998"></a> 
+        <div class="user user-998"> 
+         <a href="http://gamedev.stackexchange.com/users/998/bobobobo">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/a4ec51727310397c9e592dd84ae74dc2?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="bobobobo">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/998/bobobobo">bobobobo</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="34 silver badges"><span class="badge2"></span><span class="badgecount">34</span></span> 
+          <span title="71 bronze badges"><span class="badge3"></span><span class="badgecount">71</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/998?sort=reputationchange#998">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">11,804</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="7804"></a> 
+        <div class="user user-7804"> 
+         <a href="http://gamedev.stackexchange.com/users/7804/anko">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/9d79601d8c63ea1ecce486a3b672821a?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Anko">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/7804/anko">Anko</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="42 silver badges"><span class="badge2"></span><span class="badgecount">42</span></span> 
+          <span title="65 bronze badges"><span class="badge3"></span><span class="badgecount">65</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/7804?sort=reputationchange#7804">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">11,005</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="22612"></a> 
+        <div class="user user-22612"> 
+         <a href="http://gamedev.stackexchange.com/users/22612/panda-pajama">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/51r13.jpg?s=128&amp;g=1&amp;s=48" title="Panda Pajama">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/22612/panda-pajama">Panda Pajama</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span> 
+          <span title="60 bronze badges"><span class="badge3"></span><span class="badgecount">60</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/22612?sort=reputationchange#22612">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10,353</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="160"></a> 
+        <div class="user user-160"> 
+         <a href="http://gamedev.stackexchange.com/users/160/munificent">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/8994d24f4a87613f31322385ec32abbd?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="munificent">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/160/munificent">munificent</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="24 silver badges"><span class="badge2"></span><span class="badgecount">24</span></span> 
+          <span title="34 bronze badges"><span class="badge3"></span><span class="badgecount">34</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/160?sort=reputationchange#160">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10,128</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="5440"></a> 
+        <div class="user user-5440"> 
+         <a href="http://gamedev.stackexchange.com/users/5440/concept3d">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/9e3e4f141c783c6562d345d77f685417?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="concept3d">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/5440/concept3d">concept3d</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="27 silver badges"><span class="badge2"></span><span class="badgecount">27</span></span> 
+          <span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/5440?sort=reputationchange#5440">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,836</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="323"></a> 
+        <div class="user user-323"> 
+         <a href="http://gamedev.stackexchange.com/users/323/zorbathut">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/9bfec88d3a3122aaadd19712f773c921?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="ZorbaTHut">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/323/zorbathut">ZorbaTHut</a></h2> 
+          <span title="27 silver badges"><span class="badge2"></span><span class="badgecount">27</span></span> 
+          <span title="43 bronze badges"><span class="badge3"></span><span class="badgecount">43</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/323?sort=reputationchange#323">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,740</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="9134"></a> 
+        <div class="user user-9134"> 
+         <a href="http://gamedev.stackexchange.com/users/9134/21st-century-moose">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/Y2x6K.jpg?s=128&amp;g=1&amp;s=48" title="21st Century Moose">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/9134/21st-century-moose">21st Century Moose</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span> 
+          <span title="36 bronze badges"><span class="badge3"></span><span class="badgecount">36</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/9134?sort=reputationchange#9134">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,735</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="7911"></a> 
+        <div class="user user-7911"> 
+         <a href="http://gamedev.stackexchange.com/users/7911/patrick-hughes">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/d6fd0eae2dbd8189a603324cb1162476?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Patrick Hughes">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/7911/patrick-hughes">Patrick Hughes</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span> 
+          <span title="29 bronze badges"><span class="badge3"></span><span class="badgecount">29</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/7911?sort=reputationchange#7911">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,156</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="5224"></a> 
+        <div class="user user-5224"> 
+         <a href="http://gamedev.stackexchange.com/users/5224/roy-t">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/b5550d3056209e26bc2e513c5208b6dd?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Roy T.">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/5224/roy-t">Roy T.</a></h2> 
+          <span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span> 
+          <span title="45 bronze badges"><span class="badge3"></span><span class="badgecount">45</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/5224?sort=reputationchange#5224">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,050</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3830"></a> 
+        <div class="user user-3830"> 
+         <a href="http://gamedev.stackexchange.com/users/3830/tim-holt">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/0c45a01c04479939d009fbe05e65b982?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Tim Holt">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/3830/tim-holt">Tim Holt</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span> 
+          <span title="35 bronze badges"><span class="badge3"></span><span class="badgecount">35</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/3830?sort=reputationchange#3830">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,638</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1156"></a> 
+        <div class="user user-1156"> 
+         <a href="http://gamedev.stackexchange.com/users/1156/the-communist-duck">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/89fc8b845cc63435ade35719f8c81461?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="The Communist Duck">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/1156/the-communist-duck">The Communist Duck</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span> 
+          <span title="62 bronze badges"><span class="badge3"></span><span class="badgecount">62</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/1156?sort=reputationchange#1156">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,277</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="17080"></a> 
+        <div class="user user-17080"> 
+         <a href="http://gamedev.stackexchange.com/users/17080/zehelvion">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/aq2Bo.jpg?s=128&amp;g=1&amp;s=48" title="zehelvion">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/17080/zehelvion">zehelvion</a></h2> 
+          <span title="15 silver badges"><span class="badge2"></span><span class="badgecount">15</span></span> 
+          <span title="42 bronze badges"><span class="badge3"></span><span class="badgecount">42</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/17080?sort=reputationchange#17080">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,172</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3505"></a> 
+        <div class="user user-3505"> 
+         <a href="http://gamedev.stackexchange.com/users/3505/aaaaaaaaaaaa">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/973f09e6c119f48b4241aa192e000438?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="aaaaaaaaaaaa">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://gamedev.stackexchange.com/users/3505/aaaaaaaaaaaa">aaaaaaaaaaaa</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span> 
+          <span title="30 bronze badges"><span class="badge3"></span><span class="badgecount">30</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/13/alltime/gamedev/2010-07-14/3505?sort=reputationchange#3505">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,168</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;page=5" title="go to page 5"><span class="page-numbers">5</span></a> 
+        <span class="page-numbers dots">…</span> 
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;page=76" title="go to page 76"><span class="page-numbers">76</span></a> 
+        <a href="/leagues/13/alltime/gamedev/2010-07-14?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>10,000+</td>
+          <td class="count">21</td>
+         </tr> 
+         <tr>
+          <td>5,000+</td>
+          <td class="count">57</td>
+         </tr> 
+         <tr>
+          <td>2,500+</td>
+          <td class="count">145</td>
+         </tr> 
+         <tr>
+          <td>1,000+</td>
+          <td class="count">354</td>
+         </tr> 
+         <tr>
+          <td>500+</td>
+          <td class="count">786</td>
+         </tr> 
+         <tr>
+          <td>250+</td>
+          <td class="count">1,779</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">2,263</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">2,263</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">2,263</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>50,000+</td> 
+          <td class="count">2</td> 
+         </tr> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">6</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">21</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">57</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">112</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">179</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">354</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">786</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">2,263</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">59,521</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463142205});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

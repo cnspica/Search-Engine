@@ -1,0 +1,287 @@
+http://tutorialspoint.com/embedded_systems/index.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Embedded Systems Tutorial</title> 
+  <meta name="description" content="Embedded Systems and 8051 Microcontroller Tutorial -  Learn Embedded System and 8051 Microcontroller in simple and easy steps using this beginner's tutorial containing basic to advanced knowledge starting from Introduction to Embedded system, Embedded Processors, Types of Embedded Systems, Architecture, Embedded tools and Pheripheral devices, 8051 Microcontroller, Input/output port programing of 8051, Terms, Assembly language programing, Registers in 8051, 8051 Register banks and stack, Addressing modes in 8051, SFR Registers and their Addresses, Timers/counter of 8051, Interrupts of 8051."> 
+  <meta name="keywords" content="Introduction to Embedded system, Embedded Processors, Types of Embedded Systems, Architecture, Embedded tools and Pheripheral devices, 8051 Microcontroller, Input/output port programing of 8051, Terms, Assembly language programing, Registers in 8051, 8051 Register banks and stack, Addressing modes in 8051, SFR Registers and their Addresses, Timers/counter of 8051, Interrupts of 8051."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #005b7f url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #005b7f !important;}
+.submenu-item{ border-bottom: 2px solid #005b7f !important; border-top: 2px solid #005b7f !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/embedded_systems/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/embedded_systems/images/embedded-system-mini-logo.jpg" alt="Embedded Systems Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Embedded Systems Basic Tutorial</li> 
+        <li><a href="/embedded_systems/index.htm">ES - Home</a></li> 
+        <li><a href="/embedded_systems/es_overview.htm">ES - Overview</a></li> 
+        <li><a href="/embedded_systems/es_processors.htm">ES - Processors</a></li> 
+        <li><a href="/embedded_systems/es_architectures.htm">ES - Architectures</a></li> 
+        <li><a href="/embedded_systems/es_tools.htm">ES - Tools and Peripherals</a></li> 
+        <li><a href="/embedded_systems/es_microcontroller.htm">ES - 8051 Microcontroller</a></li> 
+        <li><a href="/embedded_systems/es_io_programming.htm">ES - I/O Programming</a></li> 
+        <li><a href="/embedded_systems/es_terms.htm">ES - Terms</a></li> 
+        <li><a href="/embedded_systems/es_assembly_language.htm">ES - Assembly Language</a></li> 
+        <li><a href="/embedded_systems/es_registers.htm">ES - Registers</a></li> 
+        <li><a href="/embedded_systems/es_register_bank.htm">ES - Registers Bank/Stack</a></li> 
+        <li><a href="/embedded_systems/es_instructions.htm">ES - Instructions</a></li> 
+        <li><a href="/embedded_systems/es_addressing_modes.htm">ES - Addressing Modes</a></li> 
+        <li><a href="/embedded_systems/es_sfr_registers.htm">ES - Special Function Registers</a></li> 
+        <li><a href="/embedded_systems/es_timer_counter.htm">ES - Timer/Counter</a></li> 
+        <li><a href="/embedded_systems/es_interrupts.htm">ES - Interrupts</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Embedded Systems Resources</li> 
+        <li><a href="/embedded_systems/es_quick_guide.htm">ES - Quick Guide</a></li> 
+        <li><a href="/embedded_systems/es_useful_resources.htm">ES - Useful Resources</a></li> 
+        <li><a href="/embedded_systems/embedded_systems_discussion.htm">ES - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <div class="cover"> 
+         <img class="img-responsive" src="/embedded_systems/images/embedded-system.jpg" alt="Embedded Systems Tutorial"> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/embedded_systems/es_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <h1>Embedded Systems Tutorial</h1> 
+        <div class="center-aligned tutorial-menu"> 
+         <form action="/job_search.php" method="POST"> 
+          <input type="hidden" name="search_string" value="Embedded Systems"> 
+          <button type="button" class="btn btn-default btn-sm btn-buy-tutorial"><i class="icon  icon-file-pdf-o"></i><a href="/embedded_systems/embedded_systems_pdf_version.htm"> PDF Version</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-quick-guide"><i class="icon  icon-book"></i><a href="/embedded_systems/es_quick_guide.htm"> Quick Guide</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon  icon-external-link"></i><a href="/embedded_systems/es_useful_resources.htm"> Resources</a></button> 
+          <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="icon  icon-suitcase"></i> Job Search</button> 
+          <button type="button" class="btn btn-default btn-sm btn-job-search"><i class="fa  fa-wechat"></i><a href="/embedded_systems/embedded_systems_discussion.htm"> Discussion</a></button> 
+         </form> 
+        </div> 
+        <p>We can broadly define an embedded system as a microcontroller-based, software-driven, reliable, real-time control system, designed to perform a specific task. It can be thought of as a computer hardware system having software embedded in it. An embedded system can be either an independent system or a part of a large system. In this tutorial, we will explain all the steps necessary to design an embedded system and use it.</p> 
+        <h1>Audience</h1> 
+        <p>This tutorial has been designed to help the students of electronics learn the basic-to-advanced concepts of Embedded System and 8051 Microcontroller.</p> 
+        <h1>Prerequisites</h1> 
+        <p>Before proceeding with this tutorial, you should have a good understanding of the concepts of basic electronics such as circuits, logic gates, etc.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/embedded_systems/es_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/embedded_systems/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/embedded_systems/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/embedded_systems/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/embedded_systems/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/embedded_systems/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/embedded_systems/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

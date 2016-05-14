@@ -1,0 +1,425 @@
+http://tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Data Structures Algorithms Basics</title> 
+  <meta name="Description" content="Data Structures Algorithms Basics - Learn Data Structures &amp; Algorithm using c, C++ and Java in simple and easy steps using this beginner's tutorial containing basic to advanced knowledge starting from Algorithm, Data Structures, Array, Linked List, Doubly Linked List, Circular List, Stack, Parsing Expression, Queue, Priority queue, Tree, Binary Search Tree, B+, AVL, Spanning, Tower of Hanoi, Hash Table, Heap, Graph, Search techniques, Sorting techniques, Recursion."> 
+  <meta name="Keywords" content="Algorithm, Data Structures, Array, Linked List, Doubly Linked List, Circular List, Stack, Parsing Expression, Queue, Priority queue, Tree, Binary Search Tree, B+, AVL, Spanning, Tower of Hanoi, Hash Table, Heap, Graph, Search techniques, Sorting techniques, Recursion."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(data_structures_algorithms/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #cd3300 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #cd3300 !important;}
+.submenu-item{ border-bottom: 2px solid #cd3300 !important; border-top: 2px solid #cd3300 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/data_structures_algorithms/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/data_structures_algorithms/images/data-structure-mini-logo.jpg" alt="Data Structures &amp; Algorithms Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Data Structures &amp; Algorithms</li> 
+        <li><a href="/data_structures_algorithms/index.htm">DSA - Home</a></li> 
+        <li><a href="/data_structures_algorithms/data_structure_overview.htm">DSA - Overview</a></li> 
+        <li><a href="/data_structures_algorithms/data_structure_environment.htm">DSA - Environment Setup</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Algorithm</li> 
+        <li><a href="/data_structures_algorithms/algorithms_basics.htm">DSA - Algorithms Basics</a></li> 
+        <li><a href="/data_structures_algorithms/asymptotic_analysis.htm">DSA - Asymptotic Analysis</a></li> 
+        <li><a href="/data_structures_algorithms/greedy_algorithms.htm">DSA - Greedy Algorithms</a></li> 
+        <li><a href="/data_structures_algorithms/divide_and_conquer.htm">DSA - Divide and Conquer</a></li> 
+        <li><a href="/data_structures_algorithms/dynamic_programming.htm">DSA - Dynamic Programming</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Data Structures</li> 
+        <li><a href="/data_structures_algorithms/data_structures_basics.htm">DSA - Data Structure Basics</a></li> 
+        <li><a href="/data_structures_algorithms/array_data_structure.htm">DSA - Array Data Structure</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Linked Lists</li> 
+        <li><a href="/data_structures_algorithms/linked_list_algorithms.htm">DSA - Linked List Basics</a></li> 
+        <li><a href="/data_structures_algorithms/doubly_linked_list_algorithm.htm">DSA - Doubly Linked List</a></li> 
+        <li><a href="/data_structures_algorithms/circular_linked_list_algorithm.htm">DSA - Circular Linked List</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Stack &amp; Queue</li> 
+        <li><a href="/data_structures_algorithms/stack_algorithm.htm">DSA - Stack</a></li> 
+        <li><a href="/data_structures_algorithms/expression_parsing.htm">DSA - Expression Parsing</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_queue.htm">DSA - Queue</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Searching Techniques</li> 
+        <!--<li style="background:yellow;"><a href="/data_structures_algorithms/searching_algorithms.htm">DSA - Searching Algorithms</a></li>--> 
+        <li><a href="/data_structures_algorithms/linear_search_algorithm.htm">DSA - Linear Search</a></li> 
+        <li><a href="/data_structures_algorithms/binary_search_algorithm.htm">DSA - Binary Search</a></li> 
+        <li><a href="/data_structures_algorithms/interpolation_search_algorithm.htm">DSA - Interpolation Search</a></li> 
+        <li><a href="/data_structures_algorithms/hash_data_structure.htm">DSA - Hash Table</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Sorting Techniques</li> 
+        <li><a href="/data_structures_algorithms/sorting_algorithms.htm">DSA - Sorting Algorithms</a></li> 
+        <li><a href="/data_structures_algorithms/bubble_sort_algorithm.htm">DSA - Bubble Sort</a></li> 
+        <li><a href="/data_structures_algorithms/insertion_sort_algorithm.htm">DSA - Insertion Sort</a></li> 
+        <li><a href="/data_structures_algorithms/selection_sort_algorithm.htm">DSA - Selection Sort</a></li> 
+        <li><a href="/data_structures_algorithms/merge_sort_algorithm.htm">DSA - Merge Sort</a></li> 
+        <li><a href="/data_structures_algorithms/shell_sort_algorithm.htm">DSA - Shell Sort</a></li> 
+        <li><a href="/data_structures_algorithms/quick_sort_algorithm.htm">DSA - Quick Sort</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Graph Data Structure</li> 
+        <li><a href="/data_structures_algorithms/graph_data_structure.htm">DSA - Graph Data Structure</a></li> 
+        <li><a href="/data_structures_algorithms/depth_first_traversal.htm">DSA - Depth First Traversal</a></li> 
+        <li><a href="/data_structures_algorithms/breadth_first_traversal.htm">DSA - Breadth First Traversal</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Tree Data Structure</li> 
+        <li><a href="/data_structures_algorithms/tree_data_structure.htm">DSA - Tree Data Structure</a></li> 
+        <li><a href="/data_structures_algorithms/tree_traversal.htm">DSA - Tree Traversal</a></li> 
+        <li><a href="/data_structures_algorithms/binary_search_tree.htm">DSA - Binary Search Tree</a></li> 
+        <li><a href="/data_structures_algorithms/avl_tree_algorithm.htm">DSA - AVL Tree</a></li> 
+        <li><a href="/data_structures_algorithms/spanning_tree.htm">DSA - Spanning Tree</a></li> 
+        <li><a href="/data_structures_algorithms/heap_data_structure.htm">DSA - Heap</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Recursion</li> 
+        <li><a href="/data_structures_algorithms/recursion_basics.htm">DSA - Recursion Basics</a></li> 
+        <li><a href="/data_structures_algorithms/tower_of_hanoi.htm">DSA - Tower of Hanoi</a></li> 
+        <li><a href="/data_structures_algorithms/fibonacci_series.htm">DSA - Fibonacci Series</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">DSA Useful Resources</li> 
+        <!--<li><a href="/data_structures_algorithms/dsa_quick_guide.htm">DSA - Quick Guide</a></li>--> 
+        <li><a href="/data_structures_algorithms/data_structures_algorithms_questions_answers.htm">DSA - Questions and Answers</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_useful_resources.htm">DSA - Useful Resources</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_discussion.htm">DSA - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Data Structures - Algorithms Basics</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/data_structures_algorithms/data_structure_environment.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/data_structures_algorithms/asymptotic_analysis.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>Algorithm is a step by step procedure, which defines a set of instructions to be executed in certain order to get the desired output. Algorithms are generally created independent of underlying languages, i.e. an algorithm can be implemented in more than one programming language.</p> 
+        <p>From data structure point of view, following are some important categories of algorithms −</p> 
+        <ul class="list"> 
+         <li><p><b>Search</b> − Algorithm to search an item in a datastructure.</p></li> 
+         <li><p><b>Sort</b> − Algorithm to sort items in certain order</p></li> 
+         <li><p><b>Insert</b> − Algorithm to insert item in a datastructure</p></li> 
+         <li><p><b>Update</b> − Algorithm to update an existing item in a data structure</p></li> 
+         <li><p><b>Delete</b> − Algorithm to delete an existing item from a data structure</p></li> 
+        </ul> 
+        <h2>Characteristics of an Algorithm</h2> 
+        <p>Not all procedures can be called an algorithm. An algorithm should have the below mentioned characteristics −</p> 
+        <ul class="list"> 
+         <li><p><b>Unambiguous</b> − Algorithm should be clear and unambiguous. Each of its steps (or phases), and their input/outputs should be clear and must lead to only one meaning.</p></li> 
+         <li><p><b>Input</b> − An algorithm should have 0 or more well defined inputs.</p></li> 
+         <li><p><b>Output</b> − An algorithm should have 1 or more well defined outputs, and should match the desired output.</p></li> 
+         <li><p><b>Finiteness</b> − Algorithms must terminate after a finite number of steps.</p></li> 
+         <li><p><b>Feasibility</b> − Should be feasible with the available resources.</p></li> 
+         <li><p><b>Independent</b> − An algorithm should have step-by-step directions which should be independent of any programming code.</p></li> 
+        </ul> 
+        <h2>How to write an algorithm?</h2> 
+        <p>There are no well-defined standards for writing algorithms. Rather, it is problem and resource dependent. Algorithms are never written to support a particular programming code.</p> 
+        <p>As we know that all programming languages share basic code constructs like loops (<code>do</code>, <code>for</code>, <code>while</code>), flow-control (<code>if-else</code>) etc. These common constructs <i>can</i> be used to write an algorithm.</p> 
+        <p>We write algorithms in step by step manner, but it is not always the case. Algorithm writing is a process and is executed after the problem domain is well-defined. That is, we should know the problem domain, for which we are designing a solution.</p> 
+        <h3>Example</h3> 
+        <p>Let's try to learn algorithm-writing by using an example.</p> 
+        <p><b>Problem</b> − Design an algorithm to add two numbers and display result.</p> 
+        <pre class="result notranslate">
+<b>step 1</b> − START
+<b>step 2</b> − declare three integers <b>a</b>, <b>b</b> &amp; <b>c</b>
+<b>step 3</b> − define values of <b>a</b> &amp; <b>b</b>
+<b>step 4</b> − add values of <b>a</b> &amp; <b>b</b>
+<b>step 5</b> − store output of <u>step 4</u> to <b>c</b>
+<b>step 6</b> − print <b>c</b>
+<b>step 7</b> − STOP
+</pre> 
+        <p>Algorithms tell the programmers how to code the program. Alternatively the algorithm can be written as −</p> 
+        <pre class="result notranslate">
+<b>step 1</b> − START ADD
+<b>step 2</b> − get values of <b>a</b> &amp; <b>b</b>
+<b>step 3</b> − c ← a + b
+<b>step 4</b> − display c
+<b>step 5</b> − STOP
+</pre> 
+        <p>In design and analysis of algorithms, usually the second method is used to describe an algorithm. It makes it easy of the analyst to analyze the algorithm ignoring all unwanted definitions. He can observe what operations are being used and how the process is flowing.</p> 
+        <p>Writing <b>step numbers</b>, is optional.</p> 
+        <p>We design an algorithm to get solution of a given problem. A problem can be solved in more than one ways.</p> 
+        <img src="/data_structures_algorithms/images/problem_solutions.jpg" alt="one problem many solutions"> 
+        <p>Hence, many solution algorithms can be derived for a given problem. Next step is to analyze those proposed solution algorithms and implement the best suitable.</p> 
+        <h2>Algorithm Analysis</h2> 
+        <p>Efficiency of an algorithm can be analyzed at two different stages, before implementation and after implementation, as mentioned below −</p> 
+        <ul class="list"> 
+         <li><p><b><i>A priori</i> analysis</b> − This is theoretical analysis of an algorithm. Efficiency of algorithm is measured by assuming that all other factors e.g. processor speed, are constant and have no effect on implementation.</p></li> 
+         <li><p><b><i>A posterior</i> analysis</b> − This is empirical analysis of an algorithm. The selected algorithm is implemented using programming language. This is then executed on target computer machine. In this analysis, actual statistics like running time and space required, are collected.</p></li> 
+        </ul> 
+        <p>We shall learn here <b>a priori</b> algorithm analysis. Algorithm analysis deals with the execution or running time of various operations involved. Running time of an operation can be defined as no. of computer instructions executed per operation.</p> 
+        <h2>Algorithm Complexity</h2> 
+        <p>Suppose X is an algorithm and n is the size of input data, the time and space used by the Algorithm X are the two main factors which decide the efficiency of X.</p> 
+        <ul class="list"> 
+         <li><p><b>Time Factor</b> − The time is measured by counting the number of key operations such as comparisons in sorting algorithm</p></li> 
+         <li><p><b>Space Factor</b> − The space is measured by counting the maximum memory space required by the algorithm.</p></li> 
+        </ul> 
+        <p>The complexity of an algorithm f(n) gives the running time and / or storage space required by the algorithm in terms of n as the size of input data.</p> 
+        <h2>Space Complexity</h2> 
+        <p>Space complexity of an algorithm represents the amount of memory space required by the algorithm in its life cycle. Space required by an algorithm is equal to the sum of the following two components −</p> 
+        <ul class="list"> 
+         <li><p>A fixed part that is a space required to store certain data and variables, that are independent of the size of the problem. For example simple variables &amp; constant used, program size etc.</p></li> 
+         <li><p>A variable part is a space required by variables, whose size depends on the size of the problem. For example dynamic memory allocation, recursion stack space etc.</p></li> 
+        </ul> 
+        <p>Space complexity <code><b>S(P)</b></code> of any algorithm <code><b>P</b></code> is <code><b>S(P) = C + SP(I)</b></code> Where <code><b>C</b></code> is the fixed part and <code><b>S(I)</b></code> is the variable part of the algorithm which depends on instance characteristic <code><b>I</b></code>. Following is a simple example that tries to explain the concept −</p> 
+        <pre class="result notranslate">
+Algorithm: SUM(A, B)
+Step 1 -  START
+Step 2 -  C ← A + B + 10
+Step 3 -  Stop
+</pre> 
+        <p>Here we have three variables A, B and C and one constant. Hence <code><b>S(P) = 1+3</b></code>. Now space depends on data types of given variables and constant types and it will be multiplied accordingly.</p> 
+        <h2>Time Complexity</h2> 
+        <p>Time Complexity of an algorithm represents the amount of time required by the algorithm to run to completion. Time requirements can be defined as a numerical function <code><b>T(n)</b></code>, where <code><b>T(n)</b></code> can be measured as the number of steps, provided each step consumes constant time.</p> 
+        <p>For example, addition of two n-bit integers takes n steps. Consequently, the total computational time is <code><b>T(n) = c*n</b></code>, where <code><b>c</b></code> is the time taken for addition of two bits. Here, we observe that <code><b>T(n)</b></code> grows linearly as input size increases.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/data_structures_algorithms/data_structure_environment.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="pdf-btn"> 
+         <a href="/data_structures_algorithms/pdf/algorithms_basics.pdf" title="Data Structures Algorithms Basics" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/data_structures_algorithms/asymptotic_analysis.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('data_structures_algorithms/try_dsa.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

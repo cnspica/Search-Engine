@@ -1,0 +1,631 @@
+https://stackexchange.com/newsletters/newsletter?site=magento.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Magento Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dmagento.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dmagento.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 227, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 227, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Magento Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://magento.stackexchange.com">Magento</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #fff; font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/magento-header.png" alt="Magento Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff; -moz-box-shadow: 0 1px 1px #ccc; -webkit-box-shadow: 0 1px 1px #ccc; box-shadow: 0 1px 1px #ccc; border-radius: 6px;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114929/deprecated-save-and-load-methods" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">deprecated save and load methods</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I see that in the develop branch of the magento 2 repo the methods load and save from Magento\Framework\Model\AbstractModel class are deprecated. But there are a gazillion classes in the core that ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento2</a> <a href="http://magento.stackexchange.com/questions/tagged/model" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">model</a> <a href="http://magento.stackexchange.com/questions/tagged/magento-2.0" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento-2.0</a> <a href="http://magento.stackexchange.com/questions/tagged/magento-2.0.5" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento-2.0.5</a> <a href="http://magento.stackexchange.com/questions/tagged/deprecated" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">deprecated</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/ylEg4.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/146/marius" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Marius</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ead31dfc8a2b57edb79e61d2ae79894d?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://magento.stackexchange.com/users/12503/kandy" target="_blank" style="color: #0D96D5; text-decoration: none!important;">KAndy</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114393/error-in-using-composer-to-install-a-module-in-magento-2-0" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Error in using composer to install a module in Magento 2.0</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I have used Composer for installing other modules specially from github and they worked fine. However I have problem installing the following module to Magento 2.0 . The module I want to install is ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento2</a> <a href="http://magento.stackexchange.com/questions/tagged/import" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">import</a> <a href="http://magento.stackexchange.com/questions/tagged/composer" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">composer</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/b380fba14199e3d64b827abbe5a53a5c?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/6392/chamich" target="_blank" style="color: #0D96D5; text-decoration: none!important;">chamich</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/169398441b12b9b0ae65df9ace8d73ee?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://magento.stackexchange.com/users/39036/amin-memariani" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Amin Memariani</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114821/customers-cancel-return-products-in-my-account-page-magento-2" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">customers cancel return products in my account page- Magento 2</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">My requirement is adding cancel and return option in customer account page. add cancel option after place order. add return option after delivered. I am wondering it is a very essential option ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento2</a> <a href="http://magento.stackexchange.com/questions/tagged/orders" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">orders</a> <a href="http://magento.stackexchange.com/questions/tagged/sales-order" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">sales-order</a> <a href="http://magento.stackexchange.com/questions/tagged/ecommerce-tracking" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">ecommerce-tracking</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://graph.facebook.com/433094753557470/picture?type=large" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/36463/bilal-usean" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Bilal Usean</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114727/frontend-customer-session-expire-but-product-price-not-update-in-magento" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Frontend Customer Session Expire But Product Price Not Update in Magento</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">In my site back-end, I have created one product with price $75.00. Also I have set 'Wholesale' customer group price is $50.00. After save the product I saw the front-end that product price shown ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento-1.9" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento-1.9</a> <a href="http://magento.stackexchange.com/questions/tagged/price" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">price</a> <a href="http://magento.stackexchange.com/questions/tagged/customer-session" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">customer-session</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/k9LRN.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/2922/vijay-s" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Vijay S</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114576/how-does-magento-2-generate-the-admin-icons-font-files" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How Does Magento 2 Generate the admin-icons Font Files?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">In Magento 2, the icons for backend Menu Items are Private User Area code points added via a custom font file. The _typography.less file appears to ship with the ability to conditionally include one ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento2</a> <a href="http://magento.stackexchange.com/questions/tagged/adminhtml" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">adminhtml</a> <a href="http://magento.stackexchange.com/questions/tagged/backend" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">backend</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e5abe1d27b286199c319b0cbe75596c3?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/4/alan-storm" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Alan Storm</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114570/how-does-magento-include-the-admin-icons-svg-file" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How Does Magento Include the admin-icons.svg File?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">In Magento 2, the icons for the backend Menu are Unicode code points that are part of the Private User Area code point range, and appear to be defined via the file ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento2</a> <a href="http://magento.stackexchange.com/questions/tagged/adminhtml" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">adminhtml</a> <a href="http://magento.stackexchange.com/questions/tagged/magento-2.0" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento-2.0</a> <a href="http://magento.stackexchange.com/questions/tagged/admin-icons.svg" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">admin-icons.svg</a> <a href="http://magento.stackexchange.com/questions/tagged/fonts" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">fonts</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e5abe1d27b286199c319b0cbe75596c3?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/4/alan-storm" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Alan Storm</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/8oJlg.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://magento.stackexchange.com/users/2380/raphael-at-digital-pianism" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Raphael at Digital Pianism</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/115305/insert-phtml-in-custom-cms-page-magento-2" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Insert phtml in custom CMS page Magento 2</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">i had created a new module on Magento 2. It have: setup -&gt; UpgradeData.php : public function upgrade(ModuleDataSetupInterface $setup, ModuleContextInterface $context) { ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento2</a> <a href="http://magento.stackexchange.com/questions/tagged/module" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">module</a> <a href="http://magento.stackexchange.com/questions/tagged/cms" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">cms</a> <a href="http://magento.stackexchange.com/questions/tagged/phtml" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">phtml</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://graph.facebook.com/10206165391884230/picture?type=large" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/26419/ntzz" target="_blank" style="color: #0D96D5; text-decoration: none!important;">ntzz</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2e354d9f9815e0554d7bb169db7e7a25?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://magento.stackexchange.com/users/4534/rakesh" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Rakesh</a> 0 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/10305/how-to-list-products-in-descending-order" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to list products in descending order?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">This seemed simple but is proving otherwise -- I just want to list all products in my store from high -&gt; low To do so, I went to: Configuration -&gt; Catalog -&gt; Product Listing Sort by -&gt; (I ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/ce-1.7.0.2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">ce-1.7.0.2</a> <a href="http://magento.stackexchange.com/questions/tagged/sorting" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">sorting</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/37b789e21c28a8e102f2ac907b9014b0?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/3796/reconstruct" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Reconstruct</a> 12 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/373806e3ad8f57648e83200303fbeee6?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://magento.stackexchange.com/users/16/matthias-zeis" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Matthias Zeis</a> 29 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/8814/how-to-get-all-items-in-cart-currently" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to get all items in cart currently?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I want to get a collection of all the items in cart currently. How can I do this ? Any suggestions will be appreciated. </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento-1.7" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento-1.7</a> <a href="http://magento.stackexchange.com/questions/tagged/cart" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">cart</a> <a href="http://magento.stackexchange.com/questions/tagged/collection" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">collection</a> <a href="http://magento.stackexchange.com/questions/tagged/quote" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">quote</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/MTkdy.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/3195/sukeshini" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Sukeshini</a> 18 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/p1US9.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://magento.stackexchange.com/users/2589/keyur-shah" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Keyur Shah</a> 31 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #504d4a!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114561/product-special-price-with-hhmmss" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Product Special Price with hh:mm:ss</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">How to add hh:mm:ss for the special price date in magento.1.9 Thanks in advance </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento-1.9" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento-1.9</a> <a href="http://magento.stackexchange.com/questions/tagged/date" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">date</a> <a href="http://magento.stackexchange.com/questions/tagged/special-price" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">special-price</a> <a href="http://magento.stackexchange.com/questions/tagged/time" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">time</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/8f52a060c114a4dc76f5cdd9a75cfc47?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/9096/manikandan" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Manikandan</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114853/customer-registration-in-frontend-associate-to-website-admin" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Customer registration in frontend -&gt; associate to website: Admin</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">if customer fill registration form, than auto associate to website "Admin". No login in frontend, before change customer website in backend to Main Website. How can i change associate to website: ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento-1.9" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento-1.9</a> <a href="http://magento.stackexchange.com/questions/tagged/customer-account" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">customer-account</a> <a href="http://magento.stackexchange.com/questions/tagged/websites" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">websites</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/66cef68aee84364d419eb7cee8740cd6?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/12821/manuhh" target="_blank" style="color: #0D96D5; text-decoration: none!important;">ManuHH</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://magento.stackexchange.com/questions/114376/how-to-get-cart-in-sales-order-create-in-magento" target="_blank" style="color: #0D96D5!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to get cart in sales_order_create in magento</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I have a custom module admin page from there I want to add product in cart and redirect to admin/sales_order_create/ page to place order for selected product. For this I have created a controller ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://magento.stackexchange.com/questions/tagged/magento-1.9" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">magento-1.9</a> <a href="http://magento.stackexchange.com/questions/tagged/quote" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #E6F7FF; color: #55859B; font-size: 13px; white-space: nowrap; border: 1px solid #D9E8EF; padding: .35em .7em .4em .7em; letter-spacing: -0.015em; margin-bottom: 3px; text-decoration: none;">quote</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=128" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://magento.stackexchange.com/users/14039/vinaya-maheshwari" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Vinaya Maheshwari</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #0D96D5; text-decoration: none!important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #0D96D5; text-decoration: none!important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #0D96D5; text-decoration: none!important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #0D96D5; text-decoration: none!important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #0D96D5; text-decoration: none!important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

@@ -1,0 +1,655 @@
+https://stackexchange.com/newsletters/newsletter?site=gis.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Geographic Information Systems Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dgis.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dgis.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 27, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 27, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Geographic Information Systems Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://gis.stackexchange.com">Geographic Information Systems</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #FEFCF6; background-image: url('//sstatic.net/stackexchange/Img/newsletters/gis-bg.jpg'); font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;" background="//sstatic.net/stackexchange/Img/newsletters/gis-bg.jpg"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/gis-header.png" alt="Geographic Information Systems Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff; border: 1px solid #e0ddd3; -moz-box-shadow: 0 5px 23px #ccc; -webkit-box-shadow: 0 5px 23px #ccc; box-shadow: 0 5px 23px #ccc;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/192993/where-can-i-find-state-borders-for-germany" target="_blank" style="color: #176F8C !important;">Where can I find state borders for Germany?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I'm looking for free state border layers for Germany. Are there any free sources for such data? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/data" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">data</a> <a href="http://gis.stackexchange.com/questions/tagged/borders" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">borders</a> <a href="http://gis.stackexchange.com/questions/tagged/germany" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">germany</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://lh3.googleusercontent.com/-Q2qHvvxQFwk/AAAAAAAAAAI/AAAAAAAAABA/tn1OF7LRqGE/photo.jpg?sz=128" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/72897/mrsalamikuchen" target="_blank" style="color: #176F8C !important;">MrSalamikuchen</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/7da81e041e4c6eedab9f577f6e5fb241?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/25814/joseph" target="_blank" style="color: #176F8C !important;">Joseph</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/193202/is-there-a-shortcut-for-switching-between-drawing-lines-and-drawing-arcs-in-arcm" target="_blank" style="color: #176F8C !important;">Is there a shortcut for switching between drawing Lines and drawing Arcs in ArcMap?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I normally use AutoCAD for something like this. I am digitizing parking lots and have to press the buttons on the toolbar to switch between lines and arcs while drawing. Is there a shortcut that I ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/arcgis-desktop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcgis-desktop</a> <a href="http://gis.stackexchange.com/questions/tagged/arcmap" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcmap</a> <a href="http://gis.stackexchange.com/questions/tagged/editing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">editing</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/4dcad791560f364b8cd1bc7bcce932d6?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/19871/dano0430" target="_blank" style="color: #176F8C !important;">Dano0430</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://graph.facebook.com/654180565/picture?type=large" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/24780/mike" target="_blank" style="color: #176F8C !important;">Mike</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/193042/color-ramp-resources-other-than-color-brewer" target="_blank" style="color: #176F8C !important;">Color ramp resources other than Color Brewer?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I am looking for more resources on color theory in cartography. When to de-saturate a color? Or if you start with one color, how do you create a ramp from it? RGB or HSV? I can hack at it and come up ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/arcgis-desktop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcgis-desktop</a> <a href="http://gis.stackexchange.com/questions/tagged/color" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">color</a> <a href="http://gis.stackexchange.com/questions/tagged/color-ramp" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">color-ramp</a> <a href="http://gis.stackexchange.com/questions/tagged/thematic-map" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">thematic-map</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/4AIrM.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/26297/rachel-passer" target="_blank" style="color: #176F8C !important;">rachel.passer</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/7WV3X.gif?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/16116/mikeldub" target="_blank" style="color: #176F8C !important;">mikeLdub</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/192713/how-to-calculate-the-difference-between-two-rasters-in-qgis" target="_blank" style="color: #176F8C !important;">How to calculate the difference between two rasters in QGIS?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I have two similar rasters of the Mount Vesuvius and surroundings: one spans 20 kilometers, and the other one 50 kilometers. The two rasters are overlapping: What I would like to do is to create a ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/qgis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">qgis</a> <a href="http://gis.stackexchange.com/questions/tagged/raster" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">raster</a> <a href="http://gis.stackexchange.com/questions/tagged/raster-calculator" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">raster-calculator</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/164f70771d8a67b6c78d1ced2147c1c5?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/65002/marco" target="_blank" style="color: #176F8C !important;">marco</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/8811b9e0226afce9b0292eeff4d0fd49?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/51035/bugmenot123" target="_blank" style="color: #176F8C !important;">bugmenot123</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/192842/subscript-labels-in-qgis-legends" target="_blank" style="color: #176F8C !important;">Subscript labels in QGIS legends</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">Is it possible to include subscript and superscript text in the title of a legend item in QGIS ? I have tried using &lt;sub&gt;some text&lt;/sub&gt; but this just appears in the title with no change ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/qgis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">qgis</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/92eaa2bc07a903fcb50373447e5f3b49?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/72837/user3245448" target="_blank" style="color: #176F8C !important;">user3245448</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/fbf77b443a2f48c55bb23022239ad897?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/63384/ahmadhanb" target="_blank" style="color: #176F8C !important;">ahmadhanb</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/193206/why-do-i-get-a-shattered-glass-effect-when-i-turn-on-hillshade-for-my-idw-surfac" target="_blank" style="color: #176F8C !important;">Why do I get a shattered-glass effect when I turn on hillshade for my IDW surface?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I made an interpolated IDW surface with a cell size of 500. In the symbology tab of ArcGIS, there is the "Use hillshade effect" checkbox underneath the classification area. When unchecked, my surface ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/arcgis-desktop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcgis-desktop</a> <a href="http://gis.stackexchange.com/questions/tagged/interpolation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">interpolation</a> <a href="http://gis.stackexchange.com/questions/tagged/hillshade" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">hillshade</a> <a href="http://gis.stackexchange.com/questions/tagged/idw" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">idw</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/4AIrM.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/26297/rachel-passer" target="_blank" style="color: #176F8C !important;">rachel.passer</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/53631642c5766139e51cbf5edf1b17f3?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/69528/matte" target="_blank" style="color: #176F8C !important;">Matte</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/193373/how-to-export-an-mxd-using-python-without-opening-it" target="_blank" style="color: #176F8C !important;">How to export an mxd using python without opening it?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I would like to be able to update a load of pdf and jgeg maps once the data has been updated. Currently people have to open each mxd and export the map in each format. I've written a short python ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/arcgis-desktop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcgis-desktop</a> <a href="http://gis.stackexchange.com/questions/tagged/arcpy" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcpy</a> <a href="http://gis.stackexchange.com/questions/tagged/arcgis-10.2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcgis-10.2</a> <a href="http://gis.stackexchange.com/questions/tagged/export" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">export</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0aefb2b85826ae24fb5ec7edbfb61a53?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/17646/whatahitson" target="_blank" style="color: #176F8C !important;">whatahitson</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/HEpQi.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/934/hornbydd" target="_blank" style="color: #176F8C !important;">Hornbydd</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/22704/how-to-convert-a-vector-layer-to-raster" target="_blank" style="color: #176F8C !important;">How to convert a vector layer to raster?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">In qgis in the raster menu there is an item "convert vector to raster". This behaves strangely - I do not understand how it is supposed to work. I can select a vector file, an attribute and an ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/qgis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">qgis</a> <a href="http://gis.stackexchange.com/questions/tagged/raster" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">raster</a> <a href="http://gis.stackexchange.com/questions/tagged/vector" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">vector</a> <a href="http://gis.stackexchange.com/questions/tagged/convert" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">convert</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/bf63702b146f756d5fa9343c108f48f2?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/6645/stn" target="_blank" style="color: #176F8C !important;">stn</a> 15 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5c715b21573d0929739fa67c196671a3?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/2555/merseyviking" target="_blank" style="color: #176F8C !important;">MerseyViking</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/97/what-are-the-major-differences-between-gps-glonass-and-galileo" target="_blank" style="color: #176F8C !important;">What are the major differences between GPS, GLONASS and Galileo?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">What are the major differences between GPS, GLONASS, COMPASS and Galileo? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/gps" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">gps</a> <a href="http://gis.stackexchange.com/questions/tagged/global-positioning" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">global-positioning</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/bb3ca0dc6814070e8bc4039d30bd90f4?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/114/jamesryan" target="_blank" style="color: #176F8C !important;">JamesRyan</a> 26 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/026c2f1e2d88d968aca0acb934d23704?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://gis.stackexchange.com/users/160/stachu" target="_blank" style="color: #176F8C !important;">stachu</a> 11 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/193443/extending-a-line-e-g-road-using-arcgis-for-desktop" target="_blank" style="color: #176F8C !important;">Extending a line (e.g. road) using ArcGIS for Desktop?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I am using ArcGIS 10.3 for Desktop. I followed the instructions provided in the Help menu i.e. edit, select feature, edit vertices, and then used the continue feature tool to extend the line. Why ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/arcgis-desktop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcgis-desktop</a> <a href="http://gis.stackexchange.com/questions/tagged/arcgis-10.3" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">arcgis-10.3</a> <a href="http://gis.stackexchange.com/questions/tagged/editing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">editing</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/06d94c8f30156450d096a85e96871399?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/73128/peter-wilks" target="_blank" style="color: #176F8C !important;">peter wilks</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/192949/connect-data-from-two-different-layers" target="_blank" style="color: #176F8C !important;">Connect data from two different layers</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I'm trying to connect data from two different layers to combine them in one new layer and continue working with them. Let me explain that a bit more detailed: The first layer contains data (and ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/qgis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">qgis</a> <a href="http://gis.stackexchange.com/questions/tagged/data" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">data</a> <a href="http://gis.stackexchange.com/questions/tagged/layers" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">layers</a> <a href="http://gis.stackexchange.com/questions/tagged/combine" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">combine</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0405712946dbab080f4b6ca0bce314cf?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/72896/hendrik" target="_blank" style="color: #176F8C !important;">Hendrik</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px dashed #DEE1E4;"> <h3 style="margin: 10px 0;line-height: 1.3!important; font-size: 16px; margin: 0.4em 0 !important;"> <a href="http://gis.stackexchange.com/questions/193081/inputting-layers-in-qgis-for-pywps-processes" target="_blank" style="color: #176F8C !important;">Inputting Layers in QGIS for PyWPS Processes</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #333;">I recently downloaded the PyWPS demo files from github here: https://github.com/PyWPS/pywps-4-demo. I'm having some trouble figuring out how to use some of the processes. In particular, processes like ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://gis.stackexchange.com/questions/tagged/qgis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">qgis</a> <a href="http://gis.stackexchange.com/questions/tagged/pywps" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #f5f5f5; border: 1px solid #E0E0E0; color: #696969!important; text-decoration: none; margin: 2px 2px 6px 0; padding: 1px 6px; line-height: 16px;">pywps</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://lh3.googleusercontent.com/-epOHL7v0Nuk/AAAAAAAAAAI/AAAAAAAAANY/v6tYDEMJ6H8/photo.jpg?sz=128" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://gis.stackexchange.com/users/72967/william-long" target="_blank" style="color: #176F8C !important;">William Long</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #176F8C !important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #176F8C !important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #176F8C !important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #176F8C !important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #176F8C !important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

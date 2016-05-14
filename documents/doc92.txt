@@ -1,0 +1,299 @@
+http://tutorialspoint.com/silverlight/index.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Silverlight Tutorial</title> 
+  <meta name="description" content="Silverlight Tutorial - Learn Silverlight in simple and easy steps starting from Overview, Environment Setup, Getting Started, XAML Overview, Project Types, Fixed Layouts, Dynamic Layout, Constrained vs. Unconstrained Layout, Silverlight and CSS, Controls, Buttons, Content Model, ListBox, Templates, Visual State, Data Binding, Browser Integration, Out-of-Browser Applications, Applications, Resources and Deployment, File Access, View Model, Input Handling, Isolated Storage, Text, Animation, Video and Audio, Printing."> 
+  <meta name="keywords" content="Silverlight, Tutorial, Learning, Beginners, Overview, Environment Setup, Getting Started, XAML Overview, Project Types, Fixed Layouts, Dynamic Layout, Constrained vs. Unconstrained Layout, Silverlight and CSS, Controls, Buttons, Content Model, ListBox, Templates, Visual State, Data Binding, Browser Integration, Out-of-Browser Applications, Applications, Resources and Deployment, File Access, View Model, Input Handling, Isolated Storage, Text, Animation, Video and Audio, Printing."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #048be0 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #048be0 !important;}
+.submenu-item{ border-bottom: 2px solid #048be0 !important; border-top: 2px solid #048be0 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/silverlight/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/silverlight/images/silverlight-mini-logo.jpg" alt="Silverlight Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Silverlight Tutorial</li> 
+        <li><a href="/silverlight/index.htm">Silverlight - Home</a></li> 
+        <li><a href="/silverlight/silverlight_overview.htm">Silverlight - Overview</a></li> 
+        <li><a href="/silverlight/silverlight_environment_setup.htm">Silverlight - Environment Setup</a></li> 
+        <li><a href="/silverlight/silverlight_getting_started.htm">Silverlight - Getting Started</a></li> 
+        <li><a href="/silverlight/silverlight_xaml_overview.htm">Silverlight - XAML Overview</a></li> 
+        <li><a href="/silverlight/silverlight_project_types.htm">Silverlight - Project Types</a></li> 
+        <li><a href="/silverlight/silverlight_fixed_layouts.htm">Silverlight - Fixed Layouts</a></li> 
+        <li><a href="/silverlight/silverlight_dynamic_layout.htm">Silverlight - Dynamic Layout</a></li> 
+        <li><a href="/silverlight/silverlight_constrained_vs_unconstrained.htm">Constrained vs. Unconstrained</a></li> 
+        <li><a href="/silverlight/silverlight_and_css.htm">Silverlight - CSS</a></li> 
+        <li><a href="/silverlight/silverlight_controls.htm">Silverlight - Controls</a></li> 
+        <li><a href="/silverlight/silverlight_buttons.htm">Silverlight - Buttons</a></li> 
+        <li><a href="/silverlight/silverlight_content_model.htm">Silverlight - Content Model</a></li> 
+        <li><a href="/silverlight/silverlight_listbox.htm">Silverlight - ListBox</a></li> 
+        <li><a href="/silverlight/silverlight_templates.htm">Silverlight - Templates</a></li> 
+        <li><a href="/silverlight/silverlight_visual_state.htm">Silverlight - Visual State</a></li> 
+        <li><a href="/silverlight/silverlight_data_binding.htm">Silverlight - Data Binding</a></li> 
+        <li><a href="/silverlight/silverlight_browser_integration.htm">Silverlight - Browser Integration</a></li> 
+        <li><a href="/silverlight/silverlight_out_of_browser_applications.htm">Silverlight - Out-of-Browser</a></li> 
+        <li><a href="/silverlight/silverlight_applications_resources_deployment.htm">Silverlight - Applications, Resources</a></li> 
+        <li><a href="/silverlight/silverlight_file_access.htm">Silverlight - File Access</a></li> 
+        <li><a href="/silverlight/silverlight_view_model.htm">Silverlight - View Model</a></li> 
+        <li><a href="/silverlight/silverlight_input_handling.htm">Silverlight - Input Handling</a></li> 
+        <li><a href="/silverlight/silverlight_isolated_storage.htm">Silverlight - Isolated Storage</a></li> 
+        <li><a href="/silverlight/silverlight_text.htm">Silverlight - Text</a></li> 
+        <li><a href="/silverlight/silverlight_animation.htm">Silverlight - Animation</a></li> 
+        <li><a href="/silverlight/silverlight_video_audio.htm">Silverlight - Video and Audio</a></li> 
+        <li><a href="/silverlight/silverlight_printing.htm">Silverlight - Printing</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Silverlight Useful Resources</li> 
+        <li><a href="/silverlight/silverlight_quick_guide.htm">Silverlight - Quick Guide</a></li> 
+        <li><a href="/silverlight/silverlight_useful_resources.htm">Silverlight - Useful Resources</a></li> 
+        <li><a href="/silverlight/silverlight_discussion.htm">Silverlight - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <div class="cover"> 
+         <img class="img-responsive" src="/silverlight/images/silverlight.jpg" alt="Silverlight Tutorial"> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/silverlight/silverlight_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <h1>Silverlight Tutorial</h1> 
+        <div class="center-aligned tutorial-menu"> 
+         <form action="/job_search.php" method="POST"> 
+          <input type="hidden" name="search_string" value="Silverlight"> 
+          <button type="button" class="btn btn-default btn-sm btn-buy-tutorial"><i class="icon  icon-file-pdf-o"></i><a href="/silverlight/silverlight_pdf_version.htm"> PDF Version</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-quick-guide"><i class="icon  icon-book"></i><a href="/silverlight/silverlight_quick_guide.htm"> Quick Guide</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon  icon-external-link"></i><a href="/silverlight/silverlight_useful_resources.htm"> Resources</a></button> 
+          <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="icon  icon-suitcase"></i> Job Search</button> 
+          <button type="button" class="btn btn-default btn-sm btn-job-search"><i class="fa  fa-wechat"></i><a href="/silverlight/silverlight_discussion.htm"> Discussion</a></button> 
+         </form> 
+        </div> 
+        <p>Silverlight is a platform for building rich internet applications. This tutorial will explain the concepts behind Silverlight, and will show you how to build it into your web applications. After completing this tutorial, you will have a better understanding of Silverlight applications and how to develop them using XAML and C#.</p> 
+        <h1>Audience</h1> 
+        <p>This tutorial has been prepared for anyone who has a basic knowledge of XAML and C# and has an urge to develop websites. After completing this tutorial, you will find yourself at a moderate level of expertise in developing websites using Silverlight.</p> 
+        <h1>Prerequisites</h1> 
+        <p>Before you start proceeding with this tutorial, we are assuming that you are already aware about the basics of XAML and C#. If you are not well aware of these concepts, then we will suggest you to go through our short tutorials on XAML and C#.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/silverlight/silverlight_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/silverlight/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/silverlight/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/silverlight/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/silverlight/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/silverlight/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/silverlight/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

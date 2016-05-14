@@ -1,0 +1,656 @@
+http://tutorialspoint.com/r/r_interview_questions.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>R Interview Questions</title> 
+  <meta name="description" content="R Interview Questions - Learn R programming language with simple and easy examples starting from R installation, language basics, syntax, literals, data types, variables, functions, loops, decision making, modules, arrays, lists, vectors, math, matrices, statistical, graphics, excel data, csv data, Overview, Environment Setup, Operators, Strings, Factors, Data Frames, Packages, Data Reshaping, Binary Files, XML Files, Json Files, Web Data, Databases, Pie Charts, Bar Charts, Boxplots, Histograms, Line Graphs, Scatterplots, Mean, Median and Mode, Linear Regression, Multiple Regression, Logistic Regression, Normal Distribution, Binomial Distribution, Poisson Regression, Analysis of Covariance, Time Series Analysis, Nonlinear Least Square, Decision Tree, Random Forest, Survival Analysis, Chi Square Test."> 
+  <meta name="keywords" content="R, tutorial, beginners, programming, language, basics, syntax, literals, data types, variables, functions, loops, decision making, modules, arrays, lists, vectors, math, matrices, statistical, graphics, excel, data, csv data, Overview, Environment Setup, Operators, Strings, Factors, Data Frames, Packages, Data Reshaping, Binary Files, XML Files, Json Files, Web Data, Databases, Pie Charts, Bar Charts, Boxplots, Histograms, Line Graphs, Scatterplots, Mean, Median and Mode, Linear Regression, Multiple Regression, Logistic Regression, Normal Distribution, Binomial Distribution, Poisson Regression, Analysis of Covariance, Time Series Analysis, Nonlinear Least Square, Decision Tree, Random Forest, Survival Analysis, Chi Square Test."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/r/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #496194 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #496194 !important;}
+.submenu-item{ border-bottom: 2px solid #496194 !important; border-top: 2px solid #496194 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/r/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/r/images/r-mini-logo.jpg" alt="R Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Tutorial</li> 
+        <li><a href="/r/index.htm">R - Home</a></li> 
+        <li><a href="/r/r_overview.htm">R - Overview</a></li> 
+        <li><a href="/r/r_environment_setup.htm">R - Environment Setup</a></li> 
+        <li><a href="/r/r_basic_syntax.htm">R - Basic Syntax</a></li> 
+        <li><a href="/r/r_data_types.htm">R - Data Types</a></li> 
+        <li><a href="/r/r_variables.htm">R - Variables</a></li> 
+        <li><a href="/r/r_operators.htm">R - Operators</a></li> 
+        <li><a href="/r/r_decision_making.htm">R - Decision Making</a></li> 
+        <li><a href="/r/r_loops.htm">R - Loops</a></li> 
+        <li><a href="/r/r_functions.htm">R - Functions</a></li> 
+        <li><a href="/r/r_strings.htm">R - Strings</a></li> 
+        <li><a href="/r/r_vectors.htm">R - Vectors</a></li> 
+        <li><a href="/r/r_lists.htm">R - Lists</a></li> 
+        <li><a href="/r/r_matrices.htm">R - Matrices</a></li> 
+        <li><a href="/r/r_arrays.htm">R - Arrays</a></li> 
+        <li><a href="/r/r_factors.htm">R - Factors</a></li> 
+        <li><a href="/r/r_data_frames.htm">R - Data Frames</a></li> 
+        <li><a href="/r/r_packages.htm">R - Packages</a></li> 
+        <li><a href="/r/r_data_reshaping.htm">R - Data Reshaping</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Data Interfaces</li> 
+        <li><a href="/r/r_csv_files.htm">R - CSV Files</a></li> 
+        <li><a href="/r/r_excel_files.htm">R - Excel Files</a></li> 
+        <li><a href="/r/r_binary_files.htm">R - Binary Files</a></li> 
+        <li><a href="/r/r_xml_files.htm">R - XML Files</a></li> 
+        <li><a href="/r/r_json_files.htm">R - JSON Files</a></li> 
+        <li><a href="/r/r_web_data.htm">R - Web Data</a></li> 
+        <li><a href="/r/r_database.htm">R - Database</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Charts &amp; Graphs</li> 
+        <li><a href="/r/r_pie_charts.htm">R - Pie Charts</a></li> 
+        <li><a href="/r/r_bar_charts.htm">R - Bar Charts</a></li> 
+        <li><a href="/r/r_boxplots.htm">R - Boxplots</a></li> 
+        <li><a href="/r/r_histograms.htm">R - Histograms</a></li> 
+        <li><a href="/r/r_line_graphs.htm">R - Line Graphs</a></li> 
+        <li><a href="/r/r_scatterplots.htm">R - Scatterplots</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Statistics Examples</li> 
+        <li><a href="/r/r_mean_median_mode.htm">R - Mean, Median &amp; Mode</a></li> 
+        <li><a href="/r/r_linear_regression.htm">R - Linear Regression</a></li> 
+        <li><a href="/r/r_multiple_regression.htm">R - Multiple Regression</a></li> 
+        <li><a href="/r/r_logistic_regression.htm">R - Logistic Regression</a></li> 
+        <li><a href="/r/r_normal_distribution.htm">R - Normal Distribution</a></li> 
+        <li><a href="/r/r_binomial_distribution.htm">R - Binomial Distribution</a></li> 
+        <li><a href="/r/r_poisson_regression.htm">R - Poisson Regression</a></li> 
+        <li><a href="/r/r_analysis_of_covariance.htm">R - Analysis of Covariance</a></li> 
+        <li><a href="/r/r_time_series_analysis.htm">R - Time Series Analysis</a></li> 
+        <li><a href="/r/r_nonlinear_least_square.htm">R - Nonlinear Least Square</a></li> 
+        <li><a href="/r/r_decision_tree.htm">R - Decision Tree</a></li> 
+        <li><a href="/r/r_random_forest.htm">R - Random Forest</a></li> 
+        <li><a href="/r/r_survival_analysis.htm">R - Survival Analysis</a></li> 
+        <li><a href="/r/r_chi_square_tests.htm">R - Chi Square Tests</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Useful Resources</li> 
+        <li><a href="/r/r_interview_questions.htm">R - Interview Questions</a></li> 
+        <li><a href="/r/r_quick_guide.htm">R - Quick Guide</a></li> 
+        <li><a href="/r/r_useful_resources.htm">R - Useful Resources</a></li> 
+        <li><a href="/r/r_discussion.htm">R - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>R - Interview Questions</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/r/r_chi_square_tests.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/r/r_quick_guide.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>Dear readers, these R Interview Questions have been designed specially to get you acquainted with the nature of questions you may encounter during your interview for the subject of R programming. As per my experience good interviewers hardly plan to ask any particular question during your interview, normally questions start with some basic concept of the subject and later they continue based on further discussion and what you answer −</p> 
+        <section class="toggle"> 
+         <label>What is R Programming?</label> 
+         <div class="toggle-content"> 
+          <p>R is a programming language meant for statistical analysis and creating graphs for this purpose.Instead of data types, it has data objects which are used for calculations. It is used in the fields of data mining, Regression analysis, Probability estimation etc., using many packages available in it.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What are the different data objects in R?</label> 
+         <div class="toggle-content"> 
+          <p>There are 6 data objects in R. They are vectors, lists, arrays, matrices, data frames and tables.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What makes a valid variable name in R?</label> 
+         <div class="toggle-content"> 
+          <p>A valid variable name consists of letters, numbers and the dot or underline characters. The variable name starts with a letter or the dot not followed by a number. </p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is the main difference between an Array and a matrix?</label> 
+         <div class="toggle-content"> 
+          <p>A matrix is always two dimensional as it has only rows and columns. But an array can be of any number of dimensions and each dimension is a matrix. For example a 3x3x2 array represents 2 matrices each of dimension 3x3.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Which data object in R is used to store and process categorical data?</label> 
+         <div class="toggle-content"> 
+          <p>The Factor data objects in R are used to store and process categorical data in R.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How can you load and use csv file in R?</label> 
+         <div class="toggle-content"> 
+          <p>A csv file can be loaded using the read.csv function. R creates a data frame on reading the csv files using this function.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How do you get the name of the current working directory in R?</label> 
+         <div class="toggle-content"> 
+          <p>The command getwd() gives the current working directory in the R environment.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is R Base package?</label> 
+         <div class="toggle-content"> 
+          <p>This is the package which is loaded by default when R environment is set. It provides the basic functionalities like input/output, arithmetic calculations etc. in the R environment.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How R is used in logistic regression?</label> 
+         <div class="toggle-content"> 
+          <p>Logistic regression deals with measuring the probability of a binary response variable. In R the function glm() is used to create the logistic regression.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How do you access the element in the 2nd column and 4th row of a matrix named M?</label> 
+         <div class="toggle-content"> 
+          <p>The expression M[4,2] gives the element at 4th row and 2nd column.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is recycling of elements in a vector? Give an example.</label> 
+         <div class="toggle-content"> 
+          <p>When two vectors of different length are involved in a operation then the elements of the shorter vector are reused to complete the operation. This is called element recycling. Example - v1 &lt;- c(4,1,0,6) and V2 &lt;- c(2,4) then v1*v2 gives (8,4,0,24). The elements 2 and 4 are repeated.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What are different ways to call a function in R?</label> 
+         <div class="toggle-content"> 
+          <p>We can call a function in R in 3 ways. First method is to call by using position of the arguments. Second method id to call by using the name of the arguments and the third method is to call by default arguments.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is lazy function evaluation in R?</label> 
+         <div class="toggle-content"> 
+          <p>The lazy evaluation of a function means, the argument is evaluated only if it is used inside the body of the function. If there is no reference to the argument in the body of the function then it is simply ignored.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How do you install a package in R?</label> 
+         <div class="toggle-content"> 
+          <p>To install a package in R we use the below command.</p> 
+          <pre class="prettyprint notranslate">
+install.packages("package Name")
+</pre> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Name a R packages which is used to read XML files.</label> 
+         <div class="toggle-content"> 
+          <p>The package named "XML" is used to read and process the XML files.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Can we update and delete any of the elements in a list?</label> 
+         <div class="toggle-content"> 
+          <p>We can update any of the element but we can delete only the element at the end of the list.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Give the general expression to create a matrix in R.</label> 
+         <div class="toggle-content"> 
+          <p>The general expression to create a matrix in R is - matrix(data, nrow, ncol, byrow, dimnames)</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>which function is used to create a boxplot graph in R?</label> 
+         <div class="toggle-content"> 
+          <p>The boxplot() function is used to create boxplots in R. It takes a formula and a data frame as inputs to create the boxplots.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>In doing time series analysis, what does frequency = 6 means in the ts() function?</label> 
+         <div class="toggle-content"> 
+          <p> Frequency 6 indicates the time interval for the time series data is every 10 minutes of an hour.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is reshaping of data in R?</label> 
+         <div class="toggle-content"> 
+          <p>In R the data objects can be converted from one form to another. For example we can create a data frame by merging many lists. This involves a series of R commands to bring the data into the new format. This is called data reshaping.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is the output of runif(4)?</label> 
+         <div class="toggle-content"> 
+          <p>It generates 4 random numbers between 0 and 1.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How to get a list of all the packages installed in R ?</label> 
+         <div class="toggle-content"> 
+          <p>Use the command</p> 
+          <pre class="prettyprint notranslate">
+installed.packages()
+</pre> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is expected from running the command - strsplit(x,"e")?</label> 
+         <div class="toggle-content"> 
+          <p>It splits the strings in vector x into substrings at the position of letter e.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Give a R script to extract all the unique words in uppercase from the string - "The quick brown fox jumps over the lazy dog".</label> 
+         <div class="toggle-content"> 
+          <pre class="prettyprint notranslate">
+x &lt;- "The quick brown fox jumps over the lazy dog"
+split.string &lt;- strsplit(x, " ")
+extract.words &lt;- split.string[[1]]
+result &lt;- unique(tolower(extract.words))
+print(result)
+</pre> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Vector v is c(1,2,3,4) and list x is list(5:8), what is the output of v*x[1]?</label> 
+         <div class="toggle-content"> 
+          <p>Error in v * x[1] : non-numeric argument to binary operator</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Vector v is c(1,2,3,4) and list x is list(5:8), what is the output of v*x[[1]]?</label> 
+         <div class="toggle-content"> 
+          <p>[1] 5 12 21 32s</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What does unlist() do?</label> 
+         <div class="toggle-content"> 
+          <p>It converts a list to a vector.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Give the R expression to get 26 or less heads from a 51 tosses of a coin using pbinom.</label> 
+         <div class="toggle-content"> 
+          <pre class="prettyprint notranslate">
+x &lt;- pbinom(26,51,0.5)
+print(x)
+</pre> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>X is the vector c(5,9.2,3,8.51,NA), What is the output of mean(x)?</label> 
+         <div class="toggle-content"> 
+          <p>NA</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How do you convert the data in a JSON file to a data frame?</label> 
+         <div class="toggle-content"> 
+          <p>Using the function as.data.frame()</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Give a function in R that replaces all missing values of a vector x with the sum of elements of that vector?</label> 
+         <div class="toggle-content"> 
+          <pre class="prettyprint notranslate">
+function(x) { x[is.na(x)] &lt;- sum(x, na.rm = TRUE); x }
+</pre> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is the use of apply() in R?</label> 
+         <div class="toggle-content"> 
+          <p>It is used to apply the same function to each of the elements in an Array. For example finding the mean of the rows in every row.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Is an array a matrix or a matrix an array?</label> 
+         <div class="toggle-content"> 
+          <p>Every matrix can be called an array but not the reverse. Matrix is always two dimensional but array can be of any dimension.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How to find the help page on missing values?</label> 
+         <div class="toggle-content"> 
+          <p> ?NA</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How do you get the standard deviation for a vector x?</label> 
+         <div class="toggle-content"> 
+          <p>sd(x, na.rm=TRUE)</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How do you set the path for current working directory in R?</label> 
+         <div class="toggle-content"> 
+          <p>setwd("Path")</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is the difference between "%%" and "%/%"?</label> 
+         <div class="toggle-content"> 
+          <p>"%%" gives remainder of the division of first vector with second while "%/%" gives the quotient of the division of first vector with second.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What does col.max(x) do?</label> 
+         <div class="toggle-content"> 
+          <p>Find the column has the maximum value for each row.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Give the command to create a histogram.</label> 
+         <div class="toggle-content"> 
+          <p>hist()</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How do you remove a vector from the R workspace?</label> 
+         <div class="toggle-content"> 
+          <p>rm(x)</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>List the data sets available in package "MASS"</label> 
+         <div class="toggle-content"> 
+          <p>data(package = "MASS")</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>List the data sets available in all available packages.</label> 
+         <div class="toggle-content"> 
+          <pre class="prettyprint notranslate">
+data(package = .packages(all.available = TRUE))
+</pre> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is the use of the command - install.packages(file.choose(), repos=NULL)?</label> 
+         <div class="toggle-content"> 
+          <p>It is used to install a r package from local directory by browsing and selecting the file.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Give the command to check if the element 15 is present in vector x.</label> 
+         <div class="toggle-content"> 
+          <pre class="prettyprint notranslate">
+15 %in% x
+</pre> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>Give the syntax for creating scatterplot matrices.</label> 
+         <div class="toggle-content"> 
+          <pre class="prettyprint notranslate">
+pairs(formula, data)
+</pre> 
+          <p>Where formula represents the series of variables used in pairs and data represents the data set from which the variables will be taken.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is the difference between subset() function and sample() function in R?</label> 
+         <div class="toggle-content"> 
+          <p>The subset() functions is used to select variables and observations. The sample() function is used to choose a random sample of size n from a dataset.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How do you check if "m" is a matrix data object in R?</label> 
+         <div class="toggle-content"> 
+          <p>is.matrix(m) should retrun TRUE.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is the output for the below expression all(NA==NA)?</label> 
+         <div class="toggle-content"> 
+          <p>[1] NA</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>How to obtain the transpose of a matrix in R?</label> 
+         <div class="toggle-content"> 
+          <p>The function t() is used for transposing a matrix. Example - t(m) , where m is a matrix.</p> 
+         </div> 
+        </section> 
+        <section class="toggle"> 
+         <label>What is the use of "next" statement in R?</label> 
+         <div class="toggle-content"> 
+          <p>The "next" statement in R programming language is useful when we want to skip the current iteration of a loop without terminating it.</p> 
+         </div> 
+        </section> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/r/r_chi_square_tests.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/r/r_quick_guide.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/r/r_interview_questions.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/r/r_interview_questions.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/r/r_interview_questions.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/r/r_interview_questions.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/r/r_interview_questions.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/r/r_interview_questions.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('/r/try_r.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

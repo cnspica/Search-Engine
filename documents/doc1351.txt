@@ -1,0 +1,492 @@
+https://stackexchange.com/newsletters/newsletter?site=robotics.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Robotics Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3drobotics.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3drobotics.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 219, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 219, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Robotics Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://robotics.stackexchange.com">Robotics</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-image: url('//sstatic.net/stackexchange/Img/newsletters/beta-bg.png');" background="//sstatic.net/stackexchange/Img/newsletters/beta-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> 
+      <table border="0" cellpadding="0" cellspacing="0"> 
+       <tbody>
+        <tr> 
+         <td width="600" align="left"> <h1 style="color: #8FD8F6; font-size: 24px!important; font-weight: normal!important;"><span style="color: #3E5583; font-weight: bold!important;">Robotics</span> newsletter</h1> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #FDFDFD; border-top: 1px solid #E6E6E6; border-left: 1px solid #E6E6E6; border-right: 1px solid #E6E6E6;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://robotics.stackexchange.com/questions/9825/stability-of-pid-values-update-function-for-quadrotor" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Stability of PID values update function for quadrotor</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">A reviewer of the last paper I sent replied me that the it is very dangerous to update a PID with next kind of formula (paper is about quadrotor control): $$ K_p (t + 1) = K_p (t)+e(t) (μ_1 (Pe(t)) + ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://robotics.stackexchange.com/questions/tagged/quadcopter" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">quadcopter</a> <a href="http://robotics.stackexchange.com/questions/tagged/control" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">control</a> <a href="http://robotics.stackexchange.com/questions/tagged/pid" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">pid</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/91b017eb2c1e0b6940c7d6b7596df878?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://robotics.stackexchange.com/users/10539/galtor" target="_blank" style="color: #4E82C2; text-decoration: none;">galtor</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://robotics.stackexchange.com/questions/9826/angular-momentum-of-rimless-wheel-in-passive-dynamic-walking" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Angular momentum of rimless wheel in Passive Dynamic Walking</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">In Tad McGeer's work, Passive Dynamic Walking, in 1990, he mentions the rimless wheel model, which is used to approximate the bipedal locomotion. I can't understand why the angular momentum is written ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://robotics.stackexchange.com/questions/tagged/wheel" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">wheel</a> <a href="http://robotics.stackexchange.com/questions/tagged/walking-robot" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">walking-robot</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/bef90a5da864bc36ced82818cef2ead5?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://robotics.stackexchange.com/users/13536/lucaskotw" target="_blank" style="color: #4E82C2; text-decoration: none;">lucasKoTW</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://robotics.stackexchange.com/questions/9786/how-do-the-pid-parameters-kp-ki-and-kd-affect-the-heading-of-a-differential" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How do the PID parameters (Kp, Ki, and Kd) affect the heading of a differential driving robot when they are increased individually?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;"> Question: A PID controller has three parameters Kp, Ki and Kd which could affect the output performance. A differential driving robot is controlled by a PID controller. The heading information is ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://robotics.stackexchange.com/questions/tagged/pid" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">pid</a> <a href="http://robotics.stackexchange.com/questions/tagged/wheeled-robot" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">wheeled-robot</a> <a href="http://robotics.stackexchange.com/questions/tagged/differential-drive" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">differential-drive</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/4d9e676be06fa9d688b4f47982bd7912?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://robotics.stackexchange.com/users/13627/dan" target="_blank" style="color: #4E82C2; text-decoration: none;">Dan</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1398b185bcc35d5e23043df327d26565?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://robotics.stackexchange.com/users/9578/andy" target="_blank" style="color: #4E82C2; text-decoration: none;">Andy</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://robotics.stackexchange.com/questions/9801/low-latency-control-from-a-laptop" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Low latency control from a laptop</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Lets say that I needed to send sensor readings in increments of 100 bytes from a micro controller to a laptop with sub 2 ms latencies in real time (the data needs to be processed and acted upon ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://robotics.stackexchange.com/questions/tagged/low-latency" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">low-latency</a> <a href="http://robotics.stackexchange.com/questions/tagged/laptop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">laptop</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/LVfDZ.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://robotics.stackexchange.com/users/1667/daweim0" target="_blank" style="color: #4E82C2; text-decoration: none;">daweim0</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/s5KLN.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://robotics.stackexchange.com/users/184/hauptmech" target="_blank" style="color: #4E82C2; text-decoration: none;">hauptmech</a> 0 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://robotics.stackexchange.com/questions/1299/send-arduino-sensor-data-to-server-with-gprs-shield" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Send Arduino sensor data to server with GPRS shield</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm trying to send Arduino sensor data to a server using a GPRS shield (SIM900 shield from Geeetech). I have this particular set up because the data will be updated to a website and the device will be ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://robotics.stackexchange.com/questions/tagged/arduino" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">arduino</a> <a href="http://robotics.stackexchange.com/questions/tagged/sensors" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">sensors</a> <a href="http://robotics.stackexchange.com/questions/tagged/raspberry-pi" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">raspberry-pi</a> <a href="http://robotics.stackexchange.com/questions/tagged/programming-languages" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">programming-languages</a> <a href="http://robotics.stackexchange.com/questions/tagged/python" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">python</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f8cd867dfd775e56b1944f6f9af465bc?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://robotics.stackexchange.com/users/1328/james-herd" target="_blank" style="color: #4E82C2; text-decoration: none;">James Herd</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/rUfLl.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://robotics.stackexchange.com/users/9176/greenonline" target="_blank" style="color: #4E82C2; text-decoration: none;">Greenonline</a> 0 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://robotics.stackexchange.com/questions/6471/how-to-connect-hc-sr04-ultrasonic-sensor-to-apm-2-6" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How to connect HC-sr04 ultrasonic sensor to APM 2.6?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am working on my final project by autonomous Quadcopter. my tasks are to make a quadcopter which should do object avoidance and it should auto land using ultrasonic sensors. any possible ans to it, ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://robotics.stackexchange.com/questions/tagged/quadcopter" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">quadcopter</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ee9971fbe79d1e27d62cab6c4563b3a0?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://robotics.stackexchange.com/users/8978/hameed-ullah-omari" target="_blank" style="color: #4E82C2; text-decoration: none;">Hameed ullah Omari</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/daeb7bae33ce77c978a024e939e7bb2d?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://robotics.stackexchange.com/users/7066/mark-omo" target="_blank" style="color: #4E82C2; text-decoration: none;">Mark Omo</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://robotics.stackexchange.com/questions/2411/robotic-part-to-dispense-candy" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Robotic part to dispense candy</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm a complete newbie trying to build a simple robot that dispenses candy (M&amp;M, skittles, etc). However, since I'm not familiar with the field, I'm having a hard time googling because I don't ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://robotics.stackexchange.com/questions/tagged/design" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">design</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/a9a1f1f03bc40f0d1bb3778389e74d29?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://robotics.stackexchange.com/users/2734/marcos-savoury" target="_blank" style="color: #4E82C2; text-decoration: none;">Marcos Savoury</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/48e6815ebbf2cdb607cbe9fa89d6e46e?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://robotics.stackexchange.com/users/2447/diego-c-nascimento" target="_blank" style="color: #4E82C2; text-decoration: none;">Diego C Nascimento</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;color: #444;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #4E82C2; text-decoration: none; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #4E82C2; text-decoration: none;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #4E82C2; text-decoration: none;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #4E82C2; text-decoration: none;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #4E82C2; text-decoration: none;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

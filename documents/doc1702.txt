@@ -1,0 +1,639 @@
+https://stackexchange.com/newsletters/newsletter?site=sharepoint.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>SharePoint Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dsharepoint.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dsharepoint.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 105, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 105, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the SharePoint Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://sharepoint.stackexchange.com">SharePoint</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #061c2c; font-family: 'Segoe UI',Segoe,'Helvetica Neue',Lucida Grande,Arial,sans-serif;"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/sharepoint-header.png" alt="SharePoint Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #EBEDEE;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #14474F!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179514/star-wars-error-use-the-force" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Star Wars Error "use the force"</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Error when deploying a Visual Web Part: use the force attribute to explicitly re-install the feature Is the force not with me? How do i use the force? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/2013" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">2013</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/visual-web-part" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">visual-web-part</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/WynB3.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/32097/tomsmithweb" target="_blank" style="color: #1083BF;">tomsmithweb</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/83974bf5e28379ad9b3509ba4c1240e9?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://sharepoint.stackexchange.com/users/53770/ahmed-mahmoud" target="_blank" style="color: #1083BF;">Ahmed Mahmoud</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179296/where-to-place-the-body-in-a-sharepoint-designer-workflow-post-request" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Where to place the body in a SharePoint Designer workflow POST request</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am constructing a REST API call in a SharePoint Designer workflow, to rename a file in a library. I'm using the Call HTTP Web Service action with the POST method, and I've set this to the API URL ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/2013" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">2013</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/designer-workflow" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">designer-workflow</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/designer" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">designer</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/tmTlu.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/53657/jonathan-holvey" target="_blank" style="color: #1083BF;">Jonathan Holvey</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/tmTlu.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://sharepoint.stackexchange.com/users/53657/jonathan-holvey" target="_blank" style="color: #1083BF;">Jonathan Holvey</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179155/jquery-cdn-reference-in-sp-online-masterpage-changed-magically" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">jQuery CDN reference in SP Online MasterPage changed magically</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">My custom MasterPage deployed to SharePoint Online contains two links to JavaScript libraries on CDN's. Like this: &lt;script type="text/javascript" ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/sharepoint-online" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">sharepoint-online</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/javascript" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">javascript</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/custom-masterpage" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">custom-masterpage</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Cc1lR.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/54039/cas-van-iersel" target="_blank" style="color: #1083BF;">Cas van Iersel</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/871bb9703bd44363e7ef8bc4c37ffee2?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://sharepoint.stackexchange.com/users/751/waldek-mastykarz-mvp" target="_blank" style="color: #1083BF;">Waldek Mastykarz - MVP</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179147/create-only-one-page-for-multiple-languages-in-sharepoint-2013" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Create only one page for multiple languages in SharePoint 2013</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">In SharePoint 2013, can I create one page only for multiple languages without installing language packs. Will SharePoint publish site support it? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/2013" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">2013</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/sharepoint-enterprise" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">sharepoint-enterprise</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/publishing-site" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">publishing-site</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/multilingual" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">multilingual</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ba52d36ac8bdc61bcc2b310ce6175b23?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/7543/akj" target="_blank" style="color: #1083BF;">akj</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179679/is-there-a-way-to-only-load-javascript-based-on-the-authenticated-or-anonymous-u" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Is there a way to only load javascript based on the authenticated or anonymous user?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">We have several page layouts that are calling a javascript file and we are trying to improve our page speeds and we figured we only need to call this js file if the user is logged in. Otherwise for ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/sharepoint-enterprise" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">sharepoint-enterprise</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/javascript" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">javascript</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/page-layout" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">page-layout</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://lh6.googleusercontent.com/-ZloKJ5toNKQ/AAAAAAAAAAI/AAAAAAAAD-Y/QKnSND7Awk0/photo.jpg?sz=128" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/45278/michael-yao" target="_blank" style="color: #1083BF;">Michael Yao</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/3092d05eda20f974250420e039d63c05?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://sharepoint.stackexchange.com/users/505/tekiegreg" target="_blank" style="color: #1083BF;">tekiegreg</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179568/delete-item-post-closing-date-in-sps-2013-list" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Delete item post closing date in SPS 2013 List</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">How to automatically delete the Item from the SPS 2013 List after the closing date has reached for the item. Closing date is one of the column part of the item. </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/list" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">list</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/item" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">item</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e55017115f81abf1f1d5f50f36d554d7?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/52017/jason" target="_blank" style="color: #1083BF;">Jason</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/94bc9957fc460d5b4561b004c8986d46?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://sharepoint.stackexchange.com/users/52649/aakash-morya" target="_blank" style="color: #1083BF;">Aakash Morya</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179385/inconsistent-internal-list-field-names-between-servers" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Inconsistent internal list field names between servers</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">This is making me crazy... I have two SharePoint 2013 farms, one for testing and one for production. The setup of them is nearly identical. I have a lookup field in a custom list, and it includes ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/custom-list" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">custom-list</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/internal-name" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">internal-name</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/af1740c51f19948e707190ef81901c79?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/34903/mannaggia" target="_blank" style="color: #1083BF;">mannaggia</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #14474F!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/26527/update-user-profile-for-user-whose-account-name-has-changed-in-ad" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Update user profile for user whose account name has changed in AD</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">We have an issue with User Profile Sync in SharePoint 2010 when the following happens: A new user is added to AD (i.e. DOMAIN\jdoh) The user is synched successfully to SharePoint Time passes The ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/2010" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">2010</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/user-profile" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">user-profile</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/85e0405c2026356dc39b9c8d9fb7d8f4?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/5337/daniel" target="_blank" style="color: #1083BF;">Daniel</a> 11 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2c9746ce057ed6a863c191dcfc6b66c3?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://sharepoint.stackexchange.com/users/3965/vassili-altynikov" target="_blank" style="color: #1083BF;">Vassili Altynikov</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/125006/how-do-i-move-sharepoint-lists-and-libraries-to-another-site-collection" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How do I move SharePoint Lists and Libraries to another Site Collection?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm in the process of upgrading/cleaning up a large Web Application with a lot of Site Collections. On a SharePoint Foundation 2013 env. I have found some questions about moving document libraries ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/2013" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">2013</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/sharepoint-foundation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">sharepoint-foundation</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/migration" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">migration</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/move" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">move</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/0L8AI.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/16953/george-norberg" target="_blank" style="color: #1083BF;">George Norberg</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/hdH15.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://sharepoint.stackexchange.com/users/20181/diego-hillesheim" target="_blank" style="color: #1083BF;">Diego Hillesheim</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #14474F!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179145/conditional-formatted-sections-not-playing-well-with-browsers" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Conditional formatted sections not playing well with browsers</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I've got a form with four conditional sections based on checkbox controls. For whatever reason, the 'hide this control' rules quit working in IE but still work just fine in Chrome browsers. The four ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/infopath" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">infopath</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://graph.facebook.com/10209643841761263/picture?type=large" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/54037/aj-jensen" target="_blank" style="color: #1083BF;">AJ Jensen</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179444/user-profile-application-without-sync-sharepoint-2013" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">User Profile Application without Sync - SharePoint 2013</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I would like to know how does SharePoint map the attribute PreferredName when no sync from AD is effective ? I'm having issues after having provisioned the user profile service application but didn't ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/user-profile" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">user-profile</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/active-directory" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">active-directory</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/user-profile-service" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">user-profile-service</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/user-profile-property" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">user-profile-property</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/6Hp33.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/49894/shark" target="_blank" style="color: #1083BF;">Shark</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://sharepoint.stackexchange.com/questions/179080/csom-powershell-folder-propertyname-hasuniqueroleassignments" target="_blank" style="color: #1083BF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">CSOM PowerShell - $folder -PropertyName "HasUniqueRoleAssignments"</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm trying to use the Load-CSOMProperties.ps1 made by Gary Lapointe to report me if a folder "HasUniqueRoleAssignments". This is working fine for webs and lists but it doesn't seem to work for ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://sharepoint.stackexchange.com/questions/tagged/sharepoint-online" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">sharepoint-online</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/powershell" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">powershell</a> <a href="http://sharepoint.stackexchange.com/questions/tagged/csom" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px; -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; transition: all 0.3s ease-in;">csom</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5713231105f30e54054e2c9106552a47?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://sharepoint.stackexchange.com/users/53855/barendds" target="_blank" style="color: #1083BF;">BarendDS</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;color: #fff;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #1083BF; text-decoration: none; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #1083BF; text-decoration: none;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #1083BF; text-decoration: none;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #1083BF; text-decoration: none;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #1083BF; text-decoration: none;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

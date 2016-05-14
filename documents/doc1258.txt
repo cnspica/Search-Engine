@@ -1,0 +1,550 @@
+http://tutorialspoint.com/r/r_data_reshaping.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>R Data Reshaping</title> 
+  <meta name="description" content="R Data Reshaping - Learn R programming language with simple and easy examples starting from R installation, language basics, syntax, literals, data types, variables, functions, loops, decision making, modules, arrays, lists, vectors, math, matrices, statistical, graphics, excel data, csv data, Overview, Environment Setup, Operators, Strings, Factors, Data Frames, Packages, Data Reshaping, Binary Files, XML Files, Json Files, Web Data, Databases, Pie Charts, Bar Charts, Boxplots, Histograms, Line Graphs, Scatterplots, Mean, Median and Mode, Linear Regression, Multiple Regression, Logistic Regression, Normal Distribution, Binomial Distribution, Poisson Regression, Analysis of Covariance, Time Series Analysis, Nonlinear Least Square, Decision Tree, Random Forest, Survival Analysis, Chi Square Test."> 
+  <meta name="keywords" content="R, tutorial, beginners, programming, language, basics, syntax, literals, data types, variables, functions, loops, decision making, modules, arrays, lists, vectors, math, matrices, statistical, graphics, excel, data, csv data, Overview, Environment Setup, Operators, Strings, Factors, Data Frames, Packages, Data Reshaping, Binary Files, XML Files, Json Files, Web Data, Databases, Pie Charts, Bar Charts, Boxplots, Histograms, Line Graphs, Scatterplots, Mean, Median and Mode, Linear Regression, Multiple Regression, Logistic Regression, Normal Distribution, Binomial Distribution, Poisson Regression, Analysis of Covariance, Time Series Analysis, Nonlinear Least Square, Decision Tree, Random Forest, Survival Analysis, Chi Square Test."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/r/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #496194 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #496194 !important;}
+.submenu-item{ border-bottom: 2px solid #496194 !important; border-top: 2px solid #496194 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/r/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/r/images/r-mini-logo.jpg" alt="R Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Tutorial</li> 
+        <li><a href="/r/index.htm">R - Home</a></li> 
+        <li><a href="/r/r_overview.htm">R - Overview</a></li> 
+        <li><a href="/r/r_environment_setup.htm">R - Environment Setup</a></li> 
+        <li><a href="/r/r_basic_syntax.htm">R - Basic Syntax</a></li> 
+        <li><a href="/r/r_data_types.htm">R - Data Types</a></li> 
+        <li><a href="/r/r_variables.htm">R - Variables</a></li> 
+        <li><a href="/r/r_operators.htm">R - Operators</a></li> 
+        <li><a href="/r/r_decision_making.htm">R - Decision Making</a></li> 
+        <li><a href="/r/r_loops.htm">R - Loops</a></li> 
+        <li><a href="/r/r_functions.htm">R - Functions</a></li> 
+        <li><a href="/r/r_strings.htm">R - Strings</a></li> 
+        <li><a href="/r/r_vectors.htm">R - Vectors</a></li> 
+        <li><a href="/r/r_lists.htm">R - Lists</a></li> 
+        <li><a href="/r/r_matrices.htm">R - Matrices</a></li> 
+        <li><a href="/r/r_arrays.htm">R - Arrays</a></li> 
+        <li><a href="/r/r_factors.htm">R - Factors</a></li> 
+        <li><a href="/r/r_data_frames.htm">R - Data Frames</a></li> 
+        <li><a href="/r/r_packages.htm">R - Packages</a></li> 
+        <li><a href="/r/r_data_reshaping.htm">R - Data Reshaping</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Data Interfaces</li> 
+        <li><a href="/r/r_csv_files.htm">R - CSV Files</a></li> 
+        <li><a href="/r/r_excel_files.htm">R - Excel Files</a></li> 
+        <li><a href="/r/r_binary_files.htm">R - Binary Files</a></li> 
+        <li><a href="/r/r_xml_files.htm">R - XML Files</a></li> 
+        <li><a href="/r/r_json_files.htm">R - JSON Files</a></li> 
+        <li><a href="/r/r_web_data.htm">R - Web Data</a></li> 
+        <li><a href="/r/r_database.htm">R - Database</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Charts &amp; Graphs</li> 
+        <li><a href="/r/r_pie_charts.htm">R - Pie Charts</a></li> 
+        <li><a href="/r/r_bar_charts.htm">R - Bar Charts</a></li> 
+        <li><a href="/r/r_boxplots.htm">R - Boxplots</a></li> 
+        <li><a href="/r/r_histograms.htm">R - Histograms</a></li> 
+        <li><a href="/r/r_line_graphs.htm">R - Line Graphs</a></li> 
+        <li><a href="/r/r_scatterplots.htm">R - Scatterplots</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Statistics Examples</li> 
+        <li><a href="/r/r_mean_median_mode.htm">R - Mean, Median &amp; Mode</a></li> 
+        <li><a href="/r/r_linear_regression.htm">R - Linear Regression</a></li> 
+        <li><a href="/r/r_multiple_regression.htm">R - Multiple Regression</a></li> 
+        <li><a href="/r/r_logistic_regression.htm">R - Logistic Regression</a></li> 
+        <li><a href="/r/r_normal_distribution.htm">R - Normal Distribution</a></li> 
+        <li><a href="/r/r_binomial_distribution.htm">R - Binomial Distribution</a></li> 
+        <li><a href="/r/r_poisson_regression.htm">R - Poisson Regression</a></li> 
+        <li><a href="/r/r_analysis_of_covariance.htm">R - Analysis of Covariance</a></li> 
+        <li><a href="/r/r_time_series_analysis.htm">R - Time Series Analysis</a></li> 
+        <li><a href="/r/r_nonlinear_least_square.htm">R - Nonlinear Least Square</a></li> 
+        <li><a href="/r/r_decision_tree.htm">R - Decision Tree</a></li> 
+        <li><a href="/r/r_random_forest.htm">R - Random Forest</a></li> 
+        <li><a href="/r/r_survival_analysis.htm">R - Survival Analysis</a></li> 
+        <li><a href="/r/r_chi_square_tests.htm">R - Chi Square Tests</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Useful Resources</li> 
+        <li><a href="/r/r_interview_questions.htm">R - Interview Questions</a></li> 
+        <li><a href="/r/r_quick_guide.htm">R - Quick Guide</a></li> 
+        <li><a href="/r/r_useful_resources.htm">R - Useful Resources</a></li> 
+        <li><a href="/r/r_discussion.htm">R - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>R - Data Reshaping</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/r/r_packages.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/r/r_csv_files.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>Data Reshaping in R is about changing the way data is organized into rows and columns. Most of the time data processing in R is done by taking the input data as a data frame. It is easy to extract data from the rows and columns of a data frame but there are situations when we need the data frame in a format that is different from format in which we received it. R has many functions to split, merge and change the rows to columns and vice-versa in a data frame.</p> 
+        <h2>Joining Columns and Rows in a Data Frame</h2> 
+        <p>We can join multiple vectors to create a data frame using the <b>cbind()</b>function. Also we can merge two data frames using <b>rbind()</b> function.</p> 
+        <pre class="prettyprint notranslate tryit">
+# Create vector objects.
+city &lt;- c("Tampa","Seattle","Hartford","Denver")
+state &lt;- c("FL","WA","CT","CO")
+zipcode &lt;- c(33602,98104,06161,80294)
+
+# Combine above three vectors into one data frame.
+addresses &lt;- cbind(city,state,zipcode)
+
+# Print a header.
+cat("# # # # The First data frame\n") 
+
+# Print the data frame.
+print(addresses)
+
+# Create another data frame with similar columns
+new.address &lt;- data.frame(
+   city = c("Lowry","Charlotte"),
+   state = c("CO","FL"),
+   zipcode = c("80230","33949"),
+   stringsAsFactors = FALSE
+)
+
+# Print a header.
+cat("# # # The Second data frame\n") 
+
+# Print the data frame.
+print(new.address)
+
+# Combine rows form both the data frames.
+all.addresses &lt;- rbind(addresses,new.address)
+
+# Print a header.
+cat("# # # The combined data frame\n") 
+
+# Print the result.
+print(all.addresses)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+# # # # The First data frame
+     city       state zipcode
+[1,] "Tampa"    "FL"  "33602"
+[2,] "Seattle"  "WA"  "98104"
+[3,] "Hartford" "CT"   "6161" 
+[4,] "Denver"   "CO"  "80294"
+
+# # # The Second data frame
+       city       state   zipcode
+1      Lowry      CO      80230
+2      Charlotte  FL      33949
+
+# # # The combined data frame
+       city      state zipcode
+1      Tampa     FL    33602
+2      Seattle   WA    98104
+3      Hartford  CT     6161
+4      Denver    CO    80294
+5      Lowry     CO    80230
+6     Charlotte  FL    33949
+</pre> 
+        <h2>Merging Data Frames</h2> 
+        <p>We can merge two data frames by using the <b>merge()</b> function. The data frames must have same column names on which the merging happens.</p> 
+        <p>In the example below, we consider the data sets about Diabetes in Pima Indian Women available in the library names "MASS". we merge the two data sets based on the values of blood pressure("bp") and body mass index("bmi"). On choosing these two columns for merging, the records where values of these two variables match in both data sets are combined together to form a single data frame.</p> 
+        <pre class="prettyprint notranslate tryit">
+library(MASS)
+merged.Pima &lt;- merge(x = Pima.te, y = Pima.tr,
+   by.x = c("bp", "bmi"),
+   by.y = c("bp", "bmi")
+)
+print(merged.Pima)
+nrow(merged.Pima)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+   bp  bmi npreg.x glu.x skin.x ped.x age.x type.x npreg.y glu.y skin.y ped.y
+1  60 33.8       1   117     23 0.466    27     No       2   125     20 0.088
+2  64 29.7       2    75     24 0.370    33     No       2   100     23 0.368
+3  64 31.2       5   189     33 0.583    29    Yes       3   158     13 0.295
+4  64 33.2       4   117     27 0.230    24     No       1    96     27 0.289
+5  66 38.1       3   115     39 0.150    28     No       1   114     36 0.289
+6  68 38.5       2   100     25 0.324    26     No       7   129     49 0.439
+7  70 27.4       1   116     28 0.204    21     No       0   124     20 0.254
+8  70 33.1       4    91     32 0.446    22     No       9   123     44 0.374
+9  70 35.4       9   124     33 0.282    34     No       6   134     23 0.542
+10 72 25.6       1   157     21 0.123    24     No       4    99     17 0.294
+11 72 37.7       5    95     33 0.370    27     No       6   103     32 0.324
+12 74 25.9       9   134     33 0.460    81     No       8   126     38 0.162
+13 74 25.9       1    95     21 0.673    36     No       8   126     38 0.162
+14 78 27.6       5    88     30 0.258    37     No       6   125     31 0.565
+15 78 27.6      10   122     31 0.512    45     No       6   125     31 0.565
+16 78 39.4       2   112     50 0.175    24     No       4   112     40 0.236
+17 88 34.5       1   117     24 0.403    40    Yes       4   127     11 0.598
+   age.y type.y
+1     31     No
+2     21     No
+3     24     No
+4     21     No
+5     21     No
+6     43    Yes
+7     36    Yes
+8     40     No
+9     29    Yes
+10    28     No
+11    55     No
+12    39     No
+13    39     No
+14    49    Yes
+15    49    Yes
+16    38     No
+17    28     No
+[1] 17
+</pre> 
+        <h2>Melting and Casting</h2> 
+        <p>One of the most interesting aspects of R programming is about changing the shape of the data in multiple steps to get a desired shape. The functions used to do this are called <b>melt()</b> and <b>cast()</b>.</p> 
+        <p>We consider the dataset called ships present in the library called "MASS".</p> 
+        <pre class="prettyprint notranslate tryit">
+library(MASS)
+print(ships)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+     type year   period   service   incidents
+1     A   60     60        127         0
+2     A   60     75         63         0
+3     A   65     60       1095         3
+4     A   65     75       1095         4
+5     A   70     60       1512         6
+.............
+.............
+8     A   75     75       2244         11
+9     B   60     60      44882         39
+10    B   60     75      17176         29
+11    B   65     60      28609         58
+............
+............
+17    C   60     60      1179          1
+18    C   60     75       552          1
+19    C   65     60       781          0
+............
+............
+</pre> 
+        <h2>Melt the Data</h2> 
+        <p>Now we melt the data to organize it, converting all columns other than type and year into multiple rows.</p> 
+        <pre class="prettyprint notranslate tryit">
+molten.ships &lt;- melt(ships, id = c("type","year"))
+print(molten.ships)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+      type year  variable  value
+1      A   60    period      60
+2      A   60    period      75
+3      A   65    period      60
+4      A   65    period      75
+............
+............
+9      B   60    period      60
+10     B   60    period      75
+11     B   65    period      60
+12     B   65    period      75
+13     B   70    period      60
+...........
+...........
+41     A   60    service    127
+42     A   60    service     63
+43     A   65    service   1095
+...........
+...........
+70     D   70    service   1208
+71     D   75    service      0
+72     D   75    service   2051
+73     E   60    service     45
+74     E   60    service      0
+75     E   65    service    789
+...........
+...........
+101    C   70    incidents    6
+102    C   70    incidents    2
+103    C   75    incidents    0
+104    C   75    incidents    1
+105    D   60    incidents    0
+106    D   60    incidents    0
+...........
+...........
+</pre> 
+        <h2>Cast the Molten Data</h2> 
+        <p>We can cast the molten data into a new form where the aggregate of each type of ship for each year is created. It is done using the <b>cast()</b> function.</p> 
+        <pre class="prettyprint notranslate tryit">
+recasted.ship &lt;- cast(molten.ships, type+year~variable,sum)
+print(recasted.ship)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+     type year  period  service  incidents
+1     A   60    135       190      0
+2     A   65    135      2190      7
+3     A   70    135      4865     24
+4     A   75    135      2244     11
+5     B   60    135     62058     68
+6     B   65    135     48979    111
+7     B   70    135     20163     56
+8     B   75    135      7117     18
+9     C   60    135      1731      2
+10    C   65    135      1457      1
+11    C   70    135      2731      8
+12    C   75    135       274      1
+13    D   60    135       356      0
+14    D   65    135       480      0
+15    D   70    135      1557     13
+16    D   75    135      2051      4
+17    E   60    135        45      0
+18    E   65    135      1226     14
+19    E   70    135      3318     17
+20    E   75    135       542      1
+</pre> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/r/r_packages.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/r/r_csv_files.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/r/r_data_reshaping.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/r/r_data_reshaping.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/r/r_data_reshaping.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/r/r_data_reshaping.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/r/r_data_reshaping.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/r/r_data_reshaping.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('/r/try_r.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

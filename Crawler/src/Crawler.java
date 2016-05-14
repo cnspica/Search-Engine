@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.net.MalformedURLException;
+import java.nio.file.Paths;
 import java.sql.ResultSet;
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -167,7 +168,7 @@ public class Crawler implements Runnable {
 	}
 	
 	private boolean insertURLIntoDB(String url){
-		return dbManager.ExecuteNonQuery("INSERT INTO URLs(URL, fetched, inCount) VALUES ('" + url + "', false, 1)");
+		return dbManager.ExecuteNonQuery("INSERT INTO URLs(URL, status, inCount) VALUES ('" + url + "', false, 1)");
 	}
 
 	private boolean incrementURLOutCount(String url, int count){
@@ -175,16 +176,16 @@ public class Crawler implements Runnable {
 	}
 
 	private boolean updateTitle(String url, String title) {
-		return dbManager.ExecuteNonQuery("UPDATE URLs SET title = '" + title.replaceAll("'", "\'") + "' WHERE URL = '" + url + "'");
+		return dbManager.ExecuteNonQuery("UPDATE URLs SET title = '" + title.replaceAll("'", "\"") + "' WHERE URL = '" + url + "'");
 	}
 
 	private boolean updateFetchedField(String url){
-		return dbManager.ExecuteNonQuery("UPDATE URLs SET fetched = 2 WHERE url = '" + url + "'");
+		return dbManager.ExecuteNonQuery("UPDATE URLs SET status = 2 WHERE url = '" + url + "'");
 	}
 
 	private boolean getURLsFromDB(int n){
 		// fetch URLs
-	    String query = "SELECT URL, id FROM URLs WHERE fetched = 0 LIMIT " + n; // 0 is not visited URL, 1 fetched to Crawler memory but
+	    String query = "SELECT URL, url_id FROM URLs WHERE status = 0 LIMIT " + n; // 0 is not visited URL, 1 fetched to Crawler memory but
 		// not downloaded, 2 fetched and downloaded
 	    boolean found = false;
 	    ResultSet resultSet = null;
@@ -194,11 +195,12 @@ public class Crawler implements Runnable {
 			resultSet = dbManager.ExecuteQuery(query);
 			while (resultSet.next()) {
 				queue.add(resultSet.getObject("URL").toString());
-			    ID = resultSet.getInt("id");
-				dbManager.ExecuteNonQuery("UPDATE URLs SET fetched = 1 WHERE id = " + ID);
+			    ID = resultSet.getInt("url_id");
+				dbManager.ExecuteNonQuery("UPDATE URLs SET status = 1 WHERE url_id = " + ID);
 			    found = true;
 			}
 		} catch (Exception e) {
+            System.out.println(e.getMessage());
 			e.printStackTrace();
 		} 
 		return found;
@@ -255,19 +257,26 @@ public class Crawler implements Runnable {
 	}
 	
 	private void saveDocument(Document doc, String url){
-		String docName = "documents\\doc" + fetchedPagesCount.incrementAndGet() + ".txt";
+        String docN = "doc"+ fetchedPagesCount.incrementAndGet() + ".txt";
+		String docName =  Paths.get("").toAbsolutePath().toString()+"/documents/" + docN;
+
 		PrintStream out;
 		try {
 			out = new PrintStream(new File(docName));
 			out.println(url);
 			out.print(doc.html());
 			out.close();
+            insertDocumentNumber(url, docN);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public static int getTotalFetchedPages() {
+    private boolean insertDocumentNumber(String url, String docName) {
+        return dbManager.ExecuteNonQuery("UPDATE URLs SET doc = '" + docName + "' WHERE url = '" + url + "'");
+    }
+
+    public static int getTotalFetchedPages() {
 		return fetchedPagesCount.get();
 	}
 }

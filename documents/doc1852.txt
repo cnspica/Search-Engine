@@ -1,0 +1,394 @@
+http://tutorialspoint.com/tutor_connect/search_tutors.php?page=2&ipp=20
+<html>
+ <head> 
+  <title>Tutor Connect - Connecting Tutors and Students</title> 
+  <meta name="Description" content="Tutor Connect - A free platform for tutors and students to connect with each others to teach and learn new technologies and move ahead in your career."> 
+  <meta name="Keywords" content="Tutor, Connect, market, place, tutors, connecting, students, teach, learn, online, offline, career, growth"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #214070 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #214070 !important;}
+.submenu-item{ border-bottom: 2px solid #214070 !important; border-top: 2px solid #214070 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/blue/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <!-- tutors --> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script>
+   var baseurl = 'http://www.tutorialspoint.com/tutor_connect/';
+   var typeflag = '';
+</script> 
+  <link rel="stylesheet" href="http://www.tutorialspoint.com/tutor_connect/css/tutors.css"> 
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
+  <script src="http://www.tutorialspoint.com/tutor_connect/js/jquery.geocomplete.min.js"></script> 
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script> 
+  <script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script> 
+  <script type="text/javascript" src="http://www.tutorialspoint.com/tutor_connect/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="http://www.tutorialspoint.com/tutor_connect/js/jquery-te-1.4.0.min.js"></script> 
+  <script type="text/javascript" src="http://www.tutorialspoint.com/tutor_connect/js/tutors.js"></script> 
+  <script type="text/javascript" src="http://www.tutorialspoint.com/tutor_connect/js/jquery.bpopup.min.js"></script> 
+  <script type="" src="http://www.tutorialspoint.com/theme/js/lightbox.min.js"></script> 
+  <style>
+
+.profile-update .profile-active{background:#3F724F!important; width:16.65%; height:20px; float:left; border-right:1px solid #fff; font-size:11px;
+text-align:right!important; color:#fff!important; padding:0px 20px 0px 0px!important; position:relative; line-height:20px; font-weight:normal!important;
+border-radius:0px 10px 10px 0px; -moz-border-radius: 0px 10px 10px 0px; -webkit-border-radius: 0px 10px 10px 0px;}
+.profile-update .steps{width:16.65%; height:20px; float:left; border-right:1px solid #fff; font-size:11px; text-align:center; color:#6d6d6d;
+padding:0px 0px 0px 0px; position:relative; line-height:20px; font-weight:normal;border-radius:0px 10px 10px 0px; -moz-border-radius: 0px 10px 10px 0px; -webkit-border-radius: 0px 10px 10px 0px;}
+.profile-update .profile-visited{background:#8897AF!important; width:16.65%; height:20px; float:left; border-right:1px solid #fff; font-size:11px; text-align:center; color:#fff!important;
+padding: 0px 0px 0px 0px; position:relative; line-height:20px; font-weight:normal!important;}
+.profile-update .steps:last-child{border-right:none;}
+
+</style>   
+  <div id="divSendMessage" style="display:none;"> 
+   <div> 
+    <input type="hidden" value="" id="txtChatUserId"> 
+   </div> 
+   <div class="dialogbox"> 
+    <div style="width:49%; float:left; margin-right:8px;">
+     <label>To ::</label> 
+     <input type="text" value="" id="txtChatName" readonly>
+    </div> 
+    <div style="width:49%; float:left;">
+     <label>From ::</label> 
+     <input type="text" value="" id="txtChatFrom" readonly>
+    </div> 
+    <div class="clear"></div> 
+    <label>Subject ::</label> 
+    <input type="text" class="txtClass" value="" id="txtChatSubject">
+    <b class="contact-error"></b> 
+    <div class="clear"></div> 
+    <label>Message ::</label> 
+    <textarea id="txtChatMessage" class="txtClass" style="height:110px!important;resize:vertical;resize:horizontal;"></textarea>
+    <b class="contact-error"></b> 
+    <div class="clear"></div> 
+    <button id="btnSendMsg">Send</button> 
+   </div> 
+   <div style="clear:both;"></div> 
+  </div> 
+  <div class="srch-widget-banner"> 
+   <div class="container"> 
+    <div class="row"> 
+    </div> 
+   </div> 
+  </div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <!-- PRINTING STARTS HERE --> 
+    <div class="row"> 
+     <div class="content"> 
+      <div class="col-md-3"> 
+       <div class="job-desc top-jobs" style="margin-bottom:5px!important;padding:8px 10px!important;"> 
+        <a href="http://www.tutorialspoint.com/tutor_connect/index.php" target="_self"><img src="http://www.tutorialspoint.com/tutor_connect/images/tutor-connect-icon.png" title="Tutor Connect - Connecting Tutors and Students"></a> 
+       </div> 
+       <div class="clear"></div> 
+       <div class="job-desc top-jobs" style="margin-bottom:8px!important;"> 
+        <div class="srch-login-links"> 
+         <a href="http://www.tutorialspoint.com/tutor_connect/user-login.php?type=signin" title="Registered User Login"><i class="fa-user login-icon"></i> Login</a> 
+         <a href="http://www.tutorialspoint.com/tutor_connect/registration.php" title="New User Register"><i class="fa-sign-in login-icon"></i> Signup</a> 
+        </div> 
+       </div> 
+       <div class="job-desc top-jobs" style="padding-bottom:0px!important;"> 
+        <form action="http://www.tutorialspoint.com/tutor_connect/search_tutors.php" method="post"> 
+         <h4>Search Filters</h4> 
+         <h5>Location</h5> 
+         <div class="search-addon" style="margin-top:10px;"> 
+          <i class="fa-map-marker" style="padding:6px 12px!important;"></i> 
+          <input type="hidden" name="txtSubjectSearch" value="" class="search-control" placeholder="Search by Location" style="width:100%;"> 
+          <input type="hidden" id="selFilterAvailabiltiy" name="selFilterAvailabiltiy" value="" class="search-control" placeholder="Search by Location" style="width:100%;"> 
+          <input type="text" id="txtFilterLocation" name="txtFilterLocation" value="" class="search-control" placeholder="Add Location" style="width:100%;"> 
+         </div> 
+         <h5>Availability</h5> 
+         <div class="checkbox"> 
+          <input id="chkOnline" name="chkOnline" type="checkbox" value="Online Teaching"> 
+          <label for="chkOnline" style="width:0%!important;"> </label> 
+          <div>
+           Online Teaching
+          </div> 
+         </div> 
+         <div class="checkbox"> 
+          <input id="chkMyplace" name="chkMyplace" type="checkbox" value="Tuition at my place"> 
+          <label for="chkMyplace" style="width:0%!important;"> </label> 
+          <div>
+           Tuition at My Place
+          </div> 
+         </div> 
+         <div class="checkbox"> 
+          <input id="chkYourplace" name="chkYourplace" type="checkbox" value="Tuition at your place"> 
+          <label for="chkYourplace" style="width:0%!important;"> </label> 
+          <div>
+           Tuition at your Place 
+          </div> 
+         </div> 
+         <div class="clear"></div> 
+         <input type="submit" value="Add"> 
+        </form> 
+       </div> 
+       <div class="clear"></div> 
+       <div class="job-desc top-jobs"> 
+        <h4>Quick Links</h4> 
+        <ul class="nav nav-tab" style="margin:7px 0px 0px 2px!important"> 
+         <li><a href="http://www.tutorialspoint.com/tutor_connect/search_tutors.php"> <i class="fa-user"></i> &nbsp;Expert Tutors</a> </li> 
+         <li><a href="http://www.tutorialspoint.com/tutor_connect/search_requirements.php"> <i class="fa-pencil-square-o"></i> &nbsp;New Requirements</a> </li> 
+         <li><a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank"> <img src="http://www.tutorialspoint.com/theme/css/icons/image-editor.png" style="float:left;"> &nbsp;Whiteboard</a> </li> 
+         <li><a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank"> <i class="fa-video-camera"></i> &nbsp;Net Meeting</a> </li> 
+        </ul> 
+       </div> 
+       <div class="clear"></div> 
+      </div> 
+      <div class="col-md-9"> 
+       <div> 
+        <div class="search-widget"> 
+         <form action="http://www.tutorialspoint.com/tutor_connect/search_tutors.php" method="post"> 
+          <div class="col-sm-12 col-md-12"> 
+           <div class="search-addon"> 
+            <i class="fa-search" style="padding:12px 12px;"></i> 
+            <input type="text" id="txtSubjectSearch" value="" name="txtSubjectSearch" class="search-control" placeholder="Search Tutors by Subject"> 
+            <input type="submit" value="Go"> 
+            <div class="autocomplete-srch" id="subjectsDiv"></div> 
+           </div> 
+          </div> 
+         </form> 
+         <div style="clear:both;"></div> 
+        </div> 
+       </div> 
+       <div class="col-xs-12 col-sm-12 col-md-12 big-middle-col" id="detailDiv"> 
+        <div class="tut_profile"> 
+         <div class="tut_left"> 
+          <img src="http://www.tutorialspoint.com/tutor_connect/uploads/write4traininggmailcom/profile/75_mypic.png"> 
+         </div> 
+         <div class="tut_rght"> 
+          <a href="http://www.tutorialspoint.com/tutor_connect/tutorprofileview.php?tutorid=MTA3NzQxNzIyNTE=" title="View Tutor Profile" target="_self"> <h2>JatinSir</h2> </a> 
+          <div class="chat-msg"> 
+           <a href="#divSendMessage" class="sendmsg" data-user="MTA3NzQxNzIyNTE=" data-type="" data-name="JatinSir"><b><i class="fa-envelope-o"></i> <span>Contact</span> | </b></a> 
+           <a class="clsChatIndividual" data-user="MTA3NzQxNzIyNTE=" data-type="" data-name="JatinSir" data-photo-name="25_mypic.png" data-photo-floder="write4traininggmailcom" href="javascript:void(0);"> <b><span>Chat </span><i class="fa-comment-o fa-chatting"></i></b></a> 
+          </div> 
+          <div class="tut-title">
+           Python, Perl Expert
+          </div> 
+          <h4> Jatin M. describes himself as Best Python, Perl, UNIX Shell Scripting training in Pune. Jatin is located in Pimple Saudagar, Pune. Jatin takes classes Regular Classes- at his Home and Online Classes- Via online medium. He has 10 years of teaching experience . Jatin has completed Bachelor of Technology (B.Tech.)from Roorkeein 2006. He is well versed in Hindi and English . He has been awarded with Best Python trainer in Pune by various online companies. </h4> 
+          <b></b> 
+          <h4><span>Perl</span><span>Python</span></h4> 
+         </div> 
+         <div style="clear:both;"></div> 
+        </div> 
+        <div style="clear:both;"></div> 
+        <div class="tut_profile"> 
+         <div class="tut_left"> 
+          <img src="http://www.tutorialspoint.com/tutor_connect/uploads/satishkallakuritutorialspointcom/profile/75_satish.jpg"> 
+         </div> 
+         <div class="tut_rght"> 
+          <a href="http://www.tutorialspoint.com/tutor_connect/tutorprofileview.php?tutorid=Mzc0MjEzMTU1NTYwNTUxMQ==" title="View Tutor Profile" target="_self"> <h2>satish kallakuri</h2> </a> 
+          <div class="chat-msg"> 
+           <a href="#divSendMessage" class="sendmsg" data-user="Mzc0MjEzMTU1NTYwNTUxMQ==" data-type="" data-name="satish kallakuri"><b><i class="fa-envelope-o"></i> <span>Contact</span> | </b></a> 
+           <a class="clsChatIndividual" data-user="Mzc0MjEzMTU1NTYwNTUxMQ==" data-type="" data-name="satish kallakuri" data-photo-name="25_satish.jpg" data-photo-floder="satishkallakuritutorialspointcom" href="javascript:void(0);"> <b><span>Chat </span><i class="fa-comment-o fa-chatting"></i></b></a> 
+          </div> 
+          <div class="tut-title">
+           Java Trainer
+          </div> 
+          <h4> Technical trainer, having more than 4 years of experience on various Technologies of Java and Hadoop. </h4> 
+          <b></b> 
+          <h4><span>Bigdata</span><span>C</span><span>C++</span><span>HTML/CSS</span><span>HTML5</span><span>Hadoop</span><span>Hibernate</span><span>Java</span><span>Javascript</span><span>Spring</span><span>Struts</span></h4> 
+         </div> 
+         <div style="clear:both;"></div> 
+        </div> 
+        <div style="clear:both;"></div> 
+        <div class="tut_profile"> 
+         <div class="tut_left"> 
+          <img src="http://www.tutorialspoint.com/tutor_connect/uploads/krishnakasyaptutorialspointcom/profile/75_IMG_20150120_123127517_HDR.jpg"> 
+         </div> 
+         <div class="tut_rght"> 
+          <a href="http://www.tutorialspoint.com/tutor_connect/tutorprofileview.php?tutorid=NDA2NjI2MDY1MzA1MTE2NzM=" title="View Tutor Profile" target="_self"> <h2>krishna kasyap Bhagavatula</h2> </a> 
+          <div class="chat-msg"> 
+           <a href="#divSendMessage" class="sendmsg" data-user="NDA2NjI2MDY1MzA1MTE2NzM=" data-type="" data-name="krishna kasyap Bhagavatula"><b><i class="fa-envelope-o"></i> <span>Contact</span> | </b></a> 
+           <a class="clsChatIndividual" data-user="NDA2NjI2MDY1MzA1MTE2NzM=" data-type="" data-name="krishna kasyap Bhagavatula" data-photo-name="25_IMG_20150120_123127517_HDR.jpg" data-photo-floder="krishnakasyaptutorialspointcom" href="javascript:void(0);"> <b><span>Chat </span><i class="fa-comment-o fa-chatting"></i></b></a> 
+          </div> 
+          <div class="tut-title">
+           Java Trainer
+          </div> 
+          <h4> Had more than 4 years of experience in training development and technical writing. Worked with various technologies like Java, Hadoop and more.. </h4> 
+          <b></b> 
+          <h4><span>Bigdata</span><span>C</span><span>C++</span><span>HTML5</span><span>Hadoop</span><span>Hibernate</span><span>Java</span><span>Javascript</span><span>Spring</span><span>Struts</span></h4> 
+         </div> 
+         <div style="clear:both;"></div> 
+        </div> 
+        <div style="clear:both;"></div> 
+        <div class="job-index"> 
+         <div class="pages"> 
+          <a href="http://www.tutorialspoint.com/tutor_connect/search_tutors.php?page=1&amp;ipp=20" title="Previous Page">« Previous</a> 
+          <a class="number" title="Go to page 1 of 2" href="http://www.tutorialspoint.com/tutor_connect/search_tutors.php?page=1&amp;ipp=20">1</a> 
+          <a title="Go to page 2 of 2" class="current number" href="#">2</a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <footer class="inner"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="footer-ribon"> 
+       <span>Extras</span> 
+      </div> 
+      <div class="col-md-2"> 
+       <h4>Mobile First</h4> 
+       <ul class="list icons list-unstyled"> 
+        <li><a class="iphone" href="https://itunes.apple.com/us/app/tutorials-point/id914891263?ls=1&amp;mt=8" target="_blank" rel="nofollow"><img alt="tutorialspoint iPhone App" src="/images/apple_store.jpg" class="mobile-apps"></a></li> 
+        <li><a class="android" href="https://play.google.com/store/apps/details?id=com.tutorialspoint.onlineviewer" target="_blank" rel="nofollow"><img alt="tutorialspoint Android app" src="/images/google_play.jpg" class="mobile-apps"></a></li> 
+        <li><a class="microsoft" href="http://www.windowsphone.com/s?appid=91249671-7184-4ad6-8a5f-d11847946b09" target="_blank" rel="nofollow"><img alt="tutorialspoint Windows app" src="/images/windows_store.jpg" class="mobile-apps"></a></li> 
+       </ul> 
+      </div> 
+      <div class="col-md-2"> 
+       <h4>About us</h4> 
+       <ul class="list icons list-unstyled"> 
+        <li><i class="icon icon-caret-right"></i> <a href="/about/index.htm">Company</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="/about/about_team.htm">Our Team</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="/about/about_careers.htm">Careers</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="/about/about_privacy.htm">Privacy Policy</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="/about/about_terms_of_use.htm">Terms of use</a></li> 
+       </ul> 
+      </div> 
+      <div class="col-md-2"> 
+       <h4>Extra Links</h4> 
+       <ul class="list icons list-unstyled"> 
+        <li><i class="icon icon-caret-right"></i> <a href="shorttutorials">Articles</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="online_dev_tools.htm">Dev Tools</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="online_file_conversion.htm">File Conversion</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="shared-tutorials.php">Shared Tutorials</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="https://www.tutorialspoint.com/netmeeting.php">NetMeeting</a></li> 
+        <li><i class="icon icon-caret-right"></i> <a href="https://www.tutorialspoint.com/whiteboard.htm">Whiteboard</a></li> 
+       </ul> 
+      </div> 
+      <div class="col-md-3"> 
+       <div class="contact-details"> 
+        <h4>Contact Us</h4> 
+        <ul class="contact"> 
+         <li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 3rd Floor, Jyoti Celestia, Madhapur, Hyderabad, Telangana 500033</p></li> 
+         <li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="about/contact_us.htm">Click Here</a></p></li> 
+         <li><p><i class="icon icon-dribbble"></i> <strong>Website:</strong> <a href="http://www.tutorialspoint.com">www.tutorialspoint.com</a></p></li> 
+        </ul> 
+       </div> 
+       <div class="social-icons"> 
+        <ul class="social-icons"> 
+         <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li> 
+         <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li> 
+         <li class="twitter"><a href="http://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li> 
+         <li class="linkedin"><a href="http://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li> 
+         <li class="rss"><a href="http://feeds.feedburner.com/SharedTutorials" target="_blank" data-placement="bottom" title="tutorialspoint RSS">RSS</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="footer-copyright"> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="col-md-1"> 
+        <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+       </div> 
+       <div class="col-md-4 col-sm-12 col-xs-12"> 
+        <nav id="sub-menu"> 
+         <ul> 
+          <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+          <li><a href="/about/faq.htm">FAQ's</a></li> 
+          <li><a href="/about/about_helping.htm">Helping</a></li> 
+          <li><a href="/about/contact_us.htm">Contact</a></li> 
+         </ul> 
+        </nav> 
+       </div> 
+       <div class="col-md-3 col-sm-12 col-xs-12"> 
+        <p>© Copyright 2016. All Rights Reserved.</p> 
+       </div> 
+       <div class="col-md-4 col-sm-12 col-xs-12"> 
+        <div class="news-group"> 
+         <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+         <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+         <div id="newsresponse"></div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </footer>
+  </div>  
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.greyout').click(function(){
+   $('.wrapLoader').show();
+});
+</script>   
+  <style>
+@media (min-width: 992px) {
+.col-md-2 { width:22.66666667%!important; }
+}
+</style>
+ </body>
+</html>

@@ -50,7 +50,7 @@ CREATE TABLE `SearchIndex` (
   PRIMARY KEY (`KWID`,`UID`),
   KEY `UID` (`UID`),
   CONSTRAINT `SearchIndex_ibfk_1` FOREIGN KEY (`KWID`) REFERENCES `Keywords` (`KeywordID`),
-  CONSTRAINT `SearchIndex_ibfk_2` FOREIGN KEY (`UID`) REFERENCES `URLs` (`URLID`)
+  CONSTRAINT `SearchIndex_ibfk_2` FOREIGN KEY (`UID`) REFERENCES `URLs` (`url_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -68,10 +68,10 @@ DROP TABLE IF EXISTS `URLs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `URLs` (
-  `URLID` int(11) NOT NULL AUTO_INCREMENT,
+  `url_id` int(11) NOT NULL AUTO_INCREMENT,
   `URL` varchar(2000) CHARACTER SET utf8 NOT NULL,
   `Title` text,
-  PRIMARY KEY (`URLID`)
+  PRIMARY KEY (`url_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=711 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -96,7 +96,7 @@ DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `checkKeyURLExistence`(IN KW NVARCHAR(255),IN givenURL NVARCHAR(2000))
 BEGIN
 select * from APT.SearchIndex where KWID=(select KeywordID from Keywords where keyword=KW)
-and UID=(select URLID from URLs where URL=givenURL);
+and UID=(select url_id from URLs where URL=givenURL);
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -153,7 +153,7 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertIntoSearchIndex`(IN KW NVARCHAR(255),IN givenURL NVARCHAR(2000),IN TermFreq INT,IN ListOfLocs Text)
 BEGIN
-insert into APT.SearchIndex(KWID,UID,TF,ListofLocations) values((select KeywordID from APT.Keywords where keyword=KW),(select URLID from APT.URLs where URL=givenURL),TermFreq,ListofLocs);
+insert into APT.SearchIndex(KWID,UID,TF,ListofLocations) values((select KeywordID from APT.Keywords where keyword=KW),(select url_id from APT.URLs where URL=givenURL),TermFreq,ListofLocs);
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -233,7 +233,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateSearchIndex`(IN KW NVARCHAR(2
 BEGIN
 UPDATE SearchIndex
 SET TF=TermFreq,ListofLocations=ListOfLocs
-where KWID=(select KeywordID from Keywords where keyword=KW) and UID=(select URLID from URLs where URL=givenURL);
+where KWID=(select KeywordID from Keywords where keyword=KW) and UID=(select url_id from URLs where URL=givenURL);
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;

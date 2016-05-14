@@ -1,0 +1,1496 @@
+http://unix.stackexchange.com/questions/282921/terminal-remember-working-directory
+<!doctype html>
+<html itemscope itemtype="http://schema.org/QAPage">
+ <head> 
+  <title>Terminal: remember working directory - Unix &amp; Linux Stack Exchange</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/unix/img/favicon.ico?v=546c52892feb"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/unix/img/apple-touch-icon.png?v=5cf7fe716a89"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Unix &amp; Linux Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@StackUnix"> 
+  <meta name="twitter:domain" content="unix.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/unix/img/apple-touch-icon@2.png?v=32fb07f7ce26&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Terminal: remember working directory"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="I have git repos stored in different directories which have long paths /opt/too/long/path/to/type/every/time/git-repo and it's kind of difficult to remember plus to cd to the directory every time i..."> 
+  <meta property="og:url" content="http://unix.stackexchange.com/questions/282921/terminal-remember-working-directory"> 
+  <link rel="canonical" href="http://unix.stackexchange.com/questions/282921/terminal-remember-working-directory"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=beeead7e5f34"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/unix/all.css?v=9338c5cba6fb"> 
+  <meta name="twitter:app:country" content="US"> 
+  <meta name="twitter:app:name:iphone" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:iphone" content="871299723"> 
+  <meta name="twitter:app:url:iphone" content="se-zaphod://unix.stackexchange.com/questions/282921/terminal-remember-working-directory"> 
+  <meta name="twitter:app:name:ipad" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:ipad" content="871299723"> 
+  <meta name="twitter:app:url:ipad" content="se-zaphod://unix.stackexchange.com/questions/282921/terminal-remember-working-directory"> 
+  <meta name="twitter:app:name:googleplay" content="Stack Exchange Android"> 
+  <meta name="twitter:app:url:googleplay" content="http://unix.stackexchange.com/questions/282921/terminal-remember-working-directory"> 
+  <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin"> 
+  <script>
+        
+            StackExchange.ready(function () {
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:5,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:282921});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('106', '282921');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('106');
+                StackExchange.realtime.subscribeToTopBarNotifications('106');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463142056,"routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"Unix & Linux Stack Exchange","description":"Q&A for users of Linux, FreeBSD and other Un*x-like operating systems","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":106,"enableSocialMediaInSharePopup":true},"user":{"fkey":"8c860d19b546a5f1bec5ccc0119119dd","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"cf93ca293e43","js/moderator.en.js":"022f362eb0a2","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"b9eda6e5c0b8","js/wmd.en.js":"b90dcd7c4c56","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"bd4fb7a0a976","js/tageditornew.en.js":"65c5f5ec346b","js/inline-tag-editing.en.js":"943c7090ea55","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"d8d766025f2d","js/tagsuggestions.en.js":"7dfec0d2a2d7","js/post-validation.en.js":"8c4fef95e838","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"a4aabc825384","js/keyboard-shortcuts.en.js":"cb27f8dccc5f","js/external-editor.en.js":"93769406446f"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="question-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//unix.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//unix.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="106" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-unix" title="Unix &amp; Linux"></div> Unix &amp; Linux </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.unix.stackexchange.com" class="site-link js-gps-track" data-id="108" data-gps-track="
+            site.switch({ target_site:108, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-unixmeta" title="Unix &amp; Linux Meta"></div> Unix &amp; Linux Meta </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://unix.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2funix.stackexchange.com%2fquestions%2f282921%2fterminal-remember-working-directory" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://unix.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2funix.stackexchange.com%2fquestions%2f282921%2fterminal-remember-working-directory" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://unix.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2funix.stackexchange.com%2fquestions%2f282921%2fterminal-remember-working-directory" class="login-link">sign up</a> <a href="https://unix.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2funix.stackexchange.com%2fquestions%2f282921%2fterminal-remember-working-directory" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.unix.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Unix &amp; Linux </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li class="youarehere"><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content"> 
+    <div itemscope itemtype="http://schema.org/Question"> 
+     <link itemprop="image" href="//cdn.sstatic.net/Sites/unix/img/apple-touch-icon.png?v=5cf7fe716a89"> 
+     <div id="herobox"> 
+      <div id="hero-content"> 
+       <div id="close">
+        <a title="click to minimize">_</a>
+       </div> 
+       <div id="blurb">
+         Unix &amp; Linux Stack Exchange is a question and answer site for users of Linux, FreeBSD and other Un*x-like operating systems. It's 100% free, no registration required. 
+        <br> 
+        <br> 
+        <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2funix.stackexchange.com%2fquestions%2f282921%2fterminal-remember-working-directory" id="tell-me-more" class="button">Sign up</a> 
+       </div> 
+       <div id="desc"> 
+        <b>Here's how it works:</b> 
+        <ol id="hiw"> 
+         <li id="q">Anybody can ask a question </li> 
+         <li id="an">Anybody can answer </li> 
+         <li id="b">The best answers are voted up and rise to the top </li> 
+        </ol> 
+       </div> 
+       <div style="clear: both"></div> 
+      </div> 
+      <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+     </div> 
+     <div id="question-header"> 
+      <h1 itemprop="name"><a href="/questions/282921/terminal-remember-working-directory" class="question-hyperlink">Terminal: remember working directory [duplicate]</a></h1> 
+     </div> 
+     <div id="mainbar"> 
+      <div class="question" data-questionid="282921" id="question"> 
+       <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1493522623",4).enableDynamicSiteSelection().setZone(29); });
+            </script> 
+       <div class="everyonelovesstackoverflow" id="adzerk1493522623"> 
+       </div> 
+       <table> 
+        <tbody>
+         <tr> 
+          <td class="votecell"> 
+           <div class="vote"> 
+            <input type="hidden" name="_id_" value="282921"> 
+            <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a> 
+            <span itemprop="upvoteCount" class="vote-count-post ">5</span> 
+            <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a> 
+            <a class="star-off" href="#">favorite</a> 
+            <div class="favoritecount">
+             <b></b>
+            </div> 
+           </div> </td> 
+          <td class="postcell"> 
+           <div> 
+            <div class="post-text" itemprop="text"> 
+             <div class="question-status question-originals-of-duplicate"> 
+              <p>This question already has an answer here:</p> 
+              <ul> 
+               <li> <a href="/questions/157763/do-we-have-more-history-for-cd" dir="ltr">Do we have more history for cd?</a> <span class="question-originals-answer-count"> 6 answers </span> </li> 
+              </ul> 
+             </div> 
+             <p>I have git repos stored in different directories which have long paths <code>/opt/too/long/path/to/type/every/time/git-repo</code> and it's kind of difficult to remember plus to <code>cd</code> to the directory every time is a pain and tedious. (I know <kbd>TAB</kbd> helps but that gets tedious too.) So, my life would be much easier if I could store the <code>pwd</code> somewhere and later do something like <code>cd thatgitrepo</code>.</p> 
+            </div> 
+            <div class="post-taglist"> 
+             <a href="/questions/tagged/terminal" class="post-tag" title="show questions tagged 'terminal'" rel="tag">terminal</a> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/q/282921" title="short permalink to this question" class="short-link" id="link-post-282921">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282921/edit" class="suggest-edit-post" title="">improve this question</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/282921/revisions" title="show all edits to this post">edited <span title="2016-05-13 10:46:30Z" class="relativetime">1 hour ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td class="post-signature owner"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   asked 
+                  <span title="2016-05-13 05:29:38Z" class="relativetime">6 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/53935/dilip-raj-baral">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/34JfG.jpg?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/53935/dilip-raj-baral">Dilip Raj Baral</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">126</span>
+                   <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> 
+           </div> </td> 
+         </tr> 
+         <tr> 
+          <td class="special-status" colspan="2"> 
+           <div class="question-status"> 
+            <h2> <b>marked</b> as duplicate by <a href="/users/7453/slm">slm</a><span class="mod-flair" title="moderator">♦</span> <span dir="ltr"><span title="2016-05-13 11:24:24Z" class="relativetime">56 mins ago</span></span> </h2> 
+            <p>This question has been asked before and already has an answer. If those answers do not fully address your question, please <a href="/questions/ask">ask a new question</a>.</p> 
+           </div> </td> 
+         </tr> 
+         <tr> 
+          <td class="votecell"></td> 
+          <td> 
+           <div id="comments-282921" class="comments "> 
+            <table> 
+             <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+              <tr id="comment-492501" class="comment "> 
+               <td> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Why not using alias?</span> –&nbsp;
+                 <a href="/users/137457/cuongnv" title="58 reputation" class="comment-user">cuongnv</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 05:35:01Z" class="relativetime-clean">6 hours ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-492502" class="comment "> 
+               <td> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">or symbolic links in your home directory?</span> –&nbsp;
+                 <a href="/users/20246/dopeghoti" title="7,549 reputation" class="comment-user">DopeGhoti</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 05:36:23Z" class="relativetime-clean">6 hours ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-492507" class="comment "> 
+               <td> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">@cuongnv Alias works. Didn't know about it. Thanks. :D</span> –&nbsp;
+                 <a href="/users/53935/dilip-raj-baral" title="126 reputation" class="comment-user owner">Dilip Raj Baral</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 06:00:11Z" class="relativetime-clean">6 hours ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-492614" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Possible duplicate of <a href="http://apple.stackexchange.com/a/97312/22003">Can I shorten the typing needed to <code>cd</code> into some well know directories</a>.</span> –&nbsp;
+                 <a href="/users/31707/daniel-azuelos" title="433 reputation" class="comment-user">daniel Azuelos</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 10:32:12Z" class="relativetime-clean">1 hour ago</span></span> 
+                 <span class="edited-yes" title="this comment was edited 2 times"></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-492639" class="comment "> 
+               <td> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">This question is a duplicate of the question suggested by @danielAzuelos, not the one in the masthead. But the best solution imho <i>is</i> to <a href="http://apple.stackexchange.com/a/238170/60998">use <code>CDPATH</code></a>. It has many advantages over symlinks.</span> –&nbsp;
+                 <a href="/users/23344/alexis" title="3,046 reputation" class="comment-user">alexis</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 11:43:52Z" class="relativetime-clean">37 mins ago</span></span> 
+                </div> </td> 
+              </tr> 
+             </tbody> 
+            </table> 
+           </div> 
+           <div id="comments-link-282921" data-rep="50" data-anon="true"> 
+            <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a>
+            <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+           </div> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <div id="answers"> 
+       <a name="tab-top"></a> 
+       <div id="answers-header"> 
+        <div class="subheader answers-subheader"> 
+         <h2> 8 Answers <span style="display:none;" itemprop="answerCount">8</span> </h2> 
+         <div> 
+          <div id="tabs"> 
+           <a href="/questions/282921/terminal-remember-working-directory?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active"> active</a> 
+           <a href="/questions/282921/terminal-remember-working-directory?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest"> oldest</a> 
+           <a class="youarehere" href="/questions/282921/terminal-remember-working-directory?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes"> votes</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <a name="282939"></a> 
+       <div id="answer-282939" class="answer" data-answerid="282939" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="282939"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">9</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p><a href="https://github.com/rupa/z/"><code>z</code></a> is a very nice "plugin" for <code>bash</code> or <code>zsh</code> (it's included in <a href="http://ohmyz.sh/">Oh My Zsh</a>) which keeps track of directories you <code>cd</code> to, and allows you to quickly switch to directories using parts of their names, based on how frequently you use them.</p> 
+             <p>So after a little while, it will know that</p> 
+             <pre><code>z git-repo
+</code></pre> 
+             <p>should <code>cd</code> to the <code>git-repo</code> directory you use most often. You can qualify that with part of the path, <em>e.g.</em></p> 
+             <pre><code>z d git-repo
+</code></pre> 
+             <p>or even</p> 
+             <pre><code>z d git
+</code></pre> 
+             <p>I've found this to be more useful than aliases or even <code>CDPATH</code> because it learns on its own and adapts to my changing habits.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/282939" title="short permalink to this answer" class="short-link" id="link-post-282939">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282939/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/282939/revisions" title="show all edits to this post">edited <span title="2016-05-13 08:19:46Z" class="relativetime">4 hours ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 08:08:05Z" class="relativetime">4 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/86440/stephen-kitt">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/a935dafe246dd0e2c216542f50073cbe?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/86440/stephen-kitt">Stephen Kitt</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 28,383" dir="ltr">28.4k</span>
+                   <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span>
+                   <span title="43 silver badges"><span class="badge2"></span><span class="badgecount">43</span></span>
+                   <span title="69 bronze badges"><span class="badge3"></span><span class="badgecount">69</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-282939" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-492579" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">+1, z is awesome!</span> –&nbsp;
+                  <a href="/users/23934/karthik-t" title="684 reputation" class="comment-user">Karthik T</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 09:30:45Z" class="relativetime-clean">2 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-282939" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1753737368",4).enableDynamicSiteSelection().setZone(30); });
+            </script> 
+       <div class="everyonelovesstackoverflow" id="adzerk1753737368"> 
+       </div> 
+       <a name="282938"></a> 
+       <div id="answer-282938" class="answer" data-answerid="282938" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="282938"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">7</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p><code>bash</code>'s <code>CDPATH</code> shell variable might be a convenient solution for you. A command such as <code>cd foo</code> searches for the subdirectory called <code>foo</code> inside the directories listed in <code>CDPATH</code>.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/282938" title="short permalink to this answer" class="short-link" id="link-post-282938">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282938/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 08:06:00Z" class="relativetime">4 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/53656/egmont">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/bed4cdf6e7dfa1b485382ecbd31be30f?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/53656/egmont">egmont</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">610</span>
+                   <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span>
+                   <span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-282938" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-282938" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="282923"></a> 
+       <div id="answer-282923" class="answer" data-answerid="282923" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="282923"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">6</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Make yourself some symbolic links in your home directory:</p> 
+             <pre><code>ln -s /opt/really/long/obnoxiously/long/path/to/some/projectname
+</code></pre> 
+             <p>This command will make a link called <code>projectname</code> in your home directory into which you can <code>cd</code>, and everything will work perfectly.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/282923" title="short permalink to this answer" class="short-link" id="link-post-282923">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282923/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 05:38:00Z" class="relativetime">6 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/20246/dopeghoti">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/4ec95d6cafb464f4db81d7823d968adb?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/20246/dopeghoti">DopeGhoti</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">7,549</span>
+                   <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span>
+                   <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span>
+                   <span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-282923" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-282923" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="282922"></a> 
+       <div id="answer-282922" class="answer" data-answerid="282922" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="282922"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">5</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Once inside the directory, you do:</p> 
+             <pre><code>repo=`pwd`
+</code></pre> 
+             <p>and later you do </p> 
+             <pre><code>cd $repo
+</code></pre> 
+             <p>If you want to keep it for next time, you could do:</p> 
+             <pre><code>echo "export repo=`pwd`" &gt;&gt; ~/.profile
+</code></pre> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/282922" title="short permalink to this answer" class="short-link" id="link-post-282922">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282922/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 05:37:49Z" class="relativetime">6 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/167583/julie-pelletier">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://graph.facebook.com/10153954482976988/picture?type=large" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/167583/julie-pelletier">Julie Pelletier</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">713</span>
+                   <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-282922" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-282922" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="282924"></a> 
+       <div id="answer-282924" class="answer" data-answerid="282924" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="282924"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">3</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>This is how I would do it; create an alias in <code>~/.bashrc</code> (if using Bash):</p> 
+             <pre><code>alias thatgitrepo='cd /opt/a/b/c/d/e/f/g/git-repo'
+</code></pre> 
+             <p>And use <code>source .bashrc</code> to have the alias for the current shell.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/282924" title="short permalink to this answer" class="short-link" id="link-post-282924">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282924/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/282924/revisions" title="show all edits to this post">edited <span title="2016-05-13 06:11:44Z" class="relativetime">6 hours ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/20246/dopeghoti">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/4ec95d6cafb464f4db81d7823d968adb?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/20246/dopeghoti">DopeGhoti</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">7,549</span>
+                   <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span>
+                   <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span>
+                   <span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 06:01:05Z" class="relativetime">6 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/28650/coffemug">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/sJd78.jpg?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/28650/coffemug">coffeMug</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">3,035</span>
+                   <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span>
+                   <span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span>
+                   <span title="34 bronze badges"><span class="badge3"></span><span class="badgecount">34</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-282924" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-282924" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="282961"></a> 
+       <div id="answer-282961" class="answer" data-answerid="282961" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="282961"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">1</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Just to mention another useful tool, there is the <code>pushd</code> builtin. With</p> 
+             <pre><code>$ pushd dirname
+</code></pre> 
+             <p>the current directory will be pushed on the directory stack (you can look at that stack with <code>dirs</code>) and the current directory will be changed to <code>dirname</code>. You can later change back to the latest (top-most in the stack) directory using the <code>popd</code> builtin command.</p> 
+             <p>This should work at least in bash, zsh, csh and tcsh.</p> 
+             <p>If you just want to change to the previous directory you have been in, <code>cd -</code> comes to help.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/282961" title="short permalink to this answer" class="short-link" id="link-post-282961">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282961/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 10:15:19Z" class="relativetime">2 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/43377/dubu">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/b8cce1620f8613bb10928ac03eb60d71?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/43377/dubu">Dubu</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">1,419</span>
+                   <span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span>
+                   <span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-282961" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-282961" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="282959"></a> 
+       <div id="answer-282959" class="answer" data-answerid="282959" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="282959"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">0</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Quoting <a href="http://unix.stackexchange.com/q/157763/15654">this answer</a> by <a href="http://unix.stackexchange.com/users/47538/ramesh">ramesh</a>:</p> 
+             <blockquote> 
+              <p>The command you are looking for is <code>pushd</code> and <code>popd</code>.</p> 
+              <p>You could view a practical working example of <code>pushd</code> and <code>popd</code> from <a href="http://linux.101hacks.com/cd-command/dirs-pushd-popd/" rel="nofollow">here</a>.</p> 
+              <pre><code>mkdir /tmp/dir1
+mkdir /tmp/dir2
+mkdir /tmp/dir3
+mkdir /tmp/dir4
+
+cd /tmp/dir1
+pushd .
+
+cd /tmp/dir2
+pushd .
+
+cd /tmp/dir3
+pushd .
+
+cd /tmp/dir4
+pushd .
+
+dirs
+/tmp/dir4 /tmp/dir4 /tmp/dir3 /tmp/dir2 /tmp/dir1
+</code></pre> 
+             </blockquote> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/282959" title="short permalink to this answer" class="short-link" id="link-post-282959">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282959/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 09:54:15Z" class="relativetime">2 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/15654/gerrit">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/953cf098dfb066db328c01a724256cde?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/15654/gerrit">gerrit</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">638</span>
+                   <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span>
+                   <span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span>
+                   <span title="22 bronze badges"><span class="badge3"></span><span class="badgecount">22</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-282959" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-282959" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="282963"></a> 
+       <div id="answer-282963" class="answer" data-answerid="282963" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="282963"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">0</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p><code>CDPATH</code> alone isn't an efficient solution and doesn't scale correctly. To change it you have to edit one of your <code>.profile</code> or equivalents.</p> 
+             <p>But if you use it with a dedicated directory to store all your currently useful complex pathes, it does scale well and doesn't imply any editing of shell profile file.</p> 
+             <p>Have a look at this easy trick I am using since 15 years, on different Unixes and which I find more useful than <code>pushd</code> &amp; <code>popd</code>:</p> 
+             <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://apple.stackexchange.com/a/97312/22003">Can I shorten the typing needed to <code>cd</code> into some well know directories</a></p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/282963" title="short permalink to this answer" class="short-link" id="link-post-282963">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/282963/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/282963/revisions" title="show all edits to this post">edited <span title="2016-05-13 10:35:36Z" class="relativetime">1 hour ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 10:29:43Z" class="relativetime">1 hour ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/31707/daniel-azuelos">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/2566d52de10ecf1c997b2702b74482fc?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/31707/daniel-azuelos">daniel Azuelos</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">433</span>
+                   <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span>
+                   <span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-282963" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-282963" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <h2 class="bottom-notice" data-loc="1"> Not the answer you're looking for? Browse other questions tagged <a href="/questions/tagged/terminal" class="post-tag" title="show questions tagged 'terminal'" rel="tag">terminal</a> or <a href="/questions/ask">ask your own question</a>. </h2> 
+      </div> 
+     </div> 
+     <div id="sidebar" class="show-votes"> 
+      <div class="module question-stats"> 
+       <table id="qinfo"> 
+        <tbody>
+         <tr> 
+          <td> <p class="label-key">asked</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key" title="2016-05-13 05:29:38Z"><b>today</b></p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">viewed</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"> <b>225 times</b> </p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">active</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2016-05-13 10:46:30Z">today</a></b></p> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1711618751",[5,17]).enableDynamicSiteSelection().setZone(56016); });
+            </script> 
+      <div class="everyonelovesstackoverflow" id="adzerk1711618751"> 
+      </div> 
+      <div class="module sidebar-linked"> 
+       <h4 id="h-linked">Linked</h4> 
+       <div class="linked" data-tracker="lq=1"> 
+        <div class="spacer"> 
+         <a href="/q/157763" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           20
+          </div> </a> 
+         <a href="/questions/157763/do-we-have-more-history-for-cd" class="question-hyperlink">Do we have more history for cd?</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="module sidebar-related"> 
+       <h4 id="h-related">Related</h4> 
+       <div class="related js-gps-related-questions" data-tracker="rq=1"> 
+        <div class="spacer"> 
+         <a href="/q/19686" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           2 
+          </div> </a>
+         <a href="/questions/19686/open-sakura-in-home-directory" class="question-hyperlink">Open Sakura in home directory</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/20493" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           24 
+          </div> </a>
+         <a href="/questions/20493/how-to-disable-line-wrap-in-a-terminal" class="question-hyperlink">How to disable line wrap in a terminal?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/22106" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           4 
+          </div> </a>
+         <a href="/questions/22106/ctrlad-exiting-terminal" class="question-hyperlink">Ctrl+a+d exiting terminal?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/41024" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           3 
+          </div> </a>
+         <a href="/questions/41024/change-working-directory-of-2-terminals-at-once" class="question-hyperlink">Change working directory of 2 terminals at once</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/70419" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           4 
+          </div> </a>
+         <a href="/questions/70419/horizontal-scrolling-in-terminal" class="question-hyperlink">Horizontal Scrolling in Terminal</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/158292" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           1 
+          </div> </a>
+         <a href="/questions/158292/how-does-a-terminal-emulator-work" class="question-hyperlink">How does a terminal emulator work</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/222329" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/222329/terminal-wont-launch-at-all" class="question-hyperlink">Terminal wont launch at all!</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/243237" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           3 
+          </div> </a>
+         <a href="/questions/243237/how-to-save-restore-terminal-output" class="question-hyperlink">How to save/restore terminal output</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/249665" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           1 
+          </div> </a>
+         <a href="/questions/249665/remnants-of-previously-closed-file-displayed-in-terminal" class="question-hyperlink">Remnants of previously closed file displayed in terminal</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/261277" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/261277/program-just-works-in-one-terminal" class="question-hyperlink">Program just works in one terminal</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="hot-network-questions" class="module"> 
+       <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })"> Hot Network Questions </a> </h4> 
+       <ul> 
+        <li> 
+         <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68628/how-to-respond-to-journal-suggestion-we-get-a-native-speaker-editor-when-writing" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })"> How to respond to journal suggestion we get a native-speaker editor when writing seems reasonable and one author is a native English speaker? </a> </li> 
+        <li> 
+         <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/115026/rigid-rotation-of-a-point-cloud" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })"> Rigid Rotation of a Point Cloud </a> </li> 
+        <li> 
+         <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/238725/the-number-of-prime-factors-of-a-natural-number" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:504 }); posts_hot_network.click({ item_type:2, location:11 })"> The number of prime factors of a natural number </a> </li> 
+        <li> 
+         <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37202716/c-is-const-doesnt-work-as-expected-for-reference" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })"> C++: is_const doesn't work as expected for reference </a> </li> 
+        <li> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123058/how-to-tell-if-a-webapp-transmits-my-password-in-cleartext" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> How to tell if a webapp transmits my password in cleartext? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/255577/how-come-light-waves-dont-get-caught-and-absorbed-by-the-electrons-of-oxygen-at" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })"> How come light waves don't get caught and absorbed by the electrons of oxygen atoms in the in air? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-mechanics" title="Motor Vehicle Maintenance &amp; Repair Stack Exchange"></div><a href="http://mechanics.stackexchange.com/questions/29601/what-does-a-liter-class-engine-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:224 }); posts_hot_network.click({ item_type:2, location:11 })"> What does a liter class engine mean? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/308600/how-to-include-a-lenny-face-in-a-latex-document-e-g-%cd%a1-%cd%9c%ca%96-%cd%a1" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })"> How to include a Lenny face in a LaTeX document? e.g. ( ͡° ͜ʖ ͡°) </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/309393/unexpanded-string-replace" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })"> Unexpanded string replace </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/282701/why-some-shells-read-builtin-fail-to-read-the-whole-line-from-file-in-proc" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })"> Why some shells `read` builtin fail to read the whole line from file in `/proc`? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37191679/why-doesnt-the-compiler-generate-compile-errors-if-an-incorrect-argument-type-i" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })"> Why doesn't the compiler generate compile errors if an incorrect argument type is passed to a struct initialiser list? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68194/most-useful-languages-other-than-english-in-asia-and-oceania" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })"> Most useful languages other than English in Asia and Oceania </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127874/why-does-one-of-the-x-wing-pilots-scream-yeeeeeeessssss-in-the-battle-of-yavin" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })"> Why does one of the X-wing pilots scream "YEEEEEEESSSSSS" in the Battle of Yavin? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/41570/what-type-of-food-might-an-organism-that-lives-its-entire-life-in-interstellar-s" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })"> What type of food might an organism that lives its entire life in interstellar space eat? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-vi" title="Vi and Vim Stack Exchange"></div><a href="http://vi.stackexchange.com/questions/7784/what-does-c-do" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:599 }); posts_hot_network.click({ item_type:2, location:11 })"> What does &lt;C-@&gt; do? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/255527/why-do-physicists-say-that-elementary-particles-are-point-particles" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })"> Why do physicists say that elementary particles are point particles? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/64010/would-i-qualify-for-a-usda-loan" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })"> Would I qualify for a USDA loan? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/94090/where-did-the-3-dot-user-is-typing-feedback-you-see-on-messenger-apps-originat" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:102 }); posts_hot_network.click({ item_type:2, location:11 })"> Where did the 3 dot 'user is typing' feedback you see on messenger apps originate? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325285/is-there-a-word-that-means-standard-of-activation-or-trigger-condition" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })"> Is there a word that means "standard of activation" or "trigger condition"? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/238740/verify-that-a-group-is-hyperbolic-via-computer-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:504 }); posts_hot_network.click({ item_type:2, location:11 })"> Verify that a group is hyperbolic via computer algebra </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/115006/easiest-way-to-extract-the-coefficient-of-a-polynomial" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })"> Easiest way to extract the coefficient of a polynomial </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123028/is-ignoring-a-threat-you-cannot-defend-from-a-valid-strategy" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> Is ignoring a threat you cannot defend from a valid strategy? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/324831/word-for-a-person-who-freely-shares-others-secrets" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })"> Word for a person who freely shares others' secrets </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-diy" title="Home Improvement Stack Exchange"></div><a href="http://diy.stackexchange.com/questions/90392/if-metal-expands-when-heated-how-does-heating-a-bolt-loosen-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:73 }); posts_hot_network.click({ item_type:2, location:11 })"> If metal expands when heated, how does heating a bolt loosen it? </a> </li> 
+       </ul> 
+       <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })"> more hot questions </a> 
+      </div> 
+     </div> 
+     <script>
+StackExchange.ready(function(){$.get('/posts/282921/ivc/18f9');});
+</script> 
+     <noscript> 
+      <div>
+       <img src="/posts/282921/ivc/18f9" class="dno" alt="" width="0" height="0">
+      </div> 
+     </noscript>
+     <div style="display:none" id="prettify-lang"></div>
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://blog.stackoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.unix.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3570 
+    </div> 
+    <div id="additional-notices">
+      Linux is a registered trademark of Linus Torvalds. UNIX is a registered trademark of The Open Group. 
+     <br>This site is not affiliated with Linus Torvalds or The Open Group in any way. 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Unix &amp; Linux Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+  <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('terminal,x-community,x-host-unix.stackexchange.com');; ados_load();
+        });   
+        
+</script> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('set', 'dimension2', '|terminal|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

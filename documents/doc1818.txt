@@ -1,0 +1,1196 @@
+http://dsp.stackexchange.com
+<!doctype html>
+<html>
+ <head> 
+  <title>Signal Processing Stack Exchange</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/dsp/img/favicon.ico?v=ed0aa6fd1980"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/dsp/img/apple-touch-icon.png?v=ce86280cb8db"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Signal Processing Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@StackSignals"> 
+  <meta name="twitter:domain" content="dsp.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/dsp/img/apple-touch-icon.png?v=ce86280cb8db&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Signal Processing Stack Exchange"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="Q&amp;A for practitioners of the art and science of signal, image and video processing"> 
+  <meta property="og:url" content="http://dsp.stackexchange.com/"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=beeead7e5f34"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/dsp/all.css?v=133363ff702d"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed of recent questions" href="/feeds"> 
+  <script>
+            StackExchange.ready(function() {
+                StackExchange.realtime.subscribeToActiveQuestions('295', 'home-active');
+            });
+        </script> 
+  <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                        tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+                                        messageStyle: "none"
+                });
+                </script> 
+  <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('295');
+                StackExchange.realtime.subscribeToTopBarNotifications('295');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463142338,"routeName":"Home/Index","enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"Signal Processing Stack Exchange","description":"Q&A for practitioners of the art and science of signal, image and video processing","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":295,"enableSocialMediaInSharePopup":true},"user":{"fkey":"8c860d19b546a5f1bec5ccc0119119dd","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"cf93ca293e43","js/moderator.en.js":"022f362eb0a2","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"b9eda6e5c0b8","js/wmd.en.js":"b90dcd7c4c56","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"bd4fb7a0a976","js/tageditornew.en.js":"65c5f5ec346b","js/inline-tag-editing.en.js":"943c7090ea55","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"d8d766025f2d","js/tagsuggestions.en.js":"7dfec0d2a2d7","js/post-validation.en.js":"8c4fef95e838","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"a4aabc825384","js/keyboard-shortcuts.en.js":"cb27f8dccc5f","js/external-editor.en.js":"93769406446f","js/mathjax-editing.en.js":"be243b824510"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="home-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//dsp.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//dsp.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="295" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-dsp" title="Signal Processing"></div> Signal Processing </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.dsp.stackexchange.com" class="site-link js-gps-track" data-id="297" data-gps-track="
+            site.switch({ target_site:297, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-dspmeta" title="Signal Processing Meta"></div> Signal Processing Meta </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://dsp.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fdsp.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://dsp.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fdsp.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://dsp.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fdsp.stackexchange.com%2f" class="login-link">sign up</a> <a href="https://dsp.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fdsp.stackexchange.com%2f" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.dsp.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Signal Processing </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content"> 
+    <div id="herobox"> 
+     <div id="hero-content"> 
+      <div id="close">
+       <a title="click to minimize">_</a>
+      </div> 
+      <div id="blurb">
+        Signal Processing Stack Exchange is a question and answer site for practitioners of the art and science of signal, image and video processing. It's 100% free, no registration required. 
+       <br> 
+       <br> 
+       <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fdsp.stackexchange.com%2f" id="tell-me-more" class="button">Sign up</a> 
+      </div> 
+      <div id="desc"> 
+       <b>Here's how it works:</b> 
+       <ol id="hiw"> 
+        <li id="q">Anybody can ask a question </li> 
+        <li id="an">Anybody can answer </li> 
+        <li id="b">The best answers are voted up and rise to the top </li> 
+       </ol> 
+      </div> 
+      <div style="clear: both"></div> 
+     </div> 
+     <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+    </div> 
+    <script>
+        StackExchange.using("gps", function () {
+            StackExchange.gps.track("hero.show", { hero_type: "hero", location: 3 }, true);
+        });
+    </script> 
+    <div id="mainbar"> 
+     <div class="subheader"> 
+      <h1 id="h-top-questions">Explore Our Questions</h1> 
+      <div id="tabs"> 
+       <a href="?tab=active" data-nav-xhref="" title="Questions that have been asked, answered, or updated recently" data-value="active"> active</a> 
+       <a href="?tab=featured" data-nav-xhref="" title="Questions with an active bounty" data-value="featured"> <span class="bounty-indicator-tab">1</span> featured</a> 
+       <a href="?tab=hot" data-nav-xhref="" title="Questions with the most views, answers, and votes over the last few days" data-value="hot"> hot</a> 
+       <a href="?tab=week" data-nav-xhref="" title="Questions with the most views, answers, and votes this week" data-value="week"> week</a> 
+       <a href="?tab=month" data-nav-xhref="" title="Questions with the most views, answers, and votes this month" data-value="month"> month</a> 
+      </div> 
+     </div> 
+     <div id="explore-tags"> 
+      <a href="/?tags=image-processing" class="post-tag no-tag-menu" title="Show questions relating to image-processing" rel="tag">image-processing</a>
+      <a href="/?tags=matlab" class="post-tag no-tag-menu" title="Show questions relating to matlab" rel="tag">matlab</a>
+      <a href="/?tags=fft" class="post-tag no-tag-menu" title="Show questions relating to fft" rel="tag">fft</a>
+      <a href="/?tags=filters" class="post-tag no-tag-menu" title="Show questions relating to filters" rel="tag">filters</a>
+      <a href="/?tags=discrete-signals" class="post-tag no-tag-menu" title="Show questions relating to discrete-signals" rel="tag">discrete-signals</a>
+      <a href="/?tags=signal-analysis" class="post-tag no-tag-menu" title="Show questions relating to signal-analysis" rel="tag">signal-analysis</a>
+      <a href="/?tags=audio" class="post-tag no-tag-menu" title="Show questions relating to audio" rel="tag">audio</a>
+      <a href="/?tags=fourier-transform" class="post-tag no-tag-menu" title="Show questions relating to fourier-transform" rel="tag">fourier-transform</a>
+      <a href="/?tags=computer-vision" class="post-tag no-tag-menu" title="Show questions relating to computer-vision" rel="tag">computer-vision</a>
+      <a href="/?tags=frequency-spectrum" class="post-tag no-tag-menu" title="Show questions relating to frequency-spectrum" rel="tag">frequency-spectrum</a> 
+      <a class="more-tags" href="/tags">more&nbsp;tags</a> 
+     </div> 
+     <div id="qlist-wrapper"> 
+      <div id="question-mini-list"> 
+       <div class="question-summary narrow" id="question-summary-30736"> 
+        <div onclick="window.location.href='/questions/30736/how-to-calculate-an-azimuth-of-a-sound-source-in-stereo-signal'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="27 views">27</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/30736/how-to-calculate-an-azimuth-of-a-sound-source-in-stereo-signal" class="question-hyperlink" title="Let say we have a stereo recording of only one source.
+
+What is a correct algorithm to calculate its azimuth using inter channel time difference and inter channel level difference?
+">How to calculate an azimuth of a sound source in stereo signal</a></h3> 
+         <div class="tags t-audio"> 
+          <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged 'audio'" rel="tag">audio</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/30736/how-to-calculate-an-azimuth-of-a-sound-source-in-stereo-signal/?lastactivity" class="started-link">modified <span title="2016-05-13 12:17:31Z" class="relativetime">8 mins ago</span></a> 
+          <a href="/users/29/endolith">endolith</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">6,588</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-30762"> 
+        <div onclick="window.location.href='/questions/30762/implementing-welchs-method-for-power-spectral-density'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="7 views">7</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/30762/implementing-welchs-method-for-power-spectral-density" class="question-hyperlink" title="I want to implement welch's method for PSD calculation in Matlab. I do not want to use built in matlab CPSD function, such that I can change the FFT implementation in CPSD (for certain purpose). I ...">Implementing Welch's method for Power Spectral Density</a></h3> 
+         <div class="tags t-matlab t-discrete-signals t-signal-analysis"> 
+          <a href="/questions/tagged/matlab" class="post-tag" title="show questions tagged 'matlab'" rel="tag">matlab</a> 
+          <a href="/questions/tagged/discrete-signals" class="post-tag" title="show questions tagged 'discrete-signals'" rel="tag">discrete-signals</a> 
+          <a href="/questions/tagged/signal-analysis" class="post-tag" title="show questions tagged 'signal-analysis'" rel="tag">signal-analysis</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/30762/implementing-welchs-method-for-power-spectral-density/?lastactivity" class="started-link">answered <span title="2016-05-13 12:15:21Z" class="relativetime">10 mins ago</span></a> 
+          <a href="/users/80/peter-k">Peter K.</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 10,348" dir="ltr">10.3k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-30766"> 
+        <div onclick="window.location.href='/questions/30766/how-to-recognize-pattern-in-asymetric-signal'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="7 views">7</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/30766/how-to-recognize-pattern-in-asymetric-signal" class="question-hyperlink" title="I'm trying to generate a trigger for every time the signal start showing those bumps (start is marked with the blue X). Has someone a suggestion?
+
+
+
+I tried following approach:  
+     1st: convolution ...">How to recognize pattern in asymetric signal</a></h3> 
+         <div class="tags t-fft t-filters t-convolution"> 
+          <a href="/questions/tagged/fft" class="post-tag" title="show questions tagged 'fft'" rel="tag">fft</a> 
+          <a href="/questions/tagged/filters" class="post-tag" title="show questions tagged 'filters'" rel="tag">filters</a> 
+          <a href="/questions/tagged/convolution" class="post-tag" title="show questions tagged 'convolution'" rel="tag">convolution</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/30766/how-to-recognize-pattern-in-asymetric-signal" class="started-link">modified <span title="2016-05-13 12:11:16Z" class="relativetime">14 mins ago</span></a> 
+          <a href="/users/20992/hangon">Hangon</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-22840"> 
+        <div onclick="window.location.href='/questions/22840/simple-vad-voice-activity-detector-implementation'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts warm">
+           <span title="1085 views">1k</span>
+          </div> 
+          <div class="warm">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/22840/simple-vad-voice-activity-detector-implementation" class="question-hyperlink" title="I am to classify few recorded phone calls as either containing speech or not by sampling lets say first 10 seconds. 
+
+The files contain either silence, dialtone or ringtones, or real human voice.
+
+I ...">Simple VAD (Voice activity Detector) implementation</a></h3> 
+         <div class="tags t-matlab t-speech-processing"> 
+          <a href="/questions/tagged/matlab" class="post-tag" title="show questions tagged 'matlab'" rel="tag">matlab</a> 
+          <a href="/questions/tagged/speech-processing" class="post-tag" title="show questions tagged 'speech-processing'" rel="tag">speech-processing</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/22840/simple-vad-voice-activity-detector-implementation/?lastactivity" class="started-link">modified <span title="2016-05-13 11:57:05Z" class="relativetime">28 mins ago</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-1130"> 
+        <div onclick="window.location.href='/questions/1130/lip-sync-over-ip'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="596 views">596</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/1130/lip-sync-over-ip" class="question-hyperlink" title="What are the most used techniques for lip sync (audio/video sync) for conferencing over IP (and related issues with playout buffering)? I could find a lot of paper about audio intrastream ...">Lip sync over IP</a></h3> 
+         <div class="tags t-audio t-video-processing t-synchronization"> 
+          <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged 'audio'" rel="tag">audio</a> 
+          <a href="/questions/tagged/video-processing" class="post-tag" title="show questions tagged 'video-processing'" rel="tag">video-processing</a> 
+          <a href="/questions/tagged/synchronization" class="post-tag" title="show questions tagged 'synchronization'" rel="tag">synchronization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/1130/lip-sync-over-ip/?lastactivity" class="started-link">modified <span title="2016-05-13 10:39:55Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/13320/marcus-m%c3%bcller">Marcus Müller</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,448</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-1418"> 
+        <div onclick="window.location.href='/questions/1418/synchronizing-two-audio-tracks'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts warm">
+           <span title="1301 views">1k</span>
+          </div> 
+          <div class="warm">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/1418/synchronizing-two-audio-tracks" class="question-hyperlink" title="I would like to implement an algorithm that synchronizes two audio tracks.
+
+The two tracks are very similar; you can imagine they are two recordings of sound (not necessarily music) from two ...">Synchronizing Two Audio Tracks</a></h3> 
+         <div class="tags t-audio t-cross-correlation t-synchronization"> 
+          <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged 'audio'" rel="tag">audio</a> 
+          <a href="/questions/tagged/cross-correlation" class="post-tag" title="show questions tagged 'cross-correlation'" rel="tag">cross-correlation</a> 
+          <a href="/questions/tagged/synchronization" class="post-tag" title="show questions tagged 'synchronization'" rel="tag">synchronization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/1418/synchronizing-two-audio-tracks/?lastactivity" class="started-link">modified <span title="2016-05-13 10:39:45Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/13320/marcus-m%c3%bcller">Marcus Müller</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,448</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-3047"> 
+        <div onclick="window.location.href='/questions/3047/timing-syncronisation-using-polyphase-decimation-filter'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="521 views">521</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/3047/timing-syncronisation-using-polyphase-decimation-filter" class="question-hyperlink" title="This question is regarding application of polyphase decimation filter in symbol time correction.How does choosing a perticular &quot;polyphase branch&quot; in a polyphase decimation filter result in timing ...">Timing syncronisation using Polyphase decimation filter</a></h3> 
+         <div class="tags t-filters t-decimation t-synchronization"> 
+          <a href="/questions/tagged/filters" class="post-tag" title="show questions tagged 'filters'" rel="tag">filters</a> 
+          <a href="/questions/tagged/decimation" class="post-tag" title="show questions tagged 'decimation'" rel="tag">decimation</a> 
+          <a href="/questions/tagged/synchronization" class="post-tag" title="show questions tagged 'synchronization'" rel="tag">synchronization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/3047/timing-syncronisation-using-polyphase-decimation-filter/?lastactivity" class="started-link">modified <span title="2016-05-13 10:39:27Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/13320/marcus-m%c3%bcller">Marcus Müller</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,448</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-12895"> 
+        <div onclick="window.location.href='/questions/12895/synchronizing-two-music-tracks'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="3 answers">3</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="189 views">189</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/12895/synchronizing-two-music-tracks" class="question-hyperlink" title="I would like to synchronize two different music tracks (and maintain synchronization) as a DJ would with two records.
+
+So far, I have the beats mapped for each song, so I am able to adjust their rates ...">synchronizing two music tracks</a></h3> 
+         <div class="tags t-audio t-music t-synchronization"> 
+          <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged 'audio'" rel="tag">audio</a> 
+          <a href="/questions/tagged/music" class="post-tag" title="show questions tagged 'music'" rel="tag">music</a> 
+          <a href="/questions/tagged/synchronization" class="post-tag" title="show questions tagged 'synchronization'" rel="tag">synchronization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/12895/synchronizing-two-music-tracks/?lastactivity" class="started-link">modified <span title="2016-05-13 10:38:38Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/13320/marcus-m%c3%bcller">Marcus Müller</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,448</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-17906"> 
+        <div onclick="window.location.href='/questions/17906/matching-the-mouth-shape-of-an-audio-filelip-sync'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="126 views">126</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/17906/matching-the-mouth-shape-of-an-audio-filelip-sync" class="question-hyperlink" title="I am working on something like cartoon, but the character's mouth shape is automatically detected and matched by the word they are saying. 
+
+my guess is to use speech recognize algorithm to analyze ...">matching the mouth shape of an audio file(lip sync)</a></h3> 
+         <div class="tags t-audio t-sound t-waveform-similarity t-synchronization"> 
+          <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged 'audio'" rel="tag">audio</a> 
+          <a href="/questions/tagged/sound" class="post-tag" title="show questions tagged 'sound'" rel="tag">sound</a> 
+          <a href="/questions/tagged/waveform-similarity" class="post-tag" title="show questions tagged 'waveform-similarity'" rel="tag">waveform-similarity</a> 
+          <a href="/questions/tagged/synchronization" class="post-tag" title="show questions tagged 'synchronization'" rel="tag">synchronization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/17906/matching-the-mouth-shape-of-an-audio-filelip-sync/?lastactivity" class="started-link">modified <span title="2016-05-13 10:38:23Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/13320/marcus-m%c3%bcller">Marcus Müller</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,448</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-18588"> 
+        <div onclick="window.location.href='/questions/18588/spectral-effects-of-multiplying-a-signal-by-itself'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="241 views">241</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/18588/spectral-effects-of-multiplying-a-signal-by-itself" class="question-hyperlink" title="This has to do with creating the synchronization circuit for MSK in a DSP as described in &quot;Minimum Shift Keying&quot; by Subbarayan Pasupathy published in IEEE Communications Magazine.
+
+At the beginning of ...">Spectral effects of multiplying a signal by itself?</a></h3> 
+         <div class="tags t-frequency-spectrum t-demodulation t-fsk t-synchronization"> 
+          <a href="/questions/tagged/frequency-spectrum" class="post-tag" title="show questions tagged 'frequency-spectrum'" rel="tag">frequency-spectrum</a> 
+          <a href="/questions/tagged/demodulation" class="post-tag" title="show questions tagged 'demodulation'" rel="tag">demodulation</a> 
+          <a href="/questions/tagged/fsk" class="post-tag" title="show questions tagged 'fsk'" rel="tag">fsk</a> 
+          <a href="/questions/tagged/synchronization" class="post-tag" title="show questions tagged 'synchronization'" rel="tag">synchronization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/18588/spectral-effects-of-multiplying-a-signal-by-itself/?lastactivity" class="started-link">modified <span title="2016-05-13 10:38:06Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/13320/marcus-m%c3%bcller">Marcus Müller</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,448</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-19458"> 
+        <div onclick="window.location.href='/questions/19458/how-to-compute-transfer-function-frequency-response-function-from-experimental'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="935 views">935</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/19458/how-to-compute-transfer-function-frequency-response-function-from-experimental" class="question-hyperlink" title="I have a set of data, in the freqeuncy domain, corresponding to a structural test.
+
+I have amplitude, phase and frequency for both the measured output and the input signal (accelerations are measured ...">How to compute transfer function (Frequency Response Function) from experimental data</a></h3> 
+         <div class="tags t-matlab t-frequency-response t-transfer-function t-resampling t-synchronization"> 
+          <a href="/questions/tagged/matlab" class="post-tag" title="show questions tagged 'matlab'" rel="tag">matlab</a> 
+          <a href="/questions/tagged/frequency-response" class="post-tag" title="show questions tagged 'frequency-response'" rel="tag">frequency-response</a> 
+          <a href="/questions/tagged/transfer-function" class="post-tag" title="show questions tagged 'transfer-function'" rel="tag">transfer-function</a> 
+          <a href="/questions/tagged/resampling" class="post-tag" title="show questions tagged 'resampling'" rel="tag">resampling</a> 
+          <a href="/questions/tagged/synchronization" class="post-tag" title="show questions tagged 'synchronization'" rel="tag">synchronization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/19458/how-to-compute-transfer-function-frequency-response-function-from-experimental" class="started-link">modified <span title="2016-05-13 10:37:00Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/13320/marcus-m%c3%bcller">Marcus Müller</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,448</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-25165"> 
+        <div onclick="window.location.href='/questions/25165/phase-locking-value-phase-synchronization'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="275 views">275</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/25165/phase-locking-value-phase-synchronization" class="question-hyperlink" title="I have pairs of EEG signals filtered to give me just alpha bands. For a machine learning problem I have found that calculating the phase locking value between the alpha signals of these 2 channels ...">Phase locking value / phase synchronization</a></h3> 
+         <div class="tags t-filters t-phase t-eeg t-coherence t-synchronization"> 
+          <a href="/questions/tagged/filters" class="post-tag" title="show questions tagged 'filters'" rel="tag">filters</a> 
+          <a href="/questions/tagged/phase" class="post-tag" title="show questions tagged 'phase'" rel="tag">phase</a> 
+          <a href="/questions/tagged/eeg" class="post-tag" title="show questions tagged 'eeg'" rel="tag">eeg</a> 
+          <a href="/questions/tagged/coherence" class="post-tag" title="show questions tagged 'coherence'" rel="tag">coherence</a> 
+          <a href="/questions/tagged/synchronization" class="post-tag" title="show questions tagged 'synchronization'" rel="tag">synchronization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/25165/phase-locking-value-phase-synchronization/?lastactivity" class="started-link">modified <span title="2016-05-13 10:36:34Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/13320/marcus-m%c3%bcller">Marcus Müller</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,448</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-30719"> 
+        <div onclick="window.location.href='/questions/30719/which-pattern-circle-pattern-or-checkerboard-pattern-should-be-used-for-automo'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="24 views">24</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/30719/which-pattern-circle-pattern-or-checkerboard-pattern-should-be-used-for-automo" class="question-hyperlink" title="Calibrating a Fish-eye camera / webcam with large angle mounted on car by using opencv 3
+
+One important issue is to define the calibration pattern and its position !!!!
+
+The affects error that paly an ...">Which pattern (circle pattern or checkerboard pattern) should be used for automotive camera calibration (fisheye/wide webcam)?</a></h3> 
+         <div class="tags t-matlab t-opencv t-cçç t-camera-calibration t-camera-pose"> 
+          <a href="/questions/tagged/matlab" class="post-tag" title="show questions tagged 'matlab'" rel="tag">matlab</a> 
+          <a href="/questions/tagged/opencv" class="post-tag" title="show questions tagged 'opencv'" rel="tag">opencv</a> 
+          <a href="/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged 'c++'" rel="tag">c++</a> 
+          <a href="/questions/tagged/camera-calibration" class="post-tag" title="show questions tagged 'camera-calibration'" rel="tag">camera-calibration</a> 
+          <a href="/questions/tagged/camera-pose" class="post-tag" title="show questions tagged 'camera-pose'" rel="tag">camera-pose</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/30719/which-pattern-circle-pattern-or-checkerboard-pattern-should-be-used-for-automo/?lastactivity" class="started-link">answered <span title="2016-05-13 10:21:01Z" class="relativetime">2 hours ago</span></a> 
+          <a href="/users/20990/hekimgil">hekimgil</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">26</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-28157"> 
+        <div onclick="window.location.href='/questions/28157/how-can-i-reconstruct-a-time-series-using-it-ar-coefficients-in-matlab'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="63 views">63</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/28157/how-can-i-reconstruct-a-time-series-using-it-ar-coefficients-in-matlab" class="question-hyperlink" title="I have estimated AR coefficients of a time series using &quot;aryule&quot; function in MATLAB. Now I want to obtain the error of the estimated model. I think at first I must reconstruct it. so How can I ...">How can I reconstruct a Time series using it AR coefficients in MATLAB?</a></h3> 
+         <div class="tags t-matlab t-signal-analysis t-autoregressive-model"> 
+          <a href="/questions/tagged/matlab" class="post-tag" title="show questions tagged 'matlab'" rel="tag">matlab</a> 
+          <a href="/questions/tagged/signal-analysis" class="post-tag" title="show questions tagged 'signal-analysis'" rel="tag">signal-analysis</a> 
+          <a href="/questions/tagged/autoregressive-model" class="post-tag" title="show questions tagged 'autoregressive-model'" rel="tag">autoregressive-model</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/28157/how-can-i-reconstruct-a-time-series-using-it-ar-coefficients-in-matlab/?lastactivity" class="started-link">modified <span title="2016-05-13 09:57:05Z" class="relativetime">2 hours ago</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div> 
+      <a id="home-browse" class="button" href="/questions">Browse More Questions</a> 
+     </div> 
+     <script>
+        StackExchange.using('exploreQuestions', function() {
+                StackExchange.exploreQuestions.init({count:14});
+                            StackExchange.exploreQuestions.gps();
+        });
+    </script> 
+     <script>
+    StackExchange.ready(function() { StackExchange.question.initShareLinks(); });
+</script>
+    </div> 
+    <div id="sidebar"> 
+     <div style="margin-bottom: 10px;"> 
+      <style type="text/css">
+#newsletter-ad {
+    width: 270px;
+    height: 250px;
+    overflow: hidden;
+    background: url('//cdn.sstatic.net/Sites/beta/img/newsletter-ad.png?v=4');
+    padding: 0 15px 0 15px;
+}
+#newsletter-ad-header {
+    margin-top: 60px;
+}
+#newsletter-ad ul {
+    margin: 1em 0 1em 1.5em;
+}
+#newsletter-ad ul li {
+    margin-bottom: 5px;
+}
+#newsletter-signup-container {
+    text-align: center;
+}
+#newsletter-preview-container {
+    margin-top: 10px;
+    text-align: center;
+}
+#newsletter-email-input {
+    width: 200px;
+}
+</style> 
+      <script>
+    StackExchange.ready(function () {
+        StackExchange.newsletterAd.init();
+    });
+</script> 
+      <div id="newsletter-ad"> 
+       <p id="newsletter-ad-header">Get the <b>weekly newsletter!</b> In it, you'll get:</p> 
+       <ul> 
+        <li>The week's top questions and answers</li> 
+        <li>Important community announcements</li> 
+        <li>Questions that need answers</li> 
+       </ul> 
+       <div id="newsletter-signup-container">
+        <input id="newsletter-signup" type="button" value="Sign up for the newsletter">
+       </div> 
+       <p id="newsletter-preview-container">see an <a href="//stackexchange.com/newsletters/newsletter?site=dsp.stackexchange.com" id="newsletter-preview">example newsletter</a></p> 
+       <div class="dno"> 
+        <p class="privacy-policy-agreement"> By subscribing, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p> 
+        <input type="hidden" name="legalLinksShown" value="1"> 
+       </div> 
+      </div> 
+     </div>
+     <div class="module" id="chat-feature"> 
+      <h4><a href="http://chat.stackexchange.com" id="h-chat-link">Visit Chat</a></h4> 
+      <div class="related" id="ad502-rooms"></div> 
+      <script>
+// <!--
+    StackExchange.ready(
+    function () {
+        var options = {
+            chatUrl: 'http://chat.stackexchange.com',
+            reloadUrl: '/api/recent-chat',
+            preloadData: {"activeUsers":121,"activeRooms":76,"rooms":[{"name":"Signal Processing","id":1090,"lastPost":1463136614,"posts":1780,"users":[],"messages":[{"date":1463136614,"user":"Marcus Müller","userid":163486}],"singleImage":false,"tags":[]}]} 
+        };
+
+        StackExchange.chatAd.init(options);
+    });
+// -->
+</script> 
+     </div>
+     <style type="text/css">
+    .ads { margin-left: 60px; }
+    .ad-container { width: 300px; height: 250px; margin-right: 20px; margin-bottom: 20px; }
+    .ad-container .ad { height: 250px; }
+    .ad-container .footer-container { overflow: hidden; height: 30px; position: relative; top: -30px; }
+    .ad-container .footer-container .footer { font-family: Arial,Helvetic,Sans-Serif; font-size: 12px; text-align: center; padding-top: 9px; background-color: #000; color: #EFF; opacity: 0.9; filter: alpha(opacity=90); top: 30px; height: 30px; position: relative; }
+    .ad-container a:hover { text-decoration: underline; }
+    #adzerk2 { height: 250px; }
+</style> 
+     <script>
+    StackExchange.ready(function () {
+        $(".ad-container").hover(
+            function () {
+                $(".ad-container .footer-container .footer").stop(true, true).animate({ top: "0px" }, "fast");
+            },
+            function () {
+                $(".ad-container .footer-container .footer").animate({ top: "30px" }, "fast");
+            });
+    });
+</script> 
+     <script>
+        var ados = ados || {};ados.run = ados.run || [];
+        ados.run.push(function () { ados_add_placement(22, 12057, "adcm2", [5,17]).setZone(76); });
+    </script> 
+     <div class="everyonelovesstackoverflow" id="adcm2"> 
+     </div> 
+     <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+     <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('x-host-dsp.stackexchange.com');; ados_load();
+        });   
+        
+</script> 
+     <div id="hot-network-questions" class="module"> 
+      <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:8 })"> Hot Network Questions </a> </h4> 
+      <ul> 
+       <li> 
+        <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80037/is-making-characters-who-go-off-the-rails-unlucky-a-good-technique-for-keeping-t" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:122 }); posts_hot_network.click({ item_type:2, location:8 })"> Is making characters who go off the rails unlucky a good technique for keeping the plot moving? </a> </li> 
+       <li> 
+        <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37202036/assigning-a-number-to-stdstring-is-now-allowed" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:1 }); posts_hot_network.click({ item_type:2, location:8 })"> Assigning a number to std::string is now allowed? </a> </li> 
+       <li> 
+        <div class="favicon favicon-ethereum" title="Ethereum Stack Exchange"></div><a href="http://ethereum.stackexchange.com/questions/3900/how-do-i-delete-the-geth-console-history" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:642 }); posts_hot_network.click({ item_type:2, location:8 })"> How do I delete the geth console history? </a> </li> 
+       <li> 
+        <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/63921/is-buying-a-lottery-ticket-considered-an-investment" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:93 }); posts_hot_network.click({ item_type:2, location:8 })"> Is buying a lottery ticket considered an investment? </a> </li> 
+       <li> 
+        <div class="favicon favicon-chemistry" title="Chemistry Stack Exchange"></div><a href="http://chemistry.stackexchange.com/questions/51099/is-there-a-difference-between-nacl-or-table-salt-processed-and-salt-from-the-h" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:431 }); posts_hot_network.click({ item_type:2, location:8 })"> Is there a difference between NaCl or table salt (processed) and salt from the Himalayas? </a> </li> 
+       <li> 
+        <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/41405/a-person-with-no-magic-in-a-magic-dependent-world" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:579 }); posts_hot_network.click({ item_type:2, location:8 })"> A person with no magic in a magic dependent world </a> </li> 
+       <li> 
+        <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/1075315/how-to-convert-an-unknown-file-to-mp3" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:3 }); posts_hot_network.click({ item_type:2, location:8 })"> How to convert an unknown file to MP3? </a> </li> 
+       <li> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127918/im-looking-for-a-sci-fi-book-with-a-female-protagonist-who-doesnt-wear-logos" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> I'm looking for a Sci-Fi book with a female protagonist who doesn't wear logos </a> </li> 
+       <li> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/122848/does-correcting-misspelled-usernames-create-a-security-risk" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Does correcting misspelled usernames create a security risk? </a> </li> 
+       <li> 
+        <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/52883/how-could-jon-snow-do-what-he-did-in-oathbreaker" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:367 }); posts_hot_network.click({ item_type:2, location:8 })"> How could Jon Snow do what he did in "Oathbreaker"? </a> </li> 
+       <li> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68550/advisor-forcing-to-publish-paper-in-high-profile-journal" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> Advisor forcing to publish paper in high profile journal </a> </li> 
+       <li> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123170/photo-of-keyboard-grease-patterns-most-frequently-used-keys-dictionary" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Photo of keyboard -&gt; grease patterns -&gt; most frequently used keys -&gt; dictionary attack -&gt; password bruteforce ... Possible? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325089/opposite-of-as-early-as-possible" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:97 }); posts_hot_network.click({ item_type:2, location:8 })"> Opposite of "As early as possible" </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:131 }); posts_hot_network.click({ item_type:2, location:8 })"> Why would the 'final' keyword ever be useful? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/771699/make-a-startup-message" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:89 }); posts_hot_network.click({ item_type:2, location:8 })"> Make a Startup message </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127820/how-does-vibranium-work" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> How does Vibranium work? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123058/how-to-tell-if-a-webapp-transmits-my-password-in-cleartext" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> How to tell if a webapp transmits my password in cleartext? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/64033/is-this-girl-doing-illegal-transfers" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:93 }); posts_hot_network.click({ item_type:2, location:8 })"> Is this girl doing illegal transfers? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/89659/whats-the-meaning-of-break-your-legs" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:481 }); posts_hot_network.click({ item_type:2, location:8 })"> What's the meaning of "break your legs"? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80098/can-a-warlock-have-a-bonded-pact-weapon-and-still-create-other-pact-weapons" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:122 }); posts_hot_network.click({ item_type:2, location:8 })"> Can a Warlock have a bonded pact weapon and still create other pact weapons </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-cstheory" title="Theoretical Computer Science Stack Exchange"></div><a href="http://cstheory.stackexchange.com/questions/34740/turing-machine-restrictions-that-render-halting-decidable" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:114 }); posts_hot_network.click({ item_type:2, location:8 })"> Turing Machine restrictions that render halting decidable </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/238732/integer-polynomial-solutions-to-functional-equation" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:504 }); posts_hot_network.click({ item_type:2, location:8 })"> Integer Polynomial solutions to functional equation </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68541/what-happens-if-a-math-phd-student-fails-to-find-a-proof-that-is-the-main-object" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> What happens if a math PhD student fails to find a proof that is the main objective of his/her thesis topic? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80033/how-to-make-a-dragonborn-sorcerer-appear-to-be-human-for-8-to-16-hours" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:122 }); posts_hot_network.click({ item_type:2, location:8 })"> How to make a dragonborn sorcerer appear to be human for 8 to 16 hours? </a> </li> 
+      </ul> 
+      <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:8 })"> more hot questions </a> 
+     </div> 
+    </div> 
+    <div id="feed-link"> 
+     <div id="feed-link-text"> 
+      <a href="/feeds" title="the 30 most recent questions"> <span class="feed-icon"></span>recent questions feed </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://blog.stackoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.dsp.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3570 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Signal Processing Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

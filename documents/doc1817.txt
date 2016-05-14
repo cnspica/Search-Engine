@@ -1,0 +1,567 @@
+http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>ISO files, optical drives and bootable flash drives «  Super User Blog</title> 
+  <link rel="alternate" type="application/rss+xml" title="Super User Blog RSS Feed" href="http://blog.superuser.com/feed/"> 
+  <link rel="shortcut icon" href="http://blog.superuser.com/wp-content/themes/stackexchange/sites/superuser/images/favicon.ico"> 
+  <link rel="stylesheet" href="http://blog.superuser.com/wp-content/themes/stackexchange/style.css" type="text/css"> 
+  <link rel="stylesheet" href="http://blog.superuser.com/wp-content/themes/stackexchange/print.css" type="text/css" media="print"> 
+  <link rel="pingback" href="http://blog.superuser.com/xmlrpc.php"> 
+  <link rel="alternate" type="application/rss+xml" title="Super User Blog » ISO files, optical drives and bootable flash drives Comments Feed" href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/feed/"> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/blog.superuser.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.8"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="seAuth-css" href="http://blog.superuser.com/wp-content/plugins/seAuthentication/seAuthentication.css?ver=4.2.8" type="text/css" media="all"> 
+  <link rel="stylesheet" id="stackexchange_superuser_stylesheet-css" href="http://blog.superuser.com/wp-content/themes/stackexchange/sites/superuser/style.css?ver=4.2.8" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=4.2.8"></script> 
+  <script type="text/javascript" src="http://blog.superuser.com/wp-content/plugins/seAuthentication/seAuthentication.js?ver=4.2.8"></script> 
+  <style type="text/css">img.{border:0;margin:0 0 0 2px !important;}</style> 
+  <!-- Tweet This v1.8.3 b037 mode alpha --> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.superuser.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.superuser.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="prev" title="Geek on Sound (or.. does anyone really need a sound card these days?)" href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/"> 
+  <meta name="generator" content="WordPress 4.2.8"> 
+  <link rel="canonical" href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/"> 
+  <link rel="shortlink" href="http://wp.me/p1rLZ8-1sL"> 
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 
+ </head> 
+ <body> 
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        var $siteSwitcher = $('#siteSwitcher-dialog');
+
+        if(document.location.href.indexOf("moderator.stackexchange.com") !== -1) {
+            $('.current-site-header').hide();
+            $('.current-site-container').hide();
+        }
+
+        $(document).click(function (e) {
+            if (e.target != $('.topbar-icon')[0] && !$.contains($siteSwitcher[0], e.target) && $siteSwitcher.is(':visible')) {
+                $('.logo-se').click();
+            }
+        });
+        $('.logo-se').click(function () {
+            $(this).parent().toggleClass('topbar-icon-on');
+            $siteSwitcher.css('top', $('.topbarWrapper').offset().top + $('.topbarWrapper').height());
+            $siteSwitcher.toggle();
+            return false;
+        });
+    });
+</script> 
+  <div class="topbarWrapper"> 
+   <div class="topbar"> 
+    <div id="siteSwitcher-dialog" style="display:none;"> 
+     <div class="siteSwitcher-dialog-header current-site-header">
+      <h3>current community</h3>
+     </div> 
+     <div class="siteSwitcher-dialog-content current-site-container"> 
+      <ul> 
+       <li> 
+        <div class="related-links"> 
+         <a href="//chat.stackexchange.com?host=superuser.com">chat</a> 
+        </div> <a href="http://superuser.com"> <img src="http://cdn.sstatic.net/Sites/stackexchangemeta/img/icon-32.png" width="16" height="16" class="favicon"> Super User </a> </li> 
+       <li> 
+        <div class="L-shaped-icon-container"> 
+         <span class="L-shaped-icon"></span> 
+        </div> <a href="//meta.superuser.com"> <img src="http://cdn.sstatic.net/Sites/stackexchangemeta/img/icon-32.png" width="16" height="16" class="favicon"> Super User Meta </a> </li> 
+      </ul> 
+     </div> 
+     <div class="siteSwitcher-dialog-header">
+      <h3>more communities</h3>
+     </div> 
+     <div class="siteSwitcher-dialog-content"> 
+      <ul> 
+       <li class="more-communities"> Explore other Stack Exchange communities<br>on <a href="//stackexchange.com/sites">stackexchange.com</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="topbar-icon"> 
+     <a href="http://stackexchange.com" class="logo-se">Stack Exchange</a> 
+    </div> 
+    <div class="searchBox"> 
+     <form class="frmSearch" method="get" id="searchform" action="http://blog.superuser.com/"> 
+      <input type="text" size="25" class="txtSearch" value="Search" name="s" id="s" onblur="if (this.value == '')  {this.value = 'Search';}" onfocus="if (this.value == 'Search')  {this.value = '';}"> 
+      <input type="hidden" class="btnSearch" id="searchsubmit" value="Search"> 
+     </form> 
+    </div> 
+    <div id="hlinks"> 
+     <ul id="top_nav_links">
+      <li class="page_item page-item-187"><a href="http://blog.superuser.com/attribution/">Attribution</a></li> 
+      <li class="page_item page-item-1662"><a href="http://blog.superuser.com/contribute/">Contribute to the Blog</a></li> 
+      <li class="page_item page-item-2891"><a href="http://blog.superuser.com/about/">About the blog</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div id="header"> 
+    <!-- Header Starts --> 
+    <a href="http://blog.superuser.com/"><img src="http://blog.superuser.com/wp-content/themes/stackexchange/sites/superuser/images/logo.png" alt="site title" class="logo-blog"></a> 
+    <!-- Header Ends --> 
+   </div> 
+   <div id="content"> 
+    <!-- Main Content Start --> 
+    <div class="contentWrapper"> 
+     <div id="mainbar"> 
+      <h1 class="blog-title"><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/">ISO files, optical drives and bootable flash drives</a></h1> 
+      <div class="meta-info">
+       <span class="postedDate">February 7, 2016</span> by 
+       <a href="http://blog.superuser.com/author/jiggunjer/" title="Posts by jiggunjer" rel="author">jiggunjer</a>. 
+       <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comments">3 comments</a> 
+      </div> 
+      <div class="post-text"> 
+       <h3>&nbsp;<span style="font-weight: 400">How do I place a bootable ISO on a USB drive?</span></h3> 
+       <p><span style="font-weight: 400">(</span><a href="https://superuser.com/questions/66948/how-do-i-place-a-bootable-iso-on-a-usb-drive"><span style="font-weight: 400">Question ID 66948</span></a><span style="font-weight: 400">)</span></p> 
+       <p>This is a popular question with many similar or overlapping questions. Browsing the various linked and related questions I noticed the information on this subject is limited and fragmented. Most answers are simple software recommendations and do not touch upon any underlying issues. This article is meant to help fellow superusers appreciate the assumptions we take for granted and serve as a springboard for those that need to dig deeper to solve their problem.</p> 
+       <p><span style="font-weight: 400">Most people who are looking to place an ISO on a USB drive want to&nbsp;</span><span style="font-weight: 400">put </span><i><span style="font-weight: 400">any</span></i><span style="font-weight: 400"> ISO on a USB drive and make the drive bootable (a</span>lso known as making a live USB or installer USB from a binary image file). Examples include:</p> 
+       <ul> 
+        <li>Windows installer / Windows recovery</li> 
+        <li>Some other&nbsp;rescue media&nbsp;needed to restore a&nbsp;backup&nbsp;(e.g. <a href="http://www.sevenforums.com/tutorials/218920-macrium-reflect-create-bootable-rescue-usb-drive.html">Macrium reflect</a>)</li> 
+        <li>Linux live image, possibly <a href="https://www.maketecheasier.com/persistent-live-usb-vs-full-install-usb/">persistent</a></li> 
+        <li>A full OS install onto a USB</li> 
+        <li>does <strong>not</strong> include useless&nbsp;ISOs,&nbsp;e.g. non-data like those filled with music or video.</li> 
+       </ul> 
+       <p><span style="font-weight: 400">This is </span><b><i>not </i></b><span style="font-weight: 400">necessarily&nbsp;the same as:</span></p> 
+       <ul> 
+        <li style="font-weight: 400"><span style="font-weight: 400">putting an ISO on a bootable USB drive </span></li> 
+        <li style="font-weight: 400"><span style="font-weight: 400">copying an ISO file or its filesystem contents onto a formatted USB drive</span></li> 
+       </ul> 
+       <p><span style="font-weight: 400">The problem we solve with today’s post is: “Given an ISO and a non-bootable USB drive, how do I create a bootable USB?”</span></p> 
+       <h3><strong>What is an ISO anyway?</strong></h3> 
+       <p><span style="font-weight: 400">In the broadest sense it is a binary image (a.k.a. carbon copy, snapshot or raw data backup) of the storage sectors of a block-device such as a DVD, USB drive, micro-sd card or HDD. The ISO format has no standard (ironically), so there is no pre-defined header (if any), nor any restriction on what filesystems may be contained. These image files are </span><i><span style="font-weight: 400">not </span></i><span style="font-weight: 400">related to graphical/visual image files like JPEGs. <em><strong>But</strong> </em>in common usage an ISO is expected to consist of a single standard filesystem, like the&nbsp;ISO 9660 filesystem.&nbsp;</span><span style="font-weight: 400">Here is another good definition (from <a href="http://www.magiciso.com/tutorials/miso-whatiso.htm">MagicISO </a>website):&nbsp;</span></p> 
+       <blockquote>
+        Going by the more restrictive definition, an “ISO” is created by copying an entire disc, from sector 0&nbsp;to the end, into a file. […]&nbsp;it isn’t possible to store anything but a single data track in this fashion. Audio tracks, mixed-mode discs, CD+G, multisession, and other fancy formats can’t be represented. [this specifically refers to discs with an ISO 9660 filesystem, as a&nbsp;
+        <em>convention</em>]
+       </blockquote> 
+       <p>In case you’re wondering about tracks, they’re basically partitions–so obviously a single filesystem can not have partitions. Of course an image can contain multiple tracks/partitions, but if we refer to such an image as an ISO we are using the loose definition (and probably making some developer angry). So an ISO can be any data image, but by <strong>convention</strong> we mean the entire&nbsp;user data* from an optical disk, which is commonly formatted with a <strong>single filesystem</strong>. So your ISO will <em>probably</em> conform to this more restrictive definition.</p> 
+       <p><span style="font-weight: 400">The name originated from CD images that commonly used ISO 9660 to store data. Nowadays most uses assume an ISO refers to an image from an optical disk like CD or DVD (even though in DVD the UDF filesystem is more common) . Even <a href="http://wiki.osdev.org/Mkisofs">tools</a>&nbsp;that can create an ISO from a HDD folder probably implicitly convert to an optical media filesystem like ISO 9660. For this reason it may be better for software to use a different extension like “.IMG” to denote non-optical image files.</span></p> 
+       <p>*With CDs a raw sector is 2352 bytes, but only 2048 bytes are used for data in formatted storage. The rest is used for error correction related stuff. This is why you might see corrupted files if you extract a true raw image from a CD and try to mount it–files are injected with junk bits. DVDs don’t make this distinction, their sectors only have 2048 bytes of user data. So in the case of CDs with filesystems an ISO is normally not a true sector-by-sector carbon copy.</p> 
+       <blockquote>
+        These days it’s not altogether uncommon to see messages about “making an ISO” of an audio CD, which makes no sense at all. (
+        <a href="http://www.magiciso.com/tutorials/miso-whatiso.htm">MagicISO FAQ</a>)
+       </blockquote> 
+       <h3><strong>Aha, a copy ‘sectors’ from a ‘block device’…</strong></h3> 
+       <p>A&nbsp;block device is just jargon for storage media, or ‘drive’ if you like. From a programmer’s point of view storage is a one dimensional array (row/line) of bits. But at the hardware level you can’t address each bit individually. The smallest ‘word’ size for reading and writing is called the sector size. Filesystems are implemented to improve aspects like speed or security (e.g. we’d like for&nbsp;files to have names instead of a sector number like 0x0000008AF1). It has been a while since I attempted graphics:</p> 
+       <div id="attachment_5634" style="width: 693px" class="wp-caption alignleft">
+        <a href="http://blog.superuser.com/files/2016/01/block_device3.png"><img class="wp-image-5634 size-full" src="http://blog.superuser.com/files/2016/01/block_device3.png" alt="test" width="683" height="204"></a>
+        <p class="wp-caption-text">Figure 1 Block Device: The smallest addressable unit in a block device is called a sector. CDs and DVDs typically have a sector size of 2048 bytes. Filesystems (managed by the OS) may group multiple sectors into blocks. E.g. 4 sectors in the physical addressing space may constitute 1 block address in the logical (filesystem) addressing space–see image. The same data may occupy different sectors depending on the filesystem type. In the case of ISO 9660 a block is normally also 2048 bytes (but this value isn’t demanded by&nbsp;the standard).</p>
+       </div> 
+       <p>So files occupy <em>at least</em>&nbsp;1 sector. Images (ISOs in the loose definition) are created by copying all the bits in all the sectors. In case the data occupies less than the whole sector (e.g small files)&nbsp;the other bits are still copied instead of being zeroed out, because the filesystem may require them. On a sidenote, in my opinion file based images (like WIM used in Windows backups) do not fit the definition of “image”.&nbsp;But that is a discussion for another article.</p> 
+       <p>The size of a sector depends on the hardware. Careful when burning an image your software does not make any wrong assumptions. For example copying every two original sectors into one new one might mess up the filesystem.</p> 
+       <blockquote>
+        Beginning in late 2009, accelerating in 2010 and hitting mainstream in 2011, hard drive companies are migrating away from the legacy sector size of 512 bytes to a larger, more efficient sector size of 4096 bytes, generally referred to as 4K sectors, and now referred to as the Advanced Format by IDEMA (The International Disk Drive Equipment and Materials Association). (
+        <a href="http://www.seagate.com/gb/en/tech-insights/advanced-format-4k-sector-hard-drives-master-ti/">seagate</a>)
+       </blockquote> 
+       <div id="attachment_5648" style="width: 310px" class="wp-caption alignleft">
+        <a href="http://blog.superuser.com/files/2016/01/manage_images.png"><img class="size-medium wp-image-5648" src="http://blog.superuser.com/files/2016/01/manage_images-300x143.png" alt="You can manage disk images with tools like these (bit outdated)." width="300" height="143"></a>
+        <p class="wp-caption-text">You can manage disk images with tools like these.</p>
+       </div> 
+       <p><span style="font-weight: 400">Tools that can create an ISO from optical media are common. Most disk burning software will also have this functionality. Though it seems much harder to find software that will make a true image of non-optical media (like a HDD or USB drive). Most backup software (Acronis, Paragon, Norton, etc.) &nbsp;will do this, but they may use proprietary formats and/or compression.&nbsp;</span></p> 
+       <p><span style="font-weight: 400">It is also possible to image individual partitions and even files on a hard drive. Mounting or file exploring software will need to recognize the filesystem before it becomes usable. Ok so, enough about images, how do we&nbsp;use&nbsp;some&nbsp;ISO with a&nbsp;flash drive?</span></p> 
+       <blockquote>
+        *A sidenote for Windows users: If you want to quickly get an ISO from your DVD or explore the files of one, 7zip might be all you need. If you want to make an ISO from folders you’ll need to try something more advanced like imgburn–it lets you add/load a custom bootsector. Surprisingly few utilities support making ISOs from folders.&nbsp;Note that only adding a bootsector will not re-create the original ISO if hidden settings were lost.
+       </blockquote> 
+       <p><strong>Bootable vs Non-bootable</strong></p> 
+       <p><span style="font-weight: 400">The question as it is now specifically refers to bootable ISOs as opposed to non-bootable ISOs. Is there such a distinction, and if so, what’s the difference? Well, bootable ISOs contain ‘invisible’ data called &nbsp;boot-sectors. Now this is where it gets messy because many people don’t know what kind of firmware they have (BIOS or UEFI) and it determines the bootcode requirements.</span></p> 
+       <p><em>UEFI</em></p> 
+       <p><span style="font-weight: 400">UEFI systems don’t need this invisible data to boot, provided your files include .efi files in the <a href="https://www.thomas-krenn.com/en/wiki/Creating_Windows_UEFI_Boot-Stick_in_Windows">right place</a> on your USB drive. The drive should also be marked active and be formatted with the FAT32 filesystem. Simple. This is why some cases of copy and pasting the ISO contents just work, while others do the same steps and fail miserably on their BIOS systems. In certain&nbsp;cases the USB drive has an MBR instead of a GPT and the UEFI goes into BIOS mode without trying to look for the .efi files. To fix this bad behavior either change a setting in the UEFI or change the drive to a GPT type partitioning.</span></p> 
+       <p><em>BIOS</em></p> 
+       <p>So technically an ISO with efi files might be bootable, but I will reserve the term “bootable ISO” for those images with invisible boot files. For the BIOS case you will need this invisible data (i.e. a bootable ISO) unless your USB drive was previously formatted with compatible boot code, in which case you can just replace the visible filesystem contents from the ISO–copy paste.&nbsp;Additionally, in some rare cases the BIOS might be&nbsp;smart enough to boot without a sector like UEFI.</p> 
+       <p><span style="font-weight: 400">There are normally two sectors involved in loading the operating system, the&nbsp;<a href="https://en.wikipedia.org/wiki/Master_boot_record">MBR </a>and the <a href="https://en.wikipedia.org/wiki/Volume_boot_record">VBR</a>. This implies a&nbsp;BIOS system can’t&nbsp;boot from a GPT style drive. To get this invisible data from your ISO to your USB you need to burn the image, not just copy the filesystem (visible) files. If you don’t know if your ISO is bootable, burn it and test it, or maybe check the <a href="https://superuser.com/questions/683210/how-do-i-determine-if-an-iso-is-a-hybrid">first sector</a>.</span></p> 
+       <blockquote>
+        “ The location and size of the boot sector (perhaps corresponding to a logical disk sector) is specified by the design of the computing platform.”
+       </blockquote> 
+       <p><span style="font-weight: 400">— Wikipedia (</span><a href="https://en.wikipedia.org/wiki/Boot_sector"><span style="font-weight: 400">Boot_sector</span></a><span style="font-weight: 400">)</span></p> 
+       <p><span style="font-weight: 400">So it’s a few Kb somewhere that the CPU loads to do the bootstrapping process. You can’t access this data with a file explorer, because&nbsp;it is&nbsp;not part of the filesystem proper. A good ISO image editor should let you modify&nbsp;all the bytes, possibly overwriting them with custom sub-images.</span></p> 
+       <p><span style="font-weight: 400">Now the basic theory is out of the way, perhaps&nbsp;a better question is: what about all those free tools that take an ISO and give back a bootable USB?&nbsp;I suppose some tools may&nbsp;add the invisible stuff for you if you have&nbsp;a non-bootable ISO. Or they might choose between MBR and GPT for you. Or you might be having trouble finding software you like that burns your ISO to your drive. They just make life a bit easier. But they might not consider all the&nbsp;variables I’ve mentioned.</span></p> 
+       <p><span style="font-weight: 400">The most important thing to remember is a USB drive can be made bootable independently of the data. The following general steps can be taken to create our live/installer USB:</span></p> 
+       <ol> 
+        <li>If you don’t know if your ISO is bootable, burn and test it. If that fails then wipe and:</li> 
+        <li><span style="font-weight: 400">Make USB bootable by adding bootsector(s), formatting may wipe the drive. A common tool is <a href="https://technet.microsoft.com/en-us/library/cc749177(v=ws.10).aspx">bootsect.exe</a>.&nbsp;This is needed for BIOS systems. This process (particularly the VBR) is often OS specific, but many non-windows solutions use GRUB or Syslinux (<a href="https://wiki.archlinux.org/index.php/Boot_loaders">link</a>). There are many tutorials on the web about how to install one of these bootsectors. But before you get stuck in, invest some more time into finding a working image file, most developers distribute them.&nbsp;</span></li> 
+        <li><span style="font-weight: 400">Add </span><i><span style="font-weight: 400">compatible</span></i><span style="font-weight: 400"> files (e.g. linux distro, windows installer, rescue program). You can just copy the files contained by the ISO to your USB drive. Depending on your target operating system your folder structure may need to be in&nbsp;a specific format. In <a href="http://www.pendrivelinux.com/install-grub2-on-usb-from-ubuntu-linux/">some cases</a> you are allowed to copy the whole ISO.</span></li> 
+       </ol> 
+       <p><span style="font-weight: 400">No-one wants to burn a DVD twice, even if they could. But once you have a bootable USB drive you can simply copy the data or folders to it. As long as your invisible boot-sector is valid for whatever you want to use you can just swap files. I believe Vista and up use compatible boot code for BIOS and UEFI. An alternative route is to modify the ISO directly and then burn it all at once.&nbsp;</span></p> 
+       <p><span style="font-weight: 400">&nbsp;Though we agreed to follow the ISO convention, ISO hybrids exist. They&nbsp;already contain the MBR code the flash drive needs while also keeping the 9660 filesystem intact. Rarely are USB-only images distributed (unfortunately).</span></p> 
+       <div id="attachment_5635" style="width: 310px" class="wp-caption alignnone">
+        <a href="http://blog.superuser.com/files/2016/01/optical_disk_layout.png"><img class="size-medium wp-image-5635" src="http://blog.superuser.com/files/2016/01/optical_disk_layout-300x140.png" alt="The above shows how a possible hybrid ISO can host both types of bootsector (optical and HDD). Only the green area is viewable to a typical user when mounting the partition." width="300" height="140"></a>
+        <p class="wp-caption-text">The above shows how a possible hybrid ISO can host both types of bootsector (optical and HDD). Only the green area is viewable to a typical user when mounting the partition.</p>
+       </div> 
+       <p><span style="font-weight: 400">There are many tools like the official Microsoft tool (probably uses bootsect), Rufus, YUMI (a.k.a pendrivelinux) and Unetbootin. I’m not sure how these programs do everything, but&nbsp;I believe most software will require a bootable ISO to generate the bootable USB sector. Perhaps they translate the boot volume descriptor (optical disk filesystem) into an MBR compatible with whatever filesystem they use to format the drive (probably FAT32, or maybe they leave it in 9660).</span></p> 
+       <p><b>So what if you have a bootable ISO, but it has&nbsp;become unbootable?</b></p> 
+       <p><span style="font-weight: 400">Normally non-bootable ISOs are useless for the purposes of live/installer USBs (e.g. a DVD video ISO)–unless you somehow accidentally end up with a non-bootable ISO that <em>should</em> have been bootable.</span></p> 
+       <p><span style="font-weight: 400">For example, if you take a bootable DVD you can create an ISO from it both with or without the bootable property, depending on how you do it. In fact you can save any file or folder in ISO format, because there is no standard–it is just a filesystem snapshot. It is the settings used in the ISO creation process that determine if the produced ISO is bootable or not. </span></p> 
+       <p><span style="font-weight: 400">People often end up with non-bootable ISOs when they try to customize their ISO or create an ISO from a folder. The bootable property is lost when extracting an ISO and then repacking it without setting ‘make bootable’ options. Be sure to copy your bootsector.bin from the original ISO.</span></p> 
+       <p><span style="font-weight: 400">Now, let’s say you have a folder with files you want to turn into a bootable USB. You can either manually make the USB bootable, but this may be tricky for some&nbsp;images/systems. Or you can try and turn the folder into a bootable ISO, which you then supply to some one-click tool to create the live/installer USB (you’d need to find/create a bootsector first–and no guarantee it will work). Lastly there may be a niche tool that converts your customized folder directly to a working official ISO (like WAIK or&nbsp;RT se7en Lite for Windows images).</span></p> 
+       <p><span style="font-weight: 400">Note the lack of 2&nbsp;options: there doesn’t seem to be software that accepts a folder directly, probably due to the lack of bootsector info, though it should work for modern UEFI systems. And there doesn’t seem to be a tool that can make a USB bootable for a given image distribution (i.e. just do step 2&nbsp;in a few&nbsp;clicks). I’d be happy to hear information to the contrary!</span></p> 
+       <h3><strong>Conclusion</strong></h3> 
+       <p><span style="font-weight: 400">Many one-click tools do require an ISO (preferably a bootable one) to generate a bootable USB. Just remember that an ISO may be&nbsp;more than just a file archive, and the underlying filesystems may vary. Get the right ISO and any burning software will copy all the sectors to your USB drive, it shouldn’t be hard. And don’t be worried&nbsp;if the extension is something like .img or .bin, in many cases an image is an image!</span></p> 
+       <p>&nbsp;</p> 
+       <div> 
+        <p><span class="filedto">Filed under <a href="http://blog.superuser.com/category/backup-restore/" rel="category tag">Backup &amp; Restore</a> <a href="http://blog.superuser.com/category/filesystems/" rel="category tag">Filesystems</a></span></p> 
+       </div> 
+      </div> 
+      <div class="navigation"> 
+       <span>« <a href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/" rel="prev">Geek on Sound (or.. does anyone really need a sound card these days?)</a></span> | 
+       <span></span> 
+      </div> 
+      <div id="comments"> 
+       <!-- You can start editing here. --> 
+       <h2 id="commentsTitle">3 Comments</h2> 
+       <p>Subscribe to comments with <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/feed">RSS</a>.</p> 
+       <div class="commentlist"> 
+        <li class="comment byuser comment-author-Raystafarian even thread-even depth-1" id="comment-2771120"> 
+         <div id="div-comment-2771120" class="comment-body"> 
+          <div class="comment-author vcard"> 
+           <img src="https://www.gravatar.com/avatar/b27b718aa1e9d3835ef807359666eb34?s=128&amp;d=identicon&amp;r=PG&amp;s=48" class="avatar avatar-48 photo" height="48" width="48"> 
+           <cite class="fn"><a href="http://superuser.com/users/116196/raystafarian">Raystafarian</a></cite> 
+           <span class="says">says:</span> 
+          </div> 
+          <div class="comment-meta commentmetadata">
+           <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771120"> February 8, 2016 at 2:01 pm</a> 
+          </div> 
+          <p>Very thorough – great job!</p> 
+          <div class="reply">
+           <a class="comment-reply-link" href="/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/?replytocom=2771120#respond" onclick="return addComment.moveForm( &quot;div-comment-2771120&quot;, &quot;2771120&quot;, &quot;respond&quot;, &quot;5627&quot; )" aria-label="Reply to Raystafarian">Reply to this Comment</a>
+          </div> 
+         </div> </li>
+        <!-- #comment-## --> 
+        <li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-2771364"> 
+         <div id="div-comment-2771364" class="comment-body"> 
+          <div class="comment-author vcard"> 
+           <img alt="" src="http://2.gravatar.com/avatar/261556b0de516c7fd2ad028c85d3d0d3?s=48&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/261556b0de516c7fd2ad028c85d3d0d3?s=96&amp;d=mm&amp;r=g 2x" class="avatar avatar-48 photo" height="48" width="48"> 
+           <cite class="fn">angel ferrer</cite> 
+           <span class="says">says:</span> 
+          </div> 
+          <div class="comment-meta commentmetadata">
+           <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771364"> February 10, 2016 at 4:13 am</a> 
+          </div> 
+          <p>this article is very wide ranging and knowledgeable, but useless. it does not help me create a bootable USB.</p> 
+          <p>it’s like a dissertation on the chemistry of rubber, when all i need is to change a tire.</p> 
+          <div class="reply">
+           <a class="comment-reply-link" href="/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/?replytocom=2771364#respond" onclick="return addComment.moveForm( &quot;div-comment-2771364&quot;, &quot;2771364&quot;, &quot;respond&quot;, &quot;5627&quot; )" aria-label="Reply to angel ferrer">Reply to this Comment</a>
+          </div> 
+         </div> 
+         <ul class="children"> 
+          <li class="comment byuser comment-author-jiggunjer bypostauthor even depth-2" id="comment-2771492"> 
+           <div id="div-comment-2771492" class="comment-body"> 
+            <div class="comment-author vcard"> 
+             <img src="https://www.gravatar.com/avatar/0bfda2f519df763962a25d9c7e673a96?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" class="avatar avatar-48 photo" height="48" width="48"> 
+             <cite class="fn"><a href="http://superuser.com/users/375935/jiggunjer">jiggunjer</a></cite> 
+             <span class="says">says:</span> 
+            </div> 
+            <div class="comment-meta commentmetadata">
+             <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771492"> February 11, 2016 at 12:00 am</a> 
+            </div> 
+            <p>The three steps mentioned are a starting point for googling a fix for <em>your</em> particular ISO. There is no specific fix-all method, though I hear good feedback about rufus for many cases. You could also try the other programs I mentioned.</p> 
+            <p>The internet is full with dumbed-down 3 step guides for changing particular types of ‘tire’. The intended audience for this article is a bit different.</p> 
+           </div> </li>
+          <!-- #comment-## --> 
+         </ul>
+         <!-- .children --> </li>
+        <!-- #comment-## --> 
+       </div> 
+       <div class="navigation"> 
+        <div class="alignleft"></div> 
+        <div class="alignright"></div> 
+       </div> 
+       <script type="text/javascript">
+	(function($) {
+		$(function() {
+			$("#commentform input, #commentform textarea").removeAttr("tabindex");
+		});
+	})(jQuery);
+</script> 
+       <div id="respond" class="comment-respond"> 
+        <h3 id="reply-title" class="comment-reply-title">Leave a comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#respond" style="display:none;">Cancel reply</a></small></h3> 
+        <form action="http://blog.superuser.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"> 
+         <table> 
+          <tbody> 
+           <tr> 
+            <td class="vm"><a id="toggleLoginState" href="http://blog.superuser.com/wp-content/plugins/seAuthentication/seAuthenticationLogin.php?redirect_to=http%3A%2F%2Fblog.superuser.com%2F2016%2F02%2F07%2Fiso-files-optical-drives-and-bootable-flash-drives%2F%23respond&amp;reauth=1">
+              <div style="text-align:center;">
+               <span style="font-weight:bold;font-size:125%">Log in</span>
+               <br>
+               <span style="font-size:90%;">with Stack Exchange</span>
+              </div></a></td> 
+            <td class="orcell"> 
+             <div class="orword">
+              or
+             </div> 
+             <div class="orline"></div> </td> 
+            <td class="vm"> <p> <input type="text" name="author" id="author" value="" size="22" tabindex="2" class="txtInput" aria-required="true"> <label for="author"><small>Name (required)</small></label> </p> <p> <input type="text" name="email" id="email" value="" class="txtInput" size="22" tabindex="3" aria-required="true"> <label for="email"><small>Mail (will not be published) (required)</small></label> </p> <p> <input type="text" name="url" id="url" value="" class="txtInput" size="22" tabindex="4"> <label for="url"><small>Website</small></label> </p> </td>
+           </tr>
+          </tbody>
+         </table> 
+         <p><textarea name="comment" id="comment" cols="70" rows="10" class="txtComment" tabindex="1"></textarea></p> 
+         <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit comment"> <input type="hidden" name="comment_post_ID" value="5627" id="comment_post_ID"> <input type="hidden" name="comment_parent" id="comment_parent" value="0"> </p>
+         <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="4e88f18261"></p>
+         <div class="g-recaptcha" data-sitekey="6Lfmzf4SAAAAAESlOdWAUnRh3ab4BcteAbBBXsFm" data-theme="standard"></div>
+         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script> 
+         <div id="recaptcha-submit-btn-area">
+          &nbsp;
+         </div> 
+         <noscript> 
+          <style type="text/css">#submit {display:none;}</style> 
+          <input name="submit" type="submit" id="submit-alt" tabindex="6" value="Submit Comment"> 
+         </noscript>
+         <p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="54"></p> 
+        </form> 
+       </div>
+       <!-- #respond --> 
+      </div> 
+     </div> 
+     <div id="sidebar"> 
+      <div class="module siteIntro"> 
+       <!--The Super User Community Blog--> This is a community blog for 
+       <a href="http://superuser.com">Super User</a>. More community blogs are available at 
+       <a href="http://blogoverflow.com">Blog Overflow</a>. 
+      </div> 
+      <div class="module module-rss"> 
+       <a href="http://blog.superuser.com/feed/"><img src="http://blog.superuser.com/wp-content/themes/stackexchange/images/ico_rss.png" alt="Subscribe to our RSS feed"> Subscribe via RSS</a> 
+      </div> 
+      <div class="module"> 
+       <form class="frmSearch" method="get" id="searchform" action="http://blog.superuser.com/"> 
+        <input type="text" size="25" class="txtSearch" value="Search" name="s" id="s" onblur="if (this.value == '')  {this.value = 'Search';}" onfocus="if (this.value == 'Search')  {this.value = '';}"> 
+        <input type="hidden" class="btnSearch" id="searchsubmit" value="Search"> 
+       </form> 
+       <h4>Recent Posts</h4> 
+       <ul> 
+        <li> <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/">ISO files, optical drives and bootable flash drives</a> </li> 
+        <li> <a href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/">Geek on Sound (or.. does anyone really need a sound card these days?)</a> </li> 
+        <li> <a href="http://blog.superuser.com/2013/10/23/what-to-do-after-buying-a-new-laptop/">What to Do After Buying a New Laptop</a> </li> 
+        <li> <a href="http://blog.superuser.com/2013/08/19/best-of-both-worlds-round-3-msata-ssds/">Best of both worlds round 3: mSATA SSDs</a> </li> 
+        <li> <a href="http://blog.superuser.com/2013/06/13/windows-8-on-a-vhd-trying-windows-without-the-risk/">Windows 8 on a VHD – Trying windows without the risk</a> </li> 
+       </ul> 
+       <h4>Recent Comments</h4>
+       <ul id="recentcomments">
+        <li class="recentcomments"><span class="comment-author-link"><a href="http://superuser.com/users/9666/tom-wijsman">Tom Wijsman</a></span> on <a href="http://blog.superuser.com/2011/05/10/maximizing-the-lifetime-of-your-ssd/#comment-2775135">Maximizing the lifetime of your SSD</a></li>
+        <li class="recentcomments"><span class="comment-author-link"><a href="http://superuser.com/users/375935/jiggunjer">jiggunjer</a></span> on <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771492">ISO files, optical drives and bootable flash drives</a></li>
+        <li class="recentcomments"><span class="comment-author-link">angel ferrer</span> on <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771364">ISO files, optical drives and bootable flash drives</a></li>
+        <li class="recentcomments"><span class="comment-author-link"><a href="http://superuser.com/users/116196/raystafarian">Raystafarian</a></span> on <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771120">ISO files, optical drives and bootable flash drives</a></li>
+        <li class="recentcomments"><span class="comment-author-link">amol</span> on <a href="http://blog.superuser.com/2011/04/03/what-is-flashing-the-bios/#comment-2770072">What is “Flashing the BIOS”?</a></li>
+       </ul>
+       <h4>Archives</h4> 
+       <ul> 
+        <li><a href="http://blog.superuser.com/2016/02/">February 2016</a></li> 
+        <li><a href="http://blog.superuser.com/2014/07/">July 2014</a></li> 
+        <li><a href="http://blog.superuser.com/2013/10/">October 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2013/08/">August 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2013/06/">June 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2013/05/">May 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2013/03/">March 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2012/11/">November 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/10/">October 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/09/">September 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/08/">August 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/07/">July 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/06/">June 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/03/">March 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/02/">February 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/01/">January 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2011/12/">December 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/11/">November 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/10/">October 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/09/">September 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/08/">August 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/07/">July 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/06/">June 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/05/">May 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/04/">April 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/03/">March 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/02/">February 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/01/">January 2011</a></li> 
+       </ul> 
+       <h4>Categories</h4> 
+       <ul> 
+        <li class="cat-item cat-item-33"><a href="http://blog.superuser.com/category/podcasts/askdifferent/">Ask Different</a> </li> 
+        <li class="cat-item cat-item-154"><a href="http://blog.superuser.com/category/backup-restore/">Backup &amp; Restore</a> </li> 
+        <li class="cat-item cat-item-3"><a href="http://blog.superuser.com/category/battle-of-the-giants/">Battle of the Giants</a> </li> 
+        <li class="cat-item cat-item-4"><a href="http://blog.superuser.com/category/browsers/">Browsers</a> </li> 
+        <li class="cat-item cat-item-5"><a href="http://blog.superuser.com/category/charity/">Charity</a> </li> 
+        <li class="cat-item cat-item-6"><a href="http://blog.superuser.com/category/college/">College</a> </li> 
+        <li class="cat-item cat-item-7"><a href="http://blog.superuser.com/category/compression/">Compression</a> </li> 
+        <li class="cat-item cat-item-8"><a href="http://blog.superuser.com/category/computing/">Computing</a> </li> 
+        <li class="cat-item cat-item-9"><a href="http://blog.superuser.com/category/encryption/">Encryption</a> </li> 
+        <li class="cat-item cat-item-10"><a href="http://blog.superuser.com/category/featured/">Featured</a> </li> 
+        <li class="cat-item cat-item-11"><a href="http://blog.superuser.com/category/filesystems/">Filesystems</a> </li> 
+        <li class="cat-item cat-item-146"><a href="http://blog.superuser.com/category/hard-drives/">Hard Drives</a> </li> 
+        <li class="cat-item cat-item-12"><a href="http://blog.superuser.com/category/hardware/">Hardware</a> </li> 
+        <li class="cat-item cat-item-13"><a href="http://blog.superuser.com/category/history/">History</a> </li> 
+        <li class="cat-item cat-item-14"><a href="http://blog.superuser.com/category/htpc/">HTPC</a> </li> 
+        <li class="cat-item cat-item-15"><a href="http://blog.superuser.com/category/interviews/">Interviews</a> </li> 
+        <li class="cat-item cat-item-92"><a href="http://blog.superuser.com/category/memory/">Memory</a> </li> 
+        <li class="cat-item cat-item-16"><a href="http://blog.superuser.com/category/networking-2/">Networking</a> </li> 
+        <li class="cat-item cat-item-17"><a href="http://blog.superuser.com/category/news/">News</a> </li> 
+        <li class="cat-item cat-item-18"><a href="http://blog.superuser.com/category/operating-systems/">Operating Systems</a> </li> 
+        <li class="cat-item cat-item-19"><a href="http://blog.superuser.com/category/organizing/">Organizing</a> </li> 
+        <li class="cat-item cat-item-20"><a href="http://blog.superuser.com/category/podcasts/">Podcasts</a> </li> 
+        <li class="cat-item cat-item-21"><a href="http://blog.superuser.com/category/productive-thursday/">Productive Thursday</a> </li> 
+        <li class="cat-item cat-item-22"><a href="http://blog.superuser.com/category/qotw/">Question of the Week</a> </li> 
+        <li class="cat-item cat-item-23"><a href="http://blog.superuser.com/category/reviews/">Reviews</a> </li> 
+        <li class="cat-item cat-item-119"><a href="http://blog.superuser.com/category/security/">Security</a> </li> 
+        <li class="cat-item cat-item-24"><a href="http://blog.superuser.com/category/software/">Software</a> </li> 
+        <li class="cat-item cat-item-25"><a href="http://blog.superuser.com/category/ssd/">Solid State Drives</a> </li> 
+        <li class="cat-item cat-item-26"><a href="http://blog.superuser.com/category/super-user/">Super User</a> </li> 
+        <li class="cat-item cat-item-28"><a href="http://blog.superuser.com/category/ubuntu/">Ubuntu</a> </li> 
+        <li class="cat-item cat-item-1"><a href="http://blog.superuser.com/category/uncategorized/">Uncategorized</a> </li> 
+        <li class="cat-item cat-item-29"><a href="http://blog.superuser.com/category/utilities/">Utilities</a> </li> 
+        <li class="cat-item cat-item-30"><a href="http://blog.superuser.com/category/virtualization/">Virtualization</a> </li> 
+        <li class="cat-item cat-item-31"><a href="http://blog.superuser.com/category/windows/">Windows</a> </li> 
+        <li class="cat-item cat-item-157"><a href="http://blog.superuser.com/category/windows-8-challenge/">Windows 8 Challenge</a> </li> 
+        <li class="cat-item cat-item-32"><a href="http://blog.superuser.com/category/wtfriday/">WTFriday</a> </li> 
+       </ul> 
+       <h4>Meta</h4> 
+       <ul> 
+        <li><a href="http://blog.superuser.com/wp-login.php?action=register">Register</a></li> 
+        <li><a href="http://blog.superuser.com/wp-content/plugins/seAuthentication/seAuthenticationLogin.php?reauth=1">Log in</a></li> 
+        <li><a href="http://blog.superuser.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+        <li><a href="http://blog.superuser.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+        <li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li> 
+       </ul> 
+      </div> 
+      <div class="module"> 
+       <h4>Latest Articles</h4> 
+       <ul> 
+        <li><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/">ISO files, optical drives and bootable flash drives</a></li> 
+        <li><a href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/">Geek on Sound (or.. does anyone really need a sound card these days?)</a></li> 
+        <li><a href="http://blog.superuser.com/2013/10/23/what-to-do-after-buying-a-new-laptop/">What to Do After Buying a New Laptop</a></li> 
+        <li><a href="http://blog.superuser.com/2013/08/19/best-of-both-worlds-round-3-msata-ssds/">Best of both worlds round 3: mSATA SSDs</a></li> 
+        <li><a href="http://blog.superuser.com/2013/06/13/windows-8-on-a-vhd-trying-windows-without-the-risk/">Windows 8 on a VHD – Trying windows without the risk</a></li> 
+       </ul> 
+       <p class="fr"><a href="/archive/">view all posts</a></p> 
+      </div> 
+      <div class="module"> 
+       <h4>Topics</h4> 
+       <ul class="twoCol"> 
+        <li class="cat-item cat-item-33"><a href="http://blog.superuser.com/category/podcasts/askdifferent/">Ask Different</a> (12) </li> 
+        <li class="cat-item cat-item-154"><a href="http://blog.superuser.com/category/backup-restore/">Backup &amp; Restore</a> (2) </li> 
+        <li class="cat-item cat-item-3"><a href="http://blog.superuser.com/category/battle-of-the-giants/">Battle of the Giants</a> (3) </li> 
+        <li class="cat-item cat-item-4"><a href="http://blog.superuser.com/category/browsers/">Browsers</a> (8) </li> 
+        <li class="cat-item cat-item-5"><a href="http://blog.superuser.com/category/charity/">Charity</a> (1) </li> 
+        <li class="cat-item cat-item-6"><a href="http://blog.superuser.com/category/college/">College</a> (5) </li> 
+        <li class="cat-item cat-item-7"><a href="http://blog.superuser.com/category/compression/">Compression</a> (3) </li> 
+        <li class="cat-item cat-item-8"><a href="http://blog.superuser.com/category/computing/">Computing</a> (14) </li> 
+        <li class="cat-item cat-item-9"><a href="http://blog.superuser.com/category/encryption/">Encryption</a> (4) </li> 
+        <li class="cat-item cat-item-10"><a href="http://blog.superuser.com/category/featured/">Featured</a> (14) </li> 
+        <li class="cat-item cat-item-11"><a href="http://blog.superuser.com/category/filesystems/">Filesystems</a> (8) </li> 
+        <li class="cat-item cat-item-146"><a href="http://blog.superuser.com/category/hard-drives/">Hard Drives</a> (1) </li> 
+        <li class="cat-item cat-item-12"><a href="http://blog.superuser.com/category/hardware/">Hardware</a> (18) </li> 
+        <li class="cat-item cat-item-13"><a href="http://blog.superuser.com/category/history/">History</a> (1) </li> 
+        <li class="cat-item cat-item-14"><a href="http://blog.superuser.com/category/htpc/">HTPC</a> (2) </li> 
+        <li class="cat-item cat-item-15"><a href="http://blog.superuser.com/category/interviews/">Interviews</a> (7) </li> 
+        <li class="cat-item cat-item-92"><a href="http://blog.superuser.com/category/memory/">Memory</a> (1) </li> 
+        <li class="cat-item cat-item-16"><a href="http://blog.superuser.com/category/networking-2/">Networking</a> (10) </li> 
+        <li class="cat-item cat-item-17"><a href="http://blog.superuser.com/category/news/">News</a> (3) </li> 
+        <li class="cat-item cat-item-18"><a href="http://blog.superuser.com/category/operating-systems/">Operating Systems</a> (14) </li> 
+        <li class="cat-item cat-item-19"><a href="http://blog.superuser.com/category/organizing/">Organizing</a> (2) </li> 
+        <li class="cat-item cat-item-20"><a href="http://blog.superuser.com/category/podcasts/">Podcasts</a> (12) </li> 
+        <li class="cat-item cat-item-21"><a href="http://blog.superuser.com/category/productive-thursday/">Productive Thursday</a> (7) </li> 
+        <li class="cat-item cat-item-22"><a href="http://blog.superuser.com/category/qotw/">Question of the Week</a> (33) </li> 
+        <li class="cat-item cat-item-23"><a href="http://blog.superuser.com/category/reviews/">Reviews</a> (12) </li> 
+        <li class="cat-item cat-item-119"><a href="http://blog.superuser.com/category/security/">Security</a> (1) </li> 
+        <li class="cat-item cat-item-24"><a href="http://blog.superuser.com/category/software/">Software</a> (29) </li> 
+        <li class="cat-item cat-item-25"><a href="http://blog.superuser.com/category/ssd/">Solid State Drives</a> (9) </li> 
+        <li class="cat-item cat-item-26"><a href="http://blog.superuser.com/category/super-user/">Super User</a> (6) </li> 
+        <li class="cat-item cat-item-28"><a href="http://blog.superuser.com/category/ubuntu/">Ubuntu</a> (5) </li> 
+        <li class="cat-item cat-item-1"><a href="http://blog.superuser.com/category/uncategorized/">Uncategorized</a> (6) </li> 
+        <li class="cat-item cat-item-29"><a href="http://blog.superuser.com/category/utilities/">Utilities</a> (6) </li> 
+        <li class="cat-item cat-item-30"><a href="http://blog.superuser.com/category/virtualization/">Virtualization</a> (3) </li> 
+        <li class="cat-item cat-item-31"><a href="http://blog.superuser.com/category/windows/">Windows</a> (16) </li> 
+        <li class="cat-item cat-item-157"><a href="http://blog.superuser.com/category/windows-8-challenge/">Windows 8 Challenge</a> (1) </li> 
+        <li class="cat-item cat-item-32"><a href="http://blog.superuser.com/category/wtfriday/">WTFriday</a> (10) </li> 
+       </ul> 
+      </div> 
+      <div class="module"> 
+      </div> 
+      <div class="module"> 
+       <div class="sectionHeader">
+        <h4>Latest Comments</h4> 
+        <ul> 
+         <li><a href="http://blog.superuser.com/2011/05/10/maximizing-the-lifetime-of-your-ssd/#comment-2775135" title="Maximizing the lifetime of your SSD, May 10, 2011">Tom Wijsman</a>: Pingback: A visitor has translated this blog post to Russian on an external SDR Phone Recovery website:...</li> 
+         <li><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771492" title="ISO files, optical drives and bootable flash drives, February 7, 2016">jiggunjer</a>: The three steps mentioned are a starting point for googling a fix for your particular ISO. There is no...</li> 
+         <li><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771364" title="ISO files, optical drives and bootable flash drives, February 7, 2016">angel ferrer</a>: this article is very wide ranging and knowledgeable, but useless. it does not help me create a bootable...</li> 
+         <li><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771120" title="ISO files, optical drives and bootable flash drives, February 7, 2016">Raystafarian</a>: Very thorough – great job! </li> 
+         <li><a href="http://blog.superuser.com/2011/04/03/what-is-flashing-the-bios/#comment-2770072" title="What is “Flashing the BIOS”?, April 3, 2011">amol</a>: thank you man!!! all needed knowledge in one page!! and also i left the thought to flash my bios.. </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- Main Content End --> 
+   </div> 
+   <div id="footer"> 
+    <div class="footerwrap"> 
+     <p>Stack Exchange © 2016 <a href="http://blog.superuser.com/feed/">Entries (RSS)</a> and <a href="http://blog.superuser.com/comments/feed/">Comments (RSS)</a>. <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-Wiki</a></p> 
+    </div> 
+   </div> 
+   <script type="text/javascript">
+	<!--
+	try {
+		var parent_location = new String(parent.location);
+		var top_location = new String(top.location);
+		var cur_location = new String(document.location);
+		parent_location = parent_location.toLowerCase();
+		top_location = top_location.toLowerCase();
+		cur_location = cur_location.toLowerCase();
+
+		if ( top_location != cur_location && parent_location.indexOf('http://blog.superuser.com') != 0 )
+			top.location.href = document.location.href;
+	} catch ( err ) {
+		top.location.href = document.location.href;
+	}
+	//-->
+	</script> 
+   <script type="text/javascript">
+            var sub = document.getElementById('submit');
+            document.getElementById('recaptcha-submit-btn-area').appendChild (sub);
+            document.getElementById('submit').tabIndex = 6;
+            if ( typeof _recaptcha_wordpress_savedcomment != 'undefined') {
+                document.getElementById('comment').value = 
+                    _recaptcha_wordpress_savedcomment;
+            }
+            </script>
+   <script type="text/javascript" src="http://superuser.blogoverflow.com/wp-content/plugins/akismet/_inc/form.js?ver=3.1.5"></script> 
+   <script type="text/javascript" src="http://blog.superuser.com/wp-includes/js/comment-reply.min.js?ver=4.2.8"></script> 
+   <!--stats_footer_test-->
+   <script src="http://stats.wordpress.com/e-201619.js" type="text/javascript"></script> 
+   <script type="text/javascript">
+st_go({blog:'21395650',v:'ext',post:'5627'});
+var load_cmc = function(){linktracker_init(21395650,5627,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script> 
+   <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5620270-31']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>   
+   <!-- Dynamic page generated in 0.280 seconds. --> 
+   <!-- Cached page generated by WP-Super-Cache on 2016-05-13 06:42:26 --> 
+   <!-- Compression = gzip -->
+  </div>
+ </body>
+</html>

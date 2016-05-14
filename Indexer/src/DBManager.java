@@ -46,7 +46,8 @@ public class DBManager {
                 return true;
             }
             catch(Exception exc){
-                System.out.println("Updating Search index failed for the following :"+exc.getMessage());
+//                exc.printStackTrace();
+//                System.out.println("Updating Search index failed for the following :"+exc.getMessage());
                 return false;
             }
 

@@ -1,0 +1,807 @@
+http://stackapps.com
+<!doctype html>
+<html>
+ <head> 
+  <title>Stack Apps</title> 
+  <link rel="shortcut icon" href="/content/Sites/stackapps/img/favicon.ico?v=00f1ed0b538b"> 
+  <link rel="apple-touch-icon image_src" href="/content/Sites/stackapps/img/apple-touch-icon.png?v=ae5288ff04ee"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Apps" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:domain" content="stackapps.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="/content/Sites/stackapps/img/apple-touch-icon@2.png?v=7f3928f04be9&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Stack Apps"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="Q&amp;A for apps, scripts, and development with the Stack Exchange API"> 
+  <meta property="og:url" content="http://stackapps.com/"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="/content/Js/stub.en.js?v=beeead7e5f34"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/stackapps/all.css?v=41926484dc9f"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed of recent questions" href="/feeds"> 
+  <script>
+            StackExchange.ready(function() {
+                StackExchange.realtime.subscribeToActiveQuestions('101', 'home-active');
+            });
+        </script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('101');
+                StackExchange.realtime.subscribeToTopBarNotifications('101');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463142070,"routeName":"Home/Index","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"Stack Apps","description":"Q&A for apps, scripts, and development with the Stack Exchange API","isNoticesTabEnabled":true,"recaptchaPublicKey":"6Lf1SLoSAAAAAOhKTeMXFqPBWg23JOdvCLNpiR0H","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":101,"enableSocialMediaInSharePopup":true},"user":{"fkey":"32cb03f533e940eccb6c49afd058492e","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":false,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"cf93ca293e43","js/moderator.en.js":"022f362eb0a2","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"b9eda6e5c0b8","js/wmd.en.js":"b90dcd7c4c56","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"bd4fb7a0a976","js/tageditornew.en.js":"65c5f5ec346b","js/inline-tag-editing.en.js":"943c7090ea55","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"d8d766025f2d","js/tagsuggestions.en.js":"7dfec0d2a2d7","js/post-validation.en.js":"8c4fef95e838","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"a4aabc825384","js/keyboard-shortcuts.en.js":"cb27f8dccc5f","js/external-editor.en.js":"93769406446f"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(false);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="home-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//stackapps.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//stackapps.com" class="site-link js-gps-track" data-id="101" data-gps-track="
+            site.switch({ target_site:101, item_type:3 }),
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-stackapps" title="Stack Apps"></div> Stack Apps </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://stackapps.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackapps.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://stackapps.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackapps.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://stackapps.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fstackapps.com%2f" class="login-link">sign up</a> <a href="https://stackapps.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackapps.com%2f" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Stack Apps </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content"> 
+    <div id="herobox"> 
+     <div id="hero-content"> 
+      <div id="close">
+       <a title="click to minimize">_</a>
+      </div> 
+      <div id="blurb">
+        Stack Apps is a question and answer site for apps, scripts, and development with the Stack Exchange API. It's 100% free, no registration required. 
+       <br> 
+       <br> 
+       <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fstackapps.com%2f" id="tell-me-more" class="button">Sign up</a> 
+      </div> 
+      <div id="desc"> 
+       <b>Here's how it works:</b> 
+       <ol id="hiw"> 
+        <li id="q">Anybody can ask a question </li> 
+        <li id="an">Anybody can answer </li> 
+        <li id="b">The best answers are voted up and rise to the top </li> 
+       </ol> 
+      </div> 
+      <div style="clear: both"></div> 
+     </div> 
+     <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+    </div> 
+    <script>
+        StackExchange.using("gps", function () {
+            StackExchange.gps.track("hero.show", { hero_type: "hero", location: 3 }, true);
+        });
+    </script> 
+    <div id="mainbar"> 
+     <div class="subheader"> 
+      <h1 id="h-top-questions">Explore Our Questions</h1> 
+      <div id="tabs"> 
+       <a href="?tab=apps" data-nav-xhref="" title="Hot questions tagged 'app' or 'library'" data-value="apps"> apps</a> 
+       <a href="?tab=scripts" data-nav-xhref="" title="Questions tagged 'script' with the most votes" data-value="scripts"> scripts</a> 
+       <a href="?tab=active" data-nav-xhref="" title="Questions that have been asked, answered, or updated recently" data-value="active"> active</a> 
+       <a href="?tab=hot" data-nav-xhref="" title="Questions with the most views, answers, and votes over the last few days" data-value="hot"> hot</a> 
+       <a href="?tab=week" data-nav-xhref="" title="Questions with the most views, answers, and votes this week" data-value="week"> week</a> 
+       <a href="?tab=month" data-nav-xhref="" title="Questions with the most views, answers, and votes this month" data-value="month"> month</a> 
+      </div> 
+     </div> 
+     <div id="explore-tags"> 
+      <a href="/?tags=support" class="post-tag required-tag no-tag-menu" title="Show questions relating to support" rel="tag">support</a>
+      <a href="/?tags=bug" class="post-tag required-tag no-tag-menu" title="Show questions relating to bug" rel="tag">bug</a>
+      <a href="/?tags=app" class="post-tag required-tag no-tag-menu" title="Show questions relating to app" rel="tag">app</a>
+      <a href="/?tags=api" class="post-tag no-tag-menu" title="Show questions relating to api" rel="tag">api</a>
+      <a href="/?tags=script" class="post-tag required-tag no-tag-menu" title="Show questions relating to script" rel="tag">script</a>
+      <a href="/?tags=discussion" class="post-tag required-tag no-tag-menu" title="Show questions relating to discussion" rel="tag">discussion</a>
+      <a href="/?tags=feature-request" class="post-tag required-tag no-tag-menu" title="Show questions relating to feature-request" rel="tag">feature-request</a>
+      <a href="/?tags=api-v2" class="post-tag no-tag-menu" title="Show questions relating to api-v2" rel="tag">api-v2</a>
+      <a href="/?tags=questions" class="post-tag no-tag-menu" title="Show questions relating to questions" rel="tag">questions</a>
+      <a href="/?tags=api-v2.2" class="post-tag no-tag-menu" title="Show questions relating to api-v2.2" rel="tag">api-v2.2</a> 
+      <a class="more-tags" href="/tags">more&nbsp;tags</a> 
+     </div> 
+     <div id="qlist-wrapper"> 
+      <div id="question-mini-list"> 
+       <div class="question-summary narrow" id="question-summary-3881"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="SEAPI - A lightweight Python wrapper for the Stack Exchange API" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/3881/seapi-a-lightweight-python-wrapper-for-the-stack-exchange-api" class="question-hyperlink" title="A lightweight Python wrapper for the Stack Exchange API v2.1.
+Built with Requests.
+
+Why yet another SE API Python wrapper? (I'm aware of Stack.PY - A Python Module for Accessing the Stack Exchange ...">SEAPI - A lightweight Python wrapper for the Stack Exchange API</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">A lightweight Python wrapper for the Stack Exchange API v2.1. Built with Requests. Why yet another SE API Python wrapper? (I'm aware of Stack.PY - A Python Module for Accessing the Stack Exchange …</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-library t-api-v2 t-python"> 
+            <a href="/questions/tagged/library" class="post-tag required-tag" title="show questions tagged 'library'" rel="tag">library</a> 
+            <a href="/questions/tagged/api-v2" class="post-tag" title="show questions tagged 'api-v2'" rel="tag">api-v2</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/14052/piotr-migdal">Piotr Migdal</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-6893"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Typos on api.stackexchange.com/docs/js-lib" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/6893/typos-on-api-stackexchange-com-docs-js-lib" class="question-hyperlink" title="Under the Authentication section on https://api.stackexchange.com/docs/js-lib, there are a few typos (emphasis mine):
+
+
+  scope (optional) – an array of scopes to request during authentication, val...">Typos on api.stackexchange.com/docs/js-lib</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">Under the Authentication section on https://api.stackexchange.com/docs/js-lib, there are a few typos (emphasis mine): scope (optional) – an array of scopes to request during authentication, val…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-bug t-documentation"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/documentation" class="post-tag" title="show questions tagged 'documentation'" rel="tag">documentation</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/26088/%e1%94%95%e1%96%ba%e1%98%8e%e1%95%8a">ᔕᖺᘎᕊ</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-6890"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="wrong results of /search/advanced" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/6890/wrong-results-of-search-advanced" class="question-hyperlink" title="I am querying mobile in stackoverflow. The second result is an answer. Results of /search/advanced is giving only questions when queried mobile. This is applicable for all other terms which are to ...">wrong results of /search/advanced</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">I am querying mobile in stackoverflow. The second result is an answer. Results of /search/advanced is giving only questions when queried mobile. This is applicable for all other terms which are to …</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-support t-bug t-status-bydesign"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/33857/amit-jha">amit jha</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-6889"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Script to visualize time to first answer" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/6889/script-to-visualize-time-to-first-answer" class="question-hyperlink" title="I was inspired by boB Rudis' tweet about time to first answer.
+I thought it would be a good idea to do the same thing but in the r language. 
+
+And, for ten popular languages to have something to co...">Script to visualize time to first answer</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">I was inspired by boB Rudis' tweet about time to first answer. I thought it would be a good idea to do the same thing but in the r language. And, for ten popular languages to have something to co…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-app t-questions t-answers t-posts t-r-language"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/questions" class="post-tag" title="show questions tagged 'questions'" rel="tag">questions</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/39465/iaroslav-domin">Iaroslav Domin</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-6888"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Quality Guaranty test (Placeholder)" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/6888/quality-guaranty-test-placeholder" class="question-hyperlink" title="Quality Guaranty tries to improve the quality of answers in Stack Overflow.
+
+The app is not yet ready for prime time.">Quality Guaranty test (Placeholder)</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">Quality Guaranty tries to improve the quality of answers in Stack Overflow. The app is not yet ready for prime time.</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-app t-placeholder"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/placeholder" class="post-tag" title="show questions tagged 'placeholder'" rel="tag">placeholder</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/33181/mohamadreza-tavakoli">MohamadReza Tavakoli</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-6523"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Got a Bad Status Line" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/6523/got-a-bad-status-line" class="question-hyperlink" title="Since about 10 AM US-CDT on August 8, 2015, I've been getting
+
+('http protocol error', 0, 'got a bad status line', None)
+
+
+on a /users/{ids}/associated query after several successful such queries e...">Got a Bad Status Line</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">Since about 10 AM US-CDT on August 8, 2015, I've been getting ('http protocol error', 0, 'got a bad status line', None) on a /users/{ids}/associated query after several successful such queries e…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-support t-api-v2û2 t-python t-associated"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/api-v2.2" class="post-tag" title="show questions tagged 'api-v2.2'" rel="tag">api-v2.2</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/171/dennis-williamson">Dennis Williamson</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-6887"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="The Authentication Problem of WebAuthenticationBroke Classr in .NET 4.6" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/6887/the-authentication-problem-of-webauthenticationbroke-classr-in-net-4-6" class="question-hyperlink" title="I have a problem when you test the StackExchange Authentication API to WebAuthenticationBroker.  If you proceed with authentication, such as screenshots it will continue to appear only in progress....">The Authentication Problem of WebAuthenticationBroke Classr in .NET 4.6</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">I have a problem when you test the StackExchange Authentication API to WebAuthenticationBroker. If you proceed with authentication, such as screenshots it will continue to appear only in progress.…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-bug t-api-v2û2 t-ûnet"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/api-v2.2" class="post-tag" title="show questions tagged 'api-v2.2'" rel="tag">api-v2.2</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/31143/happyjem">happyjem</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-3535"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Stack Exchange - Favorite Users" style="width:144px" src="http://i.stack.imgur.com/sZFgE.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/3535/stack-exchange-favorite-users" class="question-hyperlink" title="TL,DR: Browser addon that highlights answers and questions by your favorite users!
+
+
+
+See it in work:
+
+
+
+And the easy config via user's profile:
+
+
+
+
+
+Just like many other people before us, even we ...">Stack Exchange - Favorite Users</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">TL,DR: Browser addon that highlights answers and questions by your favorite users! See it in work: And the easy config via user's profile: Just like many other people before us, even we …</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-app t-users"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/users" class="post-tag" title="show questions tagged 'users'" rel="tag">users</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/11494/slanec">Slanec</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-4486"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="The Stack Overflow Unofficial Patch (SOUP)" style="width:144px" src="http://i.stack.imgur.com/8EphO.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/4486/the-stack-overflow-unofficial-patch-soup" class="question-hyperlink" title="The Stack Overflow Unofficial Patch (SOUP) is a project to collect various minor client-side bug fixes, work-arounds and usability improvements for Stack Overflow and other Q&amp;amp;A sites on the Sta...">The Stack Overflow Unofficial Patch (SOUP)</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">The Stack Overflow Unofficial Patch (SOUP) is a project to collect various minor client-side bug fixes, work-arounds and usability improvements for Stack Overflow and other Q&amp;A sites on the Sta…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-script t-greasemonkey t-tampermonkey"> 
+            <a href="/questions/tagged/script" class="post-tag required-tag" title="show questions tagged 'script'" rel="tag">script</a> 
+            <a href="/questions/tagged/greasemonkey" class="post-tag" title="show questions tagged 'greasemonkey'" rel="tag">greasemonkey</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999">
+             v1.44.1, 
+            <a style="color:#999" href="/users/10283/ilmari-karonen">Ilmari Karonen</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-3976"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Wrapper implementation method to get user notifications in Stack Exchange?" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/3976/wrapper-implementation-method-to-get-user-notifications-in-stack-exchange" class="question-hyperlink" title="I'm trying to build an app that requires me to get the user notifications for a particular Stack Exchange user.
+
+Now, I'm trying to use Java to accomplish this and I came across this wrapper librar...">Wrapper implementation method to get user notifications in Stack Exchange?</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">I'm trying to build an app that requires me to get the user notifications for a particular Stack Exchange user. Now, I'm trying to use Java to accomplish this and I came across this wrapper librar…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-support t-java"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/java" class="post-tag" title="show questions tagged 'java'" rel="tag">java</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/10926/kodeseeker">KodeSeeker</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-6884"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="wrong results of api /search/advanced" style="width:144px" src="http://i.stack.imgur.com/2Foog.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/6884/wrong-results-of-api-search-advanced" class="question-hyperlink" title="I am querying for results of /search/advanced. The request I am sending is  
+
+https://api.stackexchange.com/2.2/search/advanced?key=`key`&amp;amp;access_token=`access_token`&amp;amp;site=stackoverflow.com&amp;...">wrong results of api /search/advanced</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">I am querying for results of /search/advanced. The request I am sending is https://api.stackexchange.com/2.2/search/advanced?key=`key`&amp;access_token=`access_token`&amp;site=stackoverflow.com&amp;…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-bug"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/33857/amit-jha">amit jha</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-6869"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Review Stalker Reloaded: A cross-site dashboard for reviews" style="width:144px" src="/content/Sites/stackapps/img/script-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/6869/review-stalker-reloaded-a-cross-site-dashboard-for-reviews" class="question-hyperlink" title="Based very loosely on the Review Stalker user script, this script has been rewritten several times since then. Its purpose is to be a one-stop pinned tab, always checking for review opportunities a...">Review Stalker Reloaded: A cross-site dashboard for reviews</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">Based very loosely on the Review Stalker user script, this script has been rewritten several times since then. Its purpose is to be a one-stop pinned tab, always checking for review opportunities a…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-script t-review"> 
+            <a href="/questions/tagged/script" class="post-tag required-tag" title="show questions tagged 'script'" rel="tag">script</a> 
+            <a href="/questions/tagged/review" class="post-tag" title="show questions tagged 'review'" rel="tag">review</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/30844/nathan-tuggy">Nathan Tuggy</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-379"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Guidance on usage thresholds - specifically throttling" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/379/guidance-on-usage-thresholds-specifically-throttling" class="question-hyperlink" title="I am running a lot of tests and have started to get 403 errors.
+
+I am using a key and certainly have not exceeded my quota.
+
+Am I running foul of some yet unmentioned throttling threshold and if so...">Guidance on usage thresholds - specifically throttling</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">I am running a lot of tests and have started to get 403 errors. I am using a key and certainly have not exceeded my quota. Am I running foul of some yet unmentioned throttling threshold and if so…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-discussion t-api t-libraries t-limits"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/api" class="post-tag" title="show questions tagged 'api'" rel="tag">api</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/14/sky-sanders">Sky Sanders</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-4579"> 
+        <div class="summary" style="width:735px"> 
+         <div style="float:left;position:absolute;clip:rect(0 144px 119px 0);"> 
+          <img title="Error on Authentication - App Secret Doesn&amp;#39;t match" style="width:144px" src="/content/Sites/stackapps/img/library-thumb.png" width="144" height="119" alt=""> 
+         </div> 
+         <div style="padding-left:154px;"> 
+          <h3 style="padding-right:5px"><a href="/questions/4579/error-on-authentication-app-secret-doesnt-match" class="question-hyperlink" title="I'm using the explicit OAuth flow and am getting errors when using the &quot;code&quot; value returned after a successful authentication.
+
+Can anyone post a sample HTTP POST with a redacted secret value?
+
+Ac...">Error on Authentication - App Secret Doesn't match</a></h3> 
+          <p style="margin-top:5px;line-height:125%;font-size:120%;margin-right:5px;height:54px">I'm using the explicit OAuth flow and am getting errors when using the "code" value returned after a successful authentication. Can anyone post a sample HTTP POST with a redacted secret value? Ac…</p> 
+          <div> 
+           <div style="margin-top:-5px" class="tags t-support t-oauth2"> 
+            <a href="/questions/tagged/app" class="post-tag required-tag" title="show questions tagged 'app'" rel="tag">app</a> 
+            <a href="/questions/tagged/oauth2" class="post-tag" title="show questions tagged 'oauth2'" rel="tag">oauth2</a> 
+           </div> 
+           <div style="float:right;margin-top:5px;margin-right:5px;line-height:18px;color:#999"> 
+            <a style="color:#999" href="/users/3085/lamontecristo">LamonteCristo</a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div> 
+      <a id="home-browse" class="button" href="/questions">Browse More Questions</a> 
+     </div> 
+     <script>
+        StackExchange.using('exploreQuestions', function() {
+                StackExchange.exploreQuestions.init({count:14});
+                            StackExchange.exploreQuestions.gps();
+        });
+    </script> 
+     <script>
+    StackExchange.ready(function() { StackExchange.question.initShareLinks(); });
+</script>
+    </div> 
+    <div id="sidebar"> 
+     <div class="module"> 
+      <h4>Get Started</h4> 
+      <div class="linked"> 
+       <h3>API 2.2</h3> 
+       <div class="spacer"> 
+        <a href="https://api.stackexchange.com/docs" class="question-hyperlink"><b>Documentation</b></a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/apps/oauth/register" class="question-hyperlink"><b>Register an application</b></a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/apps/oauth" class="question-hyperlink">Manage your applications</a> 
+       </div> 
+      </div> 
+      <div class="spacer ar">
+        more 
+       <a href="/questions/tagged/faq" class="post-tag moderator-tag" title="show questions tagged 'faq'" rel="tag">faq</a>&nbsp;» 
+      </div> 
+     </div> 
+     <div id="hot-network-questions" class="module"> 
+      <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:8 })"> Hot Network Questions </a> </h4> 
+      <ul> 
+       <li> 
+        <div class="favicon favicon-gardening" title="Gardening &amp; Landscaping Stack Exchange"></div><a href="http://gardening.stackexchange.com/questions/24690/can-i-use-distilled-water-to-water-plants" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:269 }); posts_hot_network.click({ item_type:2, location:8 })"> Can I use "distilled" water to water plants? </a> </li> 
+       <li> 
+        <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/64033/is-this-girl-doing-illegal-transfers" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:93 }); posts_hot_network.click({ item_type:2, location:8 })"> Is this girl doing illegal transfers? </a> </li> 
+       <li> 
+        <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37203859/preferred-method-to-new-pointer-to-array" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:1 }); posts_hot_network.click({ item_type:2, location:8 })"> Preferred method to `new` pointer to array </a> </li> 
+       <li> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127820/how-does-vibranium-work" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> How does Vibranium work? </a> </li> 
+       <li> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123058/how-to-tell-if-a-webapp-transmits-my-password-in-cleartext" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> How to tell if a webapp transmits my password in cleartext? </a> </li> 
+       <li> 
+        <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/27515/aircraft-pressurization" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:528 }); posts_hot_network.click({ item_type:2, location:8 })"> Aircraft pressurization </a> </li> 
+       <li> 
+        <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68194/most-useful-languages-other-than-english-in-asia-and-oceania" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:273 }); posts_hot_network.click({ item_type:2, location:8 })"> Most useful languages other than English in Asia and Oceania </a> </li> 
+       <li> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127874/why-does-one-of-the-x-wing-pilots-scream-yeeeeeeessssss-in-the-battle-of-yavin" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> Why does one of the X-wing pilots scream "YEEEEEEESSSSSS" in the Battle of Yavin? </a> </li> 
+       <li> 
+        <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/255353/why-does-a-system-try-to-minimize-its-total-energy" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:151 }); posts_hot_network.click({ item_type:2, location:8 })"> Why does a system try to minimize its total energy? </a> </li> 
+       <li> 
+        <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/115006/easiest-way-to-extract-the-coefficient-of-a-polynomial" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:387 }); posts_hot_network.click({ item_type:2, location:8 })"> Easiest way to extract the coefficient of a polynomial </a> </li> 
+       <li> 
+        <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/308600/how-to-include-a-lenny-face-in-a-latex-document-e-g-%cd%a1-%cd%9c%ca%96-%cd%a1" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:85 }); posts_hot_network.click({ item_type:2, location:8 })"> How to include a Lenny face in a LaTeX document? e.g. ( ͡° ͜ʖ ͡°) </a> </li> 
+       <li> 
+        <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37202716/c-is-const-doesnt-work-as-expected-for-reference" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:1 }); posts_hot_network.click({ item_type:2, location:8 })"> C++: is_const doesn't work as expected for reference </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123101/why-are-generated-access-tokens-for-api-much-longer-than-passwords" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Why are generated access tokens for API much longer than passwords? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/776413/what-are-the-implications-of-enabling-the-recycle-bin-feature-in-active-director" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:2 }); posts_hot_network.click({ item_type:2, location:8 })"> What are the implications of enabling the Recycle Bin feature in Active Directory? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/122848/does-correcting-misspelled-usernames-create-a-security-risk" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Does correcting misspelled usernames create a security risk? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-stats" title="Cross Validated"></div><a href="http://stats.stackexchange.com/questions/212325/what-is-the-name-for-the-distribution-shape-of-a-histogram-with-this-kind-of-cur" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:65 }); posts_hot_network.click({ item_type:2, location:8 })"> What is the name for the distribution shape of a histogram with this kind of curvature? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/238732/integer-polynomial-solutions-to-functional-equation" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:504 }); posts_hot_network.click({ item_type:2, location:8 })"> Integer Polynomial solutions to functional equation </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-ethereum" title="Ethereum Stack Exchange"></div><a href="http://ethereum.stackexchange.com/questions/3900/how-do-i-delete-the-geth-console-history" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:642 }); posts_hot_network.click({ item_type:2, location:8 })"> How do I delete the geth console history? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/233769/whats-needed-to-put-a-pc-fan-into-reverse" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:135 }); posts_hot_network.click({ item_type:2, location:8 })"> What's needed to put a PC fan into reverse? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37202036/assigning-a-number-to-stdstring-is-now-allowed" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:1 }); posts_hot_network.click({ item_type:2, location:8 })"> Assigning a number to std::string is now allowed? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/255577/how-come-light-waves-dont-get-caught-and-absorbed-by-the-electrons-of-oxygen-at" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:151 }); posts_hot_network.click({ item_type:2, location:8 })"> How come light waves don't get caught and absorbed by the electrons of oxygen atoms in the in air? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325285/is-there-a-word-that-means-standard-of-activation-or-trigger-condition" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:97 }); posts_hot_network.click({ item_type:2, location:8 })"> Is there a word that means "standard of activation" or "trigger condition"? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67011/how-do-i-prevent-my-manager-from-abusing-a-contract-specification-that-breaches" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:423 }); posts_hot_network.click({ item_type:2, location:8 })"> How do I prevent my manager from abusing a contract specification that breaches my privacy? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325371/is-there-a-word-to-describe-a-person-who-is-always-curious" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:97 }); posts_hot_network.click({ item_type:2, location:8 })"> Is there a word to describe a person who is always curious? </a> </li> 
+      </ul> 
+      <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:8 })"> more hot questions </a> 
+     </div> 
+    </div> 
+    <div id="feed-link"> 
+     <div id="feed-link-text"> 
+      <a href="/feeds" title="the 30 most recent questions"> <span class="feed-icon"></span>recent questions feed </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://blog.stackoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3570 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Apps works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-6');
+                        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

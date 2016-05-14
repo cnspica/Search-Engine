@@ -1,0 +1,1611 @@
+http://tutorialspoint.com/google_maps/google_maps_quick_guide.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Google Maps Quick Guide</title> 
+  <meta name="Description" content="Google Maps Quick Guide - Free Google Maps Tutorials, Reference Manual, and Guide for beginners, Google Maps JavaScript API tutorial. Learn how to use Google Maps JavaScript API from Map Types, Zoom, localizing the Map, UI controls, Markers, Shapes, Overlays, Info Window, Symbols and Map events."> 
+  <meta name="Keywords" content="Free, Google Maps, JavaScript API, Tutorials, Reference, Manual, Guide, Beginners, API from Map Types, Zoom, localizing the Map, UI controls, Markers, Shapes, Overlays, Info Window, Symbols and Map events."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/google_maps/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #71a531 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #71a531 !important;}
+.submenu-item{ border-bottom: 2px solid #71a531 !important; border-top: 2px solid #71a531 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/google_maps/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/google_maps/images/google-map-mini-logo.jpg" alt="Google Maps Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Google Maps Tutorial</li> 
+        <li><a href="/google_maps/index.htm">Google Maps - Home</a></li> 
+        <li><a href="/google_maps/google_maps_getting_started.htm">Google Maps - Getting Started</a></li> 
+        <li><a href="/google_maps/google_maps_types.htm">Google Maps - Types</a></li> 
+        <li><a href="/google_maps/google_maps_zoom.htm">Google Maps - Zoom</a></li> 
+        <li><a href="/google_maps/google_maps_localization.htm">Google Maps - Localization</a></li> 
+        <li><a href="/google_maps/google_maps_ui_controls.htm">Google Maps - UI Controls</a></li> 
+        <li><a href="/google_maps/google_maps_markers.htm">Google Maps - Markers</a></li> 
+        <li><a href="/google_maps/google_maps_shapes.htm">Google Maps - Shapes</a></li> 
+        <li><a href="/google_maps/google_maps_info_window.htm">Google Maps - Info Window</a></li> 
+        <li><a href="/google_maps/google_maps_symbols.htm">Google Maps - Symbols</a></li> 
+        <li><a href="/google_maps/google_maps_events.htm">Google Maps - Events</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Google Maps Resources</li> 
+        <li><a href="/google_maps/google_maps_quick_guide.htm">Google Maps - Quick Guide</a></li> 
+        <li><a href="/google_maps/google_maps_useful_resources.htm">Google Maps - Useful Resources</a></li> 
+        <li><a href="/google_maps/google_maps_discussion.htm">Google Maps - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Google Maps - Quick Guide</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/google_maps/google_maps_events.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/google_maps/google_maps_useful_resources.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <h1>Google Maps - Getting Started</h1> 
+        <h2>What are Google Maps?</h2> 
+        <p>Google Maps is a free web mapping service by Google that provides various types of geographical information. Using Google Maps, one can.</p> 
+        <ul class="list"> 
+         <li><p>Search for places or get directions from one place to another.</p></li> 
+         <li><p>View and navigate through horizontal and vertical panoramic street level images of various cities around the world.</p></li> 
+         <li><p>Get specific information like traffic at a particular point.</p></li> 
+        </ul> 
+        <p>Google Maps provides an API using which you can customize the maps and the information displayed on them. This chapter explains how to load a simple Google Map on your web page using HTML and JavaScript.</p> 
+        <h2>Steps to Load the Map on a Webpage</h2> 
+        <p>Follow the steps given below to load a map on your webpage −</p> 
+        <h3>Step 1 : Create an HTML Page</h3> 
+        <p>Create a basic HTML page with head and body tags as shown below −</p> 
+        <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+   ..............
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <h3>Step 2 : Load the API</h3> 
+        <p>Load or include the Google Maps API using the script tag as shown below −</p> 
+        <pre class="prettyprint notranslate ">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+   ..............
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <h3>Step 3 : Create the Container</h3> 
+        <p>To hold the map, we have to create a container element, generally the &lt;div&gt; tag (a generic container) is used for this purpose. Create a container element and define its dimensions as shown below −</p> 
+        <pre class="prettyprint notranslate">
+&lt;div id = "sample" style = "width:900px; height:580px;"&gt;&lt;/div&gt;
+</pre> 
+        <h3>Step 4 : Map Options</h3> 
+        <p>Before initializing the map, we have to create a <b>mapOptions</b> object (it is created just like a literal) and set values for map initialization variables. A map has three main options, namely, <b>centre</b>, <b>zoom</b>, and <b>maptypeid</b>.</p> 
+        <ul class="list"> 
+         <li><p><b>centre</b> − Under this property, we have to specify the location where we want to centre the map. To pass the location, we have to create a <b>LatLng</b> object by passing the latitude and longitudes of the required location to the constructor.</p></li> 
+         <li><p><b>zoom</b> − Under this property, we have to specify the zoom level of the map.</p></li> 
+         <li><p><b>maptypeid</b>− Under this property, we have to specify the type of the map we want. Following are the types of maps provided by Google −</p> 
+          <ul class="list"> 
+           <li>ROADMAP (normal, default 2D map)</li> 
+           <li>SATELLITE (photographic map)</li> 
+           <li>HYBRID (combination of two or more other types)</li> 
+           <li>TERRAIN (map with mountains, rivers, etc.)</li> 
+          </ul> </li> 
+        </ul> 
+        <p>Within a function, say, <b>loadMap()</b>, create the mapOptions object and set the required values for center, zoom, and mapTypeId as shown below.</p> 
+        <pre class="prettyprint notranslate">
+function loadMap() {
+   var mapOptions = {
+      center:new google.maps.LatLng(17.240498, 82.287598), 
+      zoom:9, 
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+   };
+}
+</pre> 
+        <h3>Step 5 : Create a Map Object</h3> 
+        <p>You can create a map by instantiating the JavaScript class called <b>Map</b>. While instantiating this class, you have to pass an HTML container to hold the map and the map options for the required map. Create a map object as shown below.</p> 
+        <pre class="result notranslat">
+var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+</pre> 
+        <h3>Step 6 : load the map</h3> 
+        <p>Finally load the map by calling the loadMap() method or by adding DOM listener.</p> 
+        <pre class="prettyprint notranslate">
+google.maps.event.addDomListener(window, 'load', loadMap);
+                    or
+&lt;body onload = "loadMap()"&gt;
+</pre> 
+        <h2>Example</h2> 
+        <p>The following example shows how to load the roadmap of the city named Vishakhapatnam with a zoom value of 12.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.609993, 83.221436), 
+               zoom:12, 
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+			
+         google.maps.event.addDomListener(window, 'load', loadMap);
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/sample.htm" width="600px" height="420px"></iframe> 
+        <h1>Google Maps - Types</h1> 
+        <p>In the previous chapter, we discussed how to load a basic map. Here, we will see how to select a required map type.</p> 
+        <h2>Types of Maps</h2> 
+        <p>Google Maps provides four types of maps. They are −</p> 
+        <ul class="list"> 
+         <li><p><b>ROADMAP</b> − This is the default type. If you haven't chosen any of the types, this will be displayed. It shows the street view of the selected region.</p></li> 
+         <li><p><b>SATELLITE</b> − This is the map type that shows the satellite images of the selected region.</p></li> 
+         <li><p><b>HYBRID</b> − This map type shows the major streets on satellite images.</p></li> 
+         <li><p><b>TERRAIN</b> − This is the map type that shows the terrain and vegetation</p></li> 
+        </ul> 
+        <h3>Syntax</h3> 
+        <p>To select one of these map types, you have to mention the respective map type id in the map options as shown below −</p> 
+        <pre class="prettyprint notranslate">
+var mapOptions = {
+   mapTypeId:google.maps.MapTypeId.<b>Id of the required map type</b>
+};
+</pre> 
+        <h2>Roadmap</h2> 
+        <p>The following example shows how to select a map of type ROADMAP −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.609993, 83.221436),
+               zoom:9,
+               <font size="3"><b>mapTypeId:google.maps.MapTypeId.<i>ROADMAP</i></b></font>
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+			
+         google.maps.event.addDomListener(window, 'load', loadMap);
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/roadmap.htm" width="600px" height="420px"></iframe> 
+        <h2>Satellite</h2> 
+        <p>The following example shows how to select a map of type SATELLITE −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+                  center:new google.maps.LatLng(17.609993, 83.221436),
+                  zoom:9,
+                  <font size="3"><b>mapTypeId:google.maps.MapTypeId.<i>SATELLITE</i></b></font>
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+			
+         google.maps.event.addDomListener(window, 'load', loadMap);
+      &lt;/script&gt;
+		
+   &lt;/head&gt;
+      
+   &lt;body&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/satellite.htm" width="600px" height="420px"></iframe> 
+        <h2>Hybrid</h2> 
+        <p>The following example shows how to select a map of type HYBRID −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.609993, 83.221436),
+               zoom:9,
+               <font size="3"><b>mapTypeId:google.maps.MapTypeId.<i>Hybrid</i></b></font>
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+			
+         google.maps.event.addDomListener(window, 'load', loadMap);
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/hybrid.htm" width="600px" height="420px"></iframe> 
+        <h2>Terrain</h2> 
+        <p>The following example shows how to select a map of type TERRAIN −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.609993, 83.221436),
+               zoom:9,
+               <font size="3"><b>mapTypeId:google.maps.MapTypeId.<i>TERRAIN</i></b></font>
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+			
+         google.maps.event.addDomListener(window, 'load', loadMap);
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/terrain.htm" width="600px" height="420px"></iframe> 
+        <h1>Google Maps - Zoom</h1> 
+        <h2>Increase/Decrease the Zoom Value</h2> 
+        <p>You can increase or decrease the zoom value of a map by modifying the value of the <b>zoom</b> attribute in the the map options.</p> 
+        <h3>Syntax</h3> 
+        <p>We can increase or decrease the zoom value of the map using the zoom option. Given below is the syntax to change the zoom value of the current map.</p> 
+        <pre class="prettyprint notranslate">
+var mapOptions = {
+   <b>zoom:required zoom value</b>
+};
+</pre> 
+        <h2>Example : Zoom 6</h2> 
+        <p>The following code will display the roadmap of the city Vishakhapatnam with a zoom value of 6.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.609993, 83.221436),
+               zoom:6,
+               <font size="3"><b>mapTypeId:google.maps.MapTypeId.<i>ROADMAP</i></b></font>
+            };
+            
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:587px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/zoom_6.htm" width="600px" height="420px"></iframe> 
+        <h2>Example : Zoom 10</h2> 
+        <p>The following code will display the roadmap of the city Vishakhapatnam with a zoom value of 10.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.609993, 83.221436),
+               zoom:10,
+               <font size="3"><b>mapTypeId:google.maps.MapTypeId.<i>ROADMAP</i></b></font>
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:587px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/zoom_10.htm" width="600px" height="420px"></iframe> 
+        <h1>Google Maps - Localization</h1> 
+        <p>By default, the city names and option names given on the map will be in English. If required, we can display such information in other languages as well. This process is known as <b>localization</b>. In this chapter, we will learn how to localize a map.</p> 
+        <h2>Localizing a Map</h2> 
+        <p>You can customize (localize) the language of the map by specifying the language option in the URL as shown below.</p> 
+        <pre class="prettyprint notranslate">
+&lt;script src = "https://maps.googleapis.com/maps/api/js?language=zh-Hans"&gt;&lt;/script&gt;
+</pre> 
+        <h3>Example</h3> 
+        <p>Here is an example that shows how to localize GoogleMaps. Here you can see a roadmap of China that is localized to Chinese language.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;script src = "https://maps.googleapis.com/maps/api/js?language=zh-Hans"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(32.870360, 101.645508),
+               zoom:9, 
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+
+&lt;/html&gt;
+</pre> 
+        <h3>Output</h3> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/google_maps_localizing.htm" height="420px" width="600px"></iframe> 
+        <h1>Google Maps - UI Controls</h1> 
+        <p>Google Maps provides a User Interface with various controls to let the user interact with the map. We can add, customize, and disable these controls.</p> 
+        <h2>Default Controls</h2> 
+        <p>Here is a list of the default controls provided by Google Maps −</p> 
+        <ul class="list"> 
+         <li><p><b>Zoom</b> − To increase and decease the zoom level of the map, we will have a slider with + and − buttons, by default. This slider will be located at the corner of left hand side of the map.</p></li> 
+         <li><p><b>Pan</b> − Just above the zoom slider, there will be a pan control for panning the map.</p></li> 
+         <li><p><b>Map Type</b> − You can locate this control at the top right corner of the map. It provides map type options such as Satellite, Roadmap, and Terrain. Users can choose any of these maps.</p></li> 
+         <li><p><b>Street view</b> − Between the pan icon and the zoom slider, we have a pegman icon. Users can drag this icon and place at a particular location to get its street view.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Here is an example where you can observe the default UI controls provided by Google Maps −</p> 
+        <iframe class="result" src="/google_maps/src/map_with_default_controls.htm" height="420px" width="600px"></iframe> 
+        <h2>Disabling the UI Default Controls</h2> 
+        <p>We can disable the default UI controls provided by Google Maps simply by making the <b>disableDefaultUI</b> value true in the map options.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows how to disable the default UI controls provided by Google Maps.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.609993, 83.221436),
+               zoom:5,
+               mapTypeId:google.maps.MapTypeId.ROADMAP,
+               disableDefaultUI: true
+            };
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/disabling_default_controls.htm" height="420px" width="600px"></iframe> 
+        <h2>Enabling/Disabling All the Controls</h2> 
+        <p>In addition to these default controls, Google Maps also provides three more controls as listed below.</p> 
+        <ul class="list"> 
+         <li><p><b>Scale</b> − The Scale control displays a map scale element. This control is not enabled by default.</p></li> 
+         <li><p><b>Rotate</b> − The Rotate control contains a small circular icon which allows you to rotate maps containing oblique imagery. This control appears by default at the top left corner of the map. (See 45° Imagery for more information.)</p></li> 
+         <li><p><b>Overview</b> − To increase and decease the zoom level of the map, we have a slider with + and − buttons, by default. This slider is located at the left corner of the map.</p></li> 
+        </ul> 
+        <p>In the map options, we can enable and disable any of the controls provided by Google Maps as shown below −</p> 
+        <pre class="prettyprint notranslate">
+{
+   panControl: boolean,
+   zoomControl: boolean,
+   mapTypeControl: boolean,
+   scaleControl: boolean,
+   streetViewControl: boolean,
+   overviewMapControl: boolean
+}
+</pre> 
+        <h3>Example</h3> 
+        <p>The following code shows how to enable all the controls −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(19.373341, 78.662109),
+               zoom:5,
+               panControl: true,
+               zoomControl: true,
+               scaleControl: true,
+               mapTypeControl:true,
+               streetViewControl:true,
+               overviewMapControl:true,
+               rotateControl:true
+            }
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/enabling_all_controls.htm" height="420px" width="600px"></iframe> 
+        <h2>Control Options</h2> 
+        <p>We can change the appearance of Google Maps controls using its control options. For example, the zoom control can be either reduced or enlarged in size. The MapType control appearance can be varied to a horizontal bar or a drop-down menu. Given below is a list of Control options for Zoom and MapType controls.</p> 
+        <table class="table table-bordered"> 
+         <tbody>
+          <tr> 
+           <th>Sr.No.</th> 
+           <th>Control Name</th> 
+           <th>Control Options</th> 
+          </tr> 
+          <tr> 
+           <td>1</td> 
+           <td>Zoom control</td> 
+           <td> 
+            <ul class="list"> 
+             <li>google.maps.ZoomControlStyle.SMALL</li> 
+             <li>google.maps.ZoomControlStyle.LARGE</li> 
+             <li>google.maps.ZoomControlStyle.DEFAULT</li> 
+            </ul> </td> 
+          </tr> 
+          <tr> 
+           <td>2</td> 
+           <td>MapType control</td> 
+           <td> 
+            <ul class="list"> 
+             <li>google.maps.MapTypeControlStyle.HORIZONTAL_BAR</li> 
+             <li>google.maps.MapTypeControlStyle.DROPDOWN_MENU</li> 
+             <li>google.maps.MapTypeControlStyle.DEFAULT</li> 
+            </ul> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+        <h3>Example</h3> 
+        <p>The following example demonstrates how to use the control options −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(19.373341, 78.662109),
+               zoom:5,
+               mapTypeControl: true,
+               
+               mapTypeControlOptions: {
+                  style: google.maps.MapTypeControlStyle.DROPDOWN_MENU, mapTypeIds: [
+                     google.maps.MapTypeId.ROADMAP,
+                     google.maps.MapTypeId.TERRAIN
+                  ]
+               },
+					
+               zoomControl: true,
+               
+               zoomControlOptions: {
+                  style: google.maps.ZoomControlStyle.SMALL
+               }
+            }
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/control_options.htm" height="420px" width="600px"></iframe> 
+        <h2>Control Positioning</h2> 
+        <p>You can change the position of the controls by adding the following line in the control options.</p> 
+        <pre class="result notranslate">
+position:google.maps.ControlPosition.<b>Desired_Position</b>,
+</pre> 
+        <p>Here is the list of available positions where a control can be placed on a map −</p> 
+        <ul class="list"> 
+         <li>TOP_CENTER</li> 
+         <li>TOP_LEFT</li> 
+         <li>TOP_RIGHT</li> 
+         <li>LEFT_TOP</li> 
+         <li>RIGHT_TOP</li> 
+         <li>LEFT_CENTER</li> 
+         <li>RIGHT_CENTER</li> 
+         <li>LEFT_BOTTOM</li> 
+         <li>RIGHT_BOTTOM</li> 
+         <li>BOTTOM_CENTER</li> 
+         <li>BOTTOM_LEFT</li> 
+         <li>BOTTOM_RIGHT</li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>The following example shows how to place the MapTypeid control at the top centre of the map and how to place the zoom control at the bottom centre of the map.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(19.373341, 78.662109),
+               zoom:5,
+               mapTypeControl: true,
+               
+               mapTypeControlOptions: {
+                  style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                  position:google.maps.ControlPosition.TOP_CENTER,
+                  
+                  mapTypeIds: [
+                     google.maps.MapTypeId.ROADMAP,
+                     google.maps.MapTypeId.TERRAIN
+                  ]
+               },
+					
+               zoomControl: true,
+               
+               zoomControlOptions: {
+                  style: google.maps.ZoomControlStyle.SMALL,
+                  position:google.maps.ControlPosition.BOTTOM_CENTER
+               }
+            }
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt; 
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/control_position.htm" height="420px" width="600px"></iframe> 
+        <h1>Google Maps - Markers</h1> 
+        <p>We can draw objects on the map and bind them to a desired latitude and longitude. These are called overlays. Google Maps provides various overlays as shown below.</p> 
+        <ul class="list"> 
+         <li>Markers</li> 
+         <li>Polylines</li> 
+         <li>Polygons</li> 
+         <li>Circle and rectangle</li> 
+         <li>Info window</li> 
+         <li>Symbols</li> 
+        </ul> 
+        <p>To mark a single location on the map, Google Maps provides <b>markers</b>. These markers use a standard symbol and these symbols can be customized. This chapter explains how to add markers, and how to customize, animate, and remove them.</p> 
+        <h2>Adding a Simple Marker</h2> 
+        <p>You can add a simple marker to the map at a desired location by instantiating the marker class and specifying the position to be marked using latlng, as shown below.</p> 
+        <pre class="prettyprint notranslate">
+var marker = new google.maps.Marker({
+   position: new google.maps.LatLng(19.373341, 78.662109),
+   map: map,
+});  
+</pre> 
+        <h3>Example</h3> 
+        <p>The following code sets the marker on the city Hyderabad (India).</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(19.373341, 78.662109),
+               zoom:7
+            }
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(17.088291, 78.442383),
+               map: map,
+            });
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/adding_marker.htm" height="420px" width="600px"></iframe> 
+        <h2>Animating the Marker</h2> 
+        <p>After adding a marker to the map, you can go further and add animations to it such as <b>bounce</b> and <b>drop</b>. The following code snippet shows how to add bounce and drop animations to a marker.</p> 
+        <pre class="result notranslate">
+//To make the marker bounce`
+animation:google.maps.Animation.BOUNCE 
+
+//To make the marker drop
+animation:google.maps.Animation.Drop 
+</pre> 
+        <h3>Example</h3> 
+        <p>The following code sets the marker on the city Hyderabad with an added animation effect −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.377631, 78.478603),
+               zoom:5
+            }
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(17.377631, 78.478603),
+               map: map,
+               animation:google.maps.Animation.Drop
+            });
+         }
+      &lt;/script&gt;
+
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/animating_marker.htm" height="420px" width="600px"></iframe> 
+        <h2>Customizing the Marker</h2> 
+        <p>You can use your own icons instead of the default icon provided by Google Maps. Just set the icon as <b>icon:'ICON PATH'</b>. And you can make this icon draggable by setting <b>draggable:true</b>.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows how to customize the marker to a desired icon −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.377631, 78.478603),
+               zoom:5
+            }
+            
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(17.377631, 78.478603),
+               map: map,
+               draggable:true,
+               icon:'/scripts/img/logo-footer.png'
+            });
+				
+            marker.setMap(map);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/icon_as_marker.htm" height="420px" width="600px"></iframe> 
+        <h2>Removing the Marker</h2> 
+        <p>You can remove an existing marker by setting up the marker to null using the <b>marker.setMap()</b> method.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows how to remove the marker from a map −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.377631, 78.478603),
+               zoom:5
+            }
+            
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(17.377631, 78.478603),
+               map: map,
+               animation:google.maps.Animation.Drop
+            });
+				
+            marker.setMap(null);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/removing_marker.htm" height="420px" width="600px"></iframe> 
+        <h1>Google Maps - Shapes</h1> 
+        <p>In the previous chapter, we learned how to use markers in Google Maps. Along with markers, we can also add various shapes such as circles, polygons, rectangles, polylines, etc. This chapter explains how to use the shapes provided by Google Maps.</p> 
+        <h2>Polylines</h2> 
+        <p>Polylines, provided by Google Maps, are useful to track different paths. You can add polylines to a map by instantiating the class <b>google.maps.Polyline</b>. While instantiating this class, we have to specify the required values of the properties of a polyline such as StrokeColor, StokeOpacity, and strokeWeight.</p> 
+        <p>We can add a polyline to a map by passing its object to the method <b>setMap(MapObject)</b>. We can delete the polyline by passing a null value to the SetMap() method.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows a polyline highlighting the path between the cities Delhi, London, New York, and Beijing.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap(){
+			
+            var mapProp = {
+               center:new google.maps.LatLng(51.508742,-0.120850),
+               zoom:3,
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            
+            var tourplan = new google.maps.Polyline({
+               path:[
+                  new google.maps.LatLng(28.613939, 77.209021),
+                  new google.maps.LatLng(51.507351, -0.127758),
+                  new google.maps.LatLng(40.712784, -74.005941),
+                  new google.maps.LatLng(28.213545, 94.868713) 
+               ],
+               
+               strokeColor:"#0000FF",
+               strokeOpacity:0.6,
+               strokeWeight:2
+            });
+            
+            tourplan.setMap(map);
+            //to remove plylines
+            //tourplan.setmap(null);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "googleMap" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/polylines.htm" height="420px" width="600px"></iframe> 
+        <h2>Polygons</h2> 
+        <p>Polygons are used to highlight a particular geographical area of a state or a country. You can create a desired polygon by instantiating the class <b>google.maps.Polygon</b>. While instantiating, we have to specify the desired values to the properties of Polygon such as path, strokeColor, strokeOapacity, fillColor, fillOapacity, etc.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows how to draw a polygon to highlight the cities Hyderabad, Nagpur, and Aurangabad.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap(){
+			
+            var mapProp = {
+               center:new google.maps.LatLng(17.433053, 78.412172),
+               zoom:4,
+               mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            
+            var myTrip = [
+               new google.maps.LatLng(17.385044, 78.486671),
+               new google.maps.LatLng(19.696888, 75.322451), 
+               new google.maps.LatLng(21.056296, 79.057803), 
+               new google.maps.LatLng(17.385044, 78.486671)
+            ];
+            
+            var flightPath = new google.maps.Polygon({
+               path:myTrip,
+               strokeColor:"#0000FF",
+               strokeOpacity:0.8,
+               strokeWeight:2,
+               fillColor:"#0000FF",
+               fillOpacity:0.4
+            });
+            
+            flightPath.setMap(map);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "googleMap" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/polygons.htm" height="420px" width="600px"></iframe> 
+        <h2>Rectangles</h2> 
+        <p>We can use rectangles to highlight the geographical area of a particular region or a state using a rectangular box. We can have a rectangle on a map by instantiating the class <b>google.maps.Rectangle</b>. While instantiating, we have to specify the desired values to the properties of the rectangle such as path, strokeColor, strokeOapacity, fillColor, fillOapacity, strokeWeight, bounds, etc.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows how to highlight a particular area on a map using a rectangle −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap(){
+			
+            var mapProp = {
+               center:new google.maps.LatLng(17.433053, 78.412172),
+               zoom:6,
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            
+            var myrectangle = new google.maps.Rectangle({
+               strokeColor:"#0000FF",
+               strokeOpacity:0.6,
+               strokeWeight:2,
+               
+               fillColor:"#0000FF",
+               fillOpacity:0.4,
+               map:map,
+               
+               bounds:new google.maps.LatLngBounds(
+                  new google.maps.LatLng(17.342761, 78.552432),
+                  new google.maps.LatLng(16.396553, 80.727725)
+               )
+					
+            });
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "googleMap" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre> 
+        <p>This gives you the following output −</p> 
+        <iframe class="result" src="/google_maps/src/rectangles.htm" height="420px" width="600px"></iframe> 
+        <h2>Circles</h2> 
+        <p>Just as rectangles, we can use Circles to highlight the geographical area of a particular region or a state using a circle by instantiating the class <b>google.maps.Circle</b>. While instantiating, we have to specify the desired values to the properties of the circle such as path, strokeColor, strokeOapacity, fillColor, fillOapacity, strokeWeight, radius, etc.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows how to highlight the area around New Delhi using a circle −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap(){
+			
+            var mapProp = {
+               center:new google.maps.LatLng(28.613939,77.209021),
+               zoom:5,
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+         
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+         
+            var myCity = new google.maps.Circle({
+               center:new google.maps.LatLng(28.613939,77.209021),
+               radius:150600,
+            
+               strokeColor:"#B40404",
+               strokeOpacity:0.6,
+               strokeWeight:2,
+            
+               fillColor:"#B40404",
+               fillOpacity:0.6
+            });
+				
+            myCity.setMap(map);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "googleMap" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/circles.htm" height="420px" width="600px"></iframe> 
+        <h1>Google Maps - Info Window</h1> 
+        <p>In addition to markers, polygons, polylines, and other geometrical shapes, we can also draw an Info Window on the map. This chapter explains how to use the Info Window.</p> 
+        <h2>Adding a Window</h2> 
+        <p>Info Window is used to add any kind of information to the map. For instance, if you want to provide information about a location on the map, you can use an info window. Usually the info window is attached to a marker. You can attach an info window by instantiating the <b>google.maps.InfoWindow</b> class. It has the following properties −</p> 
+        <ul class="list"> 
+         <li><p><b>Content</b> − You can pass your content in String format using this option.</p></li> 
+         <li><p><b>position</b> − You can choose the position of the info window using this option.</p></li> 
+         <li><p><b>maxWidth</b> − By default, the info window's width will be stretched till the text is wrapped. By specifying maxWidth, we can restrict the size of the info window horizontally.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>The following example shows how to set the marker and specify an info window above it −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.433053, 78.412172),
+               zoom:5
+            }
+            
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(17.433053, 78.412172),
+               map: map,
+               draggable:true,
+               icon:'/scripts/img/logo-footer.png'
+            });
+            
+            marker.setMap(map);
+            
+            var infowindow = new google.maps.InfoWindow({
+               content:"388-A , Road no 22, Jubilee Hills, Hyderabad Telangana, INDIA-500033"
+            });
+				
+            infowindow.open(map,marker);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It will produce the following output −</p> 
+        <iframe class="result" src="/google_maps/src/adding_window_in_google_maps.htm" height="420px" width="600px"></iframe> 
+        <h1>Google Maps - Symbols</h1> 
+        <p>In addition to markers, polygons, polylines, and other geometrical shapes, we can also add predefined vector images(symbols) on a map. This chapter explains how to use the symbols provided by Google Maps.</p> 
+        <h2>Adding a Symbol</h2> 
+        <p>Google provides various vector-based images (symbols) that can be used on a marker or a polyline. Just like other overlays, to draw these predefined symbols on a map, we have to instantiate their respective classes. Given below is a list of predefined symbols provided by Google and their class names −</p> 
+        <ul class="list"> 
+         <li><p><b>Circle</b> − google.maps.SymbolPath.CIRCLE</p></li> 
+         <li><p><b>Backward Pointing arrow (closed)</b> − google.maps.SymbolPath.BACKWARD_CLOSED_ARROW</p></li> 
+         <li><p><b>Forward Pointing arrow (closed)</b> − google.maps.SymbolPath.FORWARD_CLOSED_ARROW</p></li> 
+         <li><p><b>Forward Pointing arrow (open)</b> − google.maps.SymbolPath.CIRCLE</p></li> 
+         <li><p><b>Backward Pointing arrow (open)</b> − google.maps.SymbolPath.CIRCLE</p></li> 
+        </ul> 
+        <p>These symbols have the following properties − path, fillColor, fillOpacity, scale, stokeColor, strokeOpacity, and strokeWeight.</p> 
+        <h3>Example</h3> 
+        <p>The following example demonstrates how to draw predefined symbols on Google Map.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.433053, 78.412172),
+               zoom:5
+            }
+            
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: map.getCenter(),
+               
+               icon: {
+                  path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+                  scale: 5,
+                  strokeWeight:2,
+                  strokeColor:"#B40404"
+               },
+					
+               draggable:true,
+               map: map,
+            });
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/adding_symbol_in_google_maps.htm" height="420px" width="600px"></iframe> 
+        <h2>Animating the Symbol</h2> 
+        <p>Just like markers, you can add animations such as bounce and drop to the symbols as well.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows how to use a symbol as a marker on a map and add animation to it −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         function loadMap() {
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(17.433053, 78.412172),
+               zoom:5
+            }
+            
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: map.getCenter(),
+               
+               icon: {
+                  path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+                  scale: 5,
+                  strokeWeight:2,
+                  strokeColor:"#B40404"
+               },
+               
+               animation:google.maps.Animation.DROP,
+               draggable:true,
+               map: map
+            });
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "sample" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/symbols_animated.htm" height="420px" width="600px"></iframe> 
+        <h1>Google Maps - Events</h1> 
+        <p>The Google Maps JavaScript program can respond to various events generated by the user. This chapter provides examples demonstrating how to perform event handling while working with Google Maps.</p> 
+        <h2>Adding an Event Listener</h2> 
+        <p>You can add an event listener using the method <b>addListener()</b>. It accepts parameters such as object name on which we want to add the listener, name of the event, and the handler event.</p> 
+        <h3>Example</h3> 
+        <p>The following example shows how to add an event listener to a marker object. The program raises the zoom value of the map by 5 each time we double-click on the marker.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         var myCenter = new google.maps.LatLng(17.433053, 78.412172);
+         function loadMap(){
+			
+            var mapProp = {
+               center: myCenter,
+               zoom:5,
+               mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            
+            var marker = new google.maps.Marker({
+               position: myCenter,
+               title:'Click to zoom'
+            });
+            
+            marker.setMap(map);
+            
+            //Zoom to 7 when clicked on marker
+            google.maps.event.addListener(marker,'click',function() {
+               map.setZoom(9);
+               map.setCenter(marker.getPosition());
+            });
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "googleMap" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/events_in_google_maps.htm" height="420px" width="600px"></iframe> 
+        <h2>Opening an Info Window on Click</h2> 
+        <p>The following code opens an info window on clicking the marker −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         var myCenter = new google.maps.LatLng(17.433053, 78.412172);
+         function loadMap(){
+			
+            var mapProp = {
+               center:myCenter,
+               zoom:4,
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            
+            var marker = new google.maps.Marker({
+               position:myCenter,
+            });
+            
+            marker.setMap(map);
+            
+            var infowindow = new google.maps.InfoWindow({
+               content:"Hi"
+            });
+            
+            google.maps.event.addListener(marker, 'click', function() {
+               infowindow.open(map,marker);
+            });
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "googleMap" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/event_google_maps_info_window.htm" height="420px" width="600px"></iframe> 
+        <h2>Removing the Listener</h2> 
+        <p>You can remove an existing listener using the method <b>removeListener()</b>. This method accepts the listener object, therefore we have to assign the listener to a variable and pass it to this method.</p> 
+        <h3>Example</h3> 
+        <p>The following code shows how to remove a listener −</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   
+   &lt;head&gt;
+      &lt;script src = "http://maps.googleapis.com/maps/api/js"&gt;&lt;/script&gt;
+      
+      &lt;script&gt;
+         var myCenter = new google.maps.LatLng(17.433053, 78.412172);
+         function loadMap(){
+			
+            var mapProp = {
+               center:myCenter,
+               zoom:4,
+               mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            
+            var marker = new google.maps.Marker({
+               position:myCenter,
+            });
+            
+            marker.setMap(map);
+            
+            var infowindow = new google.maps.InfoWindow({
+               content:"Hi"
+            });
+            
+            var myListener = google.maps.event.addListener(marker, 'click', function() {
+               infowindow.open(map,marker);
+            });
+				
+            google.maps.event.removeListener(myListener);
+         }
+      &lt;/script&gt;
+      
+   &lt;/head&gt;
+   
+   &lt;body onload = "loadMap()"&gt;
+      &lt;div id = "googleMap" style = "width:580px; height:400px;"&gt;&lt;/div&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre> 
+        <p>It produces the following output −</p> 
+        <iframe class="result" src="/google_maps/src/remove_listener.htm" height="420px" width="600px"></iframe> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/google_maps/google_maps_events.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/google_maps/google_maps_useful_resources.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/google_maps/google_maps_quick_guide.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/google_maps/google_maps_quick_guide.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/google_maps/google_maps_quick_guide.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/google_maps/google_maps_quick_guide.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/google_maps/google_maps_quick_guide.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/google_maps/google_maps_quick_guide.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('/google_maps/try_google_maps.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

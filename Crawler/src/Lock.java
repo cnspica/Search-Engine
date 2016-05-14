@@ -3,4 +3,8 @@
  */
 public class Lock {
     public int lock;
+    public static void main(String[] args){
+        String title = "Newest 'riddle' Questions - Puzzling Stack Exchange";
+        System.out.println(title.replace("'", "\\'"));
+    }
 }

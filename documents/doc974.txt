@@ -1,0 +1,1199 @@
+http://crypto.stackexchange.com
+<!doctype html>
+<html>
+ <head> 
+  <title>Cryptography Stack Exchange</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/crypto/img/favicon.ico?v=e5444c0e7c0b"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/crypto/img/apple-touch-icon.png?v=4150da45a471"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Cryptography Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@StackCrypto"> 
+  <meta name="twitter:domain" content="crypto.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/crypto/img/apple-touch-icon@2.png?v=a6fd05c63c0b&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Cryptography Stack Exchange"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="Q&amp;A for software developers, mathematicians and others interested in cryptography"> 
+  <meta property="og:url" content="http://crypto.stackexchange.com/"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=beeead7e5f34"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/crypto/all.css?v=7135812978d4"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed of recent questions" href="/feeds"> 
+  <script>
+            StackExchange.ready(function() {
+                StackExchange.realtime.subscribeToActiveQuestions('281', 'home-active');
+            });
+        </script> 
+  <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                        tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+                                        messageStyle: "none"
+                });
+                </script> 
+  <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('281');
+                StackExchange.realtime.subscribeToTopBarNotifications('281');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463142167,"routeName":"Home/Index","enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"Cryptography Stack Exchange","description":"Q&A for software developers, mathematicians and others interested in cryptography","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":281,"enableSocialMediaInSharePopup":true},"user":{"fkey":"8c860d19b546a5f1bec5ccc0119119dd","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"cf93ca293e43","js/moderator.en.js":"022f362eb0a2","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"b9eda6e5c0b8","js/wmd.en.js":"b90dcd7c4c56","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"bd4fb7a0a976","js/tageditornew.en.js":"65c5f5ec346b","js/inline-tag-editing.en.js":"943c7090ea55","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"d8d766025f2d","js/tagsuggestions.en.js":"7dfec0d2a2d7","js/post-validation.en.js":"8c4fef95e838","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"a4aabc825384","js/keyboard-shortcuts.en.js":"cb27f8dccc5f","js/external-editor.en.js":"93769406446f","js/mathjax-editing.en.js":"be243b824510"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="home-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//crypto.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//crypto.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="281" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-crypto" title="Cryptography"></div> Cryptography </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.crypto.stackexchange.com" class="site-link js-gps-track" data-id="283" data-gps-track="
+            site.switch({ target_site:283, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-cryptometa" title="Cryptography Meta"></div> Cryptography Meta </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://crypto.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fcrypto.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://crypto.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fcrypto.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://crypto.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fcrypto.stackexchange.com%2f" class="login-link">sign up</a> <a href="https://crypto.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fcrypto.stackexchange.com%2f" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.crypto.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Cryptography </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content"> 
+    <div id="herobox"> 
+     <div id="hero-content"> 
+      <div id="close">
+       <a title="click to minimize">_</a>
+      </div> 
+      <div id="blurb">
+        Cryptography Stack Exchange is a question and answer site for software developers, mathematicians and others interested in cryptography. It's 100% free, no registration required. 
+       <br> 
+       <br> 
+       <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fcrypto.stackexchange.com%2f" id="tell-me-more" class="button">Sign up</a> 
+      </div> 
+      <div id="desc"> 
+       <b>Here's how it works:</b> 
+       <ol id="hiw"> 
+        <li id="q">Anybody can ask a question </li> 
+        <li id="an">Anybody can answer </li> 
+        <li id="b">The best answers are voted up and rise to the top </li> 
+       </ol> 
+      </div> 
+      <div style="clear: both"></div> 
+     </div> 
+     <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+    </div> 
+    <script>
+        StackExchange.using("gps", function () {
+            StackExchange.gps.track("hero.show", { hero_type: "hero", location: 3 }, true);
+        });
+    </script> 
+    <div id="mainbar"> 
+     <div class="subheader"> 
+      <h1 id="h-top-questions">Explore Our Questions</h1> 
+      <div id="tabs"> 
+       <a href="?tab=active" data-nav-xhref="" title="Questions that have been asked, answered, or updated recently" data-value="active"> active</a> 
+       <a href="?tab=hot" data-nav-xhref="" title="Questions with the most views, answers, and votes over the last few days" data-value="hot"> hot</a> 
+       <a href="?tab=week" data-nav-xhref="" title="Questions with the most views, answers, and votes this week" data-value="week"> week</a> 
+       <a href="?tab=month" data-nav-xhref="" title="Questions with the most views, answers, and votes this month" data-value="month"> month</a> 
+      </div> 
+     </div> 
+     <div id="explore-tags"> 
+      <a href="/?tags=encryption" class="post-tag no-tag-menu" title="Show questions relating to encryption" rel="tag">encryption</a>
+      <a href="/?tags=hash" class="post-tag no-tag-menu" title="Show questions relating to hash" rel="tag">hash</a>
+      <a href="/?tags=rsa" class="post-tag no-tag-menu" title="Show questions relating to rsa" rel="tag">rsa</a>
+      <a href="/?tags=aes" class="post-tag no-tag-menu" title="Show questions relating to aes" rel="tag">aes</a>
+      <a href="/?tags=public-key" class="post-tag no-tag-menu" title="Show questions relating to public-key" rel="tag">public-key</a>
+      <a href="/?tags=cryptanalysis" class="post-tag no-tag-menu" title="Show questions relating to cryptanalysis" rel="tag">cryptanalysis</a>
+      <a href="/?tags=elliptic-curves" class="post-tag no-tag-menu" title="Show questions relating to elliptic-curves" rel="tag">elliptic-curves</a>
+      <a href="/?tags=block-cipher" class="post-tag no-tag-menu" title="Show questions relating to block-cipher" rel="tag">block-cipher</a>
+      <a href="/?tags=signature" class="post-tag no-tag-menu" title="Show questions relating to signature" rel="tag">signature</a>
+      <a href="/?tags=protocol-design" class="post-tag no-tag-menu" title="Show questions relating to protocol-design" rel="tag">protocol-design</a> 
+      <a class="more-tags" href="/tags">more&nbsp;tags</a> 
+     </div> 
+     <div id="qlist-wrapper"> 
+      <div id="question-mini-list"> 
+       <div class="question-summary narrow" id="question-summary-34461"> 
+        <div onclick="window.location.href='/questions/34461/why-is-the-permutation-in-aes-and-other-ciphers-not-random-or-key-dependent'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="7 votes">7</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts warm">
+           <span title="1474 views">1k</span>
+          </div> 
+          <div class="warm">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34461/why-is-the-permutation-in-aes-and-other-ciphers-not-random-or-key-dependent" class="question-hyperlink" title="If the permutation in AES (or other ciphers) were randomly generated or dependent on the key, would it not be stronger against differential attacks?
+
+If this is so, then might we need fewer rounds for ...">Why is the permutation in AES (and other ciphers) not random or key-dependent?</a></h3> 
+         <div class="tags t-aes t-algorithm-design t-permutation t-differential-analysis"> 
+          <a href="/questions/tagged/aes" class="post-tag" title="show questions tagged 'aes'" rel="tag">aes</a> 
+          <a href="/questions/tagged/algorithm-design" class="post-tag" title="show questions tagged 'algorithm-design'" rel="tag">algorithm-design</a> 
+          <a href="/questions/tagged/permutation" class="post-tag" title="show questions tagged 'permutation'" rel="tag">permutation</a> 
+          <a href="/questions/tagged/differential-analysis" class="post-tag" title="show questions tagged 'differential-analysis'" rel="tag">differential-analysis</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34461/why-is-the-permutation-in-aes-and-other-ciphers-not-random-or-key-dependent/?lastactivity" class="started-link">modified <span title="2016-05-13 12:22:26Z" class="relativetime">21 secs ago</span></a> 
+          <a href="/users/18376/yyyyyyy">yyyyyyy</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">5,134</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35240"> 
+        <div onclick="window.location.href='/questions/35240/what-is-the-probability-of-attacking-sha1-used-in-rsa-signature-with-small-expon'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="109 views">109</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35240/what-is-the-probability-of-attacking-sha1-used-in-rsa-signature-with-small-expon" class="question-hyperlink" title="There is RSA signature check which has following properties:
+
+
+RSA modulus N which is 2048-bit
+RSA public exponent equal 41 (0x29)
+Genuine Signature uses EMSA-PKCS1-v1_5 padding of SHA1 hash, however ...">What is the probability of attacking SHA1 used in RSA signature with small exponent?</a></h3> 
+         <div class="tags t-rsa t-signature t-sha-1 t-forgery"> 
+          <a href="/questions/tagged/rsa" class="post-tag" title="show questions tagged 'rsa'" rel="tag">rsa</a> 
+          <a href="/questions/tagged/signature" class="post-tag" title="show questions tagged 'signature'" rel="tag">signature</a> 
+          <a href="/questions/tagged/sha-1" class="post-tag" title="show questions tagged 'sha-1'" rel="tag">sha-1</a> 
+          <a href="/questions/tagged/forgery" class="post-tag" title="show questions tagged 'forgery'" rel="tag">forgery</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35240/what-is-the-probability-of-attacking-sha1-used-in-rsa-signature-with-small-expon/?lastactivity" class="started-link">modified <span title="2016-05-13 12:03:58Z" class="relativetime">18 mins ago</span></a> 
+          <a href="/users/555/fgrieu">fgrieu</a> 
+          <span class="reputation-score" title="reputation score 36,460" dir="ltr">36.5k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-1434"> 
+        <div onclick="window.location.href='/questions/1434/are-there-two-known-strings-which-have-the-same-md5-hash-value'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="38 votes">38</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="8 answers">8</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts hot">
+           <span title="33738 views">34k</span>
+          </div> 
+          <div class="hot">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/1434/are-there-two-known-strings-which-have-the-same-md5-hash-value" class="question-hyperlink" title="Is there an example of two known strings which have the same MD5 hash value (representing a so-called &quot;MD5 collision&quot;)?
+">Are there two known strings which have the same MD5 hash value?</a></h3> 
+         <div class="tags t-hash t-cryptanalysis t-collision-resistance t-md5"> 
+          <a href="/questions/tagged/hash" class="post-tag" title="show questions tagged 'hash'" rel="tag">hash</a> 
+          <a href="/questions/tagged/cryptanalysis" class="post-tag" title="show questions tagged 'cryptanalysis'" rel="tag">cryptanalysis</a> 
+          <a href="/questions/tagged/collision-resistance" class="post-tag" title="show questions tagged 'collision-resistance'" rel="tag">collision-resistance</a> 
+          <a href="/questions/tagged/md5" class="post-tag" title="show questions tagged 'md5'" rel="tag">md5</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/1434/are-there-two-known-strings-which-have-the-same-md5-hash-value/?lastactivity" class="started-link">answered <span title="2016-05-13 11:20:57Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/34220/girish-patidar">Girish Patidar</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35284"> 
+        <div onclick="window.location.href='/questions/35284/how-to-normalize-data-of-a-generic-http-request-for-the-purpose-of-signing'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="18 views">18</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35284/how-to-normalize-data-of-a-generic-http-request-for-the-purpose-of-signing" class="question-hyperlink" title="I am working on PowerAuth 2.0, a solution for counter-based signing of HTTP requests (for the purpose of mobile banking). One of the tasks that I solved somehow but I am still not happy with the ...">How to normalize data of a generic HTTP request for the purpose of signing</a></h3> 
+         <div class="tags t-protocol-design t-algorithm-design t-mac"> 
+          <a href="/questions/tagged/protocol-design" class="post-tag" title="show questions tagged 'protocol-design'" rel="tag">protocol-design</a> 
+          <a href="/questions/tagged/algorithm-design" class="post-tag" title="show questions tagged 'algorithm-design'" rel="tag">algorithm-design</a> 
+          <a href="/questions/tagged/mac" class="post-tag" title="show questions tagged 'mac'" rel="tag">mac</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35284/how-to-normalize-data-of-a-generic-http-request-for-the-purpose-of-signing" class="started-link">asked <span title="2016-05-13 10:39:13Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/28832/petr-dvo%c5%99%c3%a1k">Petr Dvořák</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">21</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35242"> 
+        <div onclick="window.location.href='/questions/35242/can-i-serve-data-for-user-without-the-ability-to-access-them-which-functions-fo'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="28 views">28</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35242/can-i-serve-data-for-user-without-the-ability-to-access-them-which-functions-fo" class="question-hyperlink" title="My Problem
+
+I want to serve sesible data for users as a webservice.
+
+Restrictions: 
+
+
+I may not be able to technically acces the data of the user
+Data is accessable for one or several users, number ...">Can I serve data for user without the ability to access them? Which functions for the user remain?</a></h3> 
+         <div class="tags t-encryption t-data-privacy"> 
+          <a href="/questions/tagged/encryption" class="post-tag" title="show questions tagged 'encryption'" rel="tag">encryption</a> 
+          <a href="/questions/tagged/data-privacy" class="post-tag" title="show questions tagged 'data-privacy'" rel="tag">data-privacy</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35242/can-i-serve-data-for-user-without-the-ability-to-access-them-which-functions-fo" class="started-link">modified <span title="2016-05-13 06:06:57Z" class="relativetime">6 hours ago</span></a> 
+          <a href="/users/34167/lukas">Lukas</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">6</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35282"> 
+        <div onclick="window.location.href='/questions/35282/has-anybody-implemented-bgn-cryptosystem-to-multiply-two-plain-texts'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="12 views">12</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35282/has-anybody-implemented-bgn-cryptosystem-to-multiply-two-plain-texts" class="question-hyperlink" title="I have tried to use this code as follows,
+http://stackoverflow.com/questions/33581962/bgn-implementation-in-java
+
+but the issue is, when it generate the pairing, the output is in GTfiniteelement (for ...">Has anybody implemented BGN cryptosystem to multiply two plain texts?</a></h3> 
+         <div class="tags t-encryption t-elliptic-curves t-implementation t-pairings"> 
+          <a href="/questions/tagged/encryption" class="post-tag" title="show questions tagged 'encryption'" rel="tag">encryption</a> 
+          <a href="/questions/tagged/elliptic-curves" class="post-tag" title="show questions tagged 'elliptic-curves'" rel="tag">elliptic-curves</a> 
+          <a href="/questions/tagged/implementation" class="post-tag" title="show questions tagged 'implementation'" rel="tag">implementation</a> 
+          <a href="/questions/tagged/pairings" class="post-tag" title="show questions tagged 'pairings'" rel="tag">pairings</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35282/has-anybody-implemented-bgn-cryptosystem-to-multiply-two-plain-texts" class="started-link">modified <span title="2016-05-13 05:47:53Z" class="relativetime">6 hours ago</span></a> 
+          <a href="/users/17122/raoul722">Raoul722</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">883</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-31420"> 
+        <div onclick="window.location.href='/questions/31420/transforming-sha-512-into-sha-512-256'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="5 votes">5</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="88 views">88</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/31420/transforming-sha-512-into-sha-512-256" class="question-hyperlink" title="Based on my skimming over FIPS 180-4 it looks like the only difference between SHA-512 and SHA-512/256 is the initial hash value and the fact that the final output is truncated to 256 bits.
+
+My ...">Transforming SHA-512 into SHA-512/256?</a></h3> 
+         <div class="tags t-hash t-sha-2 t-sha-512"> 
+          <a href="/questions/tagged/hash" class="post-tag" title="show questions tagged 'hash'" rel="tag">hash</a> 
+          <a href="/questions/tagged/sha-2" class="post-tag" title="show questions tagged 'sha-2'" rel="tag">sha-2</a> 
+          <a href="/questions/tagged/sha-512" class="post-tag" title="show questions tagged 'sha-512'" rel="tag">sha-512</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/31420/transforming-sha-512-into-sha-512-256/?lastactivity" class="started-link">modified <span title="2016-05-13 04:55:04Z" class="relativetime">7 hours ago</span></a> 
+          <a href="/users/13625/otus">otus</a> 
+          <span class="reputation-score" title="reputation score 18,652" dir="ltr">18.7k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35207"> 
+        <div onclick="window.location.href='/questions/35207/two-fish-mds-and-pht'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="56 views">56</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35207/two-fish-mds-and-pht" class="question-hyperlink" title="Twofish was an AES candidate and it uses 4x4 Matrix as MDS followed by a PHT.
+
+The Branch Number of MDS and PHT is 5 and 2 Respectively.
+
+from formula
+
+Branch Number = Minimum of [HammingWeight(Input) ...">TWO Fish MDS and PHT</a></h3> 
+         <div class="tags t-aes t-block-cipher t-twofish"> 
+          <a href="/questions/tagged/aes" class="post-tag" title="show questions tagged 'aes'" rel="tag">aes</a> 
+          <a href="/questions/tagged/block-cipher" class="post-tag" title="show questions tagged 'block-cipher'" rel="tag">block-cipher</a> 
+          <a href="/questions/tagged/twofish" class="post-tag" title="show questions tagged 'twofish'" rel="tag">twofish</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35207/two-fish-mds-and-pht/?lastactivity" class="started-link">answered <span title="2016-05-12 23:56:51Z" class="relativetime">12 hours ago</span></a> 
+          <a href="/users/8481/j-d">J.D.</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">2,575</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35277"> 
+        <div onclick="window.location.href='/questions/35277/get-a-such-that-quadratic-residue-has-a-solution-rabin'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="21 views">21</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35277/get-a-such-that-quadratic-residue-has-a-solution-rabin" class="question-hyperlink" title="My task is to implement Rabin signature. I have trouble with choosing padding a such that
+$$x^2 \equiv a \pmod n$$
+has a solution.
+
+In that context, $n=p\cdot q$ is composite, where $p$ and $q$ are ...">Get $a$ such that quadratic residue has a solution (Rabin)</a></h3> 
+         <div class="tags t-signature t-number-theory t-rabin-cryptosystem t-quadratic-residuosity"> 
+          <a href="/questions/tagged/signature" class="post-tag" title="show questions tagged 'signature'" rel="tag">signature</a> 
+          <a href="/questions/tagged/number-theory" class="post-tag" title="show questions tagged 'number-theory'" rel="tag">number-theory</a> 
+          <a href="/questions/tagged/rabin-cryptosystem" class="post-tag" title="show questions tagged 'rabin-cryptosystem'" rel="tag">rabin-cryptosystem</a> 
+          <a href="/questions/tagged/quadratic-residuosity" class="post-tag" title="show questions tagged 'quadratic-residuosity'" rel="tag">quadratic-residuosity</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35277/get-a-such-that-quadratic-residue-has-a-solution-rabin/?lastactivity" class="started-link">modified <span title="2016-05-12 23:51:47Z" class="relativetime">12 hours ago</span></a> 
+          <a href="/users/18376/yyyyyyy">yyyyyyy</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">5,134</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-30823"> 
+        <div onclick="window.location.href='/questions/30823/why-is-puttygen-created-rsa-public-exponente-not-in-3-17-65537'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="21 votes">21</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts warm">
+           <span title="1637 views">2k</span>
+          </div> 
+          <div class="warm">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/30823/why-is-puttygen-created-rsa-public-exponente-not-in-3-17-65537" class="question-hyperlink" title="As far as I know, RSA public exponent(e) should be one of {3,17,65537}.
+However, I found PuTTYgen-created RSA public exponent(e) is 0x25(37) by default,as follows, (PuTTYgen version: 0.66)
+
+
+  
+
+
+I am ...">Why is PuTTYgen-created RSA public exponent(e) not in {3,17,65537}?</a></h3> 
+         <div class="tags t-encryption t-rsa t-public-key"> 
+          <a href="/questions/tagged/encryption" class="post-tag" title="show questions tagged 'encryption'" rel="tag">encryption</a> 
+          <a href="/questions/tagged/rsa" class="post-tag" title="show questions tagged 'rsa'" rel="tag">rsa</a> 
+          <a href="/questions/tagged/public-key" class="post-tag" title="show questions tagged 'public-key'" rel="tag">public-key</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/30823/why-is-puttygen-created-rsa-public-exponente-not-in-3-17-65537/?lastactivity" class="started-link">modified <span title="2016-05-12 20:11:46Z" class="relativetime">16 hours ago</span></a> 
+          <a href="/users/555/fgrieu">fgrieu</a> 
+          <span class="reputation-score" title="reputation score 36,460" dir="ltr">36.5k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35269"> 
+        <div onclick="window.location.href='/questions/35269/how-do-you-work-out-the-private-key-in-a-rsa-cryptosystem-knowing-a-certain-publ'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="-1 votes">-1</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="34 views">34</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35269/how-do-you-work-out-the-private-key-in-a-rsa-cryptosystem-knowing-a-certain-publ" class="question-hyperlink" title="The public key: 
+
+n = 85 and e = 19
+
+I know that n is the product of two prime numbers, now is it right of me to figure them out by process of elimination which I got p or q equals 17 and 5. Or is ...">How do you work out the private key in a RSA cryptosystem knowing a certain public key?</a></h3> 
+         <div class="tags t-rsa t-public-key"> 
+          <a href="/questions/tagged/rsa" class="post-tag" title="show questions tagged 'rsa'" rel="tag">rsa</a> 
+          <a href="/questions/tagged/public-key" class="post-tag" title="show questions tagged 'public-key'" rel="tag">public-key</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35269/how-do-you-work-out-the-private-key-in-a-rsa-cryptosystem-knowing-a-certain-publ/?lastactivity" class="started-link">answered <span title="2016-05-12 17:50:48Z" class="relativetime">18 hours ago</span></a> 
+          <a href="/users/17884/puzzlepalace">puzzlepalace</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">504</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34970"> 
+        <div onclick="window.location.href='/questions/34970/cpa-on-theoretical-otp-with-cbc-mode'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="42 views">42</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34970/cpa-on-theoretical-otp-with-cbc-mode" class="question-hyperlink" title="Body of question
+
+Note: this is THEORETICAL exercise. I understand OTP and CBC does not get along.
+
+I have to find a CPA on CBC enc-mode using OTP as the encryption algorithm, s.t a new key is ...">CPA on theoretical OTP with CBC mode</a></h3> 
+         <div class="tags t-encryption t-cryptanalysis t-cbc t-one-time-pad t-chosen-ciphertext-attack"> 
+          <a href="/questions/tagged/encryption" class="post-tag" title="show questions tagged 'encryption'" rel="tag">encryption</a> 
+          <a href="/questions/tagged/cryptanalysis" class="post-tag" title="show questions tagged 'cryptanalysis'" rel="tag">cryptanalysis</a> 
+          <a href="/questions/tagged/cbc" class="post-tag" title="show questions tagged 'cbc'" rel="tag">cbc</a> 
+          <a href="/questions/tagged/one-time-pad" class="post-tag" title="show questions tagged 'one-time-pad'" rel="tag">one-time-pad</a> 
+          <a href="/questions/tagged/chosen-ciphertext-attack" class="post-tag" title="show questions tagged 'chosen-ciphertext-attack'" rel="tag">chosen-ciphertext-attack</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34970/cpa-on-theoretical-otp-with-cbc-mode/?lastactivity" class="started-link">modified <span title="2016-05-12 16:25:36Z" class="relativetime">19 hours ago</span></a> 
+          <a href="/users/29161/biv">Biv</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,951</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35198"> 
+        <div onclick="window.location.href='/questions/35198/rsa-encryption-problem-for-discrete-math'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="82 views">82</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35198/rsa-encryption-problem-for-discrete-math" class="question-hyperlink" title="I am doing practice problems for my upcoming final exam, and am having trouble with this RSA encryption problem. If any one could check to see if i did these correctly, it would be greatly ...">RSA Encryption problem for Discrete Math</a></h3> 
+         <div class="tags t-rsa t-modular-arithmetic"> 
+          <a href="/questions/tagged/rsa" class="post-tag" title="show questions tagged 'rsa'" rel="tag">rsa</a> 
+          <a href="/questions/tagged/modular-arithmetic" class="post-tag" title="show questions tagged 'modular-arithmetic'" rel="tag">modular-arithmetic</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35198/rsa-encryption-problem-for-discrete-math/?lastactivity" class="started-link">modified <span title="2016-05-12 16:25:16Z" class="relativetime">19 hours ago</span></a> 
+          <a href="/users/29161/biv">Biv</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,951</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-35256"> 
+        <div onclick="window.location.href='/questions/35256/how-to-decrypt-an-rsa-ciphertext-given-an-oracle-providing-the-lower-8-bits-of-d'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="48 views">48</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/35256/how-to-decrypt-an-rsa-ciphertext-given-an-oracle-providing-the-lower-8-bits-of-d" class="question-hyperlink" title="I have access to an oracle that can encrypt and partially decrypt a number with RSA-1024 algorithm. 
+
+For encryption: 
+\begin{equation}
+C = M^e\bmod n
+\end{equation} 
+But for decryption, result will ...">How to decrypt an RSA ciphertext given an oracle providing the lower 8 bits of decryptions?</a></h3> 
+         <div class="tags t-rsa t-modular-arithmetic t-decryption-oracle"> 
+          <a href="/questions/tagged/rsa" class="post-tag" title="show questions tagged 'rsa'" rel="tag">rsa</a> 
+          <a href="/questions/tagged/modular-arithmetic" class="post-tag" title="show questions tagged 'modular-arithmetic'" rel="tag">modular-arithmetic</a> 
+          <a href="/questions/tagged/decryption-oracle" class="post-tag" title="show questions tagged 'decryption-oracle'" rel="tag">decryption-oracle</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/35256/how-to-decrypt-an-rsa-ciphertext-given-an-oracle-providing-the-lower-8-bits-of-d/?lastactivity" class="started-link">modified <span title="2016-05-12 16:24:46Z" class="relativetime">19 hours ago</span></a> 
+          <a href="/users/34191/lisa">Lisa</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">3</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div> 
+      <a id="home-browse" class="button" href="/questions">Browse More Questions</a> 
+     </div> 
+     <script>
+        StackExchange.using('exploreQuestions', function() {
+                StackExchange.exploreQuestions.init({count:14});
+                            StackExchange.exploreQuestions.gps();
+        });
+    </script> 
+     <script>
+    StackExchange.ready(function() { StackExchange.question.initShareLinks(); });
+</script>
+    </div> 
+    <div id="sidebar"> 
+     <style type="text/css">
+    .ads { margin-left: 60px; }
+    .ad-container { width: 300px; height: 250px; margin-right: 20px; margin-bottom: 20px; }
+    .ad-container .ad { height: 250px; }
+    .ad-container .footer-container { overflow: hidden; height: 30px; position: relative; top: -30px; }
+    .ad-container .footer-container .footer { font-family: Arial,Helvetic,Sans-Serif; font-size: 12px; text-align: center; padding-top: 9px; background-color: #000; color: #EFF; opacity: 0.9; filter: alpha(opacity=90); top: 30px; height: 30px; position: relative; }
+    .ad-container a:hover { text-decoration: underline; }
+    #adzerk2 { height: 250px; }
+</style> 
+     <script>
+    StackExchange.ready(function () {
+        $(".ad-container").hover(
+            function () {
+                $(".ad-container .footer-container .footer").stop(true, true).animate({ top: "0px" }, "fast");
+            },
+            function () {
+                $(".ad-container .footer-container .footer").animate({ top: "30px" }, "fast");
+            });
+    });
+</script> 
+     <script>
+        var ados = ados || {};ados.run = ados.run || [];
+        ados.run.push(function () { ados_add_placement(22, 12057, "adcm2", [5,17]).setZone(76); });
+    </script> 
+     <div class="everyonelovesstackoverflow" id="adcm2"> 
+     </div> 
+     <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+     <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('x-host-crypto.stackexchange.com');; ados_load();
+        });   
+        
+</script>
+     <div style="margin-bottom: 10px;"> 
+      <style type="text/css">
+#newsletter-ad {
+    width: 270px;
+    height: 250px;
+    overflow: hidden;
+    background: url('//cdn.sstatic.net/Sites/crypto/img/newsletter-ad.png?v=4');
+    padding: 0 15px 0 15px;
+}
+#newsletter-ad-header {
+    margin-top: 60px;
+}
+#newsletter-ad ul {
+    margin: 1em 0 1em 1.5em;
+}
+#newsletter-ad ul li {
+    margin-bottom: 5px;
+}
+#newsletter-signup-container {
+    text-align: center;
+}
+#newsletter-preview-container {
+    margin-top: 10px;
+    text-align: center;
+}
+#newsletter-email-input {
+    width: 200px;
+}
+</style> 
+      <script>
+    StackExchange.ready(function () {
+        StackExchange.newsletterAd.init();
+    });
+</script> 
+      <div id="newsletter-ad"> 
+       <p id="newsletter-ad-header">Get the <b>weekly newsletter!</b> In it, you'll get:</p> 
+       <ul> 
+        <li>The week's top questions and answers</li> 
+        <li>Important community announcements</li> 
+        <li>Questions that need answers</li> 
+       </ul> 
+       <div id="newsletter-signup-container">
+        <input id="newsletter-signup" type="button" value="Sign up for the newsletter">
+       </div> 
+       <p id="newsletter-preview-container">see an <a href="//stackexchange.com/newsletters/newsletter?site=crypto.stackexchange.com" id="newsletter-preview">example newsletter</a></p> 
+       <div class="dno"> 
+        <p class="privacy-policy-agreement"> By subscribing, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p> 
+        <input type="hidden" name="legalLinksShown" value="1"> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="hot-network-questions" class="module"> 
+      <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:8 })"> Hot Network Questions </a> </h4> 
+      <ul> 
+       <li> 
+        <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/94090/where-did-the-3-dot-user-is-typing-feedback-you-see-on-messenger-apps-originat" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:102 }); posts_hot_network.click({ item_type:2, location:8 })"> Where did the 3 dot 'user is typing' feedback you see on messenger apps originate? </a> </li> 
+       <li> 
+        <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37203859/preferred-method-to-new-pointer-to-array" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:1 }); posts_hot_network.click({ item_type:2, location:8 })"> Preferred method to `new` pointer to array </a> </li> 
+       <li> 
+        <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/324831/word-for-a-person-who-freely-shares-others-secrets" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:97 }); posts_hot_network.click({ item_type:2, location:8 })"> Word for a person who freely shares others' secrets </a> </li> 
+       <li> 
+        <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67080/office-temperature" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:423 }); posts_hot_network.click({ item_type:2, location:8 })"> Office Temperature </a> </li> 
+       <li> 
+        <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/255353/why-does-a-system-try-to-minimize-its-total-energy" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:151 }); posts_hot_network.click({ item_type:2, location:8 })"> Why does a system try to minimize its total energy? </a> </li> 
+       <li> 
+        <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:131 }); posts_hot_network.click({ item_type:2, location:8 })"> Why would the 'final' keyword ever be useful? </a> </li> 
+       <li> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123179/should-i-hash-my-passwords-even-if-i-am-only-allowed-to-generate-limited-traffic" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Should I hash my passwords even if I am only allowed to generate limited traffic? </a> </li> 
+       <li> 
+        <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/121758/set-createdbyid-field-in-apex-test-class" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:459 }); posts_hot_network.click({ item_type:2, location:8 })"> Set CreatedById Field in Apex Test Class </a> </li> 
+       <li> 
+        <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/282701/why-some-shells-read-builtin-fail-to-read-the-whole-line-from-file-in-proc" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:106 }); posts_hot_network.click({ item_type:2, location:8 })"> Why some shells `read` builtin fail to read the whole line from file in `/proc`? </a> </li> 
+       <li> 
+        <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/238725/the-number-of-prime-factors-of-a-natural-number" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:504 }); posts_hot_network.click({ item_type:2, location:8 })"> The number of prime factors of a natural number </a> </li> 
+       <li> 
+        <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318226/should-we-avoid-custom-objects-as-parameters" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:131 }); posts_hot_network.click({ item_type:2, location:8 })"> Should we avoid custom objects as parameters? </a> </li> 
+       <li> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123045/is-it-acceptable-practice-to-only-increment-a-number-when-changing-a-password" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Is it acceptable practice to only increment a number when changing a password? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/238740/verify-that-a-group-is-hyperbolic-via-computer-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:504 }); posts_hot_network.click({ item_type:2, location:8 })"> Verify that a group is hyperbolic via computer algebra </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/115026/rigid-rotation-of-a-point-cloud" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:387 }); posts_hot_network.click({ item_type:2, location:8 })"> Rigid Rotation of a Point Cloud </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-diy" title="Home Improvement Stack Exchange"></div><a href="http://diy.stackexchange.com/questions/90392/if-metal-expands-when-heated-how-does-heating-a-bolt-loosen-it" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:73 }); posts_hot_network.click({ item_type:2, location:8 })"> If metal expands when heated, how does heating a bolt loosen it? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/233769/whats-needed-to-put-a-pc-fan-into-reverse" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:135 }); posts_hot_network.click({ item_type:2, location:8 })"> What's needed to put a PC fan into reverse? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1781769/is-formal-truth-in-mathematical-logic-a-generalization-of-everyday-intuitive-tr" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:69 }); posts_hot_network.click({ item_type:2, location:8 })"> Is formal truth in mathematical logic a generalization of everyday, intuitive truth? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67011/how-do-i-prevent-my-manager-from-abusing-a-contract-specification-that-breaches" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:423 }); posts_hot_network.click({ item_type:2, location:8 })"> How do I prevent my manager from abusing a contract specification that breaches my privacy? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68194/most-useful-languages-other-than-english-in-asia-and-oceania" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:273 }); posts_hot_network.click({ item_type:2, location:8 })"> Most useful languages other than English in Asia and Oceania </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68605/how-to-read-papers-without-falling-into-a-rabbit-hole" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> How to read papers without falling into a rabbit hole? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/32450/a-search-game-with-2016-numbers" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:559 }); posts_hot_network.click({ item_type:2, location:8 })"> A search game with 2016 numbers </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/122848/does-correcting-misspelled-usernames-create-a-security-risk" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Does correcting misspelled usernames create a security risk? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/41405/a-person-with-no-magic-in-a-magic-dependent-world" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:579 }); posts_hot_network.click({ item_type:2, location:8 })"> A person with no magic in a magic dependent world </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/32519/deceptive-dices" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:559 }); posts_hot_network.click({ item_type:2, location:8 })"> Deceptive dices </a> </li> 
+      </ul> 
+      <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:8 })"> more hot questions </a> 
+     </div> 
+    </div> 
+    <div id="feed-link"> 
+     <div id="feed-link-text"> 
+      <a href="/feeds" title="the 30 most recent questions"> <span class="feed-icon"></span>recent questions feed </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://blog.stackoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.crypto.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3570 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Cryptography Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

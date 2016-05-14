@@ -1,0 +1,1272 @@
+https://stackexchange.com/leagues/2/quarter/serverfault
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - Server Fault - 2nd Quarter 2016 - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/2/quarter/serverfault/2016-04-01"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/2/Quarter/2016-04-01/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f2%2fquarter%2fserverfault#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f2%2fquarter%2fserverfault">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/quarter/stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/quarter/superuser/2016-04-01?sort=reputationchange"> Super User </option> <option value="/leagues/21/quarter/math/2016-04-01?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/quarter/askubuntu/2016-04-01?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange" selected> Server Fault </option> <option value="/leagues/35/quarter/english/2016-04-01?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/quarter/unix/2016-04-01?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/quarter/apple/2016-04-01?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/quarter/gaming/2016-04-01?sort=reputationchange"> Arqade </option> <option value="/leagues/52/quarter/programmers/2016-04-01?sort=reputationchange"> Programmers </option> <option value="/leagues/29/quarter/tex/2016-04-01?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/quarter/android/2016-04-01?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/quarter/meta/2016-04-01?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/quarter/electronics/2016-04-01?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/quarter/physics/2016-04-01?sort=reputationchange"> Physics </option> <option value="/leagues/19/quarter/stats/2016-04-01?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/quarter/dba/2016-04-01?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/quarter/ru-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/quarter/security/2016-04-01?sort=reputationchange"> Information Security </option> <option value="/leagues/86/quarter/codereview/2016-04-01?sort=reputationchange"> Code Review </option> <option value="/leagues/42/quarter/wordpress/2016-04-01?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/quarter/gis/2016-04-01?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/quarter/scifi/2016-04-01?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/quarter/mathoverflow/2016-04-01?sort=reputationchange"> MathOverflow </option> <option value="/leagues/23/quarter/diy/2016-04-01?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/quarter/webapps/2016-04-01?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/quarter/sharepoint/2016-04-01?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/quarter/cooking/2016-04-01?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/quarter/graphicdesign/2016-04-01?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/quarter/gamedev/2016-04-01?sort=reputationchange"> Game Development </option> <option value="/leagues/99/quarter/drupal/2016-04-01?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/quarter/ux/2016-04-01?sort=reputationchange"> User Experience </option> <option value="/leagues/229/quarter/ell/2016-04-01?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/quarter/pt-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/quarter/webmasters/2016-04-01?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/quarter/magento/2016-04-01?sort=reputationchange"> Magento </option> <option value="/leagues/191/quarter/academia/2016-04-01?sort=reputationchange"> Academia </option> <option value="/leagues/125/quarter/travel/2016-04-01?sort=reputationchange"> Travel </option> <option value="/leagues/213/quarter/salesforce/2016-04-01?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/quarter/workplace/2016-04-01?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/quarter/photo/2016-04-01?sort=reputationchange"> Photography </option> <option value="/leagues/177/quarter/mathematica/2016-04-01?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/quarter/money/2016-04-01?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/quarter/movies/2016-04-01?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/quarter/rpg/2016-04-01?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/quarter/cs/2016-04-01?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/quarter/codegolf/2016-04-01?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/quarter/chemistry/2016-04-01?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/quarter/mechanics/2016-04-01?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/quarter/bicycles/2016-04-01?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/quarter/blender/2016-04-01?sort=reputationchange"> Blender </option> <option value="/leagues/359/quarter/rus/2016-04-01?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/quarter/music/2016-04-01?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/quarter/biology/2016-04-01?sort=reputationchange"> Biology </option> <option value="/leagues/139/quarter/christianity/2016-04-01?sort=reputationchange"> Christianity </option> <option value="/leagues/95/quarter/skeptics/2016-04-01?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/quarter/anime/2016-04-01?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/quarter/crypto/2016-04-01?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/quarter/bitcoin/2016-04-01?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/quarter/parenting/2016-04-01?sort=reputationchange"> Parenting </option> <option value="/leagues/243/quarter/networkengineering/2016-04-01?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/quarter/cstheory/2016-04-01?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/327/quarter/worldbuilding/2016-04-01?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/307/quarter/puzzling/2016-04-01?sort=reputationchange"> Puzzling </option> <option value="/leagues/113/quarter/judaism/2016-04-01?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/quarter/fitness/2016-04-01?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/quarter/german/2016-04-01?sort=reputationchange"> German Language </option> <option value="/leagues/275/quarter/aviation/2016-04-01?sort=reputationchange"> Aviation </option> <option value="/leagues/288/quarter/arduino/2016-04-01?sort=reputationchange"> Arduino </option> <option value="/leagues/60/quarter/boardgames/2016-04-01?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/quarter/dsp/2016-04-01?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/quarter/sqa/2016-04-01?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/quarter/softwarerecs/2016-04-01?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/quarter/philosophy/2016-04-01?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/quarter/history/2016-04-01?sort=reputationchange"> History </option> <option value="/leagues/123/quarter/gardening/2016-04-01?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/quarter/japanese/2016-04-01?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/quarter/writers/2016-04-01?sort=reputationchange"> Writers </option> <option value="/leagues/37/quarter/stackapps/2016-04-01?sort=reputationchange"> Stack Apps </option> <option value="/leagues/211/quarter/islam/2016-04-01?sort=reputationchange"> Islam </option> <option value="/leagues/259/quarter/sound/2016-04-01?sort=reputationchange"> Sound Design </option> <option value="/leagues/93/quarter/pm/2016-04-01?sort=reputationchange"> Project Management </option> <option value="/leagues/91/quarter/quant/2016-04-01?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/341/quarter/lifehacks/2016-04-01?sort=reputationchange"> Lifehacks </option> <option value="/leagues/333/quarter/ja-stackoverflow/2016-04-01?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/137/quarter/french/2016-04-01?sort=reputationchange"> French Language </option> <option value="/leagues/165/quarter/scicomp/2016-04-01?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/quarter/spanish/2016-04-01?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/quarter/productivity/2016-04-01?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/quarter/pets/2016-04-01?sort=reputationchange"> Pets </option> <option value="/leagues/255/quarter/space/2016-04-01?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/quarter/datascience/2016-04-01?sort=reputationchange"> Data Science </option> <option value="/leagues/64/quarter/homebrew/2016-04-01?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/quarter/expressionengine/2016-04-01?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/quarter/hermeneutics/2016-04-01?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/quarter/video/2016-04-01?sort=reputationchange"> Video Production </option> <option value="/leagues/197/quarter/windowsphone/2016-04-01?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/quarter/outdoors/2016-04-01?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/quarter/emacs/2016-04-01?sort=reputationchange"> Emacs </option> <option value="/leagues/189/quarter/sports/2016-04-01?sort=reputationchange"> Sports </option> <option value="/leagues/237/quarter/reverseengineering/2016-04-01?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/quarter/chinese/2016-04-01?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/quarter/cogsci/2016-04-01?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/quarter/chess/2016-04-01?sort=reputationchange"> Chess </option> <option value="/leagues/143/quarter/linguistics/2016-04-01?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/quarter/astronomy/2016-04-01?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/quarter/robotics/2016-04-01?sort=reputationchange"> Robotics </option> <option value="/leagues/245/quarter/opendata/2016-04-01?sort=reputationchange"> Open Data </option> <option value="/leagues/215/quarter/patents/2016-04-01?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/quarter/es-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/quarter/tor/2016-04-01?sort=reputationchange"> Tor </option> <option value="/leagues/223/quarter/politics/2016-04-01?sort=reputationchange"> Politics </option> <option value="/leagues/315/quarter/hinduism/2016-04-01?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/quarter/freelancing/2016-04-01?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/quarter/vi/2016-04-01?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/quarter/craftcms/2016-04-01?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/quarter/joomla/2016-04-01?sort=reputationchange"> Joomla </option> <option value="/leagues/321/quarter/startups/2016-04-01?sort=reputationchange"> Startups </option> <option value="/leagues/343/quarter/engineering/2016-04-01?sort=reputationchange"> Engineering </option> <option value="/leagues/313/quarter/buddhism/2016-04-01?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/quarter/russian/2016-04-01?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/quarter/economics/2016-04-01?sort=reputationchange"> Economics </option> <option value="/leagues/363/quarter/law/2016-04-01?sort=reputationchange"> Law </option> <option value="/leagues/155/quarter/bricks/2016-04-01?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/quarter/expatriates/2016-04-01?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/quarter/tridion/2016-04-01?sort=reputationchange"> Tridion </option> <option value="/leagues/291/quarter/matheducators/2016-04-01?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/quarter/earthscience/2016-04-01?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/quarter/martialarts/2016-04-01?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/quarter/elementaryos/2016-04-01?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/quarter/ham/2016-04-01?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/quarter/civicrm/2016-04-01?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/quarter/health/2016-04-01?sort=reputationchange"> Health </option> <option value="/leagues/277/quarter/ebooks/2016-04-01?sort=reputationchange"> Ebooks </option> <option value="/leagues/351/quarter/woodworking/2016-04-01?sort=reputationchange"> Woodworking </option> <option value="/leagues/231/quarter/sustainability/2016-04-01?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/386/quarter/ethereum/2016-04-01?sort=reputationchange"> Ethereum </option> <option value="/leagues/217/quarter/genealogy/2016-04-01?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/quarter/italian/2016-04-01?sort=reputationchange"> Italian Language </option> <option value="/leagues/173/quarter/poker/2016-04-01?sort=reputationchange"> Poker </option> <option value="/leagues/279/quarter/alcohol/2016-04-01?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/365/quarter/opensource/2016-04-01?sort=reputationchange"> Open Source </option> <option value="/leagues/335/quarter/hsm/2016-04-01?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/quarter/musicfans/2016-04-01?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/quarter/coffee/2016-04-01?sort=reputationchange"> Coffee </option> <option value="/leagues/371/quarter/portuguese/2016-04-01?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/quarter/hardwarerecs/2016-04-01?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/quarter/computergraphics/2016-04-01?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/quarter/communitybuilding/2016-04-01?sort=reputationchange"> Community Building </option> <option value="/leagues/361/quarter/mythology/2016-04-01?sort=reputationchange"> Mythology </option> <option value="/leagues/384/quarter/3dprinting/2016-04-01?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/quarter/latin/2016-04-01?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/quarter/retrocomputing/2016-04-01?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/quarter/languagelearning/2016-04-01?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/2/week/serverfault">Week</a> 
+        <a href="/leagues/2/month/serverfault">Month</a> 
+        <a href="/leagues/2/quarter/serverfault" class="youarehere">Quarter</a> 
+        <a href="/leagues/2/year/serverfault">Year</a> 
+        <a href="/leagues/2/alltime/serverfault">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://serverfault.com"> 
+        <div class="site-bubble" style="background-color: #ee4b4b; border-color: #ee4b4b;"> 
+         <img src="http://cdn.sstatic.net/Sites/serverfault/img/icon-48.png?v=ee4b4b" alt="Server Fault" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://serverfault.com">Server Fault</a></h2> 
+        <p> Q&amp;A for system and network administrators <span class="league-user-count">(262,140 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>2nd Quarter 2016</h3> 
+        <a href="/leagues/2/quarter/serverfault/2016-01-01" class="viewolder">« prev quarter</a> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+       <div class="fr">
+        Sort by: 
+        <select onchange="$(this).siblings('.sortLoader').css('visibility', 'visible'); window.location.href = $(this).val(); return false;"> <option value="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange" selected> Quarter Rank </option> <option value="/leagues/2/quarter/serverfault/2016-04-01?sort=rankchange"> Rank Change </option> <option value="/leagues/2/quarter/serverfault/2016-04-01?sort=totalreputation"> Total Reputation </option> </select> 
+        <span class="sortLoader"></span> 
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="126632"></a> 
+        <div class="user user-126632"> 
+         <a href="http://serverfault.com/users/126632/michael-hampton">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/uMFF7.png?s=128&amp;g=1&amp;s=48" title="Michael Hampton">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/126632/michael-hampton">Michael Hampton</a></h2> 
+          <span title="16 gold badges"><span class="badge1"></span><span class="badgecount">16</span></span> 
+          <span title="185 silver badges"><span class="badge2"></span><span class="badgecount">185</span></span> 
+          <span title="380 bronze badges"><span class="badge3"></span><span class="badgecount">380</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/126632?sort=reputationchange#126632">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">0</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">113,819</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,883</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="13325"></a> 
+        <div class="user user-13325"> 
+         <a href="http://serverfault.com/users/13325/ewwhite">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/0Qoo1.jpg?s=128&amp;g=1&amp;s=48" title="ewwhite">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/13325/ewwhite">ewwhite</a></h2> 
+          <span title="40 gold badges"><span class="badge1"></span><span class="badgecount">40</span></span> 
+          <span title="275 silver badges"><span class="badge2"></span><span class="badgecount">275</span></span> 
+          <span title="541 bronze badges"><span class="badge3"></span><span class="badgecount">541</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/13325?sort=reputationchange#13325">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">0</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">143,927</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,078</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="37681"></a> 
+        <div class="user user-37681"> 
+         <a href="http://serverfault.com/users/37681/hbruijn">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/FqptO.png?s=128&amp;g=1&amp;s=48" title="HBruijn">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/37681/hbruijn">HBruijn</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="39 silver badges"><span class="badge2"></span><span class="badgecount">39</span></span> 
+          <span title="65 bronze badges"><span class="badge3"></span><span class="badgecount">65</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/37681?sort=reputationchange#37681">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+6</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">25,787</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,468</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="33193"></a> 
+        <div class="user user-33193"> 
+         <a href="http://serverfault.com/users/33193/journeyman-geek">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/e88cb2b3858ca0df735806f1a8476b23?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Journeyman Geek">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/33193/journeyman-geek">Journeyman Geek</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span> 
+          <span title="39 bronze badges"><span class="badge3"></span><span class="badgecount">39</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/33193?sort=reputationchange#33193">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+280</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,202</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,215</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="269155"></a> 
+        <div class="user user-269155"> 
+         <a href="http://serverfault.com/users/269155/shodanshok">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/d509ac7049eb6fa889a1c5599aedc3e2?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="shodanshok">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/269155/shodanshok">shodanshok</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span> 
+          <span title="26 bronze badges"><span class="badge3"></span><span class="badgecount">26</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 3 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/269155?sort=reputationchange#269155">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+12</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,500</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,171</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="8897"></a> 
+        <div class="user user-8897"> 
+         <a href="http://serverfault.com/users/8897/sven">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/66cdcc6d136ef4ec95dc2bb20e152cd6?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Sven">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/8897/sven">Sven</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="84 silver badges"><span class="badge2"></span><span class="badgecount">84</span></span> 
+          <span title="124 bronze badges"><span class="badge3"></span><span class="badgecount">124</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/8897?sort=reputationchange#8897">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+14</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">59,711</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,149</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3038"></a> 
+        <div class="user user-3038"> 
+         <a href="http://serverfault.com/users/3038/sysadmin1138">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1fb33c0507faeb381309536779716850?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="sysadmin1138">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/3038/sysadmin1138">sysadmin1138</a></h2> 
+          <span title="13 gold badges"><span class="badge1"></span><span class="badgecount">13</span></span> 
+          <span title="119 silver badges"><span class="badge2"></span><span class="badgecount">119</span></span> 
+          <span title="249 bronze badges"><span class="badge3"></span><span class="badgecount">249</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/3038?sort=reputationchange#3038">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">95,995</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,135</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="55514"></a> 
+        <div class="user user-55514"> 
+         <a href="http://serverfault.com/users/55514/madhatter">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/d10981e46b870350b7d4c64840ae51ef?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="MadHatter">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/55514/madhatter">MadHatter</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="103 silver badges"><span class="badge2"></span><span class="badgecount">103</span></span> 
+          <span title="162 bronze badges"><span class="badge3"></span><span class="badgecount">162</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/55514?sort=reputationchange#55514">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">54,236</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,067</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="152073"></a> 
+        <div class="user user-152073"> 
+         <a href="http://serverfault.com/users/152073/andrew-b">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f6a8ca88c99d57934d4c5b7bc88f3772?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Andrew B">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/152073/andrew-b">Andrew B</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="46 silver badges"><span class="badge2"></span><span class="badgecount">46</span></span> 
+          <span title="81 bronze badges"><span class="badge3"></span><span class="badgecount">81</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/152073?sort=reputationchange#152073">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">16,329</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,058</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="9517"></a> 
+        <div class="user user-9517"> 
+         <a href="http://serverfault.com/users/9517/iain">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/mUxwa.jpg?s=128&amp;g=1&amp;s=48" title="Iain">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/9517/iain">Iain</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="104 silver badges"><span class="badge2"></span><span class="badgecount">104</span></span> 
+          <span title="186 bronze badges"><span class="badge3"></span><span class="badgecount">186</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/9517?sort=reputationchange#9517">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-7</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">83,475</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">950</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="20815"></a> 
+        <div class="user user-20815"> 
+         <a href="http://serverfault.com/users/20815/eeaa">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/E5UIV.jpg?s=128&amp;g=1&amp;s=48" title="EEAA">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/20815/eeaa">EEAA</a></h2> 
+          <span title="10 gold badges"><span class="badge1"></span><span class="badgecount">10</span></span> 
+          <span title="97 silver badges"><span class="badge2"></span><span class="badgecount">97</span></span> 
+          <span title="169 bronze badges"><span class="badge3"></span><span class="badgecount">169</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/20815?sort=reputationchange#20815">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-7</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">80,516</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">949</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="346295"></a> 
+        <div class="user user-346295"> 
+         <a href="http://serverfault.com/users/346295/sum1sadmin">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/823475aa9d1f06738f38f46ec19b7ea1?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Sum1sAdmin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/346295/sum1sadmin">Sum1sAdmin</a></h2> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 45 days <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/346295?sort=reputationchange#346295">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">889</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">894</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="76226"></a> 
+        <div class="user user-76226"> 
+         <a href="http://serverfault.com/users/76226/bwdraco">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/27f497f619785fb64129b9472c101a5a?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="bwDraco">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/76226/bwdraco">bwDraco</a></h2> 
+          <span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span> 
+          <span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/76226?sort=reputationchange#76226">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+4071</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,316</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">877</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="118258"></a> 
+        <div class="user user-118258"> 
+         <a href="http://serverfault.com/users/118258/hopelessn00b">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/5386edb95ebf906d70f0fe1e5fe1005e?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="HopelessN00b">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/118258/hopelessn00b">HopelessN00b</a></h2> 
+          <span title="16 gold badges"><span class="badge1"></span><span class="badgecount">16</span></span> 
+          <span title="92 silver badges"><span class="badge2"></span><span class="badgecount">92</span></span> 
+          <span title="163 bronze badges"><span class="badge3"></span><span class="badgecount">163</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/118258?sort=reputationchange#118258">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">42,784</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">849</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="72586"></a> 
+        <div class="user user-72586"> 
+         <a href="http://serverfault.com/users/72586/shane-madden">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/26ff5031981c6c28f2070b836b796861?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Shane Madden">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/72586/shane-madden">Shane Madden</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="102 silver badges"><span class="badge2"></span><span class="badgecount">102</span></span> 
+          <span title="177 bronze badges"><span class="badge3"></span><span class="badgecount">177</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/72586?sort=reputationchange#72586">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">88,809</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">813</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6177"></a> 
+        <div class="user user-6177"> 
+         <a href="http://serverfault.com/users/6177/ward">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f347c53c9cb1ddcb816daeb22aaf89c8?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Ward">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/6177/ward">Ward</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span> 
+          <span title="49 bronze badges"><span class="badge3"></span><span class="badgecount">49</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/6177?sort=reputationchange#6177">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+57</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10,089</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">810</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="19152"></a> 
+        <div class="user user-19152"> 
+         <a href="http://serverfault.com/users/19152/joeqwerty">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/bbb8df45b4d304408e6a3cea6cac2233?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="joeqwerty">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/19152/joeqwerty">joeqwerty</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="43 silver badges"><span class="badge2"></span><span class="badgecount">43</span></span> 
+          <span title="117 bronze badges"><span class="badge3"></span><span class="badgecount">117</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/19152?sort=reputationchange#19152">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-10</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">81,080</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">805</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="188837"></a> 
+        <div class="user user-188837"> 
+         <a href="http://serverfault.com/users/188837/daniel">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/544RV.png?s=128&amp;g=1&amp;s=48" title="Daniel">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/188837/daniel">Daniel</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span> 
+          <span title="40 bronze badges"><span class="badge3"></span><span class="badgecount">40</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/188837?sort=reputationchange#188837">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+39</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">3,223</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">777</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="183318"></a> 
+        <div class="user user-183318"> 
+         <a href="http://serverfault.com/users/183318/h%c3%a5kan-lindqvist">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/5c6516d6ead0108fc4eb1dc0549233f7?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Håkan Lindqvist">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/183318/h%c3%a5kan-lindqvist">Håkan Lindqvist</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span> 
+          <span title="37 bronze badges"><span class="badge3"></span><span class="badgecount">37</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/183318?sort=reputationchange#183318">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+5</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10,227</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">760</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="214507"></a> 
+        <div class="user user-214507"> 
+         <a href="http://serverfault.com/users/214507/kasperd">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/94d9a0b48ed04d00d7608ffa07afebd0?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="kasperd">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/214507/kasperd">kasperd</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span> 
+          <span title="62 bronze badges"><span class="badge3"></span><span class="badgecount">62</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/214507?sort=reputationchange#214507">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">17,177</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">733</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="104624"></a> 
+        <div class="user user-104624"> 
+         <a href="http://serverfault.com/users/104624/ryan-ries">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/a22fcedb22ce3a63a8def75d9da56f96?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Ryan Ries">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/104624/ryan-ries">Ryan Ries</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="75 silver badges"><span class="badge2"></span><span class="badgecount">75</span></span> 
+          <span title="142 bronze badges"><span class="badge3"></span><span class="badgecount">142</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/104624?sort=reputationchange#104624">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-7</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">40,683</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">685</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="984"></a> 
+        <div class="user user-984"> 
+         <a href="http://serverfault.com/users/984/zoredache">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/7776063fafb29c1d896ec1e239eddd11?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Zoredache">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/984/zoredache">Zoredache</a></h2> 
+          <span title="21 gold badges"><span class="badge1"></span><span class="badgecount">21</span></span> 
+          <span title="174 silver badges"><span class="badge2"></span><span class="badgecount">174</span></span> 
+          <span title="308 bronze badges"><span class="badge3"></span><span class="badgecount">308</span></span> 
+          <br> 
+          <span class="faintText">member for: 7 years <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/984?sort=reputationchange#984">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-4</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">91,728</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">670</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="174813"></a> 
+        <div class="user user-174813"> 
+         <a href="http://serverfault.com/users/174813/katherine-villyard">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/YyPoR.png?s=128&amp;g=1&amp;s=48" title="Katherine Villyard">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/174813/katherine-villyard">Katherine Villyard</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span> 
+          <span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/174813?sort=reputationchange#174813">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+25</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">14,334</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">660</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="349230"></a> 
+        <div class="user user-349230"> 
+         <a href="http://serverfault.com/users/349230/jeff-meden">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/eb6f69fcad45d0f37a69a3d71a1c86fc?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Jeff Meden">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/349230/jeff-meden">Jeff Meden</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+          <br> 
+          <span class="faintText">member for: 30 days <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/349230?sort=reputationchange#349230">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">638</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">637</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="349062"></a> 
+        <div class="user user-349062"> 
+         <a href="http://serverfault.com/users/349062/alex">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/fee134450543935aec538d406a4f81e6?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Alex">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/349062/alex">Alex</a></h2> 
+          <span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span> 
+          <br> 
+          <span class="faintText">member for: 30 days <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/349062?sort=reputationchange#349062">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">621</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">618</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="32017"></a> 
+        <div class="user user-32017"> 
+         <a href="http://serverfault.com/users/32017/grzegorzoledzki">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/8d5f94f9183aadaf92fb191f77e3f827?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="GrzegorzOledzki">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/32017/grzegorzoledzki">GrzegorzOledzki</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/32017?sort=reputationchange#32017">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">766</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">617</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="56431"></a> 
+        <div class="user user-56431"> 
+         <a href="http://serverfault.com/users/56431/faker">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/134d7035973197c8e8cbdc36724eeeb1?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="faker">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/56431/faker">faker</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="34 silver badges"><span class="badge2"></span><span class="badgecount">34</span></span> 
+          <span title="51 bronze badges"><span class="badge3"></span><span class="badgecount">51</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/56431?sort=reputationchange#56431">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+104</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">13,453</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">600</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="306795"></a> 
+        <div class="user user-306795"> 
+         <a href="http://serverfault.com/users/306795/tim">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/KfbZS.jpg?s=128&amp;g=1&amp;s=48" title="Tim">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/306795/tim">Tim</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span> 
+          <br> 
+          <span class="faintText">member for: 8 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/306795?sort=reputationchange#306795">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-16</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,405</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">581</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="36241"></a> 
+        <div class="user user-36241"> 
+         <a href="http://serverfault.com/users/36241/billthor">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/346da1e2a32038cf6b7459ea73075f35?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="BillThor ">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/36241/billthor">BillThor </a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span> 
+          <span title="42 bronze badges"><span class="badge3"></span><span class="badgecount">42</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/36241?sort=reputationchange#36241">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+56</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">18,274</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">563</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6352"></a> 
+        <div class="user user-6352"> 
+         <a href="http://serverfault.com/users/6352/massimo">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/fGz6O.jpg?s=128&amp;g=1&amp;s=48" title="Massimo">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://serverfault.com/users/6352/massimo">Massimo</a></h2> 
+          <span title="25 gold badges"><span class="badge1"></span><span class="badgecount">25</span></span> 
+          <span title="120 silver badges"><span class="badge2"></span><span class="badgecount">120</span></span> 
+          <span title="236 bronze badges"><span class="badge3"></span><span class="badgecount">236</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/2/quarter/serverfault/2016-04-01/6352?sort=reputationchange#6352">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-19</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">44,831</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">550</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;page=5" title="go to page 5"><span class="page-numbers">5</span></a> 
+        <span class="page-numbers dots">…</span> 
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;page=130" title="go to page 130"><span class="page-numbers">130</span></a> 
+        <a href="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>2,500+</td>
+          <td class="count">1</td>
+         </tr> 
+         <tr>
+          <td>1,000+</td>
+          <td class="count">9</td>
+         </tr> 
+         <tr>
+          <td>500+</td>
+          <td class="count">31</td>
+         </tr> 
+         <tr>
+          <td>200+</td>
+          <td class="count">97</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">250</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">502</td>
+         </tr> 
+         <tr>
+          <td>25+</td>
+          <td class="count">1,002</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">3,756</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>100,000+</td> 
+          <td class="count">3</td> 
+         </tr> 
+         <tr> 
+          <td>50,000+</td> 
+          <td class="count">17</td> 
+         </tr> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">37</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">120</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">269</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">490</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">725</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">1,523</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">3,363</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">9,674</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">245,919</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463142110});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

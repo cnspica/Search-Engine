@@ -5,7 +5,8 @@ public class Test {
 		
 		CrawlerController crawler = new CrawlerController();
 
-		crawler.crawel("seed.txt", 8, 200, 2, 200);
+        // 2nd parameter => number of threads, 3rd parameter => number of links
+		crawler.crawel("seed.txt", 8, 2000, 2, 200);
 	}
 	
 }

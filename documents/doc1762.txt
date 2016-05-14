@@ -1,0 +1,1261 @@
+https://stackexchange.com/leagues/251/month/mathoverflow
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - MathOverflow - May 2016 - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/251/month/mathoverflow/2016-05-01"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/251/Month/2016-05-01/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f251%2fmonth%2fmathoverflow#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f251%2fmonth%2fmathoverflow">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/month/stackoverflow/2016-05-01?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/month/superuser/2016-05-01?sort=reputationchange"> Super User </option> <option value="/leagues/21/month/math/2016-05-01?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/month/askubuntu/2016-05-01?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/month/serverfault/2016-05-01?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/month/english/2016-05-01?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/month/unix/2016-05-01?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/month/apple/2016-05-01?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/month/gaming/2016-05-01?sort=reputationchange"> Arqade </option> <option value="/leagues/52/month/programmers/2016-05-01?sort=reputationchange"> Programmers </option> <option value="/leagues/29/month/tex/2016-05-01?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/month/android/2016-05-01?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/month/meta/2016-05-01?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/month/electronics/2016-05-01?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/month/physics/2016-05-01?sort=reputationchange"> Physics </option> <option value="/leagues/19/month/stats/2016-05-01?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/month/dba/2016-05-01?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/month/ru-stackoverflow/2016-05-01?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/month/security/2016-05-01?sort=reputationchange"> Information Security </option> <option value="/leagues/86/month/codereview/2016-05-01?sort=reputationchange"> Code Review </option> <option value="/leagues/42/month/wordpress/2016-05-01?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/month/gis/2016-05-01?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/month/scifi/2016-05-01?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange" selected> MathOverflow </option> <option value="/leagues/23/month/diy/2016-05-01?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/month/webapps/2016-05-01?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/month/sharepoint/2016-05-01?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/month/cooking/2016-05-01?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/month/graphicdesign/2016-05-01?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/month/gamedev/2016-05-01?sort=reputationchange"> Game Development </option> <option value="/leagues/99/month/drupal/2016-05-01?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/month/ux/2016-05-01?sort=reputationchange"> User Experience </option> <option value="/leagues/229/month/ell/2016-05-01?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/month/pt-stackoverflow/2016-05-01?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/month/webmasters/2016-05-01?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/month/magento/2016-05-01?sort=reputationchange"> Magento </option> <option value="/leagues/191/month/academia/2016-05-01?sort=reputationchange"> Academia </option> <option value="/leagues/125/month/travel/2016-05-01?sort=reputationchange"> Travel </option> <option value="/leagues/213/month/salesforce/2016-05-01?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/month/workplace/2016-05-01?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/month/photo/2016-05-01?sort=reputationchange"> Photography </option> <option value="/leagues/177/month/mathematica/2016-05-01?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/month/raspberrypi/2016-05-01?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/month/money/2016-05-01?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/month/movies/2016-05-01?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/month/rpg/2016-05-01?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/month/cs/2016-05-01?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/month/codegolf/2016-05-01?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/month/chemistry/2016-05-01?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/month/mechanics/2016-05-01?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/month/bicycles/2016-05-01?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/month/blender/2016-05-01?sort=reputationchange"> Blender </option> <option value="/leagues/359/month/rus/2016-05-01?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/month/music/2016-05-01?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/month/biology/2016-05-01?sort=reputationchange"> Biology </option> <option value="/leagues/139/month/christianity/2016-05-01?sort=reputationchange"> Christianity </option> <option value="/leagues/95/month/skeptics/2016-05-01?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/month/anime/2016-05-01?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/month/crypto/2016-05-01?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/month/bitcoin/2016-05-01?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/month/parenting/2016-05-01?sort=reputationchange"> Parenting </option> <option value="/leagues/243/month/networkengineering/2016-05-01?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/month/cstheory/2016-05-01?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/327/month/worldbuilding/2016-05-01?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/307/month/puzzling/2016-05-01?sort=reputationchange"> Puzzling </option> <option value="/leagues/113/month/judaism/2016-05-01?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/month/fitness/2016-05-01?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/month/german/2016-05-01?sort=reputationchange"> German Language </option> <option value="/leagues/275/month/aviation/2016-05-01?sort=reputationchange"> Aviation </option> <option value="/leagues/288/month/arduino/2016-05-01?sort=reputationchange"> Arduino </option> <option value="/leagues/60/month/boardgames/2016-05-01?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/month/dsp/2016-05-01?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/month/sqa/2016-05-01?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/month/softwarerecs/2016-05-01?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/month/philosophy/2016-05-01?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/month/history/2016-05-01?sort=reputationchange"> History </option> <option value="/leagues/123/month/gardening/2016-05-01?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/month/japanese/2016-05-01?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/month/writers/2016-05-01?sort=reputationchange"> Writers </option> <option value="/leagues/37/month/stackapps/2016-05-01?sort=reputationchange"> Stack Apps </option> <option value="/leagues/211/month/islam/2016-05-01?sort=reputationchange"> Islam </option> <option value="/leagues/259/month/sound/2016-05-01?sort=reputationchange"> Sound Design </option> <option value="/leagues/93/month/pm/2016-05-01?sort=reputationchange"> Project Management </option> <option value="/leagues/91/month/quant/2016-05-01?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/341/month/lifehacks/2016-05-01?sort=reputationchange"> Lifehacks </option> <option value="/leagues/333/month/ja-stackoverflow/2016-05-01?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/137/month/french/2016-05-01?sort=reputationchange"> French Language </option> <option value="/leagues/165/month/scicomp/2016-05-01?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/month/spanish/2016-05-01?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/month/productivity/2016-05-01?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/month/pets/2016-05-01?sort=reputationchange"> Pets </option> <option value="/leagues/255/month/space/2016-05-01?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/month/datascience/2016-05-01?sort=reputationchange"> Data Science </option> <option value="/leagues/64/month/homebrew/2016-05-01?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/month/expressionengine/2016-05-01?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/month/hermeneutics/2016-05-01?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/month/video/2016-05-01?sort=reputationchange"> Video Production </option> <option value="/leagues/197/month/windowsphone/2016-05-01?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/month/outdoors/2016-05-01?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/month/emacs/2016-05-01?sort=reputationchange"> Emacs </option> <option value="/leagues/189/month/sports/2016-05-01?sort=reputationchange"> Sports </option> <option value="/leagues/237/month/reverseengineering/2016-05-01?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/month/chinese/2016-05-01?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/month/cogsci/2016-05-01?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/month/chess/2016-05-01?sort=reputationchange"> Chess </option> <option value="/leagues/143/month/linguistics/2016-05-01?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/month/astronomy/2016-05-01?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/month/robotics/2016-05-01?sort=reputationchange"> Robotics </option> <option value="/leagues/245/month/opendata/2016-05-01?sort=reputationchange"> Open Data </option> <option value="/leagues/215/month/patents/2016-05-01?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/month/es-stackoverflow/2016-05-01?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/month/tor/2016-05-01?sort=reputationchange"> Tor </option> <option value="/leagues/223/month/politics/2016-05-01?sort=reputationchange"> Politics </option> <option value="/leagues/315/month/hinduism/2016-05-01?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/month/freelancing/2016-05-01?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/month/vi/2016-05-01?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/month/craftcms/2016-05-01?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/month/joomla/2016-05-01?sort=reputationchange"> Joomla </option> <option value="/leagues/321/month/startups/2016-05-01?sort=reputationchange"> Startups </option> <option value="/leagues/343/month/engineering/2016-05-01?sort=reputationchange"> Engineering </option> <option value="/leagues/313/month/buddhism/2016-05-01?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/month/russian/2016-05-01?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/month/economics/2016-05-01?sort=reputationchange"> Economics </option> <option value="/leagues/363/month/law/2016-05-01?sort=reputationchange"> Law </option> <option value="/leagues/155/month/bricks/2016-05-01?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/month/expatriates/2016-05-01?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/month/tridion/2016-05-01?sort=reputationchange"> Tridion </option> <option value="/leagues/291/month/matheducators/2016-05-01?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/month/earthscience/2016-05-01?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/month/martialarts/2016-05-01?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/month/elementaryos/2016-05-01?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/month/ham/2016-05-01?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/month/civicrm/2016-05-01?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/month/health/2016-05-01?sort=reputationchange"> Health </option> <option value="/leagues/277/month/ebooks/2016-05-01?sort=reputationchange"> Ebooks </option> <option value="/leagues/351/month/woodworking/2016-05-01?sort=reputationchange"> Woodworking </option> <option value="/leagues/231/month/sustainability/2016-05-01?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/386/month/ethereum/2016-05-01?sort=reputationchange"> Ethereum </option> <option value="/leagues/217/month/genealogy/2016-05-01?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/month/italian/2016-05-01?sort=reputationchange"> Italian Language </option> <option value="/leagues/173/month/poker/2016-05-01?sort=reputationchange"> Poker </option> <option value="/leagues/279/month/alcohol/2016-05-01?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/365/month/opensource/2016-05-01?sort=reputationchange"> Open Source </option> <option value="/leagues/335/month/hsm/2016-05-01?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/month/musicfans/2016-05-01?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/month/coffee/2016-05-01?sort=reputationchange"> Coffee </option> <option value="/leagues/371/month/portuguese/2016-05-01?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/month/hardwarerecs/2016-05-01?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/month/computergraphics/2016-05-01?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/month/communitybuilding/2016-05-01?sort=reputationchange"> Community Building </option> <option value="/leagues/361/month/mythology/2016-05-01?sort=reputationchange"> Mythology </option> <option value="/leagues/384/month/3dprinting/2016-05-01?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/month/latin/2016-05-01?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/month/retrocomputing/2016-05-01?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/month/languagelearning/2016-05-01?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/251/week/mathoverflow">Week</a> 
+        <a href="/leagues/251/month/mathoverflow" class="youarehere">Month</a> 
+        <a href="/leagues/251/quarter/mathoverflow">Quarter</a> 
+        <a href="/leagues/251/year/mathoverflow">Year</a> 
+        <a href="/leagues/251/alltime/mathoverflow">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://mathoverflow.net"> 
+        <div class="site-bubble" style="background-color: #eaeaea; border-color: #eaeaea;"> 
+         <img src="http://cdn.sstatic.net/Sites/mathoverflow/img/icon-48.png?v=eaeaea" alt="MathOverflow" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://mathoverflow.net">MathOverflow</a></h2> 
+        <p> Q&amp;A for professional mathematicians <span class="league-user-count">(55,038 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>May 2016</h3> 
+        <a href="/leagues/251/month/mathoverflow/2016-04-01" class="viewolder">« prev month</a> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+       <div class="fr">
+        Sort by: 
+        <select onchange="$(this).siblings('.sortLoader').css('visibility', 'visible'); window.location.href = $(this).val(); return false;"> <option value="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange" selected> Month Rank </option> <option value="/leagues/251/month/mathoverflow/2016-05-01?sort=rankchange"> Rank Change </option> <option value="/leagues/251/month/mathoverflow/2016-05-01?sort=totalreputation"> Total Reputation </option> </select> 
+        <span class="sortLoader"></span> 
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="13650"></a> 
+        <div class="user user-13650"> 
+         <a href="http://mathoverflow.net/users/13650/robert-israel">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/isMNX.png?s=128&amp;g=1&amp;s=48" title="Robert Israel">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/13650/robert-israel">Robert Israel</a></h2> 
+          <span title="25 silver badges"><span class="badge2"></span><span class="badgecount">25</span></span> 
+          <span title="72 bronze badges"><span class="badge3"></span><span class="badgecount">72</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/13650?sort=reputationchange#13650">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+8</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">26,665</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">555</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="766"></a> 
+        <div class="user user-766"> 
+         <a href="http://mathoverflow.net/users/766/terry-tao">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/3c795880f3b73784a9b75fbff3772701?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Terry Tao">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/766/terry-tao">Terry Tao</a></h2> 
+          <span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span> 
+          <span title="198 silver badges"><span class="badge2"></span><span class="badgecount">198</span></span> 
+          <span title="280 bronze badges"><span class="badge3"></span><span class="badgecount">280</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/766?sort=reputationchange#766">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">0</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">43,337</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">501</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="89948"></a> 
+        <div class="user user-89948"> 
+         <a href="http://mathoverflow.net/users/89948/friedrich-knop">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/sCZXx.jpg?s=128&amp;g=1&amp;s=48" title="Friedrich Knop">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/89948/friedrich-knop">Friedrich Knop</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span> 
+          <br> 
+          <span class="faintText">member for: 39 days <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/89948?sort=reputationchange#89948">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+42</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">791</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">480</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="11260"></a> 
+        <div class="user user-11260"> 
+         <a href="http://mathoverflow.net/users/11260/carlo-beenakker">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/95d053403dc5d13be82e6ba56df233f4?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Carlo Beenakker">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/11260/carlo-beenakker">Carlo Beenakker</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="78 silver badges"><span class="badge2"></span><span class="badgecount">78</span></span> 
+          <span title="135 bronze badges"><span class="badge3"></span><span class="badgecount">135</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/11260?sort=reputationchange#11260">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+7</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">35,918</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">451</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4312"></a> 
+        <div class="user user-4312"> 
+         <a href="http://mathoverflow.net/users/4312/fedor-petrov">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/6lIvN.png?s=128&amp;g=1&amp;s=48" title="Fedor Petrov">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/4312/fedor-petrov">Fedor Petrov</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="45 silver badges"><span class="badge2"></span><span class="badgecount">45</span></span> 
+          <span title="110 bronze badges"><span class="badge3"></span><span class="badgecount">110</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/4312?sort=reputationchange#4312">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">17,836</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">449</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="68969"></a> 
+        <div class="user user-68969"> 
+         <a href="http://mathoverflow.net/users/68969/mohammad-ghomi">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/rJ6qv.jpg?s=128&amp;g=1&amp;s=48" title="Mohammad Ghomi">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/68969/mohammad-ghomi">Mohammad Ghomi</a></h2> 
+          <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span> 
+          <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 2 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/68969?sort=reputationchange#68969">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+527</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">475</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">445</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2233"></a> 
+        <div class="user user-2233"> 
+         <a href="http://mathoverflow.net/users/2233/tony-huynh">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/0YXo0.jpg?s=128&amp;g=1&amp;s=48" title="Tony Huynh">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/2233/tony-huynh">Tony Huynh</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="54 silver badges"><span class="badge2"></span><span class="badgecount">54</span></span> 
+          <span title="101 bronze badges"><span class="badge3"></span><span class="badgecount">101</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/2233?sort=reputationchange#2233">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+33</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">15,043</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">435</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1946"></a> 
+        <div class="user user-1946"> 
+         <a href="http://mathoverflow.net/users/1946/joel-david-hamkins">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/7fd305978f43894c1c3496da052729a6?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Joel David Hamkins">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/1946/joel-david-hamkins">Joel David Hamkins</a></h2> 
+          <span title="19 gold badges"><span class="badge1"></span><span class="badgecount">19</span></span> 
+          <span title="356 silver badges"><span class="badge2"></span><span class="badgecount">356</span></span> 
+          <span title="609 bronze badges"><span class="badge3"></span><span class="badgecount">609</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/1946?sort=reputationchange#1946">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-7</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">125,614</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">430</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2893"></a> 
+        <div class="user user-2893"> 
+         <a href="http://mathoverflow.net/users/2893/john-baez">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/34784534843022b3541c8ddd693718cb?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="John Baez">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/2893/john-baez">John Baez</a></h2> 
+          <span title="28 silver badges"><span class="badge2"></span><span class="badgecount">28</span></span> 
+          <span title="65 bronze badges"><span class="badge3"></span><span class="badgecount">65</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/2893?sort=reputationchange#2893">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+292</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,844</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">313</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="37822"></a> 
+        <div class="user user-37822"> 
+         <a href="http://mathoverflow.net/users/37822/mikhail-ostrovskii">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/d290a650984624b018b8f20243b7e23e?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Mikhail Ostrovskii">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/37822/mikhail-ostrovskii">Mikhail Ostrovskii</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/37822?sort=reputationchange#37822">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,930</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">307</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="13972"></a> 
+        <div class="user user-13972"> 
+         <a href="http://mathoverflow.net/users/13972/robert-bryant">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/y0A26.jpg?s=128&amp;g=1&amp;s=48" title="Robert Bryant">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/13972/robert-bryant">Robert Bryant</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="159 silver badges"><span class="badge2"></span><span class="badgecount">159</span></span> 
+          <span title="234 bronze badges"><span class="badge3"></span><span class="badgecount">234</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/13972?sort=reputationchange#13972">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+19</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">51,342</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">305</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="20302"></a> 
+        <div class="user user-20302"> 
+         <a href="http://mathoverflow.net/users/20302/liviu-nicolaescu">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/rzaJq.jpg?s=128&amp;g=1&amp;s=48" title="Liviu Nicolaescu">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/20302/liviu-nicolaescu">Liviu Nicolaescu</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="47 silver badges"><span class="badge2"></span><span class="badgecount">47</span></span> 
+          <span title="83 bronze badges"><span class="badge3"></span><span class="badgecount">83</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/20302?sort=reputationchange#20302">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+46</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20,198</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">290</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6094"></a> 
+        <div class="user user-6094"> 
+         <a href="http://mathoverflow.net/users/6094/joseph-orourke">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/21104c8eb580726ede6d6d8df698b9b3?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Joseph O'Rourke">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/6094/joseph-orourke">Joseph O'Rourke</a></h2> 
+          <span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span> 
+          <span title="147 silver badges"><span class="badge2"></span><span class="badgecount">147</span></span> 
+          <span title="512 bronze badges"><span class="badge3"></span><span class="badgecount">512</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/6094?sort=reputationchange#6094">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">64,191</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">290</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3272"></a> 
+        <div class="user user-3272"> 
+         <a href="http://mathoverflow.net/users/3272/kconrad">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/afb8a114e4699b6fcd31bf3a005b6516?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="KConrad">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/3272/kconrad">KConrad</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="100 silver badges"><span class="badge2"></span><span class="badgecount">100</span></span> 
+          <span title="168 bronze badges"><span class="badge3"></span><span class="badgecount">168</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/3272?sort=reputationchange#3272">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+459</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">23,552</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">286</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="14094"></a> 
+        <div class="user user-14094"> 
+         <a href="http://mathoverflow.net/users/14094/ycor">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/8aa2e10892a0e556c1f4ae4f3ec66b8e?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="YCor">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/14094/ycor">YCor</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="32 silver badges"><span class="badge2"></span><span class="badgecount">32</span></span> 
+          <span title="54 bronze badges"><span class="badge3"></span><span class="badgecount">54</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/14094?sort=reputationchange#14094">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+163</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,919</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">270</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="11142"></a> 
+        <div class="user user-11142"> 
+         <a href="http://mathoverflow.net/users/11142/igor-rivin">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/b2b87c8281161bba80ee253b820a850f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Igor Rivin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/11142/igor-rivin">Igor Rivin</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="80 silver badges"><span class="badge2"></span><span class="badgecount">80</span></span> 
+          <span title="201 bronze badges"><span class="badge3"></span><span class="badgecount">201</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/11142?sort=reputationchange#11142">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+4</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">55,662</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">270</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3948"></a> 
+        <div class="user user-3948"> 
+         <a href="http://mathoverflow.net/users/3948/willie-wong">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/b97ffd631b5215fe8294fb24e97fe9d5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Willie Wong">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/3948/willie-wong">Willie Wong</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="37 silver badges"><span class="badge2"></span><span class="badgecount">37</span></span> 
+          <span title="94 bronze badges"><span class="badge3"></span><span class="badgecount">94</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/3948?sort=reputationchange#3948">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,025</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">270</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="8726"></a> 
+        <div class="user user-8726"> 
+         <a href="http://mathoverflow.net/users/8726/inkspot">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/4027fb9a099a5747b23ba444bbd334a0?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="inkspot">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/8726/inkspot">inkspot</a></h2> 
+          <span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span> 
+          <span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/8726?sort=reputationchange#8726">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,202</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">265</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="89334"></a> 
+        <div class="user user-89334"> 
+         <a href="http://mathoverflow.net/users/89334/uri-bader">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/00a2eb0039c77922ba964d4e935d63fb?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Uri Bader">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/89334/uri-bader">Uri Bader</a></h2> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+          <br> 
+          <span class="faintText">member for: 52 days <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/89334?sort=reputationchange#89334">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-11</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,071</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">255</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1847"></a> 
+        <div class="user user-1847"> 
+         <a href="http://mathoverflow.net/users/1847/steve-huntsman">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/5sQwx.jpg?s=128&amp;g=1&amp;s=48" title="Steve Huntsman">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/1847/steve-huntsman">Steve Huntsman</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="37 silver badges"><span class="badge2"></span><span class="badgecount">37</span></span> 
+          <span title="89 bronze badges"><span class="badge3"></span><span class="badgecount">89</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/1847?sort=reputationchange#1847">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+595</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,458</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">250</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="23141"></a> 
+        <div class="user user-23141"> 
+         <a href="http://mathoverflow.net/users/23141/nik-weaver">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/RJx6m.jpg?s=128&amp;g=1&amp;s=48" title="Nik Weaver">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/23141/nik-weaver">Nik Weaver</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="28 silver badges"><span class="badge2"></span><span class="badgecount">28</span></span> 
+          <span title="71 bronze badges"><span class="badge3"></span><span class="badgecount">71</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/23141?sort=reputationchange#23141">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+53</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,106</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">242</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="297"></a> 
+        <div class="user user-297"> 
+         <a href="http://mathoverflow.net/users/297/david-speyer">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/IoYEA.jpg?s=128&amp;g=1&amp;s=48" title="David Speyer">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/297/david-speyer">David Speyer</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="195 silver badges"><span class="badge2"></span><span class="badgecount">195</span></span> 
+          <span title="423 bronze badges"><span class="badge3"></span><span class="badgecount">423</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/297?sort=reputationchange#297">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-5</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">85,432</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">240</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="25510"></a> 
+        <div class="user user-25510"> 
+         <a href="http://mathoverflow.net/users/25510/alexandre-eremenko">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/2915a9ca41f84ee739009cfb92110586?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Alexandre Eremenko">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/25510/alexandre-eremenko">Alexandre Eremenko</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="84 silver badges"><span class="badge2"></span><span class="badgecount">84</span></span> 
+          <span title="167 bronze badges"><span class="badge3"></span><span class="badgecount">167</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/25510?sort=reputationchange#25510">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-16</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">31,394</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">220</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="50073"></a> 
+        <div class="user user-50073"> 
+         <a href="http://mathoverflow.net/users/50073/user21820">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/016f3df2c1ded9b52755a1832612b762?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="user21820">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/50073/user21820">user21820</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/50073?sort=reputationchange#50073">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">334</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">201</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="317"></a> 
+        <div class="user user-317"> 
+         <a href="http://mathoverflow.net/users/317/andy-putman">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/5fa32a499dd06d6e6dfd33b0256d5ffd?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Andy Putman">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/317/andy-putman">Andy Putman</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="105 silver badges"><span class="badge2"></span><span class="badgecount">105</span></span> 
+          <span title="183 bronze badges"><span class="badge3"></span><span class="badgecount">183</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/317?sort=reputationchange#317">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+16</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">24,615</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">195</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="69037"></a> 
+        <div class="user user-69037"> 
+         <a href="http://mathoverflow.net/users/69037/arrow">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/weGkU.jpg?s=128&amp;g=1&amp;s=48" title="Arrow">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/69037/arrow">Arrow</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="28 bronze badges"><span class="badge3"></span><span class="badgecount">28</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 2 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/69037?sort=reputationchange#69037">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+194</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,644</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">187</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="22989"></a> 
+        <div class="user user-22989"> 
+         <a href="http://mathoverflow.net/users/22989/jeremy-rickard">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/89db2dc33d32348ca2133bb781a5beb5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Jeremy Rickard">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/22989/jeremy-rickard">Jeremy Rickard</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="38 silver badges"><span class="badge2"></span><span class="badgecount">38</span></span> 
+          <span title="66 bronze badges"><span class="badge3"></span><span class="badgecount">66</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/22989?sort=reputationchange#22989">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+38</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">11,917</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">185</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3106"></a> 
+        <div class="user user-3106"> 
+         <a href="http://mathoverflow.net/users/3106/timothy-chow">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/349934205967b047f672663e52cfe80a?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Timothy Chow">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/3106/timothy-chow">Timothy Chow</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="134 silver badges"><span class="badge2"></span><span class="badgecount">134</span></span> 
+          <span title="220 bronze badges"><span class="badge3"></span><span class="badgecount">220</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/3106?sort=reputationchange#3106">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+180</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">22,291</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">183</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="42676"></a> 
+        <div class="user user-42676"> 
+         <a href="http://mathoverflow.net/users/42676/mauro-allegranza">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/640b618097b8d491a54073ca15900b32?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Mauro ALLEGRANZA">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/42676/mauro-allegranza">Mauro ALLEGRANZA</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/42676?sort=reputationchange#42676">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+133</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">942</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">180</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="18060"></a> 
+        <div class="user user-18060"> 
+         <a href="http://mathoverflow.net/users/18060/will-sawin">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/13900172714f0f1c611eb43027b847fb?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Will Sawin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/18060/will-sawin">Will Sawin</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="70 silver badges"><span class="badge2"></span><span class="badgecount">70</span></span> 
+          <span title="168 bronze badges"><span class="badge3"></span><span class="badgecount">168</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/month/mathoverflow/2016-05-01/18060?sort=reputationchange#18060">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-24</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">41,621</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">170</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;page=5" title="go to page 5"><span class="page-numbers">5</span></a> 
+        <span class="page-numbers dots">…</span> 
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;page=31" title="go to page 31"><span class="page-numbers">31</span></a> 
+        <a href="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>500+</td>
+          <td class="count">2</td>
+         </tr> 
+         <tr>
+          <td>200+</td>
+          <td class="count">24</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">85</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">180</td>
+         </tr> 
+         <tr>
+          <td>25+</td>
+          <td class="count">290</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">816</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>100,000+</td> 
+          <td class="count">1</td> 
+         </tr> 
+         <tr> 
+          <td>50,000+</td> 
+          <td class="count">6</td> 
+         </tr> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">36</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">148</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">283</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">463</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">657</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">1,087</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">1,868</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">3,704</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">46,785</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463142310});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

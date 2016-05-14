@@ -21,6 +21,7 @@ import org.tartarus.snowball.SnowballStemmer;
 public class Indexer implements Runnable{
     private static Indexer indexer;
 
+    private HashSet<File> crawlerOutputFiles;
     private HashSet<String> excludedKeywords;
     private HashSet<String> excludedTags;
     private final Object filesLock = new Object();
@@ -59,8 +60,15 @@ public class Indexer implements Runnable{
 
 
         pathtoDocFolder=    Paths.get("").toAbsolutePath().toString()+"/documents";
-        countofdocFiles=(new File(pathtoDocFolder).listFiles().length);
-        System.out.println(countofdocFiles);
+        File documentsFolder = new File(pathtoDocFolder);
+        //countofdocFiles=(new File(pathtoDocFolder).listFiles().length);
+        //System.out.println(countofdocFiles);
+
+        crawlerOutputFiles = new HashSet<>();
+
+        assert (documentsFolder.exists() && documentsFolder.isDirectory());
+
+        Collections.addAll(crawlerOutputFiles, documentsFolder.listFiles());
 
         dbController = new Controller();
     }
@@ -84,8 +92,8 @@ public class Indexer implements Runnable{
      */
     public boolean hasMoreFiles(){
         synchronized (filesLock) {
-          //  return crawlerOutputFiles.iterator().hasNext();
-             return countofdocFiles>=0;
+            return crawlerOutputFiles.iterator().hasNext();
+         //    return countofdocFiles>=0;
         }
     }
 
@@ -95,14 +103,15 @@ public class Indexer implements Runnable{
      */
     public File nextFile(){
         synchronized (filesLock){
-           // File file = crawlerOutputFiles.iterator().next();
-           // crawlerOutputFiles.remove(file);
-          //System.out.println(this.crawlerOutputFiles.size());
-            countofdocFiles--;
-            String FilePath=pathtoDocFolder+"/doc"+countofdocFiles+".txt";
-            File CrawlerOutputFile=new File(FilePath);
-           System.out.println(this.countofdocFiles);
-            return CrawlerOutputFile;
+           File file = crawlerOutputFiles.iterator().next();
+           crawlerOutputFiles.remove(file);
+          System.out.println(this.crawlerOutputFiles.size());
+//            countofdocFiles--;
+//            String FilePath=pathtoDocFolder+"/doc"+countofdocFiles+".txt";
+//            File CrawlerOutputFile=new File(FilePath);
+//           System.out.println(this.countofdocFiles);
+//            return CrawlerOutputFile;
+            return file;
         }
     }
 
@@ -164,7 +173,7 @@ public class Indexer implements Runnable{
             }
         }
 
-        this.dbController.calculateIDF();
+        //this.dbController.calculateIDF();
 
     }
 

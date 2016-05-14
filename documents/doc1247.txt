@@ -1,0 +1,538 @@
+https://stackexchange.com/newsletters/newsletter?site=joomla.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Joomla Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3djoomla.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3djoomla.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 303, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 303, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Joomla Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://joomla.stackexchange.com">Joomla</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-image: url('//sstatic.net/stackexchange/Img/newsletters/beta-bg.png');" background="//sstatic.net/stackexchange/Img/newsletters/beta-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> 
+      <table border="0" cellpadding="0" cellspacing="0"> 
+       <tbody>
+        <tr> 
+         <td width="600" align="left"> <h1 style="color: #8FD8F6; font-size: 24px!important; font-weight: normal!important;"><span style="color: #3E5583; font-weight: bold!important;">Joomla</span> newsletter</h1> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #FDFDFD; border-top: 1px solid #E6E6E6; border-left: 1px solid #E6E6E6; border-right: 1px solid #E6E6E6;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/16501/advanced-module-manager-permissions-issue-error-you-are-not-authorized-to-vi" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Advanced Module Manager Permissions Issue: "Error - You are not authorized to view this resource"</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am getting an issue with accessing Advanced Module Manager for certain usergroups. On my manager user group - I have set the Global Access Administration Interface to inherited (resulting to not ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/acl" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">acl</a> <a href="http://joomla.stackexchange.com/questions/tagged/acl-manager" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">acl-manager</a> <a href="http://joomla.stackexchange.com/questions/tagged/advanced-module-manager" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">advanced-module-manager</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Sq9eD.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/126/ffrewin" target="_blank" style="color: #4E82C2; text-decoration: none;">FFrewin</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Sq9eD.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://joomla.stackexchange.com/users/126/ffrewin" target="_blank" style="color: #4E82C2; text-decoration: none;">FFrewin</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/16514/is-it-possible-to-load-the-same-module-into-two-different-positions-and-have-it" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Is it possible to load the same module into two different positions and have it use two different IDs?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">While building a website, I came to the conclusion that I had two positions that included identical modules (Header and Footer). Both include the exact same menu and small blurb of text. For the sake ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/module" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">module</a> <a href="http://joomla.stackexchange.com/questions/tagged/module-display" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">module-display</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/NTRQg.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/2081/chaosxmk" target="_blank" style="color: #4E82C2; text-decoration: none;">Chaosxmk</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Sq9eD.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://joomla.stackexchange.com/users/126/ffrewin" target="_blank" style="color: #4E82C2; text-decoration: none;">FFrewin</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/16483/custom-form-field-type-available-for-all-extensions" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Custom Form Field Type available for all extensions?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am making my custom form field types and I would like to make them globally available for all forms everywhere in Joomla. Is there any certain location that can be used for this purpose, other ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/overrides" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">overrides</a> <a href="http://joomla.stackexchange.com/questions/tagged/form-fields-types" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">form-fields-types</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Sq9eD.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/126/ffrewin" target="_blank" style="color: #4E82C2; text-decoration: none;">FFrewin</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/16509/how-to-get-the-next-available-menu-item" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How to get the next available menu item</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">In my current active menu item, I want to get the next possible (enabled) menu item. Is there any coherent approach to do so? Update: Case: I have a menu named English Menu It has five items. I am ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/menu" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">menu</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/riBhi.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/8286/mostafa-talebi" target="_blank" style="color: #4E82C2; text-decoration: none;">Mostafa Talebi</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/16494/admin-panel-works-for-short-period-then-links-all-go-404" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Admin panel works for short period, then links all go 404</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm doing update and maintenance on a Joomla site that hasn't seen much care for the last year or so. When I log in as an administrator I can only click around for a few minutes before all the links ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/administrator" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">administrator</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/aaedb0ba4e15a7c1c1a6dfc56f16025d?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/8385/rob-e" target="_blank" style="color: #4E82C2; text-decoration: none;">rob e</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/16499/can-i-add-page-content-to-a-position-from-within-a-module-that-sits-in-another-p" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Can I add page content to a position from within a module that sits in another position?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm building a custom module that sits in one position (the header). I'd like this module to write content to another position on the page (the mainBody). Is this possible? To expand a little, the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/joomla-3.x" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">joomla-3.x</a> <a href="http://joomla.stackexchange.com/questions/tagged/module-display" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">module-display</a> <a href="http://joomla.stackexchange.com/questions/tagged/positions" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">positions</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/b55a074408119106bae1f8cba53cf95c?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/8391/abantiquo" target="_blank" style="color: #4E82C2; text-decoration: none;">abantiquo</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/16489/how-to-fix-in-article-links-after-upgrade" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How to fix "in article" links after upgrade</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">So... I had to upgrade joomla 1.5 to 3.5 today. It was much fun :D Managed to fix everything except links to other articles that are embedded in the content. Site is multilingual. Here is original ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/articles" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">articles</a> <a href="http://joomla.stackexchange.com/questions/tagged/joomla-1.5" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">joomla-1.5</a> <a href="http://joomla.stackexchange.com/questions/tagged/joomla-3.5" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">joomla-3.5</a> <a href="http://joomla.stackexchange.com/questions/tagged/weblinks" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">weblinks</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/wd9aa.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/1751/reygoch" target="_blank" style="color: #4E82C2; text-decoration: none;">Reygoch</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/36/how-do-i-generate-a-sef-url-in-a-custom-module-instead-of-the-real-url" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How do I generate a SEF URL in a custom module instead of the real URL?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">In my module, this code is being used to generate the URL of the page: JURI::base() . ContentHelperRoute::getArticleRoute( $article-&gt;id, $article-&gt;catid ) This works exaclty as it should ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/php" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">php</a> <a href="http://joomla.stackexchange.com/questions/tagged/module" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">module</a> <a href="http://joomla.stackexchange.com/questions/tagged/sef" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">sef</a> <a href="http://joomla.stackexchange.com/questions/tagged/url" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">url</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/35ae321e434cd7d6b40a6733884287d0?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/65/rleathers" target="_blank" style="color: #4E82C2; text-decoration: none;">rleathers</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/XuVKx.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://joomla.stackexchange.com/users/69/harald-leithner" target="_blank" style="color: #4E82C2; text-decoration: none;">Harald Leithner</a> 12 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://joomla.stackexchange.com/questions/5398/adding-custom-css-styling-on-some-of-my-pages" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Adding custom CSS styling on some of my pages</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I would like to add custom CSS styling to some of my pages to give them a unique style, and override the default template styling. How can I achieve this in Joomla? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://joomla.stackexchange.com/questions/tagged/joomla-3.x" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">joomla-3.x</a> <a href="http://joomla.stackexchange.com/questions/tagged/joomla-2.5" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">joomla-2.5</a> <a href="http://joomla.stackexchange.com/questions/tagged/templates" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">templates</a> <a href="http://joomla.stackexchange.com/questions/tagged/css" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">css</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/60ebdcb257fabcac943ef274b08e1205?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://joomla.stackexchange.com/users/1629/johanpw" target="_blank" style="color: #4E82C2; text-decoration: none;">johanpw</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/60ebdcb257fabcac943ef274b08e1205?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://joomla.stackexchange.com/users/1629/johanpw" target="_blank" style="color: #4E82C2; text-decoration: none;">johanpw</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;color: #444;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #4E82C2; text-decoration: none; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #4E82C2; text-decoration: none;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #4E82C2; text-decoration: none;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #4E82C2; text-decoration: none;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #4E82C2; text-decoration: none;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

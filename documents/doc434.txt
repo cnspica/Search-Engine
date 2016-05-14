@@ -1,0 +1,333 @@
+http://tutorialspoint.com/dip/index.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Digital Image Processing</title> 
+  <meta name="description" content="Digital Image Processing - Learning Digital Image Processing in simple and easy steps. A beginner's tutorial containing complete knowledge of photography, camera, image formation, Histograms, Blurring, Sharpening, Contrast, Sampling, Quantization, Dithering, Zooming, Frequency domain, Spatial resolution, pixel resolution, Convolution, transformations."> 
+  <meta name="keywords" content="Digital Image Processing, camera, photography, images, conversion, sampling, quantization, zooming, blurring, sharpening, edges, operators, histograms, brightness, contrast, pixel, transformation, JPEG."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #1693cd url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #1693cd !important;}
+.submenu-item{ border-bottom: 2px solid #1693cd !important; border-top: 2px solid #1693cd !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/dip/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/dip/images/dip-mini-logo.jpg" alt="Digital Image Processing"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Digital Image Processing</li> 
+        <li><a href="/dip/index.htm">DIP - Home</a></li> 
+        <li><a href="/dip/image_processing_introduction.htm">DIP - Image Processing Introduction</a></li> 
+        <li><a href="/dip/signals_and_system_introduction.htm">DIP - Signal and System Introduction</a></li> 
+        <li><a href="/dip/history_of_photography.htm">DIP - History of Photography</a></li> 
+        <li><a href="/dip/applications_and_usage.htm">DIP - Applications and Usage</a></li> 
+        <li><a href="/dip/concept_of_dimensions.htm">DIP - Concept of Dimensions</a></li> 
+        <li><a href="/dip/image_formation_on_camera.htm">DIP - Image Formation on Camera</a></li> 
+        <li><a href="/dip/camera_mechanism.htm">DIP - Camera Mechanism</a></li> 
+        <li><a href="/dip/concept_of_pixel.htm">DIP - Concept of Pixel</a></li> 
+        <li><a href="/dip/perspective_transformation.htm">DIP - Perspective Transformation</a></li> 
+        <li><a href="/dip/concept_of_bits_per_pixel.htm">DIP - Concept of Bits Per Pixel</a></li> 
+        <li><a href="/dip/types_of_images.htm">DIP - Types of Images</a></li> 
+        <li><a href="/dip/color_codes_conversion.htm">DIP - Color Codes Conversion</a></li> 
+        <li><a href="/dip/grayscale_to_rgb_conversion.htm">DIP - Grayscale to RGB Conversion</a></li> 
+        <li><a href="/dip/concept_of_sampling.htm">DIP - Concept of Sampling</a></li> 
+        <li><a href="/dip/pixel_resolution.htm">DIP - Pixel Resolution</a></li> 
+        <li><a href="/dip/concept_of_zooming.htm">DIP - Concept of Zooming</a></li> 
+        <li><a href="/dip/zooming_methods.htm">DIP - Zooming methods</a></li> 
+        <li><a href="/dip/spatial_resolution.htm">DIP - Spatial Resolution</a></li> 
+        <li><a href="/dip/pixels_dots_and_lines_per_inch.htm">DIP - Pixels Dots and Lines per inch</a></li> 
+        <li><a href="/dip/gray_level_resolution.htm">DIP - Gray Level Resolution</a></li> 
+        <li><a href="/dip/concept_of_quantization.htm">DIP - Concept of Quantization</a></li> 
+        <li><a href="/dip/iso_preference_curves.htm">DIP - ISO Preference curves</a></li> 
+        <li><a href="/dip/concept_of_dithering.htm">DIP - Concept of Dithering</a></li> 
+        <li><a href="/dip/histograms_introduction.htm">DIP - Histograms Introduction</a></li> 
+        <li><a href="/dip/brightness_and_contrast.htm">DIP - Brightness and Contrast</a></li> 
+        <li><a href="/dip/image_transformations.htm">DIP - Image Transformations</a></li> 
+        <li><a href="/dip/histogram_sliding.htm">DIP - Histogram Sliding</a></li> 
+        <li><a href="/dip/histogram_stretching.htm">DIP - Histogram Stretching</a></li> 
+        <li><a href="/dip/introduction_to_probability.htm">DIP - Introduction to Probability</a></li> 
+        <li><a href="/dip/histogram_equalization.htm">DIP - Histogram Equalization</a></li> 
+        <li><a href="/dip/gray_level_transformations.htm">DIP - Gray Level Transformations</a></li> 
+        <li><a href="/dip/concept_of_convolution.htm">DIP - Concept of convolution</a></li> 
+        <li><a href="/dip/concept_of_masks.htm">DIP - Concept of Masks</a></li> 
+        <li><a href="/dip/concept_of_blurring.htm">DIP - Concept of Blurring</a></li> 
+        <li><a href="/dip/concept_of_edge_detection.htm">DIP - Concept of Edge Detection</a></li> 
+        <li><a href="/dip/prewitt_operator.htm">DIP - Prewitt Operator</a></li> 
+        <li><a href="/dip/sobel_operator.htm">DIP - Sobel operator</a></li> 
+        <li><a href="/dip/robinson_compass_mask.htm">DIP - Robinson Compass Mask</a></li> 
+        <li><a href="/dip/krisch_compass_mask.htm">DIP - Krisch Compass Mask</a></li> 
+        <li><a href="/dip/laplacian_operator.htm">DIP - Laplacian Operator</a></li> 
+        <li><a href="/dip/introduction_to_frequency_domain.htm">DIP - Frequency Domain Analysis</a></li> 
+        <li><a href="/dip/fourier_series_and_transform.htm">DIP - Fourier series and Transform</a></li> 
+        <li><a href="/dip/convolution_theorm.htm">DIP - Convolution theorm</a></li> 
+        <li><a href="/dip/high_pass_vs_low_pass_filters.htm">DIP - High Pass vs Low Pass Filters</a></li> 
+        <li><a href="/dip/introduction_to_color_spaces.htm">DIP - Introduction to Color Spaces</a></li> 
+        <li><a href="/dip/introduction_to_jpeg_compression.htm">DIP - JPEG compression</a></li> 
+        <li><a href="/dip/optical_character_recognition.htm">DIP - Optical Character Recognition</a></li> 
+        <li><a href="/dip/computer_vision_and_graphics.htm">DIP - Computer Vision and Graphics</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">DIP Useful Resources</li> 
+        <li><a href="/dip/dip_quick_guide.htm">DIP - Quick Guide</a></li> 
+        <li><a href="/dip/dip_useful_resources.htm">DIP - Useful Resources</a></li> 
+        <li><a href="/dip/dip_discussion.htm">DIP - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <div class="cover"> 
+         <img class="img-responsive" src="/dip/images/dip-patterns.jpg" alt="Digital Image Processing"> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/dip/image_processing_introduction.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <h1>Digital Image Processing</h1> 
+        <div class="center-aligned tutorial-menu"> 
+         <form action="/job_search.php" method="POST"> 
+          <input type="hidden" name="search_string" value="Digital Image Processing"> 
+          <button type="button" class="btn btn-disabled btn-sm btn-buy-tutorial"><i class="icon  icon-file-pdf-o"></i> PDF Version</button> 
+          <button type="button" class="btn btn-default btn-sm btn-quick-guide"><i class="icon  icon-book"></i><a href="/dip/dip_quick_guide.htm"> Quick Guide</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon  icon-external-link"></i> <a href="/dip/dip_useful_resources.htm"> Resources</a></button> 
+          <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="icon  icon-suitcase"></i> Job Search</button> 
+          <button type="button" class="btn btn-default btn-sm btn-job-search"><i class="fa fa-wechat"></i> <a href="/dip/dip_discussion.htm"> Discussion</a></button> 
+         </form> 
+        </div> 
+        <div> 
+         <p>Digital image processing deals with manipulation of digital images through a digital computer. It is a subfield of signals and systems but focus particularly on images. DIP focuses on developing a computer system that is able to perform processing on an image. The input of that system is a digital image and the system process that image using efficient algorithms, and gives an image as an output. The most common example is Adobe Photoshop. It is one of the widely used application for processing digital images.</p> 
+         <h2>How it works.</h2> 
+         <img src="/dip/images/introduction_image.jpg" alt="Introduction Image"> 
+         <p>In the above figure, an image has been captured by a camera and has been sent to a digital system to remove all the other details, and just focus on the water drop by zooming it in such a way that the quality of the image remains the same.</p> 
+        </div> 
+        <h1>Audience</h1> 
+        <p>This tutorial gives you the knowledge of widely used methods and procedures for interpreting digital images for image enhancement and restoration and performing operations on images such as (blurring , zooming , sharpening , edge detection , e.t.c). It also focuses on the understanding of how the human vision works. How do human eye visualize so many things , and how do brain interpret those images? The tutorial also covers some of the important concepts of signals and systems such as (Sampling , Quantization , Convolution , Frequency domain analysis e.t.c).</p> 
+        <h1>Prerequisites</h1> 
+        <h2>Signals and systems</h2> 
+        <p>Since DIP is a subfield of signals and systems , so it would be good if you already have some knowledge about signals and systems , but it is not necessary. But you must have some basic concepts of digital electronics.</p> 
+        <h2>Calculus and probability</h2> 
+        <p>Basic understanding of calculus , probability and differential equations is also required for better understanding.</p> 
+        <h2>Basic programming skills</h2> 
+        <p>Other than this, it requires some of the basic programming skills on any of the popular languages such as C++ , Java , or MATLAB.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="pdf-btn"> 
+         <a href="/dip/pdf/index.pdf" title="Digital Image Processing" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/dip/image_processing_introduction.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/dip/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/dip/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/dip/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/dip/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/dip/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/dip/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

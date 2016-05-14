@@ -15,7 +15,7 @@ public class Controller {
       *
       * */
     private DBManager db;
-    private static final String DBURL="JDBC:mysql://localhost/APT";
+    private static final String DBURL="JDBC:mysql://localhost/search_engine";
     private static final String UserName="root";
     private static final String Pass=null;
 
@@ -44,7 +44,7 @@ public class Controller {
         String Query="call getKey('"+keyword+"')";
         try {
             if(db.ExecuteQuery(Query).next()){
-               return true;
+                return true;
             }
             else{
                 String InsertionStmt="call InsertKeyWord('"+ keyword +"')";
@@ -98,17 +98,17 @@ public class Controller {
         String Query="call getKeyWords()";
         ResultSet rset=this.db.ExecuteQuery(Query);
         String UpdateIDF;
-       try{
+        try{
             while(rset.next()){
-              //  System.out.println(rset.getString("keyword"));
-               UpdateIDF="call updateIDF('"+rset.getString("keyword")+"')";
-               this.db.ExecuteNonQuery(UpdateIDF);
+                //  System.out.println(rset.getString("keyword"));
+                UpdateIDF="call updateIDF('"+rset.getString("keyword")+"')";
+                this.db.ExecuteNonQuery(UpdateIDF);
             }
 
         }
         catch(Exception e){
             e.printStackTrace();
-      }
+        }
 
     }
 
@@ -118,8 +118,8 @@ public class Controller {
         try{
             if(rset.next()){
                 if(rset.getString("IDF") != null){
-                return (float)Double.parseDouble(rset.getString("IDF"));
-                   }
+                    return (float)Double.parseDouble(rset.getString("IDF"));
+                }
 
             }
 

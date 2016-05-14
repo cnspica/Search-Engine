@@ -1,0 +1,509 @@
+http://tutorialspoint.com/r/r_vectors.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>R Vectors</title> 
+  <meta name="description" content="R Vectors - Learn R programming language with simple and easy examples starting from R installation, language basics, syntax, literals, data types, variables, functions, loops, decision making, modules, arrays, lists, vectors, math, matrices, statistical, graphics, excel data, csv data, Overview, Environment Setup, Operators, Strings, Factors, Data Frames, Packages, Data Reshaping, Binary Files, XML Files, Json Files, Web Data, Databases, Pie Charts, Bar Charts, Boxplots, Histograms, Line Graphs, Scatterplots, Mean, Median and Mode, Linear Regression, Multiple Regression, Logistic Regression, Normal Distribution, Binomial Distribution, Poisson Regression, Analysis of Covariance, Time Series Analysis, Nonlinear Least Square, Decision Tree, Random Forest, Survival Analysis, Chi Square Test."> 
+  <meta name="keywords" content="R, tutorial, beginners, programming, language, basics, syntax, literals, data types, variables, functions, loops, decision making, modules, arrays, lists, vectors, math, matrices, statistical, graphics, excel, data, csv data, Overview, Environment Setup, Operators, Strings, Factors, Data Frames, Packages, Data Reshaping, Binary Files, XML Files, Json Files, Web Data, Databases, Pie Charts, Bar Charts, Boxplots, Histograms, Line Graphs, Scatterplots, Mean, Median and Mode, Linear Regression, Multiple Regression, Logistic Regression, Normal Distribution, Binomial Distribution, Poisson Regression, Analysis of Covariance, Time Series Analysis, Nonlinear Least Square, Decision Tree, Random Forest, Survival Analysis, Chi Square Test."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/r/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #496194 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #496194 !important;}
+.submenu-item{ border-bottom: 2px solid #496194 !important; border-top: 2px solid #496194 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/r/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/r/images/r-mini-logo.jpg" alt="R Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Tutorial</li> 
+        <li><a href="/r/index.htm">R - Home</a></li> 
+        <li><a href="/r/r_overview.htm">R - Overview</a></li> 
+        <li><a href="/r/r_environment_setup.htm">R - Environment Setup</a></li> 
+        <li><a href="/r/r_basic_syntax.htm">R - Basic Syntax</a></li> 
+        <li><a href="/r/r_data_types.htm">R - Data Types</a></li> 
+        <li><a href="/r/r_variables.htm">R - Variables</a></li> 
+        <li><a href="/r/r_operators.htm">R - Operators</a></li> 
+        <li><a href="/r/r_decision_making.htm">R - Decision Making</a></li> 
+        <li><a href="/r/r_loops.htm">R - Loops</a></li> 
+        <li><a href="/r/r_functions.htm">R - Functions</a></li> 
+        <li><a href="/r/r_strings.htm">R - Strings</a></li> 
+        <li><a href="/r/r_vectors.htm">R - Vectors</a></li> 
+        <li><a href="/r/r_lists.htm">R - Lists</a></li> 
+        <li><a href="/r/r_matrices.htm">R - Matrices</a></li> 
+        <li><a href="/r/r_arrays.htm">R - Arrays</a></li> 
+        <li><a href="/r/r_factors.htm">R - Factors</a></li> 
+        <li><a href="/r/r_data_frames.htm">R - Data Frames</a></li> 
+        <li><a href="/r/r_packages.htm">R - Packages</a></li> 
+        <li><a href="/r/r_data_reshaping.htm">R - Data Reshaping</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Data Interfaces</li> 
+        <li><a href="/r/r_csv_files.htm">R - CSV Files</a></li> 
+        <li><a href="/r/r_excel_files.htm">R - Excel Files</a></li> 
+        <li><a href="/r/r_binary_files.htm">R - Binary Files</a></li> 
+        <li><a href="/r/r_xml_files.htm">R - XML Files</a></li> 
+        <li><a href="/r/r_json_files.htm">R - JSON Files</a></li> 
+        <li><a href="/r/r_web_data.htm">R - Web Data</a></li> 
+        <li><a href="/r/r_database.htm">R - Database</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Charts &amp; Graphs</li> 
+        <li><a href="/r/r_pie_charts.htm">R - Pie Charts</a></li> 
+        <li><a href="/r/r_bar_charts.htm">R - Bar Charts</a></li> 
+        <li><a href="/r/r_boxplots.htm">R - Boxplots</a></li> 
+        <li><a href="/r/r_histograms.htm">R - Histograms</a></li> 
+        <li><a href="/r/r_line_graphs.htm">R - Line Graphs</a></li> 
+        <li><a href="/r/r_scatterplots.htm">R - Scatterplots</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Statistics Examples</li> 
+        <li><a href="/r/r_mean_median_mode.htm">R - Mean, Median &amp; Mode</a></li> 
+        <li><a href="/r/r_linear_regression.htm">R - Linear Regression</a></li> 
+        <li><a href="/r/r_multiple_regression.htm">R - Multiple Regression</a></li> 
+        <li><a href="/r/r_logistic_regression.htm">R - Logistic Regression</a></li> 
+        <li><a href="/r/r_normal_distribution.htm">R - Normal Distribution</a></li> 
+        <li><a href="/r/r_binomial_distribution.htm">R - Binomial Distribution</a></li> 
+        <li><a href="/r/r_poisson_regression.htm">R - Poisson Regression</a></li> 
+        <li><a href="/r/r_analysis_of_covariance.htm">R - Analysis of Covariance</a></li> 
+        <li><a href="/r/r_time_series_analysis.htm">R - Time Series Analysis</a></li> 
+        <li><a href="/r/r_nonlinear_least_square.htm">R - Nonlinear Least Square</a></li> 
+        <li><a href="/r/r_decision_tree.htm">R - Decision Tree</a></li> 
+        <li><a href="/r/r_random_forest.htm">R - Random Forest</a></li> 
+        <li><a href="/r/r_survival_analysis.htm">R - Survival Analysis</a></li> 
+        <li><a href="/r/r_chi_square_tests.htm">R - Chi Square Tests</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Useful Resources</li> 
+        <li><a href="/r/r_interview_questions.htm">R - Interview Questions</a></li> 
+        <li><a href="/r/r_quick_guide.htm">R - Quick Guide</a></li> 
+        <li><a href="/r/r_useful_resources.htm">R - Useful Resources</a></li> 
+        <li><a href="/r/r_discussion.htm">R - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>R - Vectors</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/r/r_strings.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/r/r_lists.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>Vectors are the most basic R data objects and there are six types of atomic vectors. They are logical, integer, double, complex, character and raw.</p> 
+        <h2>Vector Creation</h2> 
+        <h3>Single Element Vector</h3> 
+        <p>Even when you write just one value in R, it becomes a vector of length 1 and belongs to one of the above vector types.</p> 
+        <pre class="prettyprint notranslate tryit">
+# Atomic vector of type character.
+print("abc");
+
+# Atomic vector of type double.
+print(12.5)
+
+# Atomic vector of type integer.
+print(63L)
+
+# Atomic vector of type logical.
+print(TRUE)
+
+# Atomic vector of type complex.
+print(2+3i)
+
+# Atomic vector of type raw.
+print(charToRaw('hello'))
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+[1] "abc"
+[1] 12.5
+[1] 63
+[1] TRUE
+[1] 2+3i
+[1] 68 65 6c 6c 6f
+</pre> 
+        <h3>Multiple Elements Vector</h3> 
+        <p><b>Using colon operator with numeric data</b></p> 
+        <pre class="prettyprint notranslate tryit">
+# Creating a sequence from 5 to 13.
+v &lt;- 5:13
+print(v)
+
+# Creating a sequence from 6.6 to 12.6.
+v &lt;- 6.6:12.6
+print(v)
+
+# If the final element specified does not belong to the sequence then it is discarded.
+v &lt;- 3.8:11.4
+print(v)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+[1]  5  6  7  8  9 10 11 12 13
+[1]  6.6  7.6  8.6  9.6 10.6 11.6 12.6
+[1]  3.8  4.8  5.8  6.8  7.8  8.8  9.8 10.8
+</pre> 
+        <p><b>Using sequence (Seq.) operator</b></p> 
+        <pre class="prettyprint notranslate tryit">
+# Create vector with elements from 5 to 9 incrementing by 0.4.
+print(seq(5, 9, by = 0.4))
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+[1] 5.0 5.4 5.8 6.2 6.6 7.0 7.4 7.8 8.2 8.6 9.0
+</pre> 
+        <p><b>Using the c() function</b></p> 
+        <p>The non-character values are coerced to character type if one of the elements is a character.</p> 
+        <pre class="prettyprint notranslate tryit">
+# The logical and numeric values are converted to characters.
+s &lt;- c('apple','red',5,TRUE)
+print(s)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+[1] "apple" "red"   "5"     "TRUE" 
+</pre> 
+        <h2>Accessing Vector Elements</h2> 
+        <p>Elements of a Vector are accessed using indexing. The <b>[ ] brackets</b> are used for indexing. Indexing starts with position 1. Giving a negative value in the index drops that element from result.<b>TRUE</b>,<b> FALSE</b> or <b>0</b> and <b>1</b> can also be used for indexing.</p> 
+        <pre class="prettyprint notranslate tryit">
+# Accessing vector elements using position.
+t &lt;- c("Sun","Mon","Tue","Wed","Thurs","Fri","Sat")
+u &lt;- t[c(2,3,6)]
+print(u)
+
+# Accessing vector elements using logical indexing.
+v &lt;- t[c(TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE)]
+print(v)
+
+# Accessing vector elements using negative indexing.
+x &lt;- t[c(-2,-5)]
+print(x)
+
+# Accessing vector elements using 0/1 indexing.
+y &lt;- t[c(0,0,0,0,0,0,1)]
+print(y)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+[1] "Mon" "Tue" "Fri"
+[1] "Sun" "Fri"
+[1] "Sun" "Tue" "Wed" "Fri" "Sat"
+[1] "Sun"
+</pre> 
+        <h2>Vector Manipulation</h2> 
+        <h3>Vector arithmetic</h3> 
+        <p>Two vectors of same length can be added, subtracted, multiplied or divided giving the result as a vector output.</p> 
+        <pre class="prettyprint notranslate tryit">
+# Create two vectors.
+v1 &lt;- c(3,8,4,5,0,11)
+v2 &lt;- c(4,11,0,8,1,2)
+
+# Vector addition.
+add.result &lt;- v1+v2
+print(add.result)
+
+# Vector substraction.
+sub.result &lt;- v1-v2
+print(sub.result)
+
+# Vector multiplication.
+multi.result &lt;- v1*v2
+print(multi.result)
+
+# Vector division.
+divi.result &lt;- v1/v2
+print(divi.result)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+[1]  7 19  4 13  1 13
+[1] -1 -3  4 -3 -1  9
+[1] 12 88  0 40  0 22
+[1] 0.7500000 0.7272727       Inf 0.6250000 0.0000000 5.5000000
+</pre> 
+        <h3>Vector element recycling</h3> 
+        <p>If we apply arithmetic operations to two vectors of unequal length, then the elements of the shorter vector are recycled to complete the operations.</p> 
+        <pre class="prettyprint notranslate tryit">
+v1 &lt;- c(3,8,4,5,0,11)
+v2 &lt;- c(4,11)
+# V2 becomes c(4,11,4,11,4,11)
+
+add.result &lt;- v1+v2
+print(add.result)
+
+sub.result &lt;- v1-v2
+print(sub.result)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+[1]  7 19  8 16  4 22
+[1] -1 -3  0 -6 -4  0
+</pre> 
+        <h3>Vector Element Sorting</h3> 
+        <p>Elements in a vector can be sorted using the <b>sort()</b> function.</p> 
+        <pre class="prettyprint notranslate tryit">
+v &lt;- c(3,8,4,5,0,11, -9, 304)
+
+# Sort the elements of the vector.
+sort.result &lt;- sort(v)
+print(sort.result)
+
+# Sort the elements in the reverse order.
+revsort.result &lt;- sort(v, decreasing = TRUE)
+print(revsort.result)
+
+# Sorting character vectors.
+v &lt;- c("Red","Blue","yellow","violet")
+sort.result &lt;- sort(v)
+print(sort.result)
+
+# Sorting character vectors in reverse order.
+revsort.result &lt;- sort(v, decreasing = TRUE)
+print(revsort.result)
+</pre> 
+        <p>When we execute the above code, it produces the following result −</p> 
+        <pre class="result notranslate">
+[1]  -9   0   3   4   5   8  11 304
+[1] 304  11   8   5   4   3   0  -9
+[1] "Blue"   "Red"    "violet" "yellow"
+[1] "yellow" "violet" "Red"    "Blue" 
+</pre> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/r/r_strings.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/r/r_lists.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/r/r_vectors.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/r/r_vectors.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/r/r_vectors.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/r/r_vectors.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/r/r_vectors.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/r/r_vectors.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('/r/try_r.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

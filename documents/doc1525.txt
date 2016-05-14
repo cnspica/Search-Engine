@@ -1,0 +1,647 @@
+https://stackexchange.com/newsletters/newsletter?site=mathematica.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Mathematica Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dmathematica.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dmathematica.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 177, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '8c860d19b546a5f1bec5ccc0119119dd', 'siteId': 177, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Mathematica Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://mathematica.stackexchange.com">Mathematica</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #fff; font-family: Verdana,Geneva,sans-serif;"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/mathematica-header.png" alt="Mathematica Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114515/strategies-to-compensate-for-lack-of-multi-document-interface" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Strategies to compensate for lack of multi-document interface?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I use Mathematica (Home Edition) to manage notes which live in a large number of different notebooks. In my case the notebooks (hundreds) are just organized using document names and file system ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/front-end" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">front-end</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c5790679cf7843c0d4caaa13b3b4f023?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/14505/billc" target="_blank" style="color: #A3375A; text-decoration: none !important;">billc</a> 14 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/980ea960bdb7f6d0f4549029e813c2d9?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://mathematica.stackexchange.com/users/81/leonid-shifrin" target="_blank" style="color: #A3375A; text-decoration: none !important;">Leonid Shifrin</a> 16 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114984/tips-to-move-from-functional-programming-to-gui-based-applications" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Tips to move from functional programming to GUI-based applications</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Even though this forum has some questions related to Mathematica programming tips I think that we still don't have specific help for those who want to learn to efficiently create GUIs in Mathematica. ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/programming" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">programming</a> <a href="http://mathematica.stackexchange.com/questions/tagged/dynamic" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">dynamic</a> <a href="http://mathematica.stackexchange.com/questions/tagged/gui-construction" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">gui-construction</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/339oS.gif?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/11177/ariel-sepulveda" target="_blank" style="color: #A3375A; text-decoration: none !important;">Ariel Sepulveda</a> 10 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1160ab8174d01aae794878494bf8fbda?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://mathematica.stackexchange.com/users/34113/brian-g" target="_blank" style="color: #A3375A; text-decoration: none !important;">Brian G</a> 0 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114666/shell-emulation-regular-expression" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Shell Emulation Regular Expression</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am trying to create a Mathematica/shell syntax hybrid. I would like the following command wget -qO- "http://google.com/space line break\"" $var to be interpreted as the following. ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/evaluation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">evaluation</a> <a href="http://mathematica.stackexchange.com/questions/tagged/cells" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">cells</a> <a href="http://mathematica.stackexchange.com/questions/tagged/parsing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">parsing</a> <a href="http://mathematica.stackexchange.com/questions/tagged/regular-expressions" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">regular-expressions</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/b3445.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/5615/william" target="_blank" style="color: #A3375A; text-decoration: none !important;">William</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/3ae316ad35633c4439c7c1fda8be0fbf?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://mathematica.stackexchange.com/users/17/silvia" target="_blank" style="color: #A3375A; text-decoration: none !important;">Silvia</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114865/is-quantity-necessary" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Is Quantity necessary?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Soft question: are Quantity - and newly added MixedUnit and MixedMagnitude - needed in a symbolic manipulation language? Quantity is the product of magnitude and unit, so couldn't even mixed ones be ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/units" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">units</a> <a href="http://mathematica.stackexchange.com/questions/tagged/language-design" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">language-design</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/YwmRY.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/801/alancalvitti" target="_blank" style="color: #A3375A; text-decoration: none !important;">alancalvitti</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114864/fit-a-function-with-an-unusual-side-condition" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Fit a function with an unusual side condition</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a set of measurement data and I try to fit there a function (a Exp[b x] + c Exp[d x] - o). I have two problems: The fit function does not converge nor after $500$ iterations. The fit function ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/fitting" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">fitting</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/24954888f6ef0fc09e275027d5fa2b3f?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/40158/lutscher" target="_blank" style="color: #A3375A; text-decoration: none !important;">Lutscher</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ed392f2dd861a9855bafbc8bacadf123?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://mathematica.stackexchange.com/users/34008/anton-antonov" target="_blank" style="color: #A3375A; text-decoration: none !important;">Anton Antonov</a> 11 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114725/highlightgraph-problem" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">HighlightGraph Problem</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Bug introduced in 9.0 or earlier and persisting through 10.4.1 HighlightGraph does not work. HighlightGraph[Graph[{{0, 0}, {0, 1}, {1, 0}, {1, 1}}, {{0, 0} \[UndirectedEdge] {0, 1}}], {{0, 0}, {0, ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/bugs" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">bugs</a> <a href="http://mathematica.stackexchange.com/questions/tagged/graphs-and-networks" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">graphs-and-networks</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/08002238056b07d265fc80aa95648378?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/21962/zyx" target="_blank" style="color: #A3375A; text-decoration: none !important;">ZYX</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c0a67f946a3b1ec8e5d5bfd5adc6f253?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://mathematica.stackexchange.com/users/12/szabolcs" target="_blank" style="color: #A3375A; text-decoration: none !important;">Szabolcs</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114628/what-is-expectatione-and-what-does-it-do" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">What is ExpectationE and what does it do?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I just found the symbol ExpectationE with autocomplete. Rendered the symbol is Searching the documentation and the internet leads to nothing. Does somebody know what this symbol does and what ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/functions" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">functions</a> <a href="http://mathematica.stackexchange.com/questions/tagged/probability-or-statistics" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">probability-or-statistics</a> <a href="http://mathematica.stackexchange.com/questions/tagged/symbols" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">symbols</a> <a href="http://mathematica.stackexchange.com/questions/tagged/built-in-symbols" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">built-in-symbols</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2961147be0f2c63792326a17eb2dd3cb?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/8986/henrik-hansen" target="_blank" style="color: #A3375A; text-decoration: none !important;">Henrik Hansen</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c0a67f946a3b1ec8e5d5bfd5adc6f253?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://mathematica.stackexchange.com/users/12/szabolcs" target="_blank" style="color: #A3375A; text-decoration: none !important;">Szabolcs</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/4454/is-there-an-open-source-implementation-of-mathematica-the-language" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Is there an open source implementation of Mathematica-the-language?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I've seen questions before such as "What is the best open-source equivalent for Mathematica?", but that specific question (and that line of inquiry in general) cares more about the computer algebra ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/programming" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">programming</a> <a href="http://mathematica.stackexchange.com/questions/tagged/open-source" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">open-source</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2b6513bd28040ce526882afb70f4f7d5?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/178/sblom" target="_blank" style="color: #A3375A; text-decoration: none !important;">sblom</a> 72 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/84c594cb490fac792a12a24a3d5e6ded?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://mathematica.stackexchange.com/users/34/simon" target="_blank" style="color: #A3375A; text-decoration: none !important;">Simon</a> 58 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/32293/find-eigen-energies-of-time-independent-schr%c3%b6dinger-equation" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Find eigen energies of time-independent Schrödinger equation</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm trying to get the eigenvalues of a one dimensional time-independent Schrödinger equation, $-\frac{h^2}{2m_0}\frac{d^2\psi}{dx^2}+U(x)~\psi=Ei~\psi$ where U(x) is some potential and Ei is the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/equation-solving" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">equation-solving</a> <a href="http://mathematica.stackexchange.com/questions/tagged/physics" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">physics</a> <a href="http://mathematica.stackexchange.com/questions/tagged/parametric-functions" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">parametric-functions</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5c380b8db82ff533fb62582854120d3a?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/1364/xslittlegrass" target="_blank" style="color: #A3375A; text-decoration: none !important;">xslittlegrass</a> 36 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/62532ed4a041dbe396f4ed2454b97c42?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://mathematica.stackexchange.com/users/245/jens" target="_blank" style="color: #A3375A; text-decoration: none !important;">Jens</a> 39 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114677/how-can-i-prevent-cell-code-from-being-split-inside-a-notebook" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How can I prevent cell code from being split inside a notebook?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">The PageWidth option controls the way the cell's content is displayed, not the manner it's written in a .nb file. I would get a "one cell - one line" representation (i.e., with no line breaking, a ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/notebooks" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">notebooks</a> <a href="http://mathematica.stackexchange.com/questions/tagged/interoperability" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">interoperability</a> <a href="http://mathematica.stackexchange.com/questions/tagged/conversion" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">conversion</a> <a href="http://mathematica.stackexchange.com/questions/tagged/searching" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">searching</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/NVcGW.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/12659/mitochondrial" target="_blank" style="color: #A3375A; text-decoration: none !important;">mitochondrial</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/115009/maximum-number-of-recursions-lower-than-recursionlimit" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Maximum number of recursions lower than $RecursionLimit</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Consider the following code segment: f[x_]:=Module[{y}, Print[counter++]; Return[f[x+1]]; ]; $RecursionLimit=20; counter=0; f[0] The function terminates after only 8 recursions. Now, delete y ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/recursion" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">recursion</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/652eeb487694c36b08c854312470a3a1?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/1319/frederik-ziebell" target="_blank" style="color: #A3375A; text-decoration: none !important;">Frederik Ziebell</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://mathematica.stackexchange.com/questions/114759/mysterious-rifflerspec-warning" target="_blank" style="color: #A3375A!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Mysterious Riffle::rspec warning</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have part of a code that looks like this: horpatt = (* some code giving a List of n elements *); verpatt = (* some code giving a List of n elements *); tabpatt = Riffle[horpatt, verpatt] (* some ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://mathematica.stackexchange.com/questions/tagged/list-manipulation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #777!important; font-size: 11px; background-color: #F8F8F8; text-decoration: none; margin: 2px 2px 6px 0; padding: 0.2em 0.8em 0.2em 0.6em; line-height: 1.5; border: 1px solid #E4E4E4;">list-manipulation</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/25781e6d6b8fa25f1fbd6eff78bdb846?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://mathematica.stackexchange.com/users/5906/taiki" target="_blank" style="color: #A3375A; text-decoration: none !important;">Taiki</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;color: #666;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #A3375A; text-decoration: none !important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #A3375A; text-decoration: none !important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #A3375A; text-decoration: none !important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #A3375A; text-decoration: none !important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #A3375A; text-decoration: none !important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>
