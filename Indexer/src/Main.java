@@ -1,6 +1,8 @@
 
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.ResourceBundle;
 
 
 /**
@@ -17,19 +19,31 @@ public class Main {
 
        //HashSet<String> urls = new HashSet<>();
       // Indexer indexer = Indexer.getInstance();
-       int numberOfThreads;
+//       int numberOfThreads;
+//
+//
+//
+//
+//
+//        //Feeding the indexer
+//
+//        numberOfThreads = 8;
+//        Thread[] threads = new Thread[numberOfThreads];
+//        for (int i = 0; i < numberOfThreads; i++) {
+//            threads[i] = new Thread(Indexer.getInstance());
+//            threads[i].start();
+//        }
+//
+//        Controller c = new Controller();
+//        c.calculateIDF();
 
+         QueryProcessor processor = new QueryProcessor();
+         ArrayList<QueryResult> result = processor.find("contact tutorial ruby on rails");
 
-
-
-
-        //Feeding the indexer
-
-        numberOfThreads = 8;
-        Thread[] threads = new Thread[numberOfThreads];
-        for (int i = 0; i < numberOfThreads; i++) {
-            threads[i] = new Thread(Indexer.getInstance());
-            threads[i].start();
+        for(QueryResult q: result){
+            System.out.println(q.getUrl());
+            System.out.println(q.getSnippet());
+            System.out.println("_______________________________________________________________________");
         }
 
 

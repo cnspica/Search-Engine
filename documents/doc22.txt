@@ -1,518 +1,2548 @@
-http://tutorialspoint.com/lua_terminal_online.php
+http://meta.stackexchange.com
 <!doctype html>
 <html>
  <head> 
-  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
-  <title>Lua Terminal Online</title> 
-  <meta name="Description" content="Lua Terminal Online - Try and experience the best cloud computing where you can edit, compile, execute and share your varities of projects with the help of simple clicks. You can save your projects at Dropbox, GitHub, GoogleDrive and OneDrive to be accessed anywhere and any time. We support almost all the popular programming languages including Java, JSP, Cold Fusion, C, C++, Hadoop, PL/SQL, SQL, NumPy, SymPy, Octave, CentOS, iPython, Pascal, Fortran, PHP, Perl, Ruby, Python and many more other programming languages using your browsers, iPhones, iPads or any other online device like smart TV."> 
-  <meta name="Keywords" content="Lua Terminal Online, compile, execute, programs, online, linux, experience, cloud, computing, source code, dropbox, googledrive, onedrive, programming, java, jsp, cold fusion, c, c++, pascal, fortran, php, perl, ruby, python, browsers, iphones, ipads, smart tv."> 
-  <base href="http://www.tutorialspoint.com/"> 
-  <link rel="shortcut icon" href="/codingground/images/favicon.ico" type="image/x-icon"> 
-  <script src="/codingground/scripts/jquery.min.js"></script> 
-  <script src="/codingground/scripts/jquery.easyui.min.js"></script> 
-  <script src="/codingground/ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script> 
-  <script src="/codingground/scripts/spectrum.js"></script> 
-  <link rel="stylesheet" type="text/css" href="/codingground/themes/gray/easyui.css"> 
-  <link rel="stylesheet" type="text/css" href="/codingground/themes/icon.css"> 
-  <link rel="stylesheet" type="text/css" href="/codingground/style/spectrum.css"> 
-  <link rel="stylesheet" type="text/css" href="/codingground/style/cg.css"> 
-  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script> 
-  <script src="/codingground/node_modules/term.js/src/term.js"></script> 
-  <style>
-.main-title{
-    border-left: 1px solid #ccc;
-    height: 17px;
-    color: #000;
-    font-size: 100%;
-    float: left;
-    margin: 21px 5px 0px 5px;
-    padding: 6px 0px 0px 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 4px;
-}
-#east a img:hover{
-   opacity:0.5;
-}
-#east a img{
-   padding-top:10px;
-   padding-left:10px;
-   width:80px !important;
-   height:60px !important;
-   
-}
-</style> 
-  <script type="text/javascript">
-var port = "0";
-var sessionid = "";
-var HOME="";
-var terminal="";
-var server="";
-</script> 
-  <script src="/codingground/scripts/cg.js"></script> 
-  <script src="http://www.google-analytics.com/urchin.js">
-</script> 
-  <script type="text/javascript">
-_uacct = "UA-32077377-1";
-urchinTracker();
-</script> 
-  <script type="text/javascript">
-   function shutdown() {
-      $.messager.defaults.ok = "Yes";
-      $.messager.defaults.cancel = "No";
-      $.messager.confirm('Confirmation','Do you really want to shut down the system?', function(r){
-         if (r){
-            // Make Ajax call to redirect to dropbox
-            var url = HOME + ':'  + '8080' + '/shut_down?port=' + port + "&sessionid=" + sessionid;
-            var inputs = {"hello":"bye"};
-            $.ajax({
-               type: "GET",
-               url: url,
-               data: inputs,
-               dataType: 'json',
-               beforeSend: function(  ) {
-                  $("#loading").css({"visibility":"visible"});
-               },
-               success: function(data){
-           }
+  <title>Meta Stack Exchange</title> 
+  <link rel="shortcut icon" href="/content/Sites/stackexchangemeta/img/favicon.ico?v=790c5f0d145d"> 
+  <link rel="apple-touch-icon image_src" href="/content/Sites/stackexchangemeta/img/apple-touch-icon.png?v=7ab4742b9881"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Meta Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:domain" content="meta.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="/content/Sites/stackexchangemeta/img/apple-touch-icon@2.png?v=c34d758b103d&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Meta Stack Exchange"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="Q&amp;A for meta-discussion of the Stack Exchange family of Q&amp;A websites"> 
+  <meta property="og:url" content="http://meta.stackexchange.com/"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="/content/Js/stub.en.js?v=c1341d3ea930"></script> 
+  <link rel="stylesheet" type="text/css" href="/content/Sites/stackexchangemeta/all.css?v=d3941f987fe9"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed of recent questions" href="/feeds"> 
+  <script>
+            StackExchange.ready(function() {
+                StackExchange.realtime.subscribeToActiveQuestions('4', 'home-active');
             });
-            window.onbeforeunload = null;
-            $("#loading").css({"visibility":"hidden"});
-            window.location = "http://www.tutorialspoint.com/codingground.htm";
-         }
-      }).window({  width:400 }); 
-   }
-</script> 
+        </script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('4');
+                StackExchange.realtime.subscribeToTopBarNotifications('4');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463309001,"routeName":"Home/Index","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Meta Stack Exchange","description":"Q&A for meta-discussion of the Stack Exchange family of Q&A websites","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":4,"isMetaSite":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"e4d0647b7e2fa806313cd6d30067e548","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"75d5eed6bc25","js/moderator.en.js":"022f362eb0a2","js/full-anon.en.js":"447592b38668","js/full.en.js":"b9eda6e5c0b8","js/wmd.en.js":"c03ce135b997","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"3199d1e28733","js/help.en.js":"54b998574be9","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"86a4fd0b8bd3","js/inline-tag-editing.en.js":"96140c37890f","js/revisions.en.js":"47de10a8358f","js/review.en.js":"b1aaab5738b0","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"973dacc52cf0","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"e27da81910e7","js/keyboard-shortcuts.en.js":"dd3a16ca6a4f","js/external-editor.en.js":"93769406446f","js/external-editor.en.js":"93769406446f","js/snippet-javascript.en.js":"52f29aaf80f8","js/snippet-javascript-codemirror.en.js":"1f9e3d748c49"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
  </head> 
- <body class="easyui-layout" id="cc"> 
-  <div id="loading"></div> 
-  <form id="ff"> 
-   <div id="sign" class="easyui-window" title="Coding Ground" data-options="iconCls:'icon-login',modal:true, maximizable:false, closed:true, minimizable:false" style="width:530px;height:475px;padding:10px;"></div> 
-   <div id="dircontext" class="easyui-menu" style="width:150px;"> 
-    <div onclick="newFile()" data-options="iconCls:'icon-add-file'">
-     Create File
+ <body class="home-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//meta.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> <a href="//stackexchange.com" class="site-link js-gps-track" data-id="155" data-gps-track="
+            site.switch({ target_site:155, item_type:3 }),
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-stackexchange" title=""></div> Stack Exchange </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> 
+         <div class="related-links"> 
+          <a href="http://chat.meta.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//meta.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="4" data-gps-track="
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div> Meta Stack Exchange </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://meta.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fmeta.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://meta.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fmeta.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
     </div> 
-    <div onclick="saveFiles( function( status ){ return true; })" data-options="iconCls:'icon-save-project'">
-     Save Files
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
     </div> 
-    <div onclick="openFileUpload()" data-options="iconCls:'icon-upload-file'">
-     Upload File
-    </div> 
-    <div onclick="newDir()" data-options="iconCls:'icon-add-dir'">
-     New Directory
-    </div> 
-    <div onclick="deleteDir()" data-options="iconCls:'icon-delete-file'">
-     Delete Directory
-    </div> 
-    <div onclick="renameFile()" data-options="iconCls:'icon-rename-file'">
-     Rename Directory
-    </div> 
-    <div onclick="reloadTree()" data-options="iconCls:'icon-refresh-project'">
-     Refresh Files
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://meta.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fmeta.stackexchange.com%2f" class="login-link">sign up</a> <a href="https://meta.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fmeta.stackexchange.com%2f" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="/help/whats-meta" class="js-gps-track" data-gps-track="help_popup.click({ item_type:3 })"> What's Meta? <span class="item-summary"> How Meta is different from other sites </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
     </div> 
    </div> 
-   <div id="filecontext" class="easyui-menu" style="width:150px;"> 
-    <div onclick="loadFile(false, false)" data-options="iconCls:'icon-save-file'">
-     Open File
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Meta Stack Exchange </a> 
     </div> 
-    <div onclick="saveFiles( function( status ){ return true; })" data-options="iconCls:'icon-save-project'">
-     Save File
-    </div> 
-    <div onclick="deleteFile()" data-options="iconCls:'icon-delete-file'">
-     Delete File
-    </div> 
-    <div onclick="renameFile()" data-options="iconCls:'icon-rename-file'">
-     Rename File
-    </div> 
-    <div onclick="downloadFile()" data-options="iconCls:'icon-download-file'">
-     Download File
-    </div> 
-    <div onclick="reloadTree()" data-options="iconCls:'icon-refresh-project'">
-     Refresh Files
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
     </div> 
    </div> 
-   <iframe id="download" style="display:hidden"></iframe> 
-   <div data-options="region:'north'" style="height:65px; width:100%;overflow:hidden;background:url(/codingground/images/top_bg.png);"> 
-    <a href="http://www.tutorialspoint.com/codingground.htm"> <img src="/codingground/images/logo.png" style="padding:5px; float:left; margin-top: 0px; width:200px; height:56px"> </a> 
-    <h1 class="main-title">Lua Terminal Online</h1> 
-    <div class="easyui-panel,border:false,doSize:false" style="margin:18px 0px 0px 0px; float:right;"> 
-     <a id="help" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-help', plain:true" style="float:right">Help</a> 
-     <a id="shutdown" href="javascript:shutdown();" class="easyui-linkbutton" data-options="iconCls:'icon-exit', plain:true" style="float:right">Shut Down</a> 
-     <a id="view" href="#" class="easyui-menubutton" data-options="menu:'#mm3',iconCls:'icon-view'" style="float:right">View</a> 
-     <a id="edit" href="#" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'icon-edit'" style="float:right">Edit</a> 
-     <a id="edit" href="#" class="easyui-menubutton" data-options="menu:'#mm1', iconCls:'icon-file'" style="float:right">File</a> 
-     <a id="project" href="#" class="easyui-menubutton" data-options="menu:'#mm4', plain:true, iconCls:'icon-project'" style="float:right">Project</a> 
+   <div id="content" class="snippet-hidden"> 
+    <div id="herobox"> 
+     <div id="hero-content"> 
+      <div id="close">
+       <a title="click to minimize">_</a>
+      </div> 
+      <div id="blurb">
+        Meta Stack Exchange is where users like you discuss bugs, features, and support issues that affect the software powering all 156 Stack Exchange communities. 
+       <br> 
+       <br> 
+       <a href="/tour" id="tell-me-more" class="button">What is meta?</a> 
+      </div> 
+      <div id="desc"> 
+       <b>Here's how it works:</b> 
+       <ol id="hiw"> 
+        <li id="q">Any Stack Exchange user can ask a question </li> 
+        <li id="an">The community provides support, votes on ideas, and reports bugs </li> 
+        <li id="b">Your voice helps shape the way Stack Exchange operates </li> 
+       </ol> 
+      </div> 
+      <div style="clear: both"></div> 
+     </div> 
+     <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "hero" }, true);
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
     </div> 
-    <div id="mm1" style="width:200px;"> 
-     <div onclick="newFile()" data-options="iconCls:'icon-add-file'">
-      Create File
+    <script>
+        StackExchange.using("gps", function () {
+            StackExchange.gps.track("hero.show", { hero_type: "hero", location: 3 }, true);
+        });
+    </script> 
+    <div id="mainbar"> 
+     <div class="subheader"> 
+      <h1 id="h-top-questions"> Top Questions </h1> 
+      <div id="tabs"> 
+       <a href="?tab=bugs" data-nav-xhref="" title="Questions tagged 'bug' with the most votes" data-value="bugs"> bugs</a> 
+       <a href="?tab=requests" data-nav-xhref="" title="Questions tagged 'feature-request' with the most votes" data-value="requests"> reqs</a> 
+       <a class="youarehere" href="?tab=active" data-nav-xhref="" title="Questions that have been asked, answered, or updated recently" data-value="active"> active</a> 
+       <a href="?tab=featured" data-nav-xhref="" title="Questions with an active bounty" data-value="featured"> <span class="bounty-indicator-tab">10</span> featured</a> 
+       <a href="?tab=hot" data-nav-xhref="" title="Questions with the most views, answers, and votes over the last few days" data-value="hot"> hot</a> 
+       <a href="?tab=week" data-nav-xhref="" title="Questions with the most views, answers, and votes this week" data-value="week"> week</a> 
+       <a href="?tab=month" data-nav-xhref="" title="Questions with the most views, answers, and votes this month" data-value="month"> month</a> 
+      </div> 
      </div> 
-     <div onclick="saveFiles( function( status ){ return true; })" data-options="iconCls:'icon-save-project'">
-      Save Files
+     <div id="qlist-wrapper"> 
+      <div id="question-mini-list"> 
+       <div class="question-summary narrow" id="question-summary-279327"> 
+        <div onclick="window.location.href='/questions/279327/omit-comment-replies-from-the-minimum-character-limit-check'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="8 views">8</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279327/omit-comment-replies-from-the-minimum-character-limit-check" class="question-hyperlink" title="Comments must be at least 15 characters long, which is supposed to make comments like &quot;...&quot; impossible to submit.
+
+This works fine, however there is a way around this, by using comment replies, even ...">Omit comment replies from the minimum character limit check</a></h3> 
+         <div class="tags t-feature-request t-comments t-comment-replies t-character-limit"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/comments" class="post-tag" title="show questions tagged 'comments'" rel="tag">comments</a> 
+          <a href="/questions/tagged/comment-replies" class="post-tag" title="show questions tagged 'comment-replies'" rel="tag">comment-replies</a> 
+          <a href="/questions/tagged/character-limit" class="post-tag" title="show questions tagged 'character-limit'" rel="tag">character-limit</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279327/omit-comment-replies-from-the-minimum-character-limit-check" class="started-link">modified <span title="2016-05-15 10:36:19Z" class="relativetime">6 mins ago</span></a> 
+          <a href="/users/152859/shadow-wizard">Shadow Wizard</a> 
+          <span class="reputation-score" title="reputation score 70,287" dir="ltr">70.3k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279330"> 
+        <div onclick="window.location.href='/questions/279330/rep-disappearing-without-notifications'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="25 views">25</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279330/rep-disappearing-without-notifications" class="question-hyperlink" title="I keep noticing rep disappearing without notifications. It's not really a problem, but at the moment on Stack Overflow* it seems to be to do with my rep resetting to 1,007. I got to 1,013 yesterday, ...">Rep disappearing without notifications</a></h3> 
+         <div class="tags t-bug t-status-bydesign t-reputation t-reputation-history t-reputation-recalc"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-bydesign" class="post-tag moderator-tag" title="show questions tagged 'status-bydesign'" rel="tag">status-bydesign</a> 
+          <a href="/questions/tagged/reputation" class="post-tag" title="show questions tagged 'reputation'" rel="tag">reputation</a> 
+          <a href="/questions/tagged/reputation-history" class="post-tag" title="show questions tagged 'reputation-history'" rel="tag">reputation-history</a> 
+          <a href="/questions/tagged/reputation-recalc" class="post-tag" title="show questions tagged 'reputation-recalc'" rel="tag">reputation-recalc</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279330/rep-disappearing-without-notifications" class="started-link">modified <span title="2016-05-15 10:35:09Z" class="relativetime">8 mins ago</span></a> 
+          <a href="/users/140505/oded">Oded</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 115,297" dir="ltr">115k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-5017"> 
+        <div onclick="window.location.href='/questions/5017/markdown-footnotes'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="125 votes">125</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="9 answers">9</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts hot">
+           <span title="17751 views">18k</span>
+          </div> 
+          <div class="hot">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/5017/markdown-footnotes" class="question-hyperlink" title="Would you like them?
+
+You could have Markdown to have a popup appear to insert the footnote's text [*].
+
+EDIT: you can use a symbol and then <sub></sub>, but that won't give you a link ...">Markdown footnotes?</a></h3> 
+         <div class="tags t-feature-request t-status-declined t-markdown"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/status-declined" class="post-tag moderator-tag" title="show questions tagged 'status-declined'" rel="tag">status-declined</a> 
+          <a href="/questions/tagged/markdown" class="post-tag" title="show questions tagged 'markdown'" rel="tag">markdown</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/5017/markdown-footnotes/?lastactivity" class="started-link">modified <span title="2016-05-15 07:39:50Z" class="relativetime">3 hours ago</span></a> 
+          <a href="/users/262509/giantcowfilms">GiantCowFilms</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">228</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279329"> 
+        <div onclick="window.location.href='/questions/279329/update-stackexchange-com-sites-to-add-twitter-links-to-recently-created-twitter'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="17 views">17</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279329/update-stackexchange-com-sites-to-add-twitter-links-to-recently-created-twitter" class="question-hyperlink" title="If you go to http://stackexchange.com/sites?view=list#oldest, you can see a list of sites and Twitter links for the ones that have Twitter accounts. 
+
+
+
+However, some time ago (last year), Stack ...">Update stackexchange.com/sites to add Twitter links to recently created Twitter accounts</a></h3> 
+         <div class="tags t-bug t-stackexchangeûcom t-twitter"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/stackexchange.com" class="post-tag" title="show questions tagged 'stackexchange.com'" rel="tag">stackexchange.com</a> 
+          <a href="/questions/tagged/twitter" class="post-tag" title="show questions tagged 'twitter'" rel="tag">twitter</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279329/update-stackexchange-com-sites-to-add-twitter-links-to-recently-created-twitter" class="started-link">asked <span title="2016-05-15 03:07:25Z" class="relativetime">7 hours ago</span></a> 
+          <a href="/users/278654/zanon">Zanon</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">680</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279328"> 
+        <div onclick="window.location.href='/questions/279328/delete-comment-on-mobile-version-shows-weird-looking-combination-of-icon-and-let'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="11 views">11</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279328/delete-comment-on-mobile-version-shows-weird-looking-combination-of-icon-and-let" class="question-hyperlink" title="This probably is a bug. When I tried to delete my comment on the mobile version (particularly, Android mobile, Chrome browser, Stack Overflow's post), I noticed this strange looking combination of ...">Delete Comment on Mobile Version Shows Weird-Looking Combination of Icon and Letters</a></h3> 
+         <div class="tags t-bug t-comments t-mobile-web t-delete"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/comments" class="post-tag" title="show questions tagged 'comments'" rel="tag">comments</a> 
+          <a href="/questions/tagged/mobile-web" class="post-tag" title="show questions tagged 'mobile-web'" rel="tag">mobile-web</a> 
+          <a href="/questions/tagged/delete" class="post-tag" title="show questions tagged 'delete'" rel="tag">delete</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279328/delete-comment-on-mobile-version-shows-weird-looking-combination-of-icon-and-let" class="started-link">asked <span title="2016-05-15 03:07:04Z" class="relativetime">7 hours ago</span></a> 
+          <a href="/users/321323/ian">Ian</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">136</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-258368"> 
+        <div onclick="window.location.href='/questions/258368/stack-exchange-android-app-doesnt-show-favorite-tags'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="56 views">56</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/258368/stack-exchange-android-app-doesnt-show-favorite-tags" class="question-hyperlink" title="Stack Exchange Android App
+Version 1.0.63
+
+I recently downloaded and started using the Stack Exchange Mobile App for Android. And while it's a great app, overall, and I quite like it for the basics, ...">Stack Exchange Android App doesn't show Favorite Tags</a></h3> 
+         <div class="tags t-feature-request t-tags t-android-app t-favorite-tags"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/tags" class="post-tag" title="show questions tagged 'tags'" rel="tag">tags</a> 
+          <a href="/questions/tagged/android-app" class="post-tag" title="show questions tagged 'android-app'" rel="tag">android-app</a> 
+          <a href="/questions/tagged/favorite-tags" class="post-tag" title="show questions tagged 'favorite-tags'" rel="tag">favorite-tags</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/258368/stack-exchange-android-app-doesnt-show-favorite-tags/?lastactivity" class="started-link">modified <span title="2016-05-15 02:38:56Z" class="relativetime">8 hours ago</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-249804"> 
+        <div onclick="window.location.href='/questions/249804/lost-reputation-from-suggested-edit-approval-on-post-left-behind-when-account-is'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="15 votes">15</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="124 views">124</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/249804/lost-reputation-from-suggested-edit-approval-on-post-left-behind-when-account-is" class="question-hyperlink" title="On Programmers.SE, I edited a post (Must I provide my project source code if I use a library licensed under Apache 2.0?) back in November. Since it was a suggested edit, I earned +2 reputation when my ...">Lost reputation from suggested edit approval on post left behind when account is deleted</a></h3> 
+         <div class="tags t-bug t-reputation t-suggested-edits t-deleted-accounts"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/reputation" class="post-tag" title="show questions tagged 'reputation'" rel="tag">reputation</a> 
+          <a href="/questions/tagged/suggested-edits" class="post-tag" title="show questions tagged 'suggested-edits'" rel="tag">suggested-edits</a> 
+          <a href="/questions/tagged/deleted-accounts" class="post-tag" title="show questions tagged 'deleted-accounts'" rel="tag">deleted-accounts</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/249804/lost-reputation-from-suggested-edit-approval-on-post-left-behind-when-account-is/?lastactivity" class="started-link">modified <span title="2016-05-15 00:05:17Z" class="relativetime">10 hours ago</span></a> 
+          <a href="/users/274165/nathan-tuggy">Nathan Tuggy</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">4,214</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-238082"> 
+        <div onclick="window.location.href='/questions/238082/unable-to-answer-protected-question-despite-having-enough-reputation'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="4 votes">4</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="160 views">160</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/238082/unable-to-answer-protected-question-despite-having-enough-reputation" class="question-hyperlink" title="I was reading What are the spam and offensive flags, and how do they work? last night. When I got to the bottom, where the answer button usually is, I saw the following message in its place:
+
+
+  ...">Unable to answer protected question despite having enough reputation [duplicate]</a></h3> 
+         <div class="tags t-discussion t-bug t-status-bydesign t-protected-questions t-bonus-reputation"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-bydesign" class="post-tag moderator-tag" title="show questions tagged 'status-bydesign'" rel="tag">status-bydesign</a> 
+          <a href="/questions/tagged/protected-questions" class="post-tag" title="show questions tagged 'protected-questions'" rel="tag">protected-questions</a> 
+          <a href="/questions/tagged/bonus-reputation" class="post-tag" title="show questions tagged 'bonus-reputation'" rel="tag">bonus-reputation</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/238082/unable-to-answer-protected-question-despite-having-enough-reputation/?lastactivity" class="started-link">modified <span title="2016-05-14 22:08:23Z" class="relativetime">12 hours ago</span></a> 
+          <a href="/users/152859/shadow-wizard">Shadow Wizard</a> 
+          <span class="reputation-score" title="reputation score 70,287" dir="ltr">70.3k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279325"> 
+        <div onclick="window.location.href='/questions/279325/only-having-the-100-reputation-bonus-doesnt-allow-you-to-post-on-certain-prot'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="-1 votes">-1</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="24 views">24</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279325/only-having-the-100-reputation-bonus-doesnt-allow-you-to-post-on-certain-prot" class="question-hyperlink" title="At some point in the last few months I got this notification
+
+
+  You've earned the &quot;Yearling&quot; badge (Active member for a year, earning at least 200 reputation).
+
+
+and then I believe I got this ...">Only having the +100 reputation bonus doesn't allow you to post on certain “protected reputation” questions (101-109 Reputation) [duplicate]</a></h3> 
+         <div class="tags t-bug t-status-bydesign t-reputation t-privileges t-protected-questions"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-bydesign" class="post-tag moderator-tag" title="show questions tagged 'status-bydesign'" rel="tag">status-bydesign</a> 
+          <a href="/questions/tagged/reputation" class="post-tag" title="show questions tagged 'reputation'" rel="tag">reputation</a> 
+          <a href="/questions/tagged/privileges" class="post-tag" title="show questions tagged 'privileges'" rel="tag">privileges</a> 
+          <a href="/questions/tagged/protected-questions" class="post-tag" title="show questions tagged 'protected-questions'" rel="tag">protected-questions</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279325/only-having-the-100-reputation-bonus-doesnt-allow-you-to-post-on-certain-prot" class="started-link">modified <span title="2016-05-14 22:05:00Z" class="relativetime">12 hours ago</span></a> 
+          <a href="/users/140505/oded">Oded</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 115,297" dir="ltr">115k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-278354"> 
+        <div onclick="window.location.href='/questions/278354/favorite-tag-highlighting'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="8 votes">8</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="36 views">36</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/278354/favorite-tag-highlighting" class="question-hyperlink" title="There are numerous posts within the network about changing the highlighting color of questions that contain a favorited tag.
+
+
+Should favorite tag highlighting in question lists be changed?
+Color for ...">Favorite Tag Highlighting</a></h3> 
+         <div class="tags t-feature-request t-design t-favorite-tags"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/design" class="post-tag" title="show questions tagged 'design'" rel="tag">design</a> 
+          <a href="/questions/tagged/favorite-tags" class="post-tag" title="show questions tagged 'favorite-tags'" rel="tag">favorite-tags</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/278354/favorite-tag-highlighting/?lastactivity" class="started-link">modified <span title="2016-05-14 21:55:48Z" class="relativetime">12 hours ago</span></a> 
+          <a href="/users/307724/%e1%b4%89%ca%9eu%c7%9d">ᴉʞuǝ</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">223</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-257167"> 
+        <div onclick="window.location.href='/questions/257167/profile-communities-list-last-list-entry-is-not-shown-on-profile-view'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="39 views">39</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/257167/profile-communities-list-last-list-entry-is-not-shown-on-profile-view" class="question-hyperlink" title="Opening user's communities view, the last entry of the list (the one behind Science Fiction &amp; Fantasy in the screenshot) is not shown correctly.
+
+It is drawn under the bottom menu bar and it's ...">Profile communities list - Last list entry is not shown on profile view</a></h3> 
+         <div class="tags t-bug t-status-completed t-ios-app"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-completed" class="post-tag moderator-tag" title="show questions tagged 'status-completed'" rel="tag">status-completed</a> 
+          <a href="/questions/tagged/ios-app" class="post-tag" title="show questions tagged 'ios-app'" rel="tag">ios-app</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/257167/profile-communities-list-last-list-entry-is-not-shown-on-profile-view/?lastactivity" class="started-link">modified <span title="2016-05-14 20:32:09Z" class="relativetime">14 hours ago</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279323"> 
+        <div onclick="window.location.href='/questions/279323/stackexchange-vs-stack-exchange'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="33 views">33</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279323/stackexchange-vs-stack-exchange" class="question-hyperlink" title="Which spacing is correct? I've seen both being used. Plus, there isn't really anything saying which is correct.
+">StackExchange vs. Stack Exchange [duplicate]</a></h3> 
+         <div class="tags t-support t-trademark"> 
+          <a href="/questions/tagged/support" class="post-tag required-tag" title="show questions tagged 'support'" rel="tag">support</a> 
+          <a href="/questions/tagged/trademark" class="post-tag" title="show questions tagged 'trademark'" rel="tag">trademark</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279323/stackexchange-vs-stack-exchange/?lastactivity" class="started-link">modified <span title="2016-05-14 19:48:13Z" class="relativetime">14 hours ago</span></a> 
+          <a href="/users/260841/%e1%94%95%e1%96%ba%e1%98%8e%e1%95%8a">ᔕᖺᘎᕊ</a> 
+          <span class="reputation-score" title="reputation score 12,542" dir="ltr">12.5k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279321"> 
+        <div onclick="window.location.href='/questions/279321/sizes-of-icons-for-se-network-sites-are-not-equal'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="16 views">16</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279321/sizes-of-icons-for-se-network-sites-are-not-equal" class="question-hyperlink" title="The sizes of one icon for a StackExchange site (English Language Learners) is bigger than another (LEGO).
+
+Should this be the same size in the iOS app?
+">Sizes of icons for SE network sites are not equal [duplicate]</a></h3> 
+         <div class="tags t-bug t-ios-app"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/ios-app" class="post-tag" title="show questions tagged 'ios-app'" rel="tag">ios-app</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279321/sizes-of-icons-for-se-network-sites-are-not-equal" class="started-link">asked <span title="2016-05-14 18:23:10Z" class="relativetime">16 hours ago</span></a> 
+          <a href="/users/318692/peanut">Peanut</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">284</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279258"> 
+        <div onclick="window.location.href='/questions/279258/screenshots-for-privileges-page'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="10 votes">10</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="50 views">50</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <div class="bounty-indicator" title="this question has an open bounty worth 50 reputation">
+          +50
+         </div> 
+         <h3><a href="/questions/279258/screenshots-for-privileges-page" class="question-hyperlink" title="Most of the screenshots on privileges pages are outdated. Shouldn't they be replaced with screenshots of the new design?
+
+
+
+Example 1: Set Bounties:
+
+Current Image
+
+
+
+Updated Image
+
+
+
+
+
+Example 2: ...">Screenshots for privileges page</a></h3> 
+         <div class="tags t-discussion t-design t-user-interface t-privileges-page"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/design" class="post-tag" title="show questions tagged 'design'" rel="tag">design</a> 
+          <a href="/questions/tagged/user-interface" class="post-tag" title="show questions tagged 'user-interface'" rel="tag">user-interface</a> 
+          <a href="/questions/tagged/privileges-page" class="post-tag" title="show questions tagged 'privileges-page'" rel="tag">privileges-page</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279258/screenshots-for-privileges-page" class="started-link">modified <span title="2016-05-14 16:28:26Z" class="relativetime">18 hours ago</span></a> 
+          <a href="/users/327561/luweiqi">luweiqi</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">196</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-274633"> 
+        <div onclick="window.location.href='/questions/274633/clicking-the-replied-to-icon-does-nothing-when-the-message-is-selected'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="41 views">41</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/274633/clicking-the-replied-to-icon-does-nothing-when-the-message-is-selected" class="question-hyperlink" title="When I click on the replied to icon in the mobile chat interface when I have a message selected, I expect something to happen, for instance, selecting the message that was replied to or (less ...">Clicking the “replied to” icon does nothing when the message is selected</a></h3> 
+         <div class="tags t-bug t-chat t-mobile-web"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/chat" class="post-tag" title="show questions tagged 'chat'" rel="tag">chat</a> 
+          <a href="/questions/tagged/mobile-web" class="post-tag" title="show questions tagged 'mobile-web'" rel="tag">mobile-web</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/274633/clicking-the-replied-to-icon-does-nothing-when-the-message-is-selected/?lastactivity" class="started-link">modified <span title="2016-05-14 13:30:33Z" class="relativetime">21 hours ago</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279294"> 
+        <div onclick="window.location.href='/questions/279294/who-approves-feature-requests'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="87 views">87</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279294/who-approves-feature-requests" class="question-hyperlink" title="Who approves the feature requests made on meta? Is it approved by the SE mods and employees, or is it approved by discussion?
+">Who approves feature requests?</a></h3> 
+         <div class="tags t-support t-feature-request-process"> 
+          <a href="/questions/tagged/support" class="post-tag required-tag" title="show questions tagged 'support'" rel="tag">support</a> 
+          <a href="/questions/tagged/feature-request-process" class="post-tag" title="show questions tagged 'feature-request-process'" rel="tag">feature-request-process</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279294/who-approves-feature-requests/?lastactivity" class="started-link">modified <span title="2016-05-14 11:56:40Z" class="relativetime">22 hours ago</span></a> 
+          <a href="/users/152859/shadow-wizard">Shadow Wizard</a> 
+          <span class="reputation-score" title="reputation score 70,287" dir="ltr">70.3k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-277759"> 
+        <div onclick="window.location.href='/questions/277759/is-the-rick-astley-chiptune-available-to-download-anywhere'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="15 votes">15</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="355 views">355</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/277759/is-the-rick-astley-chiptune-available-to-download-anywhere" class="question-hyperlink" title="In Unikong, if you enter the Konami code, instead of the normal in-game music you get to listen to a chiptune version of Rick Astley's hit song, &quot;Never Gonna Give You Up&quot;.
+
+Is there a place where we ...">Is the Rick Astley chiptune available to download anywhere?</a></h3> 
+         <div class="tags t-discussion t-unikong"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/unikong" class="post-tag" title="show questions tagged 'unikong'" rel="tag">unikong</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/277759/is-the-rick-astley-chiptune-available-to-download-anywhere/?lastactivity" class="started-link">modified <span title="2016-05-14 11:43:25Z" class="relativetime">22 hours ago</span></a> 
+          <a href="/users/152859/shadow-wizard">Shadow Wizard</a> 
+          <span class="reputation-score" title="reputation score 70,287" dir="ltr">70.3k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-270098"> 
+        <div onclick="window.location.href='/questions/270098/total-people-reached-in-all-se-sites-combined-global-impact-under-network-p'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="13 votes">13</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="3 answers">3</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="94 views">94</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/270098/total-people-reached-in-all-se-sites-combined-global-impact-under-network-p" class="question-hyperlink" title="The impact (people reached) infobox on the profile page is a motivating feature. Any plans adding a similar infobox on the network profile to display the total people reached across all SE sites?
+">Total people reached in all SE sites combined (“global impact”), under network profile?</a></h3> 
+         <div class="tags t-feature-request t-network-profile t-people-reached"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/network-profile" class="post-tag" title="show questions tagged 'network-profile'" rel="tag">network-profile</a> 
+          <a href="/questions/tagged/people-reached" class="post-tag" title="show questions tagged 'people-reached'" rel="tag">people-reached</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/270098/total-people-reached-in-all-se-sites-combined-global-impact-under-network-p/?lastactivity" class="started-link">answered <span title="2016-05-14 10:42:59Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/276487/yagmoth555">yagmoth555</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">76</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-278334"> 
+        <div onclick="window.location.href='/questions/278334/which-per-site-metas-are-offered-in-the-chat-room-creation-dialogue'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="9 votes">9</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="102 views">102</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/278334/which-per-site-metas-are-offered-in-the-chat-room-creation-dialogue" class="question-hyperlink" title="Chat rooms can be associated with meta sites, as discussed, for example, here: Why can meta sites be parents of chatrooms? (In this post you can notice that there were some recent changes concerning ...">Which per-site-metas are offered in the chat-room creation dialogue?</a></h3> 
+         <div class="tags t-support t-chat t-per-site-meta"> 
+          <a href="/questions/tagged/support" class="post-tag required-tag" title="show questions tagged 'support'" rel="tag">support</a> 
+          <a href="/questions/tagged/chat" class="post-tag" title="show questions tagged 'chat'" rel="tag">chat</a> 
+          <a href="/questions/tagged/per-site-meta" class="post-tag" title="show questions tagged 'per-site-meta'" rel="tag">per-site-meta</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/278334/which-per-site-metas-are-offered-in-the-chat-room-creation-dialogue" class="started-link">modified <span title="2016-05-14 07:52:34Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/183484/martin">Martin</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,392</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-277369"> 
+        <div onclick="window.location.href='/questions/277369/a-terms-of-service-update-restricting-companies-that-scrape-your-profile-informa'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2593 votes">3k</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="9 answers">9</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts supernova">
+           <span title="238190 views">238k</span>
+          </div> 
+          <div class="supernova">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/277369/a-terms-of-service-update-restricting-companies-that-scrape-your-profile-informa" class="question-hyperlink" title="
+  Update (April 19, 2016): This change is now live. You can view the updated Terms of Service here, or read about them below.
+
+
+
+
+tl;dr:
+
+We’re planning to make some changes to our Terms of Service ...">A Terms of Service update restricting companies that scrape your profile information without your permission</a></h3> 
+         <div class="tags t-discussion t-spam t-legal t-terms-of-service"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/spam" class="post-tag" title="show questions tagged 'spam'" rel="tag">spam</a> 
+          <a href="/questions/tagged/legal" class="post-tag" title="show questions tagged 'legal'" rel="tag">legal</a> 
+          <a href="/questions/tagged/terms-of-service" class="post-tag" title="show questions tagged 'terms-of-service'" rel="tag">terms-of-service</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/277369/a-terms-of-service-update-restricting-companies-that-scrape-your-profile-informa/?lastactivity" class="started-link">modified <span title="2016-05-14 02:59:02Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/237685/hichris123">hichris123</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">3,564</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279262"> 
+        <div onclick="window.location.href='/questions/279262/what-should-we-do-with-sets-of-answers-that-are-actually-polling-options'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="10 votes">10</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="134 views">134</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279262/what-should-we-do-with-sets-of-answers-that-are-actually-polling-options" class="question-hyperlink" title="Sometimes there are users that post questions and immediately with that answers that are just meant to attract votes (in the positive way: an opinion of the community).
+
+As an example here. OP posts a ...">What should we do with sets of answers that are actually polling options?</a></h3> 
+         <div class="tags t-discussion t-answers t-polling"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/answers" class="post-tag" title="show questions tagged 'answers'" rel="tag">answers</a> 
+          <a href="/questions/tagged/polling" class="post-tag" title="show questions tagged 'polling'" rel="tag">polling</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279262/what-should-we-do-with-sets-of-answers-that-are-actually-polling-options/?lastactivity" class="started-link">modified <span title="2016-05-14 02:44:46Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/98786/robert-cartaino">Robert Cartaino</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 65,700" dir="ltr">65.7k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-3122"> 
+        <div onclick="window.location.href='/questions/3122/formatting-sandbox'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="388 votes">388</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="394 answers">394</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts hot">
+           <span title="36456 views">36k</span>
+          </div> 
+          <div class="hot">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/3122/formatting-sandbox" class="question-hyperlink" title="
+
+As per Jeff's suggestion in this comment: 
+
+You can use this question as a formatting sandbox. You can
+
+
+edit this question itself (Community Wiki questions such as this one require 100 reputation ...">Formatting Sandbox</a></h3> 
+         <div class="tags t-support t-markdown t-community-wiki t-testing t-sandbox"> 
+          <a href="/questions/tagged/support" class="post-tag required-tag" title="show questions tagged 'support'" rel="tag">support</a> 
+          <a href="/questions/tagged/markdown" class="post-tag" title="show questions tagged 'markdown'" rel="tag">markdown</a> 
+          <a href="/questions/tagged/community-wiki" class="post-tag" title="show questions tagged 'community-wiki'" rel="tag">community-wiki</a> 
+          <a href="/questions/tagged/testing" class="post-tag" title="show questions tagged 'testing'" rel="tag">testing</a> 
+          <a href="/questions/tagged/sandbox" class="post-tag" title="show questions tagged 'sandbox'" rel="tag">sandbox</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/3122/formatting-sandbox/?lastactivity" class="started-link">modified <span title="2016-05-14 02:41:23Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/141525/animuson">animuson</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 107,223" dir="ltr">107k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-269435"> 
+        <div onclick="window.location.href='/questions/269435/suggested-edits-queue-show-tags-when-improving-edit'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="7 votes">7</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="39 views">39</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/269435/suggested-edits-queue-show-tags-when-improving-edit" class="question-hyperlink" title="Today I was improving a suggested edit on another site to correct some spelling errors and add in some more information for better clarity. However when I was in the question itself editing it the ...">Suggested Edits Queue: Show tags when improving edit</a></h3> 
+         <div class="tags t-discussion t-feature-request"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/269435/suggested-edits-queue-show-tags-when-improving-edit/?lastactivity" class="started-link">modified <span title="2016-05-14 01:19:53Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279314"> 
+        <div onclick="window.location.href='/questions/279314/suggested-edit-from-question-author-to-their-own-question-goes-to-review-queue'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="4 votes">4</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="32 views">32</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279314/suggested-edit-from-question-author-to-their-own-question-goes-to-review-queue" class="question-hyperlink" title="The only previous questions I could find about this here on Meta Stack Exchange turned out to be an edit by the question author through a different account (same name and avatar, but different ...">Suggested edit from question author to their own question goes to review queue</a></h3> 
+         <div class="tags t-support t-review t-edits t-suggested-edits"> 
+          <a href="/questions/tagged/support" class="post-tag required-tag" title="show questions tagged 'support'" rel="tag">support</a> 
+          <a href="/questions/tagged/review" class="post-tag" title="show questions tagged 'review'" rel="tag">review</a> 
+          <a href="/questions/tagged/edits" class="post-tag" title="show questions tagged 'edits'" rel="tag">edits</a> 
+          <a href="/questions/tagged/suggested-edits" class="post-tag" title="show questions tagged 'suggested-edits'" rel="tag">suggested-edits</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279314/suggested-edit-from-question-author-to-their-own-question-goes-to-review-queue/?lastactivity" class="started-link">answered <span title="2016-05-14 00:26:26Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/141525/animuson">animuson</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 107,223" dir="ltr">107k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279312"> 
+        <div onclick="window.location.href='/questions/279312/can-i-get-notifications-from-my-favourite-tags-into-the-se-inbox'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="4 votes">4</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="18 views">18</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279312/can-i-get-notifications-from-my-favourite-tags-into-the-se-inbox" class="question-hyperlink" title="I’ve labelled a few favourite tags here (and more on other sites). I appreciate them being highlighted on the question page.
+
+Sometimes, however, I take breaks from Stack Exchange that can be anything ...">Can I get notifications from my favourite tags into the SE inbox?</a></h3> 
+         <div class="tags t-feature-request t-tags t-favorites"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/tags" class="post-tag" title="show questions tagged 'tags'" rel="tag">tags</a> 
+          <a href="/questions/tagged/favorites" class="post-tag" title="show questions tagged 'favorites'" rel="tag">favorites</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279312/can-i-get-notifications-from-my-favourite-tags-into-the-se-inbox" class="started-link">modified <span title="2016-05-13 23:36:52Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/312026/jan">Jan</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">121</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-183975"> 
+        <div onclick="window.location.href='/questions/183975/leaderboard-email-sent-under-incorrect-circumstances'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="6 votes">6</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="105 views">105</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/183975/leaderboard-email-sent-under-incorrect-circumstances" class="question-hyperlink" title="This morning, as I checked my email, I noticed the following friendly email in my inbox:
+
+
+  Hello,
+  
+  I just wanted to drop you a note to thank you for participating in the ongoing beta of ...">Leaderboard email sent under incorrect circumstances</a></h3> 
+         <div class="tags t-bug t-email t-reputation-leagues t-beta-sites"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/email" class="post-tag" title="show questions tagged 'email'" rel="tag">email</a> 
+          <a href="/questions/tagged/reputation-leagues" class="post-tag" title="show questions tagged 'reputation-leagues'" rel="tag">reputation-leagues</a> 
+          <a href="/questions/tagged/beta-sites" class="post-tag" title="show questions tagged 'beta-sites'" rel="tag">beta-sites</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/183975/leaderboard-email-sent-under-incorrect-circumstances/?lastactivity" class="started-link">modified <span title="2016-05-13 23:19:43Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279313"> 
+        <div onclick="window.location.href='/questions/279313/could-migrated-questions-use-the-migration-date-as-the-asked-date'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="31 views">31</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279313/could-migrated-questions-use-the-migration-date-as-the-asked-date" class="question-hyperlink" title="This question requests that migrations get updated dates to match the time of their migration. That is not the feature I am asking for.
+
+I am asking that, in the case of migrations, could the system ...">Could migrated questions use the migration date as the “asked” date?</a></h3> 
+         <div class="tags t-feature-request t-migrated-questions t-newest-questions"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/migrated-questions" class="post-tag" title="show questions tagged 'migrated-questions'" rel="tag">migrated-questions</a> 
+          <a href="/questions/tagged/newest-questions" class="post-tag" title="show questions tagged 'newest-questions'" rel="tag">newest-questions</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279313/could-migrated-questions-use-the-migration-date-as-the-asked-date" class="started-link">asked <span title="2016-05-13 23:14:10Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/284336/catija">Catija</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">4,850</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279301"> 
+        <div onclick="window.location.href='/questions/279301/what-is-the-correct-equivalent-of-me-too-comments'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="6 votes">6</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="80 views">80</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279301/what-is-the-correct-equivalent-of-me-too-comments" class="question-hyperlink" title="Protection is to prevent &quot;me too&quot; or &quot;thanks&quot; answers by new users. 
+
+What is the correct equivalent of &quot;me too&quot; that I should use instead of commenting &quot;me too&quot;?
+">What is the correct equivalent of “me too” comments?</a></h3> 
+         <div class="tags t-discussion t-comments"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/comments" class="post-tag" title="show questions tagged 'comments'" rel="tag">comments</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279301/what-is-the-correct-equivalent-of-me-too-comments/?lastactivity" class="started-link">modified <span title="2016-05-13 20:51:17Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/215590/polygeo">PolyGeo</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">6,155</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279300"> 
+        <div onclick="window.location.href='/questions/279300/need-more-reputation-to-comment-on-a-locked-question'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="8 votes">8</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="54 views">54</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279300/need-more-reputation-to-comment-on-a-locked-question" class="question-hyperlink" title="When I click on the message saying a post is locked, the 50 reputation required pop-up comes up as if it wasn't locked:
+
+
+  
+
+
+This would probably confuse new users as it is basically contradicting ...">Need more reputation to comment on a locked question</a></h3> 
+         <div class="tags t-bug t-comments t-locked"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/comments" class="post-tag" title="show questions tagged 'comments'" rel="tag">comments</a> 
+          <a href="/questions/tagged/locked" class="post-tag" title="show questions tagged 'locked'" rel="tag">locked</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279300/need-more-reputation-to-comment-on-a-locked-question" class="started-link">modified <span title="2016-05-13 20:44:05Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/321474/john">John</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">235</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279215"> 
+        <div onclick="window.location.href='/questions/279215/how-many-questions-can-i-watch-via-websockets-at-the-same-time'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="6 votes">6</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="106 views">106</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <div class="bounty-indicator" title="this question has an open bounty worth 50 reputation">
+          +50
+         </div> 
+         <h3><a href="/questions/279215/how-many-questions-can-i-watch-via-websockets-at-the-same-time" class="question-hyperlink" title="Stack Exchange provides a way to watch a question (i.e. receive real-time information about up- and downvotes, new answers, new comments, edits, closures and deletions) via WebSockets. You just have ...">How many questions can I watch via WebSockets at the same time?</a></h3> 
+         <div class="tags t-support t-rate-limiting t-web-sockets"> 
+          <a href="/questions/tagged/support" class="post-tag required-tag" title="show questions tagged 'support'" rel="tag">support</a> 
+          <a href="/questions/tagged/rate-limiting" class="post-tag" title="show questions tagged 'rate-limiting'" rel="tag">rate-limiting</a> 
+          <a href="/questions/tagged/web-sockets" class="post-tag" title="show questions tagged 'web-sockets'" rel="tag">web-sockets</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279215/how-many-questions-can-i-watch-via-websockets-at-the-same-time/?lastactivity" class="started-link">modified <span title="2016-05-13 19:17:26Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/296887/randers00">RAnders00</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">58</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-278889"> 
+        <div onclick="window.location.href='/questions/278889/custom-tag-styling-color-for-a-classification-of-tag'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="17 votes">17</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="3 answers">3</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="154 views">154</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/278889/custom-tag-styling-color-for-a-classification-of-tag" class="question-hyperlink" title="Tags come in (essentially) three colors... and these three colors are limited to meta sites only.
+
+
+Mod tags - red/maroon.
+Required tags - grey.
+General tags - white or nearly white depending on the ...">Custom tag styling (color) for a classification of tag?</a></h3> 
+         <div class="tags t-feature-request t-tags t-design"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/tags" class="post-tag" title="show questions tagged 'tags'" rel="tag">tags</a> 
+          <a href="/questions/tagged/design" class="post-tag" title="show questions tagged 'design'" rel="tag">design</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/278889/custom-tag-styling-color-for-a-classification-of-tag/?lastactivity" class="started-link">modified <span title="2016-05-13 18:04:58Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/162102/monica-cellio">Monica Cellio</a> 
+          <span class="reputation-score" title="reputation score 41,278" dir="ltr">41.3k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-129374"> 
+        <div onclick="window.location.href='/questions/129374/obtaining-full-chat-transcripts'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="18 votes">18</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="161 views">161</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/129374/obtaining-full-chat-transcripts" class="question-hyperlink" title="How do I download all chat messages or those from a particular room (over all time)?  Some dopey script may be able to do it, but is there a more convenient way?  Is there something at ...">Obtaining full chat transcripts</a></h3> 
+         <div class="tags t-support t-chat t-chat-transcript"> 
+          <a href="/questions/tagged/support" class="post-tag required-tag" title="show questions tagged 'support'" rel="tag">support</a> 
+          <a href="/questions/tagged/chat" class="post-tag" title="show questions tagged 'chat'" rel="tag">chat</a> 
+          <a href="/questions/tagged/chat-transcript" class="post-tag" title="show questions tagged 'chat-transcript'" rel="tag">chat-transcript</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/129374/obtaining-full-chat-transcripts/?lastactivity" class="started-link">answered <span title="2016-05-13 17:57:30Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/152279/nick-t">Nick T</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">2,303</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279203"> 
+        <div onclick="window.location.href='/questions/279203/how-can-we-make-the-purpose-of-community-bumping-more-obvious'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="18 votes">18</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="3 answers">3</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="188 views">188</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279203/how-can-we-make-the-purpose-of-community-bumping-more-obvious" class="question-hyperlink" title="There's been a lot of confusion over the years regarding the automatic &quot;bumping&quot; of questions...
+
+
+
+
+Community ♦ should discriminate more when bumping unanswered questions
+Community ♦ seems to be ...">How can we make the purpose of Community “bumping” more obvious?</a></h3> 
+         <div class="tags t-discussion t-unanswered-questions t-community-user t-bump"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/unanswered-questions" class="post-tag" title="show questions tagged 'unanswered-questions'" rel="tag">unanswered-questions</a> 
+          <a href="/questions/tagged/community-user" class="post-tag" title="show questions tagged 'community-user'" rel="tag">community-user</a> 
+          <a href="/questions/tagged/bump" class="post-tag" title="show questions tagged 'bump'" rel="tag">bump</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279203/how-can-we-make-the-purpose-of-community-bumping-more-obvious/?lastactivity" class="started-link">modified <span title="2016-05-13 17:52:33Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/152859/shadow-wizard">Shadow Wizard</a> 
+          <span class="reputation-score" title="reputation score 70,287" dir="ltr">70.3k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279245"> 
+        <div onclick="window.location.href='/questions/279245/mobile-web-update-hurts-the-eyes'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="12 votes">12</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="191 views">191</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279245/mobile-web-update-hurts-the-eyes" class="question-hyperlink" title="Using default Galaxy S4, kitkat, Samsung Internet browser (chrome/chromium based), the latest update (5/11/16) to the mobile website looks broken. (Not on downloaded Chrome)
+
+
+
+Screen shot added. ...">Mobile web update hurts the eyes</a></h3> 
+         <div class="tags t-bug t-status-completed t-design t-mobile-web"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-completed" class="post-tag moderator-tag" title="show questions tagged 'status-completed'" rel="tag">status-completed</a> 
+          <a href="/questions/tagged/design" class="post-tag" title="show questions tagged 'design'" rel="tag">design</a> 
+          <a href="/questions/tagged/mobile-web" class="post-tag" title="show questions tagged 'mobile-web'" rel="tag">mobile-web</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279245/mobile-web-update-hurts-the-eyes/?lastactivity" class="started-link">answered <span title="2016-05-13 17:42:13Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/251318/cde">cde</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">588</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279269"> 
+        <div onclick="window.location.href='/questions/279269/new-mobile-web-theme-doesnt-highlight-comments-from-the-op'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="7 votes">7</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="57 views">57</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279269/new-mobile-web-theme-doesnt-highlight-comments-from-the-op" class="question-hyperlink" title="On main and in the old mobile site (iirc) the username of the OP is highlighted in the comments.  This is no longer the case after the new design/theme was rolled out yesterday.
+
+Can we get this back? ...">New mobile web theme doesn't highlight comments from the OP</a></h3> 
+         <div class="tags t-bug t-status-completed t-comments t-design t-mobile-web"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-completed" class="post-tag moderator-tag" title="show questions tagged 'status-completed'" rel="tag">status-completed</a> 
+          <a href="/questions/tagged/comments" class="post-tag" title="show questions tagged 'comments'" rel="tag">comments</a> 
+          <a href="/questions/tagged/design" class="post-tag" title="show questions tagged 'design'" rel="tag">design</a> 
+          <a href="/questions/tagged/mobile-web" class="post-tag" title="show questions tagged 'mobile-web'" rel="tag">mobile-web</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279269/new-mobile-web-theme-doesnt-highlight-comments-from-the-op" class="started-link">modified <span title="2016-05-13 17:39:50Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/225016/pawe%c5%82">Paweł</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">257</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279141"> 
+        <div onclick="window.location.href='/questions/279141/meta-logo-is-not-properly-clickable'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="64 views">64</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279141/meta-logo-is-not-properly-clickable" class="question-hyperlink" title="The logo displayed at the top of each SE site is designed to link to the respective site's homepage. This works fine on most SE sites, except Meta SE.
+
+For some reason, the logo is only clickable on ...">Meta logo is not properly clickable?</a></h3> 
+         <div class="tags t-bug t-status-norepro t-hyperlinks t-logo t-opera"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-norepro" class="post-tag moderator-tag" title="show questions tagged 'status-norepro'" rel="tag">status-norepro</a> 
+          <a href="/questions/tagged/hyperlinks" class="post-tag" title="show questions tagged 'hyperlinks'" rel="tag">hyperlinks</a> 
+          <a href="/questions/tagged/logo" class="post-tag" title="show questions tagged 'logo'" rel="tag">logo</a> 
+          <a href="/questions/tagged/opera" class="post-tag" title="show questions tagged 'opera'" rel="tag">opera</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279141/meta-logo-is-not-properly-clickable" class="started-link">modified <span title="2016-05-13 17:10:24Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/276705/scripthero">scriptHero</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">547</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279307"> 
+        <div onclick="window.location.href='/questions/279307/the-filter-link-is-too-high-in-the-review-queue-interface'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="4 votes">4</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="25 views">25</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279307/the-filter-link-is-too-high-in-the-review-queue-interface" class="question-hyperlink" title="Usually, the &quot;filter&quot; link in review queues is aligned with the queue's title, but currently, it's pushed up quite a bit:
+
+
+
+This happens in all queues on the sites I checked (Super User and Stack ...">The “filter” link is too high in the review queue interface</a></h3> 
+         <div class="tags t-bug t-review t-design"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/review" class="post-tag" title="show questions tagged 'review'" rel="tag">review</a> 
+          <a href="/questions/tagged/design" class="post-tag" title="show questions tagged 'design'" rel="tag">design</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279307/the-filter-link-is-too-high-in-the-review-queue-interface" class="started-link">modified <span title="2016-05-13 15:42:39Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/295684/ben-n">Ben N</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1,893</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-30128"> 
+        <div onclick="window.location.href='/questions/30128/how-old-is-stack-overflow'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="6 votes">6</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="6 answers">6</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="668 views">668</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/30128/how-old-is-stack-overflow" class="question-hyperlink" title="Simple enough question. I notice Stack Overflow has over 100,000 users — huge congrats guys! Can you share exactly how old Stack Overflow is? Also, what percentage of the 100,000 are active? Can ...">How old is Stack Overflow?</a></h3> 
+         <div class="tags t-discussion t-stackoverflow t-users t-statistics"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/stackoverflow" class="post-tag" title="show questions tagged 'stackoverflow'" rel="tag">stackoverflow</a> 
+          <a href="/questions/tagged/users" class="post-tag" title="show questions tagged 'users'" rel="tag">users</a> 
+          <a href="/questions/tagged/statistics" class="post-tag" title="show questions tagged 'statistics'" rel="tag">statistics</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/30128/how-old-is-stack-overflow/?lastactivity" class="started-link">modified <span title="2016-05-13 14:57:15Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/21960/al-e">Al E.</a> 
+          <span class="reputation-score" title="reputation score 15,734" dir="ltr">15.7k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279246"> 
+        <div onclick="window.location.href='/questions/279246/reloading-the-page-creates-a-new-tab'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="58 views">58</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279246/reloading-the-page-creates-a-new-tab" class="question-hyperlink" title="I think I discovered a bug in the new navigation system - have a look:
+
+
+
+If I open a navigation tab with a filter for two or more tags and then reload the page, a new tab gets created.
+The tag that ...">Reloading the page creates a new tab</a></h3> 
+         <div class="tags t-bug t-new-nav"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/new-nav" class="post-tag" title="show questions tagged 'new-nav'" rel="tag">new-nav</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279246/reloading-the-page-creates-a-new-tab" class="started-link">modified <span title="2016-05-13 12:29:37Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/324372/t3-h40">T3 H40</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">111</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279303"> 
+        <div onclick="window.location.href='/questions/279303/bug-in-math-se-reputation-displayer'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="38 views">38</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279303/bug-in-math-se-reputation-displayer" class="question-hyperlink" title="
+
+I have 2541 reputation at one place and 2526 reputation at another place.I have refreshed the page many times but it continues.
+
+What should I do?
+">Bug in Math.SE reputation displayer</a></h3> 
+         <div class="tags t-bug t-status-bydesign"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-bydesign" class="post-tag moderator-tag" title="show questions tagged 'status-bydesign'" rel="tag">status-bydesign</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279303/bug-in-math-se-reputation-displayer/?lastactivity" class="started-link">modified <span title="2016-05-13 12:22:38Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/140505/oded">Oded</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 115,297" dir="ltr">115k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-278260"> 
+        <div onclick="window.location.href='/questions/278260/change-the-tooltip-of-delete-link-on-your-own-post'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="6 votes">6</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="37 views">37</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/278260/change-the-tooltip-of-delete-link-on-your-own-post" class="question-hyperlink" title="When hovering the &quot;delete&quot; link over my own post, I see:
+
+
+  
+
+
+Text:
+
+
+  vote to delete this post
+
+
+However, when deleting my own post, the vote is binding and causing instant deletion, so the &quot;vote&quot; ...">Change the tooltip of “delete” link on your own post</a></h3> 
+         <div class="tags t-feature-request t-tooltips t-wording t-deletion"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/tooltips" class="post-tag" title="show questions tagged 'tooltips'" rel="tag">tooltips</a> 
+          <a href="/questions/tagged/wording" class="post-tag" title="show questions tagged 'wording'" rel="tag">wording</a> 
+          <a href="/questions/tagged/deletion" class="post-tag" title="show questions tagged 'deletion'" rel="tag">deletion</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/278260/change-the-tooltip-of-delete-link-on-your-own-post/?lastactivity" class="started-link">modified <span title="2016-05-13 12:13:16Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279288"> 
+        <div onclick="window.location.href='/questions/279288/viewing-a-question-crashes-opera-mobile-on-android'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="25 views">25</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279288/viewing-a-question-crashes-opera-mobile-on-android" class="question-hyperlink" title="Opening up a question page on any stack exchange site crashes Opera Mobile 12.10.9 on Android 2.3.
+
+This used to work. I noticed the crashing yesterday.
+
+The browser (com.opera.browser.classic) can be ...">Viewing a question crashes Opera Mobile on Android [duplicate]</a></h3> 
+         <div class="tags t-bug t-status-declined t-mobile-web"> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/status-declined" class="post-tag moderator-tag" title="show questions tagged 'status-declined'" rel="tag">status-declined</a> 
+          <a href="/questions/tagged/mobile-web" class="post-tag" title="show questions tagged 'mobile-web'" rel="tag">mobile-web</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279288/viewing-a-question-crashes-opera-mobile-on-android" class="started-link">modified <span title="2016-05-13 11:49:25Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/140505/oded">Oded</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 115,297" dir="ltr">115k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-279299"> 
+        <div onclick="window.location.href='/questions/279299/op-name-not-highlighted-in-new-mobile-view'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="19 views">19</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/279299/op-name-not-highlighted-in-new-mobile-view" class="question-hyperlink" title="In the new mobile view, I noticed that the OP's name is no longer highlighted in comments.
+
+
+
+Browser is Chrome 50.0.2661.89 running on Android 6.0.0.  Not sure if this is a bug or an intentional ...">OP name not highlighted in new mobile view [duplicate]</a></h3> 
+         <div class="tags t-feature-request t-bug t-mobile-web"> 
+          <a href="/questions/tagged/feature-request" class="post-tag required-tag" title="show questions tagged 'feature-request'" rel="tag">feature-request</a> 
+          <a href="/questions/tagged/bug" class="post-tag required-tag" title="show questions tagged 'bug'" rel="tag">bug</a> 
+          <a href="/questions/tagged/mobile-web" class="post-tag" title="show questions tagged 'mobile-web'" rel="tag">mobile-web</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/279299/op-name-not-highlighted-in-new-mobile-view" class="started-link">asked <span title="2016-05-13 11:11:22Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/182513/psubsee2003">psubsee2003</a> 
+          <span class="reputation-score" title="reputation score 27,195" dir="ltr">27.2k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-256814"> 
+        <div onclick="window.location.href='/questions/256814/new-navigation-for-stack-overflow-is-in-alpha-testing'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="223 votes">223</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="14 answers">14</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts hot">
+           <span title="19989 views">20k</span>
+          </div> 
+          <div class="hot">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/256814/new-navigation-for-stack-overflow-is-in-alpha-testing" class="question-hyperlink" title="
+  Update: A Release Candidate has been announced
+  
+  Update: We've heard you! Alpha 2 is now released. Please let us know what you think.
+
+
+As announced 6-8 weeks ago...
+
+In a major effort to move ...">New navigation for Stack Overflow is in alpha testing</a></h3> 
+         <div class="tags t-discussion t-navigation t-new-nav"> 
+          <a href="/questions/tagged/discussion" class="post-tag required-tag" title="show questions tagged 'discussion'" rel="tag">discussion</a> 
+          <a href="/questions/tagged/navigation" class="post-tag" title="show questions tagged 'navigation'" rel="tag">navigation</a> 
+          <a href="/questions/tagged/new-nav" class="post-tag" title="show questions tagged 'new-nav'" rel="tag">new-nav</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/256814/new-navigation-for-stack-overflow-is-in-alpha-testing/?lastactivity" class="started-link">answered <span title="2016-05-13 10:54:31Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/309494/david-wilson">David Wilson</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">101</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-17443"> 
+        <div onclick="window.location.href='/questions/17443/how-is-the-default-user-avatar-generated'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="149 votes">149</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="4 answers">4</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts hot">
+           <span title="39167 views">39k</span>
+          </div> 
+          <div class="hot">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/17443/how-is-the-default-user-avatar-generated" class="question-hyperlink" title="Is there a name for the default avatars that are generated for users who do not assign one themselves? 
+
+Not the avatar of the blank user, but the one made up of shards, shapes, and colours:  
+
+    
+
+...">How is the default user avatar generated?</a></h3> 
+         <div class="tags t-support t-faq t-gravatar t-profile-picture t-identicon"> 
+          <a href="/questions/tagged/support" class="post-tag required-tag" title="show questions tagged 'support'" rel="tag">support</a> 
+          <a href="/questions/tagged/faq" class="post-tag moderator-tag" title="show questions tagged 'faq'" rel="tag">faq</a> 
+          <a href="/questions/tagged/gravatar" class="post-tag" title="show questions tagged 'gravatar'" rel="tag">gravatar</a> 
+          <a href="/questions/tagged/profile-picture" class="post-tag" title="show questions tagged 'profile-picture'" rel="tag">profile-picture</a> 
+          <a href="/questions/tagged/identicon" class="post-tag" title="show questions tagged 'identicon'" rel="tag">identicon</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/17443/how-is-the-default-user-avatar-generated/?lastactivity" class="started-link">modified <span title="2016-05-13 10:25:47Z" class="relativetime">2 days ago</span></a> 
+          <a href="/users/319027/oals">oals</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">111</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
      </div> 
-     <div onclick="deleteFile()" data-options="iconCls:'icon-delete-file'">
-      Delete File
+     <br class="cbt"> 
+     <h2 class="bottom-notice" data-loc="2">Looking for more? Browse the <a href="/questions">complete list of questions</a>, or <a href="/tags">popular tags</a>. Help us answer <a href="/unanswered">unanswered questions</a>.</h2> 
+     <script>
+    StackExchange.ready(function() { StackExchange.question.initShareLinks(); });
+</script>
+    </div> 
+    <div id="sidebar"> 
+     <script>
+    window.showNewUser = true;
+
+    
+    (function(){
+        if (window.localStorage && showNewUser){
+            var c = parseInt(localStorage['nuCounter'],10); 
+            c = isNaN(c) ? 1 : c+1;
+            window.localStorage['nuCounter'] = c; 
+            showNewUser = c < 10;
+        }
+    })();
+    
+</script> 
+     <div class="module newuser newuser-greeting" id="newuser-box" style="display:none;"> 
+      <h4>Welcome!</h4> 
+      <div>
+        Welcome! Meta Stack Exchange is intended for bugs, features, and discussions that affect the whole Stack Exchange family of Q&amp;A sites. 
+       <p class="ar"> <a href="/tour?mnu=1">about »</a>&nbsp;&nbsp;&nbsp; <a href="/help?mnu=1">help »</a> </p> 
+      </div> 
      </div> 
-     <div onclick="renameFile()" data-options="iconCls:'icon-rename-file'">
-      Rename File
+     <script>
+    if (showNewUser) {
+        document.getElementById('newuser-box').style.display = '';
+    }
+    </script> 
+     <div class="module"> 
+      <h4>Frequently Asked</h4> 
+      <div class="linked"> 
+       <div class="spacer"> 
+        <a href="/questions/86997/what-can-i-do-when-getting-we-are-no-longer-accepting-questions-answers-from-th" class="question-hyperlink">What can I do when getting “We are no longer accepting questions/answers from this account”?</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/16065/how-does-the-bounty-system-work" class="question-hyperlink">How does the bounty system work?</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/7237/how-does-reputation-work" class="question-hyperlink">How does “Reputation” work?</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/19478/the-many-memes-of-meta" class="question-hyperlink">The Many Memes of Meta</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/67397/list-of-all-badges-with-full-descriptions" class="question-hyperlink">List of all badges with full descriptions</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/43019/how-do-comment-replies-work" class="question-hyperlink">How do comment @replies work?</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/7931/faq-for-stack-exchange-sites" class="question-hyperlink">FAQ for Stack Exchange sites</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/11740/what-are-community-wiki-posts" class="question-hyperlink">What are “Community Wiki” posts?</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/5221/how-does-deleting-work-what-can-cause-a-post-to-be-deleted-and-what-does-that" class="question-hyperlink">How does deleting work? What can cause a post to be deleted, and what does that actually mean? What are the criteria for deletion?</a> 
+       </div> 
+       <div class="spacer"> 
+        <a href="/questions/59445/recent-feature-changes-to-stack-exchange" class="question-hyperlink">Recent feature changes to Stack Exchange</a> 
+       </div> 
+       <div class="spacer ar">
+         more 
+        <a href="/questions/tagged/faq" class="post-tag moderator-tag" title="show questions tagged 'faq'" rel="tag">faq</a>&nbsp;» 
+       </div> 
+      </div> 
      </div> 
-     <div onclick="downloadFile()" data-options="iconCls:'icon-download-file'">
-      Download File
-     </div> 
-     <div onclick="openFileUpload()" data-options="iconCls:'icon-upload-file'">
-      Upload File
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="newDir()" data-options="iconCls:'icon-add-dir'">
-      New Directory
-     </div> 
-     <div onclick="deleteDir()" data-options="iconCls:'icon-delete-file'">
-      Delete Directory
-     </div> 
-     <div onclick="renameFile()" data-options="iconCls:'icon-rename-file'">
-      Rename Directory
+     <div id="hot-network-questions" class="module"> 
+      <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:8 })"> Hot Network Questions </a> </h4> 
+      <ul> 
+       <li> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127968/what-was-darth-mauls-pre-sith-name" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> What was Darth Maul's pre-Sith name? </a> </li> 
+       <li> 
+        <div class="favicon favicon-startups" title="Startups Stack Exchange"></div><a href="http://startups.stackexchange.com/questions/9131/why-java-is-not-so-popular-in-software-development-startup-projects" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:573 }); posts_hot_network.click({ item_type:2, location:8 })"> Why Java is not so popular in software development startup projects? </a> </li> 
+       <li> 
+        <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/234188/irfz44n-power-mosfet-gets-hot-while-driving-peltier-by-step-down-buck-voltage-co" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:135 }); posts_hot_network.click({ item_type:2, location:8 })"> IRFZ44N power MOSFET gets hot while driving Peltier by step-down buck voltage converter </a> </li> 
+       <li> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/128042/did-leias-excuse-make-any-sense" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> Did Leia's excuse make any sense? </a> </li> 
+       <li> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68707/how-common-is-it-for-submitted-papers-to-have-minor-errors" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> How common is it for submitted papers to have minor errors? </a> </li> 
+       <li> 
+        <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/265611/how-to-deploy-an-army-on-an-enemy-planet" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:41 }); posts_hot_network.click({ item_type:2, location:8 })"> How to deploy an army on an enemy planet? </a> </li> 
+       <li> 
+        <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/32829/has-a-fifteen-year-old-from-canada-discovered-a-hidden-mayan-city" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:212 }); posts_hot_network.click({ item_type:2, location:8 })"> Has a fifteen year old from Canada discovered a hidden Mayan city? </a> </li> 
+       <li> 
+        <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/52980/why-is-the-discovery-covered-in-sulphur-in-2010-the-year-we-make-contact" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:367 }); posts_hot_network.click({ item_type:2, location:8 })"> Why is the Discovery covered in sulphur in "2010: The Year We Make Contact"? </a> </li> 
+       <li> 
+        <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/66767/how-to-answer-professionally-to-coworkers-who-tease-me-because-i-am-vegan" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:423 }); posts_hot_network.click({ item_type:2, location:8 })"> How to answer professionally to coworkers who tease me because I am vegan? </a> </li> 
+       <li> 
+        <div class="favicon favicon-drupal" title="Drupal Answers"></div><a href="http://drupal.stackexchange.com/questions/201064/how-do-i-get-the-field-label-from-a-node-object" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:220 }); posts_hot_network.click({ item_type:2, location:8 })"> How do I get the field label from a node object? </a> </li> 
+       <li> 
+        <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325711/slang-or-idiom-for-submissive" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:97 }); posts_hot_network.click({ item_type:2, location:8 })"> Slang or idiom for submissive </a> </li> 
+       <li> 
+        <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/309643/what-is-exactly-a-hook-in-etoolbox" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:85 }); posts_hot_network.click({ item_type:2, location:8 })"> What is exactly a hook in etoolbox </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/27527/why-did-some-aircraft-use-hand-crank-instead-of-gravity-for-alternate-gear-exten" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:528 }); posts_hot_network.click({ item_type:2, location:8 })"> Why did some aircraft use hand-crank instead of gravity for alternate gear extension? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/41570/what-type-of-food-might-an-organism-that-lives-its-entire-life-in-interstellar-s" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:579 }); posts_hot_network.click({ item_type:2, location:8 })"> What type of food might an organism that lives its entire life in interstellar space eat? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-retrocomputing" title="Retrocomputing Stack Exchange"></div><a href="http://retrocomputing.stackexchange.com/questions/463/why-was-basic-built-into-so-many-operating-systems" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:648 }); posts_hot_network.click({ item_type:2, location:8 })"> Why was BASIC built into so many operating systems? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/128345/c-program-that-checks-on-the-status-of-the-capslock-with-each-character-insert" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:196 }); posts_hot_network.click({ item_type:2, location:8 })"> C# Program that checks on the status of the Capslock with each character insert </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/324831/word-for-a-person-who-freely-shares-others-secrets" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:97 }); posts_hot_network.click({ item_type:2, location:8 })"> Word for a person who freely shares others' secrets </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80118/how-to-prevent-players-from-metagaming-when-they-split-the-party" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:122 }); posts_hot_network.click({ item_type:2, location:8 })"> How to prevent players from metagaming when they split the party? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/79809/universal-spooky-meme-translator" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:200 }); posts_hot_network.click({ item_type:2, location:8 })"> Universal Spooky Meme Translator </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:69 }); posts_hot_network.click({ item_type:2, location:8 })"> How is the derivative truly, literally the "best linear approximation" near a point? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68605/how-to-read-papers-without-falling-into-a-rabbit-hole" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> How to read papers without falling into a rabbit hole? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:131 }); posts_hot_network.click({ item_type:2, location:8 })"> Why would the 'final' keyword ever be useful? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/122507/tracing-the-location-of-a-mobile-ip-from-an-email" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Tracing the location of a mobile IP from an email </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/309680/ifpackagelater-equivalent-for-babels-lan-guage-def-i-ni-tion-files" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:85 }); posts_hot_network.click({ item_type:2, location:8 })"> \@ifpackagelater equivalent for babel's lan­guage def­i­ni­tion files? </a> </li> 
+      </ul> 
+      <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:8 })"> more hot questions </a> 
      </div> 
     </div> 
-    <div id="mm2" style="width:200px;"> 
-     <div id="undo" data-options="iconCls:'icon-undo'">
-      Undo
-     </div> 
-     <div id="redo" data-options="iconCls:'icon-redo'">
-      Redo
-     </div> 
-     <div class="menu-sep"></div> 
-     <div id="cut" data-options="iconCls:'icon-cut'">
-      Cut
-     </div> 
-     <div id="copy" data-options="iconCls:'icon-copy'">
-      Copy
-     </div> 
-     <div id="paste" data-options="iconCls:'icon-paste'">
-      Paste
-     </div> 
-     <div id="delete" data-options="iconCls:'icon-delete'">
-      Delete
-     </div> 
-     <div id="select" data-options="iconCls:'icon-select'">
-      Select All
-     </div> 
-     <div class="menu-sep"></div> 
-     <div id="find" data-options="iconCls:'icon-find'">
-      Find
-     </div> 
-     <div id="findreplace" data-options="iconCls:'icon-replace'">
-      Find and Replace
+    <div id="feed-link"> 
+     <div id="feed-link-text"> 
+      <a href="/feeds" title="the 30 most recent questions"> <span class="feed-icon"></span>recent questions feed </a> 
      </div> 
     </div> 
-    <div id="mm3" style="width:200px;"> 
-     <div id="editor-theme" data-options="iconCls:'icon-editor-theme'">
-      <span>Editor Theme</span> 
-      <div> 
-       <div onclick="setEditorTheme('chrome');">
-        Chrome
-       </div> 
-       <div onclick="setEditorTheme('crimson_editor');">
-        Crimson Editor
-       </div> 
-       <div onclick="setEditorTheme('dreamweaver');">
-        Dreamweaver
-       </div> 
-       <div onclick="setEditorTheme('eclipse');">
-        Eclipse
-       </div> 
-       <div onclick="setEditorTheme('github');">
-        Github
-       </div> 
-       <div onclick="setEditorTheme('kuroir');">
-        Kuroir
-       </div> 
-       <div onclick="setEditorTheme('solarized_light');">
-        Solarized Light
-       </div> 
-       <div onclick="setEditorTheme('solarized_dark');">
-        Solarized Dark
-       </div> 
-       <div onclick="setEditorTheme('xcode');">
-        XCode
-       </div> 
-       <div onclick="setEditorTheme('ambiance');">
-        Ambiance
-       </div> 
-       <div onclick="setEditorTheme('cobalt');">
-        Cobalt
-       </div> 
-       <div onclick="setEditorTheme('idle_fingers');">
-        idle Fingers
-       </div> 
-       <div onclick="setEditorTheme('kr_theme');">
-        krTheme
-       </div> 
-       <div onclick="setEditorTheme('mono_industrial');">
-        Mono Industrial
-       </div> 
-       <div onclick="setEditorTheme('monokai');">
-        Monokai
-       </div> 
-       <div onclick="setEditorTheme('terminal');">
-        Terminal
-       </div> 
-       <div onclick="setEditorTheme('textmate');">
-        Textmate
-       </div> 
-       <div onclick="setEditorTheme('tomorrow');">
-        Tomorrow
-       </div> 
-       <div onclick="setEditorTheme('twilight');">
-        Twilight
-       </div> 
-       <div onclick="setEditorTheme('vibrant_ink');">
-        Vibrant Ink
-       </div> 
-      </div> 
-     </div> 
-     <div id="font-size" data-options="iconCls:'icon-font-size'">
-      <span>Font Size</span> 
-      <div> 
-       <div onclick="setEditorFontSize('8');">
-        8px
-       </div> 
-       <div onclick="setEditorFontSize('9');">
-        9px
-       </div> 
-       <div onclick="setEditorFontSize('10');">
-        10px
-       </div> 
-       <div onclick="setEditorFontSize('11');">
-        11px
-       </div> 
-       <div onclick="setEditorFontSize('12');">
-        12px
-       </div> 
-       <div onclick="setEditorFontSize('13');">
-        13px
-       </div> 
-       <div onclick="setEditorFontSize('14');">
-        14px
-       </div> 
-       <div onclick="setEditorFontSize('15');">
-        15px
-       </div> 
-       <div onclick="setEditorFontSize('16');">
-        16px
-       </div> 
-       <div onclick="setEditorFontSize('17');">
-        17px
-       </div> 
-       <div onclick="setEditorFontSize('18');">
-        18px
-       </div> 
-       <div onclick="setEditorFontSize('20');">
-        20px
-       </div> 
-       <div onclick="setEditorFontSize('22');">
-        22px
-       </div> 
-       <div onclick="setEditorFontSize('24');">
-        24px
-       </div> 
-      </div> 
-     </div> 
-     <div id="tab-size" data-options="iconCls:'icon-tab-size'">
-      <span>Tab Size</span> 
-      <div> 
-       <div onclick="setEditorTabSize('1');">
-        1
-       </div> 
-       <div onclick="setEditorTabSize('2');">
-        2
-       </div> 
-       <div onclick="setEditorTabSize('3');">
-        3
-       </div> 
-       <div onclick="setEditorTabSize('4');">
-        4
-       </div> 
-       <div onclick="setEditorTabSize('5');">
-        5
-       </div> 
-       <div onclick="setEditorTabSize('6');">
-        6
-       </div> 
-       <div onclick="setEditorTabSize('7');">
-        7
-       </div> 
-       <div onclick="setEditorTabSize('8');">
-        8
-       </div> 
-      </div> 
-     </div> 
-     <div id="soft-wrap" data-options="iconCls:'icon-soft-wrap'">
-      <span>Soft Wrap</span> 
-      <div> 
-       <div onclick="setEditorSoftWrap('true');">
-        On
-       </div> 
-       <div onclick="setEditorSoftWrap('false');">
-        Off
-       </div> 
-       <div onclick="setEditorSoftWrap('40');">
-        40 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('60');">
-        60 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('80');">
-        80 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('100');">
-        100 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('120');">
-        120 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('140');">
-        140 Chars
-       </div> 
-      </div> 
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="setEditorInvisible(true);" data-options="iconCls:'icon-show-invisible'">
-      Show Invisible
-     </div> 
-     <div onclick="setEditorInvisible(false);" data-options="iconCls:'icon-hide-invisible'">
-      Hide Invisible
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="setEditorGutter(true);" data-options="iconCls:'icon-show-gutter'">
-      Show Gutter
-     </div> 
-     <div onclick="setEditorGutter(false);" data-options="iconCls:'icon-hide-gutter'">
-      Hide Gutter
-     </div> 
-    </div> 
-    <div id="mm4" style="width:200px;"> 
-     <div onclick="createProject('http://www.tutorialspoint.com/codingground.htm')" data-options="iconCls:'icon-create-project'">
-      <span>New Project</span> 
-     </div> 
-     <!--
-     <div onclick="refreshProject();" data-options="iconCls:'icon-refresh-project'">Refresh Project</div>
---> 
-     <div onclick="renameProject();" data-options="iconCls:'icon-rename-file'">
-      Rename Project
-     </div> 
-     <div class="menu-sep"></div> 
-     <div data-options="iconCls:'icon-save-project'">
-      <span>Save Project</span> 
-      <div> 
-       <div onclick="saveAtDropbox()" data-options="iconCls:'icon-dropbox'">
-        Save at Dropbox
-       </div> 
-       <div onclick="saveAtGithub()" data-options="iconCls:'icon-github'">
-        Save at GitHub
-       </div> 
-       <div onclick="saveAtGoogleDrive()" data-options="iconCls:'icon-google-drive'">
-        Save at Google Drive
-       </div> 
-       <div onclick="saveAtOneDrive()" data-options="iconCls:'icon-one-drive'">
-        Save at OneDrive
-       </div> 
-      </div> 
-     </div> 
-     <div data-options="iconCls:'icon-export-project'">
-      <span>Import Project</span> 
-      <div> 
-       <div onclick="listDropboxProjects()" data-options="iconCls:'icon-dropbox'">
-        Import Project from Dropbox
-       </div> 
-       <div onclick="listGithubProjects()" data-options="iconCls:'icon-github'">
-        Import Project from GitHub
-       </div> 
-       <div onclick="listGoogleDriveProjects()" data-options="iconCls:'icon-google-drive'">
-        Import Project from Google Drive
-       </div> 
-       <div onclick="listOneDriveProjects()" data-options="iconCls:'icon-one-drive'">
-        Import Project from OneDrive
-       </div> 
-      </div> 
-     </div> 
-     <div data-options="iconCls:'icon-delete-file'">
-      <span>Delete Project</span> 
-      <div> 
-       <div onclick="listDropboxProjects()" data-options="iconCls:'icon-dropbox'">
-        Delete Project from Dropbox
-       </div> 
-       <div onclick="listGithubProjects()" data-options="iconCls:'icon-github'">
-        Delete Project from GitHub
-       </div> 
-       <div onclick="listGoogleDriveProjects()" data-options="iconCls:'icon-google-drive'">
-        Delete Project from Google Drive
-       </div> 
-       <div onclick="listOneDriveProjects()" data-options="iconCls:'icon-one-drive'">
-        Delete Project from OneDrive
-       </div> 
-      </div> 
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="downloadProject()" data-options="iconCls:'icon-download-file'">
-      Download Project
-     </div> 
-     <div onclick="openUploadProject()" data-options="iconCls:'icon-upload-file'">
-      Upload Project
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="openShareProject()" data-options="iconCls:'icon-share-project'">
-      Share Project
-     </div> 
-     <div class="menu-sep"></div> 
-     <div id="compileoptions" onclick="openCompileOptions()" data-options="iconCls:'icon-execute-project'">
-      Compile Options
-     </div> 
-    </div> 
-   </div>
-   <!--HEADER ENDS --> 
-   <div id="east" data-options="region:'east',iconCls:'icon-library', title:'Tutorials', split:true" style="width:105px; border-left:5px solid #eee; overflow:hidden; background:#285627;"> 
-    <a href="/cplusplus/index.htm" title="Learn C++" target="_blank"> <img style="width:100px; height:80px;" src="/images/cplusplus_icon.png" alt="Learn C++"> </a> 
-    <a href="/java/index.htm" title="Learn Java" target="_blank"> <img style="width:100px; height:80px;" src="/images/java_icon.png" alt="Learn Java"> </a> 
-    <a href="/python/index.htm" title="Learn Python" target="_blank"> <img style="width:100px; height:80px;" src="/images/python_icon.png" alt="Learn Python"> </a> 
-    <a href="/ruby/index.htm" title="Learn Ruby" target="_blank"> <img style="width:100px; height:80px;" src="/images/ruby_icon.png" alt="Learn Ruby"> </a> 
-    <a href="/swift/index.htm" title="Learn Swift Programming" target="_blank"> <img style="width:100px; height:80px;" src="/images/swift_icon.png" alt="Learn Swift Programming"> </a> 
-    <a href="/scala/index.htm" title="Learn Scala" target="_blank"> <img style="width:100px; height:80px;" src="/images/scala_icon.png" alt="Learn Scala"> </a> 
    </div> 
-   <div id="spectrum-tools" style="position:relative; display:none;"> 
-    <input type="text" id="spectrum"> 
-   </div> 
-   <div id="terminal-tools" style="position:relative;"> 
-    <a href="javascript:void(0);" onclick="setSpectrum()" class="icon-color"></a> 
-   </div> 
-   <div data-options="region:'west',onCollapse:doVertical, title:'Project',iconCls:'icon-project', split:true, tools: [{ iconCls:'icon-save-project', handler:function(){saveFiles( function( status ){ return true; } )} },{ iconCls:'icon-refresh-project', handler:function(){reloadTree()} },{ iconCls:'icon-add-file', handler:function(){newFile()} }]" style="width:250px;"> 
-    <ul id="home" class="easyui-tree" data-options="method:'GET', animate:true,lines:true"> 
-     <div id="treewait"> 
-      <img style="margin-left:4px;margin-top:3px;width:28px; height:28px;" src="/codingground/images/loading.gif"> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://blog.stackoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.meta.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.stackexchange.com">feedback</a></b> 
      </div> 
-    </ul> 
-   </div> 
-   <div id="south" data-options="region:'south', iconCls:'icon-terminal', split:true, tools:'#terminal-tools',title:'Terminal'" style="width:300px;">
-    <!--FOOTER STARTS --> 
-    <div id="terminal" style="padding:0px; margin:0px;overflow:hidden;"></div> 
-   </div>
-   <!--FOOTER ENDS --> 
-   <div data-options="region:'center'" style="padding:0px;background:#eee;">
-    <!--CODE AREA STARTS --> 
-    <div data-options="fit:true,border:false,tools:'#tab-tools',toolPosition:'left'" id="codebox" class="easyui-tabs" style="width:55%;"> 
-    </div> 
-    <div id="tab-tools" style="border-top:0px; border-right:0px;"> 
-     <div id="wait" style="display:none"> 
-      <img style="margin-left:4px;margin-top:3px;width:28px; height:28px;" src="/codingground/images/loading.gif"> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
      </div> 
-     <a href="javascript:void(0)" id="compile" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-execute-project'" style="white-space:nowrap;"><b>Compile</b></a> 
-     <a href="javascript:void(0)" id="preview" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-execute-project'" style="white-space:nowrap;"><b>Preview</b></a> 
-     <a href="javascript:void(0)" id="separator" class="easyui-linkbutton" data-options="plain:true" style="white-space:nowrap;"><b>|</b></a> 
-     <a href="javascript:void(0)" id="execute" class="easyui-linkbutton" data-options="plain:true" style="white-space:nowrap;"><b>Execute</b></a> 
-     <a href="javascript:void(0)" id="separator" class="easyui-linkbutton" data-options="plain:true" style="white-space:nowrap;"><b>|</b></a> 
-     <a href="javascript:void(0)" id="share" onclick="openShareProject()" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-share-project'" style="white-space:nowrap;"><b>Share Project</b></a> 
     </div> 
-   </div>
-   <!--CODE AREA STARTS -->   
-  </form>
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.4511 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Meta Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-45', {'cookieDomain': 'stackexchange.com'});
+                        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
  </body>
 </html>

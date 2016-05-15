@@ -1,16 +1,17 @@
-http://tutorialspoint.com/apache_spark/index.htm
+http://tutorialspoint.com/data_structures_algorithms/index.htm
 <!doctype html>
-<!--[if IE 8]><html class="ie ie8"> <![endif]-->
-<!--[if IE 9]><html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
  <!--<![endif]-->
  <head> 
-  <!-- Basic --> 
   <meta charset="utf-8"> 
-  <title>Apache Spark Tutorial</title> 
-  <meta name="description" content="Apache Spark Tutorial - Learn Apache Spark in simple and easy steps starting from Introduction, RDD, Installation, Core Programming, Deployment, Advanced Spark Programming."> 
-  <meta name="keywords" content="Apache Spark, Tutorial, Learning, Beginners, Introduction, RDD, Installation, Core Programming, Deployment, Advanced Spark Programming."> 
+  <title>Data Structure and Algorithms (DSA) Tutorial</title> 
+  <meta name="Description" content="Data Structures and Algorithms (DSA) Tutorial - Learn Data Structures &amp; Algorithm using c, C++ and Java in simple and easy steps using this beginner's tutorial containing basic to advanced knowledge starting from Algorithm, Data Structures, Array, Linked List, Doubly Linked List, Circular List, Stack, Parsing Expression, Queue, Priority queue, Tree, Binary Search Tree, B+, AVL, Spanning, Tower of Hanoi, Hash Table, Heap, Graph, Search techniques, Sorting techniques, Recursion."> 
+  <meta name="Keywords" content="Algorithm, Data Structures, Array, Linked List, Doubly Linked List, Circular List, Stack, Parsing Expression, Queue, Priority queue, Tree, Binary Search Tree, B+, AVL, Spanning, Tower of Hanoi, Hash Table, Heap, Graph, Search techniques, Sorting techniques, Recursion."> 
   <base href="http://www.tutorialspoint.com/"> 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
@@ -30,9 +31,9 @@ http://tutorialspoint.com/apache_spark/index.htm
 <![endif]--> 
   <style>
 .fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
-div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #e77215 url(/images/pattern.png) repeat center center !important;}
-.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #e77215 !important;}
-.submenu-item{ border-bottom: 2px solid #e77215 !important; border-top: 2px solid #e77215 !important }
+pre.prettyprint.tryit {min-height:37px; background: #eee url(data_structures_algorithms/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #cd3300 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #cd3300 !important;}
+.submenu-item{ border-bottom: 2px solid #cd3300 !important; border-top: 2px solid #cd3300 !important }
 </style> 
   <script>
 $(document).ready(function() {
@@ -54,7 +55,7 @@ $(document).ready(function() {
   <header> 
    <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
    <div class="container"> 
-    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/apache_spark/images/logo.png"> </a> </h1> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/data_structures_algorithms/images/logo.png"> </a> </h1> 
     <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
     <div class="navbar nav-main"> 
      <div class="container"> 
@@ -84,23 +85,84 @@ $(document).ready(function() {
      <div class="col-md-2"> 
       <aside class="sidebar"> 
        <div class="mini-logo"> 
-        <img src="/apache_spark/images/apache-spark-mini-logo.jpg" alt="Apache Spark Tutorial"> 
+        <img src="/data_structures_algorithms/images/data-structure-mini-logo.jpg" alt="Data Structures &amp; Algorithms Tutorial"> 
        </div> 
        <ul class="nav nav-list primary left-menu"> 
-        <li class="heading">Apache Spark Tutorial</li> 
-        <li><a href="/apache_spark/index.htm">Apache Spark - Home</a></li> 
-        <li><a href="/apache_spark/apache_spark_introduction.htm">Apache Spark - Introduction</a></li> 
-        <li><a href="/apache_spark/apache_spark_rdd.htm">Apache Spark - RDD</a></li> 
-        <li><a href="/apache_spark/apache_spark_installation.htm">Apache Spark - Installation</a></li> 
-        <li><a href="/apache_spark/apache_spark_core_programming.htm">Apache Spark - Core Programming</a></li> 
-        <li><a href="/apache_spark/apache_spark_deployment.htm">Apache Spark - Deployment</a></li> 
-        <li><a href="/apache_spark/advanced_spark_programming.htm">Advanced Spark Programming</a></li> 
+        <li class="heading">Data Structures &amp; Algorithms</li> 
+        <li><a href="/data_structures_algorithms/index.htm">DSA - Home</a></li> 
+        <li><a href="/data_structures_algorithms/data_structure_overview.htm">DSA - Overview</a></li> 
+        <li><a href="/data_structures_algorithms/data_structure_environment.htm">DSA - Environment Setup</a></li> 
        </ul> 
        <ul class="nav nav-list primary left-menu"> 
-        <li class="heading">Apache Spark Useful Resources</li> 
-        <li><a href="/apache_spark/apache_spark_quick_guide.htm">Apache Spark - Quick Guide</a></li> 
-        <li><a href="/apache_spark/apache_spark_useful_resources.htm">Apache Spark - Useful Resources</a></li> 
-        <li><a href="/apache_spark/apache_spark_discussion.htm">Apache Spark - Discussion</a></li> 
+        <li class="heading">Algorithm</li> 
+        <li><a href="/data_structures_algorithms/algorithms_basics.htm">DSA - Algorithms Basics</a></li> 
+        <li><a href="/data_structures_algorithms/asymptotic_analysis.htm">DSA - Asymptotic Analysis</a></li> 
+        <li><a href="/data_structures_algorithms/greedy_algorithms.htm">DSA - Greedy Algorithms</a></li> 
+        <li><a href="/data_structures_algorithms/divide_and_conquer.htm">DSA - Divide and Conquer</a></li> 
+        <li><a href="/data_structures_algorithms/dynamic_programming.htm">DSA - Dynamic Programming</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Data Structures</li> 
+        <li><a href="/data_structures_algorithms/data_structures_basics.htm">DSA - Data Structure Basics</a></li> 
+        <li><a href="/data_structures_algorithms/array_data_structure.htm">DSA - Array Data Structure</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Linked Lists</li> 
+        <li><a href="/data_structures_algorithms/linked_list_algorithms.htm">DSA - Linked List Basics</a></li> 
+        <li><a href="/data_structures_algorithms/doubly_linked_list_algorithm.htm">DSA - Doubly Linked List</a></li> 
+        <li><a href="/data_structures_algorithms/circular_linked_list_algorithm.htm">DSA - Circular Linked List</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Stack &amp; Queue</li> 
+        <li><a href="/data_structures_algorithms/stack_algorithm.htm">DSA - Stack</a></li> 
+        <li><a href="/data_structures_algorithms/expression_parsing.htm">DSA - Expression Parsing</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_queue.htm">DSA - Queue</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Searching Techniques</li> 
+        <!--<li style="background:yellow;"><a href="/data_structures_algorithms/searching_algorithms.htm">DSA - Searching Algorithms</a></li>--> 
+        <li><a href="/data_structures_algorithms/linear_search_algorithm.htm">DSA - Linear Search</a></li> 
+        <li><a href="/data_structures_algorithms/binary_search_algorithm.htm">DSA - Binary Search</a></li> 
+        <li><a href="/data_structures_algorithms/interpolation_search_algorithm.htm">DSA - Interpolation Search</a></li> 
+        <li><a href="/data_structures_algorithms/hash_data_structure.htm">DSA - Hash Table</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Sorting Techniques</li> 
+        <li><a href="/data_structures_algorithms/sorting_algorithms.htm">DSA - Sorting Algorithms</a></li> 
+        <li><a href="/data_structures_algorithms/bubble_sort_algorithm.htm">DSA - Bubble Sort</a></li> 
+        <li><a href="/data_structures_algorithms/insertion_sort_algorithm.htm">DSA - Insertion Sort</a></li> 
+        <li><a href="/data_structures_algorithms/selection_sort_algorithm.htm">DSA - Selection Sort</a></li> 
+        <li><a href="/data_structures_algorithms/merge_sort_algorithm.htm">DSA - Merge Sort</a></li> 
+        <li><a href="/data_structures_algorithms/shell_sort_algorithm.htm">DSA - Shell Sort</a></li> 
+        <li><a href="/data_structures_algorithms/quick_sort_algorithm.htm">DSA - Quick Sort</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Graph Data Structure</li> 
+        <li><a href="/data_structures_algorithms/graph_data_structure.htm">DSA - Graph Data Structure</a></li> 
+        <li><a href="/data_structures_algorithms/depth_first_traversal.htm">DSA - Depth First Traversal</a></li> 
+        <li><a href="/data_structures_algorithms/breadth_first_traversal.htm">DSA - Breadth First Traversal</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Tree Data Structure</li> 
+        <li><a href="/data_structures_algorithms/tree_data_structure.htm">DSA - Tree Data Structure</a></li> 
+        <li><a href="/data_structures_algorithms/tree_traversal.htm">DSA - Tree Traversal</a></li> 
+        <li><a href="/data_structures_algorithms/binary_search_tree.htm">DSA - Binary Search Tree</a></li> 
+        <li><a href="/data_structures_algorithms/avl_tree_algorithm.htm">DSA - AVL Tree</a></li> 
+        <li><a href="/data_structures_algorithms/spanning_tree.htm">DSA - Spanning Tree</a></li> 
+        <li><a href="/data_structures_algorithms/heap_data_structure.htm">DSA - Heap</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Recursion</li> 
+        <li><a href="/data_structures_algorithms/recursion_basics.htm">DSA - Recursion Basics</a></li> 
+        <li><a href="/data_structures_algorithms/tower_of_hanoi.htm">DSA - Tower of Hanoi</a></li> 
+        <li><a href="/data_structures_algorithms/fibonacci_series.htm">DSA - Fibonacci Series</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">DSA Useful Resources</li> 
+        <!--<li><a href="/data_structures_algorithms/dsa_quick_guide.htm">DSA - Quick Guide</a></li>--> 
+        <li><a href="/data_structures_algorithms/data_structures_algorithms_questions_answers.htm">DSA - Questions and Answers</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_useful_resources.htm">DSA - Useful Resources</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_discussion.htm">DSA - Discussion</a></li> 
        </ul> 
        <ul class="nav nav-list primary push-bottom left-menu special"> 
         <li class="sreading">Selected Reading</li> 
@@ -118,33 +180,46 @@ $(document).ready(function() {
       <div class="content"> 
        <div class="col-md-7 middle-col"> 
         <div class="cover"> 
-         <img class="img-responsive" src="/apache_spark/images/apache-spark.jpg" alt="Apache Spark Tutorial"> 
+         <img class="img-responsive" src="/data_structures_algorithms/images/data-structure-algorithm.jpg" alt="Data Structures &amp; Algorithms (DSA) Tutorial"> 
         </div> 
         <hr> 
         <div class="pre-btn"> 
          <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
         </div> 
         <div class="nxt-btn"> 
-         <a href="/apache_spark/apache_spark_introduction.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+         <a href="/data_structures_algorithms/data_structure_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
         </div> 
         <div class="clearer"></div> 
         <hr> 
-        <h1>Apache Spark Tutorial</h1> 
+        <h1>Data Structure &amp; Algorithms Tutorial</h1> 
         <div class="center-aligned tutorial-menu"> 
          <form action="/job_search.php" method="POST"> 
-          <input type="hidden" name="search_string" value="Apache Spark"> 
-          <button type="button" class="btn btn-default btn-sm btn-buy-tutorial"><i class="icon  icon-file-pdf-o"></i><a href="/apache_spark/apache_spark_pdf_version.htm"> PDF Version</a></button> 
-          <button type="button" class="btn btn-default btn-sm btn-quick-guide"><i class="icon  icon-book"></i><a href="/apache_spark/apache_spark_quick_guide.htm"> Quick Guide</a></button> 
-          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon  icon-external-link"></i><a href="/apache_spark/apache_spark_useful_resources.htm"> Resources</a></button> 
+          <input type="hidden" name="search_string" value="Data Structures"> 
+          <button type="button" class="btn btn-disabled btn-sm btn-buy-tutorial"><i class="icon  icon-file-pdf-o"></i> PDF Version</button> 
+          <button type="button" class="btn btn-disabled btn-sm btn-quick-guide"><i class="icon  icon-book"></i> Quick Guide</button> 
+          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon  icon-external-link"></i><a href="/data_structures_algorithms/dsa_useful_resources.htm"> Resources</a></button> 
           <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="icon  icon-suitcase"></i> Job Search</button> 
-          <button type="button" class="btn btn-default btn-sm btn-job-search"><i class="fa fa-wechat"></i><a href="/apache_spark/apache_spark_discussion.htm"> Discussion</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-job-search"><i class="fa fa-wechat"></i><a href="/data_structures_algorithms/dsa_discussion.htm"> Discussion</a></button> 
          </form> 
         </div> 
-        <p>Apache Spark is a lightning-fast cluster computing designed for fast computation. It was built on top of Hadoop MapReduce and it extends the MapReduce model to efficiently use more types of computations which includes Interactive Queries and Stream Processing. This is a brief tutorial that explains the basics of Spark Core programming.</p> 
+        <p>Data Structures are the programmatic way of storing data so that data can be used efficiently. Almost every enterprise application uses various types of data structures in one or other way. This tutorial will give you great understanding on Data Structures concepts needed to understand the complexity of enterprise level applications and need of algorithms, data structures.</p> 
         <h1>Audience</h1> 
-        <p>This tutorial has been prepared for professionals aspiring to learn the basics of Big Data Analytics using Spark Framework and become a Spark Developer. In addition, it would be useful for Analytics Professionals and ETL developers as well.</p> 
+        <p>This tutorial is designed for Computer Science graduates as well as Software Professionals who are willing to learn Data Structures and algorithm Programming in simple and easy steps. This tutorial will give you great understanding on Data Structures concepts and after completing this tutorial you will be at intermediate level of expertise from where you can take yourself at higher level of expertise.</p> 
         <h1>Prerequisites</h1> 
-        <p>Before you start proceeding with this tutorial, we assume that you have prior exposure to Scala programming, database concepts, and any of the Linux operating system flavors.</p> 
+        <p>Before proceeding with this tutorial you should have a basic understanding of C programming language, text editor and execution of programs etc.</p> 
+        <h1>Compile &amp; Execute C Online</h1> 
+        <p>For most of the examples given in this tutorial you will find Try it option, so just make use of this option to execute your C programs at the spot and enjoy your learning.</p> 
+        <p>Try following example using Try it option available at the top right corner of the below sample code box −</p> 
+        <pre class="prettyprint notranslate tryit">
+#include &lt;stdio.h&gt;
+
+int main(){
+   /* My first program in C */
+   printf("Hello, World! \n");
+   
+   return 0;
+}
+</pre> 
         <hr> 
         <div class="pre-btn"> 
          <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
@@ -152,8 +227,11 @@ $(document).ready(function() {
         <div class="print-btn center"> 
          <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
         </div> 
+        <div class="pdf-btn"> 
+         <a href="/data_structures_algorithms/pdf/index.pdf" title="Data Structure and Algorithms (DSA) Tutorial" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a> 
+        </div> 
         <div class="nxt-btn"> 
-         <a href="/apache_spark/apache_spark_introduction.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+         <a href="/data_structures_algorithms/data_structure_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
         </div> 
         <hr> 
         <!-- PRINTING ENDS HERE --> 
@@ -185,12 +263,12 @@ google_ad_channel ="";
       <div class="row"> 
        <div class="col-md-3" id="rightbar"> 
         <div class="simple-ad"> 
-         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/apache_spark/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
-         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/apache_spark/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
-         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/apache_spark/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
-         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/apache_spark/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
-         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/apache_spark/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
-         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/apache_spark/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/data_structures_algorithms/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/data_structures_algorithms/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/data_structures_algorithms/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/data_structures_algorithms/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/data_structures_algorithms/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/data_structures_algorithms/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
         </div> 
         <div class="rightgooglead"> 
          <script type="text/javascript"><!--
@@ -273,6 +351,11 @@ urchinTracker();
 $('.pg-icon').click(function(){
    $('.wrapLoader').show();
 });
-</script>    
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('data_structures_algorithms/try_dsa.php');
+   tryit.compile();
+</script>   
  </body>
 </html>

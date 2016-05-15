@@ -192,11 +192,11 @@ public class Indexer implements Runnable{
 
         try{
 
-        Class stemClass=Class.forName("org.tartarus.snowball.ext.englishStemmer");
-        SnowballStemmer stemmer=(SnowballStemmer)stemClass.newInstance();
-        stemmer.setCurrent(keyword);
-        stemmer.stem();
-        keyword=stemmer.getCurrent();
+            Class stemClass=Class.forName("org.tartarus.snowball.ext.englishStemmer");
+            SnowballStemmer stemmer=(SnowballStemmer)stemClass.newInstance();
+            stemmer.setCurrent(keyword);
+            stemmer.stem();
+            keyword=stemmer.getCurrent();
 
         }
         catch(Exception exc){

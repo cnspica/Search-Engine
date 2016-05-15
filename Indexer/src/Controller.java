@@ -15,7 +15,7 @@ public class Controller {
       *
       * */
     private DBManager db;
-    private static final String DBURL="JDBC:mysql://localhost/search_engine";
+    private static final String DBURL="JDBC:mysql://localhost:3306/search_engine";
     private static final String UserName="root";
     private static final String Pass=null;
 
@@ -110,6 +110,12 @@ public class Controller {
             e.printStackTrace();
         }
 
+    }
+
+    public ResultSet queryProcessor(String queryWords){
+        String Query="call QueryProcessor('"+ queryWords +"')";
+
+        return this.db.ExecuteQuery(Query);
     }
 
     public float getIDF(String Keyword){
