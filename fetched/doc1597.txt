@@ -1,0 +1,655 @@
+https://stackexchange.com/newsletters/newsletter?site=security.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Information Security Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dsecurity.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dsecurity.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 66, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 66, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Information Security Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://security.stackexchange.com">Information Security</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #E0E9EC; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/security-header.png" alt="Information Security Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff; border: 5px solid #E8EFF1;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #1A364C!important; font-size: 16px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/122848/does-correcting-misspelled-usernames-create-a-security-risk" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">Does correcting misspelled usernames create a security risk?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Does correcting a misspelled username and prompting the user with a valid username introduce a security risk? I recently tried logging into facebook and misspelled my email. They prompted me with ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/authentication" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">authentication</a> <a href="http://security.stackexchange.com/questions/tagged/facebook" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">facebook</a> <a href="http://security.stackexchange.com/questions/tagged/user-names" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">user-names</a> <a href="http://security.stackexchange.com/questions/tagged/user-enumeration" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">user-enumeration</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/ZkEQw.gif?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/110194/ger" target="_blank" style="color: #3984b2; text-decoration: none!important;">GER</a> 62 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/6c968b17663538f7c6cc1d0c1050b9f5?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/76715/lukas" target="_blank" style="color: #3984b2; text-decoration: none!important;">Lukas</a> 157 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">How to explain that "Cryptography is good" to non-techie friends</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">After that case in which Brazilian government arrested a Facebook VP due to end-to-end encryption and no server storage of messages on WhatsApp to prove connection with a drug case, it's become pretty ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/cryptography" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">cryptography</a> <a href="http://security.stackexchange.com/questions/tagged/data-leakage" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">data-leakage</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/68eba48d445ccd273d0100b95c91b3de?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/28177/nwildner" target="_blank" style="color: #3984b2; text-decoration: none!important;">nwildner</a> 40 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e2e94675a01dd4477eef7750db006817?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/5411/tom-leek" target="_blank" style="color: #3984b2; text-decoration: none!important;">Tom Leek</a> 78 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/123028/is-ignoring-a-threat-you-cannot-defend-from-a-valid-strategy" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">Is ignoring a threat you cannot defend from a valid strategy?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Given that you sometimes can not defend from a form of threat, is it then valid to ignore said threat? Instead of defending from the threat, just mitigate the symptom. An example of this comes from ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/risk-analysis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">risk-analysis</a> <a href="http://security.stackexchange.com/questions/tagged/business-risk" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">business-risk</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/3ab18a1d5cae5b41b020948885e254ce?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/101567/joojaa" target="_blank" style="color: #3984b2; text-decoration: none!important;">joojaa</a> 25 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/fab4fa64cef40cd20245e07e068b90ef?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/110384/turagittech" target="_blank" style="color: #3984b2; text-decoration: none!important;">turagittech</a> 41 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/122692/should-i-block-the-yandex-bot" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">Should I block the Yandex Bot?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a web application that the Yandex spider is trying access into back-end a few times. After these spider searching, there are few Russian IP addresses that try to access back-end too and they ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/web-application" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">web-application</a> <a href="http://security.stackexchange.com/questions/tagged/bot" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">bot</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c0cbb2aba28e50f3033a2dee8b043304?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/93224/user2352577l" target="_blank" style="color: #3984b2; text-decoration: none!important;">user2352577L</a> 25 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c46cfe9f917da02becc991d76352d77c?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/77501/deviantfan" target="_blank" style="color: #3984b2; text-decoration: none!important;">deviantfan</a> 70 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/123170/is-it-possible-to-improve-brute-force-guessing-of-a-password-with-a-picture-of-t" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">Is it possible to improve brute-force guessing of a password with a picture of the keyboard used to enter it?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Is it a bad idea to post a photo of your keyboard to social media? Can I look at a photo of a keyboard and determine the password of an account? Assuming a certain (set of) password(s) is the most ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/passwords" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">passwords</a> <a href="http://security.stackexchange.com/questions/tagged/brute-force" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">brute-force</a> <a href="http://security.stackexchange.com/questions/tagged/physical" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">physical</a> <a href="http://security.stackexchange.com/questions/tagged/social-engineering" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">social-engineering</a> <a href="http://security.stackexchange.com/questions/tagged/dictionary" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">dictionary</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/25181b8fe3ba015bd73dd296c0f64569?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/109774/formicophobia" target="_blank" style="color: #3984b2; text-decoration: none!important;">formicophobia</a> 24 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/d3eba7f8f9195a30d49bdbbdd594b1e4?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/11144/lserni" target="_blank" style="color: #3984b2; text-decoration: none!important;">lserni</a> 36 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/122760/is-it-okay-for-our-it-support-contractor-to-remote-in-without-authorization" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">Is it okay for our IT support contractor to remote in without authorization?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">We are a healthcare IT company. My machine has PHI on it. Our IT contractor verbally asked if he could remote in to fix my printer so I said sure. I expected some sort of prompt to allow it but he ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/remote-desktop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">remote-desktop</a> <a href="http://security.stackexchange.com/questions/tagged/hipaa" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">hipaa</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Omzsw.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/76064/devils-advocate" target="_blank" style="color: #3984b2; text-decoration: none!important;">Devil's Advocate</a> 24 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/eFb7F.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/26299/munkeyoto" target="_blank" style="color: #3984b2; text-decoration: none!important;">munkeyoto</a> -4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/122922/discouraging-users-from-copying-images-off-a-website" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">Discouraging users from copying images off a website?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Let me begin by stating that I'm aware it's extremely tedious or virtually impossible to prevent individuals from pirating content. I'm working on a website for a client who is a relatively well ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/javascript" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">javascript</a> <a href="http://security.stackexchange.com/questions/tagged/wordpress" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">wordpress</a> <a href="http://security.stackexchange.com/questions/tagged/drm" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">drm</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/59b365fd10987a0020ec0aa773a30c0a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/105894/satej-s" target="_blank" style="color: #3984b2; text-decoration: none!important;">Satej S</a> 23 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/bd5fd2236e22eac8e2cbc8eb2c81ea52?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/102236/sjoerd" target="_blank" style="color: #3984b2; text-decoration: none!important;">Sjoerd</a> 69 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #1A364C!important; font-size: 16px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/51959/why-are-salted-hashes-more-secure-for-password-storage" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">Why are salted hashes more secure for password storage?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I know there are many discussions on salted hashes, and I understand that the purpose is to make it impossible to build a rainbow table of all possible hashes (generally up to 7 characters). My ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/passwords" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">passwords</a> <a href="http://security.stackexchange.com/questions/tagged/cryptography" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">cryptography</a> <a href="http://security.stackexchange.com/questions/tagged/hash" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">hash</a> <a href="http://security.stackexchange.com/questions/tagged/salt" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">salt</a> <a href="http://security.stackexchange.com/questions/tagged/rainbow-table" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">rainbow-table</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/bbdf49d116df521165a6260af9e48694?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/40448/tsyras" target="_blank" style="color: #3984b2; text-decoration: none!important;">Tsyras</a> 167 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/d767f66c88601286938590f8ab51bf35?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/2264/tylerl" target="_blank" style="color: #3984b2; text-decoration: none!important;">tylerl</a> 290 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/112696/while-working-from-home-is-it-a-bad-idea-to-give-the-company-you-work-for-your" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">While working from home, is it a bad idea to give the company you work for your IP address?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I work from home. Why would a company I am about to do some work for ask for my IP address? What would they need it for? Should I be worried? Thanks </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/ip" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">ip</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/4037abb2efa8924f970a76937a1996f8?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/99207/niall" target="_blank" style="color: #3984b2; text-decoration: none!important;">Niall</a> 37 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/ARM8t.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://security.stackexchange.com/users/56022/steve-sether" target="_blank" style="color: #3984b2; text-decoration: none!important;">Steve Sether</a> 216 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #1A364C!important; font-size: 16px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/123100/what-is-the-ios-securecoding-feature-and-what-risks-does-it-mitigate" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">What is the iOS securecoding feature, and what risks does it mitigate?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">iOS 6 and newer allows for developers to implement a secure coding method that seems to prevent impostor objects from being de-serialized Can anyone explain what this would actually protect to the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/appsec" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">appsec</a> <a href="http://security.stackexchange.com/questions/tagged/mobile" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">mobile</a> <a href="http://security.stackexchange.com/questions/tagged/source-code" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">source-code</a> <a href="http://security.stackexchange.com/questions/tagged/code-review" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">code-review</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/1xXXw.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/396/lamontecristo" target="_blank" style="color: #3984b2; text-decoration: none!important;">LamonteCristo</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/122884/how-to-share-an-encryption-key-between-different-php-applications" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">How to share an encryption key between different PHP applications?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm working with the php-encryption library to provide integration between two different applications. On one side, I have a corporative application that holds all data from users. This application ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/encryption" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">encryption</a> <a href="http://security.stackexchange.com/questions/tagged/php" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">php</a> <a href="http://security.stackexchange.com/questions/tagged/key-management" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">key-management</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1ff702a8e9b4a001c807f80f46d1b3d1?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/89407/hugo-dias" target="_blank" style="color: #3984b2; text-decoration: none!important;">Hugo Dias</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://security.stackexchange.com/questions/122726/compilations-of-poc-of-javascript-vulnerabilities" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: Georgia, 'Times New Roman', Times, serif;">Compilations of PoC of JavaScript vulnerabilities?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am a researcher looking for some proof-of-concept JavaScript vulnerabilities like XSS that exists in some website or JavaScript libraries in the past. Are there any compilations of them? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://security.stackexchange.com/questions/tagged/javascript" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">javascript</a> <a href="http://security.stackexchange.com/questions/tagged/cve" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #888!important; font-size: 11px; background-color: #F2F2F2; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">cve</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e7fb41c0ef8fc026892a668008b05098?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://security.stackexchange.com/users/21837/william007" target="_blank" style="color: #3984b2; text-decoration: none!important;">william007</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #3984b2; text-decoration: none!important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #3984b2; text-decoration: none!important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #3984b2; text-decoration: none!important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #3984b2; text-decoration: none!important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #3984b2; text-decoration: none!important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

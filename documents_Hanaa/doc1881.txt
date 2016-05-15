@@ -1,0 +1,1778 @@
+http://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends
+<!doctype html>
+<html itemscope itemtype="http://schema.org/QAPage">
+ <head> 
+  <title>data leakage - How to explain that "Cryptography is good" to non-techie friends - Information Security Stack Exchange</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/security/img/favicon.ico?v=7585a77d4575"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/security/img/apple-touch-icon.png?v=14deb51d6304"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Information Security Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@StackSecurity"> 
+  <meta name="twitter:domain" content="security.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/security/img/apple-touch-icon@2.png?v=497726d850f9&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="How to explain that &quot;Cryptography is good&quot; to non-techie friends"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="After that case in which Brazilian government arrested a Facebook VP due to end-to-end encryption and no server storage of messages on WhatsApp to prove connection with a drug case, it's become pre..."> 
+  <meta property="og:url" content="http://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends"> 
+  <link rel="canonical" href="http://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=36086b43db82"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/security/all.css?v=0015464ce4fe"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed for question 'How to explain that &quot;Cryptography is good&quot; to non-techie friends'" href="/feeds/question/123234"> 
+  <meta name="twitter:app:country" content="US"> 
+  <meta name="twitter:app:name:iphone" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:iphone" content="871299723"> 
+  <meta name="twitter:app:url:iphone" content="se-zaphod://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends"> 
+  <meta name="twitter:app:name:ipad" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:ipad" content="871299723"> 
+  <meta name="twitter:app:url:ipad" content="se-zaphod://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends"> 
+  <meta name="twitter:app:name:googleplay" content="Stack Exchange Android"> 
+  <meta name="twitter:app:url:googleplay" content="http://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends"> 
+  <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin"> 
+  <script>
+        
+            StackExchange.ready(function () {
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:12,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:123234});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('162', '123234');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('162');
+                StackExchange.realtime.subscribeToTopBarNotifications('162');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463245874,"routeName":"Questions/Show","enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"Information Security Stack Exchange","description":"Q&A for information security professionals","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":162,"enableSocialMediaInSharePopup":true},"user":{"fkey":"71fb98341fa62b820a5808f83f182453","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"d911fb28bd9f","js/moderator.en.js":"50831ba8e994","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"97cc5d07283a","js/wmd.en.js":"b2e347d78fbd","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"8c8f022d2f71","js/inline-tag-editing.en.js":"a815357d00cd","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"a78702da7b99","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"79fde18773e4","js/explore-qlist.en.js":"2a9a628fca7f","js/events.en.js":"122722c4c15a","js/keyboard-shortcuts.en.js":"e92b66602411","js/external-editor.en.js":"683ce04845f3"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="question-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//security.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://security.blogoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//security.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="162" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-security" title="Information Security"></div> Information Security </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.security.stackexchange.com" class="site-link js-gps-track" data-id="164" data-gps-track="
+            site.switch({ target_site:164, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-securitymeta" title="Information Security Meta"></div> Information Security Meta </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://security.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fsecurity.stackexchange.com%2fquestions%2f123234%2fhow-to-explain-that-cryptography-is-good-to-non-techie-friends" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://security.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fsecurity.stackexchange.com%2fquestions%2f123234%2fhow-to-explain-that-cryptography-is-good-to-non-techie-friends" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://security.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fsecurity.stackexchange.com%2fquestions%2f123234%2fhow-to-explain-that-cryptography-is-good-to-non-techie-friends" class="login-link">sign up</a> <a href="https://security.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fsecurity.stackexchange.com%2fquestions%2f123234%2fhow-to-explain-that-cryptography-is-good-to-non-techie-friends" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.security.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Information Security </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li class="youarehere"><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content"> 
+    <div itemscope itemtype="http://schema.org/Question"> 
+     <link itemprop="image" href="//cdn.sstatic.net/Sites/security/img/apple-touch-icon.png?v=14deb51d6304"> 
+     <div id="herobox"> 
+      <div id="hero-content"> 
+       <div id="close">
+        <a title="click to minimize">_</a>
+       </div> 
+       <div id="blurb">
+         Information Security Stack Exchange is a question and answer site for information security professionals. It's 100% free, no registration required. 
+        <br> 
+        <br> 
+        <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fsecurity.stackexchange.com%2fquestions%2f123234%2fhow-to-explain-that-cryptography-is-good-to-non-techie-friends" id="tell-me-more" class="button">Sign up</a> 
+       </div> 
+       <div id="desc"> 
+        <b>Here's how it works:</b> 
+        <ol id="hiw"> 
+         <li id="q">Anybody can ask a question </li> 
+         <li id="an">Anybody can answer </li> 
+         <li id="b">The best answers are voted up and rise to the top </li> 
+        </ol> 
+       </div> 
+       <div style="clear: both"></div> 
+      </div> 
+      <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+     </div> 
+     <div id="question-header"> 
+      <h1 itemprop="name"><a href="/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends" class="question-hyperlink">How to explain that “Cryptography is good” to non-techie friends</a></h1> 
+     </div> 
+     <div id="mainbar"> 
+      <div class="question" data-questionid="123234" id="question"> 
+       <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk651425346",4).enableDynamicSiteSelection().setZone(29); });
+            </script> 
+       <div class="everyonelovesstackoverflow" id="adzerk651425346"> 
+       </div> 
+       <table> 
+        <tbody>
+         <tr> 
+          <td class="votecell"> 
+           <div class="vote"> 
+            <input type="hidden" name="_id_" value="123234"> 
+            <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a> 
+            <span itemprop="upvoteCount" class="vote-count-post ">40</span> 
+            <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a> 
+            <a class="star-off" href="#">favorite</a> 
+            <div class="favoritecount">
+             <b>6</b>
+            </div> 
+           </div> </td> 
+          <td class="postcell"> 
+           <div> 
+            <div class="post-text" itemprop="text"> 
+             <p>After <a href="http://arstechnica.com/tech-policy/2016/03/brazil-frees-facebook-exec-arrested-over-whatsapp-data-linked-to-drug-case/">that case</a> in which Brazilian government arrested a Facebook VP due to end-to-end encryption and no server storage of messages on WhatsApp to prove connection with a drug case, it's become pretty common for friends of mine to start conversations about what cryptography is and why we should use it on a daily basis. The same applies with the iPhone terrorist encryption case <a href="http://www.cnet.com/news/feds-unlock-iphone-5c-used-by-san-bernardino-terrorist-dont-need-apple/">in which the FBI broke in</a>.</p> 
+             <p>For non-techie friends, it's easy to understand the basics of cryptography. However, they always come up with <em>"If terrorists/criminals could be caught by not having cryptography in our world, I would not blame data surveillance by governments and companies, nor the lack of cryptography in our communications/data storage."</em> I explained that this point of view is somehow twisted (as a knife can be used to do crimes, but its primary use is as a tool), but I didn't keep their attention. </p> 
+             <p>Is there a best way to explain the value of cryptography for end-users in our modern world? (Snowden and Assange stories seems like fairy tales to them too).</p> 
+            </div> 
+            <div class="post-taglist"> 
+             <a href="/questions/tagged/cryptography" class="post-tag" title="show questions tagged 'cryptography'" rel="tag">cryptography</a> 
+             <a href="/questions/tagged/data-leakage" class="post-tag" title="show questions tagged 'data-leakage'" rel="tag">data-leakage</a> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/q/123234" title="short permalink to this question" class="short-link" id="link-post-123234">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123234/edit" class="suggest-edit-post" title="">improve this question</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/123234/revisions" title="show all edits to this post">edited <span title="2016-05-14 15:26:51Z" class="relativetime">1 hour ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td class="post-signature owner"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   asked 
+                  <span title="2016-05-13 18:54:03Z" class="relativetime">22 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/28177/nwildner">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/68eba48d445ccd273d0100b95c91b3de?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/28177/nwildner">nwildner</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">381</span>
+                   <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span>
+                   <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> 
+           </div> </td> 
+         </tr> 
+         <tr> 
+          <td class="votecell"></td> 
+          <td> 
+           <div id="comments-123234" class="comments "> 
+            <table> 
+             <tbody data-remaining-comments-count="7" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+              <tr id="comment-226586" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">4</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">There are no Brazilian WhatsApp employees. The figure arrested was the <a href="http://www1.folha.uol.com.br/tec/2016/03/1744973-pf-prende-executivo-do-facebook-por-empresa-nao-liberar-dados-do-whatsapp.shtml" rel="nofollow">Facebook VP for Latin America, Diego Dzodan</a>. The whacko of a judge just figured that since facebook owns whatsapp he (Diego) would be liable.</span> –&nbsp;
+                 <a href="/users/44336/mindwin" title="536 reputation" class="comment-user">Mindwin</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 21:03:34Z" class="relativetime-clean">20 hours ago</span></span> 
+                 <span class="edited-yes" title="this comment was edited 2 times"></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-226596" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">7</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">@immibis but https (I assume that's what you're talking about) has other uses than just keeping other people from seeing which cat picture you're looking at, like keeping other people from sending you a dog picture when you requested a cat picture (or sending you true malware). HTTPS Everywhere!</span> –&nbsp;
+                 <a href="/users/15392/drewbenn" title="2,210 reputation" class="comment-user">drewbenn</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 22:19:09Z" class="relativetime-clean">18 hours ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-226600" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">@drewbenn If I request a cat picture and get a dog picture, it doesn't really matter. If I request a cat picture and get malware, then I'm screwed anyway if my browser has a code execution vulnerability when displaying pictures.</span> –&nbsp;
+                 <a href="/users/40059/immibis" title="1,144 reputation" class="comment-user">immibis</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 22:45:05Z" class="relativetime-clean">18 hours ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-226601" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">@drewbenn On the other hand, the risk of getting an un-bypassable certificate error when trying to view funny cat pictures when there's <i>no</i> malicious activity (just misconfiguration) is much greater than the risk of someone trying to inject malware into my funny cat pictures.</span> –&nbsp;
+                 <a href="/users/40059/immibis" title="1,144 reputation" class="comment-user">immibis</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-13 22:45:55Z" class="relativetime-clean">18 hours ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-226697" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">@immibis If you're only using encryption when you need it, it's makes it very easy for your Three Letter Agency of choice to know exactly who has something to hide and who doesn't. That's why default encryption is beneficial.</span> –&nbsp;
+                 <a href="/users/94022/pipe" title="101 reputation" class="comment-user">pipe</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-14 13:47:35Z" class="relativetime-clean">3 hours ago</span></span> 
+                 <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                </div> </td> 
+              </tr> 
+             </tbody> 
+            </table> 
+           </div> 
+           <div id="comments-link-123234" data-rep="50" data-anon="true"> 
+            <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></a>
+            <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>7</b> more comments</a> 
+           </div> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <div id="answers"> 
+       <a name="tab-top"></a> 
+       <div id="answers-header"> 
+        <div class="subheader answers-subheader"> 
+         <h2> 9 Answers <span style="display:none;" itemprop="answerCount">9</span> </h2> 
+         <div> 
+          <div id="tabs"> 
+           <a href="/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active"> active</a> 
+           <a href="/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest"> oldest</a> 
+           <a class="youarehere" href="/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes"> votes</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <a name="123235"></a> 
+       <div id="answer-123235" class="answer" data-answerid="123235" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123235"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">79</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>"If lack of encryption allows FBI to catch terrorists, then lack of encryption allows criminals to loot your emails and plunder your bank account."</p> 
+             <p>The rational point here is that technology is morally neutral. Encryption does not work differently depending on whether the attacker is morally right and the defender morally wrong, or vice versa.</p> 
+             <p>It is all fear-driven rhetoric anyway, so don't use logic; talk about what most frightens people, personally. And people fear most for their money.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123235" title="short permalink to this answer" class="short-link" id="link-post-123235">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123235/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 19:05:59Z" class="relativetime">22 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/5411/tom-leek">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/e2e94675a01dd4477eef7750db006817?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/5411/tom-leek">Tom Leek</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 119,846" dir="ltr">120k</span>
+                   <span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span>
+                   <span title="228 silver badges"><span class="badge2"></span><span class="badgecount">228</span></span>
+                   <span title="355 bronze badges"><span class="badge3"></span><span class="badgecount">355</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123235" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-226578" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="hot">24</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy"><i>people fear most for their money</i> - And pulling from the John Oliver segment with Edward Snowden, their private lewd pictures!</span> –&nbsp;
+                  <a href="/users/72066/sour-lolita" title="1,122 reputation" class="comment-user">Sour Lolita</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 20:02:07Z" class="relativetime-clean">21 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-226585" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">6</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Along the same lines, if they've ever made an online purchase, you can point out that if it wasn't for cryptography, they'd be giving their credit card numbers to every server between their computer and the store's (and to anyone else who happens to be listening).</span> –&nbsp;
+                  <a href="/users/104065/ray" title="101 reputation" class="comment-user">Ray</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 21:00:15Z" class="relativetime-clean">20 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-226633" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@Ray But CC numbers only need secrecy because of the way the CC system evolved; authenticity can be sufficient to prevent theft. In US at least, <i>bank account</i> numbers aren't really secret because if a thief uses one for a fraudulent debit, the banks are quite good at preventing them from getting the money, so few try. It is only private <i>information</i> that truly needs secrecy. Sour's 'lewd' material is the classic example, but one many aren't eager to defend. I think <b>medical/health data</b> is more 'attractive' -- and is one of the relatively few categories US law does (try to) protect. ...</span> –&nbsp;
+                  <a href="/users/39571/dave-thompson-085" title="2,070 reputation" class="comment-user">dave_thompson_085</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 00:58:08Z" class="relativetime-clean">16 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-226634" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">... Similarly passwords need to be secret, but it's only accident that we use passwords to protect so many valuable systems; sign-a-challenge or SRP or even single-use tokens can restrict system access without any encryption.</span> –&nbsp;
+                  <a href="/users/39571/dave-thompson-085" title="2,070 reputation" class="comment-user">dave_thompson_085</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 01:04:09Z" class="relativetime-clean">16 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-226657" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@dave_thompson_085 Encryption just makes those things faster and easier. Single use tokens have their own set of failure modes.</span> –&nbsp;
+                  <a href="/users/40258/cort-ammon" title="4,001 reputation" class="comment-user">Cort Ammon</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 04:26:01Z" class="relativetime-clean">12 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123235" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>1</b> more comment</a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk2102942482",4).enableDynamicSiteSelection().setZone(30); });
+            </script> 
+       <div class="everyonelovesstackoverflow" id="adzerk2102942482"> 
+       </div> 
+       <a name="123242"></a> 
+       <div id="answer-123242" class="answer" data-answerid="123242" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123242"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">31</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>I would take their argument and replace "cryptography" with "locks and keys on our houses" and see if they still agree:</p> 
+             <p><em>If more terrorists and criminals would be caught by not having locks and keys on our houses, I would not blame warrantless searches by government and companies in our homes.</em></p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123242" title="short permalink to this answer" class="short-link" id="link-post-123242">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123242/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 19:37:44Z" class="relativetime">21 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/109841/pseudosu">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/382367c40be1b83ba77af3bd231b006e?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/109841/pseudosu">PseudoSu</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">411</span>
+                   <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+                   <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123242" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-226588" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="hot">24</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">I agree with the answer, but if falls too short. Police can break any lock/safe in the physical world, but they can't break strong cryptography. The difference is that on the internet there is no such thing as distance, while locks are constrained by the physical world. A burglar can't break into thousands of homes at the same time, but a hacker can. Cryptography needs to be unbreakable, as it is the foundation of the technology around us. See the <a href="https://www.youtube.com/watch?v=VPBH1eW28mo" rel="nofollow">video</a> on the topic from CGP Grey.</span> –&nbsp;
+                  <a href="/users/110563/sitic" title="101 reputation" class="comment-user">sitic</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 21:33:45Z" class="relativetime-clean">19 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-226675" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">3</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Whilst I agree the analogy as put falls short, I nevertheless follow this approach to have people imagine what conventional methods would be required to collate the same information as is provided by electronic monitoring: one would have to be followed everywhere by a surveillance team, who would listen in and record all one's movements/contacts/conversations, intercept one's post, plant bugs in one's home, copy all one's private paperwork... for those who send intimate communications, it could even be equivalent to having one's bedroom activities filmed. Scary stuff.</span> –&nbsp;
+                  <a href="/users/18166/eggyal" title="101 reputation" class="comment-user">eggyal</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 08:10:54Z" class="relativetime-clean">9 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123242" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="123237"></a> 
+       <div id="answer-123237" class="answer" data-answerid="123237" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123237"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">9</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>To explain "cryptography" in your scenario requires an understanding of the value of "private communications". It's not about the technology, but about the benefit to society of being able to communicate privately, even from the eyes of your neighbours (i.e. those charged with governing the society).</p> 
+             <p>This is more of a philosophical debate than a technical one.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123237" title="short permalink to this answer" class="short-link" id="link-post-123237">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123237/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 19:17:07Z" class="relativetime">21 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/6253/schroeder">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/1555c7f33b81777a7bd634b4f61c39c7?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/6253/schroeder">schroeder</a>
+                  <span class="mod-flair" title="moderator">♦</span> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 34,095" dir="ltr">34.1k</span>
+                   <span title="10 gold badges"><span class="badge1"></span><span class="badgecount">10</span></span>
+                   <span title="70 silver badges"><span class="badge2"></span><span class="badgecount">70</span></span>
+                   <span title="113 bronze badges"><span class="badge3"></span><span class="badgecount">113</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123237" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-226674" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Agreed. I sometimes try to have people imagine living under the Stasi, conscious of the pervasive monitoring of all one's communications: it leads to self-censorship, stifling expression that not only has huge cultural/political/economic value but also underpins one's own identity and self esteem. We already see people self-censoring, for fear that their legitimate communications are being monitored: what long-term psychological damage is this doing to our children, and society at large?</span> –&nbsp;
+                  <a href="/users/18166/eggyal" title="101 reputation" class="comment-user">eggyal</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 07:59:50Z" class="relativetime-clean">9 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123237" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="123248"></a> 
+       <div id="answer-123248" class="answer" data-answerid="123248" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123248"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">6</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Imagine if, during the civil rights era, people had access to things like email and smartphones. People like the organizers of the Montgomery bus boycotts would have a little pocket computer that could tell the authorities where they’d been, who they talked to, and what they were talking about.</p> 
+             <p>The authorities, at the time, considered these people terrorists. They were willing to turn firehoses and attack dogs on them, and they were doing their damnedest to keep at least the leaders under surveillance. Do you think they’d hesitate, if the option had existed, to court-order their phone companies to hand over personal data?</p> 
+             <p>You can imagine a similar scenario in the early days of the gay rights movement. Things like sodomy and cross-dressing were illegal. If the option had existed, the authorities would have happily raided the personal data of any sodomite they could catch. You find one, you find others, and pretty quickly the beginnings of a movement get snuffed out.</p> 
+             <p>The powers that be usually don’t like change, and if they have the power to squash it, they will. But they can’t squash what they can’t catch. In order for a society to grow and change in an organic way, it needs space for new and dangerous ideas to hide. In the computer age, without strong encryption, this space disappears.</p> 
+             <p>Yes, that means actual bad actors have more room to maneuver as well. But I would argue the trade-off is worth it.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123248" title="short permalink to this answer" class="short-link" id="link-post-123248">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123248/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 21:13:05Z" class="relativetime">19 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/110562/cedrus">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/6d728c3d7b6a9b91c60a2962c0059c4e?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/110562/cedrus">Cedrus</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">89</span>
+                   <span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123248" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123248" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="123238"></a> 
+       <div id="answer-123238" class="answer" data-answerid="123238" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123238"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">5</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Use the same terrible logical argument that the RIAA used in their anti-piracy propaganda pieces from the early/mid 2000s.</p> 
+             <p>You use an armored car to securely move money, encryption is that armored car for transactions on the internet.</p> 
+             <p>--or--</p> 
+             <p>You keep your valuables in a safe, so you want to keep your data encrypted.</p> 
+             <p>--or--</p> 
+             <p>You keep your front door locked, encryption is that front door into your data. If you login to your bank unencrypted, then you left your front door unlocked and are allowing anyone else to come by and walk into your den.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123238" title="short permalink to this answer" class="short-link" id="link-post-123238">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123238/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 19:25:12Z" class="relativetime">21 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/69688/addison-wilson">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/96f2d5311d82984c2f832dceff569e1a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/69688/addison-wilson">Addison Wilson</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">323</span>
+                   <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+                   <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123238" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123238" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="123251"></a> 
+       <div id="answer-123251" class="answer" data-answerid="123251" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123251"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">2</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>This is kind of a twisted point to make to anyone who's not familiar with the most trivial details of encryption and security, but I think it stands.</p> 
+             <p><a href="http://www.smbc-comics.com/index.php?id=4083" rel="nofollow">Zach still said it best.</a> Encryption is the equivalent of keeping your pants on when you visit the Internet. It should be basic, and it's not our fault that banks and stores are willing to forgo a "no shirt, no shoes, no pants, no service" policy online, where they wouldn't in real life.</p> 
+             <p>Although many of us may not know the details of how encryption works, the general thrust is easy enough for anyone to understand: we don't shout our credit card number or bank details at a waiter, or the clerk at the checkout counter in the grocery, for the same reasons we use encryption when we check out at Amazon.com. Even if we don't care whether someone knows those details about our life, <em>it's fucking rude</em> to be that noisy.</p> 
+             <p>What most people miss is just how noisy the Internet actually is. If tcpdump existed for phones, I'd show the, that, but in the meantime just try your best to educate people as to what sending <em>any</em> information across the Internet is really like. My personal favorite metaphor? Sending a data packet into the wild is like making your retarded child wear a sandwich board with a destination address and a message, putting him on the bus, and expecting the regular commuters and the bus driver help him get off at the right stop. </p> 
+             <p>Even if all that happens, everyone on the bus route gets to read your angry drunken letter to the school board as your retarded child blissfully follows strangers to the right house.</p> 
+             <p>What does encryption give you? Easy. All it means is that no one knows what you actually wrote: all they know is where it's going. That's encryption, a nutshell. What the government wants to do, is allow a select group of auditors to read, laugh at, and ultimately reject or redirect your retarded child — or decide to prosecute you based on what you wrote while you were in your boozy stupor.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123251" title="short permalink to this answer" class="short-link" id="link-post-123251">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123251/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 22:16:15Z" class="relativetime">18 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/77466/ryder">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/f9f59c2720fdff4dd520c601d641ddbd?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/77466/ryder">Ryder</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">121</span>
+                   <span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123251" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-226720" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">They are familiar with encryption basics, but they would allow government to turn off encryption if they are searching for "threats" that they create as excuses to access ones data</span> –&nbsp;
+                  <a href="/users/28177/nwildner" title="381 reputation" class="comment-user owner">nwildner</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 16:03:50Z" class="relativetime-clean">1 hour ago</span></span> 
+                  <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123251" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="123252"></a> 
+       <div id="answer-123252" class="answer" data-answerid="123252" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123252"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">1</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Try thinking just as much of how you present as much as what you present</h1> 
+             <p>I'm going to present my argument with a few attention grabbing words here... but in truth what you need to do is start a discussion much life we do here. A good way is to grab their attention.</p> 
+             <h1>If a knife is used to kill a man, is that knife evil?</h1> 
+             <p>Obviously the answer to that is no. However what is a knife more than a tool? What is to kill more than a harmful action? What is evil more than a moral view? If we rewrite this question very generically it becomes</p> 
+             <h1>If a tool is used to do harm to people, is that tool bad?</h1> 
+             <p>The answer to this question is obviously <strong>No</strong>. A tool is nothing more than a medium to perform an action. Much like paint can be used for art, it can also be used for protest, defacing, or even destruction. What matters here is not the use of the <em>tool itself</em> but of the desire of the <em>operator</em>. If an operator intends to do harm, there will always be tools to do harm. If an operator intends to do good, there will be the same tools to do goo.</p> 
+             <p>The duality of it all is that a tool is a tool. It is in the hands of the person that determines whether the action performed is for <em>good</em> or for <em>evil</em>. Those actions can only be judged by others and thus it is only through our eyes that we can pass judgement. Because we are the ones to judge your friends statements aren't wrong, but they show ignorance of what cryptography really is, and how they should not be the ones to judge it. If they can not explain it without mentioning the word itself, then they do not understand it enough to speak on it.</p> 
+             <h1>A good basis for discussion and not argument/bandwagon</h1> 
+             <p>"If you are to judge cryptography you must know what it is and what it does. If you can answer that to me I will listen to your stance, so please explain to me what cryptography is so we are on the same page." The statement not only shows you have an understanding yourself, but it asks if they have an understanding in you asking for them to clarify it to you. If they are wrong, they have already opened themselves to a debate about if they really know what it is.</p> 
+             <p>At this point if you can prove them wrong, or raise sufficient doubt in their argument, the group mentality is shifted onto you as the default authority. Remember you don't have to disprove their arguments, you must just prove them wrong. A good example of this comes from the movie "Thank You for Smoking"(Rated R) in the following scene:</p> 
+             <blockquote> 
+              <p>Joey Naylor: ...so what happens when you're wrong?<br> Nick Naylor: Whoa, Joey I'm never wrong.<br> Joey Naylor: But you can't always be right...<br> Nick Naylor: Well, if it's your job to be right, then you're never wrong.<br> Joey Naylor: But what if you are wrong?<br> Nick Naylor: OK, let's say that you're defending chocolate, and I'm defending vanilla. Now if I were to say to you: 'Vanilla is the best flavour ice-cream', you'd say...<br> Joey Naylor: No, chocolate is.<br> Nick Naylor: Exactly, but you can't win that argument... so, I'll ask you: so you think chocolate is the end all and the all of ice-cream, do you?<br> Joey Naylor: It's the best ice-cream, I wouldn't order any other.<br> Nick Naylor: Oh! So it's all chocolate for you is it?<br> Joey Naylor: Yes, chocolate is all I need.<br> Nick Naylor: Well, I need more than chocolate, and for that matter I need more than vanilla. I believe that we need freedom. And choice when it comes to our ice-cream, and that Joey Naylor, that is the defintion of liberty.<br> Joey Naylor: But that's not what we're talking about<br> Nick Naylor: Ah! But that's what I'm talking about.<br> Joey Naylor: ...but you didn't prove that vanilla was the best...<br> Nick Naylor: I didn't have to. I proved that you're wrong, and if you're wrong I'm right.<br> Joey Naylor: But you still didn't convince me<br> Nick Naylor: It's that I'm not after you. I'm after them. </p> 
+             </blockquote> 
+             <p>Here you can see he is clearly explaining to his son that to win the majority you must not target the argument, but the audience. Once the audience knows that someone here is that authority then they are much more likely to listen.</p> 
+             <blockquote> 
+              <p>Think about what you say just as much as what you say. ~Anonymous</p> 
+             </blockquote> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123252" title="short permalink to this answer" class="short-link" id="link-post-123252">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123252/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 22:51:04Z" class="relativetime">18 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/87687/robert-mennell">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://graph.facebook.com/10153011416546268/picture?type=large" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/87687/robert-mennell">Robert Mennell</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">4,602</span>
+                   <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span>
+                   <span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span>
+                   <span title="25 bronze badges"><span class="badge3"></span><span class="badgecount">25</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123252" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-226717" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">The knife paradox didn't work so much with people. Some of them would rather like to replace metal knife with plastic knifes if this could be a solution to make knifes more "terrorist safe".</span> –&nbsp;
+                  <a href="/users/28177/nwildner" title="381 reputation" class="comment-user owner">nwildner</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 15:49:21Z" class="relativetime-clean">1 hour ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-226719" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">... then you missed the point of the abalogy. It's to point out the knife is JUST a tool. Terrorist have nothing to do more than imparting intent into it with their actions.</span> –&nbsp;
+                  <a href="/users/87687/robert-mennell" title="4,602 reputation" class="comment-user">Robert Mennell</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 15:52:26Z" class="relativetime-clean">1 hour ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123252" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="123273"></a> 
+       <div id="answer-123273" class="answer" data-answerid="123273" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123273"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">1</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Explain it with questions: Do you close the door when you poop? Why? Everybody poops, you aren't doing anything special in there, so what do you have to hide?</p> 
+             <p>If someone leaves a pile of poop downtown in the middle of the road does that mean we must all poop with door open? Simply because the pile of poop was gathered in a bathroom?</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123273" title="short permalink to this answer" class="short-link" id="link-post-123273">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123273/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-14 07:37:18Z" class="relativetime">9 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/49990/user1886419">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/df1d1ccdbcb2712a30abb623ec637f75?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/49990/user1886419">user1886419</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">133</span>
+                   <span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123273" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123273" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="123236"></a> 
+       <div id="answer-123236" class="answer" data-answerid="123236" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="123236"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">-2</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>I would try to use an analogy that doesn't employ logical fallacy. This is difficult, but perhaps explain how cryptography is used in banking, healthcare, etc. to ensure privacy, security, and the integrity of services.</p> 
+             <p>Ultimately it is our responsibility to make sure they understand it, everyone needs to understand it now that it has become a controversial issue.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/123236" title="short permalink to this answer" class="short-link" id="link-post-123236">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/123236/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 19:13:29Z" class="relativetime">21 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/110530/milhouse">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://lh6.googleusercontent.com/-QrcegS2noEE/AAAAAAAAAAI/AAAAAAAAAAk/zhINdo9c3VE/photo.jpg?sz=32" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/110530/milhouse">Milhouse</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">7</span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-123236" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-123236" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="new-answer"></a> 
+       <form id="post-form" action="/questions/123234/answer/submit" method="post" class="post-form"> 
+        <input type="hidden" id="post-id" value="123234"> 
+        <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false"> 
+        <input type="hidden" name="referrer" value=""> 
+        <h2 class="space">Your Answer</h2> 
+        <script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.options.snippets.enabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: false,
+                reputationToPostImages: null,
+                bindNavPrevention: true,
+                postfix: "",
+noCode: true,                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script> 
+        <div id="post-editor" class="post-editor js-post-editor"> 
+         <div style="position: relative;"> 
+          <div class="wmd-container"> 
+           <div id="wmd-button-bar" class="wmd-button-bar"></div> 
+           <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea> 
+          </div> 
+         </div> 
+         <div class="fl" style="margin-top: 8px; height:24px;">
+          &nbsp;
+         </div> 
+         <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">
+          draft saved
+         </div> 
+         <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">
+          draft discarded
+         </div> 
+         <div id="wmd-preview" class="wmd-preview"></div> 
+         <div></div> 
+         <div class="edit-block"> 
+          <input id="fkey" name="fkey" type="hidden" value="71fb98341fa62b820a5808f83f182453"> 
+          <input id="author" name="author" type="text"> 
+         </div> 
+        </div> 
+        <div style="position: relative;"> 
+         <div class="form-item dno new-post-login"> 
+          <div class="new-login-form"> 
+           <div class="new-login-left"> 
+            <h3>Sign up or <a id="login-link" href="/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2fsecurity.stackexchange.com%2fquestions%2f123234%2fhow-to-explain-that-cryptography-is-good-to-non-techie-friends%23new-answer">log in</a></h3> 
+            <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script> 
+            <div class="preferred-login google-login"> 
+             <p><span class="icon"></span><span>Sign up using Google</span></p> 
+            </div> 
+            <div class="preferred-login facebook-login"> 
+             <p><span class="icon"></span><span>Sign up using Facebook</span></p> 
+            </div> 
+            <div class="preferred-login stackexchange-login"> 
+             <p><span class="icon"></span><span>Sign up using Email and Password</span></p> 
+            </div> 
+           </div> 
+           <input type="hidden" name="manual-openid" class="manual-openid"> 
+           <input type="hidden" name="use-facebook" class="use-facebook" value="false"> 
+           <input type="hidden" name="use-google" class="use-google" value="false"> 
+           <input type="button" class="submit-openid" value="Submit" style="display:none"> 
+           <div class="new-login-right"> 
+            <h3>Post as a guest</h3> 
+            <div class="form-item"> 
+             <table> 
+              <tbody>
+               <tr> 
+                <td class="vm"> 
+                 <div> 
+                  <label for="display-name">Name</label> 
+                  <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"> 
+                 </div> 
+                 <div> 
+                  <label for="m-address">Email</label> 
+                  <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown"> 
+                 </div> </td> 
+               </tr> 
+              </tbody>
+             </table> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fsecurity.stackexchange.com%2fquestions%2f123234%2fhow-to-explain-that-cryptography-is-good-to-non-techie-friends%23new-answer', 'question_page');
+                    }
+                );
+            </script> 
+         <noscript> 
+          <h3>Post as a guest</h3> 
+          <div class="form-item"> 
+           <table> 
+            <tbody>
+             <tr> 
+              <td class="vm"> 
+               <div> 
+                <label for="display-name">Name</label> 
+                <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"> 
+               </div> 
+               <div> 
+                <label for="m-address">Email</label> 
+                <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown"> 
+               </div> </td> 
+             </tr> 
+            </tbody>
+           </table> 
+          </div> 
+         </noscript> 
+        </div> 
+        <div class="form-submit cbt"> 
+         <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110"> 
+         <a href="#" class="btn-clear discard-answer dno">discard</a> 
+         <p class="privacy-policy-agreement"> By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p> 
+         <input type="hidden" name="legalLinksShown" value="1"> 
+        </div> 
+       </form> 
+       <h2 class="bottom-notice" data-loc="1"> Not the answer you're looking for? Browse other questions tagged <a href="/questions/tagged/cryptography" class="post-tag" title="show questions tagged 'cryptography'" rel="tag">cryptography</a> <a href="/questions/tagged/data-leakage" class="post-tag" title="show questions tagged 'data-leakage'" rel="tag">data-leakage</a> or <a href="/questions/ask">ask your own question</a>. </h2> 
+      </div> 
+     </div> 
+     <div id="sidebar" class="show-votes"> 
+      <div class="module question-stats"> 
+       <table id="qinfo"> 
+        <tbody>
+         <tr> 
+          <td> <p class="label-key">asked</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key" title="2016-05-13 18:54:03Z"><b>today</b></p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">viewed</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"> <b>2072 times</b> </p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">active</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2016-05-14 15:26:51Z">today</a></b></p> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk497927495",[5,17]).enableDynamicSiteSelection().setZone(56016); });
+            </script> 
+      <div class="everyonelovesstackoverflow" id="adzerk497927495"> 
+      </div> 
+      <div class="module sidebar-related"> 
+       <h4 id="h-related">Related</h4> 
+       <div class="related js-gps-related-questions" data-tracker="rq=1"> 
+        <div class="spacer"> 
+         <a href="/q/3378" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           7 
+          </div> </a>
+         <a href="/questions/3378/is-strong-cryptography-legal-across-the-internet" class="question-hyperlink">Is strong cryptography legal across the internet?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/8097" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           7 
+          </div> </a>
+         <a href="/questions/8097/good-resources-for-learning-cryptography-and-openssl" class="question-hyperlink">Good resources for learning cryptography and OpenSSL?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/16086" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           -6 
+          </div> </a>
+         <a href="/questions/16086/alternative-for-cryptography" class="question-hyperlink">Alternative for cryptography</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/17103" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           7 
+          </div> </a>
+         <a href="/questions/17103/how-to-destroy-old-credit-card" class="question-hyperlink">How to destroy old credit card?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/36807" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           -2 
+          </div> </a>
+         <a href="/questions/36807/how-often-is-cryptography-cracked-in-a-pentest" class="question-hyperlink">How often is cryptography cracked in a pentest?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/51078" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           1 
+          </div> </a>
+         <a href="/questions/51078/how-to-secure-data-in-a-stolen-raid-disk" class="question-hyperlink">How to secure data in a stolen raid disk?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/72235" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           2 
+          </div> </a>
+         <a href="/questions/72235/how-to-prove-to-friend-i-have-solution-to-puzzle-without-revealing-it" class="question-hyperlink">How to prove to friend I have solution to puzzle (without revealing it)?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/73738" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           2 
+          </div> </a>
+         <a href="/questions/73738/how-to-find-a-cryptography-scheme-either-authentication-or-encryption-for-whic" class="question-hyperlink">how to find a cryptography scheme (either authentication or encryption) for which some formal analysis of security has not been done yet</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/115428" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/115428/how-can-i-ensure-that-only-the-message-i-sent-and-nothing-else-reaches-the-rece" class="question-hyperlink">How can I ensure that only the message I sent, and nothing else reaches the receiver?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/121507" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           0 
+          </div> </a>
+         <a href="/questions/121507/is-open-source-a-good-option-for-cryptography-libraries" class="question-hyperlink">Is open source a good option for cryptography libraries?</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="hot-network-questions" class="module"> 
+       <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })"> Hot Network Questions </a> </h4> 
+       <ul> 
+        <li> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> How to explain that "Cryptography is good" to non-techie friends </a> </li> 
+        <li> 
+         <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/234188/irfz44n-power-mosfet-gets-hot-while-driving-peltier-by-step-down-buck-voltage-co" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })"> IRFZ44N power MOSFET gets hot while driving Peltier by step-down buck voltage converter </a> </li> 
+        <li> 
+         <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68259/clapping-applause-when-a-planes-lands" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })"> Clapping / applause when a planes lands? </a> </li> 
+        <li> 
+         <div class="favicon favicon-christianity" title="Christianity Stack Exchange"></div><a href="http://christianity.stackexchange.com/questions/48724/who-first-described-pentecost-as-a-reversal-of-babel" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:304 }); posts_hot_network.click({ item_type:2, location:11 })"> Who first described Pentecost as a reversal of Babel? </a> </li> 
+        <li> 
+         <div class="favicon favicon-gamedev" title="Game Development Stack Exchange"></div><a href="http://gamedev.stackexchange.com/questions/121378/what-advantage-do-opengl-sfml-and-sdl-have-over-software-rendering" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:53 }); posts_hot_network.click({ item_type:2, location:11 })"> What advantage do OpenGL, SFML and SDL have over software rendering? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/32585/four-boys-and-four-girls-puzzle" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })"> four boys and four girls puzzle </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127928/why-do-they-use-shuttles-in-star-trek-even-for-short-distances" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })"> Why do they use shuttles in Star Trek even for short distances? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-diy" title="Home Improvement Stack Exchange"></div><a href="http://diy.stackexchange.com/questions/90392/if-metal-expands-when-heated-how-does-heating-a-bolt-loosen-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:73 }); posts_hot_network.click({ item_type:2, location:11 })"> If metal expands when heated, how does heating a bolt loosen it? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/265578/does-nzoth-the-corruptor-invoke-minions-in-a-specific-order" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })"> Does N'Zoth the corruptor invoke minions in a specific order? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/64052/how-much-should-a-new-graduate-with-new-job-put-towards-a-car" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })"> How much should a new graduate with new job put towards a car? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/309586/suppress-single-macro-from-style-file" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })"> suppress single macro from style file </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-dsp" title="Signal Processing Stack Exchange"></div><a href="http://dsp.stackexchange.com/questions/30770/why-real-part-of-fft-converts-image-into-rotation-original" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:295 }); posts_hot_network.click({ item_type:2, location:11 })"> Why real part of FFT converts image into rotation + original? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/89945/what-is-the-meaning-of-the-very-sight-of" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })"> What is the meaning of "The very sight of" </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/89937/what-is-the-meaning-of-but-no-last-trump-in-following-sentence" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })"> What is the meaning of "But no last trump" in following sentence? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127921/why-was-hitchhikers-guide-censored" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })"> Why was Hitchhiker's Guide censored? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/772150/custom-editable-message-for-each-user-after-login" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })"> Custom (editable) message for each user after login </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/89943/youve-earned-the-nice-answer-badge-vs-youve-earned-a-nice-answer-badge" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })"> "You've earned the 'Nice Answer' badge" vs. "You've earned a 'Nice Answer' badge" </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318395/are-so-called-cross-cutting-concerns-a-valid-excuse-to-break-solid-di-ioc" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })"> Are so called "cross-cutting concerns" a valid excuse to break SOLID/DI/IoC? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784962/why-the-existence-of-taylor-series-doesnt-imply-it-coverges-to-the-original-fun" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> Why the existence of taylor series doesn't imply it coverges to the original function </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784166/why-are-there-no-triernions" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> Why are There No "Triernions"? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/282973/do-programs-run-from-an-ssh-session-depend-on-the-connection" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })"> Do programs run from an ssh session depend on the connection? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-dba" title="Database Administrators Stack Exchange"></div><a href="http://dba.stackexchange.com/questions/138540/data-inconsistency-prohibition-if-table-reffer-to-another-via-two-many2many-rela" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:182 }); posts_hot_network.click({ item_type:2, location:11 })"> Data inconsistency prohibition if table reffer to another via two many2many relations </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68320/to-travel-30-km-from-india-to-sri-lanka-do-i-really-have-to-take-a-1500-km-20" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })"> To travel 30 km from India to Sri Lanka, do I really have to take a 1500 km, 20 hour detour? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784930/how-to-find-the-integral-of-a-quotient-of-rational-functions" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> How to find the integral of a quotient of rational functions? </a> </li> 
+       </ul> 
+       <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })"> more hot questions </a> 
+      </div> 
+     </div> 
+     <div id="feed-link"> 
+      <div id="feed-link-text"> 
+       <a href="/feeds/question/123234" title="feed of this question and its answers"> <span class="feed-icon"></span>question feed </a> 
+      </div> 
+     </div> 
+     <script>
+StackExchange.ready(function(){$.get('/posts/123234/ivc/2c4b');});
+</script> 
+     <noscript> 
+      <div>
+       <img src="/posts/123234/ivc/2c4b" class="dno" alt="" width="0" height="0">
+      </div> 
+     </noscript>
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://security.blogoverflow.com/?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.security.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3573 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Information Security Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+  <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('cryptography,data-leakage,x-community,x-host-security.stackexchange.com');; ados_load();
+        });   
+        
+</script> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('set', 'dimension2', '|cryptography|data-leakage|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

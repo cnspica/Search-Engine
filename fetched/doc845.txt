@@ -1,0 +1,664 @@
+http://tutorialspoint.com/shared-tutorials.php
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Shared Tutorials and Articles</title> 
+  <meta name="description" content="Technical and managerial tutorials shared by internet community. You can submit your tutorials to promote them."> 
+  <meta name="Keywords" content="Shared, tutorial, community, internet"> 
+  <link rel="stylesheet" type="text/css" href="/scripts/shared.css"> 
+  <style>
+td a, p a {
+  background: none !important;
+}
+</style> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #316441 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #316441 !important;}
+.submenu-item{ border-bottom: 2px solid #316441 !important; border-top: 2px solid #316441 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/images/shared-tutorials.png" alt="Shared tutorials"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Shared Tutorials</li> 
+        <li><a href="shared-tutorials.php" title="Shared Tutorials">Shared Tutorials</a></li> 
+        <li><a href="submit-tutorials.php" title="Submit Tutorials">Submit Tutorials</a></li> 
+        <li><a href="login.php" title="Login ">User Login</a></li> 
+        <li><a href="register.php" title="Register ">User Registeration</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">White Papers</li> 
+        <li><a href="add-white-paper.php" title="Add White Papers">Add White Papers</a></li> 
+        <li><a href="white-papers.php" title="List White Papers">List White Papers</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Website Development</li> 
+        <li><a href="/listtutorials/adobe-flex/1" title="Adobe Flex Tutorials">Adobe Flex</a></li> 
+        <li><a href="/listtutorials/asp/1" title="ASP Tutorials">ASP</a></li> 
+        <li><a href="/listtutorials/asp-dot-net/1" title="ASP.NET Tutorials">ASP.NET</a></li> 
+        <li><a href="/listtutorials/cold-fusion/1" title="Cold Fusion Tutorials">Cold Fusion</a></li> 
+        <li><a href="/listtutorials/css/1" title="CSS Tutorials">CSS</a></li> 
+        <li><a href="/listtutorials/dreamweaver/1" title="Dreamweaver Tutorials">Dreamweaver</a></li> 
+        <li><a href="/listtutorials/html/1" title="HTML Tutorials">HTML</a></li> 
+        <li><a href="/listtutorials/java/1" title="JAVA Tutorials">JAVA</a></li> 
+        <li><a href="/listtutorials/java-script/1" title="Java Script Tutorials">Java Script</a></li> 
+        <li><a href="/listtutorials/ms-frontpage/1" title="MS Frontpage Tutorials">MS Frontpage</a></li> 
+        <li><a href="/listtutorials/perl-and-cgi/1" title="Perl &amp; Tutorials">Perl &amp; CGI</a></li> 
+        <li><a href="/listtutorials/php/1" title="PHP Script Tutorials">PHP Script</a></li> 
+        <li><a href="/listtutorials/python/1" title="Python Script Tutorials">Python Script</a></li> 
+        <li><a href="/listtutorials/ruby/1" title="Ruby Script Tutorials">Ruby Script</a></li> 
+        <li><a href="/listtutorials/ruby-on-rails/1" title="Ruby on Rails Tutorials">Ruby on Rails</a></li> 
+        <li><a href="/listtutorials/seo/1" title="SEO Tutorials">SEO</a></li> 
+        <li><a href="/listtutorials/vb-script/1" title="VB Script Tutorials">VB Script</a></li> 
+        <li><a href="/listtutorials/web-design/1" title="Web Design Tutorials">Web Design</a></li> 
+        <li><a href="/listtutorials/web-hosting/1" title="Web Hosting Tutorials">Web Hosting</a></li> 
+        <li><a href="/listtutorials/web2.0/1" title="Web 2.0 Tutorials">Web 2.0</a></li> 
+        <li><a href="/listtutorials/xml/1" title="XML Tutorials">XML</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">2D &amp; 3D Graphics</li> 
+        <li><a href="/listtutorials/3ds-max/1" title="3DS Max Tutorials">3DS Max</a></li> 
+        <li><a href="/listtutorials/adobe-indesign/1" title="Adobe InDesign Tutorials">Adobe InDesign</a></li> 
+        <li><a href="/listtutorials/auto-cad/1" title="Auto CAT Tutorials">Auto CAD</a></li> 
+        <li><a href="/listtutorials/blender-3d/1" title="Blender 3d Tutorials">Blender 3d </a></li> 
+        <li><a href="/listtutorials/bryce/1" title="Bryce 3D Tutorials">Bryce 3D</a></li> 
+        <li><a href="/listtutorials/cinema-4d/1" title="Cinema 4D Tutorials">Cinema 4D</a></li> 
+        <li><a href="/listtutorials/corel-draw/1" title="Corel Draw Tutorials">Corel Draw</a></li> 
+        <li><a href="/listtutorials/fireworks/1" title="Fireworks Tutorials">Fireworks</a></li> 
+        <li><a href="/listtutorials/flash/1" title="Flash Tutorials">Flash</a></li> 
+        <li><a href="/listtutorials/gimp/1" title="GIMP Tutorials">GIMP</a></li> 
+        <li><a href="/listtutorials/illustrator/1" title="Illustrator Tutorials">Illustrator</a></li> 
+        <li><a href="/listtutorials/paint-shop-pro/1" title="Paint Shop Pro Tutorials">Paint Shop Pro</a></li> 
+        <li><a href="/listtutorials/photoshop/1" title="Photoshop Tutorials">Photoshop</a></li> 
+        <li><a href="/listtutorials/lightwave/1" title="Lightwave 3D tutorials">Lightwave 3D</a></li> 
+        <li><a href="/listtutorials/maya/1" title="Maya 3D Tutorials">Maya</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Audio &amp; Video Editing</li> 
+        <li><a href="/listtutorials/after-effects/1" title="After Effects Tutorials">After Effects</a></li> 
+        <li><a href="/listtutorials/final-cut-pro/1" title="Final Cut Pro Tutorials">Final Cut Pro</a></li> 
+        <li><a href="/listtutorials/premiere/1" title="Premiere Tutorials">Adobe Premiere</a></li> 
+        <li><a href="/listtutorials/video-vegas/1" title="Video Veags Tutorials">Video Vegas</a></li> 
+        <li><a href="/listtutorials/xpresss-pro/1" title="Avid Xpresss Pro Tutorials">Xpresss Pro</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Databases</li> 
+        <li><a href="/listtutorials/basic-sql/1" title="Basic SQL Tutorials">Basic SQL</a></li> 
+        <li><a href="/listtutorials/ms-access/1" title="MS Access Tutorials">MS Access</a></li> 
+        <li><a href="/listtutorials/mssql/1" title="MsSQL Tutorials">MsSQL</a></li> 
+        <li><a href="/listtutorials/mysql/1" title="MySQL Tutorials">MySQL</a></li> 
+        <li><a href="/listtutorials/oracle/1" title="Oracle Tutorials">Oracle</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Data Science</li> 
+        <li><a href="/listtutorials/hadoop/1" title="Hadoop Tutorials">Hadoop</a></li> 
+        <li><a href="/listtutorials/spark/1" title="Spark Tutorials">Spark</a></li> 
+        <li><a href="/listtutorials/hbase/1" title="HBase Tutorials">HBase</a></li> 
+        <li><a href="/listtutorials/hive/1" title="Hive Tutorials">Hive</a></li> 
+        <li><a href="/listtutorials/map-reduce/1" title="Map Reduce Tutorials">Map Reduce</a></li> 
+        <li><a href="/listtutorials/sas/1" title="SAS Tutorials">SAS</a></li> 
+        <li><a href="/listtutorials/r-programming/1" title="R Programming Tutorials">R Programming</a></li> 
+        <li><a href="/listtutorials/matlab/1" title="Matlab Tutorials">Matlab</a></li> 
+        <li><a href="/listtutorials/octave/1" title="Octave Tutorials">Octave</a></li> 
+        <li><a href="/listtutorials/numpy/1" title="NumPy Tutorials">NumPy</a></li> 
+        <li><a href="/listtutorials/scipy/1" title="SciPy Tutorials">SciPy</a></li> 
+        <li><a href="/listtutorials/qlikview/1" title="QlikView Tutorials">QlikView</a></li> 
+        <li><a href="/listtutorials/tableau/1" title="Tableau Tutorials">Tableau</a></li> 
+        <li><a href="/listtutorials/cognos/1" title="Cognos Tutorials">Cognos</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Desktop Programming</li> 
+        <li><a href="/listtutorials/c-and-c++/1" title="C and C++ Tutorials">C and C++</a></li> 
+        <li><a href="/listtutorials/c-sharp/1" title="C Sharp Tutorials">C Sharp</a></li> 
+        <li><a href="/listtutorials/delphi/1" title="Delhphi Tutorials">Delphi</a></li> 
+        <li><a href="/listtutorials/visual-basic/1" title="Visual Basic Tutorials">Visual Basic</a></li> 
+        <li><a href="/listtutorials/visual-c++/1" title="Visual C++ Tutorials">Visual C++</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Digital Marketing</li> 
+        <li><a href="/listtutorials/mobile-marketing/1" title="Mobile Marketing Tutorials">Mobile Marketing</a></li> 
+        <li><a href="/listtutorials/pay-per-click/1" title="Pay Per Click Tutorials">Pay Per Click</a></li> 
+        <li><a href="/listtutorials/online-marketing/1" title="Online Marketing Tutorials">Online Marketing</a></li> 
+        <li><a href="/listtutorials/seo-techniques/1" title="SEO Techniques Tutorials">SEO Techniques</a></li> 
+        <li><a href="/listtutorials/social-media-marketing/1" title="Social Media MarketingTutorials">Social Media Marketing</a></li> 
+        <li><a href="/listtutorials/conversion-optimization/1" title="Conversion Optimization Tutorials">Conversion Optimization</a></li> 
+        <li><a href="/listtutorials/google-analytics/1" title="Google Analytics Tutorials">Google Analytics</a></li> 
+        <li><a href="/listtutorials/google-adsense/1" title="Google Adsense Tutorials">Google Adsense</a></li> 
+        <li><a href="/listtutorials/facebook-ads/1" title="Facebook Ads Tutorials">Facebook Ads</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Operating Systems</li> 
+        <li><a href="/listtutorials/linux/1" title="Linux Tutorials">Linux</a></li> 
+        <li><a href="/listtutorials/mac-os/1" title="Mac OS Tutorials">Mac OS</a></li> 
+        <li><a href="/listtutorials/windows/1" title="Windows Tutorials">Windows</a></li> 
+        <li><a href="/listtutorials/unix/1" title="Unix Tutorials">Unix</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Business Applications</li> 
+        <li><a href="/listtutorials/ms-excel/1" title="MS Excel Tutorials">MS Excel</a></li> 
+        <li><a href="/listtutorials/ms-powerpoint/1" title="MS PowerPoint Tutorials">MS PowerPoint</a></li> 
+        <li><a href="/listtutorials/ms-project/1" title="MS Project Tutorials">MS Project</a></li> 
+        <li><a href="/listtutorials/ms-word/1" title="MS Word Tutorials">MS Word</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Miscellaneous</li> 
+        <li><a href="/listtutorials/computer-basics/1" title="Computer Basics Tutorials">Computer Basics</a></li> 
+        <li><a href="/listtutorials/mobile-computing/1" title="Mobile Computing Tutorials">Mobile Computing</a></li> 
+        <li><a href="/listtutorials/multimedia/1" title="Multimedia Tutorials">Multimedia</a></li> 
+        <li><a href="/listtutorials/networking/1" title="Networking Tutorials">Networking</a></li> 
+        <li><a href="/listtutorials/project-management/1" title="Project Management Tutorials">Project Management</a></li> 
+        <li><a href="/listtutorials/software-engineering/1" title="Software Engineering Tutorials">Software Engineering</a></li> 
+        <li><a href="/listtutorials/software-quality/1" title="Software Testing Tutorials">Software Testing</a></li> 
+        <li><a href="/listtutorials/telecommunication/1" title="Telecommunication Tutorials">Telecommunication</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Selected Reading</li> 
+        <li><a href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a href="computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a href="computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Shared Tutorials</h1> 
+        <div class="center"> 
+         <small>Tutorials Shared by the Internet Community</small> 
+        </div> 
+        <div class="clearer"></div> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <table style="width:100%; border:1px solid #d6d6d6;padding:5px;"> 
+         <tbody>
+          <tr> 
+           <td class="top"> &nbsp;&nbsp;<a class="top" href="/top-tutorials.php">Top Tutorials</a>&nbsp;&nbsp; </td> 
+           <td class="top"> &nbsp;&nbsp;<a class="top" href="/shared-tutorials.php">New Tutorials</a>&nbsp;&nbsp; </td> 
+           <td class="top"> &nbsp;&nbsp;<a class="top" href="/submit-tutorials.php">Submit</a>&nbsp;&nbsp; </td> 
+           <td class="top"> &nbsp;&nbsp;<a class="top" href="/login.php">Login</a>&nbsp;&nbsp; </td> 
+           <td class="top"> &nbsp;&nbsp;<a class="top" href="/register.php">Register</a>&nbsp;&nbsp; </td> 
+          </tr> 
+         </tbody>
+        </table> 
+        <br> 
+        <table style="width:100%"> 
+         <tbody>
+          <tr> 
+           <td style="white-space:nowrap; text-align:center;font-weight:bold; background:#eee;"> <h3>Listing</h3> </td> 
+           <td style="padding-top:10px;"> <img style="width:100%; height:1px;" src="/images/gap-line.gif" alt="gap line"> </td> 
+           <td style="white-space:nowrap; text-align:center;background:#eee;"> <h3>Most Recent Tutorials</h3> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+        <br> 
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/5-methods-to-help-users-avoid-data-loss-from-USB/6749" title="5 methods to help users avoid data loss from USB">5 methods to help users avoid data loss from USB</a></h3> Have you ever met such a case that you lost all data on your USB flash drive but do not know how to recover files from usb<br> <span style="color:#8A8A8A;">http://www.powerdatarecovery.com/recover-deleted-files/free-usb-data-recovery.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>34 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6749" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/windows/recovery-repair/1" title="Windows/Recovery and Repair" target="_parent">Windows/Recovery and Repair</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/he-File-Is-Too-Large-for-the-Destination-File-System/6748" title="he File Is Too Large for the Destination File System">he File Is Too Large for the Destination File System</a></h3> Why The file system is too large for the destination file system To answer this question, we need some basic knowledge about the file systems<br> <span style="color:#8A8A8A;">http://www.partitionwizard.com/convertpartition/file-is-too-large-for-destination-file-sys...</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>27 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6748" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/windows/file-system/1" title="Windows/File System" target="_parent">Windows/File System</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/HTML-Editors-Types-Of-HTML-Editor/6747" title="HTML Editors - Types Of HTML Editor">HTML Editors - Types Of HTML Editor</a></h3> HTML Editors<br> <span style="color:#8A8A8A;">http://talkerscode.com/html/htmleditors.php</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>35 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6747" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/html/getting-started/1" title="HTML/Getting Started" target="_parent">HTML/Getting Started</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/HTML-Introduction/6746" title="HTML Introduction">HTML Introduction</a></h3> HTML Introduction<br> <span style="color:#8A8A8A;">http://talkerscode.com/html/introduction.php</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>28 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6746" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/html/getting-started/1" title="HTML/Getting Started" target="_parent">HTML/Getting Started</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/How-To-Install-Python-3-on-CentOS-7/6745" title="How To Install Python 3 on CentOS 7">How To Install Python 3 on CentOS 7</a></h3> In this tutorial we will show you how to install Python 3 on CentOS 7 server, as well as some extra required by Python<br> <span style="color:#8A8A8A;">http://idroot.net/tutorials/how-to-install-python-3-on-centos-7/</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>28 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6745" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/web-hosting/dedicated-servers/1" title="Web Hosting/Dedicated Servers" target="_parent">Web Hosting/Dedicated Servers</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Statistical-Function-in-Excel-AVERAGE-AVERAGEIF-MODE/6744" title="Statistical Function in Excel: AVERAGE, AVERAGEIF, MODE">Statistical Function in Excel: AVERAGE, AVERAGEIF, MODE</a></h3> In this article you will learn about Statistical Function in Excel that includes AVERAGE, AVERAGEIF, MODE, MEDIAN, Standard Deviation, MIN, MAX, Large<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/statistical-function-in-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>43 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6744" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/The-ROUND-Function-in-Excel-The-ROUND-ROUNDUP-and-ROU/6743" title="The ROUND Function in Excel: The ROUND, ROUNDUP and ROU">The ROUND Function in Excel: The ROUND, ROUNDUP and ROU</a></h3> There are three functions to round numbers in MS Excel. The ROUND, ROUNDUP and ROUNDDOWN function. The ROUND function is used to round the fraction va<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/the-round-roundup-and-rounddown-functio...</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>40 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6743" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Lookup-and-References-in-Excel-VLOOKUP-HLOOKUP-MATCH/6742" title="Lookup and References in Excel: VLOOKUP, HLOOKUP, MATCH">Lookup and References in Excel: VLOOKUP, HLOOKUP, MATCH</a></h3> Lookup and Referencing is a very important feature of MS Excel.<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/vlookup-hlookup-match-index-and-choose-...</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>49 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6742" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Text-Functions-in-Excel-Concatenate-Left-Right-and-M/6741" title="Text Functions in Excel: Concatenate, Left, Right and M">Text Functions in Excel: Concatenate, Left, Right and M</a></h3> String Manipulations in MS Excel facilitates its user to perform within string extraction. In this article you will learn about Text Functions in Exce<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/text-functions-in-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>32 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6741" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Cell-References-in-Excel-Absolute-Mixed-and-Relative/6740" title="Cell References in Excel: Absolute, Mixed and Relative">Cell References in Excel: Absolute, Mixed and Relative</a></h3> Cell references are very important in MS Excel. Cell referencing works in formulas and other automations performed within MS Excel. It is further clas<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/cell-references-in-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>44 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6740" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/basic-concepts/1" title="MS Excel/Basic Concepts" target="_parent">MS Excel/Basic Concepts</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Find-and-Select-in-Excel-Replace-and-Go-to-Special-Fea/6739" title="Find and Select in Excel: Replace and Go to Special Fea">Find and Select in Excel: Replace and Go to Special Fea</a></h3> MS Excel provides you the flexibility to use select, Find and Replace features to find specified text and replace it with your desired text.<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/find-and-select-in-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>31 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6739" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Worksheet-in-Excel-How-to-Select-Insert-Rename-Move/6738" title="Worksheet in Excel: How to Select, Insert, Rename, Move">Worksheet in Excel: How to Select, Insert, Rename, Move</a></h3> Worksheet plays a highly important role in MS Excel as all the automation in MS Excel requires worksheet as a key reference. In this tutorial you will<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/worksheet-in-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>33 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6738" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/basic-concepts/1" title="MS Excel/Basic Concepts" target="_parent">MS Excel/Basic Concepts</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Date-and-Time-Function-in-Excel/6737" title="Date and Time Function in Excel">Date and Time Function in Excel</a></h3> MS Excel supports multiple formats for data inputs. It also support date and time as a format and has the provision to apply various function over the<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/date-and-time-function-in-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>29 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6737" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Logical-Functions-in-Excel-IF-AND-ampamp-OR-Function-in-MS/6736" title="Logical Functions in Excel: IF, AND &amp;amp; OR Function in MS">Logical Functions in Excel: IF, AND &amp;amp; OR Function in MS</a></h3> MS Excel supports logical and conditional functions which enables the user to perform conditional evaluations. In this article you will learn about IF<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/logical-functions-in-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>40 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6736" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Count-and-Sum-Function-in-Excel-CountA-CountBlank-Co/6735" title="Count and Sum Function in Excel: CountA, CountBlank, Co">Count and Sum Function in Excel: CountA, CountBlank, Co</a></h3> The count and sum function is MS Excel is very important. In this tutorial you will learn count and sum functions, CountA, CountBlank, CountIFs, SumIF<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/count-and-sum-function-in-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>32 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6735" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Share-Data-in-MS-Excel-How-to-Share-Excel-Data-with-Wo/6734" title="Share Data in MS Excel: How to Share Excel Data with Wo">Share Data in MS Excel: How to Share Excel Data with Wo</a></h3> MS Excel is highly versatile and supports sharing its contents with other programs. Contents can be shared from MS Excel to MS Word, MS PowerPoint and<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/how-to-share-ms-excel-data.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>33 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6734" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Print-in-Excel-Print-Gridlines-in-a-Excel-Worksheet/6733" title="Print in Excel: Print Gridlines in a Excel Worksheet">Print in Excel: Print Gridlines in a Excel Worksheet</a></h3> In this tutorial, you are going to learn about how to setup your Excel sheet for printing. You will learn how to set margins, setting the printing pre<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/print-gridlines-in-an-excel-worksheet.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>33 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6733" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/How-to-Protect-a-Workbook-with-Password-in-MS-Excel-201/6732" title="How to Protect a Workbook with Password in MS Excel 201">How to Protect a Workbook with Password in MS Excel 201</a></h3> The protection level implemented in MS Excel is password protected and hence, without a correct password, it cannot be unlocked. To make your Excel fi<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/protecting-a-workbook-in-ms-excel-with-...</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>26 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6732" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Excel-Keyboard-Shortcuts-A-List-of-Keyboard-Shortcuts/6731" title="Excel Keyboard Shortcuts: A List of Keyboard Shortcuts">Excel Keyboard Shortcuts: A List of Keyboard Shortcuts</a></h3> In MS Excel, you have plenty of keyboard shortcuts available that will help you performing your tasks in a quicker way. This tutorial will discuss the<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/excel-keyboard-shortcuts.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>33 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6731" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/functions/1" title="MS Excel/Functions" target="_parent">MS Excel/Functions</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Data-Validation-in-MS-Excel-with-Examples/6730" title="Data Validation in MS Excel with Examples">Data Validation in MS Excel with Examples</a></h3> In Microsoft Excel, Data validation is used to verify the type, format, and content of data that is acceptable in a specific cell. If any data that is<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/data-validation-in-ms-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>28 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6730" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/data-entry/1" title="MS Excel/Data Entry" target="_parent">MS Excel/Data Entry</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Templates-in-MS-Excel/6729" title="Templates in MS Excel">Templates in MS Excel</a></h3> In Microsoft Excel, Templates are the pre-defined / pre-designed formats that can be used for various purposes. Microsoft has provided a rich library<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/templates-in-ms-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>23 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6729" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/general-development/1" title="MS Excel/General Development" target="_parent">MS Excel/General Development</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <ul class="urlslist"> 
+         <li> <h3><a href="/listtutorial/Format-Cells-in-Excel/6728" title="Format Cells in Excel">Format Cells in Excel</a></h3> Formatting Cells is one of the most power and attractive features of MS Excel. This feature provides the user with the flexibility and control over th<br> <span style="color:#8A8A8A;">http://www.certiology.com/tutorials/excel-tutorial/formatting-cells-in-ms-excel.html</span> 
+          <ul class="urlfooter"> 
+           <li class="urlhits"><span>27 Hits</span></li> 
+           <!--
+<li class="urlrating"><span class="rated">Rating</span><span><a href="/rate/6728" target="_blank"><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /><img src="/images/zero.gif" alt="URL Rating" /></a></span></li>
+--> 
+           <li class="urlrating"><span class="rated">Rating</span><span><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"><img src="/images/zero.gif" alt="URL Rating"></span></li> 
+           <li class="fav_category"><span class="cat">Cat:</span><span class="actualcat"><a href="/listtutorials/ms-excel/general-formatting/1" title="MS Excel/General Formatting" target="_parent">MS Excel/General Formatting</a></span></li> 
+          </ul> <br> </li> 
+        </ul>
+        <div class="pages">
+         <span class="nextprev">« Previous</span>
+         <span class="current"> 1 </span> 
+         <a href="/newtutorials/2" title="Go to page 2">2</a> 
+         <a href="/newtutorials/3" title="Go to page 3">3</a> 
+         <a href="/newtutorials/4" title="Go to page 4">4</a> 
+         <a href="/newtutorials/5" title="Go to page 5">5</a> 
+         <a href="/newtutorials/6" title="Go to page 6">6</a> 
+         <a href="/newtutorials/7" title="Go to page 7">7</a> 
+         <a href="/newtutorials/8" title="Go to page 8">8</a> 
+         <a href="/newtutorials/9" title="Go to page 9">9</a> 
+         <a href="/newtutorials/10" title="Go to page 10">10</a> 
+         <span>...</span> 
+         <a href="/newtutorials/211" title="Go to page 1">211</a> 
+         <a href="/newtutorials/212" title="Go to page 212">212</a> 
+         <a class="nextprev" href="/newtutorials/2" title="Go to page 2">Next »</a> 
+        </div>
+        <br> 
+        <div class="clearer"></div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/shared-tutorials.php','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/shared-tutorials.php','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/shared-tutorials.php&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/shared-tutorials.php','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/shared-tutorials.php&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/shared-tutorials.php&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

@@ -1,0 +1,1274 @@
+https://stackexchange.com/leagues/35/quarter/english
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - English Language &amp; Usage - 2nd Quarter 2016 - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/35/quarter/english/2016-04-01"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/35/Quarter/2016-04-01/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f35%2fquarter%2fenglish#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f35%2fquarter%2fenglish">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/quarter/stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/quarter/superuser/2016-04-01?sort=reputationchange"> Super User </option> <option value="/leagues/21/quarter/math/2016-04-01?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/quarter/askubuntu/2016-04-01?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/quarter/english/2016-04-01?sort=reputationchange" selected> English Language &amp; Usage </option> <option value="/leagues/40/quarter/unix/2016-04-01?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/quarter/apple/2016-04-01?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/quarter/gaming/2016-04-01?sort=reputationchange"> Arqade </option> <option value="/leagues/52/quarter/programmers/2016-04-01?sort=reputationchange"> Programmers </option> <option value="/leagues/29/quarter/tex/2016-04-01?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/quarter/android/2016-04-01?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/quarter/meta/2016-04-01?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/quarter/electronics/2016-04-01?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/quarter/physics/2016-04-01?sort=reputationchange"> Physics </option> <option value="/leagues/19/quarter/stats/2016-04-01?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/quarter/dba/2016-04-01?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/quarter/ru-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/quarter/security/2016-04-01?sort=reputationchange"> Information Security </option> <option value="/leagues/86/quarter/codereview/2016-04-01?sort=reputationchange"> Code Review </option> <option value="/leagues/42/quarter/wordpress/2016-04-01?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/quarter/gis/2016-04-01?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/quarter/scifi/2016-04-01?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/quarter/mathoverflow/2016-04-01?sort=reputationchange"> MathOverflow </option> <option value="/leagues/23/quarter/diy/2016-04-01?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/quarter/webapps/2016-04-01?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/quarter/sharepoint/2016-04-01?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/quarter/cooking/2016-04-01?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/quarter/graphicdesign/2016-04-01?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/quarter/gamedev/2016-04-01?sort=reputationchange"> Game Development </option> <option value="/leagues/99/quarter/drupal/2016-04-01?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/quarter/ux/2016-04-01?sort=reputationchange"> User Experience </option> <option value="/leagues/229/quarter/ell/2016-04-01?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/quarter/pt-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/quarter/webmasters/2016-04-01?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/quarter/magento/2016-04-01?sort=reputationchange"> Magento </option> <option value="/leagues/191/quarter/academia/2016-04-01?sort=reputationchange"> Academia </option> <option value="/leagues/125/quarter/travel/2016-04-01?sort=reputationchange"> Travel </option> <option value="/leagues/213/quarter/salesforce/2016-04-01?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/quarter/workplace/2016-04-01?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/quarter/photo/2016-04-01?sort=reputationchange"> Photography </option> <option value="/leagues/177/quarter/mathematica/2016-04-01?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/quarter/money/2016-04-01?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/quarter/movies/2016-04-01?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/quarter/rpg/2016-04-01?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/quarter/cs/2016-04-01?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/quarter/codegolf/2016-04-01?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/quarter/chemistry/2016-04-01?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/quarter/mechanics/2016-04-01?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/quarter/bicycles/2016-04-01?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/quarter/blender/2016-04-01?sort=reputationchange"> Blender </option> <option value="/leagues/359/quarter/rus/2016-04-01?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/quarter/music/2016-04-01?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/quarter/biology/2016-04-01?sort=reputationchange"> Biology </option> <option value="/leagues/139/quarter/christianity/2016-04-01?sort=reputationchange"> Christianity </option> <option value="/leagues/95/quarter/skeptics/2016-04-01?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/quarter/anime/2016-04-01?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/quarter/crypto/2016-04-01?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/quarter/bitcoin/2016-04-01?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/quarter/parenting/2016-04-01?sort=reputationchange"> Parenting </option> <option value="/leagues/243/quarter/networkengineering/2016-04-01?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/quarter/cstheory/2016-04-01?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/307/quarter/puzzling/2016-04-01?sort=reputationchange"> Puzzling </option> <option value="/leagues/327/quarter/worldbuilding/2016-04-01?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/113/quarter/judaism/2016-04-01?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/quarter/fitness/2016-04-01?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/quarter/german/2016-04-01?sort=reputationchange"> German Language </option> <option value="/leagues/275/quarter/aviation/2016-04-01?sort=reputationchange"> Aviation </option> <option value="/leagues/288/quarter/arduino/2016-04-01?sort=reputationchange"> Arduino </option> <option value="/leagues/60/quarter/boardgames/2016-04-01?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/quarter/dsp/2016-04-01?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/quarter/sqa/2016-04-01?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/quarter/softwarerecs/2016-04-01?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/quarter/philosophy/2016-04-01?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/quarter/history/2016-04-01?sort=reputationchange"> History </option> <option value="/leagues/123/quarter/gardening/2016-04-01?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/quarter/japanese/2016-04-01?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/quarter/writers/2016-04-01?sort=reputationchange"> Writers </option> <option value="/leagues/37/quarter/stackapps/2016-04-01?sort=reputationchange"> Stack Apps </option> <option value="/leagues/259/quarter/sound/2016-04-01?sort=reputationchange"> Sound Design </option> <option value="/leagues/211/quarter/islam/2016-04-01?sort=reputationchange"> Islam </option> <option value="/leagues/93/quarter/pm/2016-04-01?sort=reputationchange"> Project Management </option> <option value="/leagues/91/quarter/quant/2016-04-01?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/333/quarter/ja-stackoverflow/2016-04-01?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/341/quarter/lifehacks/2016-04-01?sort=reputationchange"> Lifehacks </option> <option value="/leagues/137/quarter/french/2016-04-01?sort=reputationchange"> French Language </option> <option value="/leagues/165/quarter/scicomp/2016-04-01?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/quarter/spanish/2016-04-01?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/quarter/productivity/2016-04-01?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/quarter/pets/2016-04-01?sort=reputationchange"> Pets </option> <option value="/leagues/255/quarter/space/2016-04-01?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/quarter/datascience/2016-04-01?sort=reputationchange"> Data Science </option> <option value="/leagues/64/quarter/homebrew/2016-04-01?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/quarter/expressionengine/2016-04-01?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/quarter/hermeneutics/2016-04-01?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/quarter/video/2016-04-01?sort=reputationchange"> Video Production </option> <option value="/leagues/197/quarter/windowsphone/2016-04-01?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/quarter/outdoors/2016-04-01?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/quarter/emacs/2016-04-01?sort=reputationchange"> Emacs </option> <option value="/leagues/189/quarter/sports/2016-04-01?sort=reputationchange"> Sports </option> <option value="/leagues/237/quarter/reverseengineering/2016-04-01?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/quarter/chinese/2016-04-01?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/quarter/cogsci/2016-04-01?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/quarter/chess/2016-04-01?sort=reputationchange"> Chess </option> <option value="/leagues/143/quarter/linguistics/2016-04-01?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/quarter/astronomy/2016-04-01?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/quarter/robotics/2016-04-01?sort=reputationchange"> Robotics </option> <option value="/leagues/245/quarter/opendata/2016-04-01?sort=reputationchange"> Open Data </option> <option value="/leagues/215/quarter/patents/2016-04-01?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/quarter/es-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/quarter/tor/2016-04-01?sort=reputationchange"> Tor </option> <option value="/leagues/223/quarter/politics/2016-04-01?sort=reputationchange"> Politics </option> <option value="/leagues/315/quarter/hinduism/2016-04-01?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/quarter/freelancing/2016-04-01?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/quarter/vi/2016-04-01?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/quarter/craftcms/2016-04-01?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/quarter/joomla/2016-04-01?sort=reputationchange"> Joomla </option> <option value="/leagues/321/quarter/startups/2016-04-01?sort=reputationchange"> Startups </option> <option value="/leagues/343/quarter/engineering/2016-04-01?sort=reputationchange"> Engineering </option> <option value="/leagues/313/quarter/buddhism/2016-04-01?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/quarter/russian/2016-04-01?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/quarter/economics/2016-04-01?sort=reputationchange"> Economics </option> <option value="/leagues/363/quarter/law/2016-04-01?sort=reputationchange"> Law </option> <option value="/leagues/155/quarter/bricks/2016-04-01?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/quarter/expatriates/2016-04-01?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/quarter/tridion/2016-04-01?sort=reputationchange"> Tridion </option> <option value="/leagues/291/quarter/matheducators/2016-04-01?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/quarter/earthscience/2016-04-01?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/quarter/martialarts/2016-04-01?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/quarter/elementaryos/2016-04-01?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/quarter/ham/2016-04-01?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/quarter/civicrm/2016-04-01?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/quarter/health/2016-04-01?sort=reputationchange"> Health </option> <option value="/leagues/351/quarter/woodworking/2016-04-01?sort=reputationchange"> Woodworking </option> <option value="/leagues/277/quarter/ebooks/2016-04-01?sort=reputationchange"> Ebooks </option> <option value="/leagues/386/quarter/ethereum/2016-04-01?sort=reputationchange"> Ethereum </option> <option value="/leagues/231/quarter/sustainability/2016-04-01?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/217/quarter/genealogy/2016-04-01?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/quarter/italian/2016-04-01?sort=reputationchange"> Italian Language </option> <option value="/leagues/279/quarter/alcohol/2016-04-01?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/173/quarter/poker/2016-04-01?sort=reputationchange"> Poker </option> <option value="/leagues/365/quarter/opensource/2016-04-01?sort=reputationchange"> Open Source </option> <option value="/leagues/335/quarter/hsm/2016-04-01?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/quarter/musicfans/2016-04-01?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/quarter/coffee/2016-04-01?sort=reputationchange"> Coffee </option> <option value="/leagues/371/quarter/portuguese/2016-04-01?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/quarter/hardwarerecs/2016-04-01?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/quarter/computergraphics/2016-04-01?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/quarter/communitybuilding/2016-04-01?sort=reputationchange"> Community Building </option> <option value="/leagues/361/quarter/mythology/2016-04-01?sort=reputationchange"> Mythology </option> <option value="/leagues/384/quarter/3dprinting/2016-04-01?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/quarter/latin/2016-04-01?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/quarter/retrocomputing/2016-04-01?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/quarter/languagelearning/2016-04-01?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/35/week/english">Week</a> 
+        <a href="/leagues/35/month/english">Month</a> 
+        <a href="/leagues/35/quarter/english" class="youarehere">Quarter</a> 
+        <a href="/leagues/35/year/english">Year</a> 
+        <a href="/leagues/35/alltime/english">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://english.stackexchange.com"> 
+        <div class="site-bubble" style="background-color: #f5ece2; border-color: #f5ece2;"> 
+         <img src="http://cdn.sstatic.net/Sites/english/img/icon-48.png?v=f5ece2" alt="English Language &amp; Usage" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://english.stackexchange.com">English Language &amp; Usage</a></h2> 
+        <p> Q&amp;A for linguists, etymologists, and serious English language enthusiasts <span class="league-user-count">(119,747 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>2nd Quarter 2016</h3> 
+        <a href="/leagues/35/quarter/english/2016-01-01" class="viewolder">« prev quarter</a> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+       <div class="fr">
+        Sort by: 
+        <select onchange="$(this).siblings('.sortLoader').css('visibility', 'visible'); window.location.href = $(this).val(); return false;"> <option value="/leagues/35/quarter/english/2016-04-01?sort=reputationchange" selected> Quarter Rank </option> <option value="/leagues/35/quarter/english/2016-04-01?sort=rankchange"> Rank Change </option> <option value="/leagues/35/quarter/english/2016-04-01?sort=totalreputation"> Total Reputation </option> </select> 
+        <span class="sortLoader"></span> 
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="66974"></a> 
+        <div class="user user-66974"> 
+         <a href="http://english.stackexchange.com/users/66974/josh61">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/W0Tgr.jpg?s=128&amp;g=1&amp;s=48" title="Josh61">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/66974/josh61">Josh61</a></h2> 
+          <span title="24 gold badges"><span class="badge1"></span><span class="badgecount">24</span></span> 
+          <span title="194 silver badges"><span class="badge2"></span><span class="badgecount">194</span></span> 
+          <span title="337 bronze badges"><span class="badge3"></span><span class="badgecount">337</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/66974?sort=reputationchange#66974">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">0</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">98,387</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,506</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="65205"></a> 
+        <div class="user user-65205"> 
+         <a href="http://english.stackexchange.com/users/65205/elian">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/IL3sR.jpg?s=128&amp;g=1&amp;s=48" title="Elian">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/65205/elian">Elian</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="66 silver badges"><span class="badge2"></span><span class="badgecount">66</span></span> 
+          <span title="153 bronze badges"><span class="badge3"></span><span class="badgecount">153</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/65205?sort=reputationchange#65205">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">35,960</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">4,128</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="50044"></a> 
+        <div class="user user-50044"> 
+         <a href="http://english.stackexchange.com/users/50044/nvz">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/OwZOB.png?s=128&amp;g=1&amp;s=48" title="NVZ">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/50044/nvz">NVZ</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span> 
+          <span title="55 bronze badges"><span class="badge3"></span><span class="badgecount">55</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/50044?sort=reputationchange#50044">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+12</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">6,664</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,794</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="142322"></a> 
+        <div class="user user-142322"> 
+         <a href="http://english.stackexchange.com/users/142322/lawrence">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1c59b3aff7f4cae57a5ffaecb242cd32?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Lawrence">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/142322/lawrence">Lawrence</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span> 
+          <span title="43 bronze badges"><span class="badge3"></span><span class="badgecount">43</span></span> 
+          <br> 
+          <span class="faintText">member for: 7 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/142322?sort=reputationchange#142322">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10,124</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,557</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="53966"></a> 
+        <div class="user user-53966"> 
+         <a href="http://english.stackexchange.com/users/53966/ws2">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/ghaa5.jpg?s=128&amp;g=1&amp;s=48" title="WS2">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/53966/ws2">WS2</a></h2> 
+          <span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span> 
+          <span title="56 silver badges"><span class="badge2"></span><span class="badgecount">56</span></span> 
+          <span title="150 bronze badges"><span class="badge3"></span><span class="badgecount">150</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/53966?sort=reputationchange#53966">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+27</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">35,568</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,423</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="36232"></a> 
+        <div class="user user-36232"> 
+         <a href="http://english.stackexchange.com/users/36232/sven-yargs">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/6211c0fd7eb99d4580eee6dcc34259a2?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Sven Yargs">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/36232/sven-yargs">Sven Yargs</a></h2> 
+          <span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span> 
+          <span title="94 silver badges"><span class="badge2"></span><span class="badgecount">94</span></span> 
+          <span title="240 bronze badges"><span class="badge3"></span><span class="badgecount">240</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/36232?sort=reputationchange#36232">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">64,149</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,355</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="71659"></a> 
+        <div class="user user-71659"> 
+         <a href="http://english.stackexchange.com/users/71659/vickyace">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/6U0OZ.jpg?s=128&amp;g=1&amp;s=48" title="vickyace">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/71659/vickyace">vickyace</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span> 
+          <span title="58 bronze badges"><span class="badge3"></span><span class="badgecount">58</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/71659?sort=reputationchange#71659">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+1176</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,261</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,351</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="23491"></a> 
+        <div class="user user-23491"> 
+         <a href="http://english.stackexchange.com/users/23491/bib">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/988ac96485ac577f0427429ea6d1eb81?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="bib">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/23491/bib">bib</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="76 silver badges"><span class="badge2"></span><span class="badgecount">76</span></span> 
+          <span title="180 bronze badges"><span class="badge3"></span><span class="badgecount">180</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/23491?sort=reputationchange#23491">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+12</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">61,673</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,284</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="99935"></a> 
+        <div class="user user-99935"> 
+         <a href="http://english.stackexchange.com/users/99935/max-williams">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/73c04e9ef9ca435c5b19a2e765ae6d20?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Max Williams">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/99935/max-williams">Max Williams</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span> 
+          <span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 5 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/99935?sort=reputationchange#99935">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+40</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">3,897</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,146</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="44619"></a> 
+        <div class="user user-44619"> 
+         <a href="http://english.stackexchange.com/users/44619/mari-lou-a">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/vUcfj.jpg?s=128&amp;g=1&amp;s=48" title="Mari-Lou A">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/44619/mari-lou-a">Mari-Lou A</a></h2> 
+          <span title="20 gold badges"><span class="badge1"></span><span class="badgecount">20</span></span> 
+          <span title="105 silver badges"><span class="badge2"></span><span class="badgecount">105</span></span> 
+          <span title="268 bronze badges"><span class="badge3"></span><span class="badgecount">268</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/44619?sort=reputationchange#44619">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+8</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">40,178</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,021</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="168654"></a> 
+        <div class="user user-168654"> 
+         <a href="http://english.stackexchange.com/users/168654/sgr">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/04684706f10d7c06c5e3cb58b046723f?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="SGR">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/168654/sgr">SGR</a></h2> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span> 
+          <br> 
+          <span class="faintText">member for: 41 days <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/168654?sort=reputationchange#168654">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,033</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,012</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="168485"></a> 
+        <div class="user user-168485"> 
+         <a href="http://english.stackexchange.com/users/168485/cathy-gartaganis">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/XVRgr.jpg?s=128&amp;g=1&amp;s=48" title="Cathy Gartaganis">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/168485/cathy-gartaganis">Cathy Gartaganis</a></h2> 
+          <span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 42 days <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/168485?sort=reputationchange#168485">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,886</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,926</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="66965"></a> 
+        <div class="user user-66965"> 
+         <a href="http://english.stackexchange.com/users/66965/surlawda">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/0a3d8cb7c87f8be56d64e3485ffad823?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="surlawda">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/66965/surlawda">surlawda</a></h2> 
+          <span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span> 
+          <span title="20 bronze badges"><span class="badge3"></span><span class="badgecount">20</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/66965?sort=reputationchange#66965">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+635</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,795</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,871</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="125330"></a> 
+        <div class="user user-125330"> 
+         <a href="http://english.stackexchange.com/users/125330/deadrat">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/efa77521c561900d397a2d9fdb5e0124?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="deadrat">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/125330/deadrat">deadrat</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="34 silver badges"><span class="badge2"></span><span class="badgecount">34</span></span> 
+          <span title="72 bronze badges"><span class="badge3"></span><span class="badgecount">72</span></span> 
+          <br> 
+          <span class="faintText">member for: 11 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/125330?sort=reputationchange#125330">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-7</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">30,477</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,812</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="132252"></a> 
+        <div class="user user-132252"> 
+         <a href="http://english.stackexchange.com/users/132252/graffito">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/iOKgE.jpg?s=128&amp;g=1&amp;s=48" title="Graffito">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/132252/graffito">Graffito</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span> 
+          <span title="34 bronze badges"><span class="badge3"></span><span class="badgecount">34</span></span> 
+          <br> 
+          <span class="faintText">member for: 9 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/132252?sort=reputationchange#132252">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+25</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,133</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,664</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="155456"></a> 
+        <div class="user user-155456"> 
+         <a href="http://english.stackexchange.com/users/155456/john-clifford">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/kIDSC.jpg?s=128&amp;g=1&amp;s=48" title="John Clifford">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/155456/john-clifford">John Clifford</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="15 silver badges"><span class="badge2"></span><span class="badgecount">15</span></span> 
+          <span title="37 bronze badges"><span class="badge3"></span><span class="badgecount">37</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/155456?sort=reputationchange#155456">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-8</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">6,223</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,615</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="70861"></a> 
+        <div class="user user-70861"> 
+         <a href="http://english.stackexchange.com/users/70861/hot-licks">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/d2ae9ac6fb51918297a0ce5dada0eb22?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Hot Licks">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/70861/hot-licks">Hot Licks</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="15 silver badges"><span class="badge2"></span><span class="badgecount">15</span></span> 
+          <span title="41 bronze badges"><span class="badge3"></span><span class="badgecount">41</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/70861?sort=reputationchange#70861">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+13</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,409</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,561</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="121061"></a> 
+        <div class="user user-121061"> 
+         <a href="http://english.stackexchange.com/users/121061/ab2">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/cb3e4f20d4ab56b93c2b7aea05fbf7ba?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="ab2">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/121061/ab2">ab2</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span> 
+          <span title="39 bronze badges"><span class="badge3"></span><span class="badgecount">39</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/121061?sort=reputationchange#121061">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+13</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">6,569</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,503</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="160746"></a> 
+        <div class="user user-160746"> 
+         <a href="http://english.stackexchange.com/users/160746/phil-sweet">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/05d2d8389e2c11b6466025859cc9b168?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Phil Sweet">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/160746/phil-sweet">Phil Sweet</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/160746?sort=reputationchange#160746">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+57</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,648</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,489</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="170793"></a> 
+        <div class="user user-170793"> 
+         <a href="http://english.stackexchange.com/users/170793/bea-bonmot">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/60cHv.jpg?s=128&amp;g=1&amp;s=48" title="Bea Bonmot">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/170793/bea-bonmot">Bea Bonmot</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+          <br> 
+          <span class="faintText">member for: 28 days <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/170793?sort=reputationchange#170793">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,424</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,423</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="58761"></a> 
+        <div class="user user-58761"> 
+         <a href="http://english.stackexchange.com/users/58761/medica">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/jlp4Q.png?s=128&amp;g=1&amp;s=48" title="medica">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/58761/medica">medica</a></h2> 
+          <span title="11 gold badges"><span class="badge1"></span><span class="badgecount">11</span></span> 
+          <span title="83 silver badges"><span class="badge2"></span><span class="badgecount">83</span></span> 
+          <span title="162 bronze badges"><span class="badge3"></span><span class="badgecount">162</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/58761?sort=reputationchange#58761">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+15</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">44,537</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,376</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="131620"></a> 
+        <div class="user user-131620"> 
+         <a href="http://english.stackexchange.com/users/131620/k1eran">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/2fe888ad46808d7968c8be37b41edc2f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="k1eran">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/131620/k1eran">k1eran</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span> 
+          <span title="29 bronze badges"><span class="badge3"></span><span class="badgecount">29</span></span> 
+          <br> 
+          <span class="faintText">member for: 9 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/131620?sort=reputationchange#131620">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+6</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">4,197</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,299</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="18696"></a> 
+        <div class="user user-18696"> 
+         <a href="http://english.stackexchange.com/users/18696/andrew-leach">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/dV7nD.png?s=128&amp;g=1&amp;s=48" title="Andrew Leach">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/18696/andrew-leach">Andrew Leach</a></h2> 
+          <span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span> 
+          <span title="120 silver badges"><span class="badge2"></span><span class="badgecount">120</span></span> 
+          <span title="212 bronze badges"><span class="badge3"></span><span class="badgecount">212</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/18696?sort=reputationchange#18696">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+24</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">65,438</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,224</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="147488"></a> 
+        <div class="user user-147488"> 
+         <a href="http://english.stackexchange.com/users/147488/ringo">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/npZnW.jpg?s=128&amp;g=1&amp;s=48" title="ringo">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/147488/ringo">ringo</a></h2> 
+          <span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span> 
+          <span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/147488?sort=reputationchange#147488">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+81</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,148</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,224</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="547"></a> 
+        <div class="user user-547"> 
+         <a href="http://english.stackexchange.com/users/547/colin-fine">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1f582a5bbfcc9b3cb9d1a34bbb577372?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Colin Fine">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/547/colin-fine">Colin Fine</a></h2> 
+          <span title="42 silver badges"><span class="badge2"></span><span class="badgecount">42</span></span> 
+          <span title="123 bronze badges"><span class="badge3"></span><span class="badgecount">123</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/547?sort=reputationchange#547">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">47,397</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,177</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="15299"></a> 
+        <div class="user user-15299"> 
+         <a href="http://english.stackexchange.com/users/15299/john-lawler">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/5249dedc1b7654310b7715149499bd8c?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="John Lawler">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/15299/john-lawler">John Lawler</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="83 silver badges"><span class="badge2"></span><span class="badgecount">83</span></span> 
+          <span title="212 bronze badges"><span class="badge3"></span><span class="badgecount">212</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/15299?sort=reputationchange#15299">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">65,412</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,174</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="61157"></a> 
+        <div class="user user-61157"> 
+         <a href="http://english.stackexchange.com/users/61157/kevin-workman">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/466ddfaf2156cc2c0af1ca81b56b8c65?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Kevin Workman">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/61157/kevin-workman">Kevin Workman</a></h2> 
+          <span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span> 
+          <span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/61157?sort=reputationchange#61157">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+39</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,987</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,162</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="129681"></a> 
+        <div class="user user-129681"> 
+         <a href="http://english.stackexchange.com/users/129681/jel">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/sOXFL.jpg?s=128&amp;g=1&amp;s=48" title="JEL">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/129681/jel">JEL</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span> 
+          <span title="58 bronze badges"><span class="badge3"></span><span class="badgecount">58</span></span> 
+          <br> 
+          <span class="faintText">member for: 10 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/129681?sort=reputationchange#129681">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-19</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">13,645</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,158</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="76472"></a> 
+        <div class="user user-76472"> 
+         <a href="http://english.stackexchange.com/users/76472/araucaria">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f8c648a4125353954fb55129f61d1909?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Araucaria">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/76472/araucaria">Araucaria</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span> 
+          <span title="76 bronze badges"><span class="badge3"></span><span class="badgecount">76</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 11 months <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/76472?sort=reputationchange#76472">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-15</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">19,772</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,136</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="169770"></a> 
+        <div class="user user-169770"> 
+         <a href="http://english.stackexchange.com/users/169770/mystic-odin">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/0b7642b654852a9715d4ceeda47d12f8?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Mystic Odin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://english.stackexchange.com/users/169770/mystic-odin">Mystic Odin</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span> 
+          <br> 
+          <span class="faintText">member for: 34 days <span class="permalink" style="display: none;"><a href="/leagues/35/quarter/english/2016-04-01/169770?sort=reputationchange#169770">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,072</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,071</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;page=5" title="go to page 5"><span class="page-numbers">5</span></a> 
+        <span class="page-numbers dots">…</span> 
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;page=64" title="go to page 64"><span class="page-numbers">64</span></a> 
+        <a href="/leagues/35/quarter/english/2016-04-01?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>5,000+</td>
+          <td class="count">1</td>
+         </tr> 
+         <tr>
+          <td>2,500+</td>
+          <td class="count">4</td>
+         </tr> 
+         <tr>
+          <td>1,000+</td>
+          <td class="count">30</td>
+         </tr> 
+         <tr>
+          <td>500+</td>
+          <td class="count">83</td>
+         </tr> 
+         <tr>
+          <td>200+</td>
+          <td class="count">219</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">345</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">463</td>
+         </tr> 
+         <tr>
+          <td>25+</td>
+          <td class="count">679</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">1,835</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>100,000+</td> 
+          <td class="count">3</td> 
+         </tr> 
+         <tr> 
+          <td>50,000+</td> 
+          <td class="count">11</td> 
+         </tr> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">45</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">120</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">227</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">361</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">494</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">924</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">1,936</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">5,401</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">110,225</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463245268});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

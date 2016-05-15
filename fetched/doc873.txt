@@ -1,0 +1,1244 @@
+https://stackexchange.com/leagues/54/week/android
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - Android Enthusiasts - May 8, 2016 - May 13, 2016 - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/54/week/android/2016-05-08"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/54/Week/2016-05-08/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f54%2fweek%2fandroid#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f54%2fweek%2fandroid">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/week/stackoverflow/2016-05-08?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/week/superuser/2016-05-08?sort=reputationchange"> Super User </option> <option value="/leagues/21/week/math/2016-05-08?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/week/askubuntu/2016-05-08?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/week/serverfault/2016-05-08?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/week/english/2016-05-08?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/week/unix/2016-05-08?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/week/apple/2016-05-08?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/week/gaming/2016-05-08?sort=reputationchange"> Arqade </option> <option value="/leagues/52/week/programmers/2016-05-08?sort=reputationchange"> Programmers </option> <option value="/leagues/29/week/tex/2016-05-08?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/week/android/2016-05-08?sort=reputationchange" selected> Android Enthusiasts </option> <option value="/leagues/4/week/meta/2016-05-08?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/week/electronics/2016-05-08?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/week/physics/2016-05-08?sort=reputationchange"> Physics </option> <option value="/leagues/19/week/stats/2016-05-08?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/week/dba/2016-05-08?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/week/ru-stackoverflow/2016-05-08?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/week/security/2016-05-08?sort=reputationchange"> Information Security </option> <option value="/leagues/86/week/codereview/2016-05-08?sort=reputationchange"> Code Review </option> <option value="/leagues/42/week/wordpress/2016-05-08?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/week/gis/2016-05-08?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/week/scifi/2016-05-08?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/week/mathoverflow/2016-05-08?sort=reputationchange"> MathOverflow </option> <option value="/leagues/23/week/diy/2016-05-08?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/week/webapps/2016-05-08?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/week/sharepoint/2016-05-08?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/week/cooking/2016-05-08?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/week/graphicdesign/2016-05-08?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/week/gamedev/2016-05-08?sort=reputationchange"> Game Development </option> <option value="/leagues/99/week/drupal/2016-05-08?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/week/ux/2016-05-08?sort=reputationchange"> User Experience </option> <option value="/leagues/229/week/ell/2016-05-08?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/week/pt-stackoverflow/2016-05-08?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/week/webmasters/2016-05-08?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/week/magento/2016-05-08?sort=reputationchange"> Magento </option> <option value="/leagues/191/week/academia/2016-05-08?sort=reputationchange"> Academia </option> <option value="/leagues/125/week/travel/2016-05-08?sort=reputationchange"> Travel </option> <option value="/leagues/213/week/salesforce/2016-05-08?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/week/workplace/2016-05-08?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/week/photo/2016-05-08?sort=reputationchange"> Photography </option> <option value="/leagues/177/week/mathematica/2016-05-08?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/week/raspberrypi/2016-05-08?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/week/money/2016-05-08?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/week/movies/2016-05-08?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/week/rpg/2016-05-08?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/week/cs/2016-05-08?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/week/codegolf/2016-05-08?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/week/chemistry/2016-05-08?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/week/mechanics/2016-05-08?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/week/bicycles/2016-05-08?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/week/blender/2016-05-08?sort=reputationchange"> Blender </option> <option value="/leagues/359/week/rus/2016-05-08?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/week/music/2016-05-08?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/week/biology/2016-05-08?sort=reputationchange"> Biology </option> <option value="/leagues/139/week/christianity/2016-05-08?sort=reputationchange"> Christianity </option> <option value="/leagues/95/week/skeptics/2016-05-08?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/week/anime/2016-05-08?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/week/crypto/2016-05-08?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/week/bitcoin/2016-05-08?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/week/parenting/2016-05-08?sort=reputationchange"> Parenting </option> <option value="/leagues/243/week/networkengineering/2016-05-08?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/week/cstheory/2016-05-08?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/307/week/puzzling/2016-05-08?sort=reputationchange"> Puzzling </option> <option value="/leagues/327/week/worldbuilding/2016-05-08?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/113/week/judaism/2016-05-08?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/week/fitness/2016-05-08?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/week/german/2016-05-08?sort=reputationchange"> German Language </option> <option value="/leagues/275/week/aviation/2016-05-08?sort=reputationchange"> Aviation </option> <option value="/leagues/288/week/arduino/2016-05-08?sort=reputationchange"> Arduino </option> <option value="/leagues/60/week/boardgames/2016-05-08?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/week/dsp/2016-05-08?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/week/sqa/2016-05-08?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/week/softwarerecs/2016-05-08?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/week/philosophy/2016-05-08?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/week/history/2016-05-08?sort=reputationchange"> History </option> <option value="/leagues/123/week/gardening/2016-05-08?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/week/japanese/2016-05-08?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/week/writers/2016-05-08?sort=reputationchange"> Writers </option> <option value="/leagues/37/week/stackapps/2016-05-08?sort=reputationchange"> Stack Apps </option> <option value="/leagues/259/week/sound/2016-05-08?sort=reputationchange"> Sound Design </option> <option value="/leagues/211/week/islam/2016-05-08?sort=reputationchange"> Islam </option> <option value="/leagues/93/week/pm/2016-05-08?sort=reputationchange"> Project Management </option> <option value="/leagues/91/week/quant/2016-05-08?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/333/week/ja-stackoverflow/2016-05-08?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/341/week/lifehacks/2016-05-08?sort=reputationchange"> Lifehacks </option> <option value="/leagues/137/week/french/2016-05-08?sort=reputationchange"> French Language </option> <option value="/leagues/165/week/scicomp/2016-05-08?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/week/spanish/2016-05-08?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/week/productivity/2016-05-08?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/week/pets/2016-05-08?sort=reputationchange"> Pets </option> <option value="/leagues/255/week/space/2016-05-08?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/week/datascience/2016-05-08?sort=reputationchange"> Data Science </option> <option value="/leagues/64/week/homebrew/2016-05-08?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/week/expressionengine/2016-05-08?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/week/hermeneutics/2016-05-08?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/week/video/2016-05-08?sort=reputationchange"> Video Production </option> <option value="/leagues/197/week/windowsphone/2016-05-08?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/week/outdoors/2016-05-08?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/week/emacs/2016-05-08?sort=reputationchange"> Emacs </option> <option value="/leagues/189/week/sports/2016-05-08?sort=reputationchange"> Sports </option> <option value="/leagues/237/week/reverseengineering/2016-05-08?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/week/chinese/2016-05-08?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/week/cogsci/2016-05-08?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/week/chess/2016-05-08?sort=reputationchange"> Chess </option> <option value="/leagues/143/week/linguistics/2016-05-08?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/week/astronomy/2016-05-08?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/week/robotics/2016-05-08?sort=reputationchange"> Robotics </option> <option value="/leagues/245/week/opendata/2016-05-08?sort=reputationchange"> Open Data </option> <option value="/leagues/215/week/patents/2016-05-08?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/week/es-stackoverflow/2016-05-08?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/week/tor/2016-05-08?sort=reputationchange"> Tor </option> <option value="/leagues/223/week/politics/2016-05-08?sort=reputationchange"> Politics </option> <option value="/leagues/315/week/hinduism/2016-05-08?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/week/freelancing/2016-05-08?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/week/vi/2016-05-08?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/week/craftcms/2016-05-08?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/week/joomla/2016-05-08?sort=reputationchange"> Joomla </option> <option value="/leagues/321/week/startups/2016-05-08?sort=reputationchange"> Startups </option> <option value="/leagues/343/week/engineering/2016-05-08?sort=reputationchange"> Engineering </option> <option value="/leagues/313/week/buddhism/2016-05-08?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/week/russian/2016-05-08?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/week/economics/2016-05-08?sort=reputationchange"> Economics </option> <option value="/leagues/363/week/law/2016-05-08?sort=reputationchange"> Law </option> <option value="/leagues/155/week/bricks/2016-05-08?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/week/expatriates/2016-05-08?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/week/tridion/2016-05-08?sort=reputationchange"> Tridion </option> <option value="/leagues/291/week/matheducators/2016-05-08?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/week/earthscience/2016-05-08?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/week/martialarts/2016-05-08?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/week/elementaryos/2016-05-08?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/week/ham/2016-05-08?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/week/civicrm/2016-05-08?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/week/health/2016-05-08?sort=reputationchange"> Health </option> <option value="/leagues/351/week/woodworking/2016-05-08?sort=reputationchange"> Woodworking </option> <option value="/leagues/277/week/ebooks/2016-05-08?sort=reputationchange"> Ebooks </option> <option value="/leagues/386/week/ethereum/2016-05-08?sort=reputationchange"> Ethereum </option> <option value="/leagues/231/week/sustainability/2016-05-08?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/217/week/genealogy/2016-05-08?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/week/italian/2016-05-08?sort=reputationchange"> Italian Language </option> <option value="/leagues/279/week/alcohol/2016-05-08?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/173/week/poker/2016-05-08?sort=reputationchange"> Poker </option> <option value="/leagues/365/week/opensource/2016-05-08?sort=reputationchange"> Open Source </option> <option value="/leagues/335/week/hsm/2016-05-08?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/week/musicfans/2016-05-08?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/week/coffee/2016-05-08?sort=reputationchange"> Coffee </option> <option value="/leagues/371/week/portuguese/2016-05-08?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/week/hardwarerecs/2016-05-08?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/week/computergraphics/2016-05-08?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/week/communitybuilding/2016-05-08?sort=reputationchange"> Community Building </option> <option value="/leagues/361/week/mythology/2016-05-08?sort=reputationchange"> Mythology </option> <option value="/leagues/384/week/3dprinting/2016-05-08?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/week/latin/2016-05-08?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/week/retrocomputing/2016-05-08?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/week/languagelearning/2016-05-08?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/54/week/android" class="youarehere">Week</a> 
+        <a href="/leagues/54/month/android">Month</a> 
+        <a href="/leagues/54/quarter/android">Quarter</a> 
+        <a href="/leagues/54/year/android">Year</a> 
+        <a href="/leagues/54/alltime/android">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://android.stackexchange.com"> 
+        <div class="site-bubble" style="background-color: #f0f0f0; border-color: #f0f0f0;"> 
+         <img src="http://cdn.sstatic.net/Sites/android/img/icon-48.png?v=f0f0f0" alt="Android Enthusiasts" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://android.stackexchange.com">Android Enthusiasts</a></h2> 
+        <p> Q&amp;A for enthusiasts and power users of the Android operating system <span class="league-user-count">(105,171 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>May 8, 2016 - May 13, 2016</h3> 
+        <a href="/leagues/54/week/android/2016-05-01" class="viewolder">« prev week</a> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+       <div class="fr">
+        Sort by: 
+        <select onchange="$(this).siblings('.sortLoader').css('visibility', 'visible'); window.location.href = $(this).val(); return false;"> <option value="/leagues/54/week/android/2016-05-08?sort=reputationchange" selected> Week Rank </option> <option value="/leagues/54/week/android/2016-05-08?sort=rankchange"> Rank Change </option> <option value="/leagues/54/week/android/2016-05-08?sort=totalreputation"> Total Reputation </option> </select> 
+        <span class="sortLoader"></span> 
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="120021"></a> 
+        <div class="user user-120021"> 
+         <a href="http://android.stackexchange.com/users/120021/benjamins">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/m6dr5.png?s=128&amp;g=1&amp;s=48" title="benjaminS">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/120021/benjamins">benjaminS</a></h2> 
+          <span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span> 
+          <span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span> 
+          <br> 
+          <span class="faintText">member for: 9 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/120021?sort=reputationchange#120021">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+58</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,139</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">327</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="80731"></a> 
+        <div class="user user-80731"> 
+         <a href="http://android.stackexchange.com/users/80731/ycc-swe">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/679c6c29f8fe8f7611708def0c73d47c?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="ycc_swe">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/80731/ycc-swe">ycc_swe</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 5 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/80731?sort=reputationchange#80731">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+80</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">369</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">270</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="16575"></a> 
+        <div class="user user-16575"> 
+         <a href="http://android.stackexchange.com/users/16575/izzy">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/e2b29bd68eb03763a0e18c691ecf9fa5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Izzy">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/16575/izzy">Izzy</a></h2> 
+          <span title="27 gold badges"><span class="badge1"></span><span class="badgecount">27</span></span> 
+          <span title="147 silver badges"><span class="badge2"></span><span class="badgecount">147</span></span> 
+          <span title="426 bronze badges"><span class="badge3"></span><span class="badgecount">426</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/16575?sort=reputationchange#16575">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">0</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">59,506</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">215</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="96277"></a> 
+        <div class="user user-96277"> 
+         <a href="http://android.stackexchange.com/users/96277/firelord">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/z7EY7.png?s=128&amp;g=1&amp;s=48" title="Firelord">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/96277/firelord">Firelord</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="27 silver badges"><span class="badge2"></span><span class="badgecount">27</span></span> 
+          <span title="67 bronze badges"><span class="badge3"></span><span class="badgecount">67</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 2 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/96277?sort=reputationchange#96277">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,160</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">185</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="131553"></a> 
+        <div class="user user-131553"> 
+         <a href="http://android.stackexchange.com/users/131553/beeshyams">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/g1yOf.jpg?s=128&amp;g=1&amp;s=48" title="beeshyams">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/131553/beeshyams">beeshyams</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span> 
+          <span title="37 bronze badges"><span class="badge3"></span><span class="badgecount">37</span></span> 
+          <br> 
+          <span class="faintText">member for: 7 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/131553?sort=reputationchange#131553">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">4,811</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">125</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="12464"></a> 
+        <div class="user user-12464"> 
+         <a href="http://android.stackexchange.com/users/12464/skittleys">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/490691fe3d08b338e98864b213ae2b39?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="skittleys">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/12464/skittleys">skittleys</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/12464?sort=reputationchange#12464">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">306</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">110</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="120030"></a> 
+        <div class="user user-120030"> 
+         <a href="http://android.stackexchange.com/users/120030/schwertspize">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/058bc09e75034d54c285eea45c440fdf?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Schwertspize">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/120030/schwertspize">Schwertspize</a></h2> 
+          <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+          <br> 
+          <span class="faintText">member for: 9 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/120030?sort=reputationchange#120030">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">218</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">100</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="981"></a> 
+        <div class="user user-981"> 
+         <a href="http://android.stackexchange.com/users/981/eldarerathis">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1187840ca619374e5f2d91943870d7e1?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="eldarerathis">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/981/eldarerathis">eldarerathis</a></h2> 
+          <span title="13 gold badges"><span class="badge1"></span><span class="badgecount">13</span></span> 
+          <span title="108 silver badges"><span class="badge2"></span><span class="badgecount">108</span></span> 
+          <span title="151 bronze badges"><span class="badge3"></span><span class="badgecount">151</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/981?sort=reputationchange#981">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">0</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">30,708</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">80</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="79619"></a> 
+        <div class="user user-79619"> 
+         <a href="http://android.stackexchange.com/users/79619/lyricwulf">
+          <div class="faviconBox">
+           <img src="https://lh5.googleusercontent.com/-IL6bDEiP4SQ/AAAAAAAAAAI/AAAAAAAAAzo/CBkQ01EFA_A/photo.jpg?sz=128&amp;s=48" title="LyricWulf">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/79619/lyricwulf">LyricWulf</a></h2> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 6 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/79619?sort=reputationchange#79619">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+59</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,598</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">52</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="146132"></a> 
+        <div class="user user-146132"> 
+         <a href="http://android.stackexchange.com/users/146132/acejavelin">
+          <div class="faviconBox">
+           <img src="https://lh5.googleusercontent.com/-SRoX9FNLRDE/AAAAAAAAAAI/AAAAAAAAC9k/qIEjmE0ambo/photo.jpg?sz=128&amp;s=48" title="acejavelin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/146132/acejavelin">acejavelin</a></h2> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/146132?sort=reputationchange#146132">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+67</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">838</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">45</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="12442"></a> 
+        <div class="user user-12442"> 
+         <a href="http://android.stackexchange.com/users/12442/dan-hulme">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/47244a17f72cee237f57f4c4b9613ea1?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Dan Hulme">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/12442/dan-hulme">Dan Hulme</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="52 silver badges"><span class="badge2"></span><span class="badgecount">52</span></span> 
+          <span title="94 bronze badges"><span class="badge3"></span><span class="badgecount">94</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/12442?sort=reputationchange#12442">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">26,037</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">45</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="118423"></a> 
+        <div class="user user-118423"> 
+         <a href="http://android.stackexchange.com/users/118423/zeiss-ikon">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/pQaPN.jpg?s=128&amp;g=1&amp;s=48" title="Zeiss Ikon">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/118423/zeiss-ikon">Zeiss Ikon</a></h2> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 9 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/118423?sort=reputationchange#118423">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">474</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">40</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="9556"></a> 
+        <div class="user user-9556"> 
+         <a href="http://android.stackexchange.com/users/9556/narayanan">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/81b612d5d3c7384419d4a1129b340495?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Narayanan">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/9556/narayanan">Narayanan</a></h2> 
+          <span title="12 gold badges"><span class="badge1"></span><span class="badgecount">12</span></span> 
+          <span title="28 silver badges"><span class="badge2"></span><span class="badgecount">28</span></span> 
+          <span title="57 bronze badges"><span class="badge3"></span><span class="badgecount">57</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/9556?sort=reputationchange#9556">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+20</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,261</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">35</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="23293"></a> 
+        <div class="user user-23293"> 
+         <a href="http://android.stackexchange.com/users/23293/akhil">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/lX98b.jpg?s=128&amp;g=1&amp;s=48" title="Akhil">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/23293/akhil">Akhil</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span> 
+          <span title="27 bronze badges"><span class="badge3"></span><span class="badgecount">27</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/23293?sort=reputationchange#23293">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,874</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">25</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="156"></a> 
+        <div class="user user-156"> 
+         <a href="http://android.stackexchange.com/users/156/gathrawn">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/5fbf2ec8ddb394753cb7c8bda35dcf35?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="GAThrawn">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/156/gathrawn">GAThrawn</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="61 silver badges"><span class="badge2"></span><span class="badgecount">61</span></span> 
+          <span title="119 bronze badges"><span class="badge3"></span><span class="badgecount">119</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/156?sort=reputationchange#156">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+12</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">19,999</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">25</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="126666"></a> 
+        <div class="user user-126666"> 
+         <a href="http://android.stackexchange.com/users/126666/alex-s">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/5628c03fe452a8420fc130408101e057?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Alex.S">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/126666/alex-s">Alex.S</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span> 
+          <br> 
+          <span class="faintText">member for: 8 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/126666?sort=reputationchange#126666">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">459</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="81870"></a> 
+        <div class="user user-81870"> 
+         <a href="http://android.stackexchange.com/users/81870/georgi">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/64e3d25b2687a6267472e3a207f3aadc?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Georgi">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/81870/georgi">Georgi</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 5 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/81870?sort=reputationchange#81870">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+50</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">416</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="9544"></a> 
+        <div class="user user-9544"> 
+         <a href="http://android.stackexchange.com/users/9544/michael-hoffman">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/e0e05e2601563d540cd1ae61c9281ac7?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Michael Hoffman">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/9544/michael-hoffman">Michael Hoffman</a></h2> 
+          <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span> 
+          <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/9544?sort=reputationchange#9544">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">541</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3646"></a> 
+        <div class="user user-3646"> 
+         <a href="http://android.stackexchange.com/users/3646/chahk">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/de6792108652d86d7a2738f5f4886505?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Chahk">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/3646/chahk">Chahk</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="34 silver badges"><span class="badge2"></span><span class="badgecount">34</span></span> 
+          <span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/3646?sort=reputationchange#3646">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+75</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">17,326</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="501"></a> 
+        <div class="user user-501"> 
+         <a href="http://android.stackexchange.com/users/501/nicolas-raoul">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/c3af87f6b1d4d247d01ce3b73d918fc7?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Nicolas Raoul">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/501/nicolas-raoul">Nicolas Raoul</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="25 silver badges"><span class="badge2"></span><span class="badgecount">25</span></span> 
+          <span title="44 bronze badges"><span class="badge3"></span><span class="badgecount">44</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/501?sort=reputationchange#501">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,808</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="72228"></a> 
+        <div class="user user-72228"> 
+         <a href="http://android.stackexchange.com/users/72228/hash-brown">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/GGDFk.jpg?s=128&amp;g=1&amp;s=48" title="HasH_BrowN">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/72228/hash-brown">HasH_BrowN</a></h2> 
+          <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span> 
+          <span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 8 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/72228?sort=reputationchange#72228">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+42</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,821</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4003"></a> 
+        <div class="user user-4003"> 
+         <a href="http://android.stackexchange.com/users/4003/t0mm13b">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/121b360a4d7d20be6e220dcdb555649f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="t0mm13b">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/4003/t0mm13b">t0mm13b</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span> 
+          <span title="49 bronze badges"><span class="badge3"></span><span class="badgecount">49</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/4003?sort=reputationchange#4003">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+192</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">11,891</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="5342"></a> 
+        <div class="user user-5342"> 
+         <a href="http://android.stackexchange.com/users/5342/geffchang">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/4e7305053878d9ab30892251f2553148?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="geffchang">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/5342/geffchang">geffchang</a></h2> 
+          <span title="16 gold badges"><span class="badge1"></span><span class="badgecount">16</span></span> 
+          <span title="38 silver badges"><span class="badge2"></span><span class="badgecount">38</span></span> 
+          <span title="65 bronze badges"><span class="badge3"></span><span class="badgecount">65</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/5342?sort=reputationchange#5342">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+151</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">13,782</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">18</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="92056"></a> 
+        <div class="user user-92056"> 
+         <a href="http://android.stackexchange.com/users/92056/tamoghna-chowdhury">
+          <div class="faviconBox">
+           <img src="https://lh5.googleusercontent.com/-uQx5Y_Kw7e8/AAAAAAAAAAI/AAAAAAAAAHo/eVGrbgpm8pQ/photo.jpg?sz=128&amp;s=48" title="Tamoghna Chowdhury">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/92056/tamoghna-chowdhury">Tamoghna Chowdhury</a></h2> 
+          <span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span> 
+          <span title="29 bronze badges"><span class="badge3"></span><span class="badgecount">29</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 3 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/92056?sort=reputationchange#92056">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,159</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">15</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="71718"></a> 
+        <div class="user user-71718"> 
+         <a href="http://android.stackexchange.com/users/71718/matega">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/bc9974ffea440a2ed30324c8663a0aff?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="matega">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/71718/matega">matega</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 8 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/71718?sort=reputationchange#71718">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+47</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">667</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">15</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="7813"></a> 
+        <div class="user user-7813"> 
+         <a href="http://android.stackexchange.com/users/7813/usr-local-%ce%95%ce%a8%ce%97%ce%95%ce%9b%ce%a9%ce%9d">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/9cea03925dc9a030cacd430132ba0c6e?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="usr-local-ΕΨΗΕΛΩΝ">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/7813/usr-local-%ce%95%ce%a8%ce%97%ce%95%ce%9b%ce%a9%ce%9d">usr-local-ΕΨΗΕΛΩΝ</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span> 
+          <span title="37 bronze badges"><span class="badge3"></span><span class="badgecount">37</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/7813?sort=reputationchange#7813">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+187</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">779</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">15</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="101950"></a> 
+        <div class="user user-101950"> 
+         <a href="http://android.stackexchange.com/users/101950/aaron-gillion">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/GFyxv.jpg?s=128&amp;g=1&amp;s=48" title="Aaron Gillion">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/101950/aaron-gillion">Aaron Gillion</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span> 
+          <span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 1 month <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/101950?sort=reputationchange#101950">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,161</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">15</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="135936"></a> 
+        <div class="user user-135936"> 
+         <a href="http://android.stackexchange.com/users/135936/michelfrancis-bustillos">
+          <div class="faviconBox">
+           <img src="https://lh5.googleusercontent.com/-wBqwnNhqaR0/AAAAAAAAAAI/AAAAAAAAC50/LaK9yAk-uqY/photo.jpg?sz=128&amp;s=48" title="Michelfrancis Bustillos">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/135936/michelfrancis-bustillos">Michelfrancis Bustillos</a></h2> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/135936?sort=reputationchange#135936">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-13</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">477</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="51657"></a> 
+        <div class="user user-51657"> 
+         <a href="http://android.stackexchange.com/users/51657/claws">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/184eac4ec29c6e4fd7fb1930d1e08317?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="claws">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/51657/claws">claws</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/51657?sort=reputationchange#51657">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+35</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">258</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="5908"></a> 
+        <div class="user user-5908"> 
+         <a href="http://android.stackexchange.com/users/5908/nobugs">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/6a350b21fd58489ac951a72324548184?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="NoBugs">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://android.stackexchange.com/users/5908/nobugs">NoBugs</a></h2> 
+          <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span> 
+          <span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/54/week/android/2016-05-08/5908?sort=reputationchange#5908">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">432</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/54/week/android/2016-05-08?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/54/week/android/2016-05-08?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/54/week/android/2016-05-08?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/54/week/android/2016-05-08?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/54/week/android/2016-05-08?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/54/week/android/2016-05-08?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/54/week/android/2016-05-08?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>200+</td>
+          <td class="count">3</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">7</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">9</td>
+         </tr> 
+         <tr>
+          <td>25+</td>
+          <td class="count">15</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">111</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>50,000+</td> 
+          <td class="count">1</td> 
+         </tr> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">4</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">16</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">28</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">40</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">61</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">147</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">364</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">1,444</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">103,066</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463245209});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

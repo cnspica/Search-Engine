@@ -1,0 +1,1792 @@
+http://superuser.com/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line
+<!doctype html>
+<html itemscope itemtype="http://schema.org/QAPage">
+ <head> 
+  <title>How do I determine if my system is Windows 10 using the command line? - Super User</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/superuser/img/favicon.ico?v=29b26120d2c5"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/superuser/img/apple-touch-icon.png?v=0ad5b7a83e49"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Super User" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@super_user"> 
+  <meta name="twitter:domain" content="superuser.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/superuser/img/apple-touch-icon@2.png?v=e869e4459439&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="How do I determine if my system is Windows 10 using the command line?"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="I'm working with InstallAnywhere, an old program for creating installers. I would like to install a particular file, only in case of Windows XP and Windows Vista.
+
+Due to InstallAnywhere limitations, "> 
+  <meta property="og:url" content="http://superuser.com/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line"> 
+  <link rel="canonical" href="http://superuser.com/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=36086b43db82"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/superuser/all.css?v=5f613421ca56"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed for question 'How do I determine if my system is Windows 10 using the command line?'" href="/feeds/question/1075989"> 
+  <meta name="twitter:app:country" content="US"> 
+  <meta name="twitter:app:name:iphone" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:iphone" content="871299723"> 
+  <meta name="twitter:app:url:iphone" content="se-zaphod://superuser.com/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line"> 
+  <meta name="twitter:app:name:ipad" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:ipad" content="871299723"> 
+  <meta name="twitter:app:url:ipad" content="se-zaphod://superuser.com/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line"> 
+  <meta name="twitter:app:name:googleplay" content="Stack Exchange Android"> 
+  <meta name="twitter:app:url:googleplay" content="http://superuser.com/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line"> 
+  <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin"> 
+  <script>
+        
+            StackExchange.ready(function () {
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:8,shownCommentCount:5,highlightColor:'#BEB013',backgroundColor:'#FFF',questionId:1075989});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('3', '1075989');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('3');
+                StackExchange.realtime.subscribeToTopBarNotifications('3');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463245221,"routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"Super User","description":"Q&A for computer enthusiasts and power users","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LcDNwYAAAAAAG_X1rC8kTtLBP6XS2Ym1N0n9kSY","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":3,"enableSocialMediaInSharePopup":true},"user":{"fkey":"71fb98341fa62b820a5808f83f182453","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"d911fb28bd9f","js/moderator.en.js":"50831ba8e994","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"97cc5d07283a","js/wmd.en.js":"b2e347d78fbd","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"8c8f022d2f71","js/inline-tag-editing.en.js":"a815357d00cd","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"a78702da7b99","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"79fde18773e4","js/explore-qlist.en.js":"2a9a628fca7f","js/events.en.js":"122722c4c15a","js/keyboard-shortcuts.en.js":"e92b66602411","js/external-editor.en.js":"683ce04845f3"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="question-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script> 
+  <iframe id="adzerk-user-match" width="0" height="0" frameborder="0" scrolling="no" onload="window.AUMIframeDone=true" src="https://ssum-sec.casalemedia.com/usermatch?s=183712&amp;cb=https%3A%2F%2Fengine.adzerk.net%2Fudb%2F22%2Fsync%2Fi.gif%3FpartnerId%3D1%26userId%3D" style="display: none;" marginheight="0" marginwidth="0"></iframe> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//superuser.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://blog.superuser.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//superuser.com" class="current-site-link site-link js-gps-track" data-id="3" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-superuser" title="Super User"></div> Super User </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.superuser.com" class="site-link js-gps-track" data-id="77" data-gps-track="
+            site.switch({ target_site:77, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-superusermeta" title="Meta Super User"></div> Meta Super User </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://superuser.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fsuperuser.com%2fquestions%2f1075989%2fhow-do-i-determine-if-my-system-is-windows-10-using-the-command-line" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://superuser.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fsuperuser.com%2fquestions%2f1075989%2fhow-do-i-determine-if-my-system-is-windows-10-using-the-command-line" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://superuser.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fsuperuser.com%2fquestions%2f1075989%2fhow-do-i-determine-if-my-system-is-windows-10-using-the-command-line" class="login-link">sign up</a> <a href="https://superuser.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fsuperuser.com%2fquestions%2f1075989%2fhow-do-i-determine-if-my-system-is-windows-10-using-the-command-line" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.superuser.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Super User </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li class="youarehere"><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content"> 
+    <div itemscope itemtype="http://schema.org/Question"> 
+     <link itemprop="image" href="//cdn.sstatic.net/Sites/superuser/img/apple-touch-icon.png?v=0ad5b7a83e49"> 
+     <div id="herobox"> 
+      <div id="hero-content"> 
+       <div id="close">
+        <a title="click to minimize">_</a>
+       </div> 
+       <div id="blurb">
+         Super User is a question and answer site for computer enthusiasts and power users. It's 100% free, no registration required. 
+        <br> 
+        <br> 
+        <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fsuperuser.com%2fquestions%2f1075989%2fhow-do-i-determine-if-my-system-is-windows-10-using-the-command-line" id="tell-me-more" class="button">Sign up</a> 
+       </div> 
+       <div id="desc"> 
+        <b>Here's how it works:</b> 
+        <ol id="hiw"> 
+         <li id="q">Anybody can ask a question </li> 
+         <li id="an">Anybody can answer </li> 
+         <li id="b">The best answers are voted up and rise to the top </li> 
+        </ol> 
+       </div> 
+       <div style="clear: both"></div> 
+      </div> 
+      <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+     </div> 
+     <div id="question-header"> 
+      <h1 itemprop="name"><a href="/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line" class="question-hyperlink">How do I determine if my system is Windows 10 using the command line?</a></h1> 
+     </div> 
+     <div id="mainbar"> 
+      <div class="question" data-questionid="1075989" id="question"> 
+       <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk68225054",4).enableDynamicSiteSelection().setZone(29); });
+            </script> 
+       <div class="everyonelovesstackoverflow" id="adzerk68225054"> 
+       </div> 
+       <table> 
+        <tbody>
+         <tr> 
+          <td class="votecell"> 
+           <div class="vote"> 
+            <input type="hidden" name="_id_" value="1075989"> 
+            <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a> 
+            <span itemprop="upvoteCount" class="vote-count-post ">27</span> 
+            <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a> 
+            <a class="star-off" href="#">favorite</a> 
+            <div class="favoritecount">
+             <b>4</b>
+            </div> 
+           </div> </td> 
+          <td class="postcell"> 
+           <div> 
+            <div class="post-text" itemprop="text"> 
+             <p>I'm working with InstallAnywhere, an old program for creating installers. I would like to install a particular file, only in case of Windows XP and Windows Vista.</p> 
+             <p>Due to InstallAnywhere limitations, this is not possible. I can only decide to delete the file once it has already been installed, based on a rule.</p> 
+             <p>Within that rule, I can check for the platform on which I'm running, which gives me the possibility to check for Windows XP, Windows Vista, Windows 7, etc. but not for Windows 10. I can't say "Perform this action when the system is not XP or Vista", so I need to say "Perform this action on all those platforms, which are not XP or Vista".</p> 
+             <p>However, I can launch command-line commands and catch the result, so here's my question: is there a command which I can use for determining if I'm working on a Windows 10 system?</p> 
+            </div> 
+            <div class="post-taglist"> 
+             <a href="/questions/tagged/command-line" class="post-tag" title="show questions tagged 'command-line'" rel="tag">command-line</a> 
+             <a href="/questions/tagged/windows-10" class="post-tag" title="show questions tagged 'windows-10'" rel="tag">windows-10</a> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/q/1075989" title="short permalink to this question" class="short-link" id="link-post-1075989">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/1075989/edit" class="suggest-edit-post" title="">improve this question</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/1075989/revisions" title="show all edits to this post">edited <span title="2016-05-12 22:14:12Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/393570/burgi">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/72a0d0bf1e9c3e915e3138a2356b5201?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/393570/burgi">Burgi</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">2,021</span>
+                   <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span>
+                   <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span>
+                   <span title="27 bronze badges"><span class="badge3"></span><span class="badgecount">27</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td class="post-signature owner"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   asked 
+                  <span title="2016-05-12 09:08:19Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/547147/dominique">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/841b7391f3f7873bec1a8d9d8d2dc759?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/547147/dominique">Dominique</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">260</span>
+                   <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span>
+                   <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> 
+           </div> </td> 
+         </tr> 
+         <tr> 
+          <td class="votecell"></td> 
+          <td> 
+           <div id="comments-1075989" class="comments "> 
+            <table> 
+             <tbody data-remaining-comments-count="3" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+              <tr id="comment-1518977" class="comment "> 
+               <td> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy"><code>winver</code> will pop up the About Windows dialog if typed in cmd or Start. Would that work? Alternatively - <a href="http://stackoverflow.com/questions/1792740/how-to-tell-what-version-of-windows-and-or-cmd-exe-a-batch-file-is-running-on" title="how to tell what version of windows and or cmd exe a batch file is running on">stackoverflow.com/questions/1792740/…</a></span> –&nbsp;
+                 <a href="/users/347380/tetsujin" title="7,495 reputation" class="comment-user">Tetsujin</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 09:17:54Z" class="relativetime-clean">2 days ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-1519095" class="comment "> 
+               <td> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Thanks for the reply, but I'm looking for a command-line command which gives an answer in the command-line, I can't use the information in a batch-type way when a messagebox pops up.</span> –&nbsp;
+                 <a href="/users/547147/dominique" title="260 reputation" class="comment-user owner">Dominique</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 11:14:32Z" class="relativetime-clean">2 days ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-1519119" class="comment "> 
+               <td> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Check for cmd.exe version, it's the easiest and supported at least since XP. There is a question about it.</span> –&nbsp;
+                 <a href="/users/571014/keyweeusr" title="112 reputation" class="comment-user">KeyWeeUsr</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 11:55:40Z" class="relativetime-clean">2 days ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-1519185" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">google cmd versions, each os has different version number, you can check for that and you don't need any unnecessary long script or another program - <a href="http://stackoverflow.com/q/32544673/5994041">here</a></span> –&nbsp;
+                 <a href="/users/571014/keyweeusr" title="112 reputation" class="comment-user">KeyWeeUsr</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 13:38:27Z" class="relativetime-clean">2 days ago</span></span> 
+                 <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-1519342" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">5</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Just type <code>ver</code>. For example, on my Windows 7 system I get "Microsoft Windows [Version 6.1.7601]" which tells me that I am running Windows 7 (which has <a href="https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions" rel="nofollow">version number 6.1</a>).</span> –&nbsp;
+                 <a href="/users/47553/andreas-rejbrand" title="266 reputation" class="comment-user">Andreas Rejbrand</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 16:30:27Z" class="relativetime-clean">2 days ago</span></span> 
+                 <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                </div> </td> 
+              </tr> 
+             </tbody> 
+            </table> 
+           </div> 
+           <div id="comments-link-1075989" data-rep="50" data-anon="true"> 
+            <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></a>
+            <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>3</b> more comments</a> 
+           </div> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <div id="answers"> 
+       <a name="tab-top"></a> 
+       <div id="answers-header"> 
+        <div class="subheader answers-subheader"> 
+         <h2> 6 Answers <span style="display:none;" itemprop="answerCount">6</span> </h2> 
+         <div> 
+          <div id="tabs"> 
+           <a href="/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active"> active</a> 
+           <a href="/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest"> oldest</a> 
+           <a class="youarehere" href="/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes"> votes</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <a name="1076021"></a> 
+       <div id="answer-1076021" class="answer accepted-answer" data-answerid="1076021" itemscope itemtype="http://schema.org/Answer" itemprop="acceptedAnswer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="1076021"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">49</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+             <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h3>Is there a command to determine if I'm working on a Windows 10 system?</h3> 
+             <p>You can use <code>wmic</code>.</p> 
+             <p>The following command will return the Windows version.</p> 
+             <pre><code>wmic os get Caption | findstr /v Caption
+</code></pre> 
+             <p>Example output:</p> 
+             <pre><code>F:\test&gt;wmic os get Caption | findstr /v Caption
+Microsoft Windows 7 Home Premium
+</code></pre> 
+             <p>If you want a little more information, you can use the following batch file (GetOS.cmd), which will retrieve and display:</p> 
+             <ul> 
+              <li>Operating System Version</li> 
+              <li>Service Pack Major Version</li> 
+              <li>Architecture (64 or 32 bit)</li> 
+             </ul> 
+             <pre class="lang-bsh prettyprint-override"><code>@echo off
+setlocal
+setlocal enabledelayedexpansion
+set _os=
+set _sp=
+rem use findstr to strip blank lines from wmic output
+rem get OS
+for /f "usebackq skip=1 tokens=3" %%i in (`wmic os get caption ^| findstr /r /v "^$"`) do (
+  set "_os=%%i"
+  )
+rem get Service Pack
+for /f "usebackq skip=1 tokens=*" %%i in (`wmic os get ServicePackMajorVersion ^| findstr /r /v "^$"`) do (
+  set "_sp=%%i"
+  )
+rem get Architecture
+for /f "usebackq skip=1 tokens=*" %%i in (`wmic OS get OSArchitecture ^| findstr /r /v "^$"`) do (
+  set "_bits=%%i"
+  )
+echo Operating System: %_os%
+echo Service Pack Major Version: %_sp%
+echo Architecture: %_bits%
+endlocal
+</code></pre> 
+             <p>The OS Version is stored in <code>%_os</code>, Service Pack Major Version is stored in <code>%_sp%</code>, and the Architecture is stored in <code>%_bits%</code>.</p> 
+             <p>Notes:</p> 
+             <ul> 
+              <li><p>Not completely tested as I don't have all the OS and Service Pack combinations to test it with.</p></li> 
+              <li><p>The <code>for</code> command retrieves only the 3rd part (token) of the OS. This will work for the desktop versions (if you want to distinguish Server 2008 from other versions you will need to find another solution).</p></li> 
+              <li><p><code>%_os</code> will be set to one of the following values: <code>Server</code>, <code>Vista</code>, <code>7</code>, <code>8</code>, <code>8.1</code> or <code>10</code>.</p></li> 
+             </ul> 
+             <p>Example output:</p> 
+             <pre><code>F:\test&gt;GetOS
+Operating System: 7
+Service Pack Major Version: 1
+Architecture: 64-bit
+
+F:\test&gt;
+</code></pre> 
+             <hr> 
+             <h3>Further Reading</h3> 
+             <ul> 
+              <li><a href="http://ss64.com/nt/">An A-Z Index of the Windows CMD command line</a> - An excellent reference for all things Windows command line related.</li> 
+              <li><a href="http://ss64.com/nt/findstr.html">findstr</a> - Search for strings in files.</li> 
+              <li><a href="http://ss64.com/nt/for_cmd.html">for /f</a> - Loop command against the results of another command.</li> 
+              <li><a href="http://ss64.com/nt/if.html">if</a> - Conditionally perform a command.</li> 
+              <li><a href="http://ss64.com/nt/wmic.html">wmic</a> - Windows Management Instrumentation Command.</li> 
+             </ul> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/1076021" title="short permalink to this answer" class="short-link" id="link-post-1076021">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/1076021/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/1076021/revisions" title="show all edits to this post">edited <span title="2016-05-13 23:19:51Z" class="relativetime">17 hours ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/358758/marc-2377">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/acf2378a9e7c7ecb5ed0956acd6e10a0?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/358758/marc-2377">Marc.2377</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">126</span>
+                   <span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 10:18:31Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/337631/davidpostill">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/Ohyu2.png?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/337631/davidpostill">DavidPostill</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 48,448" dir="ltr">48.4k</span>
+                   <span title="17 gold badges"><span class="badge1"></span><span class="badgecount">17</span></span>
+                   <span title="95 silver badges"><span class="badge2"></span><span class="badgecount">95</span></span>
+                   <span title="117 bronze badges"><span class="badge3"></span><span class="badgecount">117</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-1076021" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="3" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-1519088" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">After some testing, I have decided to use the following command: <code>wmic os get Caption | findstr /V Caption</code></span> –&nbsp;
+                  <a href="/users/547147/dominique" title="260 reputation" class="comment-user owner">Dominique</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 11:06:00Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1519090" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Great! I'm happy you found the answer useful!</span> –&nbsp;
+                  <a href="/users/337631/davidpostill" title="48,448 reputation" class="comment-user">DavidPostill</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 11:08:10Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1519156" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">This is very helpful. I will use this in the future.</span> –&nbsp;
+                  <a href="/users/588878/matthew" title="391 reputation" class="comment-user">Matthew</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 13:04:53Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1519172" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@Matthew I think the expectation is that some other system would be running the batch file and capturing its output (or it would be called manually from an existing Command prompt window).</span> –&nbsp;
+                  <a href="/users/347295/tripehound" title="101 reputation" class="comment-user">TripeHound</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 13:23:13Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1519181" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@mathew open a cmd prompt where you saved the file and type getos</span> –&nbsp;
+                  <a href="/users/337631/davidpostill" title="48,448 reputation" class="comment-user">DavidPostill</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 13:35:25Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-1076021" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>3</b> more comments</a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1727348587",4).enableDynamicSiteSelection().setZone(30); });
+            </script> 
+       <div class="everyonelovesstackoverflow" id="adzerk1727348587"> 
+       </div> 
+       <a name="1076177"></a> 
+       <div id="answer-1076177" class="answer" data-answerid="1076177" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="1076177"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">32</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>I can't believe this long and no ver command</p> 
+             <pre><code>C:\&gt;ver
+
+Microsoft Windows [Version 10.0.10586]
+
+C:\&gt;
+</code></pre> 
+             <p>It works in redirects so you can do</p> 
+             <pre><code>ver | find "Version 10."
+</code></pre> 
+             <p>But you should normally write "for this and all future versions" so you're better off enumerating through the previous ones.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/1076177" title="short permalink to this answer" class="short-link" id="link-post-1076177">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/1076177/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/1076177/revisions" title="show all edits to this post">edited <span title="2016-05-13 21:55:30Z" class="relativetime">19 hours ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 17:27:51Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/71189/joshua">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/f81685ba2a5040485725e7e078d157b6?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/71189/joshua">Joshua</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">441</span>
+                   <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span>
+                   <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-1076177" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="4" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-1519617" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">FYI <code>ver</code> does <i>not</i> work in PowerShell. It is <code>CMD</code> specific.</span> –&nbsp;
+                  <a href="/users/94133/keltari" title="33,684 reputation" class="comment-user">Keltari</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 22:18:10Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1519665" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">3</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@Keltari But <code>iex "ver"</code> does!</span> –&nbsp;
+                  <a href="/users/380318/ben-n" title="11,396 reputation" class="comment-user">Ben N</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 01:10:29Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1519988" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">The output of <code>ver</code> can be a bit misleading. On the machine I am sitting at right now it returns <code>Microsoft Windows [Version 6.1.7601]</code>. But i am quite certain it runs Windows 7, not Windows 6.</span> –&nbsp;
+                  <a href="/users/168919/philipp" title="171 reputation" class="comment-user">Philipp</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 13:13:42Z" class="relativetime-clean">yesterday</span></span> 
+                  <span class="edited-yes" title="this comment was edited 3 times"></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1520001" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@Philipp Yes, Windows 7 and 8 are "really" patch releases of Vista, 6.1 and 6.2 respectively; the major version bump is strictly marketing. I do not know whether the changes in Windows 10 are significant enough to warrant a major version bump. (From the hardline software engineering perspective, the major version of any software should only ever be bumped to indicate a backward compatibility break; it follows that large major versions are <i>bad</i>. Unfortunately, the marketing department likes large numbers.)</span> –&nbsp;
+                  <a href="/users/42674/zwol" title="752 reputation" class="comment-user">zwol</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 13:37:09Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1520152" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@Philipp - its easy to find a map from version number to marketing names, e.g., <a href="http://prajwaldesai.com/windows-operating-system-version-numbers/" rel="nofollow">here</a></span> –&nbsp;
+                  <a href="/users/302899/davidbak" title="103 reputation" class="comment-user">davidbak</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 16:46:41Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-1076177" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>4</b> more comments</a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="1075995"></a> 
+       <div id="answer-1075995" class="answer" data-answerid="1075995" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="1075995"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">17</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <blockquote> 
+              <p>systeminfo</p> 
+             </blockquote> 
+             <p>gets many usefull infos like Operating system, System type (32/64 bit) and so long:</p> 
+             <p><a href="http://i.stack.imgur.com/MhrvW.png"><img src="http://i.stack.imgur.com/MhrvW.png" alt="enter image description here"></a></p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/1075995" title="short permalink to this answer" class="short-link" id="link-post-1075995">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/1075995/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 09:17:56Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/192966/dude">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/wFmgQ.jpg?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/192966/dude">duDE</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">7,716</span>
+                   <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span>
+                   <span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span>
+                   <span title="32 bronze badges"><span class="badge3"></span><span class="badgecount">32</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-1075995" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-1519022" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Yes, I would recommend <code>systeminfo</code> also. As you can see from the image above, it will display your operating system as well as other information you may need.</span> –&nbsp;
+                  <a href="/users/588878/matthew" title="391 reputation" class="comment-user">Matthew</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 10:00:02Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1519091" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">3</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Thanks for the quick reply. <code>systeminfo</code> indeed gives the information I'm looking for (hence the upvote), but it takes quite some time (on my PC it takes more than 15 seconds). Therefore I've opted for the <code>wmic</code> solution, found in the next answer.</span> –&nbsp;
+                  <a href="/users/547147/dominique" title="260 reputation" class="comment-user owner">Dominique</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 11:08:17Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1519628" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">This is what I ask people to run when I need to find out os/version they are running on: <code>cmd /c systeminfo | findstr /B /C:"OS Name" /C:"OS Version"</code></span> –&nbsp;
+                  <a href="/users/81203/zespri" title="300 reputation" class="comment-user">zespri</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 22:56:13Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-1075995" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="1076000"></a> 
+       <div id="answer-1076000" class="answer" data-answerid="1076000" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="1076000"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">1</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>I don't have any experience with InstallAnywhere but there are two options to see what OS is installed using a command-line.</p> 
+             <ol> 
+              <li><p>Using Cmd</p> <pre><code>systeminfo.exe
+</code></pre> <p>Using the command <code>systeminfo.exe</code>, you can see result of under the field <code>OS Name</code>. This may give you more information than you require.</p> <p>More information on this command can be found in <a href="https://technet.microsoft.com/en-gb/library/bb491007.aspx" rel="nofollow">Microsoft TechNet</a>.</p></li> 
+              <li><p>Powershell</p> <p>Alternatively you could use the following Powershell script which will return the exact information you want. </p> <pre><code>Get-CimInstance Win32_OperatingSystem | Select-Object  Caption | ForEach{ $_.Caption }
+</code></pre></li> 
+             </ol> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/1076000" title="short permalink to this answer" class="short-link" id="link-post-1076000">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/1076000/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/1076000/revisions" title="show all edits to this post">edited <span title="2016-05-12 22:25:53Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/334516/muru">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/0ce9def9898b5e9e0339ccc26c57ae94?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/334516/muru">muru</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">144</span>
+                   <span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 09:28:46Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/582827/tim-mahood">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/7a80150e3900a0fca858de2687a1d035?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/582827/tim-mahood">Tim Mahood</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">64</span>
+                   <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+                   <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-1076000" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-1076000" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="1076529"></a> 
+       <div id="answer-1076529" class="answer" data-answerid="1076529" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="1076529"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">0</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Since one can run powershell code in the Command Prompt, the following should also give you the version: </p> 
+             <pre><code>powershell (Get-WmiObject -class Win32_OperatingSystem).Caption
+</code></pre> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/1076529" title="short permalink to this answer" class="short-link" id="link-post-1076529">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/1076529/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 12:41:22Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/593625/luk-storms">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/dT36E.jpg?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/593625/luk-storms">Luk Storms</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">101</span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-1076529" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-1520255" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Windows XP doesn't include powershell AFAIK so this wouldn't work on XP unless powershell was manually installed</span> –&nbsp;
+                  <a href="/users/190015/mgamerz" title="101 reputation" class="comment-user">Mgamerz</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 19:20:05Z" class="relativetime-clean">21 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-1076529" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="1076659"></a> 
+       <div id="answer-1076659" class="answer" data-answerid="1076659" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="1076659"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">-2</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Try the following</p> 
+             <p>Start Run winver</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/1076659" title="short permalink to this answer" class="short-link" id="link-post-1076659">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/1076659/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 20:29:50Z" class="relativetime">20 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/400877/meccaneck">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/934de3bb00d75eb14183e3e91bd16599?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/400877/meccaneck">meccaneck</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+                   <span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-1076659" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-1520325" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Not helpful for the problem at hand...</span> –&nbsp;
+                  <a href="/users/358758/marc-2377" title="126 reputation" class="comment-user">Marc.2377</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 21:40:02Z" class="relativetime-clean">19 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-1520746" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">This does not provide an answer to the question. Once you have sufficient <a href="http://superuser.com/help/whats-reputation">reputation</a> you will be able to <a href="http://superuser.com/help/privileges/comment">comment on any post</a>; instead, <a href="http://meta.stackexchange.com/questions/214173/why-do-i-need-50-reputation-to-comment-what-can-i-do-instead">provide answers that don't require clarification from the asker</a>. - <a href="/review/low-quality-posts/533600">From Review</a></span> –&nbsp;
+                  <a href="/users/393570/burgi" title="2,021 reputation" class="comment-user">Burgi</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-14 16:12:07Z" class="relativetime-clean">48 mins ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-1076659" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="new-answer"></a> 
+       <form id="post-form" action="/questions/1075989/answer/submit" method="post" class="post-form"> 
+        <input type="hidden" id="post-id" value="1075989"> 
+        <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false"> 
+        <input type="hidden" name="referrer" value=""> 
+        <h2 class="space">Your Answer</h2> 
+        <script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.options.snippets.enabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script> 
+        <div id="post-editor" class="post-editor js-post-editor"> 
+         <div style="position: relative;"> 
+          <div class="wmd-container"> 
+           <div id="wmd-button-bar" class="wmd-button-bar"></div> 
+           <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea> 
+          </div> 
+         </div> 
+         <div class="fl" style="margin-top: 8px; height:24px;">
+          &nbsp;
+         </div> 
+         <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">
+          draft saved
+         </div> 
+         <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">
+          draft discarded
+         </div> 
+         <div id="wmd-preview" class="wmd-preview"></div> 
+         <div></div> 
+         <div class="edit-block"> 
+          <input id="fkey" name="fkey" type="hidden" value="71fb98341fa62b820a5808f83f182453"> 
+          <input id="author" name="author" type="text"> 
+         </div> 
+        </div> 
+        <div style="position: relative;"> 
+         <div class="form-item dno new-post-login"> 
+          <div class="new-login-form"> 
+           <div class="new-login-left"> 
+            <h3>Sign up or <a id="login-link" href="/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2fsuperuser.com%2fquestions%2f1075989%2fhow-do-i-determine-if-my-system-is-windows-10-using-the-command-line%23new-answer">log in</a></h3> 
+            <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script> 
+            <div class="preferred-login google-login"> 
+             <p><span class="icon"></span><span>Sign up using Google</span></p> 
+            </div> 
+            <div class="preferred-login facebook-login"> 
+             <p><span class="icon"></span><span>Sign up using Facebook</span></p> 
+            </div> 
+            <div class="preferred-login stackexchange-login"> 
+             <p><span class="icon"></span><span>Sign up using Email and Password</span></p> 
+            </div> 
+           </div> 
+           <input type="hidden" name="manual-openid" class="manual-openid"> 
+           <input type="hidden" name="use-facebook" class="use-facebook" value="false"> 
+           <input type="hidden" name="use-google" class="use-google" value="false"> 
+           <input type="button" class="submit-openid" value="Submit" style="display:none"> 
+           <div class="new-login-right"> 
+            <h3>Post as a guest</h3> 
+            <div class="form-item"> 
+             <table> 
+              <tbody>
+               <tr> 
+                <td class="vm"> 
+                 <div> 
+                  <label for="display-name">Name</label> 
+                  <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"> 
+                 </div> 
+                 <div> 
+                  <label for="m-address">Email</label> 
+                  <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown"> 
+                 </div> </td> 
+               </tr> 
+              </tbody>
+             </table> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fsuperuser.com%2fquestions%2f1075989%2fhow-do-i-determine-if-my-system-is-windows-10-using-the-command-line%23new-answer', 'question_page');
+                    }
+                );
+            </script> 
+         <noscript> 
+          <h3>Post as a guest</h3> 
+          <div class="form-item"> 
+           <table> 
+            <tbody>
+             <tr> 
+              <td class="vm"> 
+               <div> 
+                <label for="display-name">Name</label> 
+                <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"> 
+               </div> 
+               <div> 
+                <label for="m-address">Email</label> 
+                <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown"> 
+               </div> </td> 
+             </tr> 
+            </tbody>
+           </table> 
+          </div> 
+         </noscript> 
+        </div> 
+        <div class="form-submit cbt"> 
+         <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110"> 
+         <a href="#" class="btn-clear discard-answer dno">discard</a> 
+         <p class="privacy-policy-agreement"> By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p> 
+         <input type="hidden" name="legalLinksShown" value="1"> 
+        </div> 
+       </form> 
+       <h2 class="bottom-notice" data-loc="1"> Not the answer you're looking for? Browse other questions tagged <a href="/questions/tagged/command-line" class="post-tag" title="show questions tagged 'command-line'" rel="tag">command-line</a> <a href="/questions/tagged/windows-10" class="post-tag" title="show questions tagged 'windows-10'" rel="tag">windows-10</a> or <a href="/questions/ask">ask your own question</a>. </h2> 
+      </div> 
+     </div> 
+     <div id="sidebar" class="show-votes"> 
+      <div class="module question-stats"> 
+       <table id="qinfo"> 
+        <tbody>
+         <tr> 
+          <td> <p class="label-key">asked</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key" title="2016-05-12 09:08:19Z"><b>2 days ago</b></p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">viewed</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"> <b>3500 times</b> </p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">active</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2016-05-13 23:19:51Z">today</a></b></p> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk938433773",[5,17]).enableDynamicSiteSelection().setZone(56016); });
+            </script> 
+      <div class="everyonelovesstackoverflow" id="adzerk938433773"> 
+      </div> 
+      <div class="module" id="chat-feature"> 
+       <h4><a href="http://chat.stackexchange.com" id="h-chat-link">Visit Chat</a></h4> 
+       <div class="related" id="ad502-rooms"></div> 
+       <script>
+// <!--
+    StackExchange.ready(
+    function () {
+        var options = {
+            chatUrl: 'http://chat.stackexchange.com',
+            reloadUrl: '/api/recent-chat',
+            preloadData: {"activeUsers":104,"activeRooms":52,"rooms":[{"name":"Root Access","id":118,"lastPost":1463243596,"posts":1180277,"users":[{"name":"DavidPostill","id":133966,"emailhash":"!https://i.stack.imgur.com/Ohyu2.png?s=128\u0026g=1","lastPost":1463243596},{"name":"Guitar Shoe Dave","id":171610,"emailhash":"!https://i.stack.imgur.com/W7SPQ.jpg?s=128\u0026g=1","lastPost":1463243336},{"name":"Burgi","id":175223,"emailhash":"72a0d0bf1e9c3e915e3138a2356b5201","lastPost":1463243074},{"name":"Bob","id":35822,"emailhash":"082d6a8bed92991450502419bdf5d420","lastPost":1463242702},{"name":"ChatBot John Cavil","id":87560,"emailhash":"!https://i.stack.imgur.com/jt6hT.png?s=128\u0026g=1","lastPost":1463242362},{"name":"Journeyman Geek","id":10208,"emailhash":"e88cb2b3858ca0df735806f1a8476b23","lastPost":1463240514},{"name":"Developer","id":206050,"emailhash":"9163ea307f47dcca2800238638780a37","lastPost":1463236197}],"messages":[{"date":1463243596,"user":"DavidPostill","userid":133966}],"singleImage":false,"tags":["cats","computers","dogs","foxes","headphones","noitsbecky"]},{"name":"Super User Blog Editor Room","id":356,"lastPost":1463000263,"posts":19777,"users":[{"name":"Canadian Luke","id":18230,"emailhash":"!https://i.stack.imgur.com/R5Mkd.jpg?s=128\u0026g=1","lastPost":1462986748},{"name":"Journeyman Geek","id":10208,"emailhash":"e88cb2b3858ca0df735806f1a8476b23","lastPost":1462800988}],"messages":[{"date":1463000263,"user":"Simon Sheehan","userid":14671}],"singleImage":false,"tags":[]}]} 
+        };
+
+        StackExchange.chatAd.init(options);
+    });
+// -->
+</script> 
+      </div> 
+      <div class="module sidebar-linked"> 
+       <h4 id="h-linked">Linked</h4> 
+       <div class="linked" data-tracker="lq=1"> 
+        <div class="spacer"> 
+         <a href="/q/1045778" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes  default">
+           19
+          </div> </a> 
+         <a href="/questions/1045778/which-version-of-windows-do-i-have" class="question-hyperlink">Which version of Windows do I have?</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="module sidebar-related"> 
+       <h4 id="h-related">Related</h4> 
+       <div class="related js-gps-related-questions" data-tracker="rq=1"> 
+        <div class="spacer"> 
+         <a href="/q/961573" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           2 
+          </div> </a>
+         <a href="/questions/961573/run-command-prompt-as-administrator-by-default-on-windows-10" class="question-hyperlink">Run Command Prompt as Administrator by Default on Windows 10</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/965146" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/965146/how-to-make-custom-quick-action-in-windows-10" class="question-hyperlink">How to make custom Quick Action in Windows 10</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/972936" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           5 
+          </div> </a>
+         <a href="/questions/972936/how-to-determine-windows-architecture-version-on-disconnected-volume" class="question-hyperlink">How to determine Windows architecture version on disconnected volume?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/990595" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/990595/change-sample-rate-bit-depth-from-command-line" class="question-hyperlink">Change sample rate/bit depth from command line</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/1005330" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           1 
+          </div> </a>
+         <a href="/questions/1005330/windows-command-prompt-default-directory-randomly-changing" class="question-hyperlink">Windows command prompt default directory randomly changing</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/1015777" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/1015777/windows-10-system-font-size-change-from-command-line" class="question-hyperlink">Windows 10 system font size change from command line</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/1046179" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/1046179/disable-the-windows-ascii-color-escape-wrapping-in-git-bash" class="question-hyperlink">Disable the windows ASCII color escape wrapping in git bash</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/1049871" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/1049871/how-to-link-a-windows-10-user-account-to-a-microsoft-account-login-from-a-script" class="question-hyperlink">How to link a Windows 10 user account to a Microsoft account login from a script?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/1062371" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/1062371/sh-command-not-found-on-windows-10" class="question-hyperlink">sh command not found on Windows 10</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/1069705" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           1 
+          </div> </a>
+         <a href="/questions/1069705/cygwin-paste-long-line-is-inserting-newline-at-wrap-point" class="question-hyperlink">Cygwin paste long line is inserting newline at wrap point</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="hot-network-questions" class="module"> 
+       <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })"> Hot Network Questions </a> </h4> 
+       <ul> 
+        <li> 
+         <div class="favicon favicon-wordpress" title="WordPress Development Stack Exchange"></div><a href="http://wordpress.stackexchange.com/questions/226605/what-wp-folder-can-i-use-to-write-files-to" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:110 }); posts_hot_network.click({ item_type:2, location:11 })"> What WP folder can I use to write files to? </a> </li> 
+        <li> 
+         <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/32866/are-people-on-average-more-likely-to-die-from-extinction-than-a-car-crash" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })"> Are people on average more likely to die from extinction than a car crash? </a> </li> 
+        <li> 
+         <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/41594/klemperer-rosette-vs-relativistic-kill-vehicles" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })"> Klemperer rosette vs Relativistic Kill Vehicles </a> </li> 
+        <li> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784962/why-the-existence-of-taylor-series-doesnt-imply-it-coverges-to-the-original-fun" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> Why the existence of taylor series doesn't imply it coverges to the original function </a> </li> 
+        <li> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123170/is-it-possible-to-improve-brute-force-guessing-of-a-password-with-a-picture-of-t" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> Is it possible to improve brute-force guessing of a password with a picture of the keyboard used to enter it? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/64010/would-i-qualify-for-a-usda-loan" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })"> Would I qualify for a USDA loan? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68201/too-many-countries-to-apply-for-indian-e-visa" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })"> Too many countries to apply for Indian E-Visa? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80093/how-can-i-keep-players-whose-characters-are-unconscious-entertained" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })"> How can I keep players, whose characters are unconscious, entertained? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/32829/has-a-fifteen-year-old-from-canada-discovered-a-hidden-mayan-city" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })"> Has a fifteen year old from Canada discovered a hidden Mayan city? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/309586/suppress-single-macro-from-style-file" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })"> suppress single macro from style file </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325593/what-do-you-call-a-person-who-suggests-ideas" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })"> What do you call a person who suggests ideas? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/32550/what-should-he-have-said-at-the-door" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })"> What should he have said at the door? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123045/is-it-acceptable-practice-to-only-increment-a-number-when-changing-a-password" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> Is it acceptable practice to only increment a number when changing a password? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-blender" title="Blender Stack Exchange"></div><a href="http://blender.stackexchange.com/questions/52587/how-to-create-a-flashlight-light" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:502 }); posts_hot_network.click({ item_type:2, location:11 })"> How to create a flashlight light </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/27527/why-did-some-aircraft-use-hand-crank-instead-of-gravity-for-alternate-gear-exten" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })"> Why did some aircraft use hand-crank instead of gravity for alternate gear extension? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-stats" title="Cross Validated"></div><a href="http://stats.stackexchange.com/questions/212564/why-is-a-low-1-chi-square-measure-unlikely-when-degress-of-freedom-are-high" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:65 }); posts_hot_network.click({ item_type:2, location:11 })"> Why is a low (&lt;1) chi-square measure unlikely when degress of freedom are high? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784166/why-are-there-no-triernions" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> Why are There No "Triernions"? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/79854/fibonacci-products" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })"> Fibonacci products </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67134/is-it-unethical-to-notify-a-company-about-an-employee-who-is-seeking-employment" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })"> Is it unethical to notify a company about an employee who is seeking employment elsewhere? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1785074/what-should-the-fundamental-theorem-of-linear-algebra-assert" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> What should "The Fundamental Theorem of Linear Algebra" assert? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/32567/what-am-i-bloom-in-sunlight-and-rain-but-fade-in-shadow" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })"> What am I - bloom in sunlight and rain, but fade in shadow </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325089/opposite-of-as-early-as-possible" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })"> Opposite of "As early as possible" </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/308600/how-to-include-a-lenny-face-in-a-latex-document-e-g-%cd%a1-%cd%9c%ca%96-%cd%a1" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })"> How to include a Lenny face in a LaTeX document? e.g. ( ͡° ͜ʖ ͡°) </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325568/problem-that-causes-progress-to-come-to-a-complete-halt" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })"> Problem that causes progress to come to a complete halt </a> </li> 
+       </ul> 
+       <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })"> more hot questions </a> 
+      </div> 
+     </div> 
+     <div id="feed-link"> 
+      <div id="feed-link-text"> 
+       <a href="/feeds/question/1075989" title="feed of this question and its answers"> <span class="feed-icon"></span>question feed </a> 
+      </div> 
+     </div> 
+     <script>
+StackExchange.ready(function(){$.get('/posts/1075989/ivc/2c4b');});
+</script> 
+     <noscript> 
+      <div>
+       <img src="/posts/1075989/ivc/2c4b" class="dno" alt="" width="0" height="0">
+      </div> 
+     </noscript>
+     <div style="display:none" id="prettify-lang"></div>
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://blog.superuser.com/?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.superuser.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3573 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Super User works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+  <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('command-line,windows-10');; ados_load();
+        });   
+        
+</script> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-3');
+                        ga('set', 'dimension2', '|command-line|windows-10|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

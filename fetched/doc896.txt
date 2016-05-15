@@ -1,0 +1,640 @@
+https://stackexchange.com/newsletters/newsletter?site=android.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Android Enthusiasts Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dandroid.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dandroid.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 54, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 54, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Android Enthusiasts Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://android.stackexchange.com">Android Enthusiasts</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #f7f7f7; background-image: url('//sstatic.net/stackexchange/Img/newsletters/android-bg.png'); font-family: Tahoma, Geneva, Arial, sans-serif;" background="//sstatic.net/stackexchange/Img/newsletters/android-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/android-header.png" alt="Android Enthusiasts Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;-moz-border-radius-topleft: 10px; -moz-border-radius-topright: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; background: white; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; border: 6px solid #ddd;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #666!important; font-size: 16px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144760/is-battery-consumption-linear" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Is battery consumption linear?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am benchmarking an app using the batteryhistorian. The result is a chart where every percentile is a "tick". After I've measured the battery consumption and let the battery drain to half, I would ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/battery" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">battery</a> <a href="http://android.stackexchange.com/questions/tagged/battery-life" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">battery-life</a> <a href="http://android.stackexchange.com/questions/tagged/battery-history" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">battery-history</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/bbc2e0263802aa33e21362e0f2d0499a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/165455/v-vocor" target="_blank" style="color: #a1c13e; text-decoration: none!important;">V.Vocor</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/g1yOf.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://android.stackexchange.com/users/131553/beeshyams" target="_blank" style="color: #a1c13e; text-decoration: none!important;">beeshyams</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144855/how-come-my-phone-says-im-connected-to-the-wifi-yet-the-internet-doesnt-work" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How come my phone says I'm connected to the wifi yet the internet doesn't work?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">My phone is a Samsung Galaxy Grand Prime and it says I'm connected to the wifi, but none of my apps actually work. I get notifications of the apps, but when I click the app it says "network connection ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/wi-fi" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">wi-fi</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/9e3bc220bd77f1686d5e8a381cda07d6?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/165605/maple" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Maple</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/GF6H5.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://android.stackexchange.com/users/165648/imran-aftab" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Imran Aftab</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144549/problem-copying-files-with-unusual-characters-in-their-names-to-the-galaxy-s4-sd" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Problem copying files with unusual characters in their names to the Galaxy S4 SD card but not to the phone</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I run Gentoo Linux on my laptop. MTP connection to my phone works well, and I can see both the phone memory and my SD card. I can copy files to and from both to my laptop with no difficulty. The ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/file-management" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">file-management</a> <a href="http://android.stackexchange.com/questions/tagged/mtp" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">mtp</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/267f3ec9be7e142cbe203cc2436bf999?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/165067/astaines" target="_blank" style="color: #a1c13e; text-decoration: none!important;">astaines</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/d3Asa.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://android.stackexchange.com/users/164899/benjamin-h" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Benjamin H.</a> 0 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144770/what-represents-bootloader-in-the-possible-outputs-of-adb-get-state" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">What represents 'bootloader' in the possible outputs of `adb get-state`?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I recently employed the use of adb get-state and decided to know further about it. Running adb inter alia shows: adb get-state - prints: offline | bootloader | device I intend to ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/adb" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">adb</a> <a href="http://android.stackexchange.com/questions/tagged/command-line" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">command-line</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/z7EY7.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/96277/firelord" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Firelord</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144481/how-to-unbrick-nexus-9-after-an-ota-update" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to unbrick nexus 9 after an OTA update?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">After the latest OTA update my Nexus 9 boots forever. If I turn it off and then turn it on, it shows and then it boots forever (green, red, blue, yellow circles, squares, circle slices move ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/unbricking" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">unbricking</a> <a href="http://android.stackexchange.com/questions/tagged/ota-update" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">ota-update</a> <a href="http://android.stackexchange.com/questions/tagged/nexus-9" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">nexus-9</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f533f240ae24be5084a53dc2f66e0958?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/37042/crabman" target="_blank" style="color: #a1c13e; text-decoration: none!important;">CrabMan</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/935ebd9a062f77adcd92ed3721cbcccf?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://android.stackexchange.com/users/165006/al%c3%a9cio-carvalho" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Alécio Carvalho</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144498/how-to-remove-root-backdoor-on-an-allwinner-device" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to remove root backdoor on an Allwinner device?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I read on The Register that a root backdoor is triggered by writing rootmydevice to the special file /proc/sunxi_debug/sunxi_debug. That gives the current running process root privileges. If that file ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/root-access" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">root-access</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/8d9e5bfc08cde0d61f218c01be6c01f0?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/20553/john-rose" target="_blank" style="color: #a1c13e; text-decoration: none!important;">John Rose</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144468/recover-pictures" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Recover Pictures</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Ok, so I just dropped my android 5.1 Moto G. the screen is unresponsive and has lines and squares running along it. I was wondering if there was any way to recover photos from this phone, as it ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/internal-storage" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">internal-storage</a> <a href="http://android.stackexchange.com/questions/tagged/5.1-lollipop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">5.1-lollipop</a> <a href="http://android.stackexchange.com/questions/tagged/broken-screen" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">broken-screen</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ce513faae781e178f27bc78fedf1e03e?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/164907/josh-hurley" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Josh Hurley</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/a566720d0bd14ef40f2a5457016d1445?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://android.stackexchange.com/users/60907/roh-mish" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Roh_mish</a> 0 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 16px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/75226/how-can-i-disable-google-voice-commands-on-an-android-phone" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How can I disable Google Voice Commands on an Android phone?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I prefer not root my phone, but I'd be willing to, if it's necessary. Google Voice keeps popping-up Search and Voice Dialer randomly (about twice a minute). They enter random commands into Search bar ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/google-voice" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">google-voice</a> <a href="http://android.stackexchange.com/questions/tagged/google-voice-actions" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">google-voice-actions</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> 
+                      <div style="width: 18px; height: 18px;"></div> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by Joe 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/c6Lfn.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://android.stackexchange.com/users/48960/p-fitz" target="_blank" style="color: #a1c13e; text-decoration: none!important;">P Fitz</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/10519/how-do-i-set-a-custom-sms-tone-for-a-single-contact" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How do I set a custom SMS tone for a single contact?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">If it matters any I have an HTC Desire Z with the original Sense install. We have this monitoring service at work that keeps an eye on the various servers and starts frantically SMS'ing me whenever ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/contacts" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">contacts</a> <a href="http://android.stackexchange.com/questions/tagged/sms" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">sms</a> <a href="http://android.stackexchange.com/questions/tagged/ringtone" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">ringtone</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/fa3d3a215f82f0c4de40d29d95d36921?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/1070/tolomea" target="_blank" style="color: #a1c13e; text-decoration: none!important;">tolomea</a> 15 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2cdcd1da2bce38e3aa7d1aa9f0ad7312?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://android.stackexchange.com/users/5661/collabeta" target="_blank" style="color: #a1c13e; text-decoration: none!important;">collabeta</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 16px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144548/how-can-i-stop-this-not-signed-in-setup-phone-error" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How can I stop this "Not signed in...setup phone" error?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I recently upgraded to Marshmallow by CyanogenMod Nightly 13.0 in my Moto E (first generation). Then I flashed GApps 6.0 Nano. But then after my phone rebooted and I had those "Unfortunately, Setup ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/cyanogenmod" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">cyanogenmod</a> <a href="http://android.stackexchange.com/questions/tagged/6.0-marshmallow" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">6.0-marshmallow</a> <a href="http://android.stackexchange.com/questions/tagged/google-apps" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">google-apps</a> <a href="http://android.stackexchange.com/questions/tagged/motorola-moto-e" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">motorola-moto-e</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/a3314f478acde3cfe4ff6e6740e5943d?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/152757/shadow-sphynx" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Shadow_Sphynx</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144580/some-location-based-mobile-sites-not-working-in-chrome" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Some location based mobile sites not working in chrome</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm getting a message from some websites (m.yelp.com and nextbus.com) they do not have "permission to access your location". I have my location permission turned on for chrome in the app manager and ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/chrome-for-android" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">chrome-for-android</a> <a href="http://android.stackexchange.com/questions/tagged/permissions" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">permissions</a> <a href="http://android.stackexchange.com/questions/tagged/geolocation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">geolocation</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/d0bd5ec4d97233e5f9f5f74bd6f02357?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/165127/bi-rico" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Bi Rico</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://android.stackexchange.com/questions/144837/blank-screen-boot-loop-on-sm-t211" target="_blank" style="color: #a1c13e!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Blank screen boot loop on SM-T211</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a Samsung SM-T211 (India) tablet and am using it for 2 years. I have rooted it using ODIN and TWRP (android 4.4.2) based on online tutorials and it is working fine. Couple of days back when I ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://android.stackexchange.com/questions/tagged/4.4-kitkat" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">4.4-kitkat</a> <a href="http://android.stackexchange.com/questions/tagged/samsung" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">samsung</a> <a href="http://android.stackexchange.com/questions/tagged/boot-loop" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">boot-loop</a> <a href="http://android.stackexchange.com/questions/tagged/samsung-kies" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">samsung-kies</a> <a href="http://android.stackexchange.com/questions/tagged/unrooting" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;font-size: 11px; background-color: #F1F5E6; color: #666!important; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.25em 0.8em; line-height: 16px; border-radius: 15px;">unrooting</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/wHFnu.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://android.stackexchange.com/users/165575/janakiram" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Janakiram</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #a1c13e; text-decoration: none!important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #a1c13e; text-decoration: none!important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #a1c13e; text-decoration: none!important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #a1c13e; text-decoration: none!important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #a1c13e; text-decoration: none!important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

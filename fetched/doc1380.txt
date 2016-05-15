@@ -1,0 +1,655 @@
+https://stackexchange.com/newsletters/newsletter?site=apple.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Ask Different Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dapple.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dapple.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 46, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 46, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Ask Different Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://apple.stackexchange.com">Ask Different</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #f7f7f7; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg.png'); font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/apple-header.png" alt="Ask Different Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); -moz-box-shadow: 0 1px 1px #ccc; -webkit-box-shadow: 0 1px 1px #ccc; box-shadow: 0 1px 1px #ccc; border-radius: 6px;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/238002/in-terminal-i-cannot-type-lower-case-e" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">in terminal, I cannot type lower case e</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">2015 MBP, fully up to date OSX I open a terminal window and if I type the letter "e" (without quotes of course) it beeps and will not type the letter. Every other letter works just fine in terminal. ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/osx" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">osx</a> <a href="http://apple.stackexchange.com/questions/tagged/terminal" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">terminal</a> <a href="http://apple.stackexchange.com/questions/tagged/bash" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">bash</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/3f851fd3b744744019df59d05f771a90?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/183149/user3720729" target="_blank" style="color: #5FABE8; text-decoration: none!important;">user3720729</a> 11 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1ec0e0cee2c13b4aba5de7a7cf943e90?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/95515/pierce" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Pierce</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/237792/will-time-machine-store-the-same-data-twice-in-this-situation" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Will Time Machine store the same data twice in this situation?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I had 80 GB of movies on my internal HDD. Time Machine backed them up to an external HDD, along with everything else on my drive. I then moved those movies to another external HDD (which is not being ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/yosemite" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">yosemite</a> <a href="http://apple.stackexchange.com/questions/tagged/backup" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">backup</a> <a href="http://apple.stackexchange.com/questions/tagged/time-machine" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">time-machine</a> <a href="http://apple.stackexchange.com/questions/tagged/compression" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">compression</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/gdIGd.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/153510/fiksdal" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Fiksdal</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/75M8d.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/9058/patrix" target="_blank" style="color: #5FABE8; text-decoration: none!important;">patrix</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/237706/dead-bugs-insects-in-laptop" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Dead bugs/insects in laptop</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I cracked the LCD screen of my Macbook Air a few days ago and dropped it off at the Apple store to get it replaced. The 'Genius' there said it would cost around $500 and that having another repair ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/macbook" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">macbook</a> <a href="http://apple.stackexchange.com/questions/tagged/warranty" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">warranty</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/178d85934b6799e9910c0f25d712a8da?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/182838/craig" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Craig</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/gPwHq.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/119271/allan" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Allan</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/237662/how-does-the-sudo-key-symbol-work" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">How does the sudo key symbol work?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm trying to write a script that requests the user password for some sudo-related commands. My goal is to emulate the default method that OS X uses to obtain the user's password, Password: followed ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/osx" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">osx</a> <a href="http://apple.stackexchange.com/questions/tagged/terminal" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">terminal</a> <a href="http://apple.stackexchange.com/questions/tagged/password" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">password</a> <a href="http://apple.stackexchange.com/questions/tagged/sudo" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">sudo</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/75rO9.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/162909/perhapsmaybeharry" target="_blank" style="color: #5FABE8; text-decoration: none!important;">perhapsmaybeharry</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/75M8d.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/9058/patrix" target="_blank" style="color: #5FABE8; text-decoration: none!important;">patrix</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/237520/macbook-pro-hard-drive-speed" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Macbook Pro Hard drive speed</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have an early 2011 Macbook Pro with a Toshiba MK7559GSXP 750GB 5400rpm hard drive (that has about 48GB free) and running El Capitan. Recently I had the feeling that things were running slowly (and ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/macbook" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">macbook</a> <a href="http://apple.stackexchange.com/questions/tagged/hard-drive" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">hard-drive</a> <a href="http://apple.stackexchange.com/questions/tagged/performance" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">performance</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/375fe48b92417121e65b2145dcc840be?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/4376/peter-m" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Peter M</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/gPwHq.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/119271/allan" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Allan</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/237778/cant-write-to-usr-even-with-sudo" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Can't write to /usr even with sudo</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Here's my problem: sudo php -d detect_unicode=0 go-pear.phar ...should let me run as root and modify /usr &amp; /usr/share directories, but I get this: Below is a suggested file layout for your ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/osx" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">osx</a> <a href="http://apple.stackexchange.com/questions/tagged/terminal" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">terminal</a> <a href="http://apple.stackexchange.com/questions/tagged/el-capitan" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">el-capitan</a> <a href="http://apple.stackexchange.com/questions/tagged/php" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">php</a> <a href="http://apple.stackexchange.com/questions/tagged/sudo" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">sudo</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/35ea7272fad909d71f0b60117b7fc49b?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/81697/anadi-misra" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Anadi Misra</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/K0q67.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/72993/jasonology" target="_blank" style="color: #5FABE8; text-decoration: none!important;">jasonology</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/237684/is-there-a-keyboard-shortcut-to-move-the-position-of-a-tab-in-safari" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Is there a keyboard shortcut to move the position of a tab in Safari?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">How do you move a tab's position amongst other tabs using the keyboard? Is it possible? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/safari" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">safari</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/3qzs0.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/182821/mattdns" target="_blank" style="color: #5FABE8; text-decoration: none!important;">mattdns</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/QGRfR.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/115523/user3439894" target="_blank" style="color: #5FABE8; text-decoration: none!important;">user3439894</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/146849/how-do-i-recompile-bash-to-avoid-shellshock-the-remote-exploit-cve-2014-6271-an" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">How do I recompile Bash to avoid Shellshock (the remote exploit CVE-2014-6271 and CVE-2014-7169)?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Given that Bash 3.2 (the version shipped by OS X) is vulnerable to the remote execution exploit known as "Shell Shock" (CVE-2014-6271 and CVE-2014-7169) how do I rebuild Bash and secure my system ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/osx" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">osx</a> <a href="http://apple.stackexchange.com/questions/tagged/security" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">security</a> <a href="http://apple.stackexchange.com/questions/tagged/bash" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">bash</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/b3d3a2cce932eca144b8c13a63966404?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/1573/alblue" target="_blank" style="color: #5FABE8; text-decoration: none!important;">AlBlue</a> 349 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/b3d3a2cce932eca144b8c13a63966404?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/1573/alblue" target="_blank" style="color: #5FABE8; text-decoration: none!important;">AlBlue</a> 416 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/52879/how-to-combine-two-images-into-one-on-a-mac" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">How to combine two images into one on a Mac?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Say I have two photos (or any images), for example with the following dimensions: +----------+ +----------+ | | | | | | | | |320 x 428 | and ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/osx" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">osx</a> <a href="http://apple.stackexchange.com/questions/tagged/software-recommendation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">software-recommendation</a> <a href="http://apple.stackexchange.com/questions/tagged/image-editing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">image-editing</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0bd656eb14c50299b2744f80e69459bf?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/150/jonik" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Jonik</a> 82 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1e1c0110198e80d9c162c8481a308b70?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://apple.stackexchange.com/users/2643/jstarek" target="_blank" style="color: #5FABE8; text-decoration: none!important;">jstarek</a> 55 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/238077/queueing-notifications-to-give-me-uninterrupted-focus-time" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">queueing notifications to give me uninterrupted focus time</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Between instant messages, emails, and calendar invites, I probably get notified about once every 5-10 minutes during normal work hours, and the social pressure of dealing with the messages quickly ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/notifications" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">notifications</a> <a href="http://apple.stackexchange.com/questions/tagged/notification-center" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">notification-center</a> <a href="http://apple.stackexchange.com/questions/tagged/do-not-disturb" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">do-not-disturb</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/8f62c30d1a1f6207e81d6c15f8fa67cb?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/46188/dan" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Dan</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/238264/how-do-i-set-skype-as-the-default-handler-for-tel-urls-instead-of-facetime" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">How do I set Skype as the default handler for tel: URLs instead of FaceTime?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm trying to change the default handler for the tel: URL scheme to use Skype.app instead of FaceTime.app. Whenever I change the handler using lstool (the CLI component of RCDefaultApp; see this ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/facetime" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">facetime</a> <a href="http://apple.stackexchange.com/questions/tagged/skype" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">skype</a> <a href="http://apple.stackexchange.com/questions/tagged/launch-services" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">launch-services</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/9965091d4f3dbe2ad2855faf65e54da9?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/62552/quinn-comendant" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Quinn Comendant</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #f8f8f8; background-image: url('//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png'); border-bottom: 1px solid #e0e0e0;" background="//sstatic.net/stackexchange/Img/newsletters/apple-bg2.png"> <h3 style="margin: 10px 0;"> <a href="http://apple.stackexchange.com/questions/238254/cant-reduce-bootcamp-partition-size-in-el-capitan" target="_blank" style="color: #2F6CA4!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Can't reduce bootcamp partition size in El Capitan</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a 512GB hard disk using the latest macbook pro running El Capitan. When bootcamp partition was created it was allocated 350GB. Now I want to bring that down to 100GB since the windows partition ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://apple.stackexchange.com/questions/tagged/osx" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">osx</a> <a href="http://apple.stackexchange.com/questions/tagged/mac" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">mac</a> <a href="http://apple.stackexchange.com/questions/tagged/el-capitan" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">el-capitan</a> <a href="http://apple.stackexchange.com/questions/tagged/partition" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #304955; font-size: 11px; line-height: 12px; margin: 2px 2px 6px 0; text-decoration: none; background-color: #E6F1F7; padding: 2px 8px 4px 8px; border-radius: 10px; -webkit-transition: padding 0.1s ease-out; -moz-transition: padding 0.1s ease-out; transition: padding 0.1s ease-out;">partition</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/LXSrF.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://apple.stackexchange.com/users/183423/john-younan" target="_blank" style="color: #5FABE8; text-decoration: none!important;">John Younan</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #5FABE8; text-decoration: none!important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #5FABE8; text-decoration: none!important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #5FABE8; text-decoration: none!important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #5FABE8; text-decoration: none!important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #5FABE8; text-decoration: none!important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

@@ -1,0 +1,366 @@
+http://tutorialspoint.com/html5/index.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>HTML5 Tutorial</title> 
+  <meta name="description" content="HTML5 Tutorial for Beginners - Learning HTML 5 in simple and easy steps with examples covering 2D Canvas, Audio, Video, New Semantic Elements, Geolocation, Persistent Local Storage, Web Storage, Web SQL, Forms 2.0, Microdata and Drag and Drop, IndexedDB, Web messaging, CORS, Web RTC, Canvas Drawing Rectangles, Web Storage, Server Sent Events, Web Canvas, Web Workers, Slide Desk."> 
+  <meta name="keywords" content="HTML 5, Tutorials, Forms-2 Learning, Beginners,Canvas, Audio, Video, New Semantic Elements, Geolocation, Persistent Local Storage, Web Storage, Web SQL, Forms 2.0, Microdata and Drag and Drop, IndexedDB, Web messaging, CORS, Web RTC, Canvas Drawing Rectangles, Web Storage, Server Sent Events, Web Canvas, Web Workers, Slide Desk.."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(html5/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #e44d26 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #e44d26 !important;}
+.submenu-item{ border-bottom: 2px solid #e44d26 !important; border-top: 2px solid #e44d26 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/html5/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/html5/images/html5-mini-logo.jpg" alt="HTML5 Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">HTML5 Tutorial</li> 
+        <li><a href="/html5/index.htm">HTML5 - Home</a></li> 
+        <li><a href="/html5/html5_overview.htm">HTML5 - Overview</a></li> 
+        <li><a href="/html5/html5_syntax.htm">HTML5 - Syntax</a></li> 
+        <li><a href="/html5/html5_attributes.htm">HTML5 - Attributes</a></li> 
+        <li><a href="/html5/html5_events.htm">HTML5 - Events</a></li> 
+        <li><a href="/html5/html5_web_forms2.htm">HTML5 - Web Forms 2.0</a></li> 
+        <li><a href="/html5/html5_svg.htm">HTML5 - SVG</a></li> 
+        <li><a href="/html5/html5_mathml.htm">HTML5 - MathML</a></li> 
+        <li><a href="/html5/html5_web_storage.htm">HTML5 - Web Storage</a></li> 
+        <li><a href="/html5/html5_web_sql.htm">HTML5 - Web SQL</a></li> 
+        <li><a href="/html5/html5_server_sent_events.htm">HTML5 - Server-Sent Events</a></li> 
+        <li><a href="/html5/html5_websocket.htm">HTML5 - WebSocket </a></li> 
+        <li><a href="/html5/html5_canvas.htm">HTML5 - Canvas</a></li> 
+        <li><a href="/html5/html5_audio_video.htm">HTML5 - Audio &amp; Video</a></li> 
+        <li><a href="/html5/html5_geolocation.htm">HTML5 - Geolocation</a></li> 
+        <li><a href="/html5/html5_microdata.htm">HTML5 - Microdata</a></li> 
+        <li><a href="/html5/html5_drag_drop.htm">HTML5 - Drag &amp; drop</a></li> 
+        <li><a href="/html5/html5_web_workers.htm">HTML5 - Web Workers</a></li> 
+        <li><a href="/html5/html5_indexeddb.htm">HTML5 - IndexedDB</a></li> 
+        <li><a href="/html5/html5_web_messaging.htm">HTML5 - Web Messaging</a></li> 
+        <li><a href="/html5/html5_cors.htm">HTML5 - Web CORS</a></li> 
+        <li><a href="/html5/html5_web_rtc.htm">HTML5 - Web RTC</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">HTML5 Demo</li> 
+        <li><a href="/html5/web_storage.htm">HTML5 - Web Storage</a></li> 
+        <li><a href="/html5/server_sent_events.htm">HTML5 - Server Sent Events</a></li> 
+        <li><a href="/html5/canvas_demo.htm">HTML5 - Canvas</a></li> 
+        <li><a href="/html5/audio_demo.htm">HTML5 - Audio Players</a></li> 
+        <li><a href="/html5/video_demo.htm">HTML5 - Video Players</a></li> 
+        <li><a href="/html5/geo_demo.htm">HTML5 - Geo-Location</a></li> 
+        <li><a href="/html5/drag_demo.htm">HTML5 - Drag and Drop</a></li> 
+        <li><a href="/html5/web_workers.htm">HTML5 - Web Worker</a></li> 
+        <li><a href="/html5/html5_slide_desk.htm">HTML5 - Web slide Desk</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">HTML5 Tools</li> 
+        <li><a href="/html5/svg_tool.htm">HTML5 - SVG Generator </a></li> 
+        <li><a href="/html5/mathml.htm">HTML5 - MathML </a></li> 
+        <li><a href="/html5/velocity.htm">HTML5 - Velocity Draw </a></li> 
+        <li><a href="/html5/qr_code.htm">HTML5 - QR Code </a></li> 
+        <li><a href="/html5/html5_validator.htm">HTML5 - Validator.nu Validation</a></li> 
+        <li><a href="/html5/html5_modernizr.htm">HTML5 - Modernizr</a></li> 
+        <li><a href="/html5/html5_validation.htm">HTML5 - Validation</a></li> 
+        <li><a href="/html5/html5_online_editor.htm">HTML5 - Online Editor</a></li> 
+        <li><a href="/html5/html5_color_code_builder.htm">HTML5 - Color Code Builder</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">HTML5 Useful References</li> 
+        <li><a href="/html5/html5_quick_guide.htm">HTML5 - Quick Guide</a></li> 
+        <li><a href="/html5/html5_color_names.htm">HTML5 - Color Names</a></li> 
+        <li><a href="/html5/html5_fonts.htm">HTML5 - Fonts Reference</a></li> 
+        <li><a href="/html5/html5_url_encoding.htm">HTML5 - URL Encoding</a></li> 
+        <li><a href="/html5/html5_entities.htm">HTML5 - Entities</a></li> 
+        <li><a href="/html5/html5_character_encodings.htm">HTML5 - Char Encodings</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">HTML5 Tag Reference</li> 
+        <li><a href="/html5/html5_questions_answers.htm">HTML5 - Question and Answers</a></li> 
+        <li><a href="/html5/html5_tags.htm">HTML5 - Tags Reference</a></li> 
+        <li><a href="/html5/html5_deprecated_tags.htm">HTML5 - Deprecated Tags</a></li> 
+        <li><a href="/html5/html5_new_tags.htm">HTML5 - New Tags</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">HTML5 Resources</li> 
+        <li><a href="/html5/html5_useful_resources.htm">HTML5 - Useful Resources</a></li> 
+        <li><a href="/html5/html5_discussion.htm">HTML5 - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <div class="cover"> 
+         <img class="img-responsive" src="/html5/images/html5.jpg" alt="HTML5 Tutorial"> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/html5/html5_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <h1>HTML5 Tutorial</h1> 
+        <div class="center-aligned tutorial-menu"> 
+         <form action="/job_search.php" method="POST"> 
+          <input type="hidden" name="search_string" value="HTML5"> 
+          <button type="button" class="btn btn-default btn-sm btn-buy-tutorial"><i class="icon  icon-file-pdf-o"></i><a href="/html5/html5_pdf_version.htm"> PDF Version</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-quick-guide"><i class="icon  icon-book"></i><a href="/html5/html5_quick_guide.htm"> Quick Guide</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon  icon-external-link"></i> <a href="/html5/html5_useful_resources.htm"> Resources</a></button> 
+          <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="icon  icon-suitcase"></i> Job Search</button> 
+          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon fa fa-wechat"></i> <a href="/html5/html5_discussion.htm"> Discussion</a></button> 
+         </form> 
+        </div> 
+        <p><i>HTML5</i> is the latest and most enhanced version of HTML.Technically, HTML is not a programming language, but rather a mark up language.</p> 
+        <h1>Audience</h1> 
+        <p>This tutorial has been designed for beginners in <i>HTML5</i> providing the basic to advanced concepts of the subject.</p> 
+        <h1>Prerequisites</h1> 
+        <p>Before starting this tutorial you should be aware of the basic understanding of HTML and its tags</p> 
+        <h1>Execute HTML5 Online</h1> 
+        <p>You do not need to have your own environment to start learning HTML5 programming! We have set up an on-line compiler for you that can be used to compile and execute the programs on-line.</p> 
+        <p>For most of the examples available in this tutorial, you will find a Try it option at the top right corner of the code box. Use it to verify the programs and check the outcome with different options. Feel free to modify any example and execute it online.</p> 
+        <pre class="prettyprint notranslate tryit">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;title&gt;Tutorials Point&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;	
+   
+      &lt;header role="banner"&gt;
+         &lt;h1&gt;HTML5 Document Structure Example&lt;/h1&gt;
+         &lt;p&gt;This page should be tried in safari, chrome or Mozila.&lt;/p&gt;
+      &lt;/header&gt;
+      
+      &lt;footer&gt;
+         &lt;p&gt;Created by &lt;a href="http://tutorialspoint.com/"&gt;Tutorials Point&lt;/a&gt;&lt;/p&gt;
+      &lt;/footer&gt;
+      
+   &lt;/body&gt;   
+&lt;/html&gt;
+</pre> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="pdf-btn"> 
+         <a href="/html5/pdf/index.pdf" title="HTML5 Tutorial" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/html5/html5_overview.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/html5/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/html5/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/html5/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/html5/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/html5/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/html5/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('html5/try_html5.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

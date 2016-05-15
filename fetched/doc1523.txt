@@ -1,0 +1,654 @@
+https://stackexchange.com/newsletters/newsletter?site=codegolf.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Programming Puzzles &amp; Code Golf Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dcodegolf.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dcodegolf.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 88, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 88, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Programming Puzzles &amp; Code Golf Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://codegolf.stackexchange.com">Programming Puzzles &amp; Code Golf</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-image: url('//sstatic.net/stackexchange/Img/newsletters/beta-bg.png');" background="//sstatic.net/stackexchange/Img/newsletters/beta-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> 
+      <table border="0" cellpadding="0" cellspacing="0"> 
+       <tbody>
+        <tr> 
+         <td width="600" align="left"> <h1 style="color: #8FD8F6; font-size: 24px!important; font-weight: normal!important;"><span style="color: #3E5583; font-weight: bold!important;">Programming Puzzles &amp; Code Golf</span> newsletter</h1> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #FDFDFD; border-top: 1px solid #E6E6E6; border-left: 1px solid #E6E6E6; border-right: 1px solid #E6E6E6;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79644/how-many-steps-does-it-take-from-n-to-1-by-subtracting-the-greatest-divisor" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How many steps does it take from n to 1 by subtracting the greatest divisor?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Inspired by this question over at Mathematics. The Problem Let n be a natural number ≥ 2. Take the biggest divisor of n – which is different from n itself – and subtract it from n. Repeat until ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/math" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">math</a> <a href="http://codegolf.stackexchange.com/questions/tagged/arithmetic" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">arithmetic</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1f8b9badfad57118d16484408f4f954d?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/41859/insertusernamehere" target="_blank" style="color: #4E82C2; text-decoration: none;">insertusernamehere</a> 39 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/KazNs.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://codegolf.stackexchange.com/users/34388/adnan" target="_blank" style="color: #4E82C2; text-decoration: none;">Adnan</a> 11 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79809/universal-spooky-meme-translator" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Universal Spooky Meme Translator</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Introduction Turns out, aliens love memes just as much as we do. Every alien race we've encountered so far has their own version of 2spooky4me (see the following question) and equivalent, though, ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/string" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">string</a> <a href="http://codegolf.stackexchange.com/questions/tagged/math" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">math</a> <a href="http://codegolf.stackexchange.com/questions/tagged/subsequence" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">subsequence</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/eb61781f55bda1790e6216a2dee08b11?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/12095/itai-ferber" target="_blank" style="color: #4E82C2; text-decoration: none;">Itai Ferber</a> 28 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/gfgwy.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://codegolf.stackexchange.com/users/52194/kevin-lau-not-kenny" target="_blank" style="color: #4E82C2; text-decoration: none;">Kevin Lau - not Kenny</a> 13 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79668/is-the-electric-garage-door-open" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Is the electric garage door open?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">My electric garage door works like this: There is just one push button to control the door If the door is fully closed and I hit the button, the door starts to open. It takes 10 seconds to open ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/YTSpG.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/11259/digital-trauma" target="_blank" style="color: #4E82C2; text-decoration: none;">Digital Trauma</a> 23 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/fe9ec6f5457931d8dbdce60b2246fa28?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://codegolf.stackexchange.com/users/53514/blab" target="_blank" style="color: #4E82C2; text-decoration: none;">Blab</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79576/what-is-the-most-frequent-word" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">What is the most frequent word?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">What is the most frequent word? Given a sentence, your program must make it's way through it, counting the frequencies of each word, then output the most used word. Because a sentence has no fixed ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/string" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">string</a> <a href="http://codegolf.stackexchange.com/questions/tagged/natural-language" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">natural-language</a> <a href="http://codegolf.stackexchange.com/questions/tagged/word" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">word</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/WhiqZ.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/53406/george-gibson" target="_blank" style="color: #4E82C2; text-decoration: none;">George Gibson</a> 21 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/oqYo2.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://codegolf.stackexchange.com/users/12012/dennis" target="_blank" style="color: #4E82C2; text-decoration: none;">Dennis</a> 12 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79609/index-of-a-multidimensional-array" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Index of a multidimensional array</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Lower level languages, such as C and C++ actually have no concept of multidimensional arrays. (Other than vectors and dynamic arrays) When you create a multidimensional array with int foo[5][10]; ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/math" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">math</a> <a href="http://codegolf.stackexchange.com/questions/tagged/array-manipulation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">array-manipulation</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/We7ME.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/31716/dr-green-eggs-and-ham-dj" target="_blank" style="color: #4E82C2; text-decoration: none;">Dr Green Eggs and Ham DJ</a> 20 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/oqYo2.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://codegolf.stackexchange.com/users/12012/dennis" target="_blank" style="color: #4E82C2; text-decoration: none;">Dennis</a> 43 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79762/zeroes-at-the-end-of-a-factorial" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Zeroes at the end of a factorial</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Write a program or function that finds the number of zeroes at the end of n! in base 10, where n is an input number (in any desired format). It can be assumed that n is a positive integer, meaning ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/math" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">math</a> <a href="http://codegolf.stackexchange.com/questions/tagged/factorial" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">factorial</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/jDZNc.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/43444/a-nerd-i" target="_blank" style="color: #4E82C2; text-decoration: none;">A Nerd - I</a> 19 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/af3D7.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://codegolf.stackexchange.com/users/20260/xnor" target="_blank" style="color: #4E82C2; text-decoration: none;">xnor</a> 27 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79650/gasket-weaving-draw-a-sierpi%c5%84ski-knot" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Gasket Weaving - draw a Sierpiński knot</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Given an integer N &gt;= 2, produce an image showing a Sierpiński knot of degree N. For example, here are knots of degree 2, 3, 4 and 5: Click on the images to view full size (the higher the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/graphical-output" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">graphical-output</a> <a href="http://codegolf.stackexchange.com/questions/tagged/geometry" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">geometry</a> <a href="http://codegolf.stackexchange.com/questions/tagged/fractal" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">fractal</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/99AYO.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/20283/trichoplax" target="_blank" style="color: #4E82C2; text-decoration: none;">trichoplax</a> 19 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/36864/possibly-quit-your-job-with-a-polyglot" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Possibly quit your job with a polyglot</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Despite your protest, you have been put to work by your boss on a program that takes a single unsigned integer as input and prints the string "prime" if that integer is prime and "not prime" if it ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/polyglot" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">polyglot</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/qo7tw.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/29588/overactor" target="_blank" style="color: #4E82C2; text-decoration: none;">overactor</a> 88 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/oqYo2.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://codegolf.stackexchange.com/users/12012/dennis" target="_blank" style="color: #4E82C2; text-decoration: none;">Dennis</a> 26 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/307/obfuscated-hello-world" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Obfuscated Hello World</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Create the shortest possible obfuscated program that displays the text "Hello World". In order to be considered an obfuscated program, it must meet at least two of the following requirements: ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/obfuscation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">obfuscation</a> <a href="http://codegolf.stackexchange.com/questions/tagged/hello-world" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">hello-world</a> <a href="http://codegolf.stackexchange.com/questions/tagged/restricted-source" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">restricted-source</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/3260a8f331e6869fbf075666eb3b387a?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/148/kevin-brown" target="_blank" style="color: #4E82C2; text-decoration: none;">Kevin Brown</a> 95 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/b653b7151d55cded30759a5c35f95390?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://codegolf.stackexchange.com/users/3/chris-jester-young" target="_blank" style="color: #4E82C2; text-decoration: none;">Chris Jester-Young</a> 47 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79806/bootloader-golf-brainfuck" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Bootloader golf: Brainfuck</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Create a bootloader that executes given Brainfuck program. This is code-golf, so the program with least bytes wins. Being a bootloader, the size of the program is counted in non-zero bytes in the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/brainfuck" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">brainfuck</a> <a href="http://codegolf.stackexchange.com/questions/tagged/assembly" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">assembly</a> <a href="http://codegolf.stackexchange.com/questions/tagged/machine-code" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">machine-code</a> <a href="http://codegolf.stackexchange.com/questions/tagged/x86-family" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">x86-family</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://graph.facebook.com/100003035657402/picture?type=large" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/20569/hannes-karppila" target="_blank" style="color: #4E82C2; text-decoration: none;">Hannes Karppila</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79743/actually-integer-metagolf" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Actually Integer Metagolf</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Background Actually (the successor to Seriously) is a stack-based imperative golfing language I created in November of 2015. Like many other golfing languages, it has one-byte commands that perform ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/math" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">math</a> <a href="http://codegolf.stackexchange.com/questions/tagged/number" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">number</a> <a href="http://codegolf.stackexchange.com/questions/tagged/optimization" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">optimization</a> <a href="http://codegolf.stackexchange.com/questions/tagged/stack" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">stack</a> <a href="http://codegolf.stackexchange.com/questions/tagged/metagolf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">metagolf</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1a37ae2ad0be3772ffa87aacc07ab5a1?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/45941/mego" target="_blank" style="color: #4E82C2; text-decoration: none;">Mego</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://codegolf.stackexchange.com/questions/79719/tips-for-golfing-in-lisp" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Tips for golfing in Lisp</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">What general tips are these for golfing in Lisp (any dialect)? Please post one tip per answer, and only answers that are specific to a dialect of Lisp (e.g. "remove comments" is not an answer). ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://codegolf.stackexchange.com/questions/tagged/code-golf" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">code-golf</a> <a href="http://codegolf.stackexchange.com/questions/tagged/tips" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">tips</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2a54c9183422d0bd38377aa0e6c523fc?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://codegolf.stackexchange.com/users/48922/nooneishere" target="_blank" style="color: #4E82C2; text-decoration: none;">NoOneIsHere</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;color: #444;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #4E82C2; text-decoration: none; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #4E82C2; text-decoration: none;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #4E82C2; text-decoration: none;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #4E82C2; text-decoration: none;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #4E82C2; text-decoration: none;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

@@ -1,0 +1,1206 @@
+http://codereview.stackexchange.com
+<!doctype html>
+<html>
+ <head> 
+  <title>Code Review Stack Exchange</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/codereview/img/favicon.ico?v=00b9e479193f"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/codereview/img/apple-touch-icon.png?v=dba5f391e3bb"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Code Review Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@StackCodeReview"> 
+  <meta name="twitter:domain" content="codereview.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/codereview/img/apple-touch-icon@2.png?v=060c5939ecf4&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Code Review Stack Exchange"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="Q&amp;A for peer programmer code reviews"> 
+  <meta property="og:url" content="http://codereview.stackexchange.com/"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=36086b43db82"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/codereview/all.css?v=3f101d10acad"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed of recent questions" href="/feeds"> 
+  <script>
+            StackExchange.ready(function() {
+                StackExchange.realtime.subscribeToActiveQuestions('196', 'home-active');
+            });
+        </script> 
+  <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                        tex2jax: { inlineMath: [ ["\\$", "\\$"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+                                        messageStyle: "none"
+                });
+                </script> 
+  <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('196');
+                StackExchange.realtime.subscribeToTopBarNotifications('196');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463245257,"routeName":"Home/Index","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Code Review Stack Exchange","description":"Q&A for peer programmer code reviews","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":196,"enableSocialMediaInSharePopup":true},"user":{"fkey":"71fb98341fa62b820a5808f83f182453","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"d911fb28bd9f","js/moderator.en.js":"50831ba8e994","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"97cc5d07283a","js/wmd.en.js":"b2e347d78fbd","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"8c8f022d2f71","js/inline-tag-editing.en.js":"a815357d00cd","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"a78702da7b99","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"79fde18773e4","js/explore-qlist.en.js":"2a9a628fca7f","js/events.en.js":"122722c4c15a","js/keyboard-shortcuts.en.js":"e92b66602411","js/external-editor.en.js":"683ce04845f3","js/mathjax-editing.en.js":"0f8d45c7803e","js/external-editor.en.js":"683ce04845f3","js/snippet-javascript.en.js":"52f29aaf80f8","js/snippet-javascript-codemirror.en.js":"8a126dfc58dd"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="home-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//codereview.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//codereview.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="196" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-codereview" title="Code Review"></div> Code Review </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.codereview.stackexchange.com" class="site-link js-gps-track" data-id="198" data-gps-track="
+            site.switch({ target_site:198, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-codereviewmeta" title="Code Review Meta"></div> Code Review Meta </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://codereview.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fcodereview.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://codereview.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fcodereview.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://codereview.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fcodereview.stackexchange.com%2f" class="login-link">sign up</a> <a href="https://codereview.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fcodereview.stackexchange.com%2f" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.codereview.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Code Review </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content" class="snippet-hidden"> 
+    <div id="herobox"> 
+     <div id="hero-content"> 
+      <div id="close">
+       <a title="click to minimize">_</a>
+      </div> 
+      <div id="blurb">
+        Code Review Stack Exchange is a question and answer site for peer programmer code reviews. It's 100% free, no registration required. 
+       <br> 
+       <br> 
+       <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fcodereview.stackexchange.com%2f" id="tell-me-more" class="button">Sign up</a> 
+      </div> 
+      <div id="desc"> 
+       <b>Here's how it works:</b> 
+       <ol id="hiw"> 
+        <li id="q">Anybody can ask a question </li> 
+        <li id="an">Anybody can answer </li> 
+        <li id="b">The best answers are voted up and rise to the top </li> 
+       </ol> 
+      </div> 
+      <div style="clear: both"></div> 
+     </div> 
+     <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+    </div> 
+    <script>
+        StackExchange.using("gps", function () {
+            StackExchange.gps.track("hero.show", { hero_type: "hero", location: 3 }, true);
+        });
+    </script> 
+    <div id="mainbar"> 
+     <div class="subheader"> 
+      <h1 id="h-top-questions">Explore Our Questions</h1> 
+      <div id="tabs"> 
+       <a href="?tab=active" data-nav-xhref="" title="Questions that have been asked, answered, or updated recently" data-value="active"> active</a> 
+       <a href="?tab=featured" data-nav-xhref="" title="Questions with an active bounty" data-value="featured"> <span class="bounty-indicator-tab">7</span> featured</a> 
+       <a href="?tab=hot" data-nav-xhref="" title="Questions with the most views, answers, and votes over the last few days" data-value="hot"> hot</a> 
+       <a href="?tab=week" data-nav-xhref="" title="Questions with the most views, answers, and votes this week" data-value="week"> week</a> 
+       <a href="?tab=month" data-nav-xhref="" title="Questions with the most views, answers, and votes this month" data-value="month"> month</a> 
+      </div> 
+     </div> 
+     <div id="explore-tags"> 
+      <a href="/?tags=java" class="post-tag no-tag-menu" title="Show questions relating to java" rel="tag">java</a>
+      <a href="/?tags=c%23" class="post-tag no-tag-menu" title="Show questions relating to c#" rel="tag">c#</a>
+      <a href="/?tags=javascript" class="post-tag no-tag-menu" title="Show questions relating to javascript" rel="tag">javascript</a>
+      <a href="/?tags=python" class="post-tag no-tag-menu" title="Show questions relating to python" rel="tag">python</a>
+      <a href="/?tags=c%2b%2b" class="post-tag no-tag-menu" title="Show questions relating to c++" rel="tag">c++</a>
+      <a href="/?tags=performance" class="post-tag no-tag-menu" title="Show questions relating to performance" rel="tag">performance</a>
+      <a href="/?tags=php" class="post-tag no-tag-menu" title="Show questions relating to php" rel="tag">php</a>
+      <a href="/?tags=beginner" class="post-tag no-tag-menu" title="Show questions relating to beginner" rel="tag">beginner</a>
+      <a href="/?tags=algorithm" class="post-tag no-tag-menu" title="Show questions relating to algorithm" rel="tag">algorithm</a>
+      <a href="/?tags=jquery" class="post-tag no-tag-menu" title="Show questions relating to jquery" rel="tag">jquery</a> 
+      <a class="more-tags" href="/tags">more&nbsp;tags</a> 
+     </div> 
+     <div id="qlist-wrapper"> 
+      <div id="question-mini-list"> 
+       <div class="question-summary narrow" id="question-summary-128363"> 
+        <div onclick="window.location.href='/questions/128363/multithreading-pipeline-synchronization-with-queues'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="2 views">2</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128363/multithreading-pipeline-synchronization-with-queues" class="question-hyperlink" title="I've a problem in synchronizing some threads with queues, there is some deadlock that after some iteration block the entire program, without errors.
+
+My thread safe Queue is like a buffer, so is not ...">Multithreading pipeline synchronization with queues</a></h3> 
+         <div class="tags t-cçç t-multithreading t-queue"> 
+          <a href="/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged 'c++'" rel="tag">c++</a> 
+          <a href="/questions/tagged/multithreading" class="post-tag" title="show questions tagged 'multithreading'" rel="tag">multithreading</a> 
+          <a href="/questions/tagged/queue" class="post-tag" title="show questions tagged 'queue'" rel="tag">queue</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128363/multithreading-pipeline-synchronization-with-queues" class="started-link">asked <span title="2016-05-14 16:57:16Z" class="relativetime">3 mins ago</span></a> 
+          <a href="/users/104608/civi89">CIVI89</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">8</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128214"> 
+        <div onclick="window.location.href='/questions/128214/auto-resizing-array-that-accepts-negative-indexes'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="51 views">51</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128214/auto-resizing-array-that-accepts-negative-indexes" class="question-hyperlink" title="I've been coding a helper container template to contain tiles in 2D games. What I figured out I would like when writing code for my games is forgetting all resize stuff, allowing negative indexes (for ...">Auto-resizing array, that accepts negative indexes</a></h3> 
+         <div class="tags t-cçç t-template t-collections t-vectors"> 
+          <a href="/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged 'c++'" rel="tag">c++</a> 
+          <a href="/questions/tagged/template" class="post-tag" title="show questions tagged 'template'" rel="tag">template</a> 
+          <a href="/questions/tagged/collections" class="post-tag" title="show questions tagged 'collections'" rel="tag">collections</a> 
+          <a href="/questions/tagged/vectors" class="post-tag" title="show questions tagged 'vectors'" rel="tag">vectors</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128214/auto-resizing-array-that-accepts-negative-indexes/?lastactivity" class="started-link">modified <span title="2016-05-14 16:21:10Z" class="relativetime">39 mins ago</span></a> 
+          <a href="/users/88422/user2296177">user2296177</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">635</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-30837"> 
+        <div onclick="window.location.href='/questions/30837/string-tokenizer-via-udf'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="7 votes">7</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="644 views">644</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/30837/string-tokenizer-via-udf" class="question-hyperlink" title="I am trying to implement strings tokenizer in Excel via UDF using C# and Excel-Dna. Personally I found the mIRC's function $gettok pretty useful due to the lack of string functions in Excel.
+
+Examples
+...">String tokenizer via UDF</a></h3> 
+         <div class="tags t-cñ t-ûnet t-excel"> 
+          <a href="/questions/tagged/c%23" class="post-tag" title="show questions tagged 'c#'" rel="tag">c#</a> 
+          <a href="/questions/tagged/.net" class="post-tag" title="show questions tagged '.net'" rel="tag">.net</a> 
+          <a href="/questions/tagged/excel" class="post-tag" title="show questions tagged 'excel'" rel="tag">excel</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/30837/string-tokenizer-via-udf/?lastactivity" class="started-link">modified <span title="2016-05-14 16:10:03Z" class="relativetime">50 mins ago</span></a> 
+          <a href="/users/22222/jamal">Jamal</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 27,505" dir="ltr">27.5k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128361"> 
+        <div onclick="window.location.href='/questions/128361/tdd-kata-string-calculator'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="4 views">4</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128361/tdd-kata-string-calculator" class="question-hyperlink" title="This is my first TDD Kata I've done and I'd appreciate it if someone could review it.
+
+
+  String Calculator
+  
+  
+  Create a simple String calculator with a method int Add(string
+  numbers)
+  
+  
+  ...">TDD - Kata - String Calculator</a></h3> 
+         <div class="tags t-cñ t-unit-testing t-nunit"> 
+          <a href="/questions/tagged/c%23" class="post-tag" title="show questions tagged 'c#'" rel="tag">c#</a> 
+          <a href="/questions/tagged/unit-testing" class="post-tag" title="show questions tagged 'unit-testing'" rel="tag">unit-testing</a> 
+          <a href="/questions/tagged/nunit" class="post-tag" title="show questions tagged 'nunit'" rel="tag">nunit</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128361/tdd-kata-string-calculator" class="started-link">asked <span title="2016-05-14 16:09:39Z" class="relativetime">51 mins ago</span></a> 
+          <a href="/users/73602/jbond">JBond</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">158</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-127839"> 
+        <div onclick="window.location.href='/questions/127839/finding-factorials'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="5 votes">5</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="4 answers">4</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="277 views">277</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/127839/finding-factorials" class="question-hyperlink" title="How can this script be optimized?
+
+def processor(n):
+    &quot;&quot;&quot;Finding the factorial of a given number. &quot;&quot;&quot;
+    if n == 0 or n == 1:
+        return 1
+    product = 1
+    for i in range(1, n + 1):
+        ...">Finding factorials</a></h3> 
+         <div class="tags t-python t-beginner t-algorithm t-python-3ûx"> 
+          <a href="/questions/tagged/python" class="post-tag" title="show questions tagged 'python'" rel="tag">python</a> 
+          <a href="/questions/tagged/beginner" class="post-tag" title="show questions tagged 'beginner'" rel="tag">beginner</a> 
+          <a href="/questions/tagged/algorithm" class="post-tag" title="show questions tagged 'algorithm'" rel="tag">algorithm</a> 
+          <a href="/questions/tagged/python-3.x" class="post-tag" title="show questions tagged 'python-3.x'" rel="tag">python-3.x</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/127839/finding-factorials/?lastactivity" class="started-link">modified <span title="2016-05-14 16:07:24Z" class="relativetime">53 mins ago</span></a> 
+          <a href="/users/22222/jamal">Jamal</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 27,505" dir="ltr">27.5k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-116872"> 
+        <div onclick="window.location.href='/questions/116872/iterative-depth-first-search-and-topological-sort-in-java'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="1 vote">1</span>
+          </div> 
+          <div>
+           vote
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="179 views">179</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/116872/iterative-depth-first-search-and-topological-sort-in-java" class="question-hyperlink" title="This is the iterative depth-first search, that does not abuse the stack. Also, I gathered some information from DFS that may be useful; for example, I am able to do topological sort using the result ...">Iterative depth-first search and topological sort in Java</a></h3> 
+         <div class="tags t-java t-algorithm t-graph t-depth-first-search"> 
+          <a href="/questions/tagged/java" class="post-tag" title="show questions tagged 'java'" rel="tag">java</a> 
+          <a href="/questions/tagged/algorithm" class="post-tag" title="show questions tagged 'algorithm'" rel="tag">algorithm</a> 
+          <a href="/questions/tagged/graph" class="post-tag" title="show questions tagged 'graph'" rel="tag">graph</a> 
+          <a href="/questions/tagged/depth-first-search" class="post-tag" title="show questions tagged 'depth-first-search'" rel="tag">depth-first-search</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/116872/iterative-depth-first-search-and-topological-sort-in-java/?lastactivity" class="started-link">modified <span title="2016-05-14 16:04:15Z" class="relativetime">56 mins ago</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128360"> 
+        <div onclick="window.location.href='/questions/128360/palindromes-that-are-sum-of-consecutive-squares'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="7 views">7</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128360/palindromes-that-are-sum-of-consecutive-squares" class="question-hyperlink" title="I have been working on a Project Euler: 125, which took me ages to solve. The problem and source are cited below 
+
+
+  The palindromic number 595 is interesting because it can be written as
+  the sum ...">Palindromes that are sum of consecutive squares</a></h3> 
+         <div class="tags t-python t-performance t-programming-challenge t-python-2û7 t-palindrome"> 
+          <a href="/questions/tagged/python" class="post-tag" title="show questions tagged 'python'" rel="tag">python</a> 
+          <a href="/questions/tagged/performance" class="post-tag" title="show questions tagged 'performance'" rel="tag">performance</a> 
+          <a href="/questions/tagged/programming-challenge" class="post-tag" title="show questions tagged 'programming-challenge'" rel="tag">programming-challenge</a> 
+          <a href="/questions/tagged/python-2.7" class="post-tag" title="show questions tagged 'python-2.7'" rel="tag">python-2.7</a> 
+          <a href="/questions/tagged/palindrome" class="post-tag" title="show questions tagged 'palindrome'" rel="tag">palindrome</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128360/palindromes-that-are-sum-of-consecutive-squares" class="started-link">modified <span title="2016-05-14 15:47:10Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/61495/n3buchadnezzar">N3buchadnezzar</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">373</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128356"> 
+        <div onclick="window.location.href='/questions/128356/function-fetching-data-from-database'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="8 views">8</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128356/function-fetching-data-from-database" class="question-hyperlink" title="My DB function uses (ATTR_DEFAULT_FETCH_MODE) FETCH_OBJ to fetch the data from database. So for that reason, I prefer objects instead of assoc arrays and I'm not that comfortable reading or coding ...">Function fetching data from database</a></h3> 
+         <div class="tags t-php"> 
+          <a href="/questions/tagged/php" class="post-tag" title="show questions tagged 'php'" rel="tag">php</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128356/function-fetching-data-from-database" class="started-link">modified <span title="2016-05-14 15:43:53Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/22222/jamal">Jamal</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score 27,505" dir="ltr">27.5k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128199"> 
+        <div onclick="window.location.href='/questions/128199/small-c-thread-pool'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="46 views">46</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128199/small-c-thread-pool" class="question-hyperlink" title="I've made a small thread pool that i'll be using to communicate with a Redis server:
+
+#include &quot;redox.hpp&quot;
+
+redox::Redox rdx;
+
+void my_cool_function()
+{
+    // do stuff with rdx
+}
+
+int main()
+{
+    ...">Small C++ thread pool</a></h3> 
+         <div class="tags t-cçç t-multithreading t-redis"> 
+          <a href="/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged 'c++'" rel="tag">c++</a> 
+          <a href="/questions/tagged/multithreading" class="post-tag" title="show questions tagged 'multithreading'" rel="tag">multithreading</a> 
+          <a href="/questions/tagged/redis" class="post-tag" title="show questions tagged 'redis'" rel="tag">redis</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128199/small-c-thread-pool/?lastactivity" class="started-link">answered <span title="2016-05-14 15:29:34Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/39848/edward">Edward</a> 
+          <span class="reputation-score" title="reputation score 25,493" dir="ltr">25.5k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128345"> 
+        <div onclick="window.location.href='/questions/128345/c-program-that-checks-on-the-status-of-the-capslock-with-each-character-insert'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="6 votes">6</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="157 views">157</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128345/c-program-that-checks-on-the-status-of-the-capslock-with-each-character-insert" class="question-hyperlink" title="The following is my first successful running C# program.
+
+The lessons that I personally learnt through this include:
+
+
+The value of asking for help after having tried several times
+The advantages of ...">C# Program that checks on the status of the Capslock with each character insert</a></h3> 
+         <div class="tags t-cñ t-beginner"> 
+          <a href="/questions/tagged/c%23" class="post-tag" title="show questions tagged 'c#'" rel="tag">c#</a> 
+          <a href="/questions/tagged/beginner" class="post-tag" title="show questions tagged 'beginner'" rel="tag">beginner</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128345/c-program-that-checks-on-the-status-of-the-capslock-with-each-character-insert/?lastactivity" class="started-link">modified <span title="2016-05-14 15:18:52Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/41243/rubberduck">RubberDuck</a> 
+          <span class="reputation-score" title="reputation score 23,441" dir="ltr">23.4k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128309"> 
+        <div onclick="window.location.href='/questions/128309/maxflow-for-baseball-elimination-game'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="2 votes">2</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="20 views">20</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128309/maxflow-for-baseball-elimination-game" class="question-hyperlink" title="I have a problem similar to the baseball elimination. Given some teams, the number of wins they have and the number of games they have left between each other I have to find for which team it is still ...">Maxflow for baseball elimination game</a></h3> 
+         <div class="tags t-cçç t-algorithm t-cçç11 t-graph t-homework"> 
+          <a href="/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged 'c++'" rel="tag">c++</a> 
+          <a href="/questions/tagged/algorithm" class="post-tag" title="show questions tagged 'algorithm'" rel="tag">algorithm</a> 
+          <a href="/questions/tagged/c%2b%2b11" class="post-tag" title="show questions tagged 'c++11'" rel="tag">c++11</a> 
+          <a href="/questions/tagged/graph" class="post-tag" title="show questions tagged 'graph'" rel="tag">graph</a> 
+          <a href="/questions/tagged/homework" class="post-tag" title="show questions tagged 'homework'" rel="tag">homework</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128309/maxflow-for-baseball-elimination-game/?lastactivity" class="started-link">answered <span title="2016-05-14 15:16:58Z" class="relativetime">1 hour ago</span></a> 
+          <a href="/users/507/loki-astari">Loki Astari</a> 
+          <span class="reputation-score" title="reputation score 47,749" dir="ltr">47.7k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128259"> 
+        <div onclick="window.location.href='/questions/128259/table-driven-finite-state-machine'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="28 views">28</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128259/table-driven-finite-state-machine" class="question-hyperlink" title="I'm writing a finite state machine based on a transition table in C++ 14.
+My code so far looks like:
+
+#include <array>
+#include <functional>
+
+template < typename _State, typename _Event ...">Table-Driven Finite State Machine</a></h3> 
+         <div class="tags t-cçç t-cçç14 t-state-machine"> 
+          <a href="/questions/tagged/c%2b%2b" class="post-tag" title="show questions tagged 'c++'" rel="tag">c++</a> 
+          <a href="/questions/tagged/c%2b%2b14" class="post-tag" title="show questions tagged 'c++14'" rel="tag">c++14</a> 
+          <a href="/questions/tagged/state-machine" class="post-tag" title="show questions tagged 'state-machine'" rel="tag">state-machine</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128259/table-driven-finite-state-machine/?lastactivity" class="started-link">answered <span title="2016-05-14 14:52:40Z" class="relativetime">2 hours ago</span></a> 
+          <a href="/users/39848/edward">Edward</a> 
+          <span class="reputation-score" title="reputation score 25,493" dir="ltr">25.5k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-128335"> 
+        <div onclick="window.location.href='/questions/128335/converting-images-to-greyscale-using-juicypixel'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="22 views">22</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/128335/converting-images-to-greyscale-using-juicypixel" class="question-hyperlink" title="I would like to use Haskell to do some image processing so I have been writing small programs to test performance. I wrote a program to batch convert PNG images from color to greyscale. I compared the ...">Converting images to greyscale using JuicyPixel</a></h3> 
+         <div class="tags t-performance t-haskell t-image t-file-system"> 
+          <a href="/questions/tagged/performance" class="post-tag" title="show questions tagged 'performance'" rel="tag">performance</a> 
+          <a href="/questions/tagged/haskell" class="post-tag" title="show questions tagged 'haskell'" rel="tag">haskell</a> 
+          <a href="/questions/tagged/image" class="post-tag" title="show questions tagged 'image'" rel="tag">image</a> 
+          <a href="/questions/tagged/file-system" class="post-tag" title="show questions tagged 'file-system'" rel="tag">file-system</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/128335/converting-images-to-greyscale-using-juicypixel/?lastactivity" class="started-link">modified <span title="2016-05-14 14:10:31Z" class="relativetime">2 hours ago</span></a> 
+          <a href="/users/105418/user668074">user668074</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">16</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-121939"> 
+        <div onclick="window.location.href='/questions/121939/angular-ui-bootstrap-modal-scope'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="209 views">209</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/121939/angular-ui-bootstrap-modal-scope" class="question-hyperlink" title="I'm trying to improve my Angular skills by writing some basic applications that use a particular feature.  The following application uses the UI Bootstrap modal to add users to a list, or remove them ...">Angular UI Bootstrap Modal scope</a></h3> 
+         <div class="tags t-javascript t-angularûjs t-angular-bootstrap"> 
+          <a href="/questions/tagged/javascript" class="post-tag" title="show questions tagged 'javascript'" rel="tag">javascript</a> 
+          <a href="/questions/tagged/angular.js" class="post-tag" title="show questions tagged 'angular.js'" rel="tag">angular.js</a> 
+          <a href="/questions/tagged/angular-bootstrap" class="post-tag" title="show questions tagged 'angular-bootstrap'" rel="tag">angular-bootstrap</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/121939/angular-ui-bootstrap-modal-scope/?lastactivity" class="started-link">modified <span title="2016-05-14 13:04:14Z" class="relativetime">3 hours ago</span></a> 
+          <a href="/users/-1/community">Community</a>
+          <span class="mod-flair" title="moderator">♦</span> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div> 
+      <a id="home-browse" class="button" href="/questions">Browse More Questions</a> 
+     </div> 
+     <script>
+        StackExchange.using('exploreQuestions', function() {
+                StackExchange.exploreQuestions.init({count:14});
+                            StackExchange.exploreQuestions.gps();
+        });
+    </script> 
+     <script>
+    StackExchange.ready(function() { StackExchange.question.initShareLinks(); });
+</script>
+    </div> 
+    <div id="sidebar"> 
+     <style type="text/css">
+    .ads { margin-left: 60px; }
+    .ad-container { width: 300px; height: 250px; margin-right: 20px; margin-bottom: 20px; }
+    .ad-container .ad { height: 250px; }
+    .ad-container .footer-container { overflow: hidden; height: 30px; position: relative; top: -30px; }
+    .ad-container .footer-container .footer { font-family: Arial,Helvetic,Sans-Serif; font-size: 12px; text-align: center; padding-top: 9px; background-color: #000; color: #EFF; opacity: 0.9; filter: alpha(opacity=90); top: 30px; height: 30px; position: relative; }
+    .ad-container a:hover { text-decoration: underline; }
+    #adzerk2 { height: 250px; }
+</style> 
+     <script>
+    StackExchange.ready(function () {
+        $(".ad-container").hover(
+            function () {
+                $(".ad-container .footer-container .footer").stop(true, true).animate({ top: "0px" }, "fast");
+            },
+            function () {
+                $(".ad-container .footer-container .footer").animate({ top: "30px" }, "fast");
+            });
+    });
+</script> 
+     <script>
+        var ados = ados || {};ados.run = ados.run || [];
+        ados.run.push(function () { ados_add_placement(22, 12057, "adcm2", [5,17]).setZone(76); });
+    </script> 
+     <div class="everyonelovesstackoverflow" id="adcm2"> 
+     </div> 
+     <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+     <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('c%23,optimization,.net,x-host-codereview.stackexchange.com');; ados_load();
+        });   
+        
+</script>
+     <div style="margin-bottom: 10px;"> 
+      <style type="text/css">
+#newsletter-ad {
+    width: 270px;
+    height: 250px;
+    overflow: hidden;
+    background: url('//cdn.sstatic.net/Sites/codereview/img/newsletter-ad.png?v=4');
+    padding: 0 15px 0 15px;
+}
+#newsletter-ad-header {
+    margin-top: 60px;
+}
+#newsletter-ad ul {
+    margin: 1em 0 1em 1.5em;
+}
+#newsletter-ad ul li {
+    margin-bottom: 5px;
+}
+#newsletter-signup-container {
+    text-align: center;
+}
+#newsletter-preview-container {
+    margin-top: 10px;
+    text-align: center;
+}
+#newsletter-email-input {
+    width: 200px;
+}
+</style> 
+      <script>
+    StackExchange.ready(function () {
+        StackExchange.newsletterAd.init();
+    });
+</script> 
+      <div id="newsletter-ad"> 
+       <p id="newsletter-ad-header">Get the <b>weekly newsletter!</b> In it, you'll get:</p> 
+       <ul> 
+        <li>The week's top questions and answers</li> 
+        <li>Important community announcements</li> 
+        <li>Questions that need answers</li> 
+       </ul> 
+       <div id="newsletter-signup-container">
+        <input id="newsletter-signup" type="button" value="Sign up for the newsletter">
+       </div> 
+       <p id="newsletter-preview-container">see an <a href="//stackexchange.com/newsletters/newsletter?site=codereview.stackexchange.com" id="newsletter-preview">example newsletter</a></p> 
+       <div class="dno"> 
+        <p class="privacy-policy-agreement"> By subscribing, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p> 
+        <input type="hidden" name="legalLinksShown" value="1"> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="hot-network-questions" class="module"> 
+      <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:8 })"> Hot Network Questions </a> </h4> 
+      <ul> 
+       <li> 
+        <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67134/is-it-unethical-to-notify-a-company-about-an-employee-who-is-seeking-employment" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:423 }); posts_hot_network.click({ item_type:2, location:8 })"> Is it unethical to notify a company about an employee who is seeking employment elsewhere? </a> </li> 
+       <li> 
+        <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/41594/klemperer-rosette-vs-relativistic-kill-vehicles" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:579 }); posts_hot_network.click({ item_type:2, location:8 })"> Klemperer rosette vs Relativistic Kill Vehicles </a> </li> 
+       <li> 
+        <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80118/how-to-prevent-players-from-metagaming-when-they-split-the-party" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:122 }); posts_hot_network.click({ item_type:2, location:8 })"> How to prevent players from metagaming when they split the party? </a> </li> 
+       <li> 
+        <div class="favicon favicon-bicycles" title="Bicycles Stack Exchange"></div><a href="http://bicycles.stackexchange.com/questions/38929/removing-a-rear-wheel-of-a-town-bike" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:126 }); posts_hot_network.click({ item_type:2, location:8 })"> Removing a rear wheel of a town bike </a> </li> 
+       <li> 
+        <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68320/to-travel-30-km-from-india-to-sri-lanka-do-i-really-have-to-take-a-1500-km-20" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:273 }); posts_hot_network.click({ item_type:2, location:8 })"> To travel 30 km from India to Sri Lanka, do I really have to take a 1500 km, 20 hour detour? </a> </li> 
+       <li> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123045/is-it-acceptable-practice-to-only-increment-a-number-when-changing-a-password" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Is it acceptable practice to only increment a number when changing a password? </a> </li> 
+       <li> 
+        <div class="favicon favicon-startups" title="Startups Stack Exchange"></div><a href="http://startups.stackexchange.com/questions/9131/why-java-is-not-so-popular-in-software-development-startup-projects" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:573 }); posts_hot_network.click({ item_type:2, location:8 })"> Why Java is not so popular in software development startup projects? </a> </li> 
+       <li> 
+        <div class="favicon favicon-retrocomputing" title="Retrocomputing Stack Exchange"></div><a href="http://retrocomputing.stackexchange.com/questions/463/why-was-basic-built-into-so-many-operating-systems" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:648 }); posts_hot_network.click({ item_type:2, location:8 })"> Why was BASIC built into so many operating systems? </a> </li> 
+       <li> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/122922/discouraging-users-from-copying-images-off-a-website" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Discouraging users from copying images off a website? </a> </li> 
+       <li> 
+        <div class="favicon favicon-earthscience" title="Earth Science Stack Exchange"></div><a href="http://earthscience.stackexchange.com/questions/8004/can-the-moon-shadow-angle-change" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:553 }); posts_hot_network.click({ item_type:2, location:8 })"> Can the moon shadow angle change? </a> </li> 
+       <li> 
+        <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:131 }); posts_hot_network.click({ item_type:2, location:8 })"> Why would the 'final' keyword ever be useful? </a> </li> 
+       <li> 
+        <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/64052/how-much-should-a-new-graduate-with-new-job-put-towards-a-car" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:93 }); posts_hot_network.click({ item_type:2, location:8 })"> How much should a new graduate with new job put towards a car? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127968/what-was-darth-mauls-pre-sith-name" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> What was Darth Maul's pre-Sith name? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68550/advisor-forcing-to-publish-paper-in-high-profile-journal" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> Advisor forcing to publish paper in high profile journal </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-sqa" title="Software Quality Assurance &amp; Testing Stack Exchange"></div><a href="http://sqa.stackexchange.com/questions/18655/tell-me-a-reason-behind-bellow-given-webdriver-exception-and-how-will-you-resolv" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:244 }); posts_hot_network.click({ item_type:2, location:8 })"> Tell me a reason behind bellow given WebDriver exception and how will you resolve It? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/234188/irfz44n-power-mosfet-gets-hot-while-driving-peltier-by-step-down-buck-voltage-co" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:135 }); posts_hot_network.click({ item_type:2, location:8 })"> IRFZ44N power MOSFET gets hot while driving Peltier by step-down buck voltage converter </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37221259/passing-parameters-to-lambda-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:1 }); posts_hot_network.click({ item_type:2, location:8 })"> Passing parameters to lambda in C++ </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68605/how-to-read-papers-without-falling-into-a-rabbit-hole" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> How to read papers without falling into a rabbit hole? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127843/in-star-wars-a-new-hope-why-was-one-officer-dressed-in-white" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> In Star Wars: A New Hope, why was one officer dressed in white? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1785074/what-should-the-fundamental-theorem-of-linear-algebra-assert" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:69 }); posts_hot_network.click({ item_type:2, location:8 })"> What should "The Fundamental Theorem of Linear Algebra" assert? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325089/opposite-of-as-early-as-possible" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:97 }); posts_hot_network.click({ item_type:2, location:8 })"> Opposite of "As early as possible" </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/234197/mosfet-to-run-12-v-0-5-a-door-lock" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:135 }); posts_hot_network.click({ item_type:2, location:8 })"> MOSFET to run 12 V, 0.5 A door lock </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123234/how-to-explain-that-cryptography-is-good-to-non-techie-friends" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> How to explain that "Cryptography is good" to non-techie friends </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/282973/do-programs-run-from-an-ssh-session-depend-on-the-connection" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:106 }); posts_hot_network.click({ item_type:2, location:8 })"> Do programs run from an ssh session depend on the connection? </a> </li> 
+      </ul> 
+      <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:8 })"> more hot questions </a> 
+     </div> 
+    </div> 
+    <div id="feed-link"> 
+     <div id="feed-link-text"> 
+      <a href="/feeds" title="the 30 most recent questions"> <span class="feed-icon"></span>recent questions feed </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://blog.stackoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.codereview.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3573 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Code Review Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

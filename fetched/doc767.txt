@@ -1,0 +1,655 @@
+https://stackexchange.com/newsletters/newsletter?site=dba.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Database Administrators Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3ddba.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3ddba.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 78, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 78, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Database Administrators Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://dba.stackexchange.com">Database Administrators</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-image: url('//sstatic.net/stackexchange/Img/newsletters/dba-bg.png'); font-family: 'Helvetica Neue',Arial,sans-serif;" background="//sstatic.net/stackexchange/Img/newsletters/dba-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/dba-header.png" alt="Database Administrators Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff; -moz-box-shadow: 0 3px 3px #ccc; -webkit-box-shadow: 0 3px 3px #ccc; box-shadow: 0 3px 3px #ccc;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/137907/logical-reads-different-when-accessing-the-same-lob-data" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Logical reads different when accessing the same LOB data</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Here are three simple tests that read the same data, yet report very different logical reads: Setup The following script creates a test table with 100 identical rows, each containing an xml column ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/sql-server" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql-server</a> <a href="http://dba.stackexchange.com/questions/tagged/performance" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">performance</a> <a href="http://dba.stackexchange.com/questions/tagged/blob" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">blob</a> <a href="http://dba.stackexchange.com/questions/tagged/database-internals" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">database-internals</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c358a8edbaf5de680bdb55262a2a0a8f?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/1192/paul-white" target="_blank" style="color: #0096CD; text-decoration: none;">Paul White</a> 21 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c358a8edbaf5de680bdb55262a2a0a8f?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/1192/paul-white" target="_blank" style="color: #0096CD; text-decoration: none;">Paul White</a> 21 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/138080/convert-a-date-range-to-an-interval-description" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Convert a date range to an interval description</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">A requirement in a recent project was to report when a resource would be fully consumed. As well as the exhaustion calendar date I was asked to show the remaining time in English-like format, ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/sql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql</a> <a href="http://dba.stackexchange.com/questions/tagged/date-format" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">date-format</a> <a href="http://dba.stackexchange.com/questions/tagged/database-agnostic" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">database-agnostic</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f59f2daf0a4dc5ecfda513239f929f18?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/36809/michael-green" target="_blank" style="color: #0096CD; text-decoration: none;">Michael Green</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/69caC.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/6965/andriy-m" target="_blank" style="color: #0096CD; text-decoration: none;">Andriy M</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/138338/is-there-a-way-to-see-how-sql-server-2012-defines-new-identities" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Is there a way to see how SQL Server 2012 defines new identities?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">On Microsoft SQL Server 2012 (SP1) - 11.0.3000.0 (X64), is there a way to see what mechanism SQL Server uses to calculate the new identity values for tables created by SELECT INTO? SAMPLE DATA -- ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/sql-server" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql-server</a> <a href="http://dba.stackexchange.com/questions/tagged/sql-server-2012" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql-server-2012</a> <a href="http://dba.stackexchange.com/questions/tagged/identity" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">identity</a> <a href="http://dba.stackexchange.com/questions/tagged/database-internals" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">database-internals</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/696ed2b3537ed36741b04afc8987405a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/46185/shaneis" target="_blank" style="color: #0096CD; text-decoration: none;">Shaneis</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c358a8edbaf5de680bdb55262a2a0a8f?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/1192/paul-white" target="_blank" style="color: #0096CD; text-decoration: none;">Paul White</a> 12 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/137993/why-is-a-bacpac-file-so-small-compared-to-a-bak-file-of-the-same-database" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Why is a .bacpac file so small compared to a .bak file of the same database?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I've been doing backups of my SQL Server 2014 Express databases for import to other servers and noticed a difference in file size between .bacpac and .bak. Why is a .bacpac file so small compared to ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/sql-server" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql-server</a> <a href="http://dba.stackexchange.com/questions/tagged/backup" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">backup</a> <a href="http://dba.stackexchange.com/questions/tagged/import" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">import</a> <a href="http://dba.stackexchange.com/questions/tagged/export" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">export</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/6ce8747f029615fe7e525ac43b3e4a18?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/94170/chris" target="_blank" style="color: #0096CD; text-decoration: none;">Chris</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/NUAjd.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/8783/kin" target="_blank" style="color: #0096CD; text-decoration: none;">Kin</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/138231/would-a-table-benefit-if-it-was-a-heap" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Would a table benefit if it was a heap</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I've a logging table with approx 1.500.000 rows, the primary key is an ascending identity and the clustered index is on the primary key. The identity value is auto-generated =&gt; records are always ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/sql-server" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql-server</a> <a href="http://dba.stackexchange.com/questions/tagged/sql-server-2012" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql-server-2012</a> <a href="http://dba.stackexchange.com/questions/tagged/index-tuning" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">index-tuning</a> <a href="http://dba.stackexchange.com/questions/tagged/clustered-index" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">clustered-index</a> <a href="http://dba.stackexchange.com/questions/tagged/heap" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">heap</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/97fc28fa977e386063c5e646faaa6985?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/88731/frederik-vanderhaegen" target="_blank" style="color: #0096CD; text-decoration: none;">Frederik Vanderhaegen</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/bVVvm.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/20225/kenneth-fisher" target="_blank" style="color: #0096CD; text-decoration: none;">Kenneth Fisher</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/138311/good-example-of-mdx-vs-sql-for-analytical-queries" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Good example of MDX vs SQL for analytical queries</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Can anybody show me a good example of MDX's advantages over regular SQL when doing analytical queries? I would like to compare an MDX query with an SQL query that gives similar results. Wikipedia ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/sql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql</a> <a href="http://dba.stackexchange.com/questions/tagged/olap" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">olap</a> <a href="http://dba.stackexchange.com/questions/tagged/mdx" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">mdx</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/160903a7ab3da46bdc2d892cb92d377a?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/4259/leftium" target="_blank" style="color: #0096CD; text-decoration: none;">Leftium</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/LxRW4.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/39384/tom-v" target="_blank" style="color: #0096CD; text-decoration: none;">Tom V</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/138522/mongodb-vs-rdbms-dba-duties" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">MongoDB vs RDBMS DBA duties</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">What are the differences between the daily tasks/duties of a Mongo DBA compared to a RDBMS DBA? For example, some sites claim that a MongoDB DBA would not require to do data modelling or designing ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/mongodb" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">mongodb</a> <a href="http://dba.stackexchange.com/questions/tagged/database-administration" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">database-administration</a> <a href="http://dba.stackexchange.com/questions/tagged/nosql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">nosql</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/b093567c59fd867703f8c80d980aa739?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/94541/mechro" target="_blank" style="color: #0096CD; text-decoration: none;">Mechro</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f59f2daf0a4dc5ecfda513239f929f18?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/36809/michael-green" target="_blank" style="color: #0096CD; text-decoration: none;">Michael Green</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/40045/how-do-i-list-all-schemas-in-postgresql" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How do I list all schemas in PostgreSQL?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">When using PostgreSQL v9.1, how do I list all of the schemas using SQL? I was expecting something along the lines of: SELECT something FROM pg_blah; </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/postgresql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">postgresql</a> <a href="http://dba.stackexchange.com/questions/tagged/schema" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">schema</a> <a href="http://dba.stackexchange.com/questions/tagged/postgresql-9.1" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">postgresql-9.1</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/tUz3a.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/22585/st%c3%a9phane" target="_blank" style="color: #0096CD; text-decoration: none;">Stéphane</a> 79 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/4b152262d9ba55197f609625358ff7e0?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/1822/a-horse-with-no-name" target="_blank" style="color: #0096CD; text-decoration: none;">a_horse_with_no_name</a> 79 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/3489/trying-to-use-mysql-workbench-with-tcp-ip-over-ssh-failed-to-connect" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Trying to use MySQL Workbench with TCP/IP over SSH - failed to connect</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I can't connect using TCP/IP over SSH connection in MySQL Workbench from a PC. What's going on? I created a MySQL 5.1 database on an Ubuntu server mysql.myhost.com. I can access it locally. MySQL ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/mysql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">mysql</a> <a href="http://dba.stackexchange.com/questions/tagged/mysql-workbench" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">mysql-workbench</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/07ad1b1aa5c1c40feb6259072e26de29?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/2220/dizzley" target="_blank" style="color: #0096CD; text-decoration: none;">Dizzley</a> 24 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/fc6d0d5f5aae08da0827d9e60d873c27?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> answered by <a href="http://dba.stackexchange.com/users/1167/eye" target="_blank" style="color: #0096CD; text-decoration: none;">Eye</a> 17 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/138420/setup-mysql-master-to-master-replication-automatic-failover-when-each-master-als" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Setup MySQL Master to Master replication/automatic failover when each Master also has a Slave</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Thanks in advance. I have always worked with SQL Server and never really had any exposure to MySQL. I now have to determine the preferred setup for MySQL when there are four servers involved. ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/mysql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">mysql</a> <a href="http://dba.stackexchange.com/questions/tagged/database-design" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">database-design</a> <a href="http://dba.stackexchange.com/questions/tagged/replication" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">replication</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/540a4a427d1032dd27e84a36f62477e3?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/94532/s9desi" target="_blank" style="color: #0096CD; text-decoration: none;">S9Desi</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/138098/select-where-value-in-row-is-different-and-update" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Select where value in row is different and update</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a large table that includes rows like the following: Query: select * from cartographic_text_vm where fid = 'osgb5000005104723440' order by ckpt; Results: -[ RECORD 1 ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/sql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">sql</a> <a href="http://dba.stackexchange.com/questions/tagged/postgresql" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">postgresql</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5cefeff3dfa786ae7aeff90db2cb0e9f?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/94253/chris-burns" target="_blank" style="color: #0096CD; text-decoration: none;">Chris Burns</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://dba.stackexchange.com/questions/138289/how-should-i-use-dynamodb-table" target="_blank" style="color: #0096CD!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How should I use DynamoDB table</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a list of items. Each item is attached to several urls and each url has a score number. So I have something like this : How should I organise this in dynamoDB? How should I format my Json ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dba.stackexchange.com/questions/tagged/database-design" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">database-design</a> <a href="http://dba.stackexchange.com/questions/tagged/json" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">json</a> <a href="http://dba.stackexchange.com/questions/tagged/dynamodb" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">dynamodb</a> </td> 
+             <td style="padding-top: 0; color: #666; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://lh3.googleusercontent.com/-ylur9-ED2UU/AAAAAAAAAAI/AAAAAAAAACU/r0Cd0F2YJCI/photo.jpg?sz=128" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #666; font-size: 11px;"> asked by <a href="http://dba.stackexchange.com/users/94413/simon-breton" target="_blank" style="color: #0096CD; text-decoration: none;">Simon Breton</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #0096CD; text-decoration: none; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #0096CD; text-decoration: none;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #0096CD; text-decoration: none;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #0096CD; text-decoration: none;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #0096CD; text-decoration: none;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

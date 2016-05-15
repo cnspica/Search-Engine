@@ -1,0 +1,1258 @@
+https://stackexchange.com/leagues/78/month/dba
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - Database Administrators - May 2016 - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/78/month/dba/2016-05-01"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/78/Month/2016-05-01/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f78%2fmonth%2fdba#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f78%2fmonth%2fdba">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/month/stackoverflow/2016-05-01?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/month/superuser/2016-05-01?sort=reputationchange"> Super User </option> <option value="/leagues/21/month/math/2016-05-01?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/month/askubuntu/2016-05-01?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/month/serverfault/2016-05-01?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/month/english/2016-05-01?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/month/unix/2016-05-01?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/month/apple/2016-05-01?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/month/gaming/2016-05-01?sort=reputationchange"> Arqade </option> <option value="/leagues/52/month/programmers/2016-05-01?sort=reputationchange"> Programmers </option> <option value="/leagues/29/month/tex/2016-05-01?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/month/android/2016-05-01?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/month/meta/2016-05-01?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/month/electronics/2016-05-01?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/month/physics/2016-05-01?sort=reputationchange"> Physics </option> <option value="/leagues/19/month/stats/2016-05-01?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/month/dba/2016-05-01?sort=reputationchange" selected> Database Administrators </option> <option value="/leagues/355/month/ru-stackoverflow/2016-05-01?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/month/security/2016-05-01?sort=reputationchange"> Information Security </option> <option value="/leagues/86/month/codereview/2016-05-01?sort=reputationchange"> Code Review </option> <option value="/leagues/42/month/wordpress/2016-05-01?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/month/gis/2016-05-01?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/month/scifi/2016-05-01?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/month/mathoverflow/2016-05-01?sort=reputationchange"> MathOverflow </option> <option value="/leagues/23/month/diy/2016-05-01?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/month/webapps/2016-05-01?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/month/sharepoint/2016-05-01?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/month/cooking/2016-05-01?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/month/graphicdesign/2016-05-01?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/month/gamedev/2016-05-01?sort=reputationchange"> Game Development </option> <option value="/leagues/99/month/drupal/2016-05-01?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/month/ux/2016-05-01?sort=reputationchange"> User Experience </option> <option value="/leagues/229/month/ell/2016-05-01?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/month/pt-stackoverflow/2016-05-01?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/month/webmasters/2016-05-01?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/month/magento/2016-05-01?sort=reputationchange"> Magento </option> <option value="/leagues/191/month/academia/2016-05-01?sort=reputationchange"> Academia </option> <option value="/leagues/125/month/travel/2016-05-01?sort=reputationchange"> Travel </option> <option value="/leagues/213/month/salesforce/2016-05-01?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/month/workplace/2016-05-01?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/month/photo/2016-05-01?sort=reputationchange"> Photography </option> <option value="/leagues/177/month/mathematica/2016-05-01?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/month/raspberrypi/2016-05-01?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/month/money/2016-05-01?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/month/movies/2016-05-01?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/month/rpg/2016-05-01?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/month/cs/2016-05-01?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/month/codegolf/2016-05-01?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/month/chemistry/2016-05-01?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/month/mechanics/2016-05-01?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/month/bicycles/2016-05-01?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/month/blender/2016-05-01?sort=reputationchange"> Blender </option> <option value="/leagues/359/month/rus/2016-05-01?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/month/music/2016-05-01?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/month/biology/2016-05-01?sort=reputationchange"> Biology </option> <option value="/leagues/139/month/christianity/2016-05-01?sort=reputationchange"> Christianity </option> <option value="/leagues/95/month/skeptics/2016-05-01?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/month/anime/2016-05-01?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/month/crypto/2016-05-01?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/month/bitcoin/2016-05-01?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/month/parenting/2016-05-01?sort=reputationchange"> Parenting </option> <option value="/leagues/243/month/networkengineering/2016-05-01?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/month/cstheory/2016-05-01?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/307/month/puzzling/2016-05-01?sort=reputationchange"> Puzzling </option> <option value="/leagues/327/month/worldbuilding/2016-05-01?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/113/month/judaism/2016-05-01?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/month/fitness/2016-05-01?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/month/german/2016-05-01?sort=reputationchange"> German Language </option> <option value="/leagues/275/month/aviation/2016-05-01?sort=reputationchange"> Aviation </option> <option value="/leagues/288/month/arduino/2016-05-01?sort=reputationchange"> Arduino </option> <option value="/leagues/60/month/boardgames/2016-05-01?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/month/dsp/2016-05-01?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/month/sqa/2016-05-01?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/month/softwarerecs/2016-05-01?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/month/philosophy/2016-05-01?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/month/history/2016-05-01?sort=reputationchange"> History </option> <option value="/leagues/123/month/gardening/2016-05-01?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/month/japanese/2016-05-01?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/month/writers/2016-05-01?sort=reputationchange"> Writers </option> <option value="/leagues/37/month/stackapps/2016-05-01?sort=reputationchange"> Stack Apps </option> <option value="/leagues/259/month/sound/2016-05-01?sort=reputationchange"> Sound Design </option> <option value="/leagues/211/month/islam/2016-05-01?sort=reputationchange"> Islam </option> <option value="/leagues/93/month/pm/2016-05-01?sort=reputationchange"> Project Management </option> <option value="/leagues/91/month/quant/2016-05-01?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/333/month/ja-stackoverflow/2016-05-01?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/341/month/lifehacks/2016-05-01?sort=reputationchange"> Lifehacks </option> <option value="/leagues/137/month/french/2016-05-01?sort=reputationchange"> French Language </option> <option value="/leagues/165/month/scicomp/2016-05-01?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/month/spanish/2016-05-01?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/month/productivity/2016-05-01?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/month/pets/2016-05-01?sort=reputationchange"> Pets </option> <option value="/leagues/255/month/space/2016-05-01?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/month/datascience/2016-05-01?sort=reputationchange"> Data Science </option> <option value="/leagues/64/month/homebrew/2016-05-01?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/month/expressionengine/2016-05-01?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/month/hermeneutics/2016-05-01?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/month/video/2016-05-01?sort=reputationchange"> Video Production </option> <option value="/leagues/197/month/windowsphone/2016-05-01?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/month/outdoors/2016-05-01?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/month/emacs/2016-05-01?sort=reputationchange"> Emacs </option> <option value="/leagues/189/month/sports/2016-05-01?sort=reputationchange"> Sports </option> <option value="/leagues/237/month/reverseengineering/2016-05-01?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/month/chinese/2016-05-01?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/month/cogsci/2016-05-01?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/month/chess/2016-05-01?sort=reputationchange"> Chess </option> <option value="/leagues/143/month/linguistics/2016-05-01?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/month/astronomy/2016-05-01?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/month/robotics/2016-05-01?sort=reputationchange"> Robotics </option> <option value="/leagues/245/month/opendata/2016-05-01?sort=reputationchange"> Open Data </option> <option value="/leagues/215/month/patents/2016-05-01?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/month/es-stackoverflow/2016-05-01?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/month/tor/2016-05-01?sort=reputationchange"> Tor </option> <option value="/leagues/223/month/politics/2016-05-01?sort=reputationchange"> Politics </option> <option value="/leagues/315/month/hinduism/2016-05-01?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/month/freelancing/2016-05-01?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/month/vi/2016-05-01?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/month/craftcms/2016-05-01?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/month/joomla/2016-05-01?sort=reputationchange"> Joomla </option> <option value="/leagues/321/month/startups/2016-05-01?sort=reputationchange"> Startups </option> <option value="/leagues/343/month/engineering/2016-05-01?sort=reputationchange"> Engineering </option> <option value="/leagues/313/month/buddhism/2016-05-01?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/month/russian/2016-05-01?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/month/economics/2016-05-01?sort=reputationchange"> Economics </option> <option value="/leagues/363/month/law/2016-05-01?sort=reputationchange"> Law </option> <option value="/leagues/155/month/bricks/2016-05-01?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/month/expatriates/2016-05-01?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/month/tridion/2016-05-01?sort=reputationchange"> Tridion </option> <option value="/leagues/291/month/matheducators/2016-05-01?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/month/earthscience/2016-05-01?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/month/martialarts/2016-05-01?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/month/elementaryos/2016-05-01?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/month/ham/2016-05-01?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/month/civicrm/2016-05-01?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/month/health/2016-05-01?sort=reputationchange"> Health </option> <option value="/leagues/351/month/woodworking/2016-05-01?sort=reputationchange"> Woodworking </option> <option value="/leagues/277/month/ebooks/2016-05-01?sort=reputationchange"> Ebooks </option> <option value="/leagues/386/month/ethereum/2016-05-01?sort=reputationchange"> Ethereum </option> <option value="/leagues/231/month/sustainability/2016-05-01?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/217/month/genealogy/2016-05-01?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/month/italian/2016-05-01?sort=reputationchange"> Italian Language </option> <option value="/leagues/279/month/alcohol/2016-05-01?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/173/month/poker/2016-05-01?sort=reputationchange"> Poker </option> <option value="/leagues/365/month/opensource/2016-05-01?sort=reputationchange"> Open Source </option> <option value="/leagues/335/month/hsm/2016-05-01?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/month/musicfans/2016-05-01?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/month/coffee/2016-05-01?sort=reputationchange"> Coffee </option> <option value="/leagues/371/month/portuguese/2016-05-01?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/month/hardwarerecs/2016-05-01?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/month/computergraphics/2016-05-01?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/month/communitybuilding/2016-05-01?sort=reputationchange"> Community Building </option> <option value="/leagues/361/month/mythology/2016-05-01?sort=reputationchange"> Mythology </option> <option value="/leagues/384/month/3dprinting/2016-05-01?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/month/latin/2016-05-01?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/month/retrocomputing/2016-05-01?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/month/languagelearning/2016-05-01?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/78/week/dba">Week</a> 
+        <a href="/leagues/78/month/dba" class="youarehere">Month</a> 
+        <a href="/leagues/78/quarter/dba">Quarter</a> 
+        <a href="/leagues/78/year/dba">Year</a> 
+        <a href="/leagues/78/alltime/dba">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://dba.stackexchange.com"> 
+        <div class="site-bubble" style="background-color: #f8f8f8; border-color: #f8f8f8;"> 
+         <img src="http://cdn.sstatic.net/Sites/dba/img/icon-48.png?v=f8f8f8" alt="Database Administrators" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://dba.stackexchange.com">Database Administrators</a></h2> 
+        <p> Q&amp;A for database professionals who wish to improve their database skills and learn from others in the community <span class="league-user-count">(75,891 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>May 2016</h3> 
+        <a href="/leagues/78/month/dba/2016-04-01" class="viewolder">« prev month</a> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+       <div class="fr">
+        Sort by: 
+        <select onchange="$(this).siblings('.sortLoader').css('visibility', 'visible'); window.location.href = $(this).val(); return false;"> <option value="/leagues/78/month/dba/2016-05-01?sort=reputationchange" selected> Month Rank </option> <option value="/leagues/78/month/dba/2016-05-01?sort=rankchange"> Rank Change </option> <option value="/leagues/78/month/dba/2016-05-01?sort=totalreputation"> Total Reputation </option> </select> 
+        <span class="sortLoader"></span> 
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="55596"></a> 
+        <div class="user user-55596"> 
+         <a href="http://dba.stackexchange.com/users/55596/ziggy-crueltyfree-zeitgeister">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/af283ef6db062dcf7546477d18b91276?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Ziggy Crueltyfree Zeitgeister">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/55596/ziggy-crueltyfree-zeitgeister">Ziggy Crueltyfree Zeitgeister</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 4 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/55596?sort=reputationchange#55596">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+4</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,931</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,295</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3690"></a> 
+        <div class="user user-3690"> 
+         <a href="http://dba.stackexchange.com/users/3690/martin-smith">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/ec43b270515c0b507947fae8c5d16c35?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Martin Smith">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/3690/martin-smith">Martin Smith</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="106 silver badges"><span class="badge2"></span><span class="badgecount">106</span></span> 
+          <span title="166 bronze badges"><span class="badge3"></span><span class="badgecount">166</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/3690?sort=reputationchange#3690">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">39,961</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">950</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1186"></a> 
+        <div class="user user-1186"> 
+         <a href="http://dba.stackexchange.com/users/1186/aaron-bertrand">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/3881a283f3dff68791acf089f6a69f4f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Aaron Bertrand">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/1186/aaron-bertrand">Aaron Bertrand</a></h2> 
+          <span title="12 gold badges"><span class="badge1"></span><span class="badgecount">12</span></span> 
+          <span title="182 silver badges"><span class="badge2"></span><span class="badgecount">182</span></span> 
+          <span title="313 bronze badges"><span class="badge3"></span><span class="badgecount">313</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/1186?sort=reputationchange#1186">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">108,090</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">885</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="993"></a> 
+        <div class="user user-993"> 
+         <a href="http://dba.stackexchange.com/users/993/ypercube%e1%b5%80%e1%b4%b9">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/d3671c61c0c2525f834ac21430711e3d?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="ypercubeᵀᴹ">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/993/ypercube%e1%b5%80%e1%b4%b9">ypercubeᵀᴹ</a></h2> 
+          <span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span> 
+          <span title="62 silver badges"><span class="badge2"></span><span class="badgecount">62</span></span> 
+          <span title="120 bronze badges"><span class="badge3"></span><span class="badgecount">120</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/993?sort=reputationchange#993">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+4</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">37,771</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">825</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1192"></a> 
+        <div class="user user-1192"> 
+         <a href="http://dba.stackexchange.com/users/1192/paul-white">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/c358a8edbaf5de680bdb55262a2a0a8f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Paul White">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/1192/paul-white">Paul White</a></h2> 
+          <span title="10 gold badges"><span class="badge1"></span><span class="badgecount">10</span></span> 
+          <span title="139 silver badges"><span class="badge2"></span><span class="badgecount">139</span></span> 
+          <span title="235 bronze badges"><span class="badge3"></span><span class="badgecount">235</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/1192?sort=reputationchange#1192">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+12</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">29,580</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">816</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="30859"></a> 
+        <div class="user user-30859"> 
+         <a href="http://dba.stackexchange.com/users/30859/srutzky">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/tYyIG.jpg?s=128&amp;g=1&amp;s=48" title="srutzky">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/30859/srutzky">srutzky</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="24 silver badges"><span class="badge2"></span><span class="badgecount">24</span></span> 
+          <span title="68 bronze badges"><span class="badge3"></span><span class="badgecount">68</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/30859?sort=reputationchange#30859">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">18,032</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">698</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="46185"></a> 
+        <div class="user user-46185"> 
+         <a href="http://dba.stackexchange.com/users/46185/shaneis">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/696ed2b3537ed36741b04afc8987405a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Shaneis">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/46185/shaneis">Shaneis</a></h2> 
+          <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span> 
+          <span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 8 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/46185?sort=reputationchange#46185">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+22</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,092</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">685</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="8783"></a> 
+        <div class="user user-8783"> 
+         <a href="http://dba.stackexchange.com/users/8783/kin">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/NUAjd.jpg?s=128&amp;g=1&amp;s=48" title="Kin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/8783/kin">Kin</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="47 silver badges"><span class="badge2"></span><span class="badgecount">47</span></span> 
+          <span title="112 bronze badges"><span class="badge3"></span><span class="badgecount">112</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/8783?sort=reputationchange#8783">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">35,098</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">680</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="877"></a> 
+        <div class="user user-877"> 
+         <a href="http://dba.stackexchange.com/users/877/rolandomysqldba">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/Tyn6s.jpg?s=128&amp;g=1&amp;s=48" title="RolandoMySQLDBA">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/877/rolandomysqldba">RolandoMySQLDBA</a></h2> 
+          <span title="13 gold badges"><span class="badge1"></span><span class="badgecount">13</span></span> 
+          <span title="121 silver badges"><span class="badge2"></span><span class="badgecount">121</span></span> 
+          <span title="251 bronze badges"><span class="badge3"></span><span class="badgecount">251</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/877?sort=reputationchange#877">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-6</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">99,868</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">655</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="36812"></a> 
+        <div class="user user-36812"> 
+         <a href="http://dba.stackexchange.com/users/36812/cody-konior">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/8yOcs.jpg?s=128&amp;g=1&amp;s=48" title="Cody Konior">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/36812/cody-konior">Cody Konior</a></h2> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/36812?sort=reputationchange#36812">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+6</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,313</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">633</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="10832"></a> 
+        <div class="user user-10832"> 
+         <a href="http://dba.stackexchange.com/users/10832/max-vernon">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/8ebca8a075ffe087b9f19b40f1df09e5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Max Vernon">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/10832/max-vernon">Max Vernon</a></h2> 
+          <span title="11 gold badges"><span class="badge1"></span><span class="badgecount">11</span></span> 
+          <span title="50 silver badges"><span class="badge2"></span><span class="badgecount">50</span></span> 
+          <span title="101 bronze badges"><span class="badge3"></span><span class="badgecount">101</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/10832?sort=reputationchange#10832">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-10</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">23,870</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">526</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="20225"></a> 
+        <div class="user user-20225"> 
+         <a href="http://dba.stackexchange.com/users/20225/kenneth-fisher">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/bVVvm.jpg?s=128&amp;g=1&amp;s=48" title="Kenneth Fisher">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/20225/kenneth-fisher">Kenneth Fisher</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="26 silver badges"><span class="badge2"></span><span class="badgecount">26</span></span> 
+          <span title="59 bronze badges"><span class="badge3"></span><span class="badgecount">59</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/20225?sort=reputationchange#20225">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+6</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">13,936</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">525</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="11537"></a> 
+        <div class="user user-11537"> 
+         <a href="http://dba.stackexchange.com/users/11537/wbob">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/FedGs.png?s=128&amp;g=1&amp;s=48" title="wBob">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/11537/wbob">wBob</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span> 
+          <span title="26 bronze badges"><span class="badge3"></span><span class="badgecount">26</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/11537?sort=reputationchange#11537">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,752</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">510</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3684"></a> 
+        <div class="user user-3684"> 
+         <a href="http://dba.stackexchange.com/users/3684/erwin-brandstetter">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/ed7cecf2bd835cf5670d271d0d104f51?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Erwin Brandstetter">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/3684/erwin-brandstetter">Erwin Brandstetter</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="74 silver badges"><span class="badge2"></span><span class="badgecount">74</span></span> 
+          <span title="122 bronze badges"><span class="badge3"></span><span class="badgecount">122</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/3684?sort=reputationchange#3684">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-7</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">47,573</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">490</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="93035"></a> 
+        <div class="user user-93035"> 
+         <a href="http://dba.stackexchange.com/users/93035/chad-mattox">
+          <div class="faviconBox">
+           <img src="https://graph.facebook.com/10153571393249013/picture?type=large&amp;s=48" title="Chad Mattox">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/93035/chad-mattox">Chad Mattox</a></h2> 
+          <span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span> 
+          <br> 
+          <span class="faintText">member for: 20 days <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/93035?sort=reputationchange#93035">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+4</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">956</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">410</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="93569"></a> 
+        <div class="user user-93569"> 
+         <a href="http://dba.stackexchange.com/users/93569/george-lorch">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/ISji6.jpg?s=128&amp;g=1&amp;s=48" title="George Lorch">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/93569/george-lorch">George Lorch</a></h2> 
+          <span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span> 
+          <br> 
+          <span class="faintText">member for: 14 days <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/93569?sort=reputationchange#93569">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">391</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">390</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="93190"></a> 
+        <div class="user user-93190"> 
+         <a href="http://dba.stackexchange.com/users/93190/nick-s">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/6894caa118d914367d08d8197cd1f62e?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Nick S">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/93190/nick-s">Nick S</a></h2> 
+          <span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span> 
+          <br> 
+          <span class="faintText">member for: 19 days <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/93190?sort=reputationchange#93190">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+180</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">411</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">365</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="36809"></a> 
+        <div class="user user-36809"> 
+         <a href="http://dba.stackexchange.com/users/36809/michael-green">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f59f2daf0a4dc5ecfda513239f929f18?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Michael Green">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/36809/michael-green">Michael Green</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="16 silver badges"><span class="badge2"></span><span class="badgecount">16</span></span> 
+          <span title="39 bronze badges"><span class="badge3"></span><span class="badgecount">39</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/36809?sort=reputationchange#36809">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+9</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">7,175</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">350</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6965"></a> 
+        <div class="user user-6965"> 
+         <a href="http://dba.stackexchange.com/users/6965/andriy-m">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/69caC.png?s=128&amp;g=1&amp;s=48" title="Andriy M">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/6965/andriy-m">Andriy M</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span> 
+          <span title="41 bronze badges"><span class="badge3"></span><span class="badgecount">41</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/6965?sort=reputationchange#6965">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">6,119</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">320</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="91501"></a> 
+        <div class="user user-91501"> 
+         <a href="http://dba.stackexchange.com/users/91501/hila-dg">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/6776097221ad67f371357aaf72cbc775?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Hila DG">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/91501/hila-dg">Hila DG</a></h2> 
+          <span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span> 
+          <br> 
+          <span class="faintText">member for: 38 days <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/91501?sort=reputationchange#91501">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+124</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">391</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">310</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2103"></a> 
+        <div class="user user-2103"> 
+         <a href="http://dba.stackexchange.com/users/2103/mikael-eriksson">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/95d6478f4e8edbead014f9be65639ff9?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Mikael Eriksson">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/2103/mikael-eriksson">Mikael Eriksson</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="25 silver badges"><span class="badge2"></span><span class="badgecount">25</span></span> 
+          <span title="62 bronze badges"><span class="badge3"></span><span class="badgecount">62</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/2103?sort=reputationchange#2103">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+811</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">11,048</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">310</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="82568"></a> 
+        <div class="user user-82568"> 
+         <a href="http://dba.stackexchange.com/users/82568/msis">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f43dddb7f92b67e4b0e53718627c6b3a?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="MSIS">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/82568/msis">MSIS</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/82568?sort=reputationchange#82568">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">415</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">255</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="44434"></a> 
+        <div class="user user-44434"> 
+         <a href="http://dba.stackexchange.com/users/44434/dan-guzman">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/7XKVx.png?s=128&amp;g=1&amp;s=48" title="Dan Guzman">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/44434/dan-guzman">Dan Guzman</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 9 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/44434?sort=reputationchange#44434">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+8</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">3,554</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">245</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1822"></a> 
+        <div class="user user-1822"> 
+         <a href="http://dba.stackexchange.com/users/1822/a-horse-with-no-name">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/4b152262d9ba55197f609625358ff7e0?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="a_horse_with_no_name">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/1822/a-horse-with-no-name">a_horse_with_no_name</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="37 silver badges"><span class="badge2"></span><span class="badgecount">37</span></span> 
+          <span title="71 bronze badges"><span class="badge3"></span><span class="badgecount">71</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/1822?sort=reputationchange#1822">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+4</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20,165</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">235</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1876"></a> 
+        <div class="user user-1876"> 
+         <a href="http://dba.stackexchange.com/users/1876/rick-james">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1ee974306d2def46eb69534fbcf95cc5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Rick James">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/1876/rick-james">Rick James</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span> 
+          <span title="26 bronze badges"><span class="badge3"></span><span class="badgecount">26</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/1876?sort=reputationchange#1876">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-13</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">13,702</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">225</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="92819"></a> 
+        <div class="user user-92819"> 
+         <a href="http://dba.stackexchange.com/users/92819/serg">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/e768deedd6c0ed9a87a26eff0f4c6cbd?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Serg">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/92819/serg">Serg</a></h2> 
+          <span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span> 
+          <br> 
+          <span class="faintText">member for: 23 days <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/92819?sort=reputationchange#92819">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+97</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">301</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">200</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="630"></a> 
+        <div class="user user-630"> 
+         <a href="http://dba.stackexchange.com/users/630/gbn">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/4190f05bc2af559580aa220d0139e9f8?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="gbn">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/630/gbn">gbn</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="98 silver badges"><span class="badge2"></span><span class="badgecount">98</span></span> 
+          <span title="164 bronze badges"><span class="badge3"></span><span class="badgecount">164</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/630?sort=reputationchange#630">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-21</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">55,372</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">200</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="64556"></a> 
+        <div class="user user-64556"> 
+         <a href="http://dba.stackexchange.com/users/64556/jkavalik">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/6d506911da3c8df4588f158b088ad61a?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="jkavalik">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/64556/jkavalik">jkavalik</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/64556?sort=reputationchange#64556">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+58</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">3,283</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">190</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="28019"></a> 
+        <div class="user user-28019"> 
+         <a href="http://dba.stackexchange.com/users/28019/balazs-papp">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/o4G5Q.png?s=128&amp;g=1&amp;s=48" title="Balazs Papp">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/28019/balazs-papp">Balazs Papp</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span> 
+          <span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/28019?sort=reputationchange#28019">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-16</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,397</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">190</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="42489"></a> 
+        <div class="user user-42489"> 
+         <a href="http://dba.stackexchange.com/users/42489/jamesz">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/J6pYX.png?s=128&amp;g=1&amp;s=48" title="JamesZ">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://dba.stackexchange.com/users/42489/jamesz">JamesZ</a></h2> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 10 months <span class="permalink" style="display: none;"><a href="/leagues/78/month/dba/2016-05-01/42489?sort=reputationchange#42489">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> month rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+101</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,676</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">188</span> month reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;page=5" title="go to page 5"><span class="page-numbers">5</span></a> 
+        <span class="page-numbers dots">…</span> 
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;page=17" title="go to page 17"><span class="page-numbers">17</span></a> 
+        <a href="/leagues/78/month/dba/2016-05-01?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>1,000+</td>
+          <td class="count">1</td>
+         </tr> 
+         <tr>
+          <td>500+</td>
+          <td class="count">13</td>
+         </tr> 
+         <tr>
+          <td>200+</td>
+          <td class="count">27</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">51</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">79</td>
+         </tr> 
+         <tr>
+          <td>25+</td>
+          <td class="count">137</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">477</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>100,000+</td> 
+          <td class="count">1</td> 
+         </tr> 
+         <tr> 
+          <td>50,000+</td> 
+          <td class="count">3</td> 
+         </tr> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">12</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">35</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">73</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">107</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">151</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">284</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">589</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">1,802</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">72,834</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463245283});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

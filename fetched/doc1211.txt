@@ -1,0 +1,1096 @@
+https://stackexchange.com/leagues/251/alltime/mathoverflow
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - MathOverflow - All Time - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/251/alltime/mathoverflow/2009-09-28"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/251/AllTime/2009-09-28/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f251%2falltime%2fmathoverflow#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f251%2falltime%2fmathoverflow">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/alltime/stackoverflow/2009-09-28?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/alltime/superuser/2009-09-28?sort=reputationchange"> Super User </option> <option value="/leagues/21/alltime/math/2009-09-28?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/alltime/askubuntu/2009-09-28?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/alltime/serverfault/2009-09-28?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/alltime/english/2009-09-28?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/alltime/unix/2009-09-28?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/alltime/apple/2009-09-28?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/alltime/gaming/2009-09-28?sort=reputationchange"> Arqade </option> <option value="/leagues/52/alltime/programmers/2009-09-28?sort=reputationchange"> Programmers </option> <option value="/leagues/29/alltime/tex/2009-09-28?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/alltime/android/2009-09-28?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/alltime/meta/2009-09-28?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/alltime/electronics/2009-09-28?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/alltime/physics/2009-09-28?sort=reputationchange"> Physics </option> <option value="/leagues/19/alltime/stats/2009-09-28?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/alltime/dba/2009-09-28?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/alltime/ru-stackoverflow/2009-09-28?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/alltime/security/2009-09-28?sort=reputationchange"> Information Security </option> <option value="/leagues/86/alltime/codereview/2009-09-28?sort=reputationchange"> Code Review </option> <option value="/leagues/42/alltime/wordpress/2009-09-28?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/alltime/gis/2009-09-28?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/alltime/scifi/2009-09-28?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange" selected> MathOverflow </option> <option value="/leagues/23/alltime/diy/2009-09-28?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/alltime/webapps/2009-09-28?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/alltime/sharepoint/2009-09-28?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/alltime/cooking/2009-09-28?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/alltime/graphicdesign/2009-09-28?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/alltime/gamedev/2009-09-28?sort=reputationchange"> Game Development </option> <option value="/leagues/99/alltime/drupal/2009-09-28?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/alltime/ux/2009-09-28?sort=reputationchange"> User Experience </option> <option value="/leagues/229/alltime/ell/2009-09-28?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/alltime/pt-stackoverflow/2009-09-28?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/alltime/webmasters/2009-09-28?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/alltime/magento/2009-09-28?sort=reputationchange"> Magento </option> <option value="/leagues/191/alltime/academia/2009-09-28?sort=reputationchange"> Academia </option> <option value="/leagues/125/alltime/travel/2009-09-28?sort=reputationchange"> Travel </option> <option value="/leagues/213/alltime/salesforce/2009-09-28?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/alltime/workplace/2009-09-28?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/alltime/photo/2009-09-28?sort=reputationchange"> Photography </option> <option value="/leagues/177/alltime/mathematica/2009-09-28?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/alltime/raspberrypi/2009-09-28?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/alltime/money/2009-09-28?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/alltime/movies/2009-09-28?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/alltime/rpg/2009-09-28?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/alltime/cs/2009-09-28?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/alltime/codegolf/2009-09-28?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/alltime/chemistry/2009-09-28?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/alltime/mechanics/2009-09-28?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/alltime/bicycles/2009-09-28?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/alltime/blender/2009-09-28?sort=reputationchange"> Blender </option> <option value="/leagues/359/alltime/rus/2009-09-28?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/alltime/music/2009-09-28?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/alltime/biology/2009-09-28?sort=reputationchange"> Biology </option> <option value="/leagues/139/alltime/christianity/2009-09-28?sort=reputationchange"> Christianity </option> <option value="/leagues/95/alltime/skeptics/2009-09-28?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/alltime/anime/2009-09-28?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/alltime/crypto/2009-09-28?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/alltime/bitcoin/2009-09-28?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/alltime/parenting/2009-09-28?sort=reputationchange"> Parenting </option> <option value="/leagues/243/alltime/networkengineering/2009-09-28?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/alltime/cstheory/2009-09-28?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/307/alltime/puzzling/2009-09-28?sort=reputationchange"> Puzzling </option> <option value="/leagues/327/alltime/worldbuilding/2009-09-28?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/113/alltime/judaism/2009-09-28?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/alltime/fitness/2009-09-28?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/alltime/german/2009-09-28?sort=reputationchange"> German Language </option> <option value="/leagues/275/alltime/aviation/2009-09-28?sort=reputationchange"> Aviation </option> <option value="/leagues/288/alltime/arduino/2009-09-28?sort=reputationchange"> Arduino </option> <option value="/leagues/60/alltime/boardgames/2009-09-28?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/alltime/dsp/2009-09-28?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/alltime/sqa/2009-09-28?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/alltime/softwarerecs/2009-09-28?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/alltime/philosophy/2009-09-28?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/alltime/history/2009-09-28?sort=reputationchange"> History </option> <option value="/leagues/123/alltime/gardening/2009-09-28?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/alltime/japanese/2009-09-28?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/alltime/writers/2009-09-28?sort=reputationchange"> Writers </option> <option value="/leagues/37/alltime/stackapps/2009-09-28?sort=reputationchange"> Stack Apps </option> <option value="/leagues/259/alltime/sound/2009-09-28?sort=reputationchange"> Sound Design </option> <option value="/leagues/211/alltime/islam/2009-09-28?sort=reputationchange"> Islam </option> <option value="/leagues/93/alltime/pm/2009-09-28?sort=reputationchange"> Project Management </option> <option value="/leagues/91/alltime/quant/2009-09-28?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/333/alltime/ja-stackoverflow/2009-09-28?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/341/alltime/lifehacks/2009-09-28?sort=reputationchange"> Lifehacks </option> <option value="/leagues/137/alltime/french/2009-09-28?sort=reputationchange"> French Language </option> <option value="/leagues/165/alltime/scicomp/2009-09-28?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/alltime/spanish/2009-09-28?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/alltime/productivity/2009-09-28?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/alltime/pets/2009-09-28?sort=reputationchange"> Pets </option> <option value="/leagues/255/alltime/space/2009-09-28?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/alltime/datascience/2009-09-28?sort=reputationchange"> Data Science </option> <option value="/leagues/64/alltime/homebrew/2009-09-28?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/alltime/expressionengine/2009-09-28?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/alltime/hermeneutics/2009-09-28?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/alltime/video/2009-09-28?sort=reputationchange"> Video Production </option> <option value="/leagues/197/alltime/windowsphone/2009-09-28?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/alltime/outdoors/2009-09-28?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/alltime/emacs/2009-09-28?sort=reputationchange"> Emacs </option> <option value="/leagues/189/alltime/sports/2009-09-28?sort=reputationchange"> Sports </option> <option value="/leagues/237/alltime/reverseengineering/2009-09-28?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/alltime/chinese/2009-09-28?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/alltime/cogsci/2009-09-28?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/alltime/chess/2009-09-28?sort=reputationchange"> Chess </option> <option value="/leagues/143/alltime/linguistics/2009-09-28?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/alltime/astronomy/2009-09-28?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/alltime/robotics/2009-09-28?sort=reputationchange"> Robotics </option> <option value="/leagues/245/alltime/opendata/2009-09-28?sort=reputationchange"> Open Data </option> <option value="/leagues/215/alltime/patents/2009-09-28?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/alltime/es-stackoverflow/2009-09-28?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/alltime/tor/2009-09-28?sort=reputationchange"> Tor </option> <option value="/leagues/223/alltime/politics/2009-09-28?sort=reputationchange"> Politics </option> <option value="/leagues/315/alltime/hinduism/2009-09-28?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/alltime/freelancing/2009-09-28?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/alltime/vi/2009-09-28?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/alltime/craftcms/2009-09-28?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/alltime/joomla/2009-09-28?sort=reputationchange"> Joomla </option> <option value="/leagues/321/alltime/startups/2009-09-28?sort=reputationchange"> Startups </option> <option value="/leagues/343/alltime/engineering/2009-09-28?sort=reputationchange"> Engineering </option> <option value="/leagues/313/alltime/buddhism/2009-09-28?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/alltime/russian/2009-09-28?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/alltime/economics/2009-09-28?sort=reputationchange"> Economics </option> <option value="/leagues/363/alltime/law/2009-09-28?sort=reputationchange"> Law </option> <option value="/leagues/155/alltime/bricks/2009-09-28?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/alltime/expatriates/2009-09-28?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/alltime/tridion/2009-09-28?sort=reputationchange"> Tridion </option> <option value="/leagues/291/alltime/matheducators/2009-09-28?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/alltime/earthscience/2009-09-28?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/alltime/martialarts/2009-09-28?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/alltime/elementaryos/2009-09-28?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/alltime/ham/2009-09-28?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/alltime/civicrm/2009-09-28?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/alltime/health/2009-09-28?sort=reputationchange"> Health </option> <option value="/leagues/351/alltime/woodworking/2009-09-28?sort=reputationchange"> Woodworking </option> <option value="/leagues/277/alltime/ebooks/2009-09-28?sort=reputationchange"> Ebooks </option> <option value="/leagues/386/alltime/ethereum/2009-09-28?sort=reputationchange"> Ethereum </option> <option value="/leagues/231/alltime/sustainability/2009-09-28?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/217/alltime/genealogy/2009-09-28?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/alltime/italian/2009-09-28?sort=reputationchange"> Italian Language </option> <option value="/leagues/279/alltime/alcohol/2009-09-28?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/173/alltime/poker/2009-09-28?sort=reputationchange"> Poker </option> <option value="/leagues/365/alltime/opensource/2009-09-28?sort=reputationchange"> Open Source </option> <option value="/leagues/335/alltime/hsm/2009-09-28?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/alltime/musicfans/2009-09-28?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/alltime/coffee/2009-09-28?sort=reputationchange"> Coffee </option> <option value="/leagues/371/alltime/portuguese/2009-09-28?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/alltime/hardwarerecs/2009-09-28?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/alltime/computergraphics/2009-09-28?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/alltime/communitybuilding/2009-09-28?sort=reputationchange"> Community Building </option> <option value="/leagues/361/alltime/mythology/2009-09-28?sort=reputationchange"> Mythology </option> <option value="/leagues/384/alltime/3dprinting/2009-09-28?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/alltime/latin/2009-09-28?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/alltime/retrocomputing/2009-09-28?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/alltime/languagelearning/2009-09-28?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/251/week/mathoverflow">Week</a> 
+        <a href="/leagues/251/month/mathoverflow">Month</a> 
+        <a href="/leagues/251/quarter/mathoverflow">Quarter</a> 
+        <a href="/leagues/251/year/mathoverflow">Year</a> 
+        <a href="/leagues/251/alltime/mathoverflow" class="youarehere">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://mathoverflow.net"> 
+        <div class="site-bubble" style="background-color: #eaeaea; border-color: #eaeaea;"> 
+         <img src="http://cdn.sstatic.net/Sites/mathoverflow/img/icon-48.png?v=eaeaea" alt="MathOverflow" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://mathoverflow.net">MathOverflow</a></h2> 
+        <p> Q&amp;A for professional mathematicians <span class="league-user-count">(55,026 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>All Time</h3> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="1946"></a> 
+        <div class="user user-1946"> 
+         <a href="http://mathoverflow.net/users/1946/joel-david-hamkins">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/7fd305978f43894c1c3496da052729a6?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Joel David Hamkins">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/1946/joel-david-hamkins">Joel David Hamkins</a></h2> 
+          <span title="19 gold badges"><span class="badge1"></span><span class="badgecount">19</span></span> 
+          <span title="356 silver badges"><span class="badge2"></span><span class="badgecount">356</span></span> 
+          <span title="609 bronze badges"><span class="badge3"></span><span class="badgecount">609</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/1946?sort=reputationchange#1946">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">125,614</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="297"></a> 
+        <div class="user user-297"> 
+         <a href="http://mathoverflow.net/users/297/david-speyer">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/IoYEA.jpg?s=128&amp;g=1&amp;s=48" title="David Speyer">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/297/david-speyer">David Speyer</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="195 silver badges"><span class="badge2"></span><span class="badgecount">195</span></span> 
+          <span title="423 bronze badges"><span class="badge3"></span><span class="badgecount">423</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/297?sort=reputationchange#297">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">85,477</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6094"></a> 
+        <div class="user user-6094"> 
+         <a href="http://mathoverflow.net/users/6094/joseph-orourke">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/21104c8eb580726ede6d6d8df698b9b3?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Joseph O'Rourke">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/6094/joseph-orourke">Joseph O'Rourke</a></h2> 
+          <span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span> 
+          <span title="147 silver badges"><span class="badge2"></span><span class="badgecount">147</span></span> 
+          <span title="512 bronze badges"><span class="badge3"></span><span class="badgecount">512</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/6094?sort=reputationchange#6094">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">64,226</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="290"></a> 
+        <div class="user user-290"> 
+         <a href="http://mathoverflow.net/users/290/qiaochu-yuan">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/9753e97d4710990bf19bfff891657832?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Qiaochu Yuan">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/290/qiaochu-yuan">Qiaochu Yuan</a></h2> 
+          <span title="19 gold badges"><span class="badge1"></span><span class="badgecount">19</span></span> 
+          <span title="239 silver badges"><span class="badge2"></span><span class="badgecount">239</span></span> 
+          <span title="520 bronze badges"><span class="badge3"></span><span class="badgecount">520</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/290?sort=reputationchange#290">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">61,240</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="11142"></a> 
+        <div class="user user-11142"> 
+         <a href="http://mathoverflow.net/users/11142/igor-rivin">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/b2b87c8281161bba80ee253b820a850f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Igor Rivin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/11142/igor-rivin">Igor Rivin</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="80 silver badges"><span class="badge2"></span><span class="badgecount">80</span></span> 
+          <span title="201 bronze badges"><span class="badge3"></span><span class="badgecount">201</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/11142?sort=reputationchange#11142">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">55,672</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="13972"></a> 
+        <div class="user user-13972"> 
+         <a href="http://mathoverflow.net/users/13972/robert-bryant">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/y0A26.jpg?s=128&amp;g=1&amp;s=48" title="Robert Bryant">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/13972/robert-bryant">Robert Bryant</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="159 silver badges"><span class="badge2"></span><span class="badgecount">159</span></span> 
+          <span title="234 bronze badges"><span class="badge3"></span><span class="badgecount">234</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/13972?sort=reputationchange#13972">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">51,342</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6794"></a> 
+        <div class="user user-6794"> 
+         <a href="http://mathoverflow.net/users/6794/andreas-blass">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/e9d6fe68a506efa2ddedad8ced1d154c?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Andreas Blass">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/6794/andreas-blass">Andreas Blass</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="94 silver badges"><span class="badge2"></span><span class="badgecount">94</span></span> 
+          <span title="176 bronze badges"><span class="badge3"></span><span class="badgecount">176</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/6794?sort=reputationchange#6794">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">46,976</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2384"></a> 
+        <div class="user user-2384"> 
+         <a href="http://mathoverflow.net/users/2384/gjergji-zaimi">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/oqKCd.jpg?s=128&amp;g=1&amp;s=48" title="Gjergji Zaimi">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/2384/gjergji-zaimi">Gjergji Zaimi</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="114 silver badges"><span class="badge2"></span><span class="badgecount">114</span></span> 
+          <span title="241 bronze badges"><span class="badge3"></span><span class="badgecount">241</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/2384?sort=reputationchange#2384">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">46,854</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2874"></a> 
+        <div class="user user-2874"> 
+         <a href="http://mathoverflow.net/users/2874/emerton">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/c241f37e7fa94af4459074eb3645288b?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Emerton">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/2874/emerton">Emerton</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="151 silver badges"><span class="badge2"></span><span class="badgecount">151</span></span> 
+          <span title="235 bronze badges"><span class="badge3"></span><span class="badgecount">235</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/2874?sort=reputationchange#2874">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">45,406</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1149"></a> 
+        <div class="user user-1149"> 
+         <a href="http://mathoverflow.net/users/1149/pete-l-clark">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/be914e1aee4d0dffb5349f283c58ccc1?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Pete L. Clark">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/1149/pete-l-clark">Pete L. Clark</a></h2> 
+          <span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span> 
+          <span title="162 silver badges"><span class="badge2"></span><span class="badgecount">162</span></span> 
+          <span title="313 bronze badges"><span class="badge3"></span><span class="badgecount">313</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/1149?sort=reputationchange#1149">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">45,218</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="766"></a> 
+        <div class="user user-766"> 
+         <a href="http://mathoverflow.net/users/766/terry-tao">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/3c795880f3b73784a9b75fbff3772701?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Terry Tao">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/766/terry-tao">Terry Tao</a></h2> 
+          <span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span> 
+          <span title="198 silver badges"><span class="badge2"></span><span class="badgecount">198</span></span> 
+          <span title="280 bronze badges"><span class="badge3"></span><span class="badgecount">280</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/766?sort=reputationchange#766">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">43,357</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1450"></a> 
+        <div class="user user-1450"> 
+         <a href="http://mathoverflow.net/users/1450/greg-kuperberg">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/511757bcdeb801fceb57d3b68f27cfdb?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Greg Kuperberg">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/1450/greg-kuperberg">Greg Kuperberg</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="145 silver badges"><span class="badge2"></span><span class="badgecount">145</span></span> 
+          <span title="234 bronze badges"><span class="badge3"></span><span class="badgecount">234</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/1450?sort=reputationchange#1450">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">42,622</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="14830"></a> 
+        <div class="user user-14830"> 
+         <a href="http://mathoverflow.net/users/14830/noam-d-elkies">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/28573d138a5167e03b79bfbbeab891fa?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Noam D. Elkies">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/14830/noam-d-elkies">Noam D. Elkies</a></h2> 
+          <span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span> 
+          <span title="141 silver badges"><span class="badge2"></span><span class="badgecount">141</span></span> 
+          <span title="211 bronze badges"><span class="badge3"></span><span class="badgecount">211</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/14830?sort=reputationchange#14830">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">42,339</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="18060"></a> 
+        <div class="user user-18060"> 
+         <a href="http://mathoverflow.net/users/18060/will-sawin">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/13900172714f0f1c611eb43027b847fb?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Will Sawin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/18060/will-sawin">Will Sawin</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="70 silver badges"><span class="badge2"></span><span class="badgecount">70</span></span> 
+          <span title="168 bronze badges"><span class="badge3"></span><span class="badgecount">168</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/18060?sort=reputationchange#18060">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">41,631</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="11919"></a> 
+        <div class="user user-11919"> 
+         <a href="http://mathoverflow.net/users/11919/gh-from-mo">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/103bbf298bec3fc63df81fa7803b008a?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="GH from MO">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/11919/gh-from-mo">GH from MO</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="91 silver badges"><span class="badge2"></span><span class="badgecount">91</span></span> 
+          <span title="143 bronze badges"><span class="badge3"></span><span class="badgecount">143</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/11919?sort=reputationchange#11919">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">36,737</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="11260"></a> 
+        <div class="user user-11260"> 
+         <a href="http://mathoverflow.net/users/11260/carlo-beenakker">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/95d053403dc5d13be82e6ba56df233f4?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Carlo Beenakker">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/11260/carlo-beenakker">Carlo Beenakker</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="78 silver badges"><span class="badge2"></span><span class="badgecount">78</span></span> 
+          <span title="135 bronze badges"><span class="badge3"></span><span class="badgecount">135</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/11260?sort=reputationchange#11260">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">35,933</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4231"></a> 
+        <div class="user user-4231"> 
+         <a href="http://mathoverflow.net/users/4231/jim-humphreys">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/ed4080afd4f3fc52743ed95004a6027d?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Jim Humphreys">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/4231/jim-humphreys">Jim Humphreys</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="74 silver badges"><span class="badge2"></span><span class="badgecount">74</span></span> 
+          <span title="156 bronze badges"><span class="badge3"></span><span class="badgecount">156</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/4231?sort=reputationchange#4231">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">35,216</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1345"></a> 
+        <div class="user user-1345"> 
+         <a href="http://mathoverflow.net/users/1345/ian-agol">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/0ce5f129e09488505372cc0fe25308f4?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Ian Agol">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/1345/ian-agol">Ian Agol</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="80 silver badges"><span class="badge2"></span><span class="badgecount">80</span></span> 
+          <span title="165 bronze badges"><span class="badge3"></span><span class="badgecount">165</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/1345?sort=reputationchange#1345">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">34,993</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2926"></a> 
+        <div class="user user-2926"> 
+         <a href="http://mathoverflow.net/users/2926/todd-trimble">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/UFuT4.gif?s=128&amp;g=1&amp;s=48" title="Todd Trimble">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/2926/todd-trimble">Todd Trimble</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="120 silver badges"><span class="badge2"></span><span class="badgecount">120</span></span> 
+          <span title="207 bronze badges"><span class="badge3"></span><span class="badgecount">207</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/2926?sort=reputationchange#2926">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">34,650</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="7460"></a> 
+        <div class="user user-7460"> 
+         <a href="http://mathoverflow.net/users/7460/francesco-polizzi">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/9CmoG.jpg?s=128&amp;g=1&amp;s=48" title="Francesco Polizzi">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/7460/francesco-polizzi">Francesco Polizzi</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="85 silver badges"><span class="badge2"></span><span class="badgecount">85</span></span> 
+          <span title="137 bronze badges"><span class="badge3"></span><span class="badgecount">137</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/7460?sort=reputationchange#7460">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">33,914</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1409"></a> 
+        <div class="user user-1409"> 
+         <a href="http://mathoverflow.net/users/1409/mariano-su%c3%a1rez-alvarez">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/4fd52cc24db860ea475a6cd78f60be54?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Mariano Suárez-Alvarez">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/1409/mariano-su%c3%a1rez-alvarez">Mariano Suárez-Alvarez</a></h2> 
+          <span title="11 gold badges"><span class="badge1"></span><span class="badgecount">11</span></span> 
+          <span title="96 silver badges"><span class="badge2"></span><span class="badgecount">96</span></span> 
+          <span title="206 bronze badges"><span class="badge3"></span><span class="badgecount">206</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/1409?sort=reputationchange#1409">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">33,539</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6666"></a> 
+        <div class="user user-6666"> 
+         <a href="http://mathoverflow.net/users/6666/tom-goodwillie">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/b35bbdf752910047d40e49b42a293e3c?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Tom Goodwillie">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/6666/tom-goodwillie">Tom Goodwillie</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="82 silver badges"><span class="badge2"></span><span class="badgecount">82</span></span> 
+          <span title="164 bronze badges"><span class="badge3"></span><span class="badgecount">164</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/6666?sort=reputationchange#6666">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">33,170</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2000"></a> 
+        <div class="user user-2000"> 
+         <a href="http://mathoverflow.net/users/2000/fran%c3%a7ois-g-dorais">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1d0e524139aee6db190fd8fd6ef43944?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="François G. Dorais">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/2000/fran%c3%a7ois-g-dorais">François G. Dorais</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="91 silver badges"><span class="badge2"></span><span class="badgecount">91</span></span> 
+          <span title="184 bronze badges"><span class="badge3"></span><span class="badgecount">184</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/2000?sort=reputationchange#2000">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">32,573</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="121"></a> 
+        <div class="user user-121"> 
+         <a href="http://mathoverflow.net/users/121/s-carnahan">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/850d90cee1a25d787c4c6d7d9807c673?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="S. Carnahan">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/121/s-carnahan">S. Carnahan</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="71 silver badges"><span class="badge2"></span><span class="badgecount">71</span></span> 
+          <span title="153 bronze badges"><span class="badge3"></span><span class="badgecount">153</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/121?sort=reputationchange#121">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">32,418</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="25510"></a> 
+        <div class="user user-25510"> 
+         <a href="http://mathoverflow.net/users/25510/alexandre-eremenko">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/2915a9ca41f84ee739009cfb92110586?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Alexandre Eremenko">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/25510/alexandre-eremenko">Alexandre Eremenko</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="84 silver badges"><span class="badge2"></span><span class="badgecount">84</span></span> 
+          <span title="167 bronze badges"><span class="badge3"></span><span class="badgecount">167</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/25510?sort=reputationchange#25510">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">31,394</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="10076"></a> 
+        <div class="user user-10076"> 
+         <a href="http://mathoverflow.net/users/10076/s%c3%a1ndor-kov%c3%a1cs">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/e1x41.png?s=128&amp;g=1&amp;s=48" title="Sándor Kovács">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/10076/s%c3%a1ndor-kov%c3%a1cs">Sándor Kovács</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="66 silver badges"><span class="badge2"></span><span class="badgecount">66</span></span> 
+          <span title="105 bronze badges"><span class="badge3"></span><span class="badgecount">105</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/10076?sort=reputationchange#10076">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">30,197</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6976"></a> 
+        <div class="user user-6976"> 
+         <a href="http://mathoverflow.net/users/6976/mark-sapir">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/QA81Y.jpg?s=128&amp;g=1&amp;s=48" title="Mark Sapir">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/6976/mark-sapir">Mark Sapir</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="81 silver badges"><span class="badge2"></span><span class="badgecount">81</span></span> 
+          <span title="173 bronze badges"><span class="badge3"></span><span class="badgecount">173</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/6976?sort=reputationchange#6976">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">30,193</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="360"></a> 
+        <div class="user user-360"> 
+         <a href="http://mathoverflow.net/users/360/tyler-lawson">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/393fbe76a80ac44e535fd17d7b27dbf3?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Tyler Lawson">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/360/tyler-lawson">Tyler Lawson</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="85 silver badges"><span class="badge2"></span><span class="badgecount">85</span></span> 
+          <span title="156 bronze badges"><span class="badge3"></span><span class="badgecount">156</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/360?sort=reputationchange#360">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">28,721</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2841"></a> 
+        <div class="user user-2841"> 
+         <a href="http://mathoverflow.net/users/2841/martin-brandenburg">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/07f8467d166d2b7da9cfd4b729bbe6ca?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Martin Brandenburg">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/2841/martin-brandenburg">Martin Brandenburg</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="91 silver badges"><span class="badge2"></span><span class="badgecount">91</span></span> 
+          <span title="233 bronze badges"><span class="badge3"></span><span class="badgecount">233</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/2841?sort=reputationchange#2841">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">28,426</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="450"></a> 
+        <div class="user user-450"> 
+         <a href="http://mathoverflow.net/users/450/georges-elencwajg">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/de4ecba332e9d8c3ed9244c9ce1ff9f5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Georges Elencwajg">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://mathoverflow.net/users/450/georges-elencwajg">Georges Elencwajg</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="92 silver badges"><span class="badge2"></span><span class="badgecount">92</span></span> 
+          <span title="165 bronze badges"><span class="badge3"></span><span class="badgecount">165</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/251/alltime/mathoverflow/2009-09-28/450?sort=reputationchange#450">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">28,047</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;page=5" title="go to page 5"><span class="page-numbers">5</span></a> 
+        <span class="page-numbers dots">…</span> 
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;page=124" title="go to page 124"><span class="page-numbers">124</span></a> 
+        <a href="/leagues/251/alltime/mathoverflow/2009-09-28?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>10,000+</td>
+          <td class="count">148</td>
+         </tr> 
+         <tr>
+          <td>5,000+</td>
+          <td class="count">283</td>
+         </tr> 
+         <tr>
+          <td>2,500+</td>
+          <td class="count">558</td>
+         </tr> 
+         <tr>
+          <td>1,000+</td>
+          <td class="count">1,087</td>
+         </tr> 
+         <tr>
+          <td>500+</td>
+          <td class="count">1,868</td>
+         </tr> 
+         <tr>
+          <td>250+</td>
+          <td class="count">3,184</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">3,706</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">3,706</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">3,706</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>100,000+</td> 
+          <td class="count">1</td> 
+         </tr> 
+         <tr> 
+          <td>50,000+</td> 
+          <td class="count">6</td> 
+         </tr> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">36</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">148</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">283</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">463</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">657</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">1,087</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">1,868</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">3,706</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">46,771</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463245248});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

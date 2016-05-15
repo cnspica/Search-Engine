@@ -1,0 +1,655 @@
+https://stackexchange.com/newsletters/newsletter?site=drupal.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Drupal Answers Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3ddrupal.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3ddrupal.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 99, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 99, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Drupal Answers Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://drupal.stackexchange.com">Drupal Answers</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #F9F9F9; font-family: 'Lucida Grande', 'DejaVu Sans', 'Bitstream Vera Sans', Verdana, Arial, sans-serif;"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/drupal-header.png" alt="Drupal Answers Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff; border-left: 1px solid #efefef; border-right: 1px solid #efefef;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200891/why-is-jquery-1-6-x-not-an-option" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Why is jQuery 1.6.x not an option?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">All the other versions of jQuery are listed; version 1.6.x is missing. What is the reasoning for not including 1.6.x in the jQuery Update module? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/javascript" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">javascript</a> <a href="http://drupal.stackexchange.com/questions/tagged/jquery-update" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">jquery-update</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/a5db43b8fe080a385c832d499a4e59c0?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/12585/duckx" target="_blank" style="color: #0077C0; text-decoration: none;">duckx</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/uxOlM.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/45675/shawn-conn" target="_blank" style="color: #0077C0; text-decoration: none;">Shawn Conn</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200566/how-to-create-a-list-of-users-who-did-not-submit-some-webform" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">How to create a list of users who did not submit some webform?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a webform expecting all users to record their data online. I would like to list all users who did not submit the webform yet. I have been trying to use Views, but I cannot find a way to do ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/views" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">views</a> <a href="http://drupal.stackexchange.com/questions/tagged/webform" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">webform</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ea4d2a5c433d84906ac8495b8e50dcbb?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/36666/waluyo-adi-siswanto" target="_blank" style="color: #0077C0; text-decoration: none;">Waluyo Adi Siswanto</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/k40LY.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/39516/pierre-vriens" target="_blank" style="color: #0077C0; text-decoration: none;">Pierre.Vriens</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200672/can-i-add-a-field-collection-to-a-block" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Can I add a field collection to a block?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have made a field collection, exported as a Feature and now I'd like to add it to a block. Does anyone have any suggestions? I have added fields to blocks through the form API, but that doesn't ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/7" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">7</a> <a href="http://drupal.stackexchange.com/questions/tagged/forms" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">forms</a> <a href="http://drupal.stackexchange.com/questions/tagged/blocks" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">blocks</a> <a href="http://drupal.stackexchange.com/questions/tagged/field-collection" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">field-collection</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1dc3c26921ffd4c9929f90ad4b808fac?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/61147/spuppett" target="_blank" style="color: #0077C0; text-decoration: none;">spuppett</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/BkEQe.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/35387/albertski" target="_blank" style="color: #0077C0; text-decoration: none;">albertski</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200680/is-there-an-option-to-somehow-display-all-nodes-that-that-doesnt-have-a-menu-li" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Is there an option to somehow display all nodes that that doesn't have a menu link?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">As almost all users here know, you can set up a menu link to each node from the "Menu settings" tab in the node's edit form. Is there an option to show all nodes that don't have a menu link? I tried ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/nodes" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">nodes</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/c6bac24248317129b390d60b7c088e40?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/16289/benia" target="_blank" style="color: #0077C0; text-decoration: none;">Benia</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2f468e00f260d638ddf47bb23f2add93?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/61151/user61151" target="_blank" style="color: #0077C0; text-decoration: none;">user61151</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200447/how-to-bulk-update-existing-path-alias-after-changing-the-url-alias-pattern" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">How to bulk update existing path alias after changing the URL alias pattern?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">How to bulk update existing URL alias? I have Path auto module add path alias to URLs. I have changed the URL alias pattern. Now I want to update the pattern of old URLs also. How can I achieve ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/7" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">7</a> <a href="http://drupal.stackexchange.com/questions/tagged/path-aliases" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">path-aliases</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/61ca27c1870aca06990fcc8a23c4dffa?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/48876/vamsi" target="_blank" style="color: #0077C0; text-decoration: none;">Vamsi</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/wLjSo.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/27710/no-sssweat" target="_blank" style="color: #0077C0; text-decoration: none;">No Sssweat</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200378/where-are-functions-being-called-from-when-errors-are-vague" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Where are functions being called from when errors are vague?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have the following errors which show up randomly when browsing the site. It's hard to reproduce, but also hard to debug. I was able to get it in the error state and have it stay during a reload in ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/theming" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">theming</a> <a href="http://drupal.stackexchange.com/questions/tagged/debugging" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">debugging</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/a5db43b8fe080a385c832d499a4e59c0?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/12585/duckx" target="_blank" style="color: #0077C0; text-decoration: none;">duckx</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/9YYyi.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/1899/ayeshk" target="_blank" style="color: #0077C0; text-decoration: none;">AyeshK</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200925/how-to-add-time-element-to-open-date-and-close-date-when-adding-a-quiz" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">How to add time element to open date and close date when adding a quiz</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am using the following modules. Quiz, Version 7.x-4.0-rc2 Date, Version 7.x-2.9 When adding a quiz, in the availability options tab, I want to be able to set the time as well. In the open ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/7" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">7</a> <a href="http://drupal.stackexchange.com/questions/tagged/date" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">date</a> <a href="http://drupal.stackexchange.com/questions/tagged/quiz" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">quiz</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/4316ff9c6994d9b7a9af2b4234cca927?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/52119/tulika-sharma" target="_blank" style="color: #0077C0; text-decoration: none;">Tulika Sharma</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/wLjSo.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/27710/no-sssweat" target="_blank" style="color: #0077C0; text-decoration: none;">No Sssweat</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/4611/how-do-i-customize-the-search-result-page" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">How do I customize the search result page?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have customized the teaser view of my content types and the page view. Now I need to use the teaser view for the search results page. By default, Drupal displays a full text jumbled mess for each ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/7" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">7</a> <a href="http://drupal.stackexchange.com/questions/tagged/nodes" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">nodes</a> <a href="http://drupal.stackexchange.com/questions/tagged/search" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">search</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f93f884807f6e76b34ff26d52d4bbaba?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/840/j-fiz" target="_blank" style="color: #0077C0; text-decoration: none;">J-Fiz</a> 34 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5315ed8662329312d746e5de447c87c6?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/199/kiamlaluno" target="_blank" style="color: #0077C0; text-decoration: none;">kiamlaluno</a> 27 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/5582/easy-way-to-create-blocks-programmatically" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Easy way to create blocks programmatically?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Learning Drupal. I know now that I can create block through the backend, but I would rather precreate them programmatically, if it's possible. In fact I'm pretty sure that it's possible. But what's ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/blocks" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">blocks</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/25f159e32f8409db5ed15cd1be3aaeef?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/1672/jayarjo" target="_blank" style="color: #0077C0; text-decoration: none;">jayarjo</a> 22 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5086a4fc0956186c35b4b03b69232dd8?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> answered by <a href="http://drupal.stackexchange.com/users/1665/near-dark" target="_blank" style="color: #0077C0; text-decoration: none;">NEAR DARK</a> 27 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200394/wysiwyg-module-and-imce-missing-upload-button" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">wysiwyg module and imce missing upload button</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am attaching an image....i have wysiwyg module with cke library and also imce module and imce bridge module. When I click browse to upload images, i get a nonfunctioning screen....It does not work ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/wysiwyg" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">wysiwyg</a> <a href="http://drupal.stackexchange.com/questions/tagged/imce" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">imce</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/6b1097897af9bb262f7371c5332b824a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/47771/bobo" target="_blank" style="color: #0077C0; text-decoration: none;">bobo</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200660/using-smart-ip-or-similar-on-cached-pages" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Using Smart IP (or similar) on cached pages</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I would like to use the Smart IP module for IP detection; however, it runs its detection in hook_init(), which does not run on cached pages. I am not married to the module. I have tried to pull out ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/7" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">7</a> <a href="http://drupal.stackexchange.com/questions/tagged/hooks" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">hooks</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0e6173d742aae43dd4757b51e29165f9?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/20027/scott-joudry" target="_blank" style="color: #0077C0; text-decoration: none;">Scott Joudry</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #efefef;"> <h3 style="margin: 10px 0;"> <a href="http://drupal.stackexchange.com/questions/200487/import-menu-items-with-translations-based-on-entity-translation" target="_blank" style="color: #0077C0!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif!important;">Import menu items with translations based on Entity Translation</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Currently I'm trying to migrate content (both nodes and menu items) from my old CMS (non Drupal CMS) to my D7 instance. In that light, I have exported the menu items as JSON files and I have also ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://drupal.stackexchange.com/questions/tagged/7" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">7</a> <a href="http://drupal.stackexchange.com/questions/tagged/migration" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #707070!important; font-size: 11px; background: #F8F8F8; border: 1px solid #ECECEC; text-decoration: none; margin: 2px 2px 5px 0; padding: 0.20em 0.4em; line-height: 16px;">migration</a> </td> 
+             <td style="padding-top: 0; color: #999; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f722b4397e91c4182b9185078197df5f?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #999; font-size: 11px;"> asked by <a href="http://drupal.stackexchange.com/users/56551/labrosb" target="_blank" style="color: #0077C0; text-decoration: none;">Labrosb</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #0077C0; text-decoration: none; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #0077C0; text-decoration: none;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #0077C0; text-decoration: none;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #0077C0; text-decoration: none;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #0077C0; text-decoration: none;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

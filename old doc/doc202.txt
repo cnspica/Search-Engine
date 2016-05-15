@@ -1,0 +1,442 @@
+http://tutorialspoint.com/ruby-on-rails/rails-installation.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Ruby on Rails Installation</title> 
+  <meta name="Description" content="Ruby on Rails Installation - Learn Ruby on Rails in simple and easy steps. You will learn its Introduction, Installation, Framework, Directory Structure, strengths with examples and you will learn about actionpack, actionview, activerecord, Migrations, Controller, Routes, Views, Layouts, Heinemeier, Scaffolding, Ajax, File Uploading, Sending Emails, Hansson etc."> 
+  <meta name="Keywords" content="Learning, Tutorial, Ruby, Rails, strengths, framework, Introduction, Installation, Examples, RubyGems, Resources, Guide, Actionpack, Actionview, Basics, Directory Structure, Advance, Activerecord, Migrations, libraries, Model, Routes, Views, Layouts, Controller, Embeded Ruby, Erb, Rolling, Metaprogramming, Built-in, testing, David, Black, Hansson, Heinemeier, RAA, Ajax, File Uploading, Sending Emails, Scaffolding."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #c90e19 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #c90e19 !important;}
+.submenu-item{ border-bottom: 2px solid #c90e19 !important; border-top: 2px solid #c90e19 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/ruby-on-rails/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/ruby-on-rails/images/rails-mini-logo.jpg" alt="Ruby on Rails Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby on Rails Tutorial</li> 
+        <li><a href="/ruby-on-rails/index.htm">Ruby on Rails - Home</a></li> 
+        <li><a href="/ruby-on-rails/rails-introduction.htm">Ruby on Rails - Introduction</a></li> 
+        <li><a href="/ruby-on-rails/rails-installation.htm">Ruby on Rails - Installation</a></li> 
+        <li><a href="/ruby-on-rails/rails-framework.htm">Ruby on Rails - Framework</a></li> 
+        <li><a href="/ruby-on-rails/rails-directory-structure.htm">Ruby on Rails - Directory Structure</a></li> 
+        <li><a href="/ruby-on-rails/rails-examples.htm">Ruby on Rails - Examples</a></li> 
+        <li><a href="/ruby-on-rails/rails-database-setup.htm">Ruby on Rails - Database Setup</a></li> 
+        <li><a href="/ruby-on-rails/rails-active-records.htm">Ruby on Rails - Active Records</a></li> 
+        <li><a href="/ruby-on-rails/rails-migrations.htm">Ruby on Rails - Migrations</a></li> 
+        <li><a href="/ruby-on-rails/rails-controllers.htm">Ruby on Rails - Controllers</a></li> 
+        <li><a href="/ruby-on-rails/rails-routes.htm">Ruby on Rails - Routes</a></li> 
+        <li><a href="/ruby-on-rails/rails-views.htm">Ruby on Rails - Views</a></li> 
+        <li><a href="/ruby-on-rails/rails-layouts.htm">Ruby on Rails - Layouts</a></li> 
+        <li><a href="/ruby-on-rails/rails-scaffolding.htm">Ruby on Rails - Scaffolding</a></li> 
+        <li><a href="/ruby-on-rails/rails-and-ajax.htm">Ruby on Rails - AJAX</a></li> 
+        <li><a href="/ruby-on-rails/rails-file-uploading.htm">Ruby on Rails - File Uploading</a></li> 
+        <li><a href="/ruby-on-rails/rails-send-email.htm">Ruby on Rails - Send Emails</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby on Rails Resources</li> 
+        <li><a href="/ruby-on-rails/rails-references-guide.htm">Ruby on Rails - References Guide</a></li> 
+        <li><a href="/ruby-on-rails/rails-quick-guide.htm">Ruby on Rails - Quick Guide</a></li> 
+        <li><a href="/ruby-on-rails/rails-resources.htm">Ruby on Rails - Resources</a></li> 
+        <li><a href="/ruby-on-rails/rails-discussion.htm">Ruby on Rails - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby Tutorial</li> 
+        <li><a href="/ruby">Ruby Tutorial</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Ruby on Rails - Installation</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/ruby-on-rails/rails-introduction.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/ruby-on-rails/rails-framework.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>To develop a web application using Ruby on Rails Framework, you need to install the following software −</p> 
+        <ul class="list"> 
+         <li>Ruby</li> 
+         <li>The Rails Framework</li> 
+         <li>A Web Server</li> 
+         <li>A Database System</li> 
+        </ul> 
+        <p>We assume that you already have installed a Web Server and a Database System on your computer. You can use the WEBrick Web Server, which comes with Ruby. Most websites however use Apache or lightTPD web servers in production.</p> 
+        <p>Rails works with many database systems, including MySQL, PostgreSQL, SQLite, Oracle, DB2 and SQL Server. Please refer to a corresponding Database System Setup manual to set up your database.</p> 
+        <p>Let's look at the installation instructions for Rails on Windows and Linux.</p> 
+        <h2>Rails Installation on Windows</h2> 
+        <p>Follow the steps given below for installing Ruby on Rails.</p> 
+        <h3>Step 1: Check Ruby Version</h3> 
+        <p>First, check if you already have Ruby installed. Open the command prompt and type <b>ruby -v</b>. If Ruby responds, and if it shows a version number at or above 2.2.2, then type <b>gem --version</b>. If you don't get an error, skip <b>Install Ruby</b> step. Otherwise, we'll install a fresh Ruby.</p> 
+        <h3>Step 2: Install Ruby</h3> 
+        <p>If Ruby is not installed, then download an installation package from <a target="_blank" rel="nofollow" href="http://rubyinstaller.org/">rubyinstaller.org</a>. Follow the <b>download</b> link, and run the resulting installer. This is an exe file <b>rubyinstaller-2.2.2.x.exe</b> and will be installed in a single click. It's a very small package, and you'll get RubyGems as well along with this package. Please check the <b>Release Notes</b> for more detail.</p> 
+        <img src="/ruby-on-rails/images/ruby_home.jpg" alt="Ruby Home"> 
+        <h3>Step 3: Install Rails</h3> 
+        <p><b>Install Rails</b> − With Rubygems loaded, you can install all of Rails and its dependencies using the following command through the command line −</p> 
+        <pre class="result notranslate">
+C:\&gt; gem install rails
+</pre> 
+        <p></p> 
+        <img src="/ruby-on-rails/images/gem_install.jpg" alt="GEM Install"> 
+        <p><b>Note</b> − The above command may take some time to install all dependencies. Make sure you are connected to the internet while installing gems dependencies.</p> 
+        <h3>Step 4: Check Rails Version</h3> 
+        <p>Use the following command to check the rails version.</p> 
+        <pre class="result notranslate">
+C:\&gt; rails -v
+</pre> 
+        <p><b>Output</b></p> 
+        <pre class="result notranslate">
+Rails 4.2.4
+</pre> 
+        <p>Congratulations! You are now on Rails over Windows.</p> 
+        <h2>Rails Installation on Linux</h2> 
+        <p>We are installing Ruby On Rails on Linux using <b>rbenv</b>. It is a lightweight Ruby Version Management Tool. The <b>rbenv</b> provides an easy installation procedure to manage various versions of Ruby, and a solid environment for developing Ruby on Rails applications.</p> 
+        <p>Follow the steps given below to install Ruby on Rails using rbenv tool.</p> 
+        <h3>Step 1: Install Prerequisite Dependencies</h3> 
+        <p>First of all, we have to install <b>git - core</b> and some ruby dependences that help to install Ruby on Rails. Use the following command for installing Rails dependencies using <b>yum</b>.</p> 
+        <pre class="result notranslate">
+tp&gt; sudo yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
+</pre> 
+        <h3>Step 2: Install rbenv</h3> 
+        <p>Now we will install rbenv and set the appropriate environment variables. Use the following set of commands to get rbenv for git repository.</p> 
+        <pre class="result notranslate">
+tp&gt; git clone git://github.com/sstephenson/rbenv.git .rbenv
+tp&gt; echo 'export PATH = "$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bash_profile
+tp&gt; echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bash_profile
+tp&gt; exec $SHELL
+
+tp&gt; git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+tp&gt; echo 'export PATH = "$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' &lt;&lt; ~/.bash_profile
+tp&gt; exec $SHELL
+</pre> 
+        <h3>Step 3: Install Ruby</h3> 
+        <p>Before installing Ruby, determine which version of Ruby you want to install. We will install Ruby 2.2.3. Use the following command for installing Ruby.</p> 
+        <pre class="result notranslate">
+tp&gt; rbenv install -v 2.2.3
+</pre> 
+        <p>Use the following command for setting up the current Ruby version as default.</p> 
+        <pre class="result notranslate">
+tp&gt; rbenv global 2.2.3
+</pre> 
+        <p>Use the following command to verify the Ruby version.</p> 
+        <pre class="result notranslate">
+tp&gt; ruby -v
+</pre> 
+        <p><b>Output</b></p> 
+        <pre class="result notranslate">
+ruby 2.2.3p173 (2015-08-18 revivion 51636) [X86_64-linux]
+</pre> 
+        <p>Ruby provides a keyword <b>gem</b> for installing the supported dependencies; we call them <b>gems</b>. If you don't want to install the documentation for Ruby-gems, then use the following command.</p> 
+        <pre class="result notranslate">
+tp&gt; echo "gem: --no-document" &gt; ~/.gemrc
+</pre> 
+        <p>Thereafter, it is better to install the Bundler gem, because it helps to manage your application dependencies. Use the following command to install bundler gem.</p> 
+        <pre class="result notranslate">
+tp&gt; gem install bundler
+</pre> 
+        <h3>Step 4: Install Rails</h3> 
+        <p>Use the following command for installing Rails version 4.2.4.</p> 
+        <pre class="result notranslate">
+tp&gt; install rails -v 4.2.4
+</pre> 
+        <p>Use the following command to make Rails executable available.</p> 
+        <pre class="result notranslate">
+tp&gt; rbenv rehash
+</pre> 
+        <p>Use the following command for checking the rails version.</p> 
+        <pre class="result notranslate">
+tp&gt; rails -v
+</pre> 
+        <p><b>Output</b></p> 
+        <pre class="result notranslate">
+tp&gt; Rails 4.2.4
+</pre> 
+        <p>Ruby on Rails framework requires JavaScript Runtime Environment (Node.js) to manage the features of Rails. Next, we will see how we can use Node.js to manage Asset Pipeline which is a Rails feature.</p> 
+        <h3>Step 5: Install JavaScript Runtime</h3> 
+        <p>Let us install Node.js from the Yum repository. We will take Node.js from EPEL yum repository. Use the following command to add the EPEL package to the yum repository.</p> 
+        <pre class="result notranslate">
+tp&gt; sudo yum -y install epel-release
+</pre> 
+        <p>Use the following command for installing the Node.js package.</p> 
+        <pre class="result notranslate">
+tp&gt; sudo yum install nodejs
+</pre> 
+        <p>Congratulations! You are now on Rails over Linux.</p> 
+        <h3>Step 6: Install Database</h3> 
+        <p>By default, Rails uses sqlite3, but you may want to install MySQL, PostgreSQL, or other RDBMS. This is optional; if you have the database installed, then you may skip this step and it is not mandatory that you have a database installed to start the rails server. For this tutorial, we are using PostgreSQL database. Therefore use the following commands to install PostgreSQL.</p> 
+        <pre class="result notranslate">
+tp&gt; sudo yum install postgresql-server postgresql-contrib
+</pre> 
+        <p>Accept the prompt, by responding with a <b>y</b>. Use the following command to create a PostgreSQl database cluster.</p> 
+        <pre class="result notranslate">
+tp&gt; sudo postgresql-setup initdb
+</pre> 
+        <p>Use the following command to start and enable PostgreSQL.</p> 
+        <pre class="result notranslate">
+tp&gt; sudo systemctl start postgresql
+tp&gt; sudo systemctl enable postgresql
+</pre> 
+        <h2>Keeping Rails Up-to-Date</h2> 
+        <p>Assuming you have installed Rails using RubyGems, keeping it up-to-date is relatively easy. We can use the same command in both Windows and Linux platform. Use the following command −</p> 
+        <pre class="result notranslate">
+tp&gt; gem update rails
+</pre> 
+        <p><b>Output</b></p> 
+        <p>The following screenshot shows a Windows command prompt. The Linux terminal also provides the same output.</p> 
+        <img src="/ruby-on-rails/images/gem_update.png" alt="GEM Update"> 
+        <p>This will automatically update your Rails installation. The next time you restart your application, it will pick up this latest version of Rails. While using this command, make sure you are connected to the internet.</p> 
+        <h2>Installation Verification</h2> 
+        <p>You can verify if everything is set up according to your requirements or not. Use the following command to create a demo project.</p> 
+        <pre class="result notranslate">
+tp&gt; rails new demo
+</pre> 
+        <p><b>Output</b></p> 
+        <img src="/ruby-on-rails/images/rails_new_demo.jpg" alt="Rails New Demo"> 
+        <p>It will generate a demo rail project; we will discuss about it later. Currently we have to check if the environment is set up or not. Next, use the following command to run WEBrick web server on your machine.</p> 
+        <pre class="result notranslate">
+tp&gt; cd demo
+tp&gt; rails server
+</pre> 
+        <p>It will generate auto-code to start the server</p> 
+        <img src="/ruby-on-rails/images/rails_server.jpg" alt="Rails Server"> 
+        <p>Now open your browser and type the following −</p> 
+        <pre class="result notranslate">
+http://localhost:3000
+</pre> 
+        <p>It should display a message, something like, "Welcome aboard" or "Congratulations".</p> 
+        <img src="/ruby-on-rails/images/rails_welcome.jpg" alt="Rails Welcome"> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/ruby-on-rails/rails-introduction.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/ruby-on-rails/rails-framework.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

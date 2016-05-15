@@ -106,6 +106,7 @@ public class Indexer implements Runnable{
            File file = crawlerOutputFiles.iterator().next();
            crawlerOutputFiles.remove(file);
           System.out.println(this.crawlerOutputFiles.size());
+          System.out.println(file);
 //            countofdocFiles--;
 //            String FilePath=pathtoDocFolder+"/doc"+countofdocFiles+".txt";
 //            File CrawlerOutputFile=new File(FilePath);

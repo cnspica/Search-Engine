@@ -1,0 +1,1246 @@
+https://stackexchange.com/leagues/207/quarter/raspberrypi
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - Raspberry Pi - 2nd Quarter 2016 - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/207/quarter/raspberrypi/2016-04-01"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/207/Quarter/2016-04-01/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f207%2fquarter%2fraspberrypi#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f207%2fquarter%2fraspberrypi">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/quarter/stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/quarter/superuser/2016-04-01?sort=reputationchange"> Super User </option> <option value="/leagues/21/quarter/math/2016-04-01?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/quarter/askubuntu/2016-04-01?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/quarter/serverfault/2016-04-01?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/quarter/english/2016-04-01?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/quarter/unix/2016-04-01?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/quarter/apple/2016-04-01?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/quarter/gaming/2016-04-01?sort=reputationchange"> Arqade </option> <option value="/leagues/52/quarter/programmers/2016-04-01?sort=reputationchange"> Programmers </option> <option value="/leagues/29/quarter/tex/2016-04-01?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/quarter/android/2016-04-01?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/quarter/meta/2016-04-01?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/quarter/electronics/2016-04-01?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/quarter/physics/2016-04-01?sort=reputationchange"> Physics </option> <option value="/leagues/19/quarter/stats/2016-04-01?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/quarter/dba/2016-04-01?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/quarter/ru-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/quarter/security/2016-04-01?sort=reputationchange"> Information Security </option> <option value="/leagues/86/quarter/codereview/2016-04-01?sort=reputationchange"> Code Review </option> <option value="/leagues/42/quarter/wordpress/2016-04-01?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/quarter/gis/2016-04-01?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/quarter/scifi/2016-04-01?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/quarter/mathoverflow/2016-04-01?sort=reputationchange"> MathOverflow </option> <option value="/leagues/23/quarter/diy/2016-04-01?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/quarter/webapps/2016-04-01?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/quarter/sharepoint/2016-04-01?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/quarter/cooking/2016-04-01?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/quarter/graphicdesign/2016-04-01?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/quarter/gamedev/2016-04-01?sort=reputationchange"> Game Development </option> <option value="/leagues/99/quarter/drupal/2016-04-01?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/quarter/ux/2016-04-01?sort=reputationchange"> User Experience </option> <option value="/leagues/229/quarter/ell/2016-04-01?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/quarter/pt-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/quarter/webmasters/2016-04-01?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/quarter/magento/2016-04-01?sort=reputationchange"> Magento </option> <option value="/leagues/191/quarter/academia/2016-04-01?sort=reputationchange"> Academia </option> <option value="/leagues/125/quarter/travel/2016-04-01?sort=reputationchange"> Travel </option> <option value="/leagues/213/quarter/salesforce/2016-04-01?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/quarter/workplace/2016-04-01?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/quarter/photo/2016-04-01?sort=reputationchange"> Photography </option> <option value="/leagues/177/quarter/mathematica/2016-04-01?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange" selected> Raspberry Pi </option> <option value="/leagues/33/quarter/money/2016-04-01?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/quarter/movies/2016-04-01?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/quarter/rpg/2016-04-01?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/quarter/cs/2016-04-01?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/quarter/codegolf/2016-04-01?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/quarter/chemistry/2016-04-01?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/quarter/mechanics/2016-04-01?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/quarter/bicycles/2016-04-01?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/quarter/blender/2016-04-01?sort=reputationchange"> Blender </option> <option value="/leagues/359/quarter/rus/2016-04-01?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/quarter/music/2016-04-01?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/quarter/biology/2016-04-01?sort=reputationchange"> Biology </option> <option value="/leagues/139/quarter/christianity/2016-04-01?sort=reputationchange"> Christianity </option> <option value="/leagues/95/quarter/skeptics/2016-04-01?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/quarter/anime/2016-04-01?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/quarter/crypto/2016-04-01?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/quarter/bitcoin/2016-04-01?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/quarter/parenting/2016-04-01?sort=reputationchange"> Parenting </option> <option value="/leagues/243/quarter/networkengineering/2016-04-01?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/quarter/cstheory/2016-04-01?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/307/quarter/puzzling/2016-04-01?sort=reputationchange"> Puzzling </option> <option value="/leagues/327/quarter/worldbuilding/2016-04-01?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/113/quarter/judaism/2016-04-01?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/quarter/fitness/2016-04-01?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/quarter/german/2016-04-01?sort=reputationchange"> German Language </option> <option value="/leagues/275/quarter/aviation/2016-04-01?sort=reputationchange"> Aviation </option> <option value="/leagues/288/quarter/arduino/2016-04-01?sort=reputationchange"> Arduino </option> <option value="/leagues/60/quarter/boardgames/2016-04-01?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/quarter/dsp/2016-04-01?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/quarter/sqa/2016-04-01?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/quarter/softwarerecs/2016-04-01?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/quarter/philosophy/2016-04-01?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/quarter/history/2016-04-01?sort=reputationchange"> History </option> <option value="/leagues/123/quarter/gardening/2016-04-01?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/quarter/japanese/2016-04-01?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/quarter/writers/2016-04-01?sort=reputationchange"> Writers </option> <option value="/leagues/37/quarter/stackapps/2016-04-01?sort=reputationchange"> Stack Apps </option> <option value="/leagues/259/quarter/sound/2016-04-01?sort=reputationchange"> Sound Design </option> <option value="/leagues/211/quarter/islam/2016-04-01?sort=reputationchange"> Islam </option> <option value="/leagues/93/quarter/pm/2016-04-01?sort=reputationchange"> Project Management </option> <option value="/leagues/91/quarter/quant/2016-04-01?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/333/quarter/ja-stackoverflow/2016-04-01?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/341/quarter/lifehacks/2016-04-01?sort=reputationchange"> Lifehacks </option> <option value="/leagues/137/quarter/french/2016-04-01?sort=reputationchange"> French Language </option> <option value="/leagues/165/quarter/scicomp/2016-04-01?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/quarter/spanish/2016-04-01?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/quarter/productivity/2016-04-01?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/quarter/pets/2016-04-01?sort=reputationchange"> Pets </option> <option value="/leagues/255/quarter/space/2016-04-01?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/quarter/datascience/2016-04-01?sort=reputationchange"> Data Science </option> <option value="/leagues/64/quarter/homebrew/2016-04-01?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/quarter/expressionengine/2016-04-01?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/quarter/hermeneutics/2016-04-01?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/quarter/video/2016-04-01?sort=reputationchange"> Video Production </option> <option value="/leagues/197/quarter/windowsphone/2016-04-01?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/quarter/outdoors/2016-04-01?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/quarter/emacs/2016-04-01?sort=reputationchange"> Emacs </option> <option value="/leagues/189/quarter/sports/2016-04-01?sort=reputationchange"> Sports </option> <option value="/leagues/237/quarter/reverseengineering/2016-04-01?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/quarter/chinese/2016-04-01?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/quarter/cogsci/2016-04-01?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/quarter/chess/2016-04-01?sort=reputationchange"> Chess </option> <option value="/leagues/143/quarter/linguistics/2016-04-01?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/quarter/astronomy/2016-04-01?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/quarter/robotics/2016-04-01?sort=reputationchange"> Robotics </option> <option value="/leagues/245/quarter/opendata/2016-04-01?sort=reputationchange"> Open Data </option> <option value="/leagues/215/quarter/patents/2016-04-01?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/quarter/es-stackoverflow/2016-04-01?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/quarter/tor/2016-04-01?sort=reputationchange"> Tor </option> <option value="/leagues/223/quarter/politics/2016-04-01?sort=reputationchange"> Politics </option> <option value="/leagues/315/quarter/hinduism/2016-04-01?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/quarter/freelancing/2016-04-01?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/quarter/vi/2016-04-01?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/quarter/craftcms/2016-04-01?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/quarter/joomla/2016-04-01?sort=reputationchange"> Joomla </option> <option value="/leagues/321/quarter/startups/2016-04-01?sort=reputationchange"> Startups </option> <option value="/leagues/343/quarter/engineering/2016-04-01?sort=reputationchange"> Engineering </option> <option value="/leagues/313/quarter/buddhism/2016-04-01?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/quarter/russian/2016-04-01?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/quarter/economics/2016-04-01?sort=reputationchange"> Economics </option> <option value="/leagues/363/quarter/law/2016-04-01?sort=reputationchange"> Law </option> <option value="/leagues/155/quarter/bricks/2016-04-01?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/quarter/expatriates/2016-04-01?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/quarter/tridion/2016-04-01?sort=reputationchange"> Tridion </option> <option value="/leagues/291/quarter/matheducators/2016-04-01?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/quarter/earthscience/2016-04-01?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/quarter/martialarts/2016-04-01?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/quarter/elementaryos/2016-04-01?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/quarter/ham/2016-04-01?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/quarter/civicrm/2016-04-01?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/quarter/health/2016-04-01?sort=reputationchange"> Health </option> <option value="/leagues/351/quarter/woodworking/2016-04-01?sort=reputationchange"> Woodworking </option> <option value="/leagues/277/quarter/ebooks/2016-04-01?sort=reputationchange"> Ebooks </option> <option value="/leagues/386/quarter/ethereum/2016-04-01?sort=reputationchange"> Ethereum </option> <option value="/leagues/231/quarter/sustainability/2016-04-01?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/217/quarter/genealogy/2016-04-01?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/quarter/italian/2016-04-01?sort=reputationchange"> Italian Language </option> <option value="/leagues/279/quarter/alcohol/2016-04-01?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/173/quarter/poker/2016-04-01?sort=reputationchange"> Poker </option> <option value="/leagues/365/quarter/opensource/2016-04-01?sort=reputationchange"> Open Source </option> <option value="/leagues/335/quarter/hsm/2016-04-01?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/quarter/musicfans/2016-04-01?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/quarter/coffee/2016-04-01?sort=reputationchange"> Coffee </option> <option value="/leagues/371/quarter/portuguese/2016-04-01?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/quarter/hardwarerecs/2016-04-01?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/quarter/computergraphics/2016-04-01?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/quarter/communitybuilding/2016-04-01?sort=reputationchange"> Community Building </option> <option value="/leagues/361/quarter/mythology/2016-04-01?sort=reputationchange"> Mythology </option> <option value="/leagues/384/quarter/3dprinting/2016-04-01?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/quarter/latin/2016-04-01?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/quarter/retrocomputing/2016-04-01?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/quarter/languagelearning/2016-04-01?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/207/week/raspberrypi">Week</a> 
+        <a href="/leagues/207/month/raspberrypi">Month</a> 
+        <a href="/leagues/207/quarter/raspberrypi" class="youarehere">Quarter</a> 
+        <a href="/leagues/207/year/raspberrypi">Year</a> 
+        <a href="/leagues/207/alltime/raspberrypi">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://raspberrypi.stackexchange.com"> 
+        <div class="site-bubble" style="background-color: #3AB37D; border-color: #3AB37D;"> 
+         <img src="http://cdn.sstatic.net/Sites/raspberrypi/img/icon-48.png?v=3AB37D" alt="Raspberry Pi" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://raspberrypi.stackexchange.com">Raspberry Pi</a></h2> 
+        <p> Q&amp;A for users and developers of hardware and software for Raspberry Pi <span class="league-user-count">(34,796 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>2nd Quarter 2016</h3> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-01-01" class="viewolder">« prev quarter</a> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+       <div class="fr">
+        Sort by: 
+        <select onchange="$(this).siblings('.sortLoader').css('visibility', 'visible'); window.location.href = $(this).val(); return false;"> <option value="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange" selected> Quarter Rank </option> <option value="/leagues/207/quarter/raspberrypi/2016-04-01?sort=rankchange"> Rank Change </option> <option value="/leagues/207/quarter/raspberrypi/2016-04-01?sort=totalreputation"> Total Reputation </option> </select> 
+        <span class="sortLoader"></span> 
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="5538"></a> 
+        <div class="user user-5538"> 
+         <a href="http://raspberrypi.stackexchange.com/users/5538/goldilocks">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/HARAF.jpg?s=128&amp;g=1&amp;s=48" title="goldilocks">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/5538/goldilocks">goldilocks</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="26 silver badges"><span class="badge2"></span><span class="badgecount">26</span></span> 
+          <span title="63 bronze badges"><span class="badge3"></span><span class="badgecount">63</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/5538?sort=reputationchange#5538">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">24,443</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,573</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="13650"></a> 
+        <div class="user user-13650"> 
+         <a href="http://raspberrypi.stackexchange.com/users/13650/joan">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/65493c8d9065770d158dad93fce92985?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="joan">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/13650/joan">joan</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="25 silver badges"><span class="badge2"></span><span class="badgecount">25</span></span> 
+          <span title="41 bronze badges"><span class="badge3"></span><span class="badgecount">41</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/13650?sort=reputationchange#13650">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">23,568</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,408</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="32756"></a> 
+        <div class="user user-32756"> 
+         <a href="http://raspberrypi.stackexchange.com/users/32756/goobering">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/4208953811778c6dd2d02e1a3e0b4db7?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="goobering">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/32756/goobering">goobering</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span> 
+          <span title="27 bronze badges"><span class="badge3"></span><span class="badgecount">27</span></span> 
+          <br> 
+          <span class="faintText">member for: 10 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/32756?sort=reputationchange#32756">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,873</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,165</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="56"></a> 
+        <div class="user user-56"> 
+         <a href="http://raspberrypi.stackexchange.com/users/56/steve-robillard">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/22691c0615b6fd46e55c34fa53e1100d?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Steve Robillard">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/56/steve-robillard">Steve Robillard</a></h2> 
+          <span title="13 gold badges"><span class="badge1"></span><span class="badgecount">13</span></span> 
+          <span title="62 silver badges"><span class="badge2"></span><span class="badgecount">62</span></span> 
+          <span title="83 bronze badges"><span class="badge3"></span><span class="badgecount">83</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/56?sort=reputationchange#56">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">18,312</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,145</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="8697"></a> 
+        <div class="user user-8697"> 
+         <a href="http://raspberrypi.stackexchange.com/users/8697/milliways">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/uLH3f.gif?s=128&amp;g=1&amp;s=48" title="Milliways">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/8697/milliways">Milliways</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="15 silver badges"><span class="badge2"></span><span class="badgecount">15</span></span> 
+          <span title="48 bronze badges"><span class="badge3"></span><span class="badgecount">48</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/8697?sort=reputationchange#8697">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,345</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,041</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="8496"></a> 
+        <div class="user user-8496"> 
+         <a href="http://raspberrypi.stackexchange.com/users/8496/jacobm001">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/818d73588151e0f0adcc4f2d1c6a268b?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Jacobm001">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/8496/jacobm001">Jacobm001</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="16 silver badges"><span class="badge2"></span><span class="badgecount">16</span></span> 
+          <span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/8496?sort=reputationchange#8496">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">6,331</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">841</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="24224"></a> 
+        <div class="user user-24224"> 
+         <a href="http://raspberrypi.stackexchange.com/users/24224/pandalion98">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/YJfgd.jpg?s=128&amp;g=1&amp;s=48" title="PandaLion98">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/24224/pandalion98">PandaLion98</a></h2> 
+          <span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span> 
+          <span title="29 bronze badges"><span class="badge3"></span><span class="badgecount">29</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 5 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/24224?sort=reputationchange#24224">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">3,432</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">616</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="24296"></a> 
+        <div class="user user-24296"> 
+         <a href="http://raspberrypi.stackexchange.com/users/24296/darth-vader">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/wMpiq.jpg?s=128&amp;g=1&amp;s=48" title="Darth Vader">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/24296/darth-vader">Darth Vader</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span> 
+          <span title="31 bronze badges"><span class="badge3"></span><span class="badgecount">31</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 5 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/24296?sort=reputationchange#24296">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+96</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,197</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">582</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="33979"></a> 
+        <div class="user user-33979"> 
+         <a href="http://raspberrypi.stackexchange.com/users/33979/patrick-cook">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f904a98a5453271e94a20fca2edaf853?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Patrick Cook">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/33979/patrick-cook">Patrick Cook</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span> 
+          <span title="35 bronze badges"><span class="badge3"></span><span class="badgecount">35</span></span> 
+          <br> 
+          <span class="faintText">member for: 8 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/33979?sort=reputationchange#33979">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">3,167</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">511</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="40"></a> 
+        <div class="user user-40"> 
+         <a href="http://raspberrypi.stackexchange.com/users/40/jivings">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/4891f30a2bc202930df6ef5eab248bdf?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Jivings">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/40/jivings">Jivings</a></h2> 
+          <span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span> 
+          <span title="66 silver badges"><span class="badge2"></span><span class="badgecount">66</span></span> 
+          <span title="116 bronze badges"><span class="badge3"></span><span class="badgecount">116</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/40?sort=reputationchange#40">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+4</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">15,418</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">498</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="30813"></a> 
+        <div class="user user-30813"> 
+         <a href="http://raspberrypi.stackexchange.com/users/30813/jayeye">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/U7a21.png?s=128&amp;g=1&amp;s=48" title="JayEye">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/30813/jayeye">JayEye</a></h2> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/30813?sort=reputationchange#30813">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+114</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">563</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">486</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="19949"></a> 
+        <div class="user user-19949"> 
+         <a href="http://raspberrypi.stackexchange.com/users/19949/ghanima">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/8856683b06a54791b6854abb6875319a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Ghanima">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/19949/ghanima">Ghanima</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span> 
+          <span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 8 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/19949?sort=reputationchange#19949">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,905</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">458</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="42034"></a> 
+        <div class="user user-42034"> 
+         <a href="http://raspberrypi.stackexchange.com/users/42034/huczu">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/vbFyi.jpg?s=128&amp;g=1&amp;s=48" title="Huczu">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/42034/huczu">Huczu</a></h2> 
+          <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/42034?sort=reputationchange#42034">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+102</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">393</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">319</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="894"></a> 
+        <div class="user user-894"> 
+         <a href="http://raspberrypi.stackexchange.com/users/894/ppumkin">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/2cc90cec13a0801926f6ea3396f22d17?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="ppumkin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/894/ppumkin">ppumkin</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="32 silver badges"><span class="badge2"></span><span class="badgecount">32</span></span> 
+          <span title="73 bronze badges"><span class="badge3"></span><span class="badgecount">73</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/894?sort=reputationchange#894">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">11,041</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">274</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="44129"></a> 
+        <div class="user user-44129"> 
+         <a href="http://raspberrypi.stackexchange.com/users/44129/dimo414">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f0aa6977c75f54ca9033d4f4d0244023?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="dimo414">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/44129/dimo414">dimo414</a></h2> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 45 days <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/44129?sort=reputationchange#44129">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+55</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">385</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">262</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="86"></a> 
+        <div class="user user-86"> 
+         <a href="http://raspberrypi.stackexchange.com/users/86/alex-chamberlain">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/7366cd8b0d4b33e7f6e67dd80c41442f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Alex Chamberlain">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/86/alex-chamberlain">Alex Chamberlain</a></h2> 
+          <span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span> 
+          <span title="49 silver badges"><span class="badge2"></span><span class="badgecount">49</span></span> 
+          <span title="103 bronze badges"><span class="badge3"></span><span class="badgecount">103</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/86?sort=reputationchange#86">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,592</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">255</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="37057"></a> 
+        <div class="user user-37057"> 
+         <a href="http://raspberrypi.stackexchange.com/users/37057/flakeshake">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1cabf03cb0b15abd1cf5b713715b0b28?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="flakeshake">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/37057/flakeshake">flakeshake</a></h2> 
+          <span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/37057?sort=reputationchange#37057">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">0</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,013</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">251</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="42725"></a> 
+        <div class="user user-42725"> 
+         <a href="http://raspberrypi.stackexchange.com/users/42725/obscurerobot">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/7dbca0a4994ce70d993ae671a013fd93?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="ObscureRobot">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/42725/obscurerobot">ObscureRobot</a></h2> 
+          <span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/42725?sort=reputationchange#42725">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+75</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">335</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">234</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="590"></a> 
+        <div class="user user-590"> 
+         <a href="http://raspberrypi.stackexchange.com/users/590/john-la-rooy">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/yByRq.jpg?s=128&amp;g=1&amp;s=48" title="John La Rooy">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/590/john-la-rooy">John La Rooy</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="32 silver badges"><span class="badge2"></span><span class="badgecount">32</span></span> 
+          <span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/590?sort=reputationchange#590">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+9</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,283</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">230</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1070"></a> 
+        <div class="user user-1070"> 
+         <a href="http://raspberrypi.stackexchange.com/users/1070/krzysztof-adamski">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f75b3597330a3d6854efc6f1578fc595?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Krzysztof Adamski">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/1070/krzysztof-adamski">Krzysztof Adamski</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="25 silver badges"><span class="badge2"></span><span class="badgecount">25</span></span> 
+          <span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/1070?sort=reputationchange#1070">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+20</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">7,995</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">215</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="42933"></a> 
+        <div class="user user-42933"> 
+         <a href="http://raspberrypi.stackexchange.com/users/42933/axel-beckert">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/2ec2c4d63fb493164e87d386646c2285?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Axel Beckert">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/42933/axel-beckert">Axel Beckert</a></h2> 
+          <span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/42933?sort=reputationchange#42933">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+61</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">327</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">215</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="42490"></a> 
+        <div class="user user-42490"> 
+         <a href="http://raspberrypi.stackexchange.com/users/42490/jdo">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/17c24716401bb14cca523bd36f8f8525?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="jDo">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/42490/jdo">jDo</a></h2> 
+          <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/42490?sort=reputationchange#42490">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+17</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">426</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">205</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="26774"></a> 
+        <div class="user user-26774"> 
+         <a href="http://raspberrypi.stackexchange.com/users/26774/greenonline">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/rUfLl.png?s=128&amp;g=1&amp;s=48" title="Greenonline">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/26774/greenonline">Greenonline</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span> 
+          <span title="22 bronze badges"><span class="badge3"></span><span class="badgecount">22</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 3 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/26774?sort=reputationchange#26774">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-10</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,704</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">202</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="43300"></a> 
+        <div class="user user-43300"> 
+         <a href="http://raspberrypi.stackexchange.com/users/43300/mark-smith">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/b3fe9942ec3e1434c5d85e3eade323dd?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Mark Smith">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/43300/mark-smith">Mark Smith</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span> 
+          <br> 
+          <span class="faintText">member for: 59 days <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/43300?sort=reputationchange#43300">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-6</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">558</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">175</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="93"></a> 
+        <div class="user user-93"> 
+         <a href="http://raspberrypi.stackexchange.com/users/93/berry120">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/ae054f3779f3a5e09b5b5303d4402266?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="berry120">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/93/berry120">berry120</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span> 
+          <span title="58 bronze badges"><span class="badge3"></span><span class="badgecount">58</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/93?sort=reputationchange#93">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+6</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,634</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">170</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="13552"></a> 
+        <div class="user user-13552"> 
+         <a href="http://raspberrypi.stackexchange.com/users/13552/damodar-dahal">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/Ma2zT.jpg?s=128&amp;g=1&amp;s=48" title="Damodar Dahal">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/13552/damodar-dahal">Damodar Dahal</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span> 
+          <span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/13552?sort=reputationchange#13552">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+133</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">332</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">145</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="8631"></a> 
+        <div class="user user-8631"> 
+         <a href="http://raspberrypi.stackexchange.com/users/8631/syb0rg">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/XpiU6.jpg?s=128&amp;g=1&amp;s=48" title="syb0rg">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/8631/syb0rg">syb0rg</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span> 
+          <span title="45 bronze badges"><span class="badge3"></span><span class="badgecount">45</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/8631?sort=reputationchange#8631">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-7</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5,218</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">143</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="7274"></a> 
+        <div class="user user-7274"> 
+         <a href="http://raspberrypi.stackexchange.com/users/7274/lenik">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1026699dbf4140d3fc7262842428e808?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="lenik">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/7274/lenik">lenik</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span> 
+          <span title="30 bronze badges"><span class="badge3"></span><span class="badgecount">30</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/7274?sort=reputationchange#7274">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,750</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">130</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6283"></a> 
+        <div class="user user-6283"> 
+         <a href="http://raspberrypi.stackexchange.com/users/6283/arne">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/c60f7fda09932752502455be62069611?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Arne">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/6283/arne">Arne</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span> 
+          <span title="25 bronze badges"><span class="badge3"></span><span class="badgecount">25</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/6283?sort=reputationchange#6283">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+203</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,558</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">129</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="553"></a> 
+        <div class="user user-553"> 
+         <a href="http://raspberrypi.stackexchange.com/users/553/scruss">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/d8731f49a2e6864ba0675c4639ef08be?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="scruss">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://raspberrypi.stackexchange.com/users/553/scruss">scruss</a></h2> 
+          <span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span> 
+          <span title="20 bronze badges"><span class="badge3"></span><span class="badgecount">20</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/207/quarter/raspberrypi/2016-04-01/553?sort=reputationchange#553">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> quarter rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+45</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">3,474</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">110</span> quarter reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;page=5" title="go to page 5"><span class="page-numbers">5</span></a> 
+        <span class="page-numbers dots">…</span> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;page=14" title="go to page 14"><span class="page-numbers">14</span></a> 
+        <a href="/leagues/207/quarter/raspberrypi/2016-04-01?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>1,000+</td>
+          <td class="count">5</td>
+         </tr> 
+         <tr>
+          <td>500+</td>
+          <td class="count">9</td>
+         </tr> 
+         <tr>
+          <td>200+</td>
+          <td class="count">23</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">35</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">81</td>
+         </tr> 
+         <tr>
+          <td>25+</td>
+          <td class="count">147</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">404</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">5</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">14</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">23</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">37</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">87</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">184</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">604</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">33,842</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463245354});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

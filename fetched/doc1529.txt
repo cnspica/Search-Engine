@@ -1,0 +1,648 @@
+https://stackexchange.com/newsletters/newsletter?site=crypto.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Cryptography Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dcrypto.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3dcrypto.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 129, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 129, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Cryptography Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://crypto.stackexchange.com">Cryptography</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #fff; font-family: 'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/crypto-header.png" alt="Cryptography Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #fff; -moz-box-shadow: 0 1px 1px #ccc; -webkit-box-shadow: 0 1px 1px #ccc; box-shadow: 0 1px 1px #ccc; border-radius: 6px;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #1D2E47!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35187/nist-diffie-hellman-prime-how-was-it-picked-where-did-it-come-from" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">NIST Diffie-Hellman prime: how was it picked? Where did it come from?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">According to this Matasano Crypto challenge, the NIST "likes" the following prime modulus, which appears to be expressed in hexadecimal: ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/public-key" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">public-key</a> <a href="http://crypto.stackexchange.com/questions/tagged/diffie-hellman" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">diffie-hellman</a> <a href="http://crypto.stackexchange.com/questions/tagged/prime-numbers" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">prime-numbers</a> <a href="http://crypto.stackexchange.com/questions/tagged/nist" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">nist</a> <a href="http://crypto.stackexchange.com/questions/tagged/safe-prime" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">safe-prime</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/df93bdbaaf88550ea285080c3091a3c1?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/2329/elias-zamaria" target="_blank" style="color: #2980FF; text-decoration: none!important;">Elias Zamaria</a> 12 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/zGI9F.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://crypto.stackexchange.com/users/452/poncho" target="_blank" style="color: #2980FF; text-decoration: none!important;">poncho</a> 23 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35213/conditions-for-a-successful-differential-power-analysis-attack" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Conditions for a successful Differential Power Analysis attack</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">From this paper, there are two conditions for a successful DPA attack: i) there exists an intermediate variable in the implementation that is correlated with the power consumption and ii) ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/cryptanalysis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">cryptanalysis</a> <a href="http://crypto.stackexchange.com/questions/tagged/side-channel-attacks" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">side-channel-attacks</a> <a href="http://crypto.stackexchange.com/questions/tagged/dpa" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">dpa</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f51f281b77a9d8bae6fdea41cd7abe41?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/31856/vhl" target="_blank" style="color: #2980FF; text-decoration: none!important;">vhl</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0d0310bd59a8d08a3cb1b496f647da1b?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://crypto.stackexchange.com/users/8916/aleph" target="_blank" style="color: #2980FF; text-decoration: none!important;">Aleph</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35228/how-to-test-implementation-of-primality-tests-like-miller-rabin" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to test implementation of primality tests like Miller–Rabin?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">The Miller-Rabin primality test is an algorithm for checking if number is a prime. What would be best way to test implementation of such algorithm (or any primality test in general)? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/implementation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">implementation</a> <a href="http://crypto.stackexchange.com/questions/tagged/prime-numbers" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">prime-numbers</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://lh4.googleusercontent.com/-ORISLUQpX_U/AAAAAAAAAAI/AAAAAAAAARg/y8eeP54sOTs/photo.jpg?sz=128" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/28567/henry-dorsett-case" target="_blank" style="color: #2980FF; text-decoration: none!important;">Henry Dorsett Case</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/zGI9F.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://crypto.stackexchange.com/users/452/poncho" target="_blank" style="color: #2980FF; text-decoration: none!important;">poncho</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35150/noise-in-homomorphic-encryption" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Noise in Homomorphic encryption</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">What is the noise in homomorphic encryption schemes? (or where does the noise come from, I see that its inbuilt in the scheme and is not a side channel or disturbance noise) Is it also due to the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/homomorphic-encryption" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">homomorphic-encryption</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/046e52abc0a8d7452b726597bbbe8233?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/24060/1010101" target="_blank" style="color: #2980FF; text-decoration: none!important;">1010101</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/hutMu.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://crypto.stackexchange.com/users/18666/vitor" target="_blank" style="color: #2980FF; text-decoration: none!important;">Vitor</a> 6 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35222/what-security-checks-do-i-need-for-srp-6a" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">What security checks do I need for SRP-6a?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I'm implementing an SRP-6a login system. What security checks do I need to do? Note that the modulus is sent to the client at algorithm startup. Here is the list I have so far. I'm using the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/implementation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">implementation</a> <a href="http://crypto.stackexchange.com/questions/tagged/srp" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">srp</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/d2cf682c1744c34aecd5804b144b0d75?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/13903/myria" target="_blank" style="color: #2980FF; text-decoration: none!important;">Myria</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/2j0mf.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://crypto.stackexchange.com/users/13625/otus" target="_blank" style="color: #2980FF; text-decoration: none!important;">otus</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35200/security-of-fernet-construction" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Security of Fernet Construction</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">Fernet is a described as a "high level symmetric encryption recipe" (source) that seems to be the default high level encryption scheme in the cryptography python library. The construction is described ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/encryption" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">encryption</a> <a href="http://crypto.stackexchange.com/questions/tagged/authenticated-encryption" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">authenticated-encryption</a> <a href="http://crypto.stackexchange.com/questions/tagged/protocol-analysis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">protocol-analysis</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/3GLsH.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/17884/puzzlepalace" target="_blank" style="color: #2980FF; text-decoration: none!important;">puzzlepalace</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35137/how-many-qubits-are-required-to-break-rsa-2048-or-4096-with-a-universal-quantum" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How many qubits are required to break RSA 2048 or 4096 with a universal quantum computer?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">So in the news this week, IBM have created a universal quantum computer with 5 fully functional qubits. Logic and Moore's law dictates they will be able to scale this up to a lot more qubits within a ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/rsa" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">rsa</a> <a href="http://crypto.stackexchange.com/questions/tagged/elliptic-curves" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">elliptic-curves</a> <a href="http://crypto.stackexchange.com/questions/tagged/post-quantum-cryptography" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">post-quantum-cryptography</a> <a href="http://crypto.stackexchange.com/questions/tagged/ed25519" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">ed25519</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/95e2fa30c612ed65c51eae48bbfe0e0b?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/34080/ite" target="_blank" style="color: #2980FF; text-decoration: none!important;">ite</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/2j0mf.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://crypto.stackexchange.com/users/13625/otus" target="_blank" style="color: #2980FF; text-decoration: none!important;">otus</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #1D2E47!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/1776/can-you-help-me-understand-what-a-cryptographic-salt-is" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Can you help me understand what a cryptographic "salt" is?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I'm a beginner to cryptography and looking to understand in very simple terms what a cryptographic "salt" is, when I might need to use it, and why I should or should not use it. Can anyone offer me a ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/encryption" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">encryption</a> <a href="http://crypto.stackexchange.com/questions/tagged/hash" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">hash</a> <a href="http://crypto.stackexchange.com/questions/tagged/passwords" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">passwords</a> <a href="http://crypto.stackexchange.com/questions/tagged/salt" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">salt</a> <a href="http://crypto.stackexchange.com/questions/tagged/password-based-encryption" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">password-based-encryption</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/a687b481a3961170ff48d4052c829441?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/1458/bhavik-ambani" target="_blank" style="color: #2980FF; text-decoration: none!important;">Bhavik Ambani</a> 42 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/eb9102111a78e60ac952697f8d8d5743?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://crypto.stackexchange.com/users/1680/martinsuecia" target="_blank" style="color: #2980FF; text-decoration: none!important;">MartinSuecia</a> 70 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/606/time-capsule-cryptography" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Time Capsule cryptography?</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">Does there exist any cryptographic algorithm which encrypts data in such a way that it can only be decrypted after a certain period of time? The only idea that I can think of, is something like this: ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/encryption" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">encryption</a> <a href="http://crypto.stackexchange.com/questions/tagged/timed-release" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">timed-release</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> 
+                      <div style="width: 18px; height: 18px;"></div> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by Jake 108 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/965502e3d612f718fe8826e4b6295b31?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://crypto.stackexchange.com/users/64/pulpspy" target="_blank" style="color: #2980FF; text-decoration: none!important;">PulpSpy</a> 65 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #1D2E47!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35284/how-to-normalize-data-of-a-generic-http-request-for-the-purpose-of-signing" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">How to normalize data of a generic HTTP request for the purpose of signing</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">I am working on PowerAuth 2.0, a solution for counter-based signing of HTTP requests (for the purpose of mobile banking). One of the tasks that I solved somehow but I am still not happy with the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/protocol-design" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">protocol-design</a> <a href="http://crypto.stackexchange.com/questions/tagged/reference-request" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">reference-request</a> <a href="http://crypto.stackexchange.com/questions/tagged/mac" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">mac</a> <a href="http://crypto.stackexchange.com/questions/tagged/standards" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">standards</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/gBSyH.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/28832/petr-dvo%c5%99%c3%a1k" target="_blank" style="color: #2980FF; text-decoration: none!important;">Petr Dvořák</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35272/fixed-primes-in-discrete-logarithm" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Fixed primes in discrete logarithm</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">The discrete logarithm problem is to find $z$ when the inputs are $g,h,p$ where $g^z\bmod p$. Supposing if you fix $p$ then does the problem become any easier to attacks and is there a $(\log p)^c$ ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/discrete-logarithm" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">discrete-logarithm</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5380c2a26d7be3ad71b8723a1c40bae9?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/26270/turbo" target="_blank" style="color: #2980FF; text-decoration: none!important;">Turbo</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; background-color: #fff; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://crypto.stackexchange.com/questions/35206/simulation-based-proof-when-a-secret-key-is-involved" target="_blank" style="color: #2980FF!important; font-size: 17px!important; text-decoration: none!important; font-weight: normal!important;">Simulation-Based Proof: When a Secret Key is Involved</a> </h3> <p style="margin: 1em 0;font-size: 14px; color: #444;">Assume we have a protocol in which a party receives an encrypted random polynomial. The polynomial is encrypted using his public key. We want to construct a simulator for this party (so this party ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://crypto.stackexchange.com/questions/tagged/public-key" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">public-key</a> <a href="http://crypto.stackexchange.com/questions/tagged/protocol-design" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">protocol-design</a> <a href="http://crypto.stackexchange.com/questions/tagged/provable-security" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">provable-security</a> <a href="http://crypto.stackexchange.com/questions/tagged/zero-knowledge-proofs" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;background: #ECEFF3; border: 0; color: #8196B4; font-size: 13px; white-space: nowrap; border-radius: 0; padding: 3px;">zero-knowledge-proofs</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/3161e410bc513514445db5550dc0f901?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://crypto.stackexchange.com/users/13740/user153465" target="_blank" style="color: #2980FF; text-decoration: none!important;">user153465</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #2980FF; text-decoration: none!important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #2980FF; text-decoration: none!important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #2980FF; text-decoration: none!important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #2980FF; text-decoration: none!important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #2980FF; text-decoration: none!important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

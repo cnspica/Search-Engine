@@ -1,0 +1,654 @@
+https://stackexchange.com/newsletters/newsletter?site=dsp.stackexchange.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Signal Processing Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3ddsp.stackexchange.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3ddsp.stackexchange.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 135, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 135, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Signal Processing Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://dsp.stackexchange.com">Signal Processing</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-image: url('//sstatic.net/stackexchange/Img/newsletters/beta-bg.png');" background="//sstatic.net/stackexchange/Img/newsletters/beta-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> 
+      <table border="0" cellpadding="0" cellspacing="0"> 
+       <tbody>
+        <tr> 
+         <td width="600" align="left"> <h1 style="color: #8FD8F6; font-size: 24px!important; font-weight: normal!important;"><span style="color: #3E5583; font-weight: bold!important;">Signal Processing</span> newsletter</h1> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background-color: #FDFDFD; border-top: 1px solid #E6E6E6; border-left: 1px solid #E6E6E6; border-right: 1px solid #E6E6E6;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30770/why-real-part-of-fft-converts-image-into-rotation-original" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Why real part of FFT converts image into rotation + original?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have read this image: taken its FFT (2D) and then Inverse FFT to get exactly the image back. Code is provided for reference: imfft = fft2(photographer); im = uint8(ifft2(imfft)); imshow(im); ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/image-processing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">image-processing</a> <a href="http://dsp.stackexchange.com/questions/tagged/fft" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">fft</a> <a href="http://dsp.stackexchange.com/questions/tagged/fourier-transform" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">fourier-transform</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/m27DI.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/20995/talha-irfan" target="_blank" style="color: #4E82C2; text-decoration: none;">Talha Irfan</a> 12 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/5fdee4fb9f57b3edc2037aef92c40694?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://dsp.stackexchange.com/users/8140/thp" target="_blank" style="color: #4E82C2; text-decoration: none;">ThP</a> 14 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30736/how-to-calculate-an-azimuth-of-a-sound-source-in-stereo-signal" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How to calculate an azimuth of a sound source in stereo signal</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Let say we have a stereo recording of only one source. What is a correct algorithm to calculate its azimuth using inter channel time difference and inter channel level difference? </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/audio" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">audio</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/a645fe19c42263286b982aaa633b96a9?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/18346/dalen" target="_blank" style="color: #4E82C2; text-decoration: none;">Dalen</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2a59853d36056b7a088f33c96e3a1619?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://dsp.stackexchange.com/users/29/endolith" target="_blank" style="color: #4E82C2; text-decoration: none;">endolith</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30740/how-do-i-calculate-the-range-of-a-fixed-point-number-with-a-integer-bits-and" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How do I calculate the range of a fixed-point number with $a$ integer bits and $b $ fractional bits?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">What does fixed-point number range represents? Why we use formula $2^a - 2^{-b}$, why minus $2^{-b}$? Where $a$ is number of integer bits, and $b$ is number of fractional bits. If we have for example ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/fixed-point" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">fixed-point</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/3WQNI.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/20705/lazar" target="_blank" style="color: #4E82C2; text-decoration: none;">Lazar</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/yGqLM.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://dsp.stackexchange.com/users/15347/olli-niemitalo" target="_blank" style="color: #4E82C2; text-decoration: none;">Olli Niemitalo</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30733/useful-natural-hilbert-like-n-uples-and-n-fold-analytic-signals" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Useful natural "Hilbert-like" $n$-uples and $n$-fold "analytic signals</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">If $\mathcal{H}$ denotes the Hilbert transform, the analytic signal of a signal $x(t)$ is $$x_a(t) = x(t) +\imath \mathcal{H}(x(t))\,.$$ The real and imaginary parts form Hilbert pairs. Are there ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/signal-analysis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">signal-analysis</a> <a href="http://dsp.stackexchange.com/questions/tagged/transform" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">transform</a> <a href="http://dsp.stackexchange.com/questions/tagged/local-features" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">local-features</a> <a href="http://dsp.stackexchange.com/questions/tagged/hilbert" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">hilbert</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/PBbKd.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/15892/laurent-duval" target="_blank" style="color: #4E82C2; text-decoration: none;">Laurent Duval</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/307bdf24c792b27efd9b6a118dc70b4e?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://dsp.stackexchange.com/users/3369/jazzmaniac" target="_blank" style="color: #4E82C2; text-decoration: none;">Jazzmaniac</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30724/unexplainable-aliases-in-spectrogram" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">unexplainable aliases in spectrogram</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">My scope has 200 MHz bandwidth and can sample at 4GS/s I'm sampling a 138 MHz RF signal at 500 M Sa/s storing 14 M points. When I plot the spectogram in matlab I get the following ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/fft" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">fft</a> <a href="http://dsp.stackexchange.com/questions/tagged/spectrogram" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">spectrogram</a> <a href="http://dsp.stackexchange.com/questions/tagged/aliasing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">aliasing</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/2a10d271d86e60a7d62e0c0a852598bd?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/7273/thomas" target="_blank" style="color: #4E82C2; text-decoration: none;">Thomas</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/yGqLM.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://dsp.stackexchange.com/users/15347/olli-niemitalo" target="_blank" style="color: #4E82C2; text-decoration: none;">Olli Niemitalo</a> 4 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30677/estimation-of-accelerating-target-using-position-measurements-only" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Estimation of accelerating target using position measurements only</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am currently thinking about approaches to estimating the position and velocity of an accelerating target. At this time, I have tried a few approaches that work alright. I have tried two variations ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/filters" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">filters</a> <a href="http://dsp.stackexchange.com/questions/tagged/estimation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">estimation</a> <a href="http://dsp.stackexchange.com/questions/tagged/kalman-filters" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">kalman-filters</a> <a href="http://dsp.stackexchange.com/questions/tagged/parameter-estimation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">parameter-estimation</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/8avTN.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/20837/choward" target="_blank" style="color: #4E82C2; text-decoration: none;">choward</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/Yy3Hw.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://dsp.stackexchange.com/users/80/peter-k" target="_blank" style="color: #4E82C2; text-decoration: none;">Peter K.</a> 0 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30686/how-to-remove-a-common-noise-signal-from-a-set-of-signals" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">How to remove a common noise signal from a set of signals?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have 2D measurement results which seem to have a constant non-trivial background as shown here: For every column in this image, there seems to be a similar oscillation. I'd like to distinguish ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/filters" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">filters</a> <a href="http://dsp.stackexchange.com/questions/tagged/python" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">python</a> <a href="http://dsp.stackexchange.com/questions/tagged/ica" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">ica</a> <a href="http://dsp.stackexchange.com/questions/tagged/background-subtraction" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">background-subtraction</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/8c6331718e3e7a647f1ce7f90a88bf9c?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/20932/physicspyuser" target="_blank" style="color: #4E82C2; text-decoration: none;">physicsPyUser</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/9966/what-is-the-cut-off-frequency-of-a-moving-average-filter" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">What is the cut-off frequency of a moving average filter?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I need to design a moving average filter that has a cut-off frequency of 7.8 Hz. I have used moving average filters before, but as far as I'm aware, the only parameter that can be fed in is the number ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/moving-average" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">moving-average</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/e98aadfc9799d7df11ac621ee656ea99?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/4961/captainprog" target="_blank" style="color: #4E82C2; text-decoration: none;">CaptainProg</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/291c33625deabed28aea713a55208c3f?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://dsp.stackexchange.com/users/90/jason-r" target="_blank" style="color: #4E82C2; text-decoration: none;">Jason R</a> 13 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/6446/i-and-q-components-and-the-difference-between-qpsk-and-4qam" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">I and Q components and the difference between QPSK and 4QAM</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Both 4QAM and QPSK apparently produce the same waveform, but are they the same mathematically? In a QPSK constellation, are the mapping points at 45, 135, 225 and 315 degrees while the 4QAM is at 0, ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/signal-analysis" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">signal-analysis</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/8ccf37c2a607b0af181853a550199098?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/3575/chwi" target="_blank" style="color: #4E82C2; text-decoration: none;">chwi</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/808b7e0bd6278b6bcea7f380705feb2f?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> answered by <a href="http://dsp.stackexchange.com/users/235/dilip-sarwate" target="_blank" style="color: #4E82C2; text-decoration: none;">Dilip Sarwate</a> 15 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #444!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30690/removing-low-frequency-vibrations-from-measured-signal" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Removing low frequency vibrations from measured signal</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">Suppose I have two sensors $s_1$ and $s_2$. $s_1$ measures the desired heart signal (with most of the frequency content below 100 Hz), and the other is a reference sensor picking mainly background ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/denoising" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">denoising</a> <a href="http://dsp.stackexchange.com/questions/tagged/adaptive-filters" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">adaptive-filters</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/0769150a44c5c305caae32e23bfdd1e0?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/19683/abbas" target="_blank" style="color: #4E82C2; text-decoration: none;">Abbas</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30653/what-is-a-bt-bandwidth-time-product-with-reference-to-modulation" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">What is a $BT$ (Bandwidth-Time) product with reference to modulation?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I would like to know what does Bandwidth-Time product mean. I understand that Bandwidth ($B$) = 1/Symbol Time ($T$), hence $BT = 1$. But how can it vary? What is its significance? e.g. When we say ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/modulation" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">modulation</a> <a href="http://dsp.stackexchange.com/questions/tagged/gaussian" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">gaussian</a> <a href="http://dsp.stackexchange.com/questions/tagged/bandwidth" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">bandwidth</a> <a href="http://dsp.stackexchange.com/questions/tagged/fsk" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">fsk</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/a5e65c505e0580e1ec343df318366d66?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/11780/sa-cha" target="_blank" style="color: #4E82C2; text-decoration: none;">sa-cha</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #E6E6E6;"> <h3 style="margin: 10px 0;"> <a href="http://dsp.stackexchange.com/questions/30709/heterodyne-detection" target="_blank" style="color: #4E82C2!important; font-size: 17px!important; text-decoration: none!important; font-weight: bold!important;">Heterodyne detection</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;"> Prove that with appropriate choices of the phase $\varphi$, one can recover the quadratures of $m(t).$ Attempt The context of this question is weak optical signals combined with a strong local ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://dsp.stackexchange.com/questions/tagged/signal-detection" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">signal-detection</a> <a href="http://dsp.stackexchange.com/questions/tagged/proof" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;color: #566E76!important; font-size: 11px; font-weight: normal; background-color: #F7FDFF; text-decoration: none; margin: 2px 2px 2px 0; padding: 0.1em 0.8em; line-height: 1.4; border: 1px solid #C0D4DB;">proof</a> </td> 
+             <td style="padding-top: 0; color: #AAA; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/9cbd1989692fd03de3127a0addb83822?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #AAA; font-size: 11px;"> asked by <a href="http://dsp.stackexchange.com/users/20697/merin" target="_blank" style="color: #4E82C2; text-decoration: none;">Merin</a> 1 vote </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;color: #444;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #4E82C2; text-decoration: none; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #4E82C2; text-decoration: none;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #4E82C2; text-decoration: none;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #4E82C2; text-decoration: none;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #4E82C2; text-decoration: none;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

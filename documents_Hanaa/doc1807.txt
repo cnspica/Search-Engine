@@ -1,0 +1,522 @@
+http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>Geek on Sound (or.. does anyone really need a sound card these days?) «  Super User Blog</title> 
+  <link rel="alternate" type="application/rss+xml" title="Super User Blog RSS Feed" href="http://blog.superuser.com/feed/"> 
+  <link rel="shortcut icon" href="http://blog.superuser.com/wp-content/themes/stackexchange/sites/superuser/images/favicon.ico"> 
+  <link rel="stylesheet" href="http://blog.superuser.com/wp-content/themes/stackexchange/style.css" type="text/css"> 
+  <link rel="stylesheet" href="http://blog.superuser.com/wp-content/themes/stackexchange/print.css" type="text/css" media="print"> 
+  <link rel="pingback" href="http://blog.superuser.com/xmlrpc.php"> 
+  <link rel="alternate" type="application/rss+xml" title="Super User Blog » Geek on Sound (or.. does anyone really need a sound card these days?) Comments Feed" href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/feed/"> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/blog.superuser.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.8"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="seAuth-css" href="http://blog.superuser.com/wp-content/plugins/seAuthentication/seAuthentication.css?ver=4.2.8" type="text/css" media="all"> 
+  <link rel="stylesheet" id="stackexchange_superuser_stylesheet-css" href="http://blog.superuser.com/wp-content/themes/stackexchange/sites/superuser/style.css?ver=4.2.8" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=4.2.8"></script> 
+  <script type="text/javascript" src="http://blog.superuser.com/wp-content/plugins/seAuthentication/seAuthentication.js?ver=4.2.8"></script> 
+  <style type="text/css">img.{border:0;margin:0 0 0 2px !important;}</style> 
+  <!-- Tweet This v1.8.3 b037 mode alpha --> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.superuser.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.superuser.com/wp-includes/wlwmanifest.xml"> 
+  <link rel="prev" title="What to Do After Buying a New Laptop" href="http://blog.superuser.com/2013/10/23/what-to-do-after-buying-a-new-laptop/"> 
+  <link rel="next" title="ISO files, optical drives and bootable flash drives" href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/"> 
+  <meta name="generator" content="WordPress 4.2.8"> 
+  <link rel="canonical" href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/"> 
+  <link rel="shortlink" href="http://wp.me/p1rLZ8-1rP"> 
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> 
+ </head> 
+ <body> 
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        var $siteSwitcher = $('#siteSwitcher-dialog');
+
+        if(document.location.href.indexOf("moderator.stackexchange.com") !== -1) {
+            $('.current-site-header').hide();
+            $('.current-site-container').hide();
+        }
+
+        $(document).click(function (e) {
+            if (e.target != $('.topbar-icon')[0] && !$.contains($siteSwitcher[0], e.target) && $siteSwitcher.is(':visible')) {
+                $('.logo-se').click();
+            }
+        });
+        $('.logo-se').click(function () {
+            $(this).parent().toggleClass('topbar-icon-on');
+            $siteSwitcher.css('top', $('.topbarWrapper').offset().top + $('.topbarWrapper').height());
+            $siteSwitcher.toggle();
+            return false;
+        });
+    });
+</script> 
+  <div class="topbarWrapper"> 
+   <div class="topbar"> 
+    <div id="siteSwitcher-dialog" style="display:none;"> 
+     <div class="siteSwitcher-dialog-header current-site-header">
+      <h3>current community</h3>
+     </div> 
+     <div class="siteSwitcher-dialog-content current-site-container"> 
+      <ul> 
+       <li> 
+        <div class="related-links"> 
+         <a href="//chat.stackexchange.com?host=superuser.com">chat</a> 
+        </div> <a href="http://superuser.com"> <img src="http://cdn.sstatic.net/Sites/stackexchangemeta/img/icon-32.png" width="16" height="16" class="favicon"> Super User </a> </li> 
+       <li> 
+        <div class="L-shaped-icon-container"> 
+         <span class="L-shaped-icon"></span> 
+        </div> <a href="//meta.superuser.com"> <img src="http://cdn.sstatic.net/Sites/stackexchangemeta/img/icon-32.png" width="16" height="16" class="favicon"> Super User Meta </a> </li> 
+      </ul> 
+     </div> 
+     <div class="siteSwitcher-dialog-header">
+      <h3>more communities</h3>
+     </div> 
+     <div class="siteSwitcher-dialog-content"> 
+      <ul> 
+       <li class="more-communities"> Explore other Stack Exchange communities<br>on <a href="//stackexchange.com/sites">stackexchange.com</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="topbar-icon"> 
+     <a href="http://stackexchange.com" class="logo-se">Stack Exchange</a> 
+    </div> 
+    <div class="searchBox"> 
+     <form class="frmSearch" method="get" id="searchform" action="http://blog.superuser.com/"> 
+      <input type="text" size="25" class="txtSearch" value="Search" name="s" id="s" onblur="if (this.value == '')  {this.value = 'Search';}" onfocus="if (this.value == 'Search')  {this.value = '';}"> 
+      <input type="hidden" class="btnSearch" id="searchsubmit" value="Search"> 
+     </form> 
+    </div> 
+    <div id="hlinks"> 
+     <ul id="top_nav_links">
+      <li class="page_item page-item-187"><a href="http://blog.superuser.com/attribution/">Attribution</a></li> 
+      <li class="page_item page-item-1662"><a href="http://blog.superuser.com/contribute/">Contribute to the Blog</a></li> 
+      <li class="page_item page-item-2891"><a href="http://blog.superuser.com/about/">About the blog</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div id="header"> 
+    <!-- Header Starts --> 
+    <a href="http://blog.superuser.com/"><img src="http://blog.superuser.com/wp-content/themes/stackexchange/sites/superuser/images/logo.png" alt="site title" class="logo-blog"></a> 
+    <!-- Header Ends --> 
+   </div> 
+   <div id="content"> 
+    <!-- Main Content Start --> 
+    <div class="contentWrapper"> 
+     <div id="mainbar"> 
+      <h1 class="blog-title"><a href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/">Geek on Sound (or.. does anyone really need a sound card these days?)</a></h1> 
+      <div class="meta-info">
+       <span class="postedDate">July 14, 2014</span> by 
+       <a href="http://blog.superuser.com/author/journeymangeek/" title="Posts by journeymangeek" rel="author">journeymangeek</a>. 
+       <a href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/#comments">0 comments</a> 
+      </div> 
+      <div class="post-text"> 
+       <p>These days, most PCs come with sound cards that are good enough for most purposes. Speakers have gotten generic enough that shopping for a good pair, with something to differentiate them, isn’t that easy. In a sense, if you aren’t massively picky, you aren’t going to &nbsp;look very hard or far, since what you have is probably good enough.</p> 
+       <p>&nbsp;</p> 
+       <h2><b>Output devices</b></h2> 
+       <p>I’d start by saying that sound is subjective – different people expect different things from their sound system, and look at different things. A pretty good idea when actually trying to put together gear for sound output is to decide what you’re going to do, and what you expect from your sound gear. Different folk expect different things – some value bass over all else (in which case, you’d want a pretty powerful subwoofer, or bass oriented headphones), while other want a neutral sound.</p> 
+       <p>&nbsp;</p> 
+       <p>An ideal sound system sounds exactly like what its source material sounds like. Practically, its pretty hard to make a device that records the entire range of human hearing (ideally from 20 – 20,000 hz). Your mic locations and types make a difference. The recorded material might also be changed in storage (for example, if it’s converted to an MP3), and by the output devices. In some cases, distortion can be pleasing (as vinyl and tube enthusiasts will tell you). In short, an <i>ideal </i>sound playback system is impossible. At the end of the day, rather than perfect fidelity, a realistic goal is simply a system you are happy with.</p> 
+       <p>&nbsp;</p> 
+       <p>In most cases, unless you’re on the loony fringe of audiophilia, the component closest to your ears is probably the most crucial part of your setup. It’s going to determine what you have behind it and whether you get the most out of it. (I doubt you can get very good sound from a home-made monstrosity of tin cans, cellophane and magnet wire ripped out from alternators, even with the world’s best amplifier behind it!)</p> 
+       <p>&nbsp;</p> 
+       <p>At the most basic level, everyone has speakers somewhere these days – most modern monitors have a tiny pair hidden away somewhere, as do laptops. One step above that would be the good old stereo speakers. These are perfectly adequate for transforming an electrical signal into sound. I use a pair of old Altec Lansings for gaming and system sounds, but I’d do just as well with my monitor’s built in speakers in many cases. These speakers probably are museum pieces- they possibly predate front panel audio, but they’re solid, well made and sound surprisingly good.</p> 
+       <p><a href="http://blog.superuser.com/files/2014/06/IMG_1071-Mobile.jpg"><img class="alignleft size-medium wp-image-5575" src="http://blog.superuser.com/files/2014/06/IMG_1071-Mobile-300x224.jpg" alt="IMG_1071 (Mobile)" width="300" height="224"></a></p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>If you need more bass, a subwoofer, as part of a 2.1 speaker set would give you that rumble; however, if you have small animals at home, be warned it may frighten them. Hardcore gamers might look at surround sound speakers – ones with more speakers such as 5.1 sets split sound into more channels you can position for more immersive sound.</p> 
+       <p><a href="http://blog.superuser.com/files/2014/06/21.jpg"><img class="alignleft size-medium wp-image-5576" src="http://blog.superuser.com/files/2014/06/21-300x189.jpg" alt="21" width="300" height="189"></a></p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>Monitors are a step up &nbsp;in terms of sound quality- these are full range speakers which are often used to monitor (hence the name) recordings. They often offer a full range of frequencies (that’s to say they cover the ranges subwoofers do as well – not all speakers do), and are significantly better quality than most regular PC speakers in most respects. They also tend to be larger, but not absurdly large, and contain their own internal amplifiers.&nbsp; They do tend to be slightly harder to find(As with a lot of my audio gear, I find that music shops rather than computer shops are the best place to find these), but are a great option if you want good sound in small spaces.</p> 
+       <p><a href="http://blog.superuser.com/files/2014/06/SPav40_front.jpg"><img class="alignleft size-medium wp-image-5577" src="http://blog.superuser.com/files/2014/06/SPav40_front-300x194.jpg" alt="SPav40_front" width="300" height="194"></a></p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>Of course, there’s nothing stopping you from plugging in your PC to an amplifier or receiver, and running a regular pair of speakers off it. Lots of people use their PCs as you would any other source with great results.</p> 
+       <p>&nbsp;</p> 
+       <p>Personally, I favour headphones. They’re generally cheaper (with some exceptions), some of them offer decent or even spectacular sound quality and, are good if you’re primarily listening to music or gaming alone. There’s a vast array of different types, but there’s two main things to be aware of.</p> 
+       <p>&nbsp;</p> 
+       <p>Firstly the ‘form factor’ of the headphones – ranging from simple earbuds, to In Ear Monitors or IEMs, which go into the ear canal to earphones that fit on your ear to circumaural (headphones that sit around your ear) and circumaural (headphones that sit on your ear). The second is the design of the phones, such as the driver design. IEMs can be dynamic, or use balanced armatures, headphones are mostly dynamic, but there’s alternate designs with their own fans. Headphones can be open-backed (which sound more natural, but often have less bass, and leak noise) or closed back (better isolation, more bass). Quite often, listening to a pair of headphones is the only way to be sure!</p> 
+       <p>&nbsp;</p> 
+       <p>In some cases your speakers and headphones may be too demanding for your onboard sound card to drive, or have the wrong interfaces, so it’s useful to know what you have. Many monitors may take in 1/4 inch inputs or RCA, which your regular sound card may not have, and some headphones need a more powerful output than your regular sound card can handle. A good rule of thumb here would be the impedance level, and that most soundcards can handle up to 32 Ω (ohm) headphones with no issues. Impedance is a hugely complicated thing, and for our purposes, just note that you just don’t want to run a high impedance headphone off a regular sound card.</p> 
+       <p>&nbsp;</p> 
+       <p>In the next part, we’ll talk about options for feeding your output devices, and when a regular sound card just doesn’t cut it.</p> 
+       <p>&nbsp;</p> 
+       <h2>Part 2: Feeding your speakers or headphones the good stuff</h2> 
+       <p>&nbsp;</p> 
+       <p>As with your output devices, different people expect different things from their sources. By a ‘source’, I really mean “device that feeds sound into your sound system so you hear things” – traditionally this could have been a DVD player or even some flavour of a tape player. Associated with that would be the amplification stage of things.</p> 
+       <p>&nbsp;</p> 
+       <p>In the context of what you’re likely to run into, we can really classify 3 types of sources.</p> 
+       <p>&nbsp;</p> 
+       <p>Firstly, the traditional sound card and your integrated sound devices. Integrated sound devices usually are designed around providing the bare minimum of outputs at the lowest cost. While there’s some motherboards with fancy features, in most cases you’d have 5 channel sound and S/PDIF. While soundcards are similar, since basic features have been commodified; these often offer better headphone amplification stages, more options, and ostensibly better sound chips. If you’re a gamer, soundcards are likely the best option, since they’re built around gaming needs, such as surround sound. Creative seem to have gotten their drivers in order these days and make really nice sound cards, including models that work with recent phones, and Asus Xonar is pretty well known.&nbsp; You’re likely going to need a spare PCI or PCIe (Most modern sound cards use a PCIe 1x connector) slot for an internal card, or spare USB port. While typically these are one slot card, there are occationally 2 slot cards with additiona features – such as this creative zxr</p> 
+       <p><a href="http://blog.superuser.com/files/2014/06/zxr.jpg"><img class="alignleft size-medium wp-image-5578" src="http://blog.superuser.com/files/2014/06/zxr-300x240.jpg" alt="zxr" width="300" height="240"></a></p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>The second is the DAC or digital audio converter. These are units used by audiophiles which usually do purely output and either have a headphone out, or can be connected to an amplifier. These tend to be somewhat expensive, you’ll need to do your research but in many cases should offer the best sound quality for music. These are usually connected to your PC via USB and are detected as a soundcard. These tend to be expensive (though prices have been dropping), and as with any audiophile grade equipment, you can’t always trust reviews. Do <i>lots</i> of research, and check out as many reviews you can. If you can, many shops that sell this sort of &nbsp;gear have display models you can audition. These are occationally homebrew units or kits, though there’s pre-built ones with great build quality. I’d note though, some companies make a hash of perfectly good sound chips so do your homework before you invest in one of these. These are in effect <em>very</em> fancy soundcards.</p> 
+       <p>&nbsp;</p> 
+       <p>The third is the DAW or Digital Audio Workstation – these are basically DAC-type devices with better inputs – I use one of these for playback, and if you do your homework, it offers good sound quality, often at lower prices. &nbsp;They’re pretty good if you want to use proper mics, or want something that can output to RCA – my music playing setup is built around a relatively inexpensive, rather old M Audio Fast Track, so I obviously believe this is a good option. Its got a decent headphone output, RCA out if you want to connect to an amplifier or monitors, and a proper mic and guitar/direct input</p> 
+       <p><a href="http://blog.superuser.com/files/2014/06/rtaImage.jpg"><img class="alignleft size-medium wp-image-5579" src="http://blog.superuser.com/files/2014/06/rtaImage-300x200.jpg" alt="rtaImage" width="300" height="200"></a></p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>There’s devices that straddle lines – there’s headphone amplifiers that work as a DAC/microphone for phones for example, or dedicated amplifiers and so on – so I may not cover the whole spectrum of things you may come across</p> 
+       <p>As with your output devices, what you have might be perfectly adequate, and there’s usually no need for fancy, extremely expensive audiophile gear in most cases. I found that the most sensible reason for a sound device outside your onboard sound card was really your inputs and outputs. I got a DAW cause I needed proper XLR microphone ports for music (and it turned out, it sounded better than my onboard sound card for music).</p> 
+       <p>I’ve chosen to have an amplifier between my source and my headphones. This is pretty much optional, but if you have more demanding headphones or want to use speakers not actually designed for a PC, it can be worthwhile upgrade. It’s useful to know what inputs your amplifier takes in (mine does 3.5mm and RCA) and what your soundcard does. In general, you’re <i>not</i> going to need an amplifier except for very special circumstances, and you will know when that is – high impedance headphones, and regular unpowered speakers come to mind. While there’s a slight improvement to sound quality in my opinion, the big difference is in convenience – I have two inputs for my amplifier so I can switch between my PC (where I game) and my laptop with a flick of a switch, and have a large, physical volume control.&nbsp; Its a sAPII made by a&nbsp; chinese company called SMSL which I bought on a whim.</p> 
+       <p><a href="http://blog.superuser.com/files/2014/06/Untitled.jpg"><img class="alignleft size-medium wp-image-5580" src="http://blog.superuser.com/files/2014/06/Untitled-300x227.jpg" alt="Untitled" width="300" height="227"></a></p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>&nbsp;</p> 
+       <p>Finally of course, you need to get sound to your system – games would do it pretty naturally, but there’s a few tips and tricks for music I use, which I’ll cover in the concluding part.</p> 
+       <h2></h2> 
+       <h2>Part 3: If music is the food of love (of music?), play on!</h2> 
+       <p>&nbsp;</p> 
+       <p>From parts 1 and 2, it’s rather obvious that I believe that in most cases, your standard sound setup is good enough. I <i>am</i> rather picky about music however, and try to get the best, least-coloured sound out of my system as possible. I also want my music player to stay out of my way.</p> 
+       <p>&nbsp;</p> 
+       <p>Like a lot of audiophiles, I’m a fan of <a href="http://www.foobar2000.org">foobar2000</a> – there’s alternatives of various sorts such as lilith on windows but I find that a nearly stock foobar2000 setup works best for me.</p> 
+       <p>&nbsp;</p> 
+       <p>I do choose to use bit-perfect playback where possible – originally through ASIO, and later with WASAPI (there’s a third option of kernel streaming). All these methods bypass the kernel mixer which I find, subjectively, improves sound quality – (<a href="<a href=" http: wiki.hydrogenaudio.org ndex.php?title="Bypassing_Windows_Mixer&quot;">http://wiki.hydrogenaudio.org/index.php?title=Bypassing_Windows_Mixer</a>“&gt;Hydrogen Audio disagrees though: if some driver uses bad compression and EQ presets, the difference from bit perfect playback can be dramatic). Once again, I find experimenting to be the best option here – you may not hear a difference here. Since I use seperate sound devices for music and other stuff, I simply set my DAW into WASAPI exclusive mode, so that gets a stream of music, while the onboard sound card handles other sounds.</p> 
+       <p>&nbsp;</p> 
+       <p>At some point, tweaking your software is a little like trying to overclock – you might get some improvement, real or perceived, but it isn’t going to make a major difference if you’re working off hardware that’s not really very good.</p> 
+       <p>&nbsp;</p> 
+       <p>I also favour lossless – <a href="<a href=" http: www.codinghorror.com log 012 6 oncluding-the-great-mp3-bitrate-experiment.html">http://www.codinghorror.com/blog/2012/06/concluding-the-great-mp3-bitrate-experiment.html</a>“&gt;Jeff Atwood disagrees, but these days, storage space is cheap. I have the option of re-converting my audio with no quality loss. While <a href="http://www.dbpoweramp.com">dbpoweramp</a> is what I hear rave reviews about as far as ripping CDs go, I favour <a href="<a href=" http: www.cuetools.net iki ain_page">http://www.cuetools.net/wiki/Main_Page</a>“&gt;cuetools – it supports some of the same features, is free &nbsp;and does GPU accelerated ripping.</p> 
+       <p>&nbsp;</p> 
+       <p>Once again, your mileage may vary. Lots of people swear by <a href="http://www.winamp.com">Winamp</a>, or just listen to music off <a href="https://www.youtube.com">YouTube</a> or <a href="https://www.spotify.com">Spotify</a>. It’s <i>pretty</i> unlikely you’ll need a fancy setup for that. Built up to your needs, and your preferences. I personally pretty much accidentally discovered my preferences, and bought my initial audiophile gear and upgraded as things broke or I wanted to experiment. &nbsp;Nearly my whole setup consists of iterations of settings and gear until it sounded <i>right</i>. I’ve made one or two mistakes of course, but the current iteration sounds pretty good, and handles what I throw at it. I don’t tweak my sound for gaming – I’ve not seen much options, and if you’re familiar with how to tweak a computer for better gaming sound, why not write an article for the Super User Blog!</p> 
+       <div> 
+        <p><span class="filedto">Filed under <a href="http://blog.superuser.com/category/uncategorized/" rel="category tag">Uncategorized</a></span></p> 
+       </div> 
+      </div> 
+      <div class="navigation"> 
+       <span>« <a href="http://blog.superuser.com/2013/10/23/what-to-do-after-buying-a-new-laptop/" rel="prev">What to Do After Buying a New Laptop</a></span> | 
+       <span><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/" rel="next">ISO files, optical drives and bootable flash drives</a> » </span> 
+      </div> 
+      <div id="comments"> 
+       <!-- You can start editing here. --> 
+       <!-- If comments are open, but there are no comments. --> 
+       <p>Subscribe to comments with <a href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/feed">RSS</a>.</p> 
+       <script type="text/javascript">
+	(function($) {
+		$(function() {
+			$("#commentform input, #commentform textarea").removeAttr("tabindex");
+		});
+	})(jQuery);
+</script> 
+       <div id="respond" class="comment-respond"> 
+        <h3 id="reply-title" class="comment-reply-title">Leave a comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/#respond" style="display:none;">Cancel reply</a></small></h3> 
+        <form action="http://blog.superuser.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"> 
+         <table> 
+          <tbody> 
+           <tr> 
+            <td class="vm"><a id="toggleLoginState" href="http://blog.superuser.com/wp-content/plugins/seAuthentication/seAuthenticationLogin.php?redirect_to=http%3A%2F%2Fblog.superuser.com%2F2014%2F07%2F14%2Fgeek-on-sound-or-does-anyone-really-need-a-sound-card-these-days%2F%23respond&amp;reauth=1">
+              <div style="text-align:center;">
+               <span style="font-weight:bold;font-size:125%">Log in</span>
+               <br>
+               <span style="font-size:90%;">with Stack Exchange</span>
+              </div></a></td> 
+            <td class="orcell"> 
+             <div class="orword">
+              or
+             </div> 
+             <div class="orline"></div> </td> 
+            <td class="vm"> <p> <input type="text" name="author" id="author" value="" size="22" tabindex="2" class="txtInput" aria-required="true"> <label for="author"><small>Name (required)</small></label> </p> <p> <input type="text" name="email" id="email" value="" class="txtInput" size="22" tabindex="3" aria-required="true"> <label for="email"><small>Mail (will not be published) (required)</small></label> </p> <p> <input type="text" name="url" id="url" value="" class="txtInput" size="22" tabindex="4"> <label for="url"><small>Website</small></label> </p> </td>
+           </tr>
+          </tbody>
+         </table> 
+         <p><textarea name="comment" id="comment" cols="70" rows="10" class="txtComment" tabindex="1"></textarea></p> 
+         <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit comment"> <input type="hidden" name="comment_post_ID" value="5569" id="comment_post_ID"> <input type="hidden" name="comment_parent" id="comment_parent" value="0"> </p>
+         <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e39a2a0d9d"></p>
+         <div class="g-recaptcha" data-sitekey="6Lfmzf4SAAAAAESlOdWAUnRh3ab4BcteAbBBXsFm" data-theme="standard"></div>
+         <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script> 
+         <div id="recaptcha-submit-btn-area">
+          &nbsp;
+         </div> 
+         <noscript> 
+          <style type="text/css">#submit {display:none;}</style> 
+          <input name="submit" type="submit" id="submit-alt" tabindex="6" value="Submit Comment"> 
+         </noscript>
+         <p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="175"></p> 
+        </form> 
+       </div>
+       <!-- #respond --> 
+      </div> 
+     </div> 
+     <div id="sidebar"> 
+      <div class="module siteIntro"> 
+       <!--The Super User Community Blog--> This is a community blog for 
+       <a href="http://superuser.com">Super User</a>. More community blogs are available at 
+       <a href="http://blogoverflow.com">Blog Overflow</a>. 
+      </div> 
+      <div class="module module-rss"> 
+       <a href="http://blog.superuser.com/feed/"><img src="http://blog.superuser.com/wp-content/themes/stackexchange/images/ico_rss.png" alt="Subscribe to our RSS feed"> Subscribe via RSS</a> 
+      </div> 
+      <div class="module"> 
+       <form class="frmSearch" method="get" id="searchform" action="http://blog.superuser.com/"> 
+        <input type="text" size="25" class="txtSearch" value="Search" name="s" id="s" onblur="if (this.value == '')  {this.value = 'Search';}" onfocus="if (this.value == 'Search')  {this.value = '';}"> 
+        <input type="hidden" class="btnSearch" id="searchsubmit" value="Search"> 
+       </form> 
+       <h4>Recent Posts</h4> 
+       <ul> 
+        <li> <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/">ISO files, optical drives and bootable flash drives</a> </li> 
+        <li> <a href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/">Geek on Sound (or.. does anyone really need a sound card these days?)</a> </li> 
+        <li> <a href="http://blog.superuser.com/2013/10/23/what-to-do-after-buying-a-new-laptop/">What to Do After Buying a New Laptop</a> </li> 
+        <li> <a href="http://blog.superuser.com/2013/08/19/best-of-both-worlds-round-3-msata-ssds/">Best of both worlds round 3: mSATA SSDs</a> </li> 
+        <li> <a href="http://blog.superuser.com/2013/06/13/windows-8-on-a-vhd-trying-windows-without-the-risk/">Windows 8 on a VHD – Trying windows without the risk</a> </li> 
+       </ul> 
+       <h4>Recent Comments</h4>
+       <ul id="recentcomments">
+        <li class="recentcomments"><span class="comment-author-link"><a href="http://superuser.com/users/9666/tom-wijsman">Tom Wijsman</a></span> on <a href="http://blog.superuser.com/2011/05/10/maximizing-the-lifetime-of-your-ssd/#comment-2775135">Maximizing the lifetime of your SSD</a></li>
+        <li class="recentcomments"><span class="comment-author-link"><a href="http://superuser.com/users/375935/jiggunjer">jiggunjer</a></span> on <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771492">ISO files, optical drives and bootable flash drives</a></li>
+        <li class="recentcomments"><span class="comment-author-link">angel ferrer</span> on <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771364">ISO files, optical drives and bootable flash drives</a></li>
+        <li class="recentcomments"><span class="comment-author-link"><a href="http://superuser.com/users/116196/raystafarian">Raystafarian</a></span> on <a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771120">ISO files, optical drives and bootable flash drives</a></li>
+        <li class="recentcomments"><span class="comment-author-link">amol</span> on <a href="http://blog.superuser.com/2011/04/03/what-is-flashing-the-bios/#comment-2770072">What is “Flashing the BIOS”?</a></li>
+       </ul>
+       <h4>Archives</h4> 
+       <ul> 
+        <li><a href="http://blog.superuser.com/2016/02/">February 2016</a></li> 
+        <li><a href="http://blog.superuser.com/2014/07/">July 2014</a></li> 
+        <li><a href="http://blog.superuser.com/2013/10/">October 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2013/08/">August 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2013/06/">June 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2013/05/">May 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2013/03/">March 2013</a></li> 
+        <li><a href="http://blog.superuser.com/2012/11/">November 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/10/">October 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/09/">September 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/08/">August 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/07/">July 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/06/">June 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/03/">March 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/02/">February 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2012/01/">January 2012</a></li> 
+        <li><a href="http://blog.superuser.com/2011/12/">December 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/11/">November 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/10/">October 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/09/">September 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/08/">August 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/07/">July 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/06/">June 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/05/">May 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/04/">April 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/03/">March 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/02/">February 2011</a></li> 
+        <li><a href="http://blog.superuser.com/2011/01/">January 2011</a></li> 
+       </ul> 
+       <h4>Categories</h4> 
+       <ul> 
+        <li class="cat-item cat-item-33"><a href="http://blog.superuser.com/category/podcasts/askdifferent/">Ask Different</a> </li> 
+        <li class="cat-item cat-item-154"><a href="http://blog.superuser.com/category/backup-restore/">Backup &amp; Restore</a> </li> 
+        <li class="cat-item cat-item-3"><a href="http://blog.superuser.com/category/battle-of-the-giants/">Battle of the Giants</a> </li> 
+        <li class="cat-item cat-item-4"><a href="http://blog.superuser.com/category/browsers/">Browsers</a> </li> 
+        <li class="cat-item cat-item-5"><a href="http://blog.superuser.com/category/charity/">Charity</a> </li> 
+        <li class="cat-item cat-item-6"><a href="http://blog.superuser.com/category/college/">College</a> </li> 
+        <li class="cat-item cat-item-7"><a href="http://blog.superuser.com/category/compression/">Compression</a> </li> 
+        <li class="cat-item cat-item-8"><a href="http://blog.superuser.com/category/computing/">Computing</a> </li> 
+        <li class="cat-item cat-item-9"><a href="http://blog.superuser.com/category/encryption/">Encryption</a> </li> 
+        <li class="cat-item cat-item-10"><a href="http://blog.superuser.com/category/featured/">Featured</a> </li> 
+        <li class="cat-item cat-item-11"><a href="http://blog.superuser.com/category/filesystems/">Filesystems</a> </li> 
+        <li class="cat-item cat-item-146"><a href="http://blog.superuser.com/category/hard-drives/">Hard Drives</a> </li> 
+        <li class="cat-item cat-item-12"><a href="http://blog.superuser.com/category/hardware/">Hardware</a> </li> 
+        <li class="cat-item cat-item-13"><a href="http://blog.superuser.com/category/history/">History</a> </li> 
+        <li class="cat-item cat-item-14"><a href="http://blog.superuser.com/category/htpc/">HTPC</a> </li> 
+        <li class="cat-item cat-item-15"><a href="http://blog.superuser.com/category/interviews/">Interviews</a> </li> 
+        <li class="cat-item cat-item-92"><a href="http://blog.superuser.com/category/memory/">Memory</a> </li> 
+        <li class="cat-item cat-item-16"><a href="http://blog.superuser.com/category/networking-2/">Networking</a> </li> 
+        <li class="cat-item cat-item-17"><a href="http://blog.superuser.com/category/news/">News</a> </li> 
+        <li class="cat-item cat-item-18"><a href="http://blog.superuser.com/category/operating-systems/">Operating Systems</a> </li> 
+        <li class="cat-item cat-item-19"><a href="http://blog.superuser.com/category/organizing/">Organizing</a> </li> 
+        <li class="cat-item cat-item-20"><a href="http://blog.superuser.com/category/podcasts/">Podcasts</a> </li> 
+        <li class="cat-item cat-item-21"><a href="http://blog.superuser.com/category/productive-thursday/">Productive Thursday</a> </li> 
+        <li class="cat-item cat-item-22"><a href="http://blog.superuser.com/category/qotw/">Question of the Week</a> </li> 
+        <li class="cat-item cat-item-23"><a href="http://blog.superuser.com/category/reviews/">Reviews</a> </li> 
+        <li class="cat-item cat-item-119"><a href="http://blog.superuser.com/category/security/">Security</a> </li> 
+        <li class="cat-item cat-item-24"><a href="http://blog.superuser.com/category/software/">Software</a> </li> 
+        <li class="cat-item cat-item-25"><a href="http://blog.superuser.com/category/ssd/">Solid State Drives</a> </li> 
+        <li class="cat-item cat-item-26"><a href="http://blog.superuser.com/category/super-user/">Super User</a> </li> 
+        <li class="cat-item cat-item-28"><a href="http://blog.superuser.com/category/ubuntu/">Ubuntu</a> </li> 
+        <li class="cat-item cat-item-1"><a href="http://blog.superuser.com/category/uncategorized/">Uncategorized</a> </li> 
+        <li class="cat-item cat-item-29"><a href="http://blog.superuser.com/category/utilities/">Utilities</a> </li> 
+        <li class="cat-item cat-item-30"><a href="http://blog.superuser.com/category/virtualization/">Virtualization</a> </li> 
+        <li class="cat-item cat-item-31"><a href="http://blog.superuser.com/category/windows/">Windows</a> </li> 
+        <li class="cat-item cat-item-157"><a href="http://blog.superuser.com/category/windows-8-challenge/">Windows 8 Challenge</a> </li> 
+        <li class="cat-item cat-item-32"><a href="http://blog.superuser.com/category/wtfriday/">WTFriday</a> </li> 
+       </ul> 
+       <h4>Meta</h4> 
+       <ul> 
+        <li><a href="http://blog.superuser.com/wp-login.php?action=register">Register</a></li> 
+        <li><a href="http://blog.superuser.com/wp-content/plugins/seAuthentication/seAuthenticationLogin.php?reauth=1">Log in</a></li> 
+        <li><a href="http://blog.superuser.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+        <li><a href="http://blog.superuser.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+        <li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li> 
+       </ul> 
+      </div> 
+      <div class="module"> 
+       <h4>Latest Articles</h4> 
+       <ul> 
+        <li><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/">ISO files, optical drives and bootable flash drives</a></li> 
+        <li><a href="http://blog.superuser.com/2014/07/14/geek-on-sound-or-does-anyone-really-need-a-sound-card-these-days/">Geek on Sound (or.. does anyone really need a sound card these days?)</a></li> 
+        <li><a href="http://blog.superuser.com/2013/10/23/what-to-do-after-buying-a-new-laptop/">What to Do After Buying a New Laptop</a></li> 
+        <li><a href="http://blog.superuser.com/2013/08/19/best-of-both-worlds-round-3-msata-ssds/">Best of both worlds round 3: mSATA SSDs</a></li> 
+        <li><a href="http://blog.superuser.com/2013/06/13/windows-8-on-a-vhd-trying-windows-without-the-risk/">Windows 8 on a VHD – Trying windows without the risk</a></li> 
+       </ul> 
+       <p class="fr"><a href="/archive/">view all posts</a></p> 
+      </div> 
+      <div class="module"> 
+       <h4>Topics</h4> 
+       <ul class="twoCol"> 
+        <li class="cat-item cat-item-33"><a href="http://blog.superuser.com/category/podcasts/askdifferent/">Ask Different</a> (12) </li> 
+        <li class="cat-item cat-item-154"><a href="http://blog.superuser.com/category/backup-restore/">Backup &amp; Restore</a> (2) </li> 
+        <li class="cat-item cat-item-3"><a href="http://blog.superuser.com/category/battle-of-the-giants/">Battle of the Giants</a> (3) </li> 
+        <li class="cat-item cat-item-4"><a href="http://blog.superuser.com/category/browsers/">Browsers</a> (8) </li> 
+        <li class="cat-item cat-item-5"><a href="http://blog.superuser.com/category/charity/">Charity</a> (1) </li> 
+        <li class="cat-item cat-item-6"><a href="http://blog.superuser.com/category/college/">College</a> (5) </li> 
+        <li class="cat-item cat-item-7"><a href="http://blog.superuser.com/category/compression/">Compression</a> (3) </li> 
+        <li class="cat-item cat-item-8"><a href="http://blog.superuser.com/category/computing/">Computing</a> (14) </li> 
+        <li class="cat-item cat-item-9"><a href="http://blog.superuser.com/category/encryption/">Encryption</a> (4) </li> 
+        <li class="cat-item cat-item-10"><a href="http://blog.superuser.com/category/featured/">Featured</a> (14) </li> 
+        <li class="cat-item cat-item-11"><a href="http://blog.superuser.com/category/filesystems/">Filesystems</a> (8) </li> 
+        <li class="cat-item cat-item-146"><a href="http://blog.superuser.com/category/hard-drives/">Hard Drives</a> (1) </li> 
+        <li class="cat-item cat-item-12"><a href="http://blog.superuser.com/category/hardware/">Hardware</a> (18) </li> 
+        <li class="cat-item cat-item-13"><a href="http://blog.superuser.com/category/history/">History</a> (1) </li> 
+        <li class="cat-item cat-item-14"><a href="http://blog.superuser.com/category/htpc/">HTPC</a> (2) </li> 
+        <li class="cat-item cat-item-15"><a href="http://blog.superuser.com/category/interviews/">Interviews</a> (7) </li> 
+        <li class="cat-item cat-item-92"><a href="http://blog.superuser.com/category/memory/">Memory</a> (1) </li> 
+        <li class="cat-item cat-item-16"><a href="http://blog.superuser.com/category/networking-2/">Networking</a> (10) </li> 
+        <li class="cat-item cat-item-17"><a href="http://blog.superuser.com/category/news/">News</a> (3) </li> 
+        <li class="cat-item cat-item-18"><a href="http://blog.superuser.com/category/operating-systems/">Operating Systems</a> (14) </li> 
+        <li class="cat-item cat-item-19"><a href="http://blog.superuser.com/category/organizing/">Organizing</a> (2) </li> 
+        <li class="cat-item cat-item-20"><a href="http://blog.superuser.com/category/podcasts/">Podcasts</a> (12) </li> 
+        <li class="cat-item cat-item-21"><a href="http://blog.superuser.com/category/productive-thursday/">Productive Thursday</a> (7) </li> 
+        <li class="cat-item cat-item-22"><a href="http://blog.superuser.com/category/qotw/">Question of the Week</a> (33) </li> 
+        <li class="cat-item cat-item-23"><a href="http://blog.superuser.com/category/reviews/">Reviews</a> (12) </li> 
+        <li class="cat-item cat-item-119"><a href="http://blog.superuser.com/category/security/">Security</a> (1) </li> 
+        <li class="cat-item cat-item-24"><a href="http://blog.superuser.com/category/software/">Software</a> (29) </li> 
+        <li class="cat-item cat-item-25"><a href="http://blog.superuser.com/category/ssd/">Solid State Drives</a> (9) </li> 
+        <li class="cat-item cat-item-26"><a href="http://blog.superuser.com/category/super-user/">Super User</a> (6) </li> 
+        <li class="cat-item cat-item-28"><a href="http://blog.superuser.com/category/ubuntu/">Ubuntu</a> (5) </li> 
+        <li class="cat-item cat-item-1"><a href="http://blog.superuser.com/category/uncategorized/">Uncategorized</a> (6) </li> 
+        <li class="cat-item cat-item-29"><a href="http://blog.superuser.com/category/utilities/">Utilities</a> (6) </li> 
+        <li class="cat-item cat-item-30"><a href="http://blog.superuser.com/category/virtualization/">Virtualization</a> (3) </li> 
+        <li class="cat-item cat-item-31"><a href="http://blog.superuser.com/category/windows/">Windows</a> (16) </li> 
+        <li class="cat-item cat-item-157"><a href="http://blog.superuser.com/category/windows-8-challenge/">Windows 8 Challenge</a> (1) </li> 
+        <li class="cat-item cat-item-32"><a href="http://blog.superuser.com/category/wtfriday/">WTFriday</a> (10) </li> 
+       </ul> 
+      </div> 
+      <div class="module"> 
+      </div> 
+      <div class="module"> 
+       <div class="sectionHeader">
+        <h4>Latest Comments</h4> 
+        <ul> 
+         <li><a href="http://blog.superuser.com/2011/05/10/maximizing-the-lifetime-of-your-ssd/#comment-2775135" title="Maximizing the lifetime of your SSD, May 10, 2011">Tom Wijsman</a>: Pingback: A visitor has translated this blog post to Russian on an external SDR Phone Recovery website:...</li> 
+         <li><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771492" title="ISO files, optical drives and bootable flash drives, February 7, 2016">jiggunjer</a>: The three steps mentioned are a starting point for googling a fix for your particular ISO. There is no...</li> 
+         <li><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771364" title="ISO files, optical drives and bootable flash drives, February 7, 2016">angel ferrer</a>: this article is very wide ranging and knowledgeable, but useless. it does not help me create a bootable...</li> 
+         <li><a href="http://blog.superuser.com/2016/02/07/iso-files-optical-drives-and-bootable-flash-drives/#comment-2771120" title="ISO files, optical drives and bootable flash drives, February 7, 2016">Raystafarian</a>: Very thorough – great job! </li> 
+         <li><a href="http://blog.superuser.com/2011/04/03/what-is-flashing-the-bios/#comment-2770072" title="What is “Flashing the BIOS”?, April 3, 2011">amol</a>: thank you man!!! all needed knowledge in one page!! and also i left the thought to flash my bios.. </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- Main Content End --> 
+   </div> 
+   <div id="footer"> 
+    <div class="footerwrap"> 
+     <p>Stack Exchange © 2016 <a href="http://blog.superuser.com/feed/">Entries (RSS)</a> and <a href="http://blog.superuser.com/comments/feed/">Comments (RSS)</a>. <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-Wiki</a></p> 
+    </div> 
+   </div> 
+   <script type="text/javascript">
+	<!--
+	try {
+		var parent_location = new String(parent.location);
+		var top_location = new String(top.location);
+		var cur_location = new String(document.location);
+		parent_location = parent_location.toLowerCase();
+		top_location = top_location.toLowerCase();
+		cur_location = cur_location.toLowerCase();
+
+		if ( top_location != cur_location && parent_location.indexOf('http://blog.superuser.com') != 0 )
+			top.location.href = document.location.href;
+	} catch ( err ) {
+		top.location.href = document.location.href;
+	}
+	//-->
+	</script> 
+   <script type="text/javascript">
+            var sub = document.getElementById('submit');
+            document.getElementById('recaptcha-submit-btn-area').appendChild (sub);
+            document.getElementById('submit').tabIndex = 6;
+            if ( typeof _recaptcha_wordpress_savedcomment != 'undefined') {
+                document.getElementById('comment').value = 
+                    _recaptcha_wordpress_savedcomment;
+            }
+            </script>
+   <script type="text/javascript" src="http://superuser.blogoverflow.com/wp-content/plugins/akismet/_inc/form.js?ver=3.1.5"></script> 
+   <script type="text/javascript" src="http://blog.superuser.com/wp-includes/js/comment-reply.min.js?ver=4.2.8"></script> 
+   <!--stats_footer_test-->
+   <script src="http://stats.wordpress.com/e-201619.js" type="text/javascript"></script> 
+   <script type="text/javascript">
+st_go({blog:'21395650',v:'ext',post:'5569'});
+var load_cmc = function(){linktracker_init(21395650,5569,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script> 
+   <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5620270-31']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>   
+   <!-- Dynamic page generated in 0.240 seconds. --> 
+   <!-- Cached page generated by WP-Super-Cache on 2016-05-14 17:10:16 --> 
+   <!-- Compression = gzip -->
+  </div>
+ </body>
+</html>

@@ -1,0 +1,2129 @@
+http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful
+<!doctype html>
+<html itemscope itemtype="http://schema.org/QAPage">
+ <head> 
+  <title>solid - Why would the 'final' keyword ever be useful? - Programmers Stack Exchange</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/programmers/img/favicon.ico?v=28d2686ad0b9"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/programmers/img/apple-touch-icon.png?v=4ce8e2685a35"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Programmers Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@StackProgrammer"> 
+  <meta name="twitter:domain" content="programmers.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/programmers/img/apple-touch-icon@2.png?v=8a6d048f3c78&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Why would the 'final' keyword ever be useful?"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="It seems Java has had the power to declare classes not-derivable for ages, and now C++ has it too. However, in the light of the Open/Close principle in SOLID, why would that be useful? To me, the f..."> 
+  <meta property="og:url" content="http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful"> 
+  <link rel="canonical" href="http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=36086b43db82"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/programmers/all.css?v=377b2572da49"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed for question 'Why would the 'final' keyword ever be useful?'" href="/feeds/question/318245"> 
+  <meta name="twitter:app:country" content="US"> 
+  <meta name="twitter:app:name:iphone" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:iphone" content="871299723"> 
+  <meta name="twitter:app:url:iphone" content="se-zaphod://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful"> 
+  <meta name="twitter:app:name:ipad" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:ipad" content="871299723"> 
+  <meta name="twitter:app:url:ipad" content="se-zaphod://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful"> 
+  <meta name="twitter:app:name:googleplay" content="Stack Exchange Android"> 
+  <meta name="twitter:app:url:googleplay" content="http://programmers.stackexchange.com/questions/318245/why-would-the-final-keyword-ever-be-useful"> 
+  <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin"> 
+  <script>
+        
+            StackExchange.ready(function () {
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:19,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:318245});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('131', '318245');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('131');
+                StackExchange.realtime.subscribeToTopBarNotifications('131');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463245198,"routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"Programmers Stack Exchange","description":"Q&A for professional programmers interested in conceptual questions about software development","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":131,"enableSocialMediaInSharePopup":true},"user":{"fkey":"71fb98341fa62b820a5808f83f182453","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"d911fb28bd9f","js/moderator.en.js":"50831ba8e994","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"97cc5d07283a","js/wmd.en.js":"b2e347d78fbd","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"8c8f022d2f71","js/inline-tag-editing.en.js":"a815357d00cd","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"a78702da7b99","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"79fde18773e4","js/explore-qlist.en.js":"2a9a628fca7f","js/events.en.js":"122722c4c15a","js/keyboard-shortcuts.en.js":"e92b66602411","js/external-editor.en.js":"683ce04845f3"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="question-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//programmers.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://programmers.blogoverflow.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//programmers.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="131" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-programmers" title="Programmers"></div> Programmers </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.programmers.stackexchange.com" class="site-link js-gps-track" data-id="133" data-gps-track="
+            site.switch({ target_site:133, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-programmersmeta" title="Programmers Meta"></div> Programmers Meta </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://programmers.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fprogrammers.stackexchange.com%2fquestions%2f318245%2fwhy-would-the-final-keyword-ever-be-useful" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://programmers.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fprogrammers.stackexchange.com%2fquestions%2f318245%2fwhy-would-the-final-keyword-ever-be-useful" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://programmers.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fprogrammers.stackexchange.com%2fquestions%2f318245%2fwhy-would-the-final-keyword-ever-be-useful" class="login-link">sign up</a> <a href="https://programmers.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fprogrammers.stackexchange.com%2fquestions%2f318245%2fwhy-would-the-final-keyword-ever-be-useful" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.programmers.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Programmers </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li class="youarehere"><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content"> 
+    <div itemscope itemtype="http://schema.org/Question"> 
+     <link itemprop="image" href="//cdn.sstatic.net/Sites/programmers/img/apple-touch-icon.png?v=4ce8e2685a35"> 
+     <div id="herobox"> 
+      <div id="hero-content"> 
+       <div id="close">
+        <a title="click to minimize">_</a>
+       </div> 
+       <div id="blurb">
+         Programmers Stack Exchange is a question and answer site for professional programmers interested in conceptual questions about software development. It's 100% free. 
+        <br> 
+        <br> 
+        <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fprogrammers.stackexchange.com%2fquestions%2f318245%2fwhy-would-the-final-keyword-ever-be-useful" id="tell-me-more" class="button">Sign up</a> 
+       </div> 
+       <div id="desc"> 
+        <b>Here's how it works:</b> 
+        <ol id="hiw"> 
+         <li id="q">Anybody can ask a question </li> 
+         <li id="an">Anybody can answer </li> 
+         <li id="b">The best answers are voted up and rise to the top </li> 
+        </ol> 
+       </div> 
+       <div style="clear: both"></div> 
+      </div> 
+      <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+     </div> 
+     <div id="question-header"> 
+      <h1 itemprop="name"><a href="/questions/318245/why-would-the-final-keyword-ever-be-useful" class="question-hyperlink">Why would the 'final' keyword ever be useful?</a></h1> 
+     </div> 
+     <div id="mainbar"> 
+      <div class="question" data-questionid="318245" id="question"> 
+       <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1459233777",4).enableDynamicSiteSelection().setZone(29); });
+            </script> 
+       <div class="everyonelovesstackoverflow" id="adzerk1459233777"> 
+       </div> 
+       <table> 
+        <tbody>
+         <tr> 
+          <td class="votecell"> 
+           <div class="vote"> 
+            <input type="hidden" name="_id_" value="318245"> 
+            <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a> 
+            <span itemprop="upvoteCount" class="vote-count-post ">33</span> 
+            <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a> 
+            <a class="star-off" href="#">favorite</a> 
+            <div class="favoritecount">
+             <b>10</b>
+            </div> 
+           </div> </td> 
+          <td class="postcell"> 
+           <div> 
+            <div class="post-text" itemprop="text"> 
+             <p>It seems Java has had the power to declare classes not-derivable for ages, and now C++ has it too. However, in the light of the Open/Close principle in SOLID, why would that be useful? To me, the <code>final</code> keyword sounds just like <code>friend</code> - it is legal, but if you are using it, most probably the design is wrong. Please provide some examples where a non-derivable class would be a part of a great architecture or design pattern.</p> 
+            </div> 
+            <div class="post-taglist"> 
+             <a href="/questions/tagged/solid" class="post-tag" title="show questions tagged 'solid'" rel="tag">solid</a> 
+             <a href="/questions/tagged/c%2b%2b11" class="post-tag" title="show questions tagged 'c++11'" rel="tag">c++11</a> 
+             <a href="/questions/tagged/final" class="post-tag" title="show questions tagged 'final'" rel="tag">final</a> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/q/318245" title="short permalink to this question" class="short-link" id="link-post-318245">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318245/edit" class="suggest-edit-post" title="">improve this question</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/318245/revisions" title="show all edits to this post">edited <span title="2016-05-12 11:38:59Z" class="relativetime">2 days ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/26633/david-hammen">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/sju2a.jpg?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/26633/david-hammen">David Hammen</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">4,684</span>
+                   <span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span>
+                   <span title="25 bronze badges"><span class="badge3"></span><span class="badgecount">25</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td class="post-signature owner"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   asked 
+                  <span title="2016-05-12 08:33:21Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/54268/vorac">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/065408758852145010d28c2aa811ca68?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/54268/vorac">Vorac</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">2,159</span>
+                   <span title="16 silver badges"><span class="badge2"></span><span class="badgecount">16</span></span>
+                   <span title="39 bronze badges"><span class="badge3"></span><span class="badgecount">39</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> 
+           </div> </td> 
+         </tr> 
+         <tr> 
+          <td class="votecell"></td> 
+          <td> 
+           <div id="comments-318245" class="comments "> 
+            <table> 
+             <tbody data-remaining-comments-count="14" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+              <tr id="comment-674787" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="supernova">30</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Why do you think a class is wrongly designed if it's annotated with <code>final</code> ? Many people (including me) find that it's a good design to make every non-abstract class <code>final</code>.</span> –&nbsp;
+                 <a href="/users/189221/spotted" title="599 reputation" class="comment-user">Spotted</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 08:39:24Z" class="relativetime-clean">2 days ago</span></span> 
+                 <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-674795" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">13</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Favour composition over inheritance and you can have every non abstract class <code>final</code>.</span> –&nbsp;
+                 <a href="/users/193669/david-packer" title="2,524 reputation" class="comment-user">David Packer</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 08:59:41Z" class="relativetime-clean">2 days ago</span></span> 
+                 <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-674829" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">13</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">The open/close principle is in a sense an anachronism from the 20th century, when the mantra was to make a hierarchy of classes that inherited from classes that in turn inherited from other classes. This was nice for teaching object oriented programming but it turned out to create tangled, unmaintainable messes when applied to real-world problems. Designing a class to be extensible is hard.</span> –&nbsp;
+                 <a href="/users/26633/david-hammen" title="4,684 reputation" class="comment-user">David Hammen</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 11:50:24Z" class="relativetime-clean">2 days ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-674833" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="hot">26</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">@DavidArno Don't be ridiculous. Inheritance is the <i>sine qua non</i> of object-oriented programming, and it's nowhere near as complicated or messy as certain overly-dogmatic individuals like to preach. It's a tool, like any other, and a good programmer knows how to use the right tool for the job.</span> –&nbsp;
+                 <a href="/users/935/mason-wheeler" title="60,792 reputation" class="comment-user">Mason Wheeler</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 12:14:11Z" class="relativetime-clean">2 days ago</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-674910" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="supernova">35</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">As a recovering developer, I seem to recall final being a brilliant tool for preventing harmful behavior from entering critical sections. I also seem to recall inheritance being a powerful tool in a variety of ways. It's almost as if <i>gasp</i> different tools have pros and cons and we as engineers have to balance those factors as we produce our software!</span> –&nbsp;
+                 <a href="/users/17799/corsika" title="726 reputation" class="comment-user">corsiKa</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 15:17:15Z" class="relativetime-clean">2 days ago</span></span> 
+                </div> </td> 
+              </tr> 
+             </tbody> 
+            </table> 
+           </div> 
+           <div id="comments-link-318245" data-rep="50" data-anon="true"> 
+            <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></a>
+            <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>14</b> more comments</a> 
+           </div> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <div id="answers"> 
+       <a name="tab-top"></a> 
+       <div id="answers-header"> 
+        <div class="subheader answers-subheader"> 
+         <h2> 9 Answers <span style="display:none;" itemprop="answerCount">9</span> </h2> 
+         <div> 
+          <div id="tabs"> 
+           <a href="/questions/318245/why-would-the-final-keyword-ever-be-useful?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active"> active</a> 
+           <a href="/questions/318245/why-would-the-final-keyword-ever-be-useful?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest"> oldest</a> 
+           <a class="youarehere" href="/questions/318245/why-would-the-final-keyword-ever-be-useful?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes"> votes</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <a name="318246"></a> 
+       <div id="answer-318246" class="answer" data-answerid="318246" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318246"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">93</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p><code>final</code> <strong>expresses intent</strong>. It tells the user of a class, method or variable "This element is not supposed to change, and if you want to change it, you haven't understood the existing design." </p> 
+             <p>This is important because program architecture would be really, really hard if you had to anticipate that <em>every class and every method</em> you ever write might be changed to do something completely different by a subclass. It is much better to decide up-front which elements are supposed to be changeable and which aren't, and to enforce the unchangeablility via <code>final</code>. </p> 
+             <p>You could also do this via comments and architecture documents, but it is always better to let the compiler enforce things that it can than to hope that future users will read and obey the documentation. </p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318246" title="short permalink to this answer" class="short-link" id="link-post-318246">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318246/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 08:48:40Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/7422/kilian-foth">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/fbf2421aadfca785f0c591afe75197f1?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/7422/kilian-foth">Kilian Foth</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 61,027" dir="ltr">61k</span>
+                   <span title="17 gold badges"><span class="badge1"></span><span class="badgecount">17</span></span>
+                   <span title="165 silver badges"><span class="badge2"></span><span class="badgecount">165</span></span>
+                   <span title="201 bronze badges"><span class="badge3"></span><span class="badgecount">201</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318246" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="15" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-674819" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">12</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">So would I. But anyone who's ever written a widely reused base class (like a framework or media library) knows better than to expect application programmers to behave in a sane way. They'll subvert, misuse and distort your invention in ways you hadn't even <i>thought</i> were possible unless you lock it down with an iron grip.</span> –&nbsp;
+                  <a href="/users/7422/kilian-foth" title="61,027 reputation" class="comment-user">Kilian Foth</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 11:20:31Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-674831" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">5</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@KilianFoth Ok, but honestly, how is that your problem what application programmers do?</span> –&nbsp;
+                  <a href="/users/33157/coredump" title="4,070 reputation" class="comment-user">coredump</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 11:53:34Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-674832" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">14</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@coredump People using my library badly create bad systems. Bad systems breed bad reputations. Users will not be able to distinguish Kilian's great code from Fred Random's monstrously unstable app. Result: I lose out in programming creds and customers. Making your code hard to misuse is a question of dollars and cents.</span> –&nbsp;
+                  <a href="/users/7422/kilian-foth" title="61,027 reputation" class="comment-user">Kilian Foth</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 11:57:58Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-674870" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="hot">15</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">The statement "This element is not supposed to change, and if you want to change it, you haven't understood the existing design." is incredibly arrogant and not the attitude I would want as part of any library I worked with. If only I had a dime for every time some ridiculously over-encapsulated library left me with no mechanism to change some piece of inner state that <i>needs to be changed</i> because the author failed to anticipate an important use case...</span> –&nbsp;
+                  <a href="/users/935/mason-wheeler" title="60,792 reputation" class="comment-user">Mason Wheeler</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 13:47:32Z" class="relativetime-clean">2 days ago</span></span> 
+                  <span class="edited-yes" title="this comment was edited 2 times"></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-674908" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="hot">23</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@JimmyB Rule of thumb: <b>If you think you know what your creation will be used for, you're wrong already.</b> Bell conceived of the telephone as essentially a Muzak system. Kleenex was invented for the purpose of more conveniently removing makeup. Thomas Watson, president of IBM, once said "I think there is a world market for maybe five computers." Representative Jim Sensenbrenner, who introduced the PATRIOT Act in 2001, is on the record as saying that it was specifically intended to <i>prevent</i> the NSA from doing things they're doing "with PATRIOT act authority." And so on...</span> –&nbsp;
+                  <a href="/users/935/mason-wheeler" title="60,792 reputation" class="comment-user">Mason Wheeler</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 15:08:50Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318246" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>15</b> more comments</a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk1281003207",4).enableDynamicSiteSelection().setZone(30); });
+            </script> 
+       <div class="everyonelovesstackoverflow" id="adzerk1281003207"> 
+       </div> 
+       <a name="318253"></a> 
+       <div id="answer-318253" class="answer" data-answerid="318253" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318253"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">40</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>It avoids the <a href="https://en.wikipedia.org/wiki/Fragile_base_class"><em>Fragile Base Class Problem</em></a>. Every class comes with a set of implicit or explicit guarantees and invariants. The Liskov Substitution Principle mandates that all subtypes of that class must also provide all these guarantees. However, it is really easy to violate this if we don't use <code>final</code>. For example, let's have a password checker:</p> 
+             <pre><code>public class PasswordChecker {
+  public boolean passwordIsOk(String password) {
+    return password == "s3cret";
+  }
+}
+</code></pre> 
+             <p>If we allow that class to be overridden, one implementation could lock out everyone, another might give everyone access:</p> 
+             <pre><code>public class OpenDoor extends PasswordChecker {
+  public boolean passwordIsOk(String password) {
+    return true;
+  }
+}
+</code></pre> 
+             <p>This is usually not OK, since the subclasses now have behaviour that is very incompatible to the original. If we really intend the class to be extended with other behaviour, a Chain of Responsibility would be better:</p> 
+             <pre><code>PasswordChecker passwordChecker =
+  new DefaultPasswordChecker(null);
+// or:
+PasswordChecker passwordChecker =
+  new OpenDoor(null);
+// or:
+PasswordChecker passwordChecker =
+ new DefaultPasswordChecker(
+   new OpenDoor(null)
+ );
+
+public interface PasswordChecker {
+  boolean passwordIsOk(String password);
+}
+
+public final class DefaultPasswordChecker implements PasswordChecker {
+  private PasswordChecker next;
+
+  public DefaultPasswordChecker(PasswordChecker next) {
+    this.next = next;
+  }
+
+  @Override
+  public boolean passwordIsOk(String password) {
+    if ("s3cret".equals(password)) return true;
+    if (next != null) return next.passwordIsOk(password);
+    return false;
+  }
+}
+
+public final class OpenDoor implements PasswordChecker {
+  private PasswordChecker next;
+
+  public OpenDoor(PasswordChecker next) {
+    this.next = next;
+  }
+
+  @Override
+  public boolean passwordIsOk(String password) {
+    return true;
+  }
+}
+</code></pre> 
+             <p>The problem becomes more apparent when more a complicated class calls its own methods, and those methods can be overridden. I sometimes encounter this when pretty-printing a data structure or writing HTML. Each method is responsible for some widget.</p> 
+             <pre><code>public class Page {
+  ...;
+
+  @Override
+  public String toString() {
+    PrintWriter out = ...;
+    out.print("&lt;!DOCTYPE html&gt;");
+    out.print("&lt;html&gt;");
+
+    out.print("&lt;head&gt;");
+    out.print("&lt;/head&gt;");
+
+    out.print("&lt;body&gt;");
+    writeHeader(out);
+    writeMainContent(out);
+    writeMainFooter(out);
+    out.print("&lt;/body&gt;");
+
+    out.print("&lt;/html&gt;");
+    ...
+  }
+
+  void writeMainContent(PrintWriter out) {
+    out.print("&lt;div class='article'&gt;");
+    out.print(htmlEscapedContent);
+    out.print("&lt;/div&gt;");
+  }
+
+  ...
+}
+</code></pre> 
+             <p>I now create a subclass that adds a bit more styling:</p> 
+             <pre><code>class SpiffyPage extends Page {
+  ...;
+
+
+  @Override
+  void writeMainContent(PrintWriter out) {
+    out.print("&lt;div class='row'&gt;");
+
+    out.print("&lt;div class='col-md-8'&gt;");
+    super.writeMainContent(out);
+    out.print("&lt;/div&gt;");
+
+    out.print("&lt;div class='col-md-4'&gt;");
+    out.print("&lt;h4&gt;About the Author&lt;/h4&gt;");
+    out.print(htmlEscapedAuthorInfo);
+    out.print("&lt;/div&gt;");
+
+    out.print("&lt;/div&gt;");
+  }
+}
+</code></pre> 
+             <p>Now ignoring for a moment that this is not a very good way to generate HTML pages, what happens if I want to change the layout yet again? I'd have to create a <code>SpiffyPage</code> subclass that somehow wraps that content. What we can see here is an <em>accidental</em> application of the template method pattern. Template methods are well-defined extension points in a base class that are intended to be overridden.</p> 
+             <p>And what happens if the base class changes? If the HTML contents change too much, this could break the layout provided by the subclasses. It is therefore not really safe to change the base class afterwards. This is not apparent if all your classes are in the same project, but very noticeable if the base class is part of some published software that other people build upon.</p> 
+             <p>If this extension strategy was intended, we could have allowed the user to swap out the way how each part is generated. Either, there could be a Strategy for each block that can be provided externally. Or, we could nest Decorators. This would be equivalent to the above code, but far more explicit and far more flexible:</p> 
+             <pre><code>Page page = ...;
+page.decorateLayout(current -&gt; new SpiffyPageDecorator(current));
+print(page.toString());
+
+public interface PageLayout {
+  void writePage(PrintWriter out, PageLayout top);
+  void writeMainContent(PrintWriter out, PageLayout top);
+  ...
+}
+
+public final class Page {
+  private PageLayout layout = new DefaultPageLayout();
+
+  public void decorateLayout(Function&lt;PageLayout, PageLayout&gt; wrapper) {
+    layout = wrapper.apply(layout);
+  }
+
+  ...
+  @Override public String toString() {
+    PrintWriter out = ...;
+    layout.writePage(out, layout);
+    ...
+  }
+}
+
+public final class DefaultPageLayout implements PageLayout {
+  @Override public void writeLayout(PrintWriter out, PageLayout top) {
+    out.print("&lt;!DOCTYPE html&gt;");
+    out.print("&lt;html&gt;");
+
+    out.print("&lt;head&gt;");
+    out.print("&lt;/head&gt;");
+
+    out.print("&lt;body&gt;");
+    top.writeHeader(out, top);
+    top.writeMainContent(out, top);
+    top.writeMainFooter(out, top);
+    out.print("&lt;/body&gt;");
+
+    out.print("&lt;/html&gt;");
+  }
+
+  @Override public void writeMainContent(PrintWriter out, PageLayout top) {
+    ... /* as above*/
+  }
+}
+
+public final class SpiffyPageDecorator implements PageLayout {
+  private PageLayout inner;
+
+  public SpiffyPageDecorator(PageLayout inner) {
+    this.inner = inner;
+  }
+
+  @Override
+  void writePage(PrintWriter out, PageLayout top) {
+    inner.writePage(out, top);
+  }
+
+  @Override
+  void writeMainContent(PrintWriter out, PageLayout top) {
+    ...
+    inner.writeMainContent(out, top);
+    ...
+  }
+}
+</code></pre> 
+             <p>(The additional <code>top</code> parameter is necessary to make sure that the calls to <code>writeMainContent</code> go through the top of the decorator chain. This emulates a feature of subclassing called <em>open recursion</em>.)</p> 
+             <p>If we have multiple decorators, we can now mix them more freely.</p> 
+             <p>Far more often than the desire to slightly adapt existing functionality is the desire to reuse some part of an existing class. I have seen a case where someone wanted a class where you could add items and iterate over all of them. The correct solution would have been to:</p> 
+             <pre><code>final class Thingies implements Iterable&lt;Thing&gt; {
+  private ArrayList&lt;Thing&gt; thingList = new ArrayList&lt;&gt;();
+
+  @Override public Iterator&lt;Thing&gt; iterator() {
+    return thingList.iterator();
+  }
+
+  public void add(Thing thing) {
+    thingList.add(thing);
+  }
+
+  ... // custom methods
+}
+</code></pre> 
+             <p>Instead, they created a subclass:</p> 
+             <pre><code>class Thingies extends ArrayList&lt;Thing&gt; {
+  ... // custom methods
+}
+</code></pre> 
+             <p>This suddenly means that the whole interface of <code>ArrayList</code> has become part of <em>our</em> interface. Users can <code>remove()</code> things, or <code>get()</code> things at specific indices. This was intended that way? OK. But often, we don't carefully think through all consequences.</p> 
+             <p>It is therefore advisable to</p> 
+             <ul> 
+              <li>never <code>extend</code> a class without careful thought.</li> 
+              <li>always mark your classes as <code>final</code> except if you intend for any method to be overridden.</li> 
+              <li>create interfaces where you want to swap out an implementation, e.g. for unit testing.</li> 
+             </ul> 
+             <p>There are many examples where this “rule” has to be broken, but it usually guides you to a good, flexible design, and avoids bugs due to unintended changes in base classes (or unintended uses of the subclass as an instance of the base class).</p> 
+             <p>Some languages have stricter enforcement mechanisms:</p> 
+             <ul> 
+              <li>All methods are final by default and have to be marked explicitly as <code>virtual</code></li> 
+              <li>They provide private inheritance that doesn't inherit the interface but only the implementation.</li> 
+              <li>They require base class methods to be marked as virtual, and require all overrides to be marked as well. This avoids problems where a subclass defined a new method, but a method with the same signature was later added to the base class but not intended as virtual.</li> 
+             </ul> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318253" title="short permalink to this answer" class="short-link" id="link-post-318253">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318253/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 10:30:38Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/60357/amon">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/MH7pk.png?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/60357/amon">amon</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 33,627" dir="ltr">33.6k</span>
+                   <span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span>
+                   <span title="67 silver badges"><span class="badge2"></span><span class="badgecount">67</span></span>
+                   <span title="109 bronze badges"><span class="badge3"></span><span class="badgecount">109</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318253" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-674828" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">You deserve at least +100 for mentioning the "fragile base class problem". :)</span> –&nbsp;
+                  <a href="/users/105684/david-arno" title="3,765 reputation" class="comment-user">David Arno</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 11:40:11Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-674978" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">5</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">I'm not convinced by the points made here. Yes, the fragile base class is a problem, but final does not solve all the issues with changing an implementation. Your first example is bad because you are assuming you know all the possible use-cases for the PasswordChecker ("locking everyone out or allowing everyone access... is not OK" - says who?). Your last "therefore advisable..." list is really bad - you are basically advocating not extending anything and marking everything as final - which completely obliterates the usefulness of OOP, inheritance and code-reuse.</span> –&nbsp;
+                  <a href="/users/45176/adelphus" title="101 reputation" class="comment-user">adelphus</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 17:00:10Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-675069" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Your first example isn't an example of the fragile base class problem. In the fragile base class problem, changes to a base class break a subclass. But in that example, your subclass doesn't follow the contract of a subclass. These are two different problems. (Additionally, it actually reasonable that under certain circumstances, you might disable a password checker (say for development))</span> –&nbsp;
+                  <a href="/users/1343/winston-ewert" title="14,994 reputation" class="comment-user">Winston Ewert</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 23:05:36Z" class="relativetime-clean">yesterday</span></span> 
+                  <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-675082" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">"It avoids the fragile base class problem" - in the same way that killing yourself avoids being hungry.</span> –&nbsp;
+                  <a href="/users/115557/immibis" title="464 reputation" class="comment-user">immibis</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 23:51:58Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-675097" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">7</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@immibis, its more like avoiding eating to avoid getting food poisioning. Sure, never eating would be a problem. But eating only in those places that you trust makes a lot of sense.</span> –&nbsp;
+                  <a href="/users/1343/winston-ewert" title="14,994 reputation" class="comment-user">Winston Ewert</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 03:33:55Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318253" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>1</b> more comment</a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="318314"></a> 
+       <div id="answer-318314" class="answer" data-answerid="318314" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318314"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">18</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>I'm surprised that no one has yet mentioned <em>Effective Java, 2nd Edition</em> by Joshua Bloch (which should be required reading for every Java developer at least). Item 17 in the book discusses this in detail, and is titled: "<strong>Design and document for inheritance or else prohibit it</strong>".</p> 
+             <p>I won't repeat all the good advice in the book, but these particular paragraphs seem relevant:</p> 
+             <blockquote> 
+              <p>But what about ordinary concrete classes? Traditionally, they are neither final nor designed and documented for subclassing, but this state of affairs is dangerous. Each time a change is made in such a class, there is a chance that client classes that extend the class will break. This is not just a theoretical problem. It is not uncommon to receive subclassing-related bug reports after modifying the internals of a nonfinal concrete class that was not designed and documented for inheritance.</p> 
+              <p><strong>The best solution to this problem is to prohibit subclassing in classes that are not designed and documented to be safely subclassed.</strong> There are two ways to prohibit subclassing. The easier of the two is to declare the class final. The alternative is to make all the constructors private or package-private and to add public <em>static</em> factories in place of the constructors. This alternative, which provides the flexibility to use subclasses internally, is discussed in Item 15. Either approach is acceptable.</p> 
+             </blockquote> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318314" title="short permalink to this answer" class="short-link" id="link-post-318314">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318314/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 18:57:28Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/5433/daniel-pryden">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/22b05e50077230ba919b240af4bc13cd?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/5433/daniel-pryden">Daniel Pryden</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">1,205</span>
+                   <span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span>
+                   <span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318314" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318314" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="318250"></a> 
+       <div id="answer-318250" class="answer" data-answerid="318250" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318250"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">16</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>One of the reasons <code>final</code> is useful is that it makes sure you cannot subclass a class in a way which would violate the parent class's contract. Such subclassing would be a violation of SOLID (most of all "L") and making a class <code>final</code> prevents it.</p> 
+             <p>One typical example is making it impossible to subclass an immutable class in a way which would make the subclass mutable. In certain cases such a change of behavior could lead to very surprising effects, for example when you use something as keys in a map thinking the key is immutable while in reality you are using a subclass which is mutable.</p> 
+             <p>In Java, a lot of interesting security issues could be introduced if you were able to subclass <code>String</code> and make it mutable (or made it call back home when someone calls its methods, thus possibly pulling sensitive data out of the system) as these objects are passed around some internal code related to class loading and security.</p> 
+             <p>Final is also sometimes helpful in preventing simple mistakes such as re-using the same variable for two things within a method, etc. In Scala, you are encouraged to use only <code>val</code> which roughly corresponds to final variables in Java, and actually any use of a <code>var</code> or non-final variable is looked at with suspicion.</p> 
+             <p>Finally, compilers can, at least in theory, perform some extra optimizations when they know that a class or method is final, since when you call a method on a final class you know exactly which method will be called and don't have to go through virtual method table to check inheritance.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318250" title="short permalink to this answer" class="short-link" id="link-post-318250">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318250/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/318250/revisions" title="show all edits to this post">edited <span title="2016-05-12 09:45:35Z" class="relativetime">2 days ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/193669/david-packer">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/q2bl9.png?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/193669/david-packer">David Packer</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">2,524</span>
+                   <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span>
+                   <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span>
+                   <span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 09:43:23Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/95012/micha%c5%82-kosmulski">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/37abd8e795d38851b4b3c29696962e11?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/95012/micha%c5%82-kosmulski">Michał Kosmulski</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">803</span>
+                   <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span>
+                   <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318250" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="3" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-674830" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">3</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy"><i>Finally, compilers can, at least in theory</i> =&gt; I've personally reviewed Clang's devirtualization pass, and I confirm it's used in practice.</span> –&nbsp;
+                  <a href="/users/4853/matthieu-m" title="7,093 reputation" class="comment-user">Matthieu M.</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 11:51:09Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-674840" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">But can't the compiler tell in advance that nobody's overriding a class or method regardless of whether or not its marked final?</span> –&nbsp;
+                  <a href="/users/95881/jessetg" title="297 reputation" class="comment-user">JesseTG</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 12:37:04Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-674858" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@JesseTG If it has access to all the code at once, probably. What about separate file compilation, though?</span> –&nbsp;
+                  <a href="/users/109526/angew" title="113 reputation" class="comment-user">Angew</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 13:27:12Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-674861" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@JesseTG devirtualization or (monomorphic/polymorphic) inline caching is a common technique in JIT compilers, since the system knows which classes are currently loaded, and can deoptimize the code if the assumption of no overriding methods turn out to be false. However, an ahead of time compiler cannot. When I compile one Java class and code that uses that class, I can later compile a subclass and pass an instance to the consuming code. The simplest way is to add another jar to the front of the classpath. The compiler can't know about all of that, since this happens at run time.</span> –&nbsp;
+                  <a href="/users/60357/amon" title="33,627 reputation" class="comment-user">amon</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 13:31:33Z" class="relativetime-clean">2 days ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-675090" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@MTilsted You <i>can assume</i> that strings are immutable as mutating strings via reflection can be prohibited via a <code>SecurityManager</code>. Most programs don't use it, but they also don't run any non-trusted code. +++ You <i>have to assume</i> that strings are immutable as otherwise you get zero security and a bunch of arbitrary bugs as bonus. Any programmer assuming Java strings can change in productive code is surely insane.</span> –&nbsp;
+                  <a href="/users/14167/maaartinus" title="1,364 reputation" class="comment-user">maaartinus</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 01:09:00Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318250" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>3</b> more comments</a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="318247"></a> 
+       <div id="answer-318247" class="answer" data-answerid="318247" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318247"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">6</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>The second reason is <a href="http://stackoverflow.com/questions/3961881/why-defining-class-as-final-improves-jvm-performance">performance </a>. The first reason is because some classes have important behaviors or states that are not supposed to be changed in order to allow the system to work. For example if i have a class "PasswordCheck" and to build that class i've hired a team of security experts and this class communicates with hundreds of ATMs with well studied and defined procols. Allow a new hired guy fresh out of university make a "TrustMePasswordCheck" class that extends the above class could be very harmful for my system; those methods are not supposed to be overridden, that's it. </p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318247" title="short permalink to this answer" class="short-link" id="link-post-318247">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318247/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/318247/revisions" title="show all edits to this post">edited <span title="2016-05-12 16:32:31Z" class="relativetime">2 days ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 09:06:26Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/203204/joulinrouge">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/e48a65d551e39a0a0522c1b1cdadec81?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/203204/joulinrouge">JoulinRouge</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">422</span>
+                   <span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318247" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-674955" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">bancomat = ATM: <a href="https://en.wikipedia.org/wiki/Cash_machine" rel="nofollow">en.wikipedia.org/wiki/Cash_machine</a></span> –&nbsp;
+                  <a href="/users/143720/tar" title="103 reputation" class="comment-user">tar</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 16:12:33Z" class="relativetime-clean">2 days ago</span></span> 
+                  <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-675083" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">The JVM is smart enough to treat classes as final if they have no subclasses, even if they're not declared final.</span> –&nbsp;
+                  <a href="/users/115557/immibis" title="464 reputation" class="comment-user">immibis</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 23:53:03Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318247" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="318344"></a> 
+       <div id="answer-318344" class="answer" data-answerid="318344" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318344"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">2</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Let's imagine that the SDK for a platform ships the following class:</p> 
+             <pre><code>class HTTPRequest {
+   void get(String url, String method = "GET");
+   void post(String url) {
+       get(url, "POST");
+   }
+}
+</code></pre> 
+             <p>An application subclasses this class:</p> 
+             <pre><code>class MyHTTPRequest extends HTTPRequest {
+    void get(String url, String method = "GET") {
+        requestCounter++;
+        super.get(url, method);
+    }
+}
+</code></pre> 
+             <p>All is fine and well, but someone working on the SDK decides that passing a method to <code>get</code> is silly, and makes the interface better making sure to enforce backwards compatibility.</p> 
+             <pre><code>class HTTPRequest {
+   @Deprecated
+   void get(String url, String method) {
+        request(url, method);
+   }
+
+   void get(String url) {
+       request(url, "GET");
+   }
+   void post(String url) {
+       request(url, "POST");
+   }
+
+   void request(String url, String method);
+}
+</code></pre> 
+             <p>Everything seems fine, until the application from above is recompiled with the new SDK. Suddenly, the overriden get method isn't being called anymore, and the request aren't being counted. </p> 
+             <p>This is called the fragile base class problem, because a seemingly innocous change results in a subclass breaking. Anytime change to which methods are called inside the class might cause a subclass to break. That tends mean that almost any change might cause a subclass to break.</p> 
+             <p>Final prevents anybody from subclassing your class. That way, which methods inside the class can be changed without worrying that somewhere someone depends on exactly which method calls are made.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318344" title="short permalink to this answer" class="short-link" id="link-post-318344">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318344/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 22:58:44Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/1343/winston-ewert">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/TDQGm.jpg?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/1343/winston-ewert">Winston Ewert</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 14,994" dir="ltr">15k</span>
+                   <span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span>
+                   <span title="46 silver badges"><span class="badge2"></span><span class="badgecount">46</span></span>
+                   <span title="77 bronze badges"><span class="badge3"></span><span class="badgecount">77</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318344" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318344" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="318293"></a> 
+       <div id="answer-318293" class="answer" data-answerid="318293" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318293"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">0</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>Final effectively means that your class is safe to change in the future without impacting any downstream inheritance based classes (because there are none), or any issues around thread safety of the class (I think there are cases where the final keyword on a field prevents some thread based high-jinx).</p> 
+             <p>Final means that you are free to change how your class works without any unintended changes in behavior creeping into other people's code that relies on yours as a base.</p> 
+             <p>As an example, I write a class called HobbitKiller, which is great, because all hobbits are tricksie and should probably die. Scratch that, they all definitely need to die.</p> 
+             <p>You use this as a base class and add in an awesome new method to use a flamethrower, but use my class as a base because I have a great method for targeting the hobbits (in addition to being tricksie, they're quick), which you use to help aim your flamethrower.</p> 
+             <p>Three months later I change the implementation of my targeting method. Now, at some future point when your upgrade your library, unbeknownst to you, your class's actual runtime implementation has fundamentally changed because of a change in the super class method you depend on (and generally do not control).</p> 
+             <p>So for me to be a conscientious developer, and ensure smooth hobbit death into to the future using my class, I have to be very, very careful with any changes that I make to any classes that can be extended.</p> 
+             <p>By removing the ability to extend except in cases where I am specifically intending to have the class extended, I save myself (and hopefully others) a lot of headaches.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318293" title="short permalink to this answer" class="short-link" id="link-post-318293">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318293/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 15:37:10Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/228185/scott-taylor">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/91a8994741533c0ec867631f4e824916?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/228185/scott-taylor">Scott Taylor</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">9</span>
+                   <span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318293" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-675261" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">If you targeting method is going to change why you ever made it public? And if you change the behaviour of a class significantly you need another version rather than overprotective <code>final</code></span> –&nbsp;
+                  <a href="/users/126772/m4ks" title="101 reputation" class="comment-user">M4ks</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 16:30:32Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318293" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="318295"></a> 
+       <div id="answer-318295" class="answer" data-answerid="318295" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318295"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">0</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>To me it's a matter of design.</p> 
+             <p>Let's suppose I have a program that calculates salaries for employees. If I have a class that returns number of working days between 2 dates based on the country (one class for each country), I will put that final, and provide a method for every enterprise to provide a free day only for their calendars.</p> 
+             <p>Why? Simple. Let's say a developer wants to inherit base class WorkingDaysUSA in a class WorkingDaysUSAmyCompany and modify it to reflect that his enterprise will be closed for strike/maintenance/whatever reason the 2nd of mars.</p> 
+             <p>The calculations for clients orders and delivery will reflect the delay and work accordingly when in runtime they call WorkingDaysUSAmyCompany.getWorkingDays(), but what happens when I calculate vacations time? Should I add the 2nd of mars as a holiday for everyone? No. But since the programmer used inheritance and I didn't protect the class this can lead to a confusion.</p> 
+             <p>Or let's say they inherit and modify the class to reflect that this company doesn't work Saturdays where in the country they work half time on Saturday. Then a earthquake, electricity crisis or some circumstance makes the president declare 3 non-working days like it happened recently on Venezuela. If the method of the inherited class already subtracted each Saturday, my modifications on the original class could lead to subtract the same day twice. I would have to go to each subclass on each client and verify all changes are compatible.</p> 
+             <p>Solution? Make the class final and provide a addFreeDay(companyID mycompany, Date freeDay) method. That way you are sure that when you call a WorkingDaysCountry class it's your main class and not a su</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318295" title="short permalink to this answer" class="short-link" id="link-post-318295">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318295/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 15:43:56Z" class="relativetime">2 days ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/228187/bns">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/17a63cc7e6f9990b2cd712e1d946aef2?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/228187/bns">bns</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318295" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318295" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="318375"></a> 
+       <div id="answer-318375" class="answer" data-answerid="318375" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="318375"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">0</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <p>When I need a class, I'll write a class. If I don't need subclasses, I don't care about subclasses. I make sure that my class behaves as intended, and the places where I use the class assume that the class behaves as intended. </p> 
+             <p>If anyone wants to subclass my class, I want to fully deny any responsibility for what happens. I achieve that by making the class "final". If you want to subclass it, remember that I didn't take subclassing into account while I wrote the class. So you have to take the class source code, remove the "final", and from then on anything that happens is <strong>fully your responsibility</strong>. </p> 
+             <p>You think that's "not object oriented"? I was paid to make a class that does what it's supposed to do. Nobody paid me for making a class that could be subclassed. If you get paid to make my class reusable, you are welcome to do it. Start by removing the "final" keyword. </p> 
+             <p>(Other than that, "final" often allows substantial optimisations. For example, in Swift "final" on a public class, or on a method of a public class, means that the compiler can fully know what code a method call will execute, and can replace dynamic dispatch with static dispatch (tiny benefit) and often replace static dispatch with inlining (possibly huge benefit)). </p> 
+             <p>adelphus: What is so hard to understand about "if you want to subclass it, take the source code, remove the 'final', and it's your responsibility"? "final" equals "fair warning". </p> 
+             <p>And I'm <em>not</em> paid to make reusable code. I am paid to write code that does what it's supposed to do. If I'm paid to make two similar bits of code, I extract the common parts because that's cheaper and I'm not paid to waste my time. Making code reusable that isn't reused is a waste of my time. </p> 
+             <p>M4ks: You <em>always</em> make everything private that isn't supposed to be accessed from the outside. Again, if you want to subclass, you take the source code, change things to "protected" if you need, and take responsibility for what you do. If you think you need to access things that I marked private, you better know what you are doing. </p> 
+             <p>Both: Subclassing is a tiny, tiny portion of reusing code. Creating building blocks that can be adapted without subclassing is much more powerful and hugely benefits from "final" because the users of the blocks can rely on what they get. </p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/318375" title="short permalink to this answer" class="short-link" id="link-post-318375">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/318375/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/318375/revisions" title="show all edits to this post">edited <span title="2016-05-13 20:09:11Z" class="relativetime">20 hours ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 08:49:10Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/123788/gnasher729">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/5993e7ece129141878cd6419d39cc26e?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/123788/gnasher729">gnasher729</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">6,457</span>
+                   <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span>
+                   <span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span>
+                   <span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-318375" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-675208" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">-1 This answer describes everything that is wrong with software developers. If someone wants to reuse your class by subclassing, let them. Why would it be your responsibility how they use (or abuse) it? Basically, you're using <b>final</b> as a f<i>k you, you're not using my class. *"Nobody paid me for making a class that could be subclassed"</i>. Are you serious? That's exactly why software engineers are employed - to create solid, reusable code.</span> –&nbsp;
+                  <a href="/users/45176/adelphus" title="101 reputation" class="comment-user">adelphus</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 13:20:51Z" class="relativetime-clean">yesterday</span></span> 
+                  <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-675262" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">3</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">-1 Just make everything private, so nobody will every even think of subclassing..</span> –&nbsp;
+                  <a href="/users/126772/m4ks" title="101 reputation" class="comment-user">M4ks</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 16:32:29Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-675290" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@adelphus While the wording of this answer is blunt, bordering on harsh, it isn't a "wrong" point of view. In fact it's the same point of view as the majority of answers on this question so far only with a less clinical tone.</span> –&nbsp;
+                  <a href="/users/65710/nemesisx00" title="101 reputation" class="comment-user">NemesisX00</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 17:28:21Z" class="relativetime-clean">23 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-318375" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <div class="question-status"> 
+        <h2> <b>protected</b> by <a href="/users/-1/community">Community</a><span class="mod-flair" title="moderator">♦</span> <span dir="ltr"><span title="2016-05-12 21:46:45Z" class="relativetime">yesterday</span></span> </h2> 
+        <p> Thank you for your interest in this question. Because it has attracted low-quality or spam answers that had to be removed, posting an answer now requires 10 <a href="/help/whats-reputation">reputation</a> on this site. <br><br> Would you like to answer one of these <a href="/unanswered?fromProtectedNotice=true">unanswered questions</a> instead? </p> 
+       </div> 
+       <h2 class="bottom-notice" data-loc="1"> Not the answer you're looking for? Browse other questions tagged <a href="/questions/tagged/solid" class="post-tag" title="show questions tagged 'solid'" rel="tag">solid</a> <a href="/questions/tagged/c%2b%2b11" class="post-tag" title="show questions tagged 'c++11'" rel="tag">c++11</a> <a href="/questions/tagged/final" class="post-tag" title="show questions tagged 'final'" rel="tag">final</a> or <a href="/questions/ask">ask your own question</a>. </h2> 
+      </div> 
+     </div> 
+     <div id="sidebar" class="show-votes"> 
+      <div class="module question-stats"> 
+       <table id="qinfo"> 
+        <tbody>
+         <tr> 
+          <td> <p class="label-key">asked</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key" title="2016-05-12 08:33:21Z"><b>2 days ago</b></p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">viewed</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"> <b>7774 times</b> </p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">active</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2016-05-13 20:09:11Z">today</a></b></p> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,0,"adzerk713639762",[5,17]).enableDynamicSiteSelection().setZone(56016); });
+            </script> 
+      <div class="everyonelovesstackoverflow" id="adzerk713639762"> 
+      </div> 
+      <div class="module sidebar-linked"> 
+       <h4 id="h-linked">Linked</h4> 
+       <div class="linked" data-tracker="lq=1"> 
+        <div class="spacer"> 
+         <a href="/q/98691" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           55
+          </div> </a> 
+         <a href="/questions/98691/excessive-use-final-keyword-in-java" class="question-hyperlink">Excessive use “final” keyword in Java</a> 
+        </div>
+        <div class="spacer"> 
+         <a href="/q/108349" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           14
+          </div> </a> 
+         <a href="/questions/108349/why-is-the-final-keyword-used-so-little-in-the-industry" class="question-hyperlink">Why is the 'final' keyword used so little in the industry?</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="module sidebar-related"> 
+       <h4 id="h-related">Related</h4> 
+       <div class="related js-gps-related-questions" data-tracker="rq=1"> 
+        <div class="spacer"> 
+         <a href="/q/89073" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           20 
+          </div> </a>
+         <a href="/questions/89073/why-is-using-final-on-a-class-really-so-bad" class="question-hyperlink">Why is using 'final' on a class really so bad?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/98691" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           55 
+          </div> </a>
+         <a href="/questions/98691/excessive-use-final-keyword-in-java" class="question-hyperlink">Excessive use “final” keyword in Java</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/108349" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           14 
+          </div> </a>
+         <a href="/questions/108349/why-is-the-final-keyword-used-so-little-in-the-industry" class="question-hyperlink">Why is the 'final' keyword used so little in the industry?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/115690" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           54 
+          </div> </a>
+         <a href="/questions/115690/why-declare-final-variables-inside-methods" class="question-hyperlink">Why declare final variables inside methods?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/186284" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           5 
+          </div> </a>
+         <a href="/questions/186284/declaring-functions-as-final-except-when-it-is-me-who-does-the-deriving" class="question-hyperlink">Declaring functions as final… except when it is me who does the deriving</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/199783" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           3 
+          </div> </a>
+         <a href="/questions/199783/java-how-to-make-local-fields-parameters-final-without-having-a-final-keywo" class="question-hyperlink">Java: How to make local fields &amp; parameters final without having a 'final' keyword on each declaration</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/250804" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           5 
+          </div> </a>
+         <a href="/questions/250804/why-to-declare-a-string-as-final-and-then-use-it" class="question-hyperlink">Why to declare a String (as final) and then use it?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/284156" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           16 
+          </div> </a>
+         <a href="/questions/284156/declaring-a-class-final" class="question-hyperlink">Declaring a class final?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/287029" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           0 
+          </div> </a>
+         <a href="/questions/287029/why-class-string-definition-has-final-modifier" class="question-hyperlink">Why 'class String' definition has 'final' modifier?</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/288386" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           3 
+          </div> </a>
+         <a href="/questions/288386/java-using-final-keyword-only-on-method-parameters-that-expect-immutable-object" class="question-hyperlink">Java: using final keyword only on method parameters that expect immutable objects?</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="hot-network-questions" class="module"> 
+       <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })"> Hot Network Questions </a> </h4> 
+       <ul> 
+        <li> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/122922/discouraging-users-from-copying-images-off-a-website" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> Discouraging users from copying images off a website? </a> </li> 
+        <li> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123179/should-i-hash-my-passwords-even-if-i-am-only-allowed-to-generate-limited-traffic" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> Should I hash my passwords even if I am only allowed to generate limited traffic? </a> </li> 
+        <li> 
+         <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127921/why-was-hitchhikers-guide-censored" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })"> Why was Hitchhiker's Guide censored? </a> </li> 
+        <li> 
+         <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/234188/irfz44n-power-mosfet-gets-hot-while-driving-peltier-by-step-down-buck-voltage-co" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })"> IRFZ44N power MOSFET gets hot while driving Peltier by step-down buck voltage converter </a> </li> 
+        <li> 
+         <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/79762/zeroes-at-the-end-of-a-factorial" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })"> Zeroes at the end of a factorial </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67112/how-can-i-help-my-direct-report-to-understand-he-is-not-being-micromanaged" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })"> How can I help my direct report to understand he is not being micromanaged? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/265578/does-nzoth-the-corruptor-invoke-minions-in-a-specific-order" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })"> Does N'Zoth the corruptor invoke minions in a specific order? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-bicycles" title="Bicycles Stack Exchange"></div><a href="http://bicycles.stackexchange.com/questions/38929/removing-a-rear-wheel-of-a-town-bike" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:126 }); posts_hot_network.click({ item_type:2, location:11 })"> Removing a rear wheel of a town bike </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318395/are-so-called-cross-cutting-concerns-a-valid-excuse-to-break-solid-di-ioc" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })"> Are so called "cross-cutting concerns" a valid excuse to break SOLID/DI/IoC? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784875/about-the-derivative-of-a-function-defined-on-rational-numbers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> About the derivative of a function defined on rational numbers </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-diy" title="Home Improvement Stack Exchange"></div><a href="http://diy.stackexchange.com/questions/90392/if-metal-expands-when-heated-how-does-heating-a-bolt-loosen-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:73 }); posts_hot_network.click({ item_type:2, location:11 })"> If metal expands when heated, how does heating a bolt loosen it? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68541/what-happens-if-a-math-phd-student-fails-to-find-a-proof-that-is-the-main-object" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })"> What happens if a math PhD student fails to find a proof that is the main objective of his/her thesis topic? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784962/why-the-existence-of-taylor-series-doesnt-imply-it-coverges-to-the-original-fun" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> Why the existence of taylor series doesn't imply it coverges to the original function </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123045/is-it-acceptable-practice-to-only-increment-a-number-when-changing-a-password" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> Is it acceptable practice to only increment a number when changing a password? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67080/office-temperature" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })"> Office Temperature </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/115118/ui-characteristic-function" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })"> UI characteristic function </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-mechanics" title="Motor Vehicle Maintenance &amp; Repair Stack Exchange"></div><a href="http://mechanics.stackexchange.com/questions/29637/50-50-coolant-dilution-after-distilled-water-flush" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:224 }); posts_hot_network.click({ item_type:2, location:11 })"> 50/50 Coolant Dilution after distilled water flush? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/1075989/how-do-i-determine-if-my-system-is-windows-10-using-the-command-line" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })"> How do I determine if my system is Windows 10 using the command line? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67087/product-owner-demands-new-features-while-sprint-has-started" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })"> Product owner demands new features while sprint has started </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/283143/google-chrome-browser" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })"> Google Chrome Browser </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-mechanics" title="Motor Vehicle Maintenance &amp; Repair Stack Exchange"></div><a href="http://mechanics.stackexchange.com/questions/29642/how-do-i-roll-my-4x4-vehicle-back-onto-its-wheels" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:224 }); posts_hot_network.click({ item_type:2, location:11 })"> How do I roll my 4x4 vehicle back onto its wheels? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80037/is-making-characters-who-go-off-the-rails-unlucky-a-good-technique-for-keeping-t" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })"> Is making characters who go off the rails unlucky a good technique for keeping the plot moving? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325617/the-last-small-thing-that-messes-up-all-the-previous-effort" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })"> the last small thing that messes up all the (previous) effort </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/32578/im-friendly-with-sin" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })"> I'm friendly with sin </a> </li> 
+       </ul> 
+       <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })"> more hot questions </a> 
+      </div> 
+     </div> 
+     <div id="feed-link"> 
+      <div id="feed-link-text"> 
+       <a href="/feeds/question/318245" title="feed of this question and its answers"> <span class="feed-icon"></span>question feed </a> 
+      </div> 
+     </div> 
+     <script>
+StackExchange.ready(function(){$.get('/posts/318245/ivc/2d0b');});
+</script> 
+     <noscript> 
+      <div>
+       <img src="/posts/318245/ivc/2d0b" class="dno" alt="" width="0" height="0">
+      </div> 
+     </noscript>
+     <div style="display:none" id="prettify-lang">
+      lang-cpp
+     </div>
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://programmers.blogoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.programmers.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3573 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Programmers Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+  <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('solid,c%2b%2b11,final,x-community,x-host-programmers.stackexchange.com');; ados_load();
+        });   
+        
+</script> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('set', 'dimension2', '|solid|c++11|final|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

@@ -1,0 +1,808 @@
+http://tutorialspoint.com/video_tutorials/java_programming/pij-t
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <script>
+   var cookie_name = Number(readCookie("tp_niit_name"));
+   function readCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return 0;
+   }
+</script> 
+  <meta charset="utf-8"> 
+  <title>Java Programming Video Tutorial</title> 
+  <meta name="description" content="Java Programming Video Tutorial - Self-paced online training using high quality video tutorials from emenient professors and univeristies."> 
+  <meta name="keywords" content="Video, Tutorial, Beginners, Self-paced, online, training, quality, video, tutorials, emenient, professors, univeristies."> 
+  <link rel="stylesheet" href="/theme/css/niit.css"> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(java/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #ea4323 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #ea4323 !important;}
+.submenu-item{ border-bottom: 2px solid #ea4323 !important; border-top: 2px solid #ea4323 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/orange/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="images/video-tutorials-mini-logo.jpg" alt="Video Tutorials"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Video Tutorials</li> 
+        <li><a target="_top" href="/video_tutorials/index.htm">Tutorial Home</a></li> 
+        <li><a target="_top" href="/video_tutorials/ms_word_2010/WRD-T">MS Word 2010</a></li> 
+        <li><a target="_top" href="/video_tutorials/ms_excel_2010/EXL-T">MS Excel 2010</a></li> 
+        <li><a target="_top" href="/video_tutorials/ms_power_point_2010/PPT-T">MS Power Point 2010</a></li> 
+        <li><a target="_top" href="/video_tutorials/java_programming/PIJ-T">Java Programming</a></li> 
+        <li><a target="_top" href="/video_tutorials/programming_using_c/PUC-T">Programming using C</a></li> 
+        <li><a target="_top" href="/video_tutorials/programming_using_cplusplus/PCP-T">Programming using C++</a></li> 
+        <li><a target="_top" href="/video_tutorials/data_structures_and_algorithms/DS-T">Data Structures &amp; Algorithms</a></li> 
+        <!--
+<li><a target="_top" href="/video_tutorials/introduction_to_algorithms/MIT06">Introduction to Algorithms</a></li>
+<li><a target="_top" href="/video_tutorials/computer_system_engineering/MIT08">Computer System Engineering</a></li>
+<li><a target="_top" href="/video_tutorials/artificial_intelligence/MIT09">Artificial Intelligence</a></li>
+--> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Java Programming Video Tutorial</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/video_tutorials/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/video_tutorials/index.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <div id="courseDiv"> 
+         <div style="width:100%; text-align:center;"> 
+          <div style="width:100px;margin: 0 auto;">
+           Powered by 
+           <a href="http://www.niit.tv/NIITOnlineLearning/catalog/course-catalog.aspx?siteid=TP&amp;adunit=logo" alt="NIIT TV" target="_blank" rel="nofollow"><img src="http://www.niit.tv/NIITOnlineLearning/images/NIIT-logo.png" style="border: 0; vertical-align: middle; width:70%;" alt="NIIT TV"></a>
+          </div> 
+         </div> 
+         <p>Java Programming</p> 
+         <p></p> 
+         <table class="table table-bordered"> 
+          <tbody> 
+           <tr> 
+            <th width="8%">S.N.</th>
+            <th width="90%">Java Programming</th> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">1</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_1</b><br> Java Session_1<br> <i class="fa fa-clock-o"></i> Duration : 00:04:04</p> 
+             </div>
+             <div class="divVideo" data-video="ikM4d7xfSZs" data-session="1">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">2</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_2</b><br> Java Session_2<br> <i class="fa fa-clock-o"></i> Duration : 00:04:40</p> 
+             </div>
+             <div class="divVideo" data-video="ZVyeY5snMHw" data-session="2">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">3</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_3</b><br> Java Session_3<br> <i class="fa fa-clock-o"></i> Duration : 00:05:47</p> 
+             </div>
+             <div class="divVideo" data-video="KbDA5s5Ed5M" data-session="3">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">4</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_4</b><br> Java Session_4<br> <i class="fa fa-clock-o"></i> Duration : 00:05:28</p> 
+             </div>
+             <div class="divVideo" data-video="BdZdOh6jwR4" data-session="4">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">5</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_5</b><br> Java Session_5<br> <i class="fa fa-clock-o"></i> Duration : 00:09:18</p> 
+             </div>
+             <div class="divVideo" data-video="0G_w0GY2Vfo" data-session="5">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">6</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_6</b><br> Java Session_6<br> <i class="fa fa-clock-o"></i> Duration : 00:07:29</p> 
+             </div>
+             <div class="divVideo" data-video="OvyhgIRiCt4" data-session="6">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">7</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_7</b><br> Java Session_7<br> <i class="fa fa-clock-o"></i> Duration : 00:08:20</p> 
+             </div>
+             <div class="divVideo" data-video="qp4rru9Q5aQ" data-session="7">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">8</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_8</b><br> Java Session_8<br> <i class="fa fa-clock-o"></i> Duration : 00:05:54</p> 
+             </div>
+             <div class="divVideo" data-video="0trR_RPofGM" data-session="8">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">9</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_9</b><br> Java Session_9<br> <i class="fa fa-clock-o"></i> Duration : 00:04:02</p> 
+             </div>
+             <div class="divVideo" data-video="1R1okD1_WSI" data-session="9">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">10</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_10</b><br> Java Session_10<br> <i class="fa fa-clock-o"></i> Duration : 00:05:53</p> 
+             </div>
+             <div class="divVideo" data-video="MeT17IpXNVY" data-session="10">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">11</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_11</b><br> Java Session_11<br> <i class="fa fa-clock-o"></i> Duration : 00:08:01</p> 
+             </div>
+             <div class="divVideo" data-video="WUClJZnVXpo" data-session="11">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">12</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_12</b><br> Java Session_12<br> <i class="fa fa-clock-o"></i> Duration : 00:03:32</p> 
+             </div>
+             <div class="divVideo" data-video="czrb3Ghtd5E" data-session="12">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">13</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_13</b><br> Java Session_13<br> <i class="fa fa-clock-o"></i> Duration : 00:07:59</p> 
+             </div>
+             <div class="divVideo" data-video="WE_X3aY-7Ro" data-session="13">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">14</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_14</b><br> Java Session_14<br> <i class="fa fa-clock-o"></i> Duration : 00:07:44</p> 
+             </div>
+             <div class="divVideo" data-video="CWJRGf_0unw" data-session="14">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">15</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_15</b><br> Java Session_15<br> <i class="fa fa-clock-o"></i> Duration : 00:04:56</p> 
+             </div>
+             <div class="divVideo" data-video="fXuH519KTLQ" data-session="15">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">16</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_16</b><br> Java Session_16<br> <i class="fa fa-clock-o"></i> Duration : 00:07:45</p> 
+             </div>
+             <div class="divVideo" data-video="PhM83nDfreo" data-session="16">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">17</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_17</b><br> Java Session_17<br> <i class="fa fa-clock-o"></i> Duration : 00:04:56</p> 
+             </div>
+             <div class="divVideo" data-video="2B5uAHvIYW4" data-session="17">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">18</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_18</b><br> Java Session_18<br> <i class="fa fa-clock-o"></i> Duration : 00:07:22</p> 
+             </div>
+             <div class="divVideo" data-video="SebuZrKg6_M" data-session="18">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">19</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_19</b><br> Java Session_19<br> <i class="fa fa-clock-o"></i> Duration : 00:03:42</p> 
+             </div>
+             <div class="divVideo" data-video="eZrgSxUZ7zg" data-session="19">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">20</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_20</b><br> Java Session_20<br> <i class="fa fa-clock-o"></i> Duration : 00:05:17</p> 
+             </div>
+             <div class="divVideo" data-video="Wfx5pRbnts4" data-session="20">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">21</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_21</b><br> Java Session_21<br> <i class="fa fa-clock-o"></i> Duration : 00:03:33</p> 
+             </div>
+             <div class="divVideo" data-video="8IkY1CTF3pg" data-session="21">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">22</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_22</b><br> Java Session_22<br> <i class="fa fa-clock-o"></i> Duration : 00:04:30</p> 
+             </div>
+             <div class="divVideo" data-video="bq1jvAhwOYc" data-session="22">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">23</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_23</b><br> Java Session_23<br> <i class="fa fa-clock-o"></i> Duration : 00:06:39</p> 
+             </div>
+             <div class="divVideo" data-video="ra-7czvjpeE" data-session="23">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">24</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_24</b><br> Java Session_24<br> <i class="fa fa-clock-o"></i> Duration : 00:05:08</p> 
+             </div>
+             <div class="divVideo" data-video="qMkbnMIPBVo" data-session="24">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">25</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_25</b><br> Java Session_25<br> <i class="fa fa-clock-o"></i> Duration : 00:05:57</p> 
+             </div>
+             <div class="divVideo" data-video="UzmUZE4PaX0" data-session="25">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">26</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_26</b><br> Java Session_26<br> <i class="fa fa-clock-o"></i> Duration : 00:03:37</p> 
+             </div>
+             <div class="divVideo" data-video="Tvw3eymA5qw" data-session="26">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">27</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_27</b><br> Java Session_27<br> <i class="fa fa-clock-o"></i> Duration : 00:06:16</p> 
+             </div>
+             <div class="divVideo" data-video="WrgiUKD82iw" data-session="27">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">28</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_28</b><br> Java Session_28<br> <i class="fa fa-clock-o"></i> Duration : 00:06:54</p> 
+             </div>
+             <div class="divVideo" data-video="5BuwfhPbqik" data-session="28">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">29</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_29</b><br> Java Session_29<br> <i class="fa fa-clock-o"></i> Duration : 00:04:45</p> 
+             </div>
+             <div class="divVideo" data-video="AKxJ1LerfD0" data-session="29">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">30</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_30</b><br> Java Session_30<br> <i class="fa fa-clock-o"></i> Duration : 00:04:51</p> 
+             </div>
+             <div class="divVideo" data-video="DM2zbsHWQcg" data-session="30">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">31</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_31</b><br> Java Session_31<br> <i class="fa fa-clock-o"></i> Duration : 00:05:51</p> 
+             </div>
+             <div class="divVideo" data-video="5llx7NS7EhQ" data-session="31">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">32</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_32</b><br> Java Session_32<br> <i class="fa fa-clock-o"></i> Duration : 00:06:30</p> 
+             </div>
+             <div class="divVideo" data-video="_tmTjA2VMAo" data-session="32">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">33</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_33</b><br> Java Session_33<br> <i class="fa fa-clock-o"></i> Duration : 00:07:53</p> 
+             </div>
+             <div class="divVideo" data-video="il6p9BeOgdM" data-session="33">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">34</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_34</b><br> Java Session_34<br> <i class="fa fa-clock-o"></i> Duration : 00:06:04</p> 
+             </div>
+             <div class="divVideo" data-video="ChVhIPP1FOY" data-session="34">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">35</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_35</b><br> Java Session_35<br> <i class="fa fa-clock-o"></i> Duration : 00:05:17</p> 
+             </div>
+             <div class="divVideo" data-video="3YtELwrZO6w" data-session="35">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">36</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_36</b><br> Java Session_36<br> <i class="fa fa-clock-o"></i> Duration : 00:04:26</p> 
+             </div>
+             <div class="divVideo" data-video="N1dvpF63HK8" data-session="36">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">37</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_37</b><br> Java Session_37<br> <i class="fa fa-clock-o"></i> Duration : 00:05:24</p> 
+             </div>
+             <div class="divVideo" data-video="sNHTfDEmlEs" data-session="37">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">38</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_38</b><br> Java Session_38<br> <i class="fa fa-clock-o"></i> Duration : 00:03:23</p> 
+             </div>
+             <div class="divVideo" data-video="eGFkPHYDITs" data-session="38">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">39</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_39</b><br> Java Session_39<br> <i class="fa fa-clock-o"></i> Duration : 00:08:03</p> 
+             </div>
+             <div class="divVideo" data-video="7QyIFPXIPq0" data-session="39">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">40</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_40</b><br> Java Session_40<br> <i class="fa fa-clock-o"></i> Duration : 00:05:27</p> 
+             </div>
+             <div class="divVideo" data-video="xKqv8_X3z7k" data-session="40">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">41</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_41</b><br> Java Session_41<br> <i class="fa fa-clock-o"></i> Duration : 00:04:57</p> 
+             </div>
+             <div class="divVideo" data-video="INp6HS6AQU4" data-session="41">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">42</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_42</b><br> Java Session_42<br> <i class="fa fa-clock-o"></i> Duration : 00:05:04</p> 
+             </div>
+             <div class="divVideo" data-video="i7vXaG7PqKs" data-session="42">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">43</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_43</b><br> Java Session_43<br> <i class="fa fa-clock-o"></i> Duration : 00:06:42</p> 
+             </div>
+             <div class="divVideo" data-video="svu-fKqMMgY" data-session="43">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">44</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_44</b><br> Java Session_44<br> <i class="fa fa-clock-o"></i> Duration : 00:06:05</p> 
+             </div>
+             <div class="divVideo" data-video="OaQChY10axI" data-session="44">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">45</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_45</b><br> Java Session_45<br> <i class="fa fa-clock-o"></i> Duration : 00:05:13</p> 
+             </div>
+             <div class="divVideo" data-video="GUbu32Mekug" data-session="45">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+           <tr> 
+            <td style="text-align:center;">46</td> 
+            <td> 
+             <div style="float:left;width:85%;"> 
+              <p><b>Java 7 Session_46</b><br> Java Session_46<br> <i class="fa fa-clock-o"></i> Duration : 00:03:37</p> 
+             </div>
+             <div class="divVideo" data-video="upFNnkSiNXw" data-session="46">
+              <a class="ancDivVideo" href="#divLogin"><i class="fa fa-youtube-play fa-2x "></i></a>
+             </div> </td> 
+           </tr> 
+          </tbody> 
+         </table> 
+         <div id="div2"></div> 
+         <div id="divLogin"> 
+          <table cellpadding="0" cellspacing="0"> 
+           <tbody>
+            <tr> 
+             <td align="right" width="15%">Name : &nbsp;</td> 
+             <td width="70%"><input type="text" value="" placeholder="Enter Name" id="txtName"></td> 
+            </tr> 
+            <tr> 
+             <td align="right" width="15%">Email Id : &nbsp;</td> 
+             <td width="70%"><input type="text" value="" placeholder="Enter Email Id" id="txtEmailId"></td> 
+            </tr> 
+            <tr> 
+             <td width="15%">&nbsp;</td> 
+             <td>
+              <div id="errTd"></div></td> 
+            </tr> 
+            <tr> 
+             <td width="15%">&nbsp;</td> 
+             <td><input type="submit" value="Sign Up" id="submitSignIn" class="submitClass">&nbsp; <input type="submit" value="Cancel" class="ancClose submitClass"></td> 
+            </tr> 
+           </tbody>
+          </table> 
+          <div style="clear:both;"></div> 
+          <div class="msg">
+           <b>Note:</b> These video tutorials have been shared by 
+           <a href="http://www.niit.tv/NIITOnlineLearning/catalog/course-catalog.aspx?siteid=TP&amp;adunit=logo" alt="NIIT TV" target="_blank" rel="nofollow"><img src="http://www.niit.tv/NIITOnlineLearning/images/NIIT-logo.png" style="border: 0; vertical-align: middle; width:50px;" alt="NIIT TV"></a>
+          </div> 
+         </div> 
+        </div> 
+        <script>
+      var cookie_flag = '0';
+      var current_page_url = 'http://www.tutorialspoint.com/video_tutorials/tutorial.php?title=java_programming&code=pij-t';
+      var course_code = 'pij-t';
+      var guest_code = 'GUID-1463221067-93846-1224';
+</script> 
+        <script type="text/javascript" src="/theme/js/niit.js"></script> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/video_tutorials/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/video_tutorials/index.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="parent-file">
+         java_characters.htm
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/video_tutorials/tutorial.php?title=java_programming&amp;code=pij-t','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/video_tutorials/tutorial.php?title=java_programming&amp;code=pij-t','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/video_tutorials/tutorial.php?title=java_programming&amp;code=pij-t&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/video_tutorials/tutorial.php?title=java_programming&amp;code=pij-t','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/video_tutorials/tutorial.php?title=java_programming&amp;code=pij-t&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/video_tutorials/tutorial.php?title=java_programming&amp;code=pij-t&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('java/try_java.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

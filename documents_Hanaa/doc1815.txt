@@ -1,0 +1,1075 @@
+https://stackexchange.com/leagues/359/week/rus
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - Русский язык - May 8, 2016 - May 13, 2016 - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/359/week/rus/2016-05-08"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/359/Week/2016-05-08/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f359%2fweek%2frus#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f359%2fweek%2frus">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/week/stackoverflow/2016-05-08?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/week/superuser/2016-05-08?sort=reputationchange"> Super User </option> <option value="/leagues/21/week/math/2016-05-08?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/week/askubuntu/2016-05-08?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/week/serverfault/2016-05-08?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/week/english/2016-05-08?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/week/unix/2016-05-08?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/week/apple/2016-05-08?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/week/gaming/2016-05-08?sort=reputationchange"> Arqade </option> <option value="/leagues/52/week/programmers/2016-05-08?sort=reputationchange"> Programmers </option> <option value="/leagues/29/week/tex/2016-05-08?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/week/android/2016-05-08?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/week/meta/2016-05-08?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/week/electronics/2016-05-08?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/week/physics/2016-05-08?sort=reputationchange"> Physics </option> <option value="/leagues/19/week/stats/2016-05-08?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/week/dba/2016-05-08?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/week/ru-stackoverflow/2016-05-08?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/week/security/2016-05-08?sort=reputationchange"> Information Security </option> <option value="/leagues/86/week/codereview/2016-05-08?sort=reputationchange"> Code Review </option> <option value="/leagues/42/week/wordpress/2016-05-08?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/week/gis/2016-05-08?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/week/scifi/2016-05-08?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/week/mathoverflow/2016-05-08?sort=reputationchange"> MathOverflow </option> <option value="/leagues/23/week/diy/2016-05-08?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/week/webapps/2016-05-08?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/week/sharepoint/2016-05-08?sort=reputationchange"> SharePoint </option> <option value="/leagues/11/week/cooking/2016-05-08?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/week/graphicdesign/2016-05-08?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/week/gamedev/2016-05-08?sort=reputationchange"> Game Development </option> <option value="/leagues/99/week/drupal/2016-05-08?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/week/ux/2016-05-08?sort=reputationchange"> User Experience </option> <option value="/leagues/229/week/ell/2016-05-08?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/week/pt-stackoverflow/2016-05-08?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/week/webmasters/2016-05-08?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/week/magento/2016-05-08?sort=reputationchange"> Magento </option> <option value="/leagues/191/week/academia/2016-05-08?sort=reputationchange"> Academia </option> <option value="/leagues/125/week/travel/2016-05-08?sort=reputationchange"> Travel </option> <option value="/leagues/213/week/salesforce/2016-05-08?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/week/workplace/2016-05-08?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/week/photo/2016-05-08?sort=reputationchange"> Photography </option> <option value="/leagues/177/week/mathematica/2016-05-08?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/week/raspberrypi/2016-05-08?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/week/money/2016-05-08?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/week/movies/2016-05-08?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/week/rpg/2016-05-08?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/week/cs/2016-05-08?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/week/codegolf/2016-05-08?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/week/chemistry/2016-05-08?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/week/mechanics/2016-05-08?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/week/bicycles/2016-05-08?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/week/blender/2016-05-08?sort=reputationchange"> Blender </option> <option value="/leagues/359/week/rus/2016-05-08?sort=reputationchange" selected> Русский язык </option> <option value="/leagues/109/week/music/2016-05-08?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/week/biology/2016-05-08?sort=reputationchange"> Biology </option> <option value="/leagues/139/week/christianity/2016-05-08?sort=reputationchange"> Christianity </option> <option value="/leagues/95/week/skeptics/2016-05-08?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/week/anime/2016-05-08?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/week/crypto/2016-05-08?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/week/bitcoin/2016-05-08?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/week/parenting/2016-05-08?sort=reputationchange"> Parenting </option> <option value="/leagues/243/week/networkengineering/2016-05-08?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/week/cstheory/2016-05-08?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/307/week/puzzling/2016-05-08?sort=reputationchange"> Puzzling </option> <option value="/leagues/327/week/worldbuilding/2016-05-08?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/113/week/judaism/2016-05-08?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/week/fitness/2016-05-08?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/week/german/2016-05-08?sort=reputationchange"> German Language </option> <option value="/leagues/275/week/aviation/2016-05-08?sort=reputationchange"> Aviation </option> <option value="/leagues/288/week/arduino/2016-05-08?sort=reputationchange"> Arduino </option> <option value="/leagues/60/week/boardgames/2016-05-08?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/week/dsp/2016-05-08?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/week/sqa/2016-05-08?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/week/softwarerecs/2016-05-08?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/week/philosophy/2016-05-08?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/week/history/2016-05-08?sort=reputationchange"> History </option> <option value="/leagues/123/week/gardening/2016-05-08?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/week/japanese/2016-05-08?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/week/writers/2016-05-08?sort=reputationchange"> Writers </option> <option value="/leagues/37/week/stackapps/2016-05-08?sort=reputationchange"> Stack Apps </option> <option value="/leagues/259/week/sound/2016-05-08?sort=reputationchange"> Sound Design </option> <option value="/leagues/211/week/islam/2016-05-08?sort=reputationchange"> Islam </option> <option value="/leagues/93/week/pm/2016-05-08?sort=reputationchange"> Project Management </option> <option value="/leagues/91/week/quant/2016-05-08?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/333/week/ja-stackoverflow/2016-05-08?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/341/week/lifehacks/2016-05-08?sort=reputationchange"> Lifehacks </option> <option value="/leagues/137/week/french/2016-05-08?sort=reputationchange"> French Language </option> <option value="/leagues/165/week/scicomp/2016-05-08?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/week/spanish/2016-05-08?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/week/productivity/2016-05-08?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/week/pets/2016-05-08?sort=reputationchange"> Pets </option> <option value="/leagues/255/week/space/2016-05-08?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/week/datascience/2016-05-08?sort=reputationchange"> Data Science </option> <option value="/leagues/64/week/homebrew/2016-05-08?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/week/expressionengine/2016-05-08?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/week/hermeneutics/2016-05-08?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/week/video/2016-05-08?sort=reputationchange"> Video Production </option> <option value="/leagues/197/week/windowsphone/2016-05-08?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/week/outdoors/2016-05-08?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/week/emacs/2016-05-08?sort=reputationchange"> Emacs </option> <option value="/leagues/189/week/sports/2016-05-08?sort=reputationchange"> Sports </option> <option value="/leagues/237/week/reverseengineering/2016-05-08?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/week/chinese/2016-05-08?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/week/cogsci/2016-05-08?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/week/chess/2016-05-08?sort=reputationchange"> Chess </option> <option value="/leagues/143/week/linguistics/2016-05-08?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/week/astronomy/2016-05-08?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/week/robotics/2016-05-08?sort=reputationchange"> Robotics </option> <option value="/leagues/245/week/opendata/2016-05-08?sort=reputationchange"> Open Data </option> <option value="/leagues/215/week/patents/2016-05-08?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/week/es-stackoverflow/2016-05-08?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/week/tor/2016-05-08?sort=reputationchange"> Tor </option> <option value="/leagues/223/week/politics/2016-05-08?sort=reputationchange"> Politics </option> <option value="/leagues/315/week/hinduism/2016-05-08?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/week/freelancing/2016-05-08?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/week/vi/2016-05-08?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/week/craftcms/2016-05-08?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/week/joomla/2016-05-08?sort=reputationchange"> Joomla </option> <option value="/leagues/321/week/startups/2016-05-08?sort=reputationchange"> Startups </option> <option value="/leagues/343/week/engineering/2016-05-08?sort=reputationchange"> Engineering </option> <option value="/leagues/313/week/buddhism/2016-05-08?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/week/russian/2016-05-08?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/week/economics/2016-05-08?sort=reputationchange"> Economics </option> <option value="/leagues/363/week/law/2016-05-08?sort=reputationchange"> Law </option> <option value="/leagues/155/week/bricks/2016-05-08?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/week/expatriates/2016-05-08?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/week/tridion/2016-05-08?sort=reputationchange"> Tridion </option> <option value="/leagues/291/week/matheducators/2016-05-08?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/week/earthscience/2016-05-08?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/week/martialarts/2016-05-08?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/week/elementaryos/2016-05-08?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/week/ham/2016-05-08?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/week/civicrm/2016-05-08?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/week/health/2016-05-08?sort=reputationchange"> Health </option> <option value="/leagues/351/week/woodworking/2016-05-08?sort=reputationchange"> Woodworking </option> <option value="/leagues/277/week/ebooks/2016-05-08?sort=reputationchange"> Ebooks </option> <option value="/leagues/386/week/ethereum/2016-05-08?sort=reputationchange"> Ethereum </option> <option value="/leagues/231/week/sustainability/2016-05-08?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/217/week/genealogy/2016-05-08?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/week/italian/2016-05-08?sort=reputationchange"> Italian Language </option> <option value="/leagues/279/week/alcohol/2016-05-08?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/173/week/poker/2016-05-08?sort=reputationchange"> Poker </option> <option value="/leagues/365/week/opensource/2016-05-08?sort=reputationchange"> Open Source </option> <option value="/leagues/335/week/hsm/2016-05-08?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/week/musicfans/2016-05-08?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/week/coffee/2016-05-08?sort=reputationchange"> Coffee </option> <option value="/leagues/371/week/portuguese/2016-05-08?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/week/hardwarerecs/2016-05-08?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/week/computergraphics/2016-05-08?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/week/communitybuilding/2016-05-08?sort=reputationchange"> Community Building </option> <option value="/leagues/361/week/mythology/2016-05-08?sort=reputationchange"> Mythology </option> <option value="/leagues/384/week/3dprinting/2016-05-08?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/week/latin/2016-05-08?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/week/retrocomputing/2016-05-08?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/week/languagelearning/2016-05-08?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/359/week/rus" class="youarehere">Week</a> 
+        <a href="/leagues/359/month/rus">Month</a> 
+        <a href="/leagues/359/quarter/rus">Quarter</a> 
+        <a href="/leagues/359/year/rus">Year</a> 
+        <a href="/leagues/359/alltime/rus">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://rus.stackexchange.com"> 
+        <div class="site-bubble" style="background-color: #f0f5f7; border-color: #f0f5f7;"> 
+         <img src="http://cdn.sstatic.net/Sites/rus/img/icon-48.png?v=f0f5f7" alt="Русский язык" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://rus.stackexchange.com">Русский язык</a></h2> 
+        <p> Q&amp;A for лингвистов, этимологов, и энтузиастов русского языка <span class="league-user-count">(5,034 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>May 8, 2016 - May 13, 2016</h3> 
+        <a href="/leagues/359/week/rus/2016-05-01" class="viewolder">« prev week</a> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+       <div class="fr">
+        Sort by: 
+        <select onchange="$(this).siblings('.sortLoader').css('visibility', 'visible'); window.location.href = $(this).val(); return false;"> <option value="/leagues/359/week/rus/2016-05-08?sort=reputationchange" selected> Week Rank </option> <option value="/leagues/359/week/rus/2016-05-08?sort=rankchange"> Rank Change </option> <option value="/leagues/359/week/rus/2016-05-08?sort=totalreputation"> Total Reputation </option> </select> 
+        <span class="sortLoader"></span> 
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="445"></a> 
+        <div class="user user-445"> 
+         <a href="http://rus.stackexchange.com/users/445/behemothus">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/yF7uY.jpg?s=128&amp;g=1&amp;s=48" title="behemothus">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/445/behemothus">behemothus</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span> 
+          <span title="79 bronze badges"><span class="badge3"></span><span class="badgecount">79</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 3 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/445?sort=reputationchange#445">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">47,937</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">288</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="180132"></a> 
+        <div class="user user-180132"> 
+         <a href="http://rus.stackexchange.com/users/180132/sibylla">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/8b12048dfbc79c58bc52111f6ba26fd2?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Sibylla">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/180132/sibylla">Sibylla</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span> 
+          <br> 
+          <span class="faintText">member for: 57 days <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/180132?sort=reputationchange#180132">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,392</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">150</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="179791"></a> 
+        <div class="user user-179791"> 
+         <a href="http://rus.stackexchange.com/users/179791/morkovkin">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/c1d4be5ba966bd90c22d9a032b19213a?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Morkovkin">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/179791/morkovkin">Morkovkin</a></h2> 
+          <span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/179791?sort=reputationchange#179791">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,062</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">105</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="247"></a> 
+        <div class="user user-247"> 
+         <a href="http://rus.stackexchange.com/users/247/%d0%9b%d1%8e%d0%b4%d0%bc%d0%b8%d0%bb%d0%b0">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f2a557cf472eab2a7c1b75885e172575?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Людмила">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/247/%d0%9b%d1%8e%d0%b4%d0%bc%d0%b8%d0%bb%d0%b0">Людмила</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span> 
+          <span title="34 bronze badges"><span class="badge3"></span><span class="badgecount">34</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/247?sort=reputationchange#247">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-1</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">42,608</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">90</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4707"></a> 
+        <div class="user user-4707"> 
+         <a href="http://rus.stackexchange.com/users/4707/slava1947">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/a50a3c789ec87079019f0e7f1feeba45?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="slava1947">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/4707/slava1947">slava1947</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 4 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/4707?sort=reputationchange#4707">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">11,342</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">70</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4309"></a> 
+        <div class="user user-4309"> 
+         <a href="http://rus.stackexchange.com/users/4309/alex-ander">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/ecffb0d6962e7a25bd7bee051345ca88?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Alex_ander">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/4309/alex-ander">Alex_ander</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span> 
+          <span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 6 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/4309?sort=reputationchange#4309">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+4</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,362</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">60</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3"></a> 
+        <div class="user user-3"> 
+         <a href="http://rus.stackexchange.com/users/3/fuchoin-kazuki">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/d2afbbd82785ef087fe1c1c6e5e5b211?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Fuchoin Kazuki">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/3/fuchoin-kazuki">Fuchoin Kazuki</a></h2> 
+          <span title="125 gold badges"><span class="badge1"></span><span class="badgecount">125</span></span> 
+          <span title="577 silver badges"><span class="badge2"></span><span class="badgecount">577</span></span> 
+          <span title="1,180 bronze badges"><span class="badge3"></span><span class="badgecount">1180</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/3?sort=reputationchange#3">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+19</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">17,376</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">48</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3970"></a> 
+        <div class="user user-3970"> 
+         <a href="http://rus.stackexchange.com/users/3970/%d0%9c%d0%b0%d1%82%d0%b2%d0%b5%d0%b9-%d0%94%d1%91%d0%bc%d0%b8%d0%bd">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/FSGO1.jpg?s=128&amp;g=1&amp;s=48" title="Матвей Дёмин">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/3970/%d0%9c%d0%b0%d1%82%d0%b2%d0%b5%d0%b9-%d0%94%d1%91%d0%bc%d0%b8%d0%bd">Матвей Дёмин</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span> 
+          <span title="27 bronze badges"><span class="badge3"></span><span class="badgecount">27</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 10 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/3970?sort=reputationchange#3970">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+14</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,953</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">40</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1067"></a> 
+        <div class="user user-1067"> 
+         <a href="http://rus.stackexchange.com/users/1067/%d0%9c%d0%b0%d1%80%d0%ba-%d0%98%d0%b7">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/4f8c417e519d8b3bfd043ea917c95009?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Марк Из">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/1067/%d0%9c%d0%b0%d1%80%d0%ba-%d0%98%d0%b7">Марк Из</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span> 
+          <span title="59 bronze badges"><span class="badge3"></span><span class="badgecount">59</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/1067?sort=reputationchange#1067">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">18,783</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">30</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2203"></a> 
+        <div class="user user-2203"> 
+         <a href="http://rus.stackexchange.com/users/2203/%d0%a1%d0%be%d1%84%d0%b8%d1%8f">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/90e011677ad5fca0c61a680ae5bdec28?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="София">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/2203/%d0%a1%d0%be%d1%84%d0%b8%d1%8f">София</a></h2> 
+          <span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span> 
+          <span title="32 silver badges"><span class="badge2"></span><span class="badgecount">32</span></span> 
+          <span title="66 bronze badges"><span class="badge3"></span><span class="badgecount">66</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/2203?sort=reputationchange#2203">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">27,376</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">30</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="498"></a> 
+        <div class="user user-498"> 
+         <a href="http://rus.stackexchange.com/users/498/%d0%9b%d0%b0%d1%80f">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/5d83269546bc49873a97f52f7ad3ac2f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Ларf">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/498/%d0%9b%d0%b0%d1%80f">Ларf</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span> 
+          <span title="92 bronze badges"><span class="badge3"></span><span class="badgecount">92</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/498?sort=reputationchange#498">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+2</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">29,595</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">25</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1197"></a> 
+        <div class="user user-1197"> 
+         <a href="http://rus.stackexchange.com/users/1197/doom">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/a685f3eee05adfa7e66732d3cfe3a91a?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="doom">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/1197/doom">doom</a></h2> 
+          <span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span> 
+          <span title="28 bronze badges"><span class="badge3"></span><span class="badgecount">28</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/1197?sort=reputationchange#1197">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,259</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="997"></a> 
+        <div class="user user-997"> 
+         <a href="http://rus.stackexchange.com/users/997/%d0%95%d0%ba%d0%b0%d1%82%d0%b5%d1%80%d0%b8%d0%bd%d0%b0-%d0%9a%d0%b0%d1%88%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%b0">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/fd1ee0cb0b7952b511037325f8d4e565?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Екатерина Каштанова">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/997/%d0%95%d0%ba%d0%b0%d1%82%d0%b5%d1%80%d0%b8%d0%bd%d0%b0-%d0%9a%d0%b0%d1%88%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%b0">Екатерина Каштанова</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span> 
+          <span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/997?sort=reputationchange#997">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-8</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,366</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="177519"></a> 
+        <div class="user user-177519"> 
+         <a href="http://rus.stackexchange.com/users/177519/%d0%90%d1%80%d1%82%d1%91%d0%bc-%d0%9b%d1%83%d0%b3%d0%be%d0%b2%d0%be%d0%b9">
+          <div class="faviconBox">
+           <img src="https://graph.facebook.com/100002253432786/picture?type=large&amp;s=48" title="Артём Луговой">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/177519/%d0%90%d1%80%d1%82%d1%91%d0%bc-%d0%9b%d1%83%d0%b3%d0%be%d0%b2%d0%be%d0%b9">Артём Луговой</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span> 
+          <span title="22 bronze badges"><span class="badge3"></span><span class="badgecount">22</span></span> 
+          <br> 
+          <span class="faintText">member for: 7 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/177519?sort=reputationchange#177519">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedUp">+11</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">2,017</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">17</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4440"></a> 
+        <div class="user user-4440"> 
+         <a href="http://rus.stackexchange.com/users/4440/vera">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/92ee623f2e0b94a89099382857414b6d?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Vera">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/4440/vera">Vera</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span> 
+          <span title="30 bronze badges"><span class="badge3"></span><span class="badgecount">30</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 5 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/4440?sort=reputationchange#4440">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">20,432</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">15</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="177153"></a> 
+        <div class="user user-177153"> 
+         <a href="http://rus.stackexchange.com/users/177153/copperkettle">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/qHvmd.jpg?s=128&amp;g=1&amp;s=48" title="CopperKettle">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/177153/copperkettle">CopperKettle</a></h2> 
+          <span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span> 
+          <br> 
+          <span class="faintText">member for: 9 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/177153?sort=reputationchange#177153">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-5</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">467</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="665"></a> 
+        <div class="user user-665"> 
+         <a href="http://rus.stackexchange.com/users/665/%d0%ad%d0%bb%d0%b5%d0%bd">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/27dee27cb726f47aafa539180eb6b95a?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Элен">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/665/%d0%ad%d0%bb%d0%b5%d0%bd">Элен</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span> 
+          <span title="48 bronze badges"><span class="badge3"></span><span class="badgecount">48</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/665?sort=reputationchange#665">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,693</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="178333"></a> 
+        <div class="user user-178333"> 
+         <a href="http://rus.stackexchange.com/users/178333/sergey">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/65d29773c85637bd1a506f137eacd78b?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Sergey">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/178333/sergey">Sergey</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/178333?sort=reputationchange#178333">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,691</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4345"></a> 
+        <div class="user user-4345"> 
+         <a href="http://rus.stackexchange.com/users/4345/shampar">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/AoGDu.jpg?s=128&amp;g=1&amp;s=48" title="shampar">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/4345/shampar">shampar</a></h2> 
+          <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span> 
+          <span title="20 bronze badges"><span class="badge3"></span><span class="badgecount">20</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 6 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/4345?sort=reputationchange#4345">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-3</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,195</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="180208"></a> 
+        <div class="user user-180208"> 
+         <a href="http://rus.stackexchange.com/users/180208/c%d1%82%d0%b0%d1%81%d1%8f">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/36ccdc6f1abb687475b1c76e83f59ff7?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Cтася">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/180208/c%d1%82%d0%b0%d1%81%d1%8f">Cтася</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+          <br> 
+          <span class="faintText">member for: 49 days <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/180208?sort=reputationchange#180208">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-12</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">388</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="5032"></a> 
+        <div class="user user-5032"> 
+         <a href="http://rus.stackexchange.com/users/5032/%d0%94%d0%b5nizz">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/0de7b1a8d35d613955b916f6101090d2?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="ДеNiZz">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/5032/%d0%94%d0%b5nizz">ДеNiZz</a></h2> 
+          <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span> 
+          <span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 2 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/5032?sort=reputationchange#5032">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">478</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4337"></a> 
+        <div class="user user-4337"> 
+         <a href="http://rus.stackexchange.com/users/4337/graduate">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/2a1266feb2b82948db6e5cabd0ae79b1?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Graduate">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/4337/graduate">Graduate</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span> 
+          <span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 6 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/4337?sort=reputationchange#4337">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">359</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="177434"></a> 
+        <div class="user user-177434"> 
+         <a href="http://rus.stackexchange.com/users/177434/anonym">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/f9ead8317163a9818111b53f2c9eda30?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Anonym">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/177434/anonym">Anonym</a></h2> 
+          <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span> 
+          <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+          <br> 
+          <span class="faintText">member for: 8 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/177434?sort=reputationchange#177434">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-5</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">729</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1112"></a> 
+        <div class="user user-1112"> 
+         <a href="http://rus.stackexchange.com/users/1112/nikolja">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/859c1d978f2a2b158e76e48d9089c887?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Nikolja">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/1112/nikolja">Nikolja</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span> 
+          <span title="26 bronze badges"><span class="badge3"></span><span class="badgecount">26</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/1112?sort=reputationchange#1112">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide">
+           not previously ranked 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">1,592</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">5</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3758"></a> 
+        <div class="user user-3758"> 
+         <a href="http://rus.stackexchange.com/users/3758/niemand">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/y2mtN.jpg?s=128&amp;g=1&amp;s=48" title="Niemand">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://rus.stackexchange.com/users/3758/niemand">Niemand</a></h2> 
+          <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span> 
+          <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years <span class="permalink" style="display: none;"><a href="/leagues/359/week/rus/2016-05-08/3758?sort=reputationchange#3758">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> week rank 
+         </div> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number movedDown">-11</span> change 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">7,766</span> total reputation 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">-6</span> week reputation 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>200+</td>
+          <td class="count">1</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">3</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">6</td>
+         </tr> 
+         <tr>
+          <td>25+</td>
+          <td class="count">11</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">24</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">4</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">12</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">15</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">21</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">26</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">48</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">63</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">110</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">4,735</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463245822});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

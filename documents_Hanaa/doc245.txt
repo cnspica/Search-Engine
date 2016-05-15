@@ -1,0 +1,496 @@
+http://tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Ruby on Rails Scaffolding</title> 
+  <meta name="Description" content="Ruby on Rails Scaffolding - Learn Ruby on Rails in simple and easy steps. You will learn its Introduction, Installation, Framework, Directory Structure, strengths with examples and you will learn about actionpack, actionview, activerecord, Migrations, Controller, Routes, Views, Layouts, Heinemeier, Scaffolding, Ajax, File Uploading, Sending Emails, Hansson etc."> 
+  <meta name="Keywords" content="Learning, Tutorial, Ruby, Rails, strengths, framework, Introduction, Installation, Examples, RubyGems, Resources, Guide, Actionpack, Actionview, Basics, Directory Structure, Advance, Activerecord, Migrations, libraries, Model, Routes, Views, Layouts, Controller, Embeded Ruby, Erb, Rolling, Metaprogramming, Built-in, testing, David, Black, Hansson, Heinemeier, RAA, Ajax, File Uploading, Sending Emails, Scaffolding."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #c90e19 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #c90e19 !important;}
+.submenu-item{ border-bottom: 2px solid #c90e19 !important; border-top: 2px solid #c90e19 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/ruby-on-rails/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/ruby-on-rails/images/rails-mini-logo.jpg" alt="Ruby on Rails Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby on Rails Tutorial</li> 
+        <li><a href="/ruby-on-rails/index.htm">Ruby on Rails - Home</a></li> 
+        <li><a href="/ruby-on-rails/rails-introduction.htm">Ruby on Rails - Introduction</a></li> 
+        <li><a href="/ruby-on-rails/rails-installation.htm">Ruby on Rails - Installation</a></li> 
+        <li><a href="/ruby-on-rails/rails-framework.htm">Ruby on Rails - Framework</a></li> 
+        <li><a href="/ruby-on-rails/rails-directory-structure.htm">Ruby on Rails - Directory Structure</a></li> 
+        <li><a href="/ruby-on-rails/rails-examples.htm">Ruby on Rails - Examples</a></li> 
+        <li><a href="/ruby-on-rails/rails-database-setup.htm">Ruby on Rails - Database Setup</a></li> 
+        <li><a href="/ruby-on-rails/rails-active-records.htm">Ruby on Rails - Active Records</a></li> 
+        <li><a href="/ruby-on-rails/rails-migrations.htm">Ruby on Rails - Migrations</a></li> 
+        <li><a href="/ruby-on-rails/rails-controllers.htm">Ruby on Rails - Controllers</a></li> 
+        <li><a href="/ruby-on-rails/rails-routes.htm">Ruby on Rails - Routes</a></li> 
+        <li><a href="/ruby-on-rails/rails-views.htm">Ruby on Rails - Views</a></li> 
+        <li><a href="/ruby-on-rails/rails-layouts.htm">Ruby on Rails - Layouts</a></li> 
+        <li><a href="/ruby-on-rails/rails-scaffolding.htm">Ruby on Rails - Scaffolding</a></li> 
+        <li><a href="/ruby-on-rails/rails-and-ajax.htm">Ruby on Rails - AJAX</a></li> 
+        <li><a href="/ruby-on-rails/rails-file-uploading.htm">Ruby on Rails - File Uploading</a></li> 
+        <li><a href="/ruby-on-rails/rails-send-email.htm">Ruby on Rails - Send Emails</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby on Rails Resources</li> 
+        <li><a href="/ruby-on-rails/rails-references-guide.htm">Ruby on Rails - References Guide</a></li> 
+        <li><a href="/ruby-on-rails/rails-quick-guide.htm">Ruby on Rails - Quick Guide</a></li> 
+        <li><a href="/ruby-on-rails/rails-resources.htm">Ruby on Rails - Resources</a></li> 
+        <li><a href="/ruby-on-rails/rails-discussion.htm">Ruby on Rails - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby Tutorial</li> 
+        <li><a href="/ruby">Ruby Tutorial</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Ruby on Rails - Scaffolding</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/ruby-on-rails/rails-layouts.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/ruby-on-rails/rails-and-ajax.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>While you're developing Rails applications, especially those which are mainly providing you with a simple interface to data in a database, it can often be useful to use the scaffold method.</p> 
+        <p>Scaffolding provides more than cheap demo thrills. Here are some benefits −</p> 
+        <ul class="list"> 
+         <li><p>You can quickly get code in front of your users for feedback.</p></li> 
+         <li><p>You are motivated by faster success.</p></li> 
+         <li><p>You can learn how Rails works by looking at the generated code.</p></li> 
+         <li><p>You can use scaffolding as a foundation to jump start your development.</p></li> 
+        </ul> 
+        <h2>Scaffolding Example</h2> 
+        <p>To understand <i>scaffolding,</i> let's create a database called <b>cookbook</b> and a table called <b>recipes</b>.</p> 
+        <h2>Creating an Empty Rails Web Application</h2> 
+        <p>Open a command window and navigate to where you want to create this <b>cookbook</b> web application. So, run the following command to create a complete directory structure.</p> 
+        <pre class="result notranslate">
+tp&gt; rails new cookbook
+</pre> 
+        <h2>Setting up the Database</h2> 
+        <p>Here is the way to create a database −</p> 
+        <pre class="result notranslate">
+mysql&gt; create database cookbook;
+Query OK, 1 row affected (0.01 sec)
+
+mysql&gt; grant all privileges on cookbook.*
+to 'root'@'localhost' identified by 'password';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.00 sec)
+</pre> 
+        <p>To instruct Rails how to find the database, edit the configuration file cookbook\config\database.yml and change the database name to cookbook. Leave the password empty. When you finish, it should look as follows −</p> 
+        <pre class="result notranslate">
+development:
+   adapter: mysql
+   database: cookbook
+   username: root
+   password: [password]
+   host: localhost
+	
+test:
+   adapter: mysql
+   database: cookbook
+   username: root
+   password: [password]
+   host: localhost
+	
+production:
+   adapter: mysql
+   database: cookbook
+   username: root
+   password: [password]
+   host: localhost
+</pre> 
+        <p>Rails lets you run in the development mode, test mode, or production mode, using different databases. This application uses the same database for each.</p> 
+        <h2>The Generated Scaffold Code</h2> 
+        <p>With the scaffold action, Rails generates all the code it needs dynamically. By running <i>scaffold</i> as a script, we can get all the code written to disk, where we can investigate it and then start tailoring it to our requirements.</p> 
+        <p>So now, let's start once again to generate Scaffold code manually by using the scaffold helper script −</p> 
+        <pre class="result notranslate">
+cookbook&gt; rails generate scaffold recipe
+</pre> 
+        <p>It generates auto-files as shown below −</p> 
+        <img src="/ruby-on-rails/images/scoffold.jpg" alt="Scaffold"> 
+        <h2>The Controller</h2> 
+        <p>Let's look at the code behind the controller. This code is generated by the <b>scaffold</b> generator. If you open app/controllers/recipes_controller.rb, then you will find something as follows −</p> 
+        <pre class="prettyprint notranslate">
+class RecipesController &lt; ApplicationController
+   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+   
+   # GET /recipes
+   # GET /recipes.json
+   def index
+      @recipes = Recipe.all
+   end
+   
+   # GET /recipes/1
+   # GET /recipes/1.json
+   def show
+   end
+   
+   # GET /recipes/new
+   def new
+      @recipe = Recipe.new
+   end
+   
+   # GET /recipes/1/edit
+   def edit
+   end
+   
+   # POST /recipes
+   # POST /recipes.json
+   def create
+      @recipe = Recipe.new(recipe_params)
+      
+      respond_to do |format|
+         if @recipe.save
+            format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
+            format.json { render :show, status: :created, location: @recipe }
+         else
+            format.html { render :new }
+            format.json { render json: @recipe.errors, status: :unprocessable_entity }
+         end
+      end
+      
+   end
+   
+   # PATCH/PUT /recipes/1
+   # PATCH/PUT /recipes/1.json
+   def update
+      respond_to do |format|
+         if @recipe.update(recipe_params)
+            format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
+            format.json { render :show, status: :ok, location: @recipe }
+         else
+            format.html { render :edit }
+            format.json { render json: @recipe.errors, status: :unprocessable_entity }
+         end
+      end
+      
+   end
+   
+   # DELETE /recipes/1
+   # DELETE /recipes/1.json
+   def destroy
+      @recipe.destroy
+         respond_to do |format|
+         format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
+         format.json { head :no_content }
+      end
+   end
+   
+   private
+   
+   # Use callbacks to share common setup or constraints between actions.
+   def set_recipe
+      @recipe = Recipe.find(params[:id])
+   end
+   
+   # Never trust parameters from the scary internet, only allow the white list through.
+   def recipe_params
+      params.require(:recipe).permit(:tittle, :instructions)
+   end
+end
+</pre> 
+        <p>When the user of a Rails application selects an action, e.g. "Show" - the controller will execute any code in the appropriate section - "def show" - and then by default will render a template of the same name - "show.html.erb". This default behavior can be overwritten.</p> 
+        <p>The controller uses ActiveRecord methods such as <i>find, find_all, new, save, update_attributes, and destroy</i> to move data to and from the database tables. Note that you do not have to write any SQL statements, rails will take care of it automatically.</p> 
+        <p>This single line of code will bring the database table to life. It will provide with a simple interface to your data, and ways of −</p> 
+        <ul class="list"> 
+         <li>Creating new entries</li> 
+         <li>Editing current entries</li> 
+         <li>Viewing current entries</li> 
+         <li>Destroying current entries</li> 
+        </ul> 
+        <p>When creating or editing an entry, scaffold will do all the hard work like form generation and handling for you, and will even provide clever form generation, supporting the following types of inputs −</p> 
+        <ul class="list"> 
+         <li>Simple text strings</li> 
+         <li>Text areas (or large blocks of text)</li> 
+         <li>Date selectors</li> 
+         <li>Date-time selectors</li> 
+        </ul> 
+        <p>You can use Rails Migrations to create and maintain tables.</p> 
+        <pre class="result notranslate">
+rake db:migrate RAILS_ENV=development
+</pre> 
+        <p>Now, go to the cookbook directory and run the Web Server using the following command −</p> 
+        <pre class="result notranslate">
+cookbook&gt; rails server
+</pre> 
+        <p>Now, open a browser and navigate to <b>http://127.0.0.1:3000/recipe/new.</b> This will provide you a screen to create new entries in the recipes table. A screenshot is shown below −</p> 
+        <img src="/ruby-on-rails/images/create-recipe.gif" alt="Create Recipe"> 
+        <p>Once you press the <b>Create</b> button to create a new recipe, your record is added into the recipes table and it shows the following result −</p> 
+        <img src="/ruby-on-rails/images/added-recipe.gif" alt="Create Recipe"> 
+        <p>You can see the option to edit, show, and destroy the records. So, play around with these options.</p> 
+        <p>You can also list down all the recipes available in the recipes table using the URL http://127.0.0.1:3000/recipe/list.</p> 
+        <h2>Enhancing the Model</h2> 
+        <p>Rails gives you a lot of error handling for free. To understand this, add some validation rules to the empty recipe model −</p> 
+        <p>Modify app/models/recipe.rb as follows and then test your application −</p> 
+        <pre class="result notranslate">
+class Recipe &lt; ActiveRecord::Base
+   validates_length_of :title, :within =&gt; 1..20
+   validates_uniqueness_of :title, :message =&gt; "already exists"
+end
+</pre> 
+        <p>These entries will give automatic checking.</p> 
+        <ul class="list"> 
+         <li><p><b>validates_length_of</b> − the field is not blank and not too long.</p></li> 
+         <li><p><b>validates_uniqueness_of</b> − duplicate values are trapped. Instead of the default Rails error message, we have given a custom message here.</p></li> 
+        </ul> 
+        <h2>Alternative Way to Create Scaffolding</h2> 
+        <p>Create an application as shown above and <b>The Generated Scaffold Code</b> as shown below</p> 
+        <pre class="result notranslate">
+rails g scaffold Recipe tittle:string instructions:text
+</pre> 
+        <p>Above code generates the auto files with data base by using with sqlite3 with tittle and instruction column as shown below an image.</p> 
+        <img src="/ruby-on-rails/images/scoffold.jpg" alt="Scaffold"> 
+        <p>we need to migrate the data base by using below syntax.</p> 
+        <pre class="result notranslate">
+$ rake db:migrate RAILS_ENV=development
+</pre> 
+        <p>Finally run the application by using the following command line −</p> 
+        <pre class="result notranslate">
+rails server
+</pre> 
+        <p>It will generate the result as shown above output images.</p> 
+        <h2>The Views</h2> 
+        <p>All the views and corresponding all the controller methods are created by <b>scaffold</b> command and they are available in the app/views/recipes directory.</p> 
+        <h2>How Scaffolding is Different?</h2> 
+        <p>If you have gone through the previous chapters, then you must have seen that we had created methods to list, show, delete and create data etc., but scaffolding does that job automatically.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/ruby-on-rails/rails-layouts.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/ruby-on-rails/rails-and-ajax.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/ruby-on-rails/rails-scaffolding.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

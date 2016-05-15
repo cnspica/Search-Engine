@@ -1,0 +1,1194 @@
+http://tutorialspoint.com/nodejs/nodejs_file_system.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Node.js File System</title> 
+  <meta name="description" content="Node.js File System - Learn Node.js framework in simple and easy steps starting from Introduction, Environment Setup, Node Package Manager, Node Callbacks Concept, Node Buffers Module, Node Streams, Node File System, Node Utility Modules, Node Web Module, Node Express Application, Node RESTFul API, Node Scaling Application"> 
+  <meta name="keywords" content="Introduction, Environment Setup, Node Package Manager, Global vs Local Installation, Node Callbacks Concept, locking vs non-blocking Code, Event Driven Programming, Event Loop Overview, Event Emitters, Implementing Callbacks, Node Buffers Module,JSON to JS Objects, JS Objects to JSON, Buffer Objects, Node Streams, Reading Stream, Writing Stream, Piping Stream, Node File System, File System Module, Synchronous vs Asynchronous Node, Utility Modules,Node Console Module, Node Process Module, Node OS Module, Node Path Module, Node Net Module, Node DNS Module, Node Domain Module, Node Globals Module, Node Web Module,HTTP Servers with Node.js, HTTP Clients with Node.js, Node Express Application, Express Overview, Installing Express, Express Generator, Node RESTFul API, Node Scaling Application,The exec function,The spawn function,The fork function"> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/nodejs/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #82af25 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #82af25 !important;}
+.submenu-item{ border-bottom: 2px solid #82af25 !important; border-top: 2px solid #82af25 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/nodejs/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/nodejs/images/nodejs-mini-logo.jpg" alt="Node.js Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Node.js Tutorial</li> 
+        <li><a href="/nodejs/index.htm">Node.js Home</a></li> 
+        <li><a href="/nodejs/nodejs_introduction.htm">Node.js Introduction</a></li> 
+        <li><a href="/nodejs/nodejs_environment_setup.htm">Node.js Environment Setup</a></li> 
+        <li><a href="/nodejs/nodejs_first_application.htm">Node.js First Application</a></li> 
+        <li><a href="/nodejs/nodejs_repl_terminal.htm">Node.js REPL Terminal</a></li> 
+        <li><a href="/nodejs/nodejs_npm.htm">Node.js Package Manager (NPM)</a></li> 
+        <li><a href="/nodejs/nodejs_callbacks_concept.htm">Node.js Callbacks Concept</a></li> 
+        <li><a href="/nodejs/nodejs_event_loop.htm">Node.js Event Loop</a></li> 
+        <li><a href="/nodejs/nodejs_event_emitter.htm">Node.js Event Emitter</a></li> 
+        <li><a href="/nodejs/nodejs_buffers.htm">Node.js Buffers</a></li> 
+        <li><a href="/nodejs/nodejs_streams.htm">Node.js Streams</a></li> 
+        <li><a href="/nodejs/nodejs_file_system.htm">Node.js File System</a></li> 
+        <li><a href="/nodejs/nodejs_global_objects.htm">Node.js Global Objects</a></li> 
+        <li><a href="/nodejs/nodejs_utitlity_module.htm">Node.js Utility Modules</a></li> 
+        <li><a href="/nodejs/nodejs_web_module.htm">Node.js Web Module</a></li> 
+        <li><a href="/nodejs/nodejs_express_framework.htm">Node.js Express Framework</a></li> 
+        <li><a href="/nodejs/nodejs_restful_api.htm">Node.js RESTFul API</a></li> 
+        <li><a href="/nodejs/nodejs_scaling_application.htm">Node.js Scaling Application</a></li> 
+        <li><a href="/nodejs/nodejs_packaging.htm">Node.js Packaging</a></li> 
+        <li class="heading">Node.js Useful Resources</li> 
+        <li><a href="/nodejs/nodejs_questions_answers.htm">Node.js - Questions and Answers</a></li> 
+        <li><a href="/nodejs/nodejs_quick_guide.htm">Node.js - Quick Guide</a></li> 
+        <li><a href="/nodejs/nodejs_useful_resources.htm">Node.js - Useful Resources</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Node.js - File System</h1> 
+        <hr> 
+        <div class="topgooglead"> 
+         <div class="topadtag">
+          Advertisements
+         </div> 
+         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+         <ins class="adsbygoogle top_ad_slot" style="display:inline-block;" data-ad-client="ca-pub-7133395778201029" data-ad-slot="2813390526"> </ins> 
+         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/nodejs/nodejs_streams.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/nodejs/nodejs_global_objects.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>Node implements File I/O using simple wrappers around standard POSIX functions. Node File System (fs) module can be imported using following syntax:</p> 
+        <pre class="prettyprint notranslate">
+var fs = require("fs")
+</pre> 
+        <h2>Synchronous vs Asynchronous</h2> 
+        <p>Every method in fs module have synchronous as well as asynchronous form. Asynchronous methods takes a last parameter as completion function callback and first parameter of the callback function is error. It is preferred to use asynchronous method instead of synchronous method as former never block the program execution where as the second one does.</p> 
+        <h3>Example</h3> 
+        <p>Create a text file named <b>input.txt</b> having following content</p> 
+        <pre class="result notranslate" id="input_txt">
+Tutorials Point is giving self learning content
+to teach the world in simple and easy way!!!!!
+</pre> 
+        <p>Let us create a js file named <b>main.js</b> having the following code.</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+
+// Asynchronous read
+fs.readFile('input.txt', function (err, data) {
+   if (err) {
+       return console.error(err);
+   }
+   console.log("Asynchronous read: " + data.toString());
+});
+
+// Synchronous read
+var data = fs.readFileSync('input.txt');
+console.log("Synchronous read: " + data.toString());
+
+console.log("Program Ended");
+</pre>  
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Synchronous read: Tutorials Point is giving self learning content
+to teach the world in simple and easy way!!!!!
+
+Program Ended
+Asynchronous read: Tutorials Point is giving self learning content
+to teach the world in simple and easy way!!!!!
+</pre> 
+        <p>Following section will give good examples on major File I/O methods.</p> 
+        <h2>Open a File</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of the method to open a file in asynchronous mode:</p> 
+        <pre class="prettyprint notranslate">
+fs.open(path, flags[, mode], callback)
+</pre> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>path</b> - This is string having file name including path.</p></li> 
+         <li><p><b>flags</b> - Flag tells the behavior of the file to be opened. All possible values have been mentioned below.</p></li> 
+         <li><p><b>mode</b> - This sets the file mode (permission and sticky bits), but only if the file was created. It defaults to 0666, readable and writeable.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets two arguments (err, fd).</p></li> 
+        </ul> 
+        <h2>Flags</h2> 
+        <p>Flags for read/write operations are:</p> 
+        <table class="src"> 
+         <tbody>
+          <tr>
+           <th>Flag</th>
+           <th>Description</th>
+          </tr> 
+          <tr>
+           <td>r</td>
+           <td>Open file for reading. An exception occurs if the file does not exist.</td>
+          </tr> 
+          <tr>
+           <td>r+</td>
+           <td> Open file for reading and writing. An exception occurs if the file does not exist.</td>
+          </tr> 
+          <tr>
+           <td>rs</td>
+           <td>Open file for reading in synchronous mode.</td>
+          </tr> 
+          <tr>
+           <td>rs+</td>
+           <td>Open file for reading and writing, telling the OS to open it synchronously. See notes for 'rs' about using this with caution.</td>
+          </tr> 
+          <tr>
+           <td>w</td>
+           <td>Open file for writing. The file is created (if it does not exist) or truncated (if it exists).</td>
+          </tr> 
+          <tr>
+           <td>wx</td>
+           <td>Like 'w' but fails if path exists.</td>
+          </tr> 
+          <tr>
+           <td>w+</td>
+           <td>Open file for reading and writing. The file is created (if it does not exist) or truncated (if it exists).</td>
+          </tr> 
+          <tr>
+           <td>wx+</td>
+           <td>Like 'w+' but fails if path exists.</td>
+          </tr> 
+          <tr>
+           <td>a</td>
+           <td>Open file for appending. The file is created if it does not exist.</td>
+          </tr> 
+          <tr>
+           <td>ax</td>
+           <td>Like 'a' but fails if path exists.</td>
+          </tr> 
+          <tr>
+           <td>a+</td>
+           <td>Open file for reading and appending. The file is created if it does not exist.</td>
+          </tr> 
+          <tr>
+           <td>ax+</td>
+           <td>Like 'a+' but fails if path exists.</td>
+          </tr> 
+         </tbody>
+        </table> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code to open a file input.txt for reading and writing.</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+
+// Asynchronous - Opening File
+console.log("Going to open file!");
+fs.open('input.txt', 'r+', function(err, fd) {
+   if (err) {
+       return console.error(err);
+   }
+  console.log("File opened successfully!");     
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to open file!
+File opened successfully!
+</pre> 
+        <h2>Get File information</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of the method to get the information about a file:</p> 
+        <pre class="prettyprint notranslate">
+fs.stat(path, callback)
+</pre> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>path</b> - This is string having file name including path.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets two arguments (err, stats) where <b>stats</b> is an object of fs.Stats type which is printed below in the example.</p></li> 
+        </ul> 
+        <p>Apart from the important attributes which are printed below in the example, there are number of useful methods available in <b>fs.Stats</b> class which can be used to check file type. These methods are given in the following table.</p> 
+        <table class="src"> 
+         <tbody>
+          <tr>
+           <th>Method</th>
+           <th>Description</th>
+          </tr> 
+          <tr>
+           <td>stats.isFile()</td>
+           <td>Returns true if file type of a simple file.</td>
+          </tr> 
+          <tr>
+           <td>stats.isDirectory()</td>
+           <td>Returns true if file type of a directory.</td>
+          </tr> 
+          <tr>
+           <td>stats.isBlockDevice()</td>
+           <td>Returns true if file type of a block device.</td>
+          </tr> 
+          <tr>
+           <td>stats.isCharacterDevice()</td>
+           <td>Returns true if file type of a character device.</td>
+          </tr> 
+          <tr>
+           <td>stats.isSymbolicLink()</td>
+           <td>Returns true if file type of a symbolic link.</td>
+          </tr> 
+          <tr>
+           <td>stats.isFIFO()</td>
+           <td>Returns true if file type of a FIFO.</td>
+          </tr> 
+          <tr>
+           <td>stats.isSocket()</td>
+           <td>Returns true if file type of asocket.</td>
+          </tr> 
+         </tbody>
+        </table> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+
+console.log("Going to get file info!");
+fs.stat('input.txt', function (err, stats) {
+   if (err) {
+       return console.error(err);
+   }
+   console.log(stats);
+   console.log("Got file info successfully!");
+   
+   // Check file type
+   console.log("isFile ? " + stats.isFile());
+   console.log("isDirectory ? " + stats.isDirectory());    
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to get file info!
+{ dev: 1792,
+  mode: 33188,
+  nlink: 1,
+  uid: 48,
+  gid: 48,
+  rdev: 0,
+  blksize: 4096,
+  ino: 4318127,
+  size: 97,
+  blocks: 8,
+  atime: Sun Mar 22 2015 13:40:00 GMT-0500 (CDT),
+  mtime: Sun Mar 22 2015 13:40:57 GMT-0500 (CDT),
+  ctime: Sun Mar 22 2015 13:40:57 GMT-0500 (CDT) }
+Got file info successfully!
+isFile ? true
+isDirectory ? false
+</pre> 
+        <h2>Writing File</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of one of the methods to write into a file:</p> 
+        <pre class="prettyprint notranslate">
+fs.writeFile(filename, data[, options], callback)
+</pre> 
+        <p>This method will over-write the file if file already exists. If you want to write into an existing file then you should use another method available.</p> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>path</b> - This is string having file name including path.</p></li> 
+         <li><p><b>data</b> - This is the String or Buffer to be written into the file.</p></li> 
+         <li><p><b>options</b> - The third parameter is an object which will hold {encoding, mode, flag}. By default encoding is utf8, mode is octal value 0666 and flag is 'w'</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets a single parameter err and used to to return error in case of any writing error.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+
+console.log("Going to write into existing file");
+fs.writeFile('input.txt', 'Simply Easy Learning!',  function(err) {
+   if (err) {
+       return console.error(err);
+   }
+   console.log("Data written successfully!");
+   console.log("Let's read newly written data");
+   fs.readFile('input.txt', function (err, data) {
+      if (err) {
+         return console.error(err);
+      }
+      console.log("Asynchronous read: " + data.toString());
+   });
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to write into existing file
+Data written successfully!
+Let's read newly written data
+Asynchronous read: Simply Easy Learning!
+</pre> 
+        <h2>Reading File</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of one of the methods to read from a file:</p> 
+        <pre class="prettyprint notranslate">
+fs.read(fd, buffer, offset, length, position, callback)
+</pre> 
+        <p>This method will use file descriptor to read the file, if you want to read file using file name directly then you should use another method available.</p> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>fd</b> - This is the file descriptor returned by file fs.open() method.</p></li> 
+         <li><p><b>buffer</b> - This is the buffer that the data will be written to.</p></li> 
+         <li><p><b>offset</b> - This is the offset in the buffer to start writing at.</p></li> 
+         <li><p><b>length</b> - This is an integer specifying the number of bytes to read.</p></li> 
+         <li><p><b>position</b> - This is an integer specifying where to begin reading from in the file. If position is null, data will be read from the current file position.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets the three arguments, (err, bytesRead, buffer).</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+var buf = new Buffer(1024);
+
+console.log("Going to open an existing file");
+fs.open('input.txt', 'r+', function(err, fd) {
+   if (err) {
+       return console.error(err);
+   }
+   console.log("File opened successfully!");
+   console.log("Going to read the file");
+   fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){
+      if (err){
+         console.log(err);
+      }
+      console.log(bytes + " bytes read");
+      
+      // Print only read bytes to avoid junk.
+      if(bytes &gt; 0){
+         console.log(buf.slice(0, bytes).toString());
+      }
+   });
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to open an existing file
+File opened successfully!
+Going to read the file
+97 bytes read
+Tutorials Point is giving self learning content
+to teach the world in simple and easy way!!!!!
+</pre> 
+        <h2>Closing File</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of one of the methods to close an opened file:</p> 
+        <pre class="prettyprint notranslate">
+fs.close(fd, callback)
+</pre> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>fd</b> - This is the file descriptor returned by file fs.open() method.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets no arguments other than a possible exception are given to the completion callback.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+var buf = new Buffer(1024);
+
+console.log("Going to open an existing file");
+fs.open('input.txt', 'r+', function(err, fd) {
+   if (err) {
+       return console.error(err);
+   }
+   console.log("File opened successfully!");
+   console.log("Going to read the file");
+   fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){
+      if (err){
+         console.log(err);
+      }
+
+      // Print only read bytes to avoid junk.
+      if(bytes &gt; 0){
+         console.log(buf.slice(0, bytes).toString());
+      }
+
+      // Close the opened file.
+      fs.close(fd, function(err){
+         if (err){
+            console.log(err);
+         } 
+         console.log("File closed successfully.");
+      });
+   });
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to open an existing file
+File opened successfully!
+Going to read the file
+Tutorials Point is giving self learning content
+to teach the world in simple and easy way!!!!!
+
+File closed successfully.
+</pre> 
+        <h2>Truncate File</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of the method to truncate an opened file:</p> 
+        <pre class="prettyprint notranslate">
+fs.ftruncate(fd, len, callback)
+</pre> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>fd</b> - This is the file descriptor returned by file fs.open() method.</p></li> 
+         <li><p><b>len</b> - This is the length of the file after which file will be truncated.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets no arguments other than a possible exception are given to the completion callback.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+var buf = new Buffer(1024);
+
+console.log("Going to open an existing file");
+fs.open('input.txt', 'r+', function(err, fd) {
+   if (err) {
+       return console.error(err);
+   }
+   console.log("File opened successfully!");
+   console.log("Going to truncate the file after 10 bytes");
+   
+   // Truncate the opened file.
+   fs.ftruncate(fd, 10, function(err){
+      if (err){
+         console.log(err);
+      } 
+      console.log("File truncated successfully.");
+      console.log("Going to read the same file"); 
+      fs.read(fd, buf, 0, buf.length, 0, function(err, bytes){
+         if (err){
+            console.log(err);
+         }
+
+         // Print only read bytes to avoid junk.
+         if(bytes &gt; 0){
+            console.log(buf.slice(0, bytes).toString());
+         }
+
+         // Close the opened file.
+         fs.close(fd, function(err){
+            if (err){
+               console.log(err);
+            } 
+            console.log("File closed successfully.");
+         });
+      });
+   });
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to open an existing file
+File opened successfully!
+Going to truncate the file after 10 bytes
+File truncated successfully.
+Going to read the same file
+Tutorials 
+File closed successfully.
+</pre> 
+        <h2>Delete File</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of the method to delete a file:</p> 
+        <pre class="prettyprint notranslate">
+fs.unlink(path, callback)
+</pre> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>path</b> - This is the file name including path.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets no arguments other than a possible exception are given to the completion callback.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+
+console.log("Going to delete an existing file");
+fs.unlink('input.txt', function(err) {
+   if (err) {
+       return console.error(err);
+   }
+   console.log("File deleted successfully!");
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to delete an existing file
+File deleted successfully!
+</pre> 
+        <h2>Create Directory</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of the method to create a directory:</p> 
+        <pre class="prettyprint notranslate">
+fs.mkdir(path[, mode], callback)
+</pre> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>path</b> - This is the directory name including path.</p></li> 
+         <li><p><b>mode</b> - This is the directory permission to be set. Defaults to 0777.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets no arguments other than a possible exception are given to the completion callback.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+
+console.log("Going to create directory /tmp/test");
+fs.mkdir('/tmp/test',function(err){
+   if (err) {
+       return console.error(err);
+   }
+   console.log("Directory created successfully!");
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to create directory /tmp/test
+Directory created successfully!
+</pre> 
+        <h2>Read Directory</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of the method to read a directory:</p> 
+        <pre class="prettyprint notranslate">
+fs.readdir(path, callback)
+</pre> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>path</b> - This is the directory name including path.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets two arguments (err, files) where files is an array of the names of the files in the directory excluding '.' and '..'.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+
+console.log("Going to read directory /tmp");
+fs.readdir("/tmp/",function(err, files){
+   if (err) {
+       return console.error(err);
+   }
+   files.forEach( function (file){
+       console.log( file );
+   });
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to read directory /tmp
+ccmzx99o.out
+ccyCSbkF.out
+employee.ser
+hsperfdata_apache
+test
+test.txt
+</pre> 
+        <h2>Remove Directory</h2> 
+        <h3>Syntax</h3> 
+        <p>Following is the syntax of the method to remove a directory:</p> 
+        <pre class="prettyprint notranslate">
+fs.rmdir(path, callback)
+</pre> 
+        <h3>Parameters</h3> 
+        <p>Here is the description of the parameters used:</p> 
+        <ul class="list"> 
+         <li><p><b>path</b> - This is the directory name including path.</p></li> 
+         <li><p><b>callback</b> - This is the callback function which gets no arguments other than a possible exception are given to the completion callback.</p></li> 
+        </ul> 
+        <h3>Example</h3> 
+        <p>Let us create a js file named <b>main.js</b> having the following code:</p> 
+        <pre class="prettyprint tryit" title=",,,input_txt">
+var fs = require("fs");
+
+console.log("Going to delete directory /tmp/test");
+fs.rmdir("/tmp/test",function(err){
+   if (err) {
+       return console.error(err);
+   }
+   console.log("Going to read directory /tmp");
+   fs.readdir("/tmp/",function(err, files){
+      if (err) {
+          return console.error(err);
+      }
+      files.forEach( function (file){
+          console.log( file );
+      });
+   });
+});
+</pre> 
+        <p>Now run the main.js to see the result:</p> 
+        <pre class="prettyprint notranslate">
+$ node main.js
+</pre> 
+        <p>Verify the Output</p> 
+        <pre class="result notranslate">
+Going to read directory /tmp
+ccmzx99o.out
+ccyCSbkF.out
+employee.ser
+hsperfdata_apache
+test.txt
+</pre> 
+        <h2>Methods Reference</h2> 
+        <p>Following is a reference of File System module available in Node.js. For a further detail you can refer to official documentation.</p> 
+        <table class="src"> 
+         <tbody>
+          <tr>
+           <th>SN</th>
+           <th>Method &amp; Description</th>
+          </tr> 
+          <tr>
+           <td>1</td>
+           <td><b>fs.rename(oldPath, newPath, callback)</b><br>Asynchronous rename(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>2</td>
+           <td><b>fs.ftruncate(fd, len, callback)</b><br>Asynchronous ftruncate(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>3</td>
+           <td><b>fs.ftruncateSync(fd, len)</b><br>Synchronous ftruncate()</td>
+          </tr> 
+          <tr>
+           <td>4</td>
+           <td><b>fs.truncate(path, len, callback)</b><br>Asynchronous truncate(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>5</td>
+           <td><b>fs.truncateSync(path, len)</b><br>Synchronous truncate()</td>
+          </tr> 
+          <tr>
+           <td>6</td>
+           <td><b>fs.chown(path, uid, gid, callback)</b><br>Asynchronous chown(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>7</td>
+           <td><b>fs.chownSync(path, uid, gid)</b><br>Synchronous chown()</td>
+          </tr> 
+          <tr>
+           <td>8</td>
+           <td><b>fs.fchown(fd, uid, gid, callback)</b><br>Asynchronous fchown(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>9</td>
+           <td><b>fs.fchownSync(fd, uid, gid)</b><br>Synchronous fchown()</td>
+          </tr> 
+          <tr>
+           <td>10</td>
+           <td><b>fs.lchown(path, uid, gid, callback)</b><br>Asynchronous lchown(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>11</td>
+           <td><b>fs.lchownSync(path, uid, gid)</b><br>Synchronous lchown()</td>
+          </tr> 
+          <tr>
+           <td>12</td>
+           <td><b>fs.chmod(path, mode, callback)</b><br>Asynchronous chmod(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>13</td>
+           <td><b>fs.chmodSync(path, mode)</b><br>Synchronous chmod().</td>
+          </tr> 
+          <tr>
+           <td>14</td>
+           <td><b>fs.fchmod(fd, mode, callback)</b><br>Asynchronous fchmod(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>15</td>
+           <td><b>fs.fchmodSync(fd, mode)</b><br>Synchronous fchmod().</td>
+          </tr> 
+          <tr>
+           <td>16</td>
+           <td><b>fs.lchmod(path, mode, callback)</b><br>Asynchronous lchmod(). No arguments other than a possible exception are given to the completion callback.Only available on Mac OS X.</td>
+          </tr> 
+          <tr>
+           <td>17</td>
+           <td><b>fs.lchmodSync(path, mode)</b><br>Synchronous lchmod().</td>
+          </tr> 
+          <tr>
+           <td>18</td>
+           <td><b>fs.stat(path, callback)</b><br>Asynchronous stat(). The callback gets two arguments (err, stats) where stats is a fs.Stats object.</td>
+          </tr> 
+          <tr>
+           <td>19</td>
+           <td><b>fs.lstat(path, callback)</b><br>Asynchronous lstat(). The callback gets two arguments (err, stats) where stats is a fs.Stats object. lstat() is identical to stat(), except that if path is a symbolic link, then the link itself is stat-ed, not the file that it refers to.</td>
+          </tr> 
+          <tr>
+           <td>20</td>
+           <td><b>fs.fstat(fd, callback)</b><br>Asynchronous fstat(). The callback gets two arguments (err, stats) where stats is a fs.Stats object. fstat() is identical to stat(), except that the file to be stat-ed is specified by the file descriptor fd.</td>
+          </tr> 
+          <tr>
+           <td>21</td>
+           <td><b>fs.statSync(path)</b><br>Synchronous stat(). Returns an instance of fs.Stats.</td>
+          </tr> 
+          <tr>
+           <td>22</td>
+           <td><b>fs.lstatSync(path)</b><br>Synchronous lstat(). Returns an instance of fs.Stats.</td>
+          </tr> 
+          <tr>
+           <td>23</td>
+           <td><b>fs.fstatSync(fd)</b><br>Synchronous fstat(). Returns an instance of fs.Stats.</td>
+          </tr> 
+          <tr>
+           <td>24</td>
+           <td><b>fs.link(srcpath, dstpath, callback)</b><br>Asynchronous link(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>25</td>
+           <td><b>fs.linkSync(srcpath, dstpath)</b><br>Synchronous link().</td>
+          </tr> 
+          <tr>
+           <td>26</td>
+           <td><b>fs.symlink(srcpath, dstpath[, type], callback)</b><br>Asynchronous symlink(). No arguments other than a possible exception are given to the completion callback. The type argument can be set to 'dir', 'file', or 'junction' (default is 'file') and is only available on Windows (ignored on other platforms). Note that Windows junction points require the destination path to be absolute. When using 'junction', the destination argument will automatically be normalized to absolute path.</td>
+          </tr> 
+          <tr>
+           <td>27</td>
+           <td><b>fs.symlinkSync(srcpath, dstpath[, type])</b><br>Synchronous symlink().</td>
+          </tr> 
+          <tr>
+           <td>28</td>
+           <td><b>fs.readlink(path, callback)</b><br>Asynchronous readlink(). The callback gets two arguments (err, linkString).</td>
+          </tr> 
+          <tr>
+           <td>29</td>
+           <td><b>fs.realpath(path[, cache], callback)</b><br>Asynchronous realpath(). The callback gets two arguments (err, resolvedPath). May use process.cwd to resolve relative paths. cache is an object literal of mapped paths that can be used to force a specific path resolution or avoid additional fs.stat calls for known real paths.</td>
+          </tr> 
+          <tr>
+           <td>30</td>
+           <td><b>fs.realpathSync(path[, cache])</b><br>Synchronous realpath(). Returns the resolved path.</td>
+          </tr> 
+          <tr>
+           <td>31</td>
+           <td><b>fs.unlink(path, callback)</b><br>Asynchronous unlink(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>32</td>
+           <td><b>fs.unlinkSync(path)</b><br>Synchronous unlink().</td>
+          </tr> 
+          <tr>
+           <td>33</td>
+           <td><b>fs.rmdir(path, callback)</b><br>Asynchronous rmdir(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>34</td>
+           <td><b>fs.rmdirSync(path)</b><br>Synchronous rmdir().</td>
+          </tr> 
+          <tr>
+           <td>35</td>
+           <td><b>fs.mkdir(path[, mode], callback)</b><br>SAsynchronous mkdir(2). No arguments other than a possible exception are given to the completion callback. mode defaults to 0777.</td>
+          </tr> 
+          <tr>
+           <td>36</td>
+           <td><b>fs.mkdirSync(path[, mode])</b><br>Synchronous mkdir().</td>
+          </tr> 
+          <tr>
+           <td>37</td>
+           <td><b>fs.readdir(path, callback)</b><br>Asynchronous readdir(3). Reads the contents of a directory. The callback gets two arguments (err, files) where files is an array of the names of the files in the directory excluding '.' and '..'.</td>
+          </tr> 
+          <tr>
+           <td>38</td>
+           <td><b>fs.readdirSync(path)</b><br>Synchronous readdir(). Returns an array of filenames excluding '.' and '..'.</td>
+          </tr> 
+          <tr>
+           <td>39</td>
+           <td><b>fs.close(fd, callback)</b><br>Asynchronous close(). No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>40</td>
+           <td><b>fs.closeSync(fd)</b><br>Synchronous close().</td>
+          </tr> 
+          <tr>
+           <td>41</td>
+           <td><b>fs.open(path, flags[, mode], callback)</b><br>Asynchronous file open.</td>
+          </tr> 
+          <tr>
+           <td>42</td>
+           <td><b>fs.openSync(path, flags[, mode])</b><br>Synchronous version of fs.open().</td>
+          </tr> 
+          <tr>
+           <td>43</td>
+           <td><b>fs.utimes(path, atime, mtime, callback)</b><br>&nbsp;</td>
+          </tr> 
+          <tr>
+           <td>44</td>
+           <td><b>fs.utimesSync(path, atime, mtime)</b><br>Change file timestamps of the file referenced by the supplied path.</td>
+          </tr> 
+          <tr>
+           <td>45</td>
+           <td><b>fs.futimes(fd, atime, mtime, callback)</b><br>&nbsp;</td>
+          </tr> 
+          <tr>
+           <td>46</td>
+           <td><b>fs.futimesSync(fd, atime, mtime)</b><br>Change the file timestamps of a file referenced by the supplied file descriptor.</td>
+          </tr> 
+          <tr>
+           <td>47</td>
+           <td><b>fs.fsync(fd, callback)</b><br>Asynchronous fsync. No arguments other than a possible exception are given to the completion callback.</td>
+          </tr> 
+          <tr>
+           <td>48</td>
+           <td><b>fs.fsyncSync(fd)</b><br>Synchronous fsync.</td>
+          </tr> 
+          <tr>
+           <td>49</td>
+           <td><b>fs.write(fd, buffer, offset, length[, position], callback)</b><br>Write buffer to the file specified by fd.</td>
+          </tr> 
+          <tr>
+           <td>50</td>
+           <td><b>fs.write(fd, data[, position[, encoding]], callback)</b><br>Write data to the file specified by fd. If data is not a Buffer instance then the value will be coerced to a string.</td>
+          </tr> 
+          <tr>
+           <td>51</td>
+           <td><b>fs.writeSync(fd, buffer, offset, length[, position])</b><br>Synchronous versions of fs.write(). Returns the number of bytes written.</td>
+          </tr> 
+          <tr>
+           <td>52</td>
+           <td><b>fs.writeSync(fd, data[, position[, encoding]])</b><br>Synchronous versions of fs.write(). Returns the number of bytes written.</td>
+          </tr> 
+          <tr>
+           <td>53</td>
+           <td><b>fs.read(fd, buffer, offset, length, position, callback)</b><br>Read data from the file specified by fd.</td>
+          </tr> 
+          <tr>
+           <td>54</td>
+           <td><b>fs.readSync(fd, buffer, offset, length, position)</b><br>Synchronous version of fs.read. Returns the number of bytesRead.</td>
+          </tr> 
+          <tr>
+           <td>55</td>
+           <td><b>fs.readFile(filename[, options], callback)</b><br>Asynchronously reads the entire contents of a file.</td>
+          </tr> 
+          <tr>
+           <td>56</td>
+           <td><b>fs.readFileSync(filename[, options])</b><br>Synchronous version of fs.readFile. Returns the contents of the filename.</td>
+          </tr> 
+          <tr>
+           <td>57</td>
+           <td><b>fs.writeFile(filename, data[, options], callback)</b><br>Asynchronously writes data to a file, replacing the file if it already exists. data can be a string or a buffer.</td>
+          </tr> 
+          <tr>
+           <td>58</td>
+           <td><b>fs.writeFileSync(filename, data[, options])</b><br>The synchronous version of fs.writeFile.</td>
+          </tr> 
+          <tr>
+           <td>59</td>
+           <td><b>fs.appendFile(filename, data[, options], callback)</b><br>Asynchronously append data to a file, creating the file if it not yet exists. data can be a string or a buffer.</td>
+          </tr> 
+          <tr>
+           <td>60</td>
+           <td><b>fs.appendFileSync(filename, data[, options])</b><br>The synchronous version of fs.appendFile.</td>
+          </tr> 
+          <tr>
+           <td>61</td>
+           <td><b>fs.watchFile(filename[, options], listener)</b><br>Watch for changes on filename. The callback listener will be called each time the file is accessed.</td>
+          </tr> 
+          <tr>
+           <td>62</td>
+           <td><b>fs.unwatchFile(filename[, listener])</b><br>Stop watching for changes on filename. If listener is specified, only that particular listener is removed. Otherwise, all listeners are removed and you have effectively stopped watching filename.</td>
+          </tr> 
+          <tr>
+           <td>63</td>
+           <td><b>fs.watch(filename[, options][, listener])</b><br>Watch for changes on filename, where filename is either a file or a directory. The returned object is a fs.FSWatcher.</td>
+          </tr> 
+          <tr>
+           <td>64</td>
+           <td><b>fs.exists(path, callback)</b><br>Test whether or not the given path exists by checking with the file system. Then call the callback argument with either true or false.</td>
+          </tr> 
+          <tr>
+           <td>65</td>
+           <td><b>fs.existsSync(path)</b><br>Synchronous version of fs.exists.</td>
+          </tr> 
+          <tr>
+           <td>66</td>
+           <td><b>fs.access(path[, mode], callback)</b><br>Tests a user's permissions for the file specified by path. mode is an optional integer that specifies the accessibility checks to be performed.</td>
+          </tr> 
+          <tr>
+           <td>67</td>
+           <td><b>fs.accessSync(path[, mode])</b><br>Synchronous version of fs.access. This throws if any accessibility checks fail, and does nothing otherwise.</td>
+          </tr> 
+          <tr>
+           <td>68</td>
+           <td><b>fs.createReadStream(path[, options])</b><br>Returns a new ReadStream object.</td>
+          </tr> 
+          <tr>
+           <td>69</td>
+           <td><b>fs.createWriteStream(path[, options])</b><br>Returns a new WriteStream object.</td>
+          </tr> 
+          <tr>
+           <td>70</td>
+           <td><b>fs.symlink(srcpath, dstpath[, type], callback)</b><br>Asynchronous symlink(). No arguments other than a possible exception are given to the completion callback. The type argument can be set to 'dir', 'file', or 'junction' (default is 'file') and is only available on Windows (ignored on other platforms). Note that Windows junction points require the destination path to be absolute. When using 'junction', the destination argument will automatically be normalized to absolute path.</td>
+          </tr> 
+         </tbody>
+        </table> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/nodejs/nodejs_streams.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div>
+        <div class="print-btn"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="pdf-btn"> 
+         <a href="/nodejs/pdf/nodejs_file_system.pdf" title="Node.js File System" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/nodejs/nodejs_global_objects.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/nodejs/nodejs_file_system.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/nodejs/nodejs_file_system.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/nodejs/nodejs_file_system.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/nodejs/nodejs_file_system.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/nodejs/nodejs_file_system.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/nodejs/nodejs_file_system.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('/nodejs/try_nodejs.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

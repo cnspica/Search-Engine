@@ -1,0 +1,1825 @@
+http://tex.blogoverflow.com/
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title> Stack Exchange TeX Blog</title> 
+  <link rel="alternate" type="application/rss+xml" title="TeX - LaTeX Stack Exchange Blog RSS Feed" href="http://tex.blogoverflow.com/feed/"> 
+  <link rel="shortcut icon" href="http://tex.blogoverflow.com/wp-content/themes/stackexchange/sites/tex/images/favicon.ico"> 
+  <link rel="stylesheet" href="http://tex.blogoverflow.com/wp-content/themes/stackexchange/style.css" type="text/css"> 
+  <link rel="stylesheet" href="http://tex.blogoverflow.com/wp-content/themes/stackexchange/print.css" type="text/css" media="print"> 
+  <link rel="pingback" href="http://tex.blogoverflow.com/xmlrpc.php"> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/tex.blogoverflow.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.8"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="seAuth-css" href="http://tex.blogoverflow.com/wp-content/plugins/seAuthentication/seAuthentication.css?ver=4.2.8" type="text/css" media="all"> 
+  <link rel="stylesheet" id="stackexchange_tex_stylesheet-css" href="http://tex.blogoverflow.com/wp-content/themes/stackexchange/sites/tex/style.css?ver=4.2.8" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=4.2.8"></script> 
+  <script type="text/javascript" src="http://tex.blogoverflow.com/wp-content/plugins/seAuthentication/seAuthentication.js?ver=4.2.8"></script> 
+  <style type="text/css">img.nothumb{border:0;margin:0 0 0 2px !important;}</style> 
+  <!-- Tweet This v1.8.3 b037 mode alpha --> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tex.blogoverflow.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://tex.blogoverflow.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 4.2.8"> 
+  <link rel="shortlink" href="http://wp.me/1Iecr"> 
+ </head> 
+ <body> 
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        var $siteSwitcher = $('#siteSwitcher-dialog');
+
+        if(document.location.href.indexOf("moderator.stackexchange.com") !== -1) {
+            $('.current-site-header').hide();
+            $('.current-site-container').hide();
+        }
+
+        $(document).click(function (e) {
+            if (e.target != $('.topbar-icon')[0] && !$.contains($siteSwitcher[0], e.target) && $siteSwitcher.is(':visible')) {
+                $('.logo-se').click();
+            }
+        });
+        $('.logo-se').click(function () {
+            $(this).parent().toggleClass('topbar-icon-on');
+            $siteSwitcher.css('top', $('.topbarWrapper').offset().top + $('.topbarWrapper').height());
+            $siteSwitcher.toggle();
+            return false;
+        });
+    });
+</script> 
+  <div class="topbarWrapper"> 
+   <div class="topbar"> 
+    <div id="siteSwitcher-dialog" style="display:none;"> 
+     <div class="siteSwitcher-dialog-header current-site-header">
+      <h3>current community</h3>
+     </div> 
+     <div class="siteSwitcher-dialog-content current-site-container"> 
+      <ul> 
+       <li> 
+        <div class="related-links"> 
+         <a href="//chat.stackexchange.com?host=tex.stackexchange.com">chat</a> 
+        </div> <a href="http://tex.stackexchange.com"> <img src="http://cdn.sstatic.net/Sites/tex/img/icon-32.png" width="16" height="16" class="favicon"> TeX - LaTeX </a> </li> 
+       <li> 
+        <div class="L-shaped-icon-container"> 
+         <span class="L-shaped-icon"></span> 
+        </div> <a href="//meta.tex.stackexchange.com"> <img src="http://cdn.sstatic.net/Sites/texmeta/img/icon-32.png" width="16" height="16" class="favicon"> TeX - LaTeX Meta </a> </li> 
+      </ul> 
+     </div> 
+     <div class="siteSwitcher-dialog-header">
+      <h3>more communities</h3>
+     </div> 
+     <div class="siteSwitcher-dialog-content"> 
+      <ul> 
+       <li class="more-communities"> Explore other Stack Exchange communities<br>on <a href="//stackexchange.com/sites">stackexchange.com</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="topbar-icon"> 
+     <a href="http://stackexchange.com" class="logo-se">Stack Exchange</a> 
+    </div> 
+    <div class="searchBox"> 
+     <form class="frmSearch" method="get" id="searchform" action="http://tex.blogoverflow.com/"> 
+      <input type="text" size="25" class="txtSearch" value="Search" name="s" id="s" onblur="if (this.value == '')  {this.value = 'Search';}" onfocus="if (this.value == 'Search')  {this.value = '';}"> 
+      <input type="hidden" class="btnSearch" id="searchsubmit" value="Search"> 
+     </form> 
+    </div> 
+    <div id="hlinks"> 
+     <ul id="top_nav_links">
+      <li class="page_item page-item-11"><a href="http://tex.blogoverflow.com/about/">About</a></li> 
+      <li class="page_item page-item-7"><a href="http://tex.blogoverflow.com/contributors/">Contributors</a></li> 
+      <li class="page_item page-item-16"><a href="http://tex.blogoverflow.com/archive/">Archive</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div id="header"> 
+    <!-- Header Starts --> 
+    <a href="http://tex.blogoverflow.com/"><img src="http://tex.blogoverflow.com/wp-content/themes/stackexchange/sites/tex/images/logo.png" alt="site title" class="logo-blog"></a> 
+    <!-- Header Ends --> 
+   </div> 
+   <div id="content"> 
+    <!-- Main Content Start --> 
+    <div class="contentWrapper"> 
+     <div id="mainbar"> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/09/latex-cookbook/">LaTeX Cookbook available to pre-order with 35% discount – updated</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-09-28</span> by 
+        <a href="http://tex.blogoverflow.com/author/stefankottwitz/" title="Posts by Stefan Kottwitz" rel="author">Stefan Kottwitz</a>. 
+        <a href="http://tex.blogoverflow.com/2015/09/latex-cookbook/#comments">1 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p><em><strong>Update:</strong> extended by 1 week, plus print book availability, see updated image.</em></p>
+         <em> </em>
+         <p><em>As I’m proud of the book: any TeX.SE user who took the pre-order discount but doesn’t like the print book at first sight, could send it to me if in original shape and I would refund personally. Can take copies for friends. :-) But this is limited to already registered TeX.SE users, 20 pcs in total, and 1 per person. For safety. :-D</em></p> 
+         <p>Dear friends of TeX.SE,</p> 
+         <p>after more than a year of work, I finished the <a href="http://bit.ly/1NGnDa3" target="_blank">LaTeX Cookbook</a>. It’s a great moment for me, and I’d like to share it with you. Especially, because the years here gave me a lot of inspiration and&nbsp;enlightenment.</p> 
+         <p>The book&nbsp;is a collection of useful and interesting LaTeX recipes. Those are examples with step by step instructions. Each how-to is followed by an explanation of how it works. Then additional tuning details follow.</p> 
+         <p><a href="http://bit.ly/1NGnDa3"><img class="aligncenter" src="http://latex-cookbook.net/media/img/latex-books-extended.png" alt="LaTeX books" width="550" height="413"></a></p> 
+         <div align="center><a href=">
+          Even though each&nbsp;recipe is self-contained, they run like a thread through the common fields in LaTeX. Some are:
+         </div> 
+         <ul> 
+          <li>Starting with document types such as books, presentations, leaftlets, and posters</li> 
+          <li>Shaping and tuning text and fonts</li> 
+          <li>Working with images and tables</li> 
+          <li>Creating bibliographies, glossaries, and indexes</li> 
+          <li>Using PDF specific features</li> 
+          <li>Doing math with a focus on advanced tasks such as plotting functions, drawing geometry, and doing actual calculations</li> 
+          <li>Creating diagrams such as flowcharts, pie charts, bar charts, and trees</li> 
+          <li>Applying LaTeX for various sciences</li> 
+         </ul> 
+         <p>Take a look:&nbsp;<a title="LaTeX Cookbook - Table of Contents" href="http://latex-cookbook.net/articles/contents/" target="_self">Table of Contents</a>.</p> 
+         <p>To give you a better look at the style of this book, I made a website for it:&nbsp;<a title="LaTeX Cookbook website" href="http://latex-cookbook.net/" target="_blank">LaTeX-Cookbook.net</a>.&nbsp;The website shows you</p> 
+         <p><a href="http://tex.blogoverflow.com/2015/09/latex-cookbook/#more-2417" class="more-link">more » </a></p> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/books/" rel="category tag">Books</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/08/registering-for-the-dante-autumn-meeting-2015/">Registering for the DANTE autumn meeting 2015</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-08-15</span> by 
+        <a href="http://tex.blogoverflow.com/author/stefankottwitz/" title="Posts by Stefan Kottwitz" rel="author">Stefan Kottwitz</a>. 
+        <a href="http://tex.blogoverflow.com/2015/08/registering-for-the-dante-autumn-meeting-2015/#comments">0 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p>I already wrote it on <a href="http://latex-community.org/">LaTeX-Community.org</a>: at <a class="postlink" href="http://www.dante.de/events/Herbst2015/anmeldung.html" rel="nofollow">http://www.dante.de/events/Herbst2015/anmeldung.html</a> you can now register to the autumn meeting 2015 of DANTE e.V. It takes place on September 5th at the TU Graz. Besides the member’s meeting and the program with talks, there will be an evening gathering the day before, and a tourist program afterwards. Early registering is extremely helpful for the organizers!</p> 
+         <p>The meeting is also open for TeX friends who are not member of DANTE e.V. Participation at the meeting and at the talks is free.</p> 
+         <p>I registered already, and I will fly Sep 4 from Hamburg to Graz and Sep 6 back. If anybody likes to join me, send me an email: I can get up to 2 cheaper tickets for traveling partners, because I work at the airline.</p> 
+         <p>All information regarding place, travel information, and program can be found <a class="postlink" href="http://www.dante.de/events/Herbst2015.html" rel="nofollow">here</a>.</p> 
+         <p>Stefan</p> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/conferences/" rel="category tag">Conferences</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/08/meanwhile-at-egregs-desk/">Meanwhile, at egreg’s desk…</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-08-05</span> by 
+        <a href="http://tex.blogoverflow.com/author/paulocereda/" title="Posts by Paulo Cereda" rel="author">Paulo Cereda</a>. 
+        <a href="http://tex.blogoverflow.com/2015/08/meanwhile-at-egregs-desk/#comments">1 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p><img src="http://tex.blogoverflow.com/files/2015/08/400k.png" alt="400k" width="630" height="507" class="aligncenter size-full wp-image-2403"></p> 
+         <p>Congratulations for the new milestone, Enrico! <code>:)</code></p> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/tex-sx/" rel="category tag">TeX.sx</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/07/tex-user-group-meeting-2015/">TeX User Group Meeting 2015</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-07-23</span> by 
+        <a href="http://tex.blogoverflow.com/author/stefankottwitz/" title="Posts by Stefan Kottwitz" rel="author">Stefan Kottwitz</a>. 
+        <a href="http://tex.blogoverflow.com/2015/07/tex-user-group-meeting-2015/#comments">8 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p>From 20th to 22nd of July, the TUG 2015 conference took place in Darmstadt, Germany. It was a splendid time, and it was so great to meat you brilliant TeX Stack Exchange friends there!</p> 
+         <p>We had</p> 
+         <ul> 
+          <li>awesome presentations, some of the best done by TeX.SE members</li> 
+          <li>an excursion to the underground and to the deep past</li> 
+          <li>a lot of discussions</li> 
+          <li>WiFi :-)</li> 
+          <li>a tasty banquet and daily lunch</li> 
+          <li>coffee and icecream</li> 
+          <li>some beer at night</li> 
+         </ul> 
+         <p>Joseph posted daily reviews on <a href="http://www.texdev.net/">his blog</a>, so you could follow the proceedings close to the time, or now see a summary.</p> 
+         <p>I posted notes and thoughts on <a href="http://latex-community.org/">LaTeX-Community.org</a>, you can find daily posts right on the front page. I tried to tell details about the presentations too, so it’s a bit longish. I need to write another post there what happened on day 3, so stay tuned!</p> 
+         <p>I don’t repeat what Joseph and I wrote in the reports in detail, except the most important: thanks to the TUG, thanks to the sponsors DANTE and River Valley Technologies, special thanks to Klaus Hoeppner who did a marvelous job of organizing the meeting!</p> 
+         <p>We made a photo of our TeX.SE group, so guess who is who!</p> 
+         <p><img class="aligncenter" src="http://latex-community.org/images/TeX-SE.png" alt="Stack Exchange members" width="620" height="401"></p> 
+         <p>&nbsp;</p> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/conferences/" rel="category tag">Conferences</a>, <a href="http://tex.blogoverflow.com/category/tug/" rel="category tag">TUG</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/06/thank-you-hermann-zapf/">Thank you, Hermann Zapf</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-06-06</span> by 
+        <a href="http://tex.blogoverflow.com/author/paulocereda/" title="Posts by Paulo Cereda" rel="author">Paulo Cereda</a>. 
+        <a href="http://tex.blogoverflow.com/2015/06/thank-you-hermann-zapf/#comments">4 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p><a href="http://tex.blogoverflow.com/files/2015/06/Screen-Shot-2015-06-05-at-23.08.04-.png"><img src="http://tex.blogoverflow.com/files/2015/06/Screen-Shot-2015-06-05-at-23.08.04--300x90.png" alt="Screen Shot 2015-06-05 at 23.08.04" width="300" height="90" class="alignnone size-medium wp-image-2385"></a></p> 
+         <p>Yesterday, we lost Hermann Zapf. Brilliant type designer, a very special person. Hermann was 96.</p> 
+         <p>He lived in Darmstadt, Germany and had been an Honorary member of the board of the TeX Users Group since 1980, with the deserved title of “Wizard of Fonts”.</p> 
+         <p>Hermann Zapf directly contributed to the TeX world with the Euler fonts and with several discussions with Donald Knuth about the design of the Computer Modern fonts. His legacy to the world of typography and type design is too big to be reduced to a list of his contributions: just the mention of Palatino, Optima and Zapfino, three fonts he designed, can illustrate his craftsmanship in type design.</p> 
+         <p>Hermann was also a precursor of micro-typography in computer aided typesetting, with his HZ system on which the micro-typographic features of pdfTeX, XeTeX and LuaTeX are based.</p> 
+         <p>Thank you for everything, Hermann.</p> 
+         <div id="attachment_1954" style="width: 417px" class="wp-caption aligncenter">
+          <a href="http://tex.blogoverflow.com/files/2012/11/hermann.jpg"><img class="size-full wp-image-1954" src="http://tex.blogoverflow.com/files/2012/11/hermann.jpg" alt="" width="407" height="500"></a>
+          <p class="wp-caption-text">Hermann Zapf at EuroTeX 2005 in Pont-a-Mousson, France (by <a href="http://www.flickriver.com/photos/adamt/290946217/">Adam Twardoch</a>).</p>
+         </div> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/fonts-2/" rel="category tag">Fonts</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/03/latex-beginners-guide-available-for-download-today/">LaTeX Beginner’s Guide available for free download March 4, 2015</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-03-04</span> by 
+        <a href="http://tex.blogoverflow.com/author/stefankottwitz/" title="Posts by Stefan Kottwitz" rel="author">Stefan Kottwitz</a>. 
+        <a href="http://tex.blogoverflow.com/2015/03/latex-beginners-guide-available-for-download-today/#comments">15 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p>As announced a week ago, the ebook version of “LaTeX Beginner’s Guide” written by me is available for free download today, March 4, 2015.</p> 
+         <div align="center">
+          <a href="http://link.packtpub.com/lOKssB"><img src="http://latex-community.org/forum/download/file.php?id=8333" alt="Download LaTeX Beginner's Guide"></a>
+         </div> 
+         <div align="center">
+          <a href="http://link.packtpub.com/lOKssB">Book link</a>
+         </div> 
+         <p>There’s some background information on <a href="http://latex-community.org/">LaTeX-Community.org</a> and specifically in a <a href="http://latex-community.org/forum/viewtopic.php?f=37&amp;t=25603" target="_self">forum thread</a>, and also <a href="http://tex.blogoverflow.com/2015/02/latex-beginners-guide-ebook-for-free/">here on this blog</a>.</p> 
+         <p>I will answer any question to the book’s contents <a title="LaTeX Forum" href="http://latex-community.org/forum/">in the LaTeX Community forum</a>. Experts: our forum also needs your help, perhaps have a look at the <a title="Unanswered questions in the LaTeX Community Forum" href="http://latex-community.org/forum/search.php?search_id=unanswered">unanswered questions</a>. Are you able to answer one, even if it’s older? Orginal poster and later readers would be happy!</p> 
+         <p>Some details, simply copied from what I provided to the publisher earlier:</p> 
+         <p><span style="font-weight: bold">About This Book</span></p> 
+         <ul> 
+          <li>Use LaTeX’s powerful features to produce professionally designed texts</li> 
+          <li>Install LaTeX; download, set up, and use additional styles, templates, and tools</li> 
+          <li>Typeset math formulas and scientific expressions to the highest standards</li> 
+          <li>Include graphics and work with figures and tables</li> 
+          <li>Benefit from professional fonts and modern PDF features</li> 
+         </ul> 
+         <p><span style="font-weight: bold">Who This Book Is For</span></p> 
+         <p>If you are about to write mathematical or scientific papers, seminar handouts, or even plan to write a thesis, then this book offers you a fast-paced and practical introduction. Particularly during studying in school and university you will benefit much, as a mathematician or physicist as well as an engineer or a humanist. Everybody with high expectations who plans to write a paper or a book will be delighted by this stable software.</p> 
+         <p><span style="font-weight: bold">What You Will Learn</span></p> 
+         <ul> 
+          <li>Install LaTeX and use the TeXworks editor to compile documents</li> 
+          <li>Design the page layout; create dynamic headers and footers</li> 
+          <li>Fine-tune appearances and the space of words, symbols, and lines</li> 
+          <li>Apply intelligent justification and customized hyphenation to achieve fine text design</li> 
+          <li>Typeset professional-looking tables and create bulleted and enumerated lists</li> 
+          <li>Write sophisticated math formulas, from in-text expressions to complex multi-line equations with various alignments</li> 
+          <li>Cross-reference objects such as figures, tables, and equations</li> 
+          <li>Load fonts and vary their shape and style; choose between thousands of LaTeX symbols from specialized fonts</li> 
+          <li>Use macros to save time and effort; load packages to extend LaTeX’s capabilities</li> 
+          <li>Generate an index, cite books, and create bibliographies</li> 
+          <li>Use external pictures, color, PDF bookmarks, and hyperlinks</li> 
+          <li>Structure and manage large documents by splitting the input</li> 
+          <li>Manage large documents containing lists, index, and bibliography</li> 
+         </ul> 
+         <p>More details, including table of contents and sample chapter: <a class="postlink" href="http://link.packtpub.com/lOKssB" rel="nofollow">Publisher’s LaTeX book page</a>.</p> 
+         <p>&nbsp;</p> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/books/" rel="category tag">Books</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/02/latex-beginners-guide-ebook-for-free/">LaTeX Beginner’s Guide ebook for free</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-02-21</span> by 
+        <a href="http://tex.blogoverflow.com/author/stefankottwitz/" title="Posts by Stefan Kottwitz" rel="author">Stefan Kottwitz</a>. 
+        <a href="http://tex.blogoverflow.com/2015/02/latex-beginners-guide-ebook-for-free/#comments">9 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p>In agreement with the publisher, the “<a href="http://link.packtpub.com/lOKssB" title="Publisher's page: LaTeX Beginner's Guide">LaTeX Beginner’s Guide</a>” ebook will soon be officially available for free download. But this will be for a single day only, within the next two weeks. I cannot tell the date yet, not even if it’s tomorrow or next week. Otherwise, the regular price is € 24.97, just € 0,00 during 24 hours, as the publisher allowed.</p> 
+         <p><a href="http://link.packtpub.com/lOKssB"><img class="right" alt="LaTeX Beginners Guide" src="http://texblog.net/LaTeX-Beginners-Guide.png" width="120" height="147" align="right"></a>I’m the author of the book; and I want to make it freely available for our LaTeX friends who support or share our hobby without getting paid or rewarded for it. So, while on Stack Exchange we get reputation points and shiny badges for producing content and for various kinds of activity, there are still older web forums without that game. That’s why my personal reward gets there at first: the whole story with more information and updates is <a href="http://latex-community.org/forum/viewtopic.php?f=37&amp;t=25603" title="Get the &quot;LaTeX Beginner's Guide&quot; ebook for free - Forum thread" target="_blank">here on LaTeX-Community.org</a>.</p> 
+         <p>Though it’s an internal subforum thread to honor members, everybody can easily join to read it. A small LaTeX challenge question prevents bots from entering, but it won’t be an obstacle for a LaTeX friend.</p> 
+         <p>Life is peaceful there. No race to be the first, and room for all. There are hundreds if not thousands of <a href="http://latex-community.org/forum/search.php?search_id=unanswered" title="Unanswered questions in the LaTeX Community Forum" target="_blank">unanswered questions</a>, and even more <a href="http://latex-community.org/forum/search.php?search_id=unsolved_topics" title="Unsolved questions in the LaTeX Community Forum" target="_blank">unsolved questions</a></p> 
+         <p>Would you like to help out a bit? If I see some of our fellow TeX friends from here helping with their experience to solve some topics and to answer some lonely question, I’ll thank by sharing the upcoming download link for here as well.</p> 
+         <p>Have a gut feeling that it’s kind of site promotion? Well, LaTeX-Community.org already promotes TeX.SE, for example Luca’s recent articles on the front page are purely advertising TeX.SE solutions.</p> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/advocacy/" rel="category tag">Advocacy</a>, <a href="http://tex.blogoverflow.com/category/books/" rel="category tag">Books</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/01/textalk-an-interview-with-paulo-cereda/">TeXtalk: an interview with Paulo Cereda</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-01-25</span> by 
+        <a href="http://tex.blogoverflow.com/author/paulocereda/" title="Posts by Paulo Cereda" rel="author">Paulo Cereda</a>. 
+        <a href="http://tex.blogoverflow.com/2015/01/textalk-an-interview-with-paulo-cereda/#comments">0 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p><img src="http://tex.blogoverflow.com/files/2015/01/textalk-paulo.png" alt="textalk-paulo" width="302" height="226" class="aligncenter size-full wp-image-2336"></p> 
+         <p><sub><em>Image courtesy of David Carlisle (MS Paint skillz FTW)</em></sub></p> 
+         <p><em>Welcome to TeXtalk!</em> Our interviewee is <a href="http://tex.stackexchange.com/users/3094/paulo-cereda">Paulo Cereda</a>. Paulo has collected 24k+ rep, 160+ answers, and 240+ badges on TeX.sx. He is an avid participant in the chat rooms, and a lover of ducks. Paulo is usually our interviewer, but today we’ve turned the tables.</p> 
+         <dl> 
+          <dt>
+           <strong>Joseph Wright</strong>
+          </dt> 
+          <dd> 
+           <p>I think we’ll start in traditional fashion. Can you tell us a bit about yourself and what first led you to get involved in TeX?</p> 
+           <p>Everyone feel free to ask away, and remember these things get edited before going into the blog!</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong> [now appearing on TeX.sx as 
+           <strong>yo’</strong>]
+          </dt> 
+          <dd> 
+           <p>Paulo is likely busy writing just now, I’ll give him some air to breathe before hitting him with my questions.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo Cereda</strong>
+          </dt> 
+          <dd> 
+           <p>Thanks everybody for this nice interview!</p> 
+           <p>I’m Brazilian, born and raised in the countryside area of the economic heart of the country, the great São Paulo state. The city where I live is quite small (about 4k people), and it’s a great place. I’ve been working with software development for quite a long time and just recently I’m back to academia for a PhD in computer engineering. Fun times, I’d say.</p> 
+           <p>My first contact with TeX and friends was during my Masters, when I had to write a lot of mathematics. Nothing was working (Microsoft Word, I’m looking at you!), so I was in despair. Suddenly, a friend of mine suggested about this LaTeX thingy he was using for his own thesis, so I decided to give it a try. It was surely love at first sight.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>How long was the break between your Masters and your PhD?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I believe it was something close to 4 years, if I recall correctly. It was interesting because it was a great time for discovery. Sometimes we need to broaden our horizons.</p> 
+          </dd> 
+          <dt>
+           <strong>Claudio Fiandrino</strong>
+          </dt> 
+          <dd> 
+           <p>How many programming languages do you know?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>The first language I learned was Pascal (Wirth is truly amazing). It was a lovely experience. Then later came C and C++. Nowadays, I always try to learn something new (at least the basics) language-wise. I know Java (it’s the language I use on a daily basis), PHP, Scala, Ruby, Groovy, a bit of Python, Haskell, Lisp, Clojure, Prolog, Lua and probably a couple more, not to mention the languages I write myself. I love languages.</p> 
+          </dd> 
+          <dt>
+           <strong>Claudio</strong>
+          </dt> 
+          <dd> 
+           <p>Wow, that’s amazing!!</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Thanks, but it’s not that impressive. Once you know about algorithms, it’s just a matter of learning a particular syntax.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>You forgot the most important one.</p> 
+          </dd> 
+          <dt>
+           <strong>Joseph</strong>
+          </dt> 
+          <dd> 
+           <p>COBOL?</p> 
+          </dd> 
+          <dt>
+           <strong>Harish Kumar</strong>
+          </dt> 
+          <dd> 
+           <p>or BASIC?</p> 
+          </dd> 
+          <dt>
+           <strong>Joseph</strong>
+          </dt> 
+          <dd> 
+           <p>Oh of course, silly me.</p> 
+          </dd> 
+          <dt>
+           <strong>Harish</strong>
+          </dt> 
+          <dd> 
+           <p>Oh no! I was joking!</p> 
+          </dd> 
+          <dt>
+           <strong>Claudio</strong>
+          </dt> 
+          <dd> 
+           <p>Can we presume that TeX is one of your favorite languages?</p> 
+          </dd> 
+          <dt>
+           <strong>David Carlisle</strong>
+          </dt> 
+          <dd> 
+           <p>Do many of your colleagues (at university or when you were working in software development) use TeX or are you a lone voice for TeX?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Sadly, I think I’m a lone voice for TeX and friends. IMHO Brazil has no strong tradition of TeX in universities (if I had to blame something, I’d point my finger at ABNT, but that’s another story). I know a couple of departments which offer LaTeX templates, but students prefer to stick with Microsoft Office. I usually try to act as a TeX evangelist at times, but my claims go unheard.</p> 
+          </dd> 
+          <dt>
+           <strong>Joseph</strong>
+          </dt> 
+          <dd> 
+           <p>I think some comments on ABNT would be interesting.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Well, maybe at least explain the abbreviation.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>ABNT should be the Brazilian analog of German DIN or the international ISO. It shares with the other similar organization a deep ignorance of typography.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Thanks. Well, let’s mention IEEE, too, it fits in this society it seems. </p>
+          </dd> 
+          <dt>
+           <strong>Claudio</strong>
+          </dt> 
+          <dd> 
+           <p>Including their nice templates <code>;)</code></p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>ABNT stands for Brazilian National Standards Organization (acronym in Portuguese, of course: Associação Brasileira de Normas Técnicas).</p> 
+           <p>They are responsible for technical standards. Personally I don’t like their standards, and bear in mind that they have so many rules that one university can select which subset to follow and then a certain department can override these subsets by defining their own standards. I love standards, there are lots and lots for you to choose from.</p> 
+           <p>It’s a living hell to comply with their rules, and you are hearing this from someone that (to some extent) knows how to write TeX code.</p> 
+          </dd> 
+          <dt>
+           <strong>Harish</strong>
+          </dt> 
+          <dd> 
+           <p>May we know your sub field of research/specialization of PhD?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I work with adaptive technology (think of something that has self-modification features). A bit of theory of computation and a couple of mathematical models.</p> 
+          </dd> 
+          <dt>
+           <strong>Harish</strong>
+          </dt> 
+          <dd> 
+           <p>How did you get the motivation to come back to academia after having worked in the software industry for four years?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I’d blame that on being a researcher at heart. Everything happens at the right time, and it’s been a wonderful time since then. </p>
+          </dd> 
+          <dt>
+           <strong>Harish</strong>
+          </dt> 
+          <dd> 
+           <p>If you have tried to popularise TeX in your place, we would be glad to hear the modus operandi you have followed.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I usually do everything with TeX (from a conference certificate to a pamphlet). So when people mention to me that the layout is nice, I then reveal it’s TeX-powered.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>What kind of software do you usually work on?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>For my work, I have a couple of IDE’s (Eclipse, NetBeans, Idea) and several terminal windows side by side. For TeX, it’s usually vim or TeXworks. Since I use Linux and Mac, I can organize all my things in several workspaces.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>How did you come in contact with TeX.sx?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I wrote a tool that generated some images of finite state machines, but I was unable to make my TeX code keep the aspect ratio. I found TeX.sx and decided to give it a try. It was <a href="http://tex.stackexchange.com/q/17380">my first question</a>. And the answer was quite obvious: I had to use <code class="notranslate">keepaspectratio</code>. D’oh. </p>
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>Thank Donald Arseneau for that.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Donald’s packages are awesome!</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>Could you say something about your choice of editor?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I always go with vim and TeXworks. Vim is something I learned to love; I was enraged at the beginning, but then I was successfully brainwashed.</p> 
+           <p>I like the modal philosophy and since I always had endless fights with my keyboard, reducing my typing range was something desirable.</p> 
+           <p>It’s like Marmite, I guess. I have emacs installed in my machines as well and I tried AUCTeX for once. Since it’s Lisp-based, I somehow respect it. But since I look like a heavy vim bloke, I need to fight on the right side.</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>You also seem to have an interest in graphic design? The expl3 logo, your lion series, not to mention certain birds…</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I used to work with producing animated GIFs (oh the shame). Those were the times, I used to draw every single frame with a very bad mouse and almost no skills. I decided to give it a try and I could make some bucks out of it, that’s why I somehow draw things from time to time.</p> 
+          </dd> 
+          <dt>
+           <strong>Harish</strong>
+          </dt> 
+          <dd> 
+           <p>You created <code>arara</code> [a macaw] and made the bird popular among us (not to mention ducks). What was the motivation to create it?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p><code>arara</code> came by accident. I had a nice experience with rubber and liked some things about it (directives, for instance). Then I wrote a very basic code in less than 24 hours and showed a screenshot of it in the TeX.sx chatroom. You guys bought the idea and I decided to convert my attempt into something more serious.</p> 
+           <p>Marco Daniel was the culprit for arara growing so fast; he was the true evangelist.</p> 
+          </dd> 
+          <dt>
+           <strong>Johannes_B</strong>
+          </dt> 
+          <dd> 
+           <p>Are you fan of Disney’s Ducks as well?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Donald is surely a great character, but he’s very angry!</p> 
+          </dd> 
+          <dt>
+           <strong>Harish</strong>
+          </dt> 
+          <dd> 
+           <p>And speaking of ducks, is there any (particular) reason you like them so much? How about other birds?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I like araras too, and parrots. And hummingbirds. And lots more!</p> 
+           <p>I think I once mentioned the duck story in the chatroom, but I’m glad to tell it again!</p> 
+           <p>I think the story starts when I tried to learn German. I was very eager to learn it (I was a Rammstein fan at that time), but my time was quite limited: I was in the beginning of my Masters and had lots and lots of things to do, so I had to give up the classes. I decided then to try to study some language by myself, and I opted for sign language.</p> 
+           <p>Brazil has its own format called Libras. I think the one I started was ASL (American Sign Language), if I recall correctly. Pardon if I say something very stupid, it’s been a while. I tried to memorize the basic gestures, but I’m a slow learner. In a short period of time, I forgot almost all sentences. Except for a few words.</p> 
+           <p>One day, I was in a conference and saw a lone girl in the corner of the auditorium. And I decided to talk to her.</p> 
+           <p>When I said hi, she actually didn’t look at me. When I came near her (apparently she didn’t notice my presence), she then looked at me, but said no words. Then she wrote in a piece of paper that she was hearing impaired.</p> 
+           <p>So I decided to talk to her through writing sentences in my notebook.</p> 
+           <p>At some point, I think I mentioned that I tried to learn ASL, but failed miserably, mostly because I was stupid and could not memorize things. She then asked me to try a sentence for her. I got stuck because, as I said, almost 100% of my sign vocabulary was lost in broken synapses.</p> 
+           <p>The only words I could remember were: I (you point your index finger to your chest), love (you cross your arms in front of your chest, just like some pirate flag), you (you point your index finger to the person you want to refer to) and, of course, duck (you close your hand and “quack” twice with it).</p> 
+           <p>I thought that if I said I love you, it wouldn’t be interesting. So I went with the second best sentence ever known to mankind: I love ducks.</p> 
+           <p>When I did this, she looked at me, very surprised. And then laughed a lot. </p> 
+           <p>So I still keep the theme as a good memory of something very tender.</p> 
+          </dd> 
+          <dt>
+           <strong>Johannes</strong>
+          </dt> 
+          <dd> 
+           <p>I will learn the second best sentence known to mankind in sign language.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Behold the power of the duck!</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>it seems conventional in these things to ask what is your favourite question or answer on site (that you have posted)</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>My favourite question was <a href="http://tex.stackexchange.com/q/18969">Creating a zebra effect using listings</a>, which resulted in yet another great package from Martin Scharrer.</p> 
+          </dd> 
+          <dt>
+           <strong>Joseph</strong>
+          </dt> 
+          <dd> 
+           <p>Which of your answers on the site is your favourite?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I’d say my favourite answer was <a href="http://tex.stackexchange.com/a/55333">this one</a> (Can I print only some functions with minted?). It’s quite trivial now that I look at it, but it was the first I actually dealt with coding.</p> 
+           <p><a href="http://tex.stackexchange.com/a/94910">Grandma</a> is probably the one that we still harvest points from, but I also like the cute document.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>You’re the highest ranked voter in the SE world. Can you tell us something about your voting philosophy?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I would say voting plays an important role in our community. Because it’s a way of making people feel welcome. My philosophy is, if a question shows effort, it deserves an upvote. For answers, the idea is basically the same. If, by chance, there’s a huge feeling towards downvoting a question, I prefer to leave the question be and try to ask the OP to rephrase things.</p> 
+           <p>We can move the world with votes. It’s a good way of making things happen. Everything wins.</p> 
+          </dd> 
+          <dt>
+           <strong>Claudio</strong>
+          </dt> 
+          <dd> 
+           <p>Upvotes of course.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Indeed.</p> 
+           <p>I vote a lot because I care a lot. I want people to feel the same way I do with this community. We have a lot of fun, it’s a way of brightening your day. We are all part of this and the more people we can get involved, the better.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Which musical instruments do you play, which do you own, and which would you like to own?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I have a piano and a couple of guitars (accoustic and electric). I’d like to have a bassoon, so I could run after people while carrying an orchestra bazooka.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>Or a trombone!</p> 
+           <p>What do you do in your spare time (assuming you have any)?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I used to play soccer, but I had several injuries, so I had to quit. Nowadays, I do some bow and arrow and jog a lot. Not to mention that I like to read comics.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>And which is your favourite piece to play?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I’m used to some Brazilian pieces, like the ones from Heitor Villa-Lobos. Also Bossa Nova is a great exercise for pianists, I think everybody should at least give it a try (start with Girl from Ipanema).</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Thanks for the tip! Do you ever give performances?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>It’s been a while. I used to have a band, but nowadays I don’t have time for performances. I play in the church, but that’s another kind of repertoire.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Indeed it is, but it’s known to be tough, accompanying the congregation.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Indeed. You need to think fast.</p> 
+          </dd> 
+          <dt>
+           <strong>Claudio</strong>
+          </dt> 
+          <dd> 
+           <p>Cool! How often do you play?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I almost have no spare time. But at least once a day I play some notes on the piano.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>And listening to music? But I’m a bit afraid of asking what’s your preferred kind of music.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I love classical music, but when I jog, it’s usually Pink Floyd that follows me (You better run! — bad pun, I know). I think it’s good for musicians to have a wide knowledge of songs, including the ones you don’t like too much.</p> 
+          </dd> 
+          <dt>
+           <strong>Claudio</strong>
+          </dt> 
+          <dd> 
+           <p>Could you say more about the comics you read? Which is your favorite one?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I used to read a lot of comics (Marvel in general), but for now I only read those that are available on the web. These are the ones I follow: Awkward Zombie, Dilbert, Dumbing of Age, Garfield, Nerf Now, Foxtrot, XKCD and Questionable Content. Oh and PhD Comics.</p> 
+          </dd> 
+          <dt>
+           <strong>Claudio</strong>
+          </dt> 
+          <dd> 
+           <p>Hehe… I was about to mention that.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>How have you got involved with TUG and UK-TUG?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I don’t know. Maybe because Joseph poked me about giving a talk at the 2012 speaker meeting through Skype. And I’m still struggling with getting my subscription. But when I ever get one, it will be from UK-TUG — they have David, so it’s awesome.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>So you’re not a member of any of these associations?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Sadly, not yet. I plan to. I was also thinking of DANTE, but I cannot read German.</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>So not a member of the Brazilian LUG? (Is there one?)</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>There’s no Brazilian TUG so far, although I thought of founding one (Karl even gave me some ideas on this subject). I think it wouldn’t be a big group and we would have a lot of headaches because of ABNT.</p> 
+           <p>The logotype would be a toucan. Look at this majestic bird!</p> 
+           <img src="http://i.stack.imgur.com/pyD5e.png" alt=""> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>Overfull hbox.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Uh-oh, we already failed.</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>You could have a group of one and be its absolute dictator.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Ooh ducktator!</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>Do you make much use of Lua or XeTeX (especially if not writing in English) ?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>To be honest, I’m still stuck with PDFLaTeX for now, but I’m gradually moving things to XeLaTeX. Once in a while, I write one or two documents which require XeLaTeX, but in general, it’s PDFLaTeX all day and all night.</p> 
+          </dd> 
+          <dt>
+           <strong>Johannes</strong>
+          </dt> 
+          <dd> 
+           <p>What about LuaTeX?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I had some fun with LuaTeX but so far I have been quite pleased with XeLaTeX. The idea of embedding Lua code inside a TeX document is quite interesting, but I’m quite reluctant to mix them. Maybe in the future.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>Are you planning a visit to Europe, in search for your roots?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Yes, it’s in my TODO list. I’d love to visit Italy, specially now that I am officially an Italian citizen. And of course I need to lure you to sign my TeXbook.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>What do you hate the most about TeX?</p> 
+          </dd> 
+          <dt>
+           <strong>Johannes</strong>
+          </dt> 
+          <dd> 
+           <p>Can you make a minimal working example? <code>:-P</code></p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I’ll say something crazy: I actually don’t hate anything about TeX. Perhaps because I love languages, I learned to appreciate the design of them. Knuth knew what he was doing (as always) and the result was awesome. I once wrote my own macro expander and I discovered how tricky it is to provide “mere expansion”.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Which books on *TeX are on your bookshelf?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I have <i>The TeXbook</i>, <i>The LaTeX Companion</i>, <i>TeX By Topic</i> (I printed one copy) and the L3 interfaces (but thanks to Joseph, my copy is now outdated).</p> 
+          </dd> 
+          <dt>
+           <strong>Johannes</strong>
+          </dt> 
+          <dd> 
+           <p>Do you like to cook, and what is your favourite dish?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I actually don’t know how to cook. Being half Italian, I love my mom’s lasagna.</p> 
+          </dd> 
+          <dt>
+           <strong>Johannes</strong>
+          </dt> 
+          <dd> 
+           <p>You are missing out on some fun. <em>lasagna omnomnom</em></p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>And tortellini, of course!</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Ooh indeed!</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>Tonight we’re cooking duck…</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>What?! Oh no!</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>Any current big project? You have to procrastinate writing your PhD thesis, remember!</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I have arara 4.0 ready, except I still have the manual to write, so the release will be greatly delayed.</p> 
+           <p>Let’s see if I can fix that in December. I have plans for a local tree package manager (associated with Martin Scharrer’s CTAN archive), so we will be able to deploy any package version in our local TeX tree for testing purposes. Let’s see if I find time to finish this project.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>That would be a very nice addition!</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I blame percusse and his development versions of TikZ.</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>Any more questions? Or should we let Paulo escape?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Can I be British too?</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>If you wish.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>It might be complicated.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>You’d have to bow to the Queen!</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>Should do that anyway</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Ooh! Or get up every time they play God save the Queen.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>Wouldn’t “Good morning, ma’am?” suffice?</p> 
+          </dd> 
+          <dt>
+           <strong>David</strong>
+          </dt> 
+          <dd> 
+           <p>So long as he knew the rules of cricket, it might.</p> 
+          </dd> 
+          <dt>
+           <strong>percusse</strong>
+          </dt> 
+          <dd> 
+           <p>Wait hold the press! When do you plan to finish that GUI for biblatex style creation? I want this promise on paper as an evidence for future annoyance.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Oh no! Maybe mid-2015? It’s been a complicated year. I’ll do my best and try to achieve something by mid-2015.</p> 
+          </dd> 
+          <dt>
+           <strong>percusse</strong>
+          </dt> 
+          <dd> 
+           <p>Thank you for your contributions to TeX and its SX network by the way. I salute you with a 40-duck quack.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>No, I am the one to thank you guys. We are a team. We only grow as a group.</p> 
+          </dd> 
+          <dt>
+           <strong>percusse</strong>
+          </dt> 
+          <dd> 
+           <p>I only work alone mister… Where did I park my DB9?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Ooh!</p> 
+          </dd> 
+          <dt>
+           <strong>texenthusiast</strong>
+          </dt> 
+          <dd> 
+           <p>Hi! Thanks for being our interviewee, and thanks to David for that.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Hello, thanks for joining the interview!</p> 
+          </dd> 
+          <dt>
+           <strong>texenthusiast</strong>
+          </dt> 
+          <dd> 
+           <p>Apart from software are you interested in hardware design and assembly using basic processor chips?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I know a couple of things, but to be honest, I never got into hardware design. I think I’m more of a software bloke. But it’s surely nice to have important concepts in mind, even if you don’t work directly in any specific area.</p> 
+          </dd> 
+          <dt>
+           <strong>texenthusiast</strong>
+          </dt> 
+          <dd> 
+           <p>One more Q: Why do you love Fedora so much vs. other Linux distros? Any particular reason?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I started with Linux in 2000/2001 with a distro based on Red Hat. Later on, I jumped into Slackware and got stuck with it for quite some time. Then I came back to Red Hat until version 9.0, I guess. If I recall correctly, after version 9.0, Red Hat forked their distro into a community driven effort named Fedora Core and a corporative branch named Enterprise Linux. I decided to give FC1 a try and I’m a loyal user since then.</p> 
+           <p>I think it’s a natural path, like Debian folks trying out Ubuntu. I believe I’m still a Slackware user at core (my old laptop proudly runs the latest version), but I think Fedora is a great option. As long as people use Linux the right way, I’m happy.</p> 
+          </dd> 
+          <dt>
+           <strong>texenthusiast</strong>
+          </dt> 
+          <dd> 
+           <p>Thanks for your time and good chat over TeX.sx.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Speaking of your machines, what are their names? And what exactly is the system?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>The naming convention I have for my machines is cities. I have alexandria (Fedora 20), manchester (Fedora 20), oxford (Mac OSX Yosemite), herakompolis (Mac OSX Lion), and thebes (Slackware 14.1). To break the pattern a little, my development laptop is satyagraha which means insistence on truth.</p> 
+           <p>My portable devices are named after cardinal virtues (in Latin): my iPad is temperantia (temperance), my iPod is iustitia (justice), my other tablet is sapientia (prudence) and my cellphone is fortitudo (fortitude).</p> 
+           <p>And my router is named potato.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Lol, I’m far from being that well-organized</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>CS people.</p> 
+           <p>At a certain point, life forces you to be organized.</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>In names of your computers?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Probably in everything, I guess.</p> 
+          </dd> 
+          <dt>
+           <strong>Harish</strong>
+          </dt> 
+          <dd> 
+           <p>Thank you for sharing your thoughts and time. You are a nice human being. I had to run away in the middle but thanks a lot for arara and biblatex GUI (in advance) and local tree package manager (in advance). (You are caught!)</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Oh no!</p> 
+          </dd> 
+          <dt>
+           <strong>Yiannis Lazarides</strong>
+          </dt> 
+          <dd> 
+           <p>Great answers. Where is herakompolis?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Hi Yiannis! I think I borrowed the name from a city of the ancient Egypt (I believe the spelling might vary). I once also had a machine named hamunaptra, surprisingly not from Egypt as <i>The mummy</i> movie portrays, but from India.</p> 
+          </dd> 
+          <dt>
+           <strong>Johannes</strong>
+          </dt> 
+          <dd> 
+           <p>You said you tried to learn some German, some sign language. Are there any plans to learn some basic cooking recipes?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>To be completely honest, there are plans for me to learn cooking. Once in a while, I grab a notebook and make some notes while my mum is cooking. I even considered preparing a cookbook (in LaTeX, of course). I might come back to this project sometime soon. Also, I want to try German again.</p> 
+          </dd> 
+          <dt>
+           <strong>Johannes</strong>
+          </dt> 
+          <dd> 
+           <p>German language or German cooking?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Both, I guess. I really like German food.</p> 
+          </dd> 
+          <dt>
+           <strong>Werner</strong>
+          </dt> 
+          <dd> 
+           <p>How do you manage your voting “strategies”. Do you keep a log of “to do”s handy for when the UTC flips over to 00:00:00 and then let your voting duck bots kick in?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I used to have a “to upvote” list in a plain text file, so my voting spree was actually <code class="notranslate">head -n 15 list.txt</code>, then I’d get usually 30 votes (1 question and 1 answer), which would grant me 10 extra votes. Then these votes keep going to the next 5 items in my list or other answers from the threads I’ve already visited.</p> 
+          </dd> 
+          <dt>
+           <strong>Werner</strong>
+          </dt> 
+          <dd> 
+           <p>I guess as the popularity of TeX / LaTeX increases — <a href="http://meta.stackexchange.com/q/157976/168244">see this map/graph</a> — there may come a day when you may struggle with the voting decisions.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I think I won’t suffer that badly. If a question deserves an answer, it deserves an upvote.</p> 
+          </dd> 
+          <dt>
+           <strong>Werner</strong>
+          </dt> 
+          <dd> 
+           <p>That’s admirable, and something that definitely distinguishes this community from others. True, tenacious, unsung heros are non-existent, but ever-present.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I think we all do what we can. It’s so lovely to see egreg and David, two TeX demigods, having fun writing competing answers for the sake of helping people to understand TeX and friends.</p> 
+          </dd> 
+          <dt>
+           <strong>Werner</strong>
+          </dt> 
+          <dd> 
+           <p>I agree. Major players in this community understand that there is a greater benefit to just answering the question. A little capitalistic competition is benefiting the greater good.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Indeed.</p> 
+          </dd> 
+          <dt>
+           <strong>Werner</strong>
+          </dt> 
+          <dd> 
+           <p>Arbitrary question: When did you join this community?</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>January 23, 2011. Two days before egreg joined, if I recall correctly. It’s been a while. </p>
+          </dd> 
+          <dt>
+           <strong>Werner</strong>
+          </dt> 
+          <dd> 
+           <p>Time flies when you don’t know what you’re doing.</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Exactly. And I haven’t finished reading my TeXbook yet.</p> 
+          </dd> 
+          <dt>
+           <strong>Werner</strong>
+          </dt> 
+          <dd> 
+           <p>Ha ha!</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>I’m stuck in some chapter. Afraid to look which one.</p> 
+          </dd> 
+          <dt>
+           <strong>egreg</strong>
+          </dt> 
+          <dd> 
+           <p>Thank you for this interview!</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>My pleasure!</p> 
+          </dd> 
+          <dt>
+           <strong>Joseph</strong>
+          </dt> 
+          <dd> 
+           <p>Indeed, I think we can say ‘That’s a wrap.’</p> 
+          </dd> 
+          <dt>
+           <strong>tohecz</strong>
+          </dt> 
+          <dd> 
+           <p>Thanks, pal!</p> 
+          </dd> 
+          <dt>
+           <strong>Paulo</strong>
+          </dt> 
+          <dd> 
+           <p>Thank you for joining, Tom!</p> 
+           <p>Thank you guys, you are awesome!</p> 
+          </dd> 
+         </dl> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/tex-sx/interviews/" rel="category tag">Interviews</a>, <a href="http://tex.blogoverflow.com/category/tex-sx/" rel="category tag">TeX.sx</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2015/01/latex-thesis-template-manuel-kuehner/">LaTeX Thesis Template (Manuel Kuehner)</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2015-01-02</span> by 
+        <a href="http://tex.blogoverflow.com/author/ManuelKuehner/" title="Posts by Manuel Kuehner" rel="author">Manuel Kuehner</a>. 
+        <a href="http://tex.blogoverflow.com/2015/01/latex-thesis-template-manuel-kuehner/#comments">11 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <h1>My PHD Thesis</h1> 
+         <p>My own thesis – which the template here is based on – can officially be found at the&nbsp;<a title="Haptische Unterscheidbarkeit mechanischer Parameter bei rotatorischen Bedienelementen" href="http://mediatum.ub.tum.de/?id=1145031" target="_blank">University Server (TUM)</a>&nbsp;&nbsp;or on my <a title="PHD Project Website" href="http://bedienhaptik.de/dissertation/hintergrund/" target="_blank">PHD project website</a>&nbsp;(German).</p> 
+         <h1>General Information</h1> 
+         <p>I first published my PHD thesis on the&nbsp;<a title="Showcase of beautiful typography done in TeX &amp; friends" href="http://tex.stackexchange.com/questions/1319/showcase-of-beautiful-typography-done-in-tex-friends/184885#184885" target="_blank">Showcase of beautiful typography done in TeX &amp; friends</a> page. I was asked to publish the LaTeX code on the <a title="Stack Exchange TeX Blog" href="http://tex.blogoverflow.com/" target="_blank">Stack Exchange TeX Blog</a>&nbsp;here which made me very proud.</p> 
+         <p>I then started to create a lean template that is suitable as a starting point for most&nbsp;thesis projects. Therefore I kept the number of packages to a reasonable minimum.</p> 
+         <p>Here are some impressions of the template:</p> 
+         <style type="text/css">
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 33%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+			/* see gallery_shortcode() in wp-includes/media.php */
+		</style> 
+         <div id="gallery-1" class="gallery galleryid-2229 gallery-columns-3 gallery-size-thumbnail">
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-01.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-01-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-01"></a> 
+           </dt>
+          </dl>
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-02.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-02-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-02"></a> 
+           </dt>
+          </dl>
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-03.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-03-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-03"></a> 
+           </dt>
+          </dl>
+          <br style="clear: both">
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-04.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-04-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-04"></a> 
+           </dt>
+          </dl>
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-05.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-05-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-05"></a> 
+           </dt>
+          </dl>
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-06.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-06-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-06"></a> 
+           </dt>
+          </dl>
+          <br style="clear: both">
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-07.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-07-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-07"></a> 
+           </dt>
+          </dl>
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-08.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-08-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-08"></a> 
+           </dt>
+          </dl>
+          <dl class="gallery-item"> 
+           <dt class="gallery-icon portrait"> 
+            <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-09.png"><img width="150" height="150" src="http://tex.blogoverflow.com/files/2015/01/LaTeX-Thesis-Template-Manuel-Kuehner-Impression-09-150x150.png" class="attachment-thumbnail" alt="LaTeX-Thesis-Template-Manuel-Kuehner-Impression-09"></a> 
+           </dt>
+          </dl>
+          <br style="clear: both"> 
+         </div> 
+         <h1>Used packages</h1> 
+         <p>The following packages are used in the template:</p> 
+         <ul> 
+          <li><strong>scrbook</strong> (Document Class from&nbsp;<strong><a title="koma-script – A bundle of versatile classes and packages" href="http://www.ctan.org/pkg/koma-script" target="_blank">KOMA-Script</a></strong>, needed for the layout)</li> 
+          <li><strong>scrhack</strong> (<a title="koma-script – A bundle of versatile classes and packages" href="http://www.ctan.org/pkg/koma-script" target="_blank"><strong>KOMA-Scrip</strong>t</a>&nbsp;package, not needed for the layout, for preventing warnings in combination with the float package)</li> 
+          <li><strong>marginnote&nbsp;</strong>(<strong><a title="koma-script – A bundle of versatile classes and packages" href="http://www.ctan.org/pkg/koma-script" target="_blank">KOMA-Script</a></strong>&nbsp;package, needed for the layout)</li> 
+          <li><strong>scrpage2&nbsp;</strong>(<a title="koma-script – A bundle of versatile classes and packages" href="http://www.ctan.org/pkg/koma-script" target="_blank"><strong>KOMA-Scrip</strong>t</a>&nbsp;package, needed for the layout)</li> 
+          <li><strong>geometry&nbsp;&nbsp;</strong>(needed for the layout)</li> 
+          <li><strong>inputenc&nbsp;</strong>(not needed for the layout)</li> 
+          <li><strong>fontenc&nbsp;</strong>(not needed for the layout)</li> 
+          <li><strong>babel&nbsp;</strong>(not needed for the layout)</li> 
+          <li><strong>calc</strong> (needed for the layout)</li> 
+          <li><strong>graphicx</strong> (not needed for the layout)</li> 
+          <li><strong>float&nbsp;</strong>(not needed for the layout)</li> 
+          <li><strong>xcolor</strong> (needed for the layout)</li> 
+          <li><strong>booktabs&nbsp;</strong>(just for demonstration –&nbsp;not needed for the layout)</li> 
+          <li><strong>ragged2e&nbsp;</strong>(needed for the layout)</li> 
+          <li><strong>pgfplots</strong> (just for demonstration – not needed for the layout)</li> 
+          <li><strong>caption&nbsp;</strong>(needed for the layout)</li> 
+          <li><strong>hyperref</strong>&nbsp;(not needed for the layout)</li> 
+          <li><strong>blindtext&nbsp;</strong>(just for demonstration – not needed for the layout)</li> 
+         </ul> 
+         <h1>Folder Structure</h1> 
+         <p>The template uses a recommended folder structure which looks like: </p>
+         <pre>&gt; 00_Backup
+&gt; 01_Preamble
+&gt; 02_Chapters
+&gt; 03_GraphicFiles
+&gt; 04_Tables
+&gt; 05_Bibliography
+&gt; 06_Listings
+&gt; 99_AppendixFiles
+Batch_CleanUp.bat
+Batch_CompileFile.bat
+MainFile.pdf 
+MainFile.tex</pre>
+         <p></p> 
+         <h1>Main File</h1> 
+         <p>The main file does not contain much code. It includes different tex files using the <strong>\input</strong> command which leads to a very tidy and readable structure. </p>
+         <pre>%%% File encoding is ISO-8859-1 (also known as Latin-1)
+%%% You can use special characters just liek ä,ü and ñ
+%%% LaTeX template by Manuel Kuehner, 2015</pre> 
+         <pre>%%% If you use this template then please give credit like this:
+%%% ----------------------------
+% LaTeX code inspired by the LaTeX Thesis Template by Manuel Kuehner 
+% www.bedienhaptik.de/latex-template/
+%%% ----------------------------</pre> 
+         <pre>% ##############################################
+% Start: Template Preamble
+% ##############################################
+%</pre> 
+         <pre>% Documentclass definition
+\input{01_Preamble/documentclass.tex}</pre> 
+         <pre>% Loading additional packages from the KOMA-Script family
+\input{01_Preamble/KOMA-Script-Packages.tex}</pre> 
+         <pre>% Page layout definition
+\input{01_Preamble/PageLayout.tex}</pre> 
+         <pre>% Standard packages
+\input{01_Preamble/CommonPackages.tex}</pre> 
+         <pre>% ####-Important-####
+%
+% Definition of the two main colors
+% -----------------------
+% The corresponding xcolor package ist loaded in the file 
+% 01_Preamble/StandardPackages.tex
+%
+% ####-Important-####
+\definecolor[named]{myColorMainA}{RGB}{0,26,153}
+\definecolor[named]{myColorMainB}{RGB}{174,49,54}</pre> 
+         <pre>% Customization of 
+% - Floating Objects (Caption) 
+% - Table of Contents (TOC)
+% - List of Figures
+% - List of Tables
+% - Headings (like chapter, section, etc.)
+\input{01_Preamble/Floating-AND-TOC-AND-ListOf-AND-Headings.tex}</pre> 
+         <pre>% Customization of the header, footer and teh margin note
+\input{01_Preamble/HeaderFooterMarginnote.tex}</pre> 
+         <pre>% Optimize paragraphs (avoid overfull... warnings)
+\input{01_Preamble/ParagraphOptimization.tex}</pre> 
+         <pre>% PDF related packages
+\input{01_Preamble/PDF-Related.tex}</pre> 
+         <pre>% PDF related packages
+\input{01_Preamble/RandomTextPackage.tex}</pre> 
+         <pre>%
+% #######################
+% Ende: Template Preamble
+% #######################</pre> 
+         <pre>% ##############################################
+% Start: Document
+% ##############################################
+%
+% ------------------------------------------------------------------
+\begin{document}</pre> 
+         <pre>% Title page
+\input{02_Chapters/TitlePage.tex}
+% Empty page after title page
+\cleardoublepage</pre> 
+         <pre>% Activate header and footer defined in the file:
+% 01_Preamble/HeaderFooterMarginnote.tex
+\pagestyle{scrheadings}</pre> 
+         <pre>% Activate roman numbering (e. g. xii) 
+\pagenumbering{roman}</pre> 
+         <pre>% Start with page 1 (I)
+\setcounter{page}{1}</pre> 
+         <pre>% Prologue
+\input{02_Chapters/Prologue.tex}</pre> 
+         <pre>% Abstract
+\input{02_Chapters/Abstract.tex}</pre> 
+         <pre>% Table of Contents and Lost of Figures/Tables
+\input{02_Chapters/TOC-AND-ListOf.tex}</pre> 
+         <pre>% Activate arabic numbering (e. g. 12) 
+\pagenumbering{arabic}</pre> 
+         <pre>% Start with page 1
+\setcounter{page}{1}</pre> 
+         <pre>% Introduction
+\input{02_Chapters/Introduction.tex}</pre> 
+         <pre>% Main Part
+\input{02_Chapters/MainPart.tex}</pre> 
+         <pre>% Final Thoughts
+\input{02_Chapters/FinalThoughts.tex}</pre> 
+         <pre>% Start appendix
+\appendix</pre> 
+         <pre>% Appendix A
+\input{02_Chapters/AppendixExampleChapterA.tex}</pre> 
+         <pre>% Appendix B
+\input{02_Chapters/AppendixExampleChapterB.tex}</pre> 
+         <pre>\end{document}
+% ------------------------------------------------------------------
+%
+% #######################
+% End: Document
+% #######################</pre>
+         <p></p> 
+         <h1>Changing the Two Main Layout Colors</h1> 
+         <p>The template uses two colors as eye candy. In my opinion this leads to a more modern look of the document. The colors are defined in the main file: </p>
+         <pre>% ####-Important-####
+\definecolor[named]{myColorMainA}{RGB}{0,26,153}
+\definecolor[named]{myColorMainB}{RGB}{174,49,54}</pre> 
+         <strong>myColor_MainA</strong> is a dark blue and&nbsp;
+         <strong>myColor_MainB</strong> is a dark red. You can reuse the colors like this: 
+         <pre>\definecolor{myColor_Example}{named}{myColor_MainA}</pre> I also used the named colors in my 
+         <a title="pgf – Create PostScript and PDF graphics in TEX" href="http://www.ctan.org/pkg/pgf" target="_blank"><strong>TikZ/PGF</strong></a> drawings as you can see in the example output&nbsp;of the template: 
+         <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX.Thesis.Template.By_.Manuel.Kuehner.pdf">Example Document (PDF)</a>
+         <p></p> 
+         <h1>Document Class</h1> 
+         <p>I use the <strong><a title="koma-script – A bundle of versatile classes and packages" href="http://www.ctan.org/pkg/koma-script" target="_blank">KOMA-Script</a></strong> class <strong>scrbook</strong> as the document class. This has the advantage that there is a very extensive German documentation and the document class covers a wide range of features. Therefore I do not need less packages. The <a title="memoir – Typeset fiction, non-fiction and mathematical books" href="http://www.ctan.org/pkg/memoir" target="_blank"><strong>memoir</strong></a> document class offers similar advantages (but no German documentation). </p>
+         <pre>% KOMA-Script class 'scrbook'
+% Link to the documentation: 
+% German: http://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguide.pdf
+% English: http://mirrors.ctan.org/macros/latex/contrib/koma-script/doc/scrguien.pdf
+% CTAN: http://www.ctan.org/pkg/koma-script
+% Author of the KOMA-Script family is Markus Kohm
+\documentclass%
+[%
+paper=a4
+,fontsize=11pt % common are 10, 11 or 12
+,headings=big
+,parskip
+,numbers=noendperiod % 2.3.1 vs 2.3.1. (no dot after the last chapter number)
+,twoside=true
+,toc=bibliography % Bibliography appears in Table of Contents (without a number)
+,toc=listof % List of Figures and List of Tables appear in Table of Contents
+,version=last % Use latest version of the KOMA-Script
+]%
+{scrbook}</pre>
+         <p></p> 
+         <h1>Stuff That is Missing</h1> 
+         <p>In order to keep the template small and compatible with other packages there are features that are not implemented, such as extended&nbsp;<strong>math</strong> support, many <strong>symbols</strong>, <strong>bibliography</strong>, complicated <strong>tables</strong>,<strong> indexes,&nbsp;</strong>typesetting&nbsp;<strong>units </strong>correctly<span style="color: #222222">&nbsp;and fancy&nbsp;</span><strong>fonts</strong>. Here are some suggestions:</p> 
+         <ul style="color: #222222"> 
+          <li style="font-weight: inherit;font-style: inherit"><strong style="font-style: inherit">amsmath</strong>,&nbsp;<strong style="font-style: inherit">mathtools</strong>&nbsp;and/or&nbsp;<strong style="font-style: inherit">fixmath </strong>(math)</li> 
+          <li style="font-weight: inherit;font-style: inherit"><strong style="font-style: inherit">textcomp</strong>,&nbsp;<strong style="font-style: inherit">bbding</strong>,&nbsp;<strong style="font-style: inherit">pifont</strong>&nbsp;and/or&nbsp;<strong style="font-style: inherit">wasysym </strong>(symbols)</li> 
+          <li style="font-weight: inherit;font-style: inherit"><a title="biblatex – Bibliographies in LATEX using BibTEX for sorting only" href="http://www.ctan.org/pkg/biblatex" target="_blank"><strong>biblatex/biber</strong></a> (bibliography)</li> 
+          <li style="font-weight: inherit;font-style: inherit"><a title="array – Extending the array and tabular environments" href="http://www.ctan.org/pkg/array" target="_blank"><strong>array</strong></a> and <a title="tabu – Flexible LATEX tabulars" href="http://www.ctan.org/pkg/tabu" target="_blank"><strong>tabu</strong></a> (tables)</li> 
+          <li style="font-weight: inherit;font-style: inherit"><a title="xindy – A general-purpose index processor" href="http://www.ctan.org/pkg/xindy" target="_blank"><strong>xindy</strong></a> (indexes)</li> 
+          <li style="font-weight: inherit;font-style: inherit"><strong><a title="units – Typeset units" href="http://www.ctan.org/pkg/units" target="_blank">units</a></strong> and&nbsp;<strong><a title="siunitx – A comprehensive (SI) units package" href="http://www.ctan.org/pkg/siunitx" target="_blank">siunitx</a>&nbsp;</strong>(units)</li> 
+          <li style="font-weight: inherit;font-style: inherit"><strong style="font-style: inherit">mathpazo</strong>,&nbsp;<strong style="font-style: inherit">helvet</strong>&nbsp;and/or&nbsp;<strong style="font-style: inherit">inconsolata </strong>(fonts)</li> 
+         </ul> 
+         <p style="color: #222222">Regarding&nbsp;<strong>fonts</strong>&nbsp;make sure you visit the following discussions on&nbsp;<a style="font-weight: inherit;font-style: inherit;color: #1b8be0" title="TeX - LaTeX Stack Exchange" href="http://tex.stackexchange.com/" target="_blank">tex.stackexchange.com</a>:</p> 
+         <ul style="color: #222222"> 
+          <li style="font-weight: inherit;font-style: inherit"><a style="font-weight: inherit;font-style: inherit;color: #1b8be0" title="Font Setup for an Academic Thesis, no Computer Modern Wanted" href="http://tex.stackexchange.com/questions/134079/" target="_blank">http://tex.stackexchange.com/questions/134079/</a></li> 
+          <li style="font-weight: inherit;font-style: inherit"><a style="font-weight: inherit;font-style: inherit;color: #1b8be0" title="Suggest a “nice” font family for my basic LaTeX template (text and math)" href="http://tex.stackexchange.com/questions/59702/" target="_blank">http://tex.stackexchange.com/questions/59702/</a></li> 
+         </ul> 
+         <p>I also like to use the <a title="hypcap – Adjusting the anchors of captions" href="http://www.ctan.org/pkg/hypcap" target="_blank"><strong>hypercap</strong></a> package which solves the problem that hyperlinks to figures (floats in gereral) normally aim to the caption rather then to the start of the figure/picture.</p> 
+         <h1>Download the Template</h1> 
+         <p>The template can be downloaded on my <a title="LaTeX Thesis Template by Manuel Kuehner" href="http://bedienhaptik.de/latex-template/" target="_blank">PHD project website</a>&nbsp;(scroll to the bottom of the page, I couldn’t upload a ZIP file here). Here you can download an <a href="http://tex.blogoverflow.com/files/2015/01/LaTeX.Thesis.Template.By_.Manuel.Kuehner.pdf">example document (PDF)</a>&nbsp;which was generated with the template files.</p> 
+         <h1>My System Setup</h1> 
+         <p>I used LaTeX (<a title="pdftex – A TEX extension for direct creation of PDF" href="http://ctan.org/pkg/pdftex" target="_blank">pdfTeX</a>) on a Windows 7 system (<a title="MiKTeX…typesetting beautiful documents…" href="http://miktex.org/" target="_blank">MiKTeX</a> distribution) and chose <a title="Texmaker | The universal LaTeX editor" href="http://www.xm1math.net/texmaker/" target="_blank">Texmaker </a>as my LaTeX text editor. There is a video tutorial that shows how to setup up such a system:</p> 
+         <p><strong>YouTube:</strong>&nbsp;<a href="https://www.youtube.com/watch?v=FxKtwdob2RQ">Installing LaTeX/MiKTeX and Texmaker on a Windows 7 System (Version 2014)</a></p> 
+         <h1>Batch Files</h1> 
+         <p>I added two batch files to the template which work under Windows in combination with <a title="MiKTeX…typesetting beautiful documents…" href="http://miktex.org/" target="_blank">MiKTeX</a>.</p> 
+         <ol> 
+          <li>The first batch file is named&nbsp;<strong>Batch_CleanUp.bat</strong> and deletes all auxiliary files like .aux, .log and so on.</li> 
+          <li>The second batch file is named&nbsp;<strong>Batch_CompileFile.bat</strong> and calls&nbsp;<strong>Batch_CleanUp.bat</strong>, <strong>pdflatex</strong> and <strong>biber</strong>.&nbsp;<strong>pdflatex</strong> is executed with some additional options which are useful when you have a large document and use the external option of <strong>TikZ/PGF</strong>.</li> 
+         </ol> 
+         <h2>Batch_CleanUp.bat</h2> 
+         <p></p>
+         <pre>:: Delete all auxiliary files
+del *.aux
+del *.log
+del *.gz
+del *.blg
+del *.bbl
+del *.lof
+del *.lot
+del *.out
+del *.ptc
+del *.toc
+del *blx.bib
+del *run.xml
+del *.bcf 
+</pre>
+         <p></p> 
+         <h2>Batch_CompileFile.bat</h2> 
+         <p></p>
+         <pre>:: Delete all auxiliary files
+rem --- 'rem' or '::' is the key word for comments in batch files like this<p></p>
+
+<p>rem --- Call cleanup script in order to delete all auxiliary files ---
+rem --- Sometimes after error messages there are still errors in the auxiliary files even if the root of the error was corrected in the tex file
+:: ---
+call my_Batch_CleanUp.bat
+:: ---</p>
+
+<p>rem --- First LaTeX run (pdflatex) with special options (more memory) for large LaTeX projects and tikz stuff (-shell-escape) ---
+rem --- I use MiKTeX -- maybe you need another syntax if you use TeX Live for example ---
+:: ---
+pdflatex --extra-mem-top=60000000 -synctex=1 -shell-escape -interaction=batchmode MainFile.tex</p>
+
+<p>rem --- Execute biber if used ---
+:: ---
+biber     MainFile
+:: ---</p>
+
+<p>rem --- Compile three times to make sure everything is correct ---
+:: ---
+pdflatex --extra-mem-top=60000000 -synctex=1 -shell-escape -interaction=batchmode MainFile.tex
+pdflatex --extra-mem-top=60000000 -synctex=1 -shell-escape -interaction=batchmode MainFile.tex
+pdflatex --extra-mem-top=60000000 -synctex=1 -shell-escape -interaction=batchmode MainFile.tex
+:: --- 
+</p></pre>
+         <p></p> 
+         <h1>Other Templates</h1> 
+         <p><span style="color: #222222">Other&nbsp;</span><span style="color: #222222">thesis templates can be found in the discussion&nbsp;</span><a style="color: #1b8be0" title="LaTeX templates for writing a thesis" href="http://tex.stackexchange.com/questions/326/" target="_blank">here</a><span style="color: #222222">. Here I especially like the thesis&nbsp;template project from <a href="http://www.khirevich.com/latex/" target="_blank">Siarhei Khirevich</a>.</span></p> 
+         <h1><span style="color: #ff0000">Suggestions From the Comments</span></h1> 
+         <ul> 
+          <li>Using&nbsp;<strong>\frontmatter</strong>, <strong>\mainmatter</strong> and <strong>\backmatter</strong> instead of&nbsp;<strong>\pagenumbering{roman}</strong> and so on.</li> 
+          <li>Using&nbsp;<a title="koma-script – A bun­dle of ver­sa­tile classes and pack­ages" href="http://www.ctan.org/tex-archive/macros/latex/contrib/koma-script/" target="_blank"><strong>scrlayer-scrpage</strong></a>&nbsp;package instead of&nbsp;<strong><a title="koma-script – A bun­dle of ver­sa­tile classes and pack­ages" href="http://www.ctan.org/tex-archive/macros/latex/contrib/koma-script/" target="_blank">scrpage2</a>&nbsp;</strong>package (has more features to control headers and footers).</li> 
+          <li>Not using the <a title="float – Improved interface for floating objects" href="http://www.ctan.org/pkg/float" target="_blank"><strong>float</strong></a> package and instead using <a title="koma-script – A bun­dle of ver­sa­tile classes and pack­ages" href="http://www.ctan.org/tex-archive/macros/latex/contrib/koma-script/" target="_blank"><strong>KOMA-Script</strong></a> commands, see also my <a title="KOMA and float package - alternative to float [H] placement" href="http://tex.stackexchange.com/questions/220339/" target="_blank">question</a> on&nbsp;<a title="http://tex.stackexchange.com/" href="http://tex.stackexchange.com/" target="_blank">tex.stackexchange.com</a>.</li> 
+         </ul> 
+         <h1>Update 1st August 2015: Error “! Missing $ inserted.&nbsp;&lt;inserted text&gt;$&nbsp;\chapter{Introduction}”</h1> 
+         <p>Some users saw the error message like in this screenshot:</p> 
+         <div id="attachment_2398" style="width: 878px" class="wp-caption alignnone">
+          <a href="http://tex.blogoverflow.com/files/2015/01/ErrorMissingDollar.png"><img class="wp-image-2398 size-full" src="http://tex.blogoverflow.com/files/2015/01/ErrorMissingDollar.png" alt="ErrorMissingDollar" width="868" height="747"></a>
+          <p class="wp-caption-text">Error “! Missing $ inserted. $ \chapter{Introduction}”</p>
+         </div> 
+         <p>It seems like it is caused by the <strong>underscores</strong> in the color names&nbsp;<strong>myColor_MainA</strong> and&nbsp;<strong>myColor_MainB</strong>. I therefore removed the underscore (<strong>myColorMainA</strong> and <strong>myColorMainB</strong>) and updated the template.</p> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/latex/" rel="category tag">LaTeX</a>, <a href="http://tex.blogoverflow.com/category/workflow/" rel="category tag">Workflow</a></span></p> 
+          <p><span class="post-tag">Tagged: <a href="http://tex.blogoverflow.com/tag/best-practice/" rel="tag">best-practice</a>, <a href="http://tex.blogoverflow.com/tag/template/" rel="tag">Template</a>, <a href="http://tex.blogoverflow.com/tag/thesis/" rel="tag">Thesis</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="blog-summary"> 
+       <h2 class="blog-title"><a href="http://tex.blogoverflow.com/2014/09/a-deserved-milestone/">A deserved milestone</a></h2> 
+       <div class="meta-info">
+        <span class="postedDate">2014-09-08</span> by 
+        <a href="http://tex.blogoverflow.com/author/paulocereda/" title="Posts by Paulo Cereda" rel="author">Paulo Cereda</a>. 
+        <a href="http://tex.blogoverflow.com/2014/09/a-deserved-milestone/#comments">4 comments</a>
+       </div> 
+       <div class="excerpt_main"> 
+        <div class="post-text"> 
+         <p>You know him. A good friend.</p> 
+         <p>Do you know he has a middle name?</p> 
+         <p>I won’t tell you, though. It’s a secret.</p> 
+         <p>It’s not listed in the index of <em>The TeXbook</em>, I’m afraid.</p> 
+         <p>I will give you a hint: it starts with <em>P</em>.</p> 
+         <p><em>P</em> as in passionate about TeX and friends.</p> 
+         <p><em>P</em> as in patient, able to wait, to listen.</p> 
+         <p><em>P</em> as in peaceful, calm. And always eager to help.</p> 
+         <p><em>P</em> as in playful, pleasantly humorous.</p> 
+         <p><em>P</em> as in polite. A gentleman.</p> 
+         <p><em>P</em> as in proficient, skilled at TeX and friends.</p> 
+         <p><em>P</em> as in prominent, a true TeX demigod.</p> 
+         <p><em>P</em> as in proper, correct.</p> 
+         <p><em>P</em> as in poetic when writing code.</p> 
+         <p>That’s him.</p> 
+         <p><em>P</em> as in David, David P. Carlisle.</p> 
+         <p>Congrats, my friend.</p> 
+         <div> 
+          <p><span class="filedto">Filed under <a href="http://tex.blogoverflow.com/category/tex-sx/" rel="category tag">TeX.sx</a></span></p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="navigation"> 
+       <div class="previous-entries">
+        <a href="http://tex.blogoverflow.com/page/2/">« Older Entries</a>
+       </div> 
+       <div class="next-entries"></div> 
+      </div> 
+     </div> 
+     <div id="sidebar"> 
+      <div class="module siteIntro"> 
+       <!--The TeX Stack Exchange Blog--> This is a community blog for 
+       <a href="http://tex.stackexchange.com">TeX - LaTeX Stack Exchange</a>. More community blogs are available at 
+       <a href="http://blogoverflow.com">Blog Overflow</a>. 
+      </div> 
+      <div class="module module-rss"> 
+       <a href="http://tex.blogoverflow.com/feed/"><img src="http://tex.blogoverflow.com/wp-content/themes/stackexchange/images/ico_rss.png" alt="Subscribe to our RSS feed"> Subscribe via RSS</a> 
+      </div> 
+      <div class="module"> 
+      </div> 
+      <div class="module"> 
+       <h4>Latest Articles</h4> 
+       <ul> 
+        <li><a href="http://tex.blogoverflow.com/2015/09/latex-cookbook/">LaTeX Cookbook available to pre-order with 35% discount – updated</a></li> 
+        <li><a href="http://tex.blogoverflow.com/2015/08/registering-for-the-dante-autumn-meeting-2015/">Registering for the DANTE autumn meeting 2015</a></li> 
+        <li><a href="http://tex.blogoverflow.com/2015/08/meanwhile-at-egregs-desk/">Meanwhile, at egreg’s desk…</a></li> 
+        <li><a href="http://tex.blogoverflow.com/2015/07/tex-user-group-meeting-2015/">TeX User Group Meeting 2015</a></li> 
+        <li><a href="http://tex.blogoverflow.com/2015/06/thank-you-hermann-zapf/">Thank you, Hermann Zapf</a></li> 
+       </ul> 
+       <p class="fr"><a href="/archive/">view all posts</a></p> 
+      </div> 
+      <div class="module"> 
+       <h4>Topics</h4> 
+       <ul class="twoCol"> 
+        <li class="cat-item cat-item-5"><a href="http://tex.blogoverflow.com/category/advocacy/">Advocacy</a> (5) </li> 
+        <li class="cat-item cat-item-44"><a href="http://tex.blogoverflow.com/category/books/">Books</a> (5) </li> 
+        <li class="cat-item cat-item-19"><a href="http://tex.blogoverflow.com/category/conferences/">Conferences</a> (7) </li> 
+        <li class="cat-item cat-item-38"><a href="http://tex.blogoverflow.com/category/contests/">Contests</a> (2) </li> 
+        <li class="cat-item cat-item-14"><a href="http://tex.blogoverflow.com/category/editors/">Editors</a> (5) </li> 
+        <li class="cat-item cat-item-43"><a href="http://tex.blogoverflow.com/category/fonts-2/">Fonts</a> (2) </li> 
+        <li class="cat-item cat-item-35"><a href="http://tex.blogoverflow.com/category/tex-sx/interviews/">Interviews</a> (20) </li> 
+        <li class="cat-item cat-item-6"><a href="http://tex.blogoverflow.com/category/latex/">LaTeX</a> (27) </li> 
+        <li class="cat-item cat-item-36"><a href="http://tex.blogoverflow.com/category/latex/latex3/">LaTeX3</a> (1) </li> 
+        <li class="cat-item cat-item-17"><a href="http://tex.blogoverflow.com/category/latex/packages/">Packages</a> (9) </li> 
+        <li class="cat-item cat-item-27"><a href="http://tex.blogoverflow.com/category/questions-2/">Questions</a> (5) </li> 
+        <li class="cat-item cat-item-4"><a href="http://tex.blogoverflow.com/category/tex-sx/">TeX.sx</a> (34) </li> 
+        <li class="cat-item cat-item-26"><a href="http://tex.blogoverflow.com/category/tikz/">TikZ</a> (4) </li> 
+        <li class="cat-item cat-item-18"><a href="http://tex.blogoverflow.com/category/tug/">TUG</a> (7) </li> 
+        <li class="cat-item cat-item-1"><a href="http://tex.blogoverflow.com/category/uncategorized/">Uncategorized</a> (3) </li> 
+        <li class="cat-item cat-item-40"><a href="http://tex.blogoverflow.com/category/workflow/">Workflow</a> (4) </li> 
+       </ul> 
+      </div> 
+      <div class="module"> 
+      </div> 
+      <div class="module"> 
+       <div class="sectionHeader">
+        <h4>Latest Comments</h4> 
+        <ul> 
+         <li><a href="http://tex.blogoverflow.com/2015/03/latex-beginners-guide-available-for-download-today/#comment-677640" title="LaTeX Beginner’s Guide available for free download March 4, 2015, 2015-03-04">minecraft</a>: Very nice. Posts shared useful information and meaningful life, I’m glad to be reading this article...</li> 
+         <li><a href="http://tex.blogoverflow.com/2014/05/gitinfo2-latex-and-git-join-forces/#comment-676478" title="gitinfo2: LaTeX and git join forces, 2014-05-14">Johan W. Joubert</a>: Oops, don’t worry… I was just an idiot. I was (mistakenly) under the impression that...</li> 
+         <li><a href="http://tex.blogoverflow.com/2014/05/gitinfo2-latex-and-git-join-forces/#comment-676477" title="gitinfo2: LaTeX and git join forces, 2014-05-14">Johan W. Joubert</a>: Nope, trying to copy the scripts under different names, but I can only get it to update the...</li> 
+         <li><a href="http://tex.blogoverflow.com/2014/05/gitinfo2-latex-and-git-join-forces/#comment-676475" title="gitinfo2: LaTeX and git join forces, 2014-05-14">Johan W. Joubert</a>: Thanks Brent! I think this is really cool, and works great! I see the .git/gitHeadInfo.gin only...</li> 
+         <li><a href="http://tex.blogoverflow.com/2012/08/a-perl-script-for-indenting-tex-files/#comment-675048" title="A perl script for indenting .tex files, 2012-08-29">Shannon Dunkley</a>: Valuable blog post . BTW if people a a form , my friend filled out and esigned a template version...</li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- Main Content End --> 
+   </div> 
+   <div id="footer"> 
+    <div class="footerwrap"> 
+     <p>Stack Exchange © 2016 <a href="http://tex.blogoverflow.com/feed/">Entries (RSS)</a> and <a href="http://tex.blogoverflow.com/comments/feed/">Comments (RSS)</a>. <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-Wiki</a></p> 
+    </div> 
+   </div> 
+   <script type="text/javascript">
+	<!--
+	try {
+		var parent_location = new String(parent.location);
+		var top_location = new String(top.location);
+		var cur_location = new String(document.location);
+		parent_location = parent_location.toLowerCase();
+		top_location = top_location.toLowerCase();
+		cur_location = cur_location.toLowerCase();
+
+		if ( top_location != cur_location && parent_location.indexOf('http://tex.blogoverflow.com') != 0 )
+			top.location.href = document.location.href;
+	} catch ( err ) {
+		top.location.href = document.location.href;
+	}
+	//-->
+	</script> 
+   <!--stats_footer_test-->
+   <script src="http://stats.wordpress.com/e-201619.js" type="text/javascript"></script> 
+   <script type="text/javascript">
+st_go({blog:'25317355',v:'ext',post:'0'});
+var load_cmc = function(){linktracker_init(25317355,0,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script> 
+   <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5620270-31']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>   
+   <!-- Dynamic page generated in 0.343 seconds. --> 
+   <!-- Cached page generated by WP-Super-Cache on 2016-05-14 17:10:46 --> 
+   <!-- Compression = gzip -->
+  </div>
+ </body>
+</html>

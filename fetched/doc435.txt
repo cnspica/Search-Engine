@@ -1,0 +1,425 @@
+http://tutorialspoint.com/r/r_binary_files.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>R Binary Files</title> 
+  <meta name="description" content="R Binary Files - Learn R programming language with simple and easy examples starting from R installation, language basics, syntax, literals, data types, variables, functions, loops, decision making, modules, arrays, lists, vectors, math, matrices, statistical, graphics, excel data, csv data, Overview, Environment Setup, Operators, Strings, Factors, Data Frames, Packages, Data Reshaping, Binary Files, XML Files, Json Files, Web Data, Databases, Pie Charts, Bar Charts, Boxplots, Histograms, Line Graphs, Scatterplots, Mean, Median and Mode, Line Regression, Multiple Regression, Logistic Regression, Normal Distribution, Binomial Distribution, Poisson Regression, Analysis of Covariance, Time Series Analysis, Nonlinear Least Square, Decision Tree, Random Forest, Survival Analysis, Chi Square Test."> 
+  <meta name="keywords" content="R, tutorial, beginners, programming, language, basics, syntax, literals, data types, variables, functions, loops, decision making, modules, arrays, lists, vectors, math, matrices, statistical, graphics, excel, data, csv data, Overview, Environment Setup, Operators, Strings, Factors, Data Frames, Packages, Data Reshaping, Binary Files, XML Files, Json Files, Web Data, Databases, Pie Charts, Bar Charts, Boxplots, Histograms, Line Graphs, Scatterplots, Mean, Median and Mode, Line Regression, Multiple Regression, Logistic Regression, Normal Distribution, Binomial Distribution, Poisson Regression, Analysis of Covariance, Time Series Analysis, Nonlinear Least Square, Decision Tree, Random Forest, Survival Analysis, Chi Square Test."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/r/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #496194 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #496194 !important;}
+.submenu-item{ border-bottom: 2px solid #496194 !important; border-top: 2px solid #496194 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/r/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/r/images/r-mini-logo.jpg" alt="R Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Tutorial</li> 
+        <li><a href="/r/index.htm">R - Home</a></li> 
+        <li><a href="/r/r_overview.htm">R - Overview</a></li> 
+        <li><a href="/r/r_environment_setup.htm">R - Environment Setup</a></li> 
+        <li><a href="/r/r_basic_syntax.htm">R - Basic Syntax</a></li> 
+        <li><a href="/r/r_data_types.htm">R - Data Types</a></li> 
+        <li><a href="/r/r_variables.htm">R - Variables</a></li> 
+        <li><a href="/r/r_operators.htm">R - Operators</a></li> 
+        <li><a href="/r/r_decision_making.htm">R - Decision Making</a></li> 
+        <li><a href="/r/r_loops.htm">R - Loops</a></li> 
+        <li><a href="/r/r_functions.htm">R - Functions</a></li> 
+        <li><a href="/r/r_strings.htm">R - Strings</a></li> 
+        <li><a href="/r/r_vectors.htm">R - Vectors</a></li> 
+        <li><a href="/r/r_lists.htm">R - Lists</a></li> 
+        <li><a href="/r/r_matrices.htm">R - Matrices</a></li> 
+        <li><a href="/r/r_arrays.htm">R - Arrays</a></li> 
+        <li><a href="/r/r_factors.htm">R - Factors</a></li> 
+        <li><a href="/r/r_data_frames.htm">R - Data Frames</a></li> 
+        <li><a href="/r/r_packages.htm">R - Packages</a></li> 
+        <li><a href="/r/r_data_reshaping.htm">R - Data Reshaping</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Data Interfaces</li> 
+        <li><a href="/r/r_csv_files.htm">R - CSV Files</a></li> 
+        <li><a href="/r/r_excel_files.htm">R - Excel Files</a></li> 
+        <li><a href="/r/r_binary_files.htm">R - Binary Files</a></li> 
+        <li><a href="/r/r_xml_files.htm">R - XML Files</a></li> 
+        <li><a href="/r/r_json_files.htm">R - JSON Files</a></li> 
+        <li><a href="/r/r_web_data.htm">R - Web Data</a></li> 
+        <li><a href="/r/r_database.htm">R - Database</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Charts &amp; Graphs</li> 
+        <li><a href="/r/r_pie_charts.htm">R - Pie Charts</a></li> 
+        <li><a href="/r/r_bar_charts.htm">R - Bar Charts</a></li> 
+        <li><a href="/r/r_boxplots.htm">R - Boxplots</a></li> 
+        <li><a href="/r/r_histograms.htm">R - Histograms</a></li> 
+        <li><a href="/r/r_line_graphs.htm">R - Line Graphs</a></li> 
+        <li><a href="/r/r_scatterplots.htm">R - Scatterplots</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Statistics Examples</li> 
+        <li><a href="/r/r_mean_median_mode.htm">R - Mean, Median &amp; Mode</a></li> 
+        <li><a href="/r/r_linear_regression.htm">R - Linear Regression</a></li> 
+        <li><a href="/r/r_multiple_regression.htm">R - Multiple Regression</a></li> 
+        <li><a href="/r/r_logistic_regression.htm">R - Logistic Regression</a></li> 
+        <li><a href="/r/r_normal_distribution.htm">R - Normal Distribution</a></li> 
+        <li><a href="/r/r_binomial_distribution.htm">R - Binomial Distribution</a></li> 
+        <li><a href="/r/r_poisson_regression.htm">R - Poisson Regression</a></li> 
+        <li><a href="/r/r_analysis_of_covariance.htm">R - Analysis of Covariance</a></li> 
+        <li><a href="/r/r_time_series_analysis.htm">R - Time Series Analysis</a></li> 
+        <li><a href="/r/r_nonlinear_least_square.htm">R - Nonlinear Least Square</a></li> 
+        <li><a href="/r/r_decision_tree.htm">R - Decision Tree</a></li> 
+        <li><a href="/r/r_random_forest.htm">R - Random Forest</a></li> 
+        <li><a href="/r/r_survival_analysis.htm">R - Survival Analysis</a></li> 
+        <li><a href="/r/r_chi_square_tests.htm">R - Chi Square Tests</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">R Useful Resources</li> 
+        <li><a href="/r/r_interview_questions.htm">R - Interview Questions</a></li> 
+        <li><a href="/r/r_quick_guide.htm">R - Quick Guide</a></li> 
+        <li><a href="/r/r_useful_resources.htm">R - Useful Resources</a></li> 
+        <li><a href="/r/r_discussion.htm">R - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>R - Binary Files</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/r/r_excel_files.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/r/r_xml_files.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>A binary file is a file that contains information stored only in form of bits and bytes.(0’s and 1’s). They are not human readable as the bytes in it translate to characters and symbols which contain many other non-printable characters. Attempting to read a binary file using any text editor will show characters like Ø and ð.</p> 
+        <p>The binary file has to be read by specific programs to be useable. For example, the binary file of a Microsoft Word program can be read to a human readable form only by the Word program. Which indicates that, besides the human readable text, there is a lot more information like formatting of characters and page numbers etc., which are also stored along with alphanumeric characters. And finally a binary file is a continuous sequence of bytes. The line break we see in a text file is a character joining first line to the next.</p> 
+        <p>Sometimes, the data generated by other programs are required to be processed by R as a binary file. Also R is required to create binary files which can be shared with other programs.</p> 
+        <p>R has two functions <b>WriteBin()</b> and <b>readBin()</b> to create and read binary files.</p> 
+        <h2>Syntax</h2> 
+        <pre class="result notranslate">
+writeBin(object, con)
+readBin(con, what, n )
+</pre> 
+        <p>Following is the description of the parameters used −</p> 
+        <ul class="list"> 
+         <li><p><b>con</b> is the connection object to read or write the binary file.</p></li> 
+         <li><p><b>object</b> is the binary file which to be written.</p></li> 
+         <li><p><b>what</b> is the mode like character, integer etc. representing the bytes to be read.</p></li> 
+         <li><p><b>n</b> is the number of bytes to read from the binary file.</p></li> 
+        </ul> 
+        <h2>Example</h2> 
+        <p>We consider the R inbuilt data "mtcars". First we create a csv file from it and convert it to a binary file and store it as a OS file. Next we read this binary file created into R.</p> 
+        <h2>Writing the Binary File</h2> 
+        <p>We read the data frame "mtcars" as a csv file and then write it as a binary file to the OS.</p> 
+        <pre class="prettyprint notranslate">
+# Read the "mtcars" data frame as a csv file and store only the columns 
+   "cyl", "am" and "gear".
+write.table(mtcars, file = "mtcars.csv",row.names = FALSE, na = "", 
+   col.names = TRUE, sep = ",")
+
+# Store 5 records from the csv file as a new data frame.
+new.mtcars &lt;- read.table("mtcars.csv",sep = ",",header = TRUE,nrows = 5)
+
+# Create a connection object to write the binary file using mode "wb".
+write.filename = file("/web/com/binmtcars.dat", "wb")
+
+# Write the column names of the data frame to the connection object.
+writeBin(colnames(new.mtcars), write.filename)
+
+# Write the records in each of the column to the file.
+writeBin(c(new.mtcars$cyl,new.mtcars$am,new.mtcars$gear), write.filename)
+
+# Close the file for writing so that it can be read by other program.
+close(write.filename)
+</pre> 
+        <h2>Reading the Binary File</h2> 
+        <p>The binary file created above stores all the data as continuous bytes. So we will read it by choosing appropriate values of column names as well as the column values.</p> 
+        <pre class="prettyprint notranslate">
+# Create a connection object to read the file in binary mode using "rb".
+read.filename &lt;- file("/web/com/binmtcars.dat", "rb")
+
+# First read the column names. n = 3 as we have 3 columns.
+column.names &lt;- readBin(read.filename, character(),  n = 3)
+
+# Next read the column values. n = 18 as we have 3 column names and 15 values.
+read.filename &lt;- file("/web/com/binmtcars.dat", "rb")
+bindata &lt;- readBin(read.filename, integer(),  n = 18)
+
+# Print the data.
+print(bindata)
+
+# Read the values from 4th byte to 8th byte which represents "cyl".
+cyldata = bindata[4:8]
+print(cyldata)
+
+# Read the values form 9th byte to 13th byte which represents "am".
+amdata = bindata[9:13]
+print(amdata)
+
+# Read the values form 9th byte to 13th byte which represents "gear".
+geardata = bindata[14:18]
+print(geardata)
+
+# Combine all the read values to a dat frame.
+finaldata = cbind(cyldata, amdata, geardata)
+colnames(finaldata) = column.names
+print(finaldata)
+</pre> 
+        <p>When we execute the above code, it produces the following result and chart −</p> 
+        <pre class="result notranslate">
+ [1]    7108963 1728081249    7496037          6          6          4
+ [7]          6          8          1          1          1          0
+[13]          0          4          4          4          3          3
+
+[1] 6 6 4 6 8
+
+[1] 1 1 1 0 0
+
+[1] 4 4 4 3 3
+
+     cyl am gear
+[1,]   6  1    4
+[2,]   6  1    4
+[3,]   4  1    4
+[4,]   6  0    3
+[5,]   8  0    3
+</pre> 
+        <p>As we can see, we got the original data back by reading the binary file in R.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/r/r_excel_files.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/r/r_xml_files.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/r/r_binary_files.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/r/r_binary_files.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/r/r_binary_files.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/r/r_binary_files.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/r/r_binary_files.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/r/r_binary_files.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('/r/try_r.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>

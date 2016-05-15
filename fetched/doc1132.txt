@@ -1,0 +1,2548 @@
+http://codegolf.stackexchange.com/questions/79809/universal-spooky-meme-translator
+<!doctype html>
+<html itemscope itemtype="http://schema.org/QAPage">
+ <head> 
+  <title>code golf - Universal Spooky Meme Translator - Programming Puzzles &amp; Code Golf Stack Exchange</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/codegolf/img/favicon.ico?v=38413b30209a"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/codegolf/img/apple-touch-icon.png?v=6f55f0b2476f"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Programming Puzzles &amp; Code Golf Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@StackCodeGolf"> 
+  <meta name="twitter:domain" content="codegolf.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/codegolf/img/apple-touch-icon.png?v=6f55f0b2476f&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Universal Spooky Meme Translator"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="Introduction
+
+Turns out, aliens love memes just as much as we do. Every alien race we've encountered so far has their own version of 2spooky4me (see the following question) and equivalent, though, ..."> 
+  <meta property="og:url" content="http://codegolf.stackexchange.com/questions/79809/universal-spooky-meme-translator"> 
+  <link rel="canonical" href="http://codegolf.stackexchange.com/questions/79809/universal-spooky-meme-translator"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=36086b43db82"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/codegolf/all.css?v=605748bc9b1e"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed for question 'Universal Spooky Meme Translator'" href="/feeds/question/79809"> 
+  <meta name="twitter:app:country" content="US"> 
+  <meta name="twitter:app:name:iphone" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:iphone" content="871299723"> 
+  <meta name="twitter:app:url:iphone" content="se-zaphod://codegolf.stackexchange.com/questions/79809/universal-spooky-meme-translator"> 
+  <meta name="twitter:app:name:ipad" content="Stack Exchange iOS"> 
+  <meta name="twitter:app:id:ipad" content="871299723"> 
+  <meta name="twitter:app:url:ipad" content="se-zaphod://codegolf.stackexchange.com/questions/79809/universal-spooky-meme-translator"> 
+  <meta name="twitter:app:name:googleplay" content="Stack Exchange Android"> 
+  <meta name="twitter:app:url:googleplay" content="http://codegolf.stackexchange.com/questions/79809/universal-spooky-meme-translator"> 
+  <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin"> 
+  <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:24,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:79809});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('200', '79809');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('200');
+                StackExchange.realtime.subscribeToTopBarNotifications('200');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463245239,"routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Programming Puzzles & Code Golf Stack Exchange","description":"Q&A for programming puzzle enthusiasts and code golfers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":200,"enableSocialMediaInSharePopup":true},"user":{"fkey":"71fb98341fa62b820a5808f83f182453","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"d911fb28bd9f","js/moderator.en.js":"50831ba8e994","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"97cc5d07283a","js/wmd.en.js":"b2e347d78fbd","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"8c8f022d2f71","js/inline-tag-editing.en.js":"a815357d00cd","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"a78702da7b99","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"79fde18773e4","js/explore-qlist.en.js":"2a9a628fca7f","js/events.en.js":"122722c4c15a","js/keyboard-shortcuts.en.js":"e92b66602411","js/external-editor.en.js":"683ce04845f3","js/external-editor.en.js":"683ce04845f3","js/snippet-javascript.en.js":"52f29aaf80f8","js/snippet-javascript-codemirror.en.js":"8a126dfc58dd"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="question-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//codegolf.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//codegolf.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="200" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf"></div> Programming Puzzles &amp; Code Golf </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.codegolf.stackexchange.com" class="site-link js-gps-track" data-id="202" data-gps-track="
+            site.switch({ target_site:202, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-codegolfmeta" title="Programming Puzzles &amp; Code Golf Meta"></div> Programming Puzzles &amp; Code Golf Meta </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://codegolf.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fcodegolf.stackexchange.com%2fquestions%2f79809%2funiversal-spooky-meme-translator" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://codegolf.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fcodegolf.stackexchange.com%2fquestions%2f79809%2funiversal-spooky-meme-translator" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://codegolf.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fcodegolf.stackexchange.com%2fquestions%2f79809%2funiversal-spooky-meme-translator" class="login-link">sign up</a> <a href="https://codegolf.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fcodegolf.stackexchange.com%2fquestions%2f79809%2funiversal-spooky-meme-translator" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.codegolf.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Programming Puzzles &amp; Code Golf </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li class="youarehere"><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content" class="snippet-hidden"> 
+    <div itemscope itemtype="http://schema.org/Question"> 
+     <link itemprop="image" href="//cdn.sstatic.net/Sites/codegolf/img/apple-touch-icon.png?v=6f55f0b2476f"> 
+     <div id="herobox"> 
+      <div id="hero-content"> 
+       <div id="close">
+        <a title="click to minimize">_</a>
+       </div> 
+       <div id="blurb">
+         Programming Puzzles &amp; Code Golf Stack Exchange is a question and answer site for programming puzzle enthusiasts and code golfers. It's 100% free, no registration required. 
+        <br> 
+        <br> 
+        <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fcodegolf.stackexchange.com%2fquestions%2f79809%2funiversal-spooky-meme-translator" id="tell-me-more" class="button">Sign up</a> 
+       </div> 
+       <div id="desc"> 
+        <b>Here's how it works:</b> 
+        <ol id="hiw"> 
+         <li id="q">Anybody can ask a question </li> 
+         <li id="an">Anybody can answer </li> 
+         <li id="b">The best answers are voted up and rise to the top </li> 
+        </ol> 
+       </div> 
+       <div style="clear: both"></div> 
+      </div> 
+      <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+     </div> 
+     <div id="question-header"> 
+      <h1 itemprop="name"><a href="/questions/79809/universal-spooky-meme-translator" class="question-hyperlink">Universal Spooky Meme Translator</a></h1> 
+     </div> 
+     <div id="mainbar"> 
+      <div class="question" data-questionid="79809" id="question"> 
+       <table> 
+        <tbody>
+         <tr> 
+          <td class="votecell"> 
+           <div class="vote"> 
+            <input type="hidden" name="_id_" value="79809"> 
+            <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a> 
+            <span itemprop="upvoteCount" class="vote-count-post ">28</span> 
+            <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a> 
+            <a class="star-off" href="#">favorite</a> 
+            <div class="favoritecount">
+             <b>5</b>
+            </div> 
+           </div> </td> 
+          <td class="postcell"> 
+           <div> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Introduction</h1> 
+             <p>Turns out, aliens love memes just as much as we do. Every alien race we've encountered so far has their own version of <code>2spooky4me</code> (see <a href="http://codegolf.stackexchange.com/questions/62350/halloween-golf-the-2spooky4me-challenge">the following question</a>) and equivalent, though, with some variation. The inhabitants of planet CUTE1f can't handle a lot of spook, so their preferred spook is <code>1spooky2me</code>, while skeletor7 memers love them some spook, so they tend to use <code>9spooky11me</code>.</p> 
+             <h1>Challenge</h1> 
+             <p>Translating memes is hard work, so you've been tasked with writing a universal meme translator to help these guys access the memenet correctly. Your program will accept a meme and a transformation to apply to the digit sequences in that meme to make it appropriate for the inhabitants of a different planet.</p> 
+             <h2>Input</h2> 
+             <p>Your program will receive two string inputs:</p> 
+             <ol> 
+              <li>The input meme (e.g. <code>2spooky4me</code>). Matches <code>[a-zA-Z0-9]+</code>.</li> 
+              <li>The transformation to apply to it (e.g. <code>+1</code>, to go from <code>2spooky4me</code> to <code>3spooky5me</code>). Matches <code>[+\-*/^]\d+</code> (you must accept <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>^</code> as operators, regardless of the native representation in your language).</li> 
+             </ol> 
+             <h2>Output</h2> 
+             <p>Your program must return a string output (printed to standard output or equivalent) with the given transformation applied to the digit sequences in the input meme. In a weird turn of events, it also turns out that all races encountered so far prefer integral memes over fractional ones, so these transformations should perform integer arithmetic (e.g. <code>1spooky1me /2</code> should result in <code>0spooky0me</code>).</p> 
+             <h2>Examples</h2> 
+             <p>Standard arithmetic operations apply:</p> 
+             <pre><code>Input:  2spooky4me +1
+Output: 3spooky5me
+
+Input:  2spooky4me -1
+Output: 1spooky3me
+
+Input:  2spooky4me *15
+Output: 30spooky60me
+
+Input:  10spooky900me /5
+Output: 2spooky180me
+</code></pre> 
+             <p>Digit sequences are integral; integer truncation should occur in cases like this:</p> 
+             <pre><code>Input:  idontunderstandmemes3 /2
+Output: idontunderstandmemes1
+</code></pre> 
+             <p>Your input may not have any digit sequences:</p> 
+             <pre><code>Input:  notreallyafunnymeme *100
+Output: notreallyafunnymeme
+</code></pre> 
+             <p>You must support exponentiation, even if it is not a native operation in your language of choice:</p> 
+             <pre><code>Input:  2spooky4me ^3
+Output: 8spooky64me
+</code></pre> 
+             <p>There's no limit on string length of number of digit sequences in the string:</p> 
+             <pre><code>Input:  some1meme2sequences3can4be5really6long7 /2
+Output: some0meme1sequences1can2be2really3long3
+</code></pre> 
+             <h2>Addendum</h2> 
+             <p>If your language supports arbitrary-precision integers as a language feature, you must use those. If it does not, you do not need to support arbitrary-precision integers. For example, you must use <code>Integer</code> in Haskell instead of <code>Int</code> because it's available as part of the language; in <code>Java</code>, you are not required to use <code>BigInteger</code> because it's a library feature, not a language feature.</p> 
+             <pre><code>Input:  2000000000000000000000000000000000000000000000000000000000000000000000000000000‌​000000000000000000000000000000000spooky4me /2
+Output: 1000000000000000000000000000000000000000000000000000000000000000000000000000000‌​000000000000000000000000000000000spooky2me
+</code></pre> 
+             <p>This is <a href="/questions/tagged/code-golf" class="post-tag" title="show questions tagged 'code-golf'" rel="tag">code-golf</a>, so <a href="http://meta.codegolf.stackexchange.com/questions/1061/loopholes-that-are-forbidden-by-default">standard loopholes</a> are forbidden, and the shortest answer in bytes wins!</p> 
+             <h1>Leaderboard</h1> 
+             <p>The Stack Snippet at the bottom of this post generates the leaderboard from the answers a) as a list of shortest solution per language and b) as an overall leaderboard.</p> 
+             <p>To make sure that your answer shows up, please start your answer with a headline, using the following Markdown template:</p> 
+             <pre><code>## Language Name, N bytes
+</code></pre> 
+             <p>where <code>N</code> is the size of your submission. If you improve your score, you <em>can</em> keep old scores in the headline, by striking them through. For instance:</p> 
+             <pre><code>## Ruby, &lt;s&gt;104&lt;/s&gt; &lt;s&gt;101&lt;/s&gt; 96 bytes
+</code></pre> 
+             <p>If there you want to include multiple numbers in your header (e.g. because your score is the sum of two files or you want to list interpreter flag penalties separately), make sure that the actual score is the <em>last</em> number in the header:</p> 
+             <pre><code>## Perl, 43 + 2 (-p flag) = 45 bytes
+</code></pre> 
+             <p>You can also make the language name a link which will then show up in the snippet:</p> 
+             <pre><code>## [&gt;&lt;&gt;](http://esolangs.org/wiki/Fish), 121 bytes
+</code></pre> 
+             <p></p>
+             <div class="snippet" data-lang="js" data-hide="true"> 
+              <div class="snippet-code snippet-currently-hidden"> 
+               <pre class="snippet-code-html lang-html prettyprint-override"><code>&lt;style&gt;body { text-align: left !important} #answer-list { padding: 10px; width: 290px; float: left; } #language-list { padding: 10px; width: 290px; float: left; } table thead { font-weight: bold; } table td { padding: 5px; }&lt;/style&gt;&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"&gt;&lt;/script&gt; &lt;link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/codegolf/all.css?v=83c949450c8b"&gt; &lt;div id="language-list"&gt; &lt;h2&gt;Shortest Solution by Language&lt;/h2&gt; &lt;table class="language-list"&gt; &lt;thead&gt; &lt;tr&gt;&lt;td&gt;Language&lt;/td&gt;&lt;td&gt;User&lt;/td&gt;&lt;td&gt;Score&lt;/td&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody id="languages"&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/div&gt; &lt;div id="answer-list"&gt; &lt;h2&gt;Leaderboard&lt;/h2&gt; &lt;table class="answer-list"&gt; &lt;thead&gt; &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Author&lt;/td&gt;&lt;td&gt;Language&lt;/td&gt;&lt;td&gt;Size&lt;/td&gt;&lt;/tr&gt; &lt;/thead&gt; &lt;tbody id="answers"&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/div&gt; &lt;table style="display: none"&gt; &lt;tbody id="answer-template"&gt; &lt;tr&gt;&lt;td&gt;{{PLACE}}&lt;/td&gt;&lt;td&gt;{{NAME}}&lt;/td&gt;&lt;td&gt;{{LANGUAGE}}&lt;/td&gt;&lt;td&gt;{{SIZE}}&lt;/td&gt;&lt;td&gt;&lt;a href="{{LINK}}"&gt;Link&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;table style="display: none"&gt; &lt;tbody id="language-template"&gt; &lt;tr&gt;&lt;td&gt;{{LANGUAGE}}&lt;/td&gt;&lt;td&gt;{{NAME}}&lt;/td&gt;&lt;td&gt;{{SIZE}}&lt;/td&gt;&lt;td&gt;&lt;a href="{{LINK}}"&gt;Link&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;&lt;script&gt;var QUESTION_ID = 79809; var ANSWER_FILTER = "!t)IWYnsLAZle2tQ3KqrVveCRJfxcRLe"; var COMMENT_FILTER = "!)Q2B_A2kjfAiU78X(md6BoYk"; var OVERRIDE_USER = 45941; var answers = [], answers_hash, answer_ids, answer_page = 1, more_answers = true, comment_page; function answersUrl(index) { return "https://api.stackexchange.com/2.2/questions/" + QUESTION_ID + "/answers?page=" + index + "&amp;pagesize=100&amp;order=desc&amp;sort=creation&amp;site=codegolf&amp;filter=" + ANSWER_FILTER; } function commentUrl(index, answers) { return "https://api.stackexchange.com/2.2/answers/" + answers.join(';') + "/comments?page=" + index + "&amp;pagesize=100&amp;order=desc&amp;sort=creation&amp;site=codegolf&amp;filter=" + COMMENT_FILTER; } function getAnswers() { jQuery.ajax({ url: answersUrl(answer_page++), method: "get", dataType: "jsonp", crossDomain: true, success: function (data) { answers.push.apply(answers, data.items); answers_hash = []; answer_ids = []; data.items.forEach(function(a) { a.comments = []; var id = +a.share_link.match(/\d+/); answer_ids.push(id); answers_hash[id] = a; }); if (!data.has_more) more_answers = false; comment_page = 1; getComments(); } }); } function getComments() { jQuery.ajax({ url: commentUrl(comment_page++, answer_ids), method: "get", dataType: "jsonp", crossDomain: true, success: function (data) { data.items.forEach(function(c) { if (c.owner.user_id === OVERRIDE_USER) answers_hash[c.post_id].comments.push(c); }); if (data.has_more) getComments(); else if (more_answers) getAnswers(); else process(); } }); } getAnswers(); var SCORE_REG = /&lt;h\d&gt;\s*([^\n,&lt;]*(?:&lt;(?:[^\n&gt;]*&gt;[^\n&lt;]*&lt;\/[^\n&gt;]*&gt;)[^\n,&lt;]*)*),.*?(\d+)(?=[^\n\d&lt;&gt;]*(?:&lt;(?:s&gt;[^\n&lt;&gt;]*&lt;\/s&gt;|[^\n&lt;&gt;]+&gt;)[^\n\d&lt;&gt;]*)*&lt;\/h\d&gt;)/; var OVERRIDE_REG = /^Override\s*header:\s*/i; function getAuthorName(a) { return a.owner.display_name; } function process() { var valid = []; answers.forEach(function(a) { var body = a.body; a.comments.forEach(function(c) { if(OVERRIDE_REG.test(c.body)) body = '&lt;h1&gt;' + c.body.replace(OVERRIDE_REG, '') + '&lt;/h1&gt;'; }); var match = body.match(SCORE_REG); if (match) valid.push({ user: getAuthorName(a), size: +match[2], language: match[1], link: a.share_link, }); else console.log(body); }); valid.sort(function (a, b) { var aB = a.size, bB = b.size; return aB - bB }); var languages = {}; var place = 1; var lastSize = null; var lastPlace = 1; valid.forEach(function (a) { if (a.size != lastSize) lastPlace = place; lastSize = a.size; ++place; var answer = jQuery("#answer-template").html(); answer = answer.replace("{{PLACE}}", lastPlace + ".") .replace("{{NAME}}", a.user) .replace("{{LANGUAGE}}", a.language) .replace("{{SIZE}}", a.size) .replace("{{LINK}}", a.link); answer = jQuery(answer); jQuery("#answers").append(answer); var lang = a.language; lang = jQuery('&lt;a&gt;'+lang+'&lt;/a&gt;').text(); languages[lang] = languages[lang] || {lang: a.language, lang_raw: lang.toLowerCase(), user: a.user, size: a.size, link: a.link}; }); var langs = []; for (var lang in languages) if (languages.hasOwnProperty(lang)) langs.push(languages[lang]); langs.sort(function (a, b) { if (a.lang_raw &gt; b.lang_raw) return 1; if (a.lang_raw &lt; b.lang_raw) return -1; return 0; }); for (var i = 0; i &lt; langs.length; ++i) { var language = jQuery("#language-template").html(); var lang = langs[i]; language = language.replace("{{LANGUAGE}}", lang.lang) .replace("{{NAME}}", lang.user) .replace("{{SIZE}}", lang.size) .replace("{{LINK}}", lang.link); language = jQuery(language); jQuery("#languages").append(language); } }&lt;/script&gt;</code></pre> 
+              </div> 
+             </div> 
+             <p></p> 
+            </div> 
+            <div class="post-taglist"> 
+             <a href="/questions/tagged/code-golf" class="post-tag" title="show questions tagged 'code-golf'" rel="tag">code-golf</a> 
+             <a href="/questions/tagged/string" class="post-tag" title="show questions tagged 'string'" rel="tag">string</a> 
+             <a href="/questions/tagged/math" class="post-tag" title="show questions tagged 'math'" rel="tag">math</a> 
+             <a href="/questions/tagged/subsequence" class="post-tag" title="show questions tagged 'subsequence'" rel="tag">subsequence</a> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/q/79809" title="short permalink to this question" class="short-link" id="link-post-79809">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79809/edit" class="suggest-edit-post" title="">improve this question</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79809/revisions" title="show all edits to this post">edited <span title="2016-05-13 14:40:54Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/31625/fryamtheeggman">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/e1d8ce82fc1d645dff9d9a3c068f9792?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/31625/fryamtheeggman">FryAmTheEggman</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">9,504</span>
+                   <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span>
+                   <span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span>
+                   <span title="56 bronze badges"><span class="badge3"></span><span class="badgecount">56</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td class="post-signature owner"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   asked 
+                  <span title="2016-05-12 19:09:45Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/12095/itai-ferber">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/eb61781f55bda1790e6216a2dee08b11?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/12095/itai-ferber">Itai Ferber</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">241</span>
+                   <span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span>
+                   <span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> 
+           </div> </td> 
+         </tr> 
+         <tr> 
+          <td class="votecell"></td> 
+          <td> 
+           <div id="comments-79809" class="comments "> 
+            <table> 
+             <tbody data-remaining-comments-count="19" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+              <tr id="comment-195723" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Your last test case is wrong. You have one too many zeros in the output for it to be /5.</span> –&nbsp;
+                 <a href="/users/31541/qpaystaxes" title="418 reputation" class="comment-user">QPaysTaxes</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 19:14:29Z" class="relativetime-clean">yesterday</span></span> 
+                 <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-195726" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">4</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">First of all this is a reasonably well put together first post, so congrats :) Note we have a <a href="http://meta.codegolf.stackexchange.com/q/2140/31625">Sandbox</a> where you can post your challenge for feedback before it goes live.</span> –&nbsp;
+                 <a href="/users/31625/fryamtheeggman" title="9,504 reputation" class="comment-user">FryAmTheEggman</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 19:21:07Z" class="relativetime-clean">yesterday</span></span> 
+                 <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-195730" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">Welcome to PPCG (even though you've apparently been here for 2+ years). Nice first challenge. Does the addendum about arbitrary precision integers mandate that, for example, Java <i>must</i> use <code>BigInteger</code> for its calculations?</span> –&nbsp;
+                 <a href="/users/42963/timmyd" title="5,157 reputation" class="comment-user">TimmyD</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 19:24:11Z" class="relativetime-clean">yesterday</span></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-195769" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="warm">11</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy"><i>Every alien race we've encountered so far...</i> That's totally true! :-)</span> –&nbsp;
+                 <a href="/users/36398/luis-mendo" title="15,120 reputation" class="comment-user">Luis Mendo</a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 20:48:33Z" class="relativetime-clean">yesterday</span></span> 
+                 <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                </div> </td> 
+              </tr> 
+              <tr id="comment-195773" class="comment "> 
+               <td class="comment-actions"> 
+                <table> 
+                 <tbody> 
+                  <tr> 
+                   <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                   <td> &nbsp; </td> 
+                  </tr> 
+                 </tbody> 
+                </table> </td> 
+               <td class="comment-text"> 
+                <div style="display: block;" class="comment-body"> 
+                 <span class="comment-copy">It's your challenge and ultimately up to you, but that's not really fair towards languages that happen to use a different syntax.</span> –&nbsp;
+                 <a href="/users/12012/dennis" title="76,555 reputation" class="comment-user">Dennis<span class="mod-flair" title="moderator">♦</span></a> 
+                 <span class="comment-date" dir="ltr"><span title="2016-05-12 20:51:33Z" class="relativetime-clean">yesterday</span></span> 
+                </div> </td> 
+              </tr> 
+             </tbody> 
+            </table> 
+           </div> 
+           <div id="comments-link-79809" data-rep="50" data-anon="true"> 
+            <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></a>
+            <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>19</b> more comments</a> 
+           </div> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <div id="answers"> 
+       <a name="tab-top"></a> 
+       <div id="answers-header"> 
+        <div class="subheader answers-subheader"> 
+         <h2> 13 Answers <span style="display:none;" itemprop="answerCount">13</span> </h2> 
+         <div> 
+          <div id="tabs"> 
+           <a href="/questions/79809/universal-spooky-meme-translator?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active"> active</a> 
+           <a href="/questions/79809/universal-spooky-meme-translator?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest"> oldest</a> 
+           <a class="youarehere" href="/questions/79809/universal-spooky-meme-translator?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes"> votes</a> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <a name="79814"></a> 
+       <div id="answer-79814" class="answer" data-answerid="79814" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79814"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">13</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Ruby, <s>50</s> <s>44</s> 43 bytes</h1> 
+             <p>FGITW answer. Gotta go fast!</p> 
+             <p>Thanks to @Neil for saving 6 bytes.</p> 
+             <p>Oh right, crossed out 44 is still 44</p> 
+             <pre><code>-&gt;m,t{m.gsub(/\d+/){eval$&amp;+t.sub(?^,'**')}}
+</code></pre> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79814" title="short permalink to this answer" class="short-link" id="link-post-79814">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79814/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79814/revisions" title="show all edits to this post">edited <span title="2016-05-12 20:16:20Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 20:00:29Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/52194/kevin-lau-not-kenny">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/gfgwy.png?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/52194/kevin-lau-not-kenny">Kevin Lau - not Kenny</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">1,311</span>
+                   <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+                   <span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79814" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-195765" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Thanks for crediting me!</span> –&nbsp;
+                  <a href="/users/17602/neil" title="8,689 reputation" class="comment-user">Neil</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 20:35:28Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195768" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Oh, man, this is almost exactly an answer I was poking away at: <code>a=gets;$&gt;&lt;&lt;gets.gsub(/\d+/){eval$&amp;+a}</code>. Mine missed the ^ != ** thing, though, and is probably a bit longer.</span> –&nbsp;
+                  <a href="/users/31541/qpaystaxes" title="418 reputation" class="comment-user">QPaysTaxes</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 20:47:30Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195770" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">2</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">+1 for having your whole solution be 4 bytes shorter than what's needed in PowerShell just to handle <code>^</code>. :D</span> –&nbsp;
+                  <a href="/users/42963/timmyd" title="5,157 reputation" class="comment-user">TimmyD</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 20:49:11Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79814" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79826"></a> 
+       <div id="answer-79826" class="answer" data-answerid="79826" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79826"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">9</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Perl, 36 bytes</h1> 
+             <pre><code>s/\d+/"0|".$&amp;.$^I=~s#\^#**#r/gee
+</code></pre> 
+             <p>The source code is <strong>32 bytes</strong> long and it requires the switches <code>-pi</code> (<strong>+4 bytes</strong>). It takes the first input from STDIN, the second input as an argument to <code>-i</code>.</p> 
+             <p>Test it on <a href="http://ideone.com/of5mUj">Ideone</a>.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79826" title="short permalink to this answer" class="short-link" id="link-post-79826">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79826/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79826/revisions" title="show all edits to this post">edited <span title="2016-05-12 21:46:32Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 21:33:36Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/12012/dennis">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/oqYo2.jpg?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/12012/dennis">Dennis</a>
+                  <span class="mod-flair" title="moderator">♦</span> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 76,555" dir="ltr">76.6k</span>
+                   <span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span>
+                   <span title="131 silver badges"><span class="badge2"></span><span class="badgecount">131</span></span>
+                   <span title="331 bronze badges"><span class="badge3"></span><span class="badgecount">331</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79826" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-195804" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Yep, I figured if anybody could beat my Ruby answer, it would be Dennis and/or be in Perl, and you ended up fulfilling both expectations at the same time</span> –&nbsp;
+                  <a href="/users/52194/kevin-lau-not-kenny" title="1,311 reputation" class="comment-user">Kevin Lau - not Kenny</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 00:49:30Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195946" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy"><code>-pi</code> is 4 bytes?</span> –&nbsp;
+                  <a href="/users/51443/calculatorfeline" title="1,504 reputation" class="comment-user">CalculatorFeline</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 20:16:42Z" class="relativetime-clean">20 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195949" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@CatsAreFluffy <a href="http://meta.codegolf.stackexchange.com/a/274">Current consensus</a> is to count the edit distance from the invocation without the flags. That includes a space to separate <code>-pi</code> from the rest of the command.</span> –&nbsp;
+                  <a href="/users/12012/dennis" title="76,555 reputation" class="comment-user">Dennis<span class="mod-flair" title="moderator">♦</span></a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 20:26:10Z" class="relativetime-clean">20 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79826" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79815"></a> 
+       <div id="answer-79815" class="answer" data-answerid="79815" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79815"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">7</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h2>JavaScript (ES7), <s>58</s> 57 bytes</h2> 
+             <pre><code>(s,t)=&gt;s.replace(/\d+/g,n=&gt;0|eval(n+t.replace('^','**')))
+</code></pre> 
+             <p>Edit: Saved 1 byte when I remembered that <code>replace</code> also works on literal strings.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79815" title="short permalink to this answer" class="short-link" id="link-post-79815">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79815/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79815/revisions" title="show all edits to this post">edited <span title="2016-05-12 20:40:43Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 20:06:12Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/17602/neil">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/85db777de4927872264462cdd975dd2a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/17602/neil">Neil</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">8,689</span>
+                   <span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span>
+                   <span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79815" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-195757" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Cool, I'm working on an ES6 solution</span> –&nbsp;
+                  <a href="/users/49709/b%c3%a1lint" title="370 reputation" class="comment-user">Bálint</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 20:11:23Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79815" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79819"></a> 
+       <div id="answer-79819" class="answer" data-answerid="79819" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79819"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">7</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h2>PowerShell v2+, 139 bytes</h2> 
+             <pre><code>param($a,$b)-join($a-split"(\d+)"|%{if($_-match"\d+"){if($b[0]-ne'^'){[math]::Floor(("$_$b"|iex))}else{"$_*"*$b.Trim('^')+1|iex}}else{$_}})
+</code></pre> 
+             <p>Ooof ... 47 bytes just to account for <code>^</code> since that's not a native operator in PowerShell.</p> 
+             <p>Takes input as <code>$a=&lt;word&gt;</code>, <code>$b=&lt;operation&gt;</code>, like <code>.\universal-spooky-meme.ps1 2spooky4me ^3</code>. We <code>-split</code> <code>$a</code> on digits, enclosing that in parens so we keep the delimiters, and pipe the resultant array through a loop <code>|%{...}</code>. If the current piece is a number, we're in the first <code>if</code>. We need to check whether the first character of <code>$b</code> is <code>^</code>. If it's not, we simply concatenate our current piece and <code>$b</code> and pipe to <code>iex</code> (similar to <code>eval</code>), then leave that on the pipeline. Otherwise, we need to create an exponentiation string with <code>"$_*"*$b.Trim('^')+1</code> and pipe that to <code>iex</code>, and leave that on the pipeline. For the given <code>2spooky4me ^3</code> example, this will be <code>2*2*2*1</code> and <code>4*4*4*1</code>, respectively.</p> 
+             <p>Otherwise, we just leave the string as-is on the pipeline.</p> 
+             <p>All of those results are gathered on the pipeline with the encapsulating parens before being <code>-join</code>ed back together into one string. That is left on the pipeline, and output is implicit at program termination.</p> 
+             <h3>Examples</h3> 
+             <pre><code>PS C:\Tools\Scripts\golfing&gt; .\universal-spooky-meme.ps1 2spooky4me ^5
+32spooky1024me
+
+PS C:\Tools\Scripts\golfing&gt; .\universal-spooky-meme.ps1 2spooky4me /3
+0spooky1me
+</code></pre> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79819" title="short permalink to this answer" class="short-link" id="link-post-79819">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79819/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 20:43:40Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/42963/timmyd">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/2833b3182aa3f4c35f4fabc5bf4cc5a2?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/42963/timmyd">TimmyD</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">5,157</span>
+                   <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span>
+                   <span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span>
+                   <span title="48 bronze badges"><span class="badge3"></span><span class="badgecount">48</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79819" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-195958" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">I wrote my own before looking at answers, then I pinched some of your ideas as well - thanks. I think you could replace <code>Floor(("$_$b"|iex))</code> with <code>Floor((iex $_$b))</code> to save a couple, or maybe <code>iex $_+$b</code>.</span> –&nbsp;
+                  <a href="/users/571/tessellatingheckler" title="927 reputation" class="comment-user">TessellatingHeckler</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 23:28:13Z" class="relativetime-clean">17 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79819" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79821"></a> 
+       <div id="answer-79821" class="answer" data-answerid="79821" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79821"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">5</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Julia, 71 bytes</h1> 
+             <pre><code>x-&gt;y-&gt;replace(x,r"\d+",t-&gt;eval(parse("BigInt($t)"replace(y,"/","÷"))))
+</code></pre> 
+             <p>The requirement to use <code>BigInt</code> if available makes this a lot longer than it could be...</p> 
+             <p><a href="http://julia.tryitonline.net/#code=ZiA9IHgtPnktPnJlcGxhY2UoeCxyIlxkKyIsdC0-ZXZhbChwYXJzZSgiQmlnSW50KCR0KSJyZXBsYWNlKHksIi8iLCLDtyIpKSkpCgpwcmludGxuKGYoIjJzcG9va3k0bWUiKSgiKzEiKSkKcHJpbnRsbihmKCIyc3Bvb2t5NG1lIikoIi0xIikpCnByaW50bG4oZigiMnNwb29reTRtZSIpKCIqMTUiKSkKcHJpbnRsbihmKCIxMHNwb29reTkwMG1lIikoIi81IikpCnByaW50bG4oZigiaWRvbnR1bmRlcnN0YW5kbWVtZXMzIikoIi8yIikpCnByaW50bG4oZigibm90cmVhbGx5YWZ1bm55bWVtZSIpKCIqMTAwIikpCnByaW50bG4oZigiMnNwb29reTRtZSIpKCJeMyIpKQpwcmludGxuKGYoInNvbWUxbWVtZTJzZXF1ZW5jZXMzY2FuNGJlNXJlYWxseTZsb25nNyIpKCIvMiIpKQpwcmludGxuKGYoIjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDBzcG9va3k0bWUiKSgiLzIiKSk&amp;input=&amp;debug=on" rel="nofollow">Try it online!</a></p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79821" title="short permalink to this answer" class="short-link" id="link-post-79821">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79821/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79821/revisions" title="show all edits to this post">edited <span title="2016-05-12 23:30:21Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 20:49:22Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/12012/dennis">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/oqYo2.jpg?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/12012/dennis">Dennis</a>
+                  <span class="mod-flair" title="moderator">♦</span> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score 76,555" dir="ltr">76.6k</span>
+                   <span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span>
+                   <span title="131 silver badges"><span class="badge2"></span><span class="badgecount">131</span></span>
+                   <span title="331 bronze badges"><span class="badge3"></span><span class="badgecount">331</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79821" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79821" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79816"></a> 
+       <div id="answer-79816" class="answer" data-answerid="79816" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79816"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">5</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Python 2, <s>156</s> <s>89</s> <s>88</s> 87 bytes</h1> 
+             <p>Inspired by the other answers that use their languages' substitution function with a function handler to process the numeric parts of the long <code>i</code>nput string with the <code>o</code>perator. Unlucky for Python, the <code>^</code> must be replaced by <code>**</code>, which costs a whopping 18 bytes. The <code>.group(0)</code> call just to access the <a href="https://docs.python.org/3/library/re.html?highlight=re#match-objects" rel="nofollow">match object</a>'s string representation does not make things better...</p> 
+             <p>Thanks to QPaysTaxes for spotting a spurious space and RootTwo for the unnecessary argument to <code>.group</code>!</p> 
+             <pre><code>import re
+lambda i,o:re.sub(r'\d+',lambda p:str(eval(p.group()+o.replace('^','**'))),i)
+</code></pre> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79816" title="short permalink to this answer" class="short-link" id="link-post-79816">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79816/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79816/revisions" title="show all edits to this post">edited <span title="2016-05-13 14:31:26Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 20:22:33Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/20929/ojdo">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://i.stack.imgur.com/6spW7.png?s=32&amp;g=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/20929/ojdo">ojdo</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">291</span>
+                   <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+                   <span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79816" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-195772" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">I think you can get rid of the space after <code>i,o:</code></span> –&nbsp;
+                  <a href="/users/31541/qpaystaxes" title="418 reputation" class="comment-user">QPaysTaxes</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 20:50:41Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195817" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">You can save two more bytes: (1) by using <code>p.group()</code>. (it defaults to 0); and (2) insert <code>r=re.sub;</code> replace first <code>re.sub</code> call with <code>r</code> and then use <code>r('^','**',o)</code> instead of <code>o.replace(...)</code></span> –&nbsp;
+                  <a href="/users/53587/roottwo" title="141 reputation" class="comment-user">RootTwo</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 06:56:07Z" class="relativetime-clean">yesterday</span></span> 
+                  <span class="edited-yes" title="this comment was edited 1 time"></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195884" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@RootTwo: For me, the <code>r('^','**',o)</code> then requires escaping <code>^</code> to <code>\^</code> in order to match the character, not the beginning of <code>o</code>, net saving no bytes :-( - but thanks for pointing out the unnecessary <code>0</code>!</span> –&nbsp;
+                  <a href="/users/20929/ojdo" title="291 reputation" class="comment-user">ojdo</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 14:35:14Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79816" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79817"></a> 
+       <div id="answer-79817" class="answer" data-answerid="79817" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79817"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">4</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Javascript (ES6) 99 bytes</h1> 
+             <p>Another example, why we hate to wait for ES7 to get compatibility</p> 
+             <pre><code>(a,b)=&gt;a.match(/\d+|\D+/g).map(_=&gt;(d=- -_)?eval(b[0]=="\^"?Math.pow(_,b.slice(1)):d+b)|0:_).join``
+</code></pre> 
+             <p>Runnable example:</p> 
+             <p></p>
+             <div class="snippet" data-lang="js" data-hide="false"> 
+              <div class="snippet-code"> 
+               <pre class="snippet-code-js lang-js prettyprint-override"><code>f=(a,b)=&gt;a.match(/\d+|\D+/g).map(_=&gt;(d=- -_)?Math.ceil(eval(b[0]=="\^"?Math.pow(_,b.slice(1)):d+b)):_).join``
+
+alert(f(prompt("Enter string!"), prompt("Enter operation!")));</code></pre> 
+              </div> 
+             </div> 
+             <p></p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79817" title="short permalink to this answer" class="short-link" id="link-post-79817">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79817/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79817/revisions" title="show all edits to this post">edited <span title="2016-05-13 06:27:37Z" class="relativetime">yesterday</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 20:27:24Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/49709/b%c3%a1lint">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/98314ce1cd180ebfd3673df24fa3b11a?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/49709/b%c3%a1lint">Bálint</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">370</span>
+                   <span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+                   <span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79817" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="5" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-195764" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Your matching regexes seem to be a bit off. In the runnable example, you leave out uppercase letters, which strips them out of the result ("2spooky4ME", "+1" =&gt; "3spooky5"), and in the first example, you match against <code>\d+|\D+</code>, which is equivalent to <code>.+</code>. <code>[a-zA-Z0-9]+</code> is the regex you want, no? Or <code>[a-zA-Z]+|[0-9]+</code> if the splitting makes a difference?</span> –&nbsp;
+                  <a href="/users/12095/itai-ferber" title="241 reputation" class="comment-user owner">Itai Ferber</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 20:31:12Z" class="relativetime-clean">yesterday</span></span> 
+                  <span class="edited-yes" title="this comment was edited 2 times"></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195766" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">It would probably be easier to invoke <code>Math.pow</code> directly as you're having to special-case it anyway. Also, are you using integer division?</span> –&nbsp;
+                  <a href="/users/17602/neil" title="8,689 reputation" class="comment-user">Neil</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 20:37:08Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195774" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@Neil I forgot that, minute</span> –&nbsp;
+                  <a href="/users/49709/b%c3%a1lint" title="370 reputation" class="comment-user">Bálint</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 20:53:36Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195784" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@Neil is there a better way for ceiling?</span> –&nbsp;
+                  <a href="/users/49709/b%c3%a1lint" title="370 reputation" class="comment-user">Bálint</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-12 21:07:33Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+               <tr id="comment-195942" class="comment "> 
+                <td class="comment-actions"> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> <span title="number of 'useful comment' votes received" class="cool">1</span> </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">@ItaiFerber <code>\d+|\D+</code> Isn't quite the same as <code>.+</code>. They aren't the same because the kleene expansion happens before the <code>or</code>. It would be the same if it looked like <code>(\d|\D)+</code>, but as is, it wouldn't match all of say <code>2a</code> in one group, it would be two separate groups.</span> –&nbsp;
+                  <a href="/users/31625/fryamtheeggman" title="9,504 reputation" class="comment-user">FryAmTheEggman</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 19:42:46Z" class="relativetime-clean">21 hours ago</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79817" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link " title="expand to show all comments on this post" href="#" onclick="">show <b>5</b> more comments</a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79869"></a> 
+       <div id="answer-79869" class="answer" data-answerid="79869" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79869"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">4</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Pyth, 29</h1> 
+             <pre><code>Jws.i:zK"\d+"3m.vs.iJ]+d;:zK1
+</code></pre> 
+             <p>This works by extracting each number from the meme, and then interleaving (<code>.i</code>) it followed by a space and wrapped in a list with the other argument. So if our number is <code>7</code> and we had <code>^20</code> we would get the list: <code>["^", "7 ", "20"]</code>. Flattening and using Pyth's <code>eval</code> (<code>.v</code>) on this always gives the operation we want. Finally these values are interleaved with the original string split on occurrences of numbers.</p> 
+             <p>This could be a byte shorter if both inputs were surrounded by quote characters, or two bytes shorter if only one of them could be quoted.</p> 
+             <p><a href="http://pyth.herokuapp.com/?code=Jws.i%3AzK%22%5Cd%2B%223m.vs.iJ%5D%2Bd%3B%3AzK1&amp;input=200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000spooky4me%0A%2B1&amp;debug=0" rel="nofollow">Try it here</a> or run a <a href="http://pyth.herokuapp.com/?code=Jws.i%3AzK%22%5Cd%2B%223m.vs.iJ%5D%2Bd%3B%3AzK1&amp;test_suite=1&amp;test_suite_input=2spooky4me%0A%2B1%0A2spooky4me%0A-1%0A2spooky4me%0A%2A15%0A10spooky900me%0A%2F5%0Aidontunderstandmemes3%0A%2F2%0Anotreallyafunnymeme%0A%2A100%0A2spooky4me%0A%5E3%0Asome1meme2sequences3can4be5really6long7%0A%2F2&amp;debug=0&amp;input_size=2" rel="nofollow">Test Suite</a></p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79869" title="short permalink to this answer" class="short-link" id="link-post-79869">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79869/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 13:51:43Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/31625/fryamtheeggman">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/e1d8ce82fc1d645dff9d9a3c068f9792?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/31625/fryamtheeggman">FryAmTheEggman</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">9,504</span>
+                   <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span>
+                   <span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span>
+                   <span title="56 bronze badges"><span class="badge3"></span><span class="badgecount">56</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79869" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79869" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79882"></a> 
+       <div id="answer-79882" class="answer" data-answerid="79882" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79882"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">4</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Jolf, 15 bytes</h1> 
+             <pre><code>ρi«\d+»dmf!6+HI
+</code></pre> 
+             <p><a href="http://conorobrien-foxx.github.io/Jolf/#code=z4FpwqtcZCvCu2RtZiE2K0hJ&amp;input=MnNwb29reTRtZQoKKjE1" rel="nofollow">Try it here!</a></p> 
+             <h2>Explanation</h2> 
+             <pre><code>ρi«\d+»dmf!6+HI
+ρ «\d+»          replace all digits
+ i               in the input
+       d         (functional replace)
+          !6     eval (using jolf's custom infix eval)
+            +H   the number as a string plus
+              I  the second input
+        mf       floor the result (integer truncate)
+</code></pre> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79882" title="short permalink to this answer" class="short-link" id="link-post-79882">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79882/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 20:07:56Z" class="relativetime">20 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/31957/c%e1%b4%8f%c9%b4%e1%b4%8f%ca%80-ob%ca%80%c9%aa%e1%b4%87%c9%b4">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://lh5.googleusercontent.com/-AYhjTWVrGTc/AAAAAAAAAAI/AAAAAAAAAN0/u_1BqARfLDg/photo.jpg?sz=32" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/31957/c%e1%b4%8f%c9%b4%e1%b4%8f%ca%80-ob%ca%80%c9%aa%e1%b4%87%c9%b4">Cᴏɴᴏʀ O'Bʀɪᴇɴ</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">9,841</span>
+                   <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span>
+                   <span title="25 silver badges"><span class="badge2"></span><span class="badgecount">25</span></span>
+                   <span title="77 bronze badges"><span class="badge3"></span><span class="badgecount">77</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79882" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79882" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79828"></a> 
+       <div id="answer-79828" class="answer" data-answerid="79828" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79828"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">3</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h1>Lua, 145 bytes</h1> 
+             <pre><code>r=io.read;m=r()o=r():gsub("%^(%d+)",function(x)string.rep("*...",x)end)m=m:gsub("%d", function(n)return loadstring("return..."..o)(n)end)print(m)
+</code></pre> 
+             <p>That exponent hurt. 51 bytes...</p> 
+             <pre><code>:gsub("%^(%d+)",function(x)string.rep("*...",x)end)
+</code></pre> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79828" title="short permalink to this answer" class="short-link" id="link-post-79828">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79828/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-12 21:40:40Z" class="relativetime">yesterday</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/53514/blab">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/fe9ec6f5457931d8dbdce60b2246fa28?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/53514/blab">Blab</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">131</span>
+                   <span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79828" class="comments "> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr id="comment-195835" class="comment "> 
+                <td> 
+                 <table> 
+                  <tbody> 
+                   <tr> 
+                    <td class=" comment-score"> &nbsp;&nbsp; </td> 
+                    <td> &nbsp; </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> </td> 
+                <td class="comment-text"> 
+                 <div style="display: block;" class="comment-body"> 
+                  <span class="comment-copy">Why not just post a function?</span> –&nbsp;
+                  <a href="/users/49709/b%c3%a1lint" title="370 reputation" class="comment-user">Bálint</a> 
+                  <span class="comment-date" dir="ltr"><span title="2016-05-13 08:10:41Z" class="relativetime-clean">yesterday</span></span> 
+                 </div> </td> 
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79828" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79890"></a> 
+       <div id="answer-79890" class="answer" data-answerid="79890" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79890"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">3</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h2>Kotlin, <s>416</s> 413 Bytes</h2> 
+             <p>The lack of an <code>eval()</code> in Kotlin really upped that byte count... </p> 
+             <pre><code>fun main(a:Array&lt;String&gt;){var r=Regex("\\d+");var i=a[0];var n=a[1].takeLast(a[1].length-1).toInt();when(a[1][0]){'+'-&gt;print(r.replace(i,{m-&gt;""+(m.value.toInt()+n)}));'*'-&gt;print(r.replace(i,{m-&gt;""+(m.value.toInt()*n)}));'/'-&gt;print(r.replace(i,{m-&gt;""+(m.value.toInt()/n)}));'-'-&gt;print(r.replace(i,{m-&gt;""+(m.value.toInt()-n)}));'^'-&gt;print(r.replace(i,{m-&gt;""+(Math.pow(m.value.toDouble(),n.toDouble())).toInt()}));}}
+</code></pre> 
+             <p><a href="http://try.kotlinlang.org/#/UserProjects/8undins0n2k4hs97jbi4evugbv/9a6ebi5emumiu1bpu3oe22hej1" rel="nofollow">Try it Online!</a></p> 
+             <h3>Ungolfed</h3> 
+             <pre><code>fun main(a: Array&lt;String&gt;) {
+    var r = Regex("""\d+""")
+    var i = a[0]
+    var n = a[1].takeLast(a[1].length - 1).toInt()
+    when (a[1][0]) {
+        '+' -&gt; print(r.replace(i, { m -&gt; "" + (m.value.toInt() + n) }))
+        '*' -&gt; print(r.replace(i, { m -&gt; "" + (m.value.toInt() * n) }))
+        '/' -&gt; print(r.replace(i, { m -&gt; "" + (m.value.toInt() / n) }))
+        '-' -&gt; print(r.replace(i, { m -&gt; "" + (m.value.toInt() - n) }))
+        '^' -&gt; print(r.replace(i, { m -&gt; "" + (Math.pow(m.value.toDouble(), n.toDouble())).toInt() }))
+    }
+}
+</code></pre> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79890" title="short permalink to this answer" class="short-link" id="link-post-79890">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79890/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79890/revisions" title="show all edits to this post">edited <span title="2016-05-13 23:51:56Z" class="relativetime">17 hours ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 23:43:28Z" class="relativetime">17 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/46866/the-lone-devil">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://lh3.googleusercontent.com/-xip7O4r3_as/AAAAAAAAAAI/AAAAAAAAAE8/Yf984Cdj6xo/photo.jpg?sz=32" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/46866/the-lone-devil">The_Lone_Devil</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">71</span>
+                   <span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79890" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79890" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79879"></a> 
+       <div id="answer-79879" class="answer" data-answerid="79879" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79879"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">2</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h2>Bash + GNU coreutils, 146 Bytes</h2> 
+             <pre><code>d=
+u=$1,
+for ((i=0;i&lt;${#u};i++)){ l=${u:i:1};
+[[ "$l" =~ [0-9] ]]&amp;&amp;d=$d$l||{ [ -z $d ]||echo -n `bc&lt;&lt;&lt;$d$2`&amp;&amp;{ [ $l != , ]&amp;&amp;echo -n $l; };d=; }
+}
+</code></pre> 
+             <p>This looks at the alteration between digits and non-digits, that's why a random invalid input character (comma) is appended to the input string. This comma is then ignored in the output. The convention of the OP follows exactly the syntax of <code>bc</code> which is used here to do the maths.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79879" title="short permalink to this answer" class="short-link" id="link-post-79879">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79879/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79879/revisions" title="show all edits to this post">edited <span title="2016-05-13 19:28:30Z" class="relativetime">21 hours ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 18:59:08Z" class="relativetime">22 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/51534/rexkogitans">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/0d0856e4ebec0e1dfd404b0a40201dc7?s=32&amp;d=identicon&amp;r=PG&amp;f=1" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/51534/rexkogitans">rexkogitans</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">239</span>
+                   <span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79879" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79879" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="79886"></a> 
+       <div id="answer-79886" class="answer" data-answerid="79886" itemscope itemtype="http://schema.org/Answer"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="votecell"> 
+            <div class="vote"> 
+             <input type="hidden" name="_id_" value="79886"> 
+             <a class="vote-up-off" title="This answer is useful">up vote</a> 
+             <span itemprop="upvoteCount" class="vote-count-post ">2</span> 
+             <a class="vote-down-off" title="This answer is not useful">down vote</a> 
+            </div> </td> 
+           <td class="answercell"> 
+            <div class="post-text" itemprop="text"> 
+             <h2>PowerShell (v4), <s>124</s> 120 bytes</h2> 
+             <pre class="lang-powershell prettyprint-override"><code># New 120 byte version:
+$s,$a=$args;[regex]::Replace($s,'\d+',{($(if($a-ne($a=$a.Trim('^'))){
+"$args*"*$a+1}else{"$args$a"})|iex)-replace'\..*'})
+
+# Previous 124 byte version
+$s,$a=$args;[regex]::Replace($s,'\d+',{if($a[0]-eq'^'){
+[math]::pow("$args",$a.Trim('^'))}else{iex "$args$a-replace'\..*'"}})
+</code></pre> 
+             <p>(the newlines are only here to avoid horizontal scrolling, they work when saved as one line).</p> 
+             <p>Explained:</p> 
+             <ul> 
+              <li>.Net regex library can do a replace with a scriptblock that executes on the content of the match, and PowerShell casts types strings to numbers, and <code>iex</code> is like <code>eval()</code> in other languages. It just does <code>"2spooky" "+3"</code> -&gt; <code>eval("2+3")</code></li> 
+              <li>Except... it can't handle <code>^</code> operator or any other convenient exponentiation like <code>**</code>, it can only use the <code>[math]::Pow()</code> library call so there's a big block to handle that branch. 
+               <ul> 
+                <li>The updated version steals an idea from @TimmyD and does string multiplication instead - <code>"2*" * n</code> which becomes <code>"2*2*2*2*"</code> and then adds <code>+1</code> on the end to multiply by one instead of complaining about the trailing <code>*</code>.</li> 
+               </ul></li> 
+              <li>Except... .Net does Banker's Rounding which rounds to the nearest even number by default, and 3/2 = 2 rather than 3/2 = 1. This challenge calls for truncation, and that means <code>[math]::Truncate()</code>. Instead, I save characters by using <code>-replace</code> to trim a decimal point and anything after it.</li> 
+             </ul> 
+             <p>Test cases:</p> 
+             <pre class="lang-powershell prettyprint-override"><code>PS D:\&gt; .\meme.ps1 2spooky4me +1
+3spooky5me
+
+PS D:\&gt; .\meme.ps1 2spooky4me -1
+1spooky3me
+
+PS D:\&gt; .\meme.ps1 2spooky4me *15
+30spooky60me
+
+PS D:\&gt; .\meme.ps1 10spooky900me /5
+2spooky180me
+
+PS D:\&gt; .\meme.ps1 idontunderstandememes3 /2
+idontunderstandememes1
+
+PS D:\&gt; .\meme.ps1 "idontunderstandememes3" "/2"
+idontunderstandememes1
+
+PS D:\&gt; .\meme.ps1 "notreallyafunnymeme" "*100"
+notreallyafunnymeme
+
+PS D:\&gt; .\meme.ps1 "2spooky4me" "^3"
+8spooky64me
+
+PS D:\&gt; .\meme.ps1 "some1meme2sequences3can4be5really6long7" "/2"
+some0meme1sequences1can2be2really3long3
+
+PS D:\&gt; .\meme.ps1 2000000000000000000000000000000000000000000000000000000000000000000000000000000‌​000000000000000000000000000000000spooky4me /2
+1E+78‌​0spooky2me
+</code></pre> 
+             <p>NB. In the last test the numbers overflow into type <code>[BigInteger]</code> automatically, but they get rendered in scientific notation. Luckily, every known race able to communicate between the stars has enough scientific development to be able to process scientific notation without problem.</p> 
+            </div> 
+            <table class="fw"> 
+             <tbody>
+              <tr> 
+               <td class="vt"> 
+                <div class="post-menu">
+                 <a href="/a/79886" title="short permalink to this answer" class="short-link" id="link-post-79886">share</a>
+                 <span class="lsep">|</span>
+                 <a href="/posts/79886/edit" class="suggest-edit-post" title="">improve this answer</a>
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info "> 
+                 <div class="user-action-time"> 
+                  <a href="/posts/79886/revisions" title="show all edits to this post">edited <span title="2016-05-13 23:22:57Z" class="relativetime">17 hours ago</span></a> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                 </div> 
+                 <div class="user-details"> 
+                  <div class="-flair"> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+               <td align="right" class="post-signature"> 
+                <div class="user-info user-hover"> 
+                 <div class="user-action-time">
+                   answered 
+                  <span title="2016-05-13 21:11:40Z" class="relativetime">19 hours ago</span> 
+                 </div> 
+                 <div class="user-gravatar32"> 
+                  <a href="/users/571/tessellatingheckler">
+                   <div class="gravatar-wrapper-32">
+                    <img src="https://www.gravatar.com/avatar/fd656a5e8d2a51290877d695649456ad?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32">
+                   </div></a> 
+                 </div> 
+                 <div class="user-details"> 
+                  <a href="/users/571/tessellatingheckler">TessellatingHeckler</a> 
+                  <div class="-flair"> 
+                   <span class="reputation-score" title="reputation score " dir="ltr">927</span>
+                   <span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span>
+                   <span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span> 
+                  </div> 
+                 </div> 
+                </div> </td> 
+              </tr> 
+             </tbody>
+            </table> </td> 
+          </tr> 
+          <tr> 
+           <td class="votecell"></td> 
+           <td> 
+            <div id="comments-79886" class="comments  dno"> 
+             <table> 
+              <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true"> 
+               <tr>
+                <td></td>
+                <td></td>
+               </tr> 
+              </tbody> 
+             </table> 
+            </div> 
+            <div id="comments-link-79886" data-rep="50" data-anon="true"> 
+             <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a>
+             <span class="js-link-separator dno">&nbsp;|&nbsp;</span> 
+             <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="#" onclick=""></a> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <a name="new-answer"></a> 
+       <form id="post-form" action="/questions/79809/answer/submit" method="post" class="post-form"> 
+        <input type="hidden" id="post-id" value="79809"> 
+        <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false"> 
+        <input type="hidden" name="referrer" value=""> 
+        <h2 class="space">Your Answer</h2> 
+        <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script> 
+        <script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.options.snippets.enabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: false,
+                reputationToPostImages: null,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script> 
+        <div id="post-editor" class="post-editor js-post-editor"> 
+         <div style="position: relative;"> 
+          <div class="wmd-container"> 
+           <div id="wmd-button-bar" class="wmd-button-bar"></div> 
+           <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea> 
+          </div> 
+         </div> 
+         <div class="fl" style="margin-top: 8px; height:24px;">
+          &nbsp;
+         </div> 
+         <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">
+          draft saved
+         </div> 
+         <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">
+          draft discarded
+         </div> 
+         <div id="wmd-preview" class="wmd-preview"></div> 
+         <div></div> 
+         <div class="edit-block"> 
+          <input id="fkey" name="fkey" type="hidden" value="71fb98341fa62b820a5808f83f182453"> 
+          <input id="author" name="author" type="text"> 
+         </div> 
+        </div> 
+        <div style="position: relative;"> 
+         <div class="form-item dno new-post-login"> 
+          <div class="new-login-form"> 
+           <div class="new-login-left"> 
+            <h3>Sign up or <a id="login-link" href="/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2fcodegolf.stackexchange.com%2fquestions%2f79809%2funiversal-spooky-meme-translator%23new-answer">log in</a></h3> 
+            <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script> 
+            <div class="preferred-login google-login"> 
+             <p><span class="icon"></span><span>Sign up using Google</span></p> 
+            </div> 
+            <div class="preferred-login facebook-login"> 
+             <p><span class="icon"></span><span>Sign up using Facebook</span></p> 
+            </div> 
+            <div class="preferred-login stackexchange-login"> 
+             <p><span class="icon"></span><span>Sign up using Email and Password</span></p> 
+            </div> 
+           </div> 
+           <input type="hidden" name="manual-openid" class="manual-openid"> 
+           <input type="hidden" name="use-facebook" class="use-facebook" value="false"> 
+           <input type="hidden" name="use-google" class="use-google" value="false"> 
+           <input type="button" class="submit-openid" value="Submit" style="display:none"> 
+           <div class="new-login-right"> 
+            <h3>Post as a guest</h3> 
+            <div class="form-item"> 
+             <table> 
+              <tbody>
+               <tr> 
+                <td class="vm"> 
+                 <div> 
+                  <label for="display-name">Name</label> 
+                  <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"> 
+                 </div> 
+                 <div> 
+                  <label for="m-address">Email</label> 
+                  <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown"> 
+                 </div> </td> 
+               </tr> 
+              </tbody>
+             </table> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fcodegolf.stackexchange.com%2fquestions%2f79809%2funiversal-spooky-meme-translator%23new-answer', 'question_page');
+                    }
+                );
+            </script> 
+         <noscript> 
+          <h3>Post as a guest</h3> 
+          <div class="form-item"> 
+           <table> 
+            <tbody>
+             <tr> 
+              <td class="vm"> 
+               <div> 
+                <label for="display-name">Name</label> 
+                <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"> 
+               </div> 
+               <div> 
+                <label for="m-address">Email</label> 
+                <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown"> 
+               </div> </td> 
+             </tr> 
+            </tbody>
+           </table> 
+          </div> 
+         </noscript> 
+        </div> 
+        <div class="form-submit cbt"> 
+         <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110"> 
+         <a href="#" class="btn-clear discard-answer dno">discard</a> 
+         <p class="privacy-policy-agreement"> By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p> 
+         <input type="hidden" name="legalLinksShown" value="1"> 
+        </div> 
+       </form> 
+       <h2 class="bottom-notice" data-loc="1"> Not the answer you're looking for? Browse other questions tagged <a href="/questions/tagged/code-golf" class="post-tag" title="show questions tagged 'code-golf'" rel="tag">code-golf</a> <a href="/questions/tagged/string" class="post-tag" title="show questions tagged 'string'" rel="tag">string</a> <a href="/questions/tagged/math" class="post-tag" title="show questions tagged 'math'" rel="tag">math</a> <a href="/questions/tagged/subsequence" class="post-tag" title="show questions tagged 'subsequence'" rel="tag">subsequence</a> or <a href="/questions/ask">ask your own question</a>. </h2> 
+      </div> 
+     </div> 
+     <div id="sidebar" class="show-votes"> 
+      <div class="module question-stats"> 
+       <table id="qinfo"> 
+        <tbody>
+         <tr> 
+          <td> <p class="label-key">asked</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key" title="2016-05-12 19:09:45Z"><b>yesterday</b></p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">viewed</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"> <b>2821 times</b> </p> </td> 
+         </tr> 
+         <tr> 
+          <td> <p class="label-key">active</p> </td> 
+          <td style="padding-left: 10px"> <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2016-05-13 23:51:56Z">today</a></b></p> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <div style="margin-bottom: 10px;"> 
+       <style type="text/css">
+#newsletter-ad {
+    width: 270px;
+    height: 250px;
+    overflow: hidden;
+    background: url('//cdn.sstatic.net/Sites/beta/img/newsletter-ad.png?v=4');
+    padding: 0 15px 0 15px;
+}
+#newsletter-ad-header {
+    margin-top: 60px;
+}
+#newsletter-ad ul {
+    margin: 1em 0 1em 1.5em;
+}
+#newsletter-ad ul li {
+    margin-bottom: 5px;
+}
+#newsletter-signup-container {
+    text-align: center;
+}
+#newsletter-preview-container {
+    margin-top: 10px;
+    text-align: center;
+}
+#newsletter-email-input {
+    width: 200px;
+}
+</style> 
+       <script>
+    StackExchange.ready(function () {
+        StackExchange.newsletterAd.init();
+    });
+</script> 
+       <div id="newsletter-ad"> 
+        <p id="newsletter-ad-header">Get the <b>weekly newsletter!</b> In it, you'll get:</p> 
+        <ul> 
+         <li>The week's top questions and answers</li> 
+         <li>Important community announcements</li> 
+         <li>Questions that need answers</li> 
+        </ul> 
+        <div id="newsletter-signup-container">
+         <input id="newsletter-signup" type="button" value="Sign up for the newsletter">
+        </div> 
+        <p id="newsletter-preview-container">see an <a href="//stackexchange.com/newsletters/newsletter?site=codegolf.stackexchange.com" id="newsletter-preview">example newsletter</a></p> 
+        <div class="dno"> 
+         <p class="privacy-policy-agreement"> By subscribing, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p> 
+         <input type="hidden" name="legalLinksShown" value="1"> 
+        </div> 
+       </div> 
+      </div>
+      <style type="text/css">
+    .ads { margin-left: 60px; }
+    .ad-container { width: 300px; height: 250px; margin-right: 20px; margin-bottom: 20px; }
+    .ad-container .ad { height: 250px; }
+    .ad-container .footer-container { overflow: hidden; height: 30px; position: relative; top: -30px; }
+    .ad-container .footer-container .footer { font-family: Arial,Helvetic,Sans-Serif; font-size: 12px; text-align: center; padding-top: 9px; background-color: #000; color: #EFF; opacity: 0.9; filter: alpha(opacity=90); top: 30px; height: 30px; position: relative; }
+    .ad-container a:hover { text-decoration: underline; }
+    #adzerk2 { height: 250px; }
+</style> 
+      <script>
+    StackExchange.ready(function () {
+        $(".ad-container").hover(
+            function () {
+                $(".ad-container .footer-container .footer").stop(true, true).animate({ top: "0px" }, "fast");
+            },
+            function () {
+                $(".ad-container .footer-container .footer").animate({ top: "30px" }, "fast");
+            });
+    });
+</script> 
+      <script>
+        var ados = ados || {};ados.run = ados.run || [];
+        ados.run.push(function () { ados_add_placement(22, 12057, "adcm2", [5,17]).setZone(76); });
+    </script> 
+      <div class="everyonelovesstackoverflow" id="adcm2"> 
+      </div> 
+      <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+      <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('code-golf,counting,integer,x-host-codegolf.stackexchange.com');; ados_load();
+        });   
+        
+</script> 
+      <div class="module sidebar-linked"> 
+       <h4 id="h-linked">Linked</h4> 
+       <div class="linked" data-tracker="lq=1"> 
+        <div class="spacer"> 
+         <a href="/q/62350" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           33
+          </div> </a> 
+         <a href="/questions/62350/halloween-golf-the-2spooky4me-challenge" class="question-hyperlink">Halloween Golf: The 2spooky4me Challenge!</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="module sidebar-related"> 
+       <h4 id="h-related">Related</h4> 
+       <div class="related js-gps-related-questions" data-tracker="rq=1"> 
+        <div class="spacer"> 
+         <a href="/q/11917" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           15 
+          </div> </a>
+         <a href="/questions/11917/fix-unbalanced-brackets" class="question-hyperlink">Fix unbalanced brackets</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/15301" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           8 
+          </div> </a>
+         <a href="/questions/15301/tut-language-translator" class="question-hyperlink">TUT language translator</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/42038" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           16 
+          </div> </a>
+         <a href="/questions/42038/rna-to-protein-translation" class="question-hyperlink">RNA to Protein Translation</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/51231" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           14 
+          </div> </a>
+         <a href="/questions/51231/translate-robocritters-into-brainf" class="question-hyperlink">Translate RoboCritters into Brainf***</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/53317" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           11 
+          </div> </a>
+         <a href="/questions/53317/fastest-longest-common-subsequence-finder" class="question-hyperlink">Fastest Longest Common Subsequence Finder</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/63014" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           17 
+          </div> </a>
+         <a href="/questions/63014/the-interview-the-front-nine" class="question-hyperlink">The Interview: The Front Nine</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/70652" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           13 
+          </div> </a>
+         <a href="/questions/70652/reverse-engineer-the-n-bonacci-sequences" class="question-hyperlink">Reverse-Engineer the N-Bonacci sequence[s]</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/70657" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           14 
+          </div> </a>
+         <a href="/questions/70657/translate-a-glypho-program" class="question-hyperlink">Translate a Glypho program</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/75160" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes default">
+           3 
+          </div> </a>
+         <a href="/questions/75160/graduation-meme-tally" class="question-hyperlink">Graduation Meme Tally</a> 
+        </div> 
+        <div class="spacer"> 
+         <a href="/q/77719" title="Vote score (upvotes - downvotes)"> 
+          <div class="answer-votes answered-accepted default">
+           28 
+          </div> </a>
+         <a href="/questions/77719/subsequence-substitution" class="question-hyperlink">Subsequence Substitution</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="hot-network-questions" class="module"> 
+       <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })"> Hot Network Questions </a> </h4> 
+       <ul> 
+        <li> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784875/about-the-derivative-of-a-function-defined-on-rational-numbers" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> About the derivative of a function defined on rational numbers </a> </li> 
+        <li> 
+         <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/128013/how-many-times-did-picard-tell-wesley-to-shut-up" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })"> How many times did Picard tell Wesley to shut up? </a> </li> 
+        <li> 
+         <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/282973/do-programs-run-from-an-ssh-session-depend-on-the-connection" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })"> Do programs run from an ssh session depend on the connection? </a> </li> 
+        <li> 
+         <div class="favicon favicon-dba" title="Database Administrators Stack Exchange"></div><a href="http://dba.stackexchange.com/questions/138540/data-inconsistency-prohibition-if-table-reffer-to-another-via-two-many2many-rela" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:182 }); posts_hot_network.click({ item_type:2, location:11 })"> Data inconsistency prohibition if table reffer to another via two many2many relations </a> </li> 
+        <li> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123170/is-it-possible-to-improve-brute-force-guessing-of-a-password-with-a-picture-of-t" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> Is it possible to improve brute-force guessing of a password with a picture of the keyboard used to enter it? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68259/clapping-applause-when-a-planes-lands" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })"> Clapping / applause when a planes lands? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-sqa" title="Software Quality Assurance &amp; Testing Stack Exchange"></div><a href="http://sqa.stackexchange.com/questions/18655/tell-me-a-reason-behind-bellow-given-webdriver-exception-and-how-will-you-resolv" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:244 }); posts_hot_network.click({ item_type:2, location:11 })"> Tell me a reason behind bellow given WebDriver exception and how will you resolve It? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/772317/network-manager-crashes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })"> network-manager crashes </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80118/how-to-prevent-players-from-metagaming-when-they-split-the-party" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })"> How to prevent players from metagaming when they split the party? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-earthscience" title="Earth Science Stack Exchange"></div><a href="http://earthscience.stackexchange.com/questions/8004/can-the-moon-shadow-angle-change" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:553 }); posts_hot_network.click({ item_type:2, location:11 })"> Can the moon shadow angle change? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/234188/irfz44n-power-mosfet-gets-hot-while-driving-peltier-by-step-down-buck-voltage-co" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })"> IRFZ44N power MOSFET gets hot while driving Peltier by step-down buck voltage converter </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-wordpress" title="WordPress Development Stack Exchange"></div><a href="http://wordpress.stackexchange.com/questions/226605/what-wp-folder-can-i-use-to-write-files-to" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:110 }); posts_hot_network.click({ item_type:2, location:11 })"> What WP folder can I use to write files to? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/89943/youve-earned-the-nice-answer-badge-vs-youve-earned-a-nice-answer-badge" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })"> "You've earned the 'Nice Answer' badge" vs. "You've earned a 'Nice Answer' badge" </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-mechanics" title="Motor Vehicle Maintenance &amp; Repair Stack Exchange"></div><a href="http://mechanics.stackexchange.com/questions/29642/how-do-i-roll-my-4x4-vehicle-back-onto-its-wheels" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:224 }); posts_hot_network.click({ item_type:2, location:11 })"> How do I roll my 4x4 vehicle back onto its wheels? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/79762/zeroes-at-the-end-of-a-factorial" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })"> Zeroes at the end of a factorial </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127968/what-was-darth-mauls-pre-sith-name" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })"> What was Darth Maul's pre-Sith name? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/89925/in-english-literature-or-in-the-english-literature" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })"> "In English literature" or "In the English literature"? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325617/the-last-small-thing-that-messes-up-all-the-previous-effort" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })"> the last small thing that messes up all the (previous) effort </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/121791/oop-best-practices-use-object-fields-dynamically" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:459 }); posts_hot_network.click({ item_type:2, location:11 })"> OOP best practices - use object fields dynamically </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318404/is-coding-style-in-organizations-an-optional-thing" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })"> Is coding style in organizations an optional thing? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/128345/c-program-that-checks-on-the-status-of-the-capslock-with-each-character-insert" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })"> C# Program that checks on the status of the Capslock with each character insert </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123179/should-i-hash-my-passwords-even-if-i-am-only-allowed-to-generate-limited-traffic" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })"> Should I hash my passwords even if I am only allowed to generate limited traffic? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127921/why-was-hitchhikers-guide-censored" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })"> Why was Hitchhiker's Guide censored? </a> </li> 
+        <li class="dno js-hidden"> 
+         <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1784262/how-is-the-derivative-truly-literally-the-best-linear-approximation-near-a-po" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })"> How is the derivative truly, literally the "best linear approximation" near a point? </a> </li> 
+       </ul> 
+       <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })"> more hot questions </a> 
+      </div> 
+     </div> 
+     <div id="feed-link"> 
+      <div id="feed-link-text"> 
+       <a href="/feeds/question/79809" title="feed of this question and its answers"> <span class="feed-icon"></span>question feed </a> 
+      </div> 
+     </div> 
+     <script>
+StackExchange.ready(function(){$.get('/posts/79809/ivc/2c4b');});
+</script> 
+     <noscript> 
+      <div>
+       <img src="/posts/79809/ivc/2c4b" class="dno" alt="" width="0" height="0">
+      </div> 
+     </noscript>
+     <div style="display:none" id="prettify-lang"></div>
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://blog.stackoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.codegolf.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3573 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Programming Puzzles &amp; Code Golf Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('set', 'dimension2', '|code-golf|string|math|subsequence|');         ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

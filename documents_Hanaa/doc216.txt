@@ -1,0 +1,371 @@
+http://tutorialspoint.com/ruby-on-rails/rails-active-records.htm
+<!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+ <!--<![endif]-->
+ <head> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Rails on Rail Active Records</title> 
+  <meta name="Description" content="Rails on Rail Active Records - Learn Ruby on Rails in simple and easy steps. You will learn its Introduction, Installation, Framework, Directory Structure, strengths with examples and you will learn about actionpack, actionview, activerecord, Migrations, Controller, Routes, Views, Layouts, Heinemeier, Scaffolding, Ajax, File Uploading, Sending Emails, Hansson etc."> 
+  <meta name="Keywords" content="Learning, Tutorial, Ruby, Rails, strengths, framework, Introduction, Installation, Examples, RubyGems, Resources, Guide, Actionpack, Actionview, Basics, Directory Structure, Advance, Activerecord, Migrations, libraries, Model, Routes, Views, Layouts, Controller, Embeded Ruby, Erb, Rolling, Metaprogramming, Built-in, testing, David, Black, Hansson, Heinemeier, RAA, Ajax, File Uploading, Sending Emails, Scaffolding."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #c90e19 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #c90e19 !important;}
+.submenu-item{ border-bottom: 2px solid #c90e19 !important; border-top: 2px solid #c90e19 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/ruby-on-rails/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/ruby-on-rails/images/rails-mini-logo.jpg" alt="Ruby on Rails Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby on Rails Tutorial</li> 
+        <li><a href="/ruby-on-rails/index.htm">Ruby on Rails - Home</a></li> 
+        <li><a href="/ruby-on-rails/rails-introduction.htm">Ruby on Rails - Introduction</a></li> 
+        <li><a href="/ruby-on-rails/rails-installation.htm">Ruby on Rails - Installation</a></li> 
+        <li><a href="/ruby-on-rails/rails-framework.htm">Ruby on Rails - Framework</a></li> 
+        <li><a href="/ruby-on-rails/rails-directory-structure.htm">Ruby on Rails - Directory Structure</a></li> 
+        <li><a href="/ruby-on-rails/rails-examples.htm">Ruby on Rails - Examples</a></li> 
+        <li><a href="/ruby-on-rails/rails-database-setup.htm">Ruby on Rails - Database Setup</a></li> 
+        <li><a href="/ruby-on-rails/rails-active-records.htm">Ruby on Rails - Active Records</a></li> 
+        <li><a href="/ruby-on-rails/rails-migrations.htm">Ruby on Rails - Migrations</a></li> 
+        <li><a href="/ruby-on-rails/rails-controllers.htm">Ruby on Rails - Controllers</a></li> 
+        <li><a href="/ruby-on-rails/rails-routes.htm">Ruby on Rails - Routes</a></li> 
+        <li><a href="/ruby-on-rails/rails-views.htm">Ruby on Rails - Views</a></li> 
+        <li><a href="/ruby-on-rails/rails-layouts.htm">Ruby on Rails - Layouts</a></li> 
+        <li><a href="/ruby-on-rails/rails-scaffolding.htm">Ruby on Rails - Scaffolding</a></li> 
+        <li><a href="/ruby-on-rails/rails-and-ajax.htm">Ruby on Rails - AJAX</a></li> 
+        <li><a href="/ruby-on-rails/rails-file-uploading.htm">Ruby on Rails - File Uploading</a></li> 
+        <li><a href="/ruby-on-rails/rails-send-email.htm">Ruby on Rails - Send Emails</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby on Rails Resources</li> 
+        <li><a href="/ruby-on-rails/rails-references-guide.htm">Ruby on Rails - References Guide</a></li> 
+        <li><a href="/ruby-on-rails/rails-quick-guide.htm">Ruby on Rails - Quick Guide</a></li> 
+        <li><a href="/ruby-on-rails/rails-resources.htm">Ruby on Rails - Resources</a></li> 
+        <li><a href="/ruby-on-rails/rails-discussion.htm">Ruby on Rails - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Ruby Tutorial</li> 
+        <li><a href="/ruby">Ruby Tutorial</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Ruby on Rails - Active Records</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/ruby-on-rails/rails-database-setup.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/ruby-on-rails/rails-migrations.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>Rails Active Record is the Object/Relational Mapping (ORM) layer supplied with Rails. It closely follows the standard ORM model, which is as follows −</p> 
+        <ul class="list"> 
+         <li>tables map to classes,</li> 
+         <li>rows map to objects and</li> 
+         <li>columns map to object attributes.</li> 
+        </ul> 
+        <p>Rails Active Records provide an interface and binding between the tables in a relational database and the Ruby program code that manipulates database records. Ruby method names are automatically generated from the field names of database tables.</p> 
+        <p>Each Active Record object has CRUD (<b><u>C</u></b>reate, <b><u>R</u></b>ead, <b><u>U</u></b>pdate, and <b><u>D</u></b>elete) methods for database access. This strategy allows simple designs and straight forward mappings between database tables and application objects.</p> 
+        <h2>Translating a Domain Model into SQL</h2> 
+        <p>Translating a domain model into SQL is generally straight forward, as long as you remember that you have to write Rails-friendly SQL. In practical terms, you have to follow certain rules −</p> 
+        <ul class="list"> 
+         <li><p>Each entity (such as book) gets a table in the database named after it, but in the plural (books).</p></li> 
+         <li><p>Each such entity-matching table has a field called <i>id</i>, which contains a unique integer for each record inserted into the table.</p></li> 
+         <li><p>Given entity x and entity y, if entity y belongs to entity x, then table y has a field called x_id.</p></li> 
+         <li><p>The bulk of the fields in any table store the values for that entity's simple properties (anything that's a number or a string).</p></li> 
+        </ul> 
+        <h2>Creating Active Record Files (Models)</h2> 
+        <p>To create the Active Record files for our entities for library application, introduced in the previous chapter, issue the following command from the top level of the application directory.</p> 
+        <pre class="result notranslate">
+library\&gt; rails script/generate model Book
+library\&gt; rails script/generate model Subject
+</pre> 
+        <p>Above <b>rails generate model book</b> commands generates the auto code as below −</p> 
+        <img src="/ruby-on-rails/images/book_generate.jpg" alt="Book Generate"> 
+        <p>You're telling the generator to create models called Book and Subject to store instances of books and subjects. Notice that you are capitalizing Book and Subject and using the singular form. This is a Rails paradigm that you should follow each time you create a model.</p> 
+        <p>When you use the generate tool, Rails creates the actual model file that holds all the methods unique to the model and the business rules you define, a unit test file for performing test-driven development, a sample data file (called fixtures) to use with the unit tests, and a Rails migration that makes creating database tables and columns easy.</p> 
+        <p>Apart from creating many other files and directories, this will create files named <b>book.rb</b> and <b>subject.rb</b> containing a skeleton definition in the <b>app/models</b> directory.</p> 
+        <p>Content available in book.rb −</p> 
+        <pre class="result notranslate">
+class Book &lt; ActiveRecord::Base
+end
+</pre> 
+        <p>Content available in subject.rb −</p> 
+        <pre class="result notranslate">
+class Subject &lt; ActiveRecord::Base
+end
+</pre> 
+        <h2>Creating Associations between Models</h2> 
+        <p>When you have more than one model in your rails application, you would need to create connection between those models. You can do this via associations. Active Record supports three types of associations −</p> 
+        <ul class="list"> 
+         <li><p><b>one-to-one</b> − A one-to-one relationship exists when one item has exactly one of another item. For example, a person has exactly one birthday or a dog has exactly one owner.</p></li> 
+         <li><p><b>one-to-many</b> − A one-to-many relationship exists when a single object can be a member of many other objects. For instance, one subject can have many books.</p></li> 
+         <li><p><b>many-to-many</b> − A many-to-many relationship exists when the first object is related to one or more of a second object, and the second object is related to one or many of the first object.</p></li> 
+        </ul> 
+        <p>You indicate these associations by adding declarations to your models: has_one, has_many, belongs_to, and has_and_belongs_to_many.</p> 
+        <p>Now, you need to tell Rails what relationships you want to establish within the library data system. To do so, modify book.rb and subject.rb to look like this −</p> 
+        <pre class="prettyprint notranslate">
+class Book &lt; ActiveRecord::Base
+   belongs_to :subject
+end
+</pre> 
+        <p>We have used a singular subject in the above example, because one Book can belong to a single Subject.</p> 
+        <pre class="prettyprint notranslate">
+class Subject &lt; ActiveRecord::Base
+   has_many :books
+end
+</pre> 
+        <p>We have used plural books here, because one subject can have multiple books.</p> 
+        <h2>Implementing Validations on Models</h2> 
+        <p>The implementation of validations is done in a Rails model. The data you are entering into the database is defined in the actual Rails model, so it only makes sense to define what valid data entails in the same location.</p> 
+        <p>The validations are −</p> 
+        <ul class="list"> 
+         <li>The value of title field should not be NULL.</li> 
+         <li>The value of price field should be numeric.</li> 
+        </ul> 
+        <p>Open <b>book.rb</b> in the <b>app\model</b> subdiractory and put the following validations −</p> 
+        <pre class="result notranslate">
+class Book &lt; ActiveRecord::Base
+   belongs_to :subject
+   validates_presence_of :title
+   validates_numericality_of :price, :message=&gt;"Error Message"
+end
+</pre> 
+        <ul class="list"> 
+         <li><p><b>validates_presence_of</b> − protects "NOT NULL" fields against missing user input.</p></li> 
+         <li><p><b>validates_numericality_of</b> − prevents the user, entering non numeric data.</p></li> 
+        </ul> 
+        <p>Besides the validations mentioned above, there are other common validations. Check <a href="/ruby-on-rails/rails-quick-guide.htm">Rails Quick Guide</a>.</p> 
+        <h2>What is Next?</h2> 
+        <p>In the next chapter, we will learn Rails Migration, which allows you to use Ruby to define changes to your database schema, making it possible to use a version control system to keep things synchronized with the actual code.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/ruby-on-rails/rails-database-setup.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/ruby-on-rails/rails-migrations.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-active-records.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-active-records.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/ruby-on-rails/rails-active-records.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/ruby-on-rails/rails-active-records.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/ruby-on-rails/rails-active-records.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/ruby-on-rails/rails-active-records.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

@@ -1,0 +1,1174 @@
+http://cstheory.stackexchange.com
+<!doctype html>
+<html>
+ <head> 
+  <title>Theoretical Computer Science Stack Exchange</title> 
+  <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/cstheory/img/favicon.ico?v=b72736ad174d"> 
+  <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/cstheory/img/apple-touch-icon.png?v=b5399b1a4fc5"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Theoretical Computer Science Stack Exchange" href="/opensearch.xml"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:site" content="@StackCSTheory"> 
+  <meta name="twitter:domain" content="cstheory.stackexchange.com"> 
+  <meta property="og:type" content="website"> 
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/cstheory/img/apple-touch-icon@2.png?v=da033b2b5220&amp;a"> 
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Theoretical Computer Science Stack Exchange"> 
+  <meta name="twitter:description" property="og:description" itemprop="description" content="Q&amp;A for theoretical computer scientists and researchers in related fields"> 
+  <meta property="og:url" content="http://cstheory.stackexchange.com/"> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//cdn.sstatic.net/Js/stub.en.js?v=36086b43db82"></script> 
+  <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/cstheory/all.css?v=3d0b8ecb347a"> 
+  <link rel="alternate" type="application/atom+xml" title="Feed of recent questions" href="/feeds"> 
+  <script>
+            StackExchange.ready(function() {
+                StackExchange.realtime.subscribeToActiveQuestions('114', 'home-active');
+            });
+        </script> 
+  <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                                        tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                                        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+                                        messageStyle: "none"
+                });
+                </script> 
+  <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script> 
+  <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('114');
+                StackExchange.realtime.subscribeToTopBarNotifications('114');
+        });
+    </script> 
+  <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1463245271,"routeName":"Home/Index","enableUserHovercards":true,"snippets":{"enabled":false,"domain":"stacksnippets.net"},"site":{"name":"Theoretical Computer Science Stack Exchange","description":"Q&A for theoretical computer scientists and researchers in related fields","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":114,"enableSocialMediaInSharePopup":true},"user":{"fkey":"71fb98341fa62b820a5808f83f182453","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"realtime":{"newest":true,"active":true,"tagged":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"d911fb28bd9f","js/moderator.en.js":"50831ba8e994","js/full-anon.en.js":"77d9f56942c5","js/full.en.js":"97cc5d07283a","js/wmd.en.js":"b2e347d78fbd","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"2c293de7dc9e","js/help.en.js":"c8004cc0095d","js/tageditor.en.js":"9c6df10dabc4","js/tageditornew.en.js":"8c8f022d2f71","js/inline-tag-editing.en.js":"a815357d00cd","js/revisions.en.js":"2faaeaae2529","js/review.en.js":"a78702da7b99","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"79fde18773e4","js/explore-qlist.en.js":"2a9a628fca7f","js/events.en.js":"122722c4c15a","js/keyboard-shortcuts.en.js":"e92b66602411","js/external-editor.en.js":"683ce04845f3","js/mathjax-editing.en.js":"0f8d45c7803e"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script> 
+  <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script> 
+ </head> 
+ <body class="home-page new-topbar"> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div id="notify-container"></div> 
+  <div id="overlay-header"></div> 
+  <div id="custom-header"></div> 
+  <div class="topbar"> 
+   <div class="topbar-wrapper"> 
+    <div class="js-topbar-dialog-corral"> 
+     <div class="topbar-dialog siteSwitcher-dialog dno"> 
+      <div class="header"> 
+       <h3><a href="//cstheory.stackexchange.com">current community</a></h3> 
+      </div> 
+      <div class="modal-content current-site-container"> 
+       <ul class="current-site"> 
+        <li> 
+         <div class="related-links"> 
+          <a href="http://cstheory.blogoverflow.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a> 
+          <a href="http://chat.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a> 
+         </div> <a href="//cstheory.stackexchange.com" class="current-site-link site-link js-gps-track" data-id="114" data-gps-track="
+        site_switcher.click({ item_type:3 })"> 
+          <div class="site-icon favicon favicon-cstheory" title="Theoretical Computer Science"></div> Theoretical Computer Science </a> </li> 
+        <li class="related-site"> 
+         <div class="L-shaped-icon-container"> 
+          <span class="L-shaped-icon"></span> 
+         </div> <a href="http://meta.cstheory.stackexchange.com" class="site-link js-gps-track" data-id="116" data-gps-track="
+            site.switch({ target_site:116, item_type:3 }),
+        site_switcher.click({ item_type:4 })"> 
+          <div class="site-icon favicon favicon-cstheorymeta" title="Theoretical Computer Science Meta"></div> Theoretical Computer Science Meta </a> </li> 
+       </ul> 
+      </div> 
+      <div class="header" id="your-communities-header"> 
+       <h3> your communities </h3> 
+      </div> 
+      <div class="modal-content" id="your-communities-section"> 
+       <div class="call-to-login"> 
+        <a href="https://cstheory.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fcstheory.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or 
+        <a href="https://cstheory.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fcstheory.stackexchange.com%2f" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list. 
+       </div> 
+      </div> 
+      <div class="header"> 
+       <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3> 
+       <a href="http://blog.stackoverflow.com" class="fr">company blog</a> 
+      </div> 
+      <div class="modal-content"> 
+       <div class="child-content"></div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="network-items"> 
+     <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 156 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     <a href="#" class="topbar-icon icon-inbox yes-hover js-inbox-button" title="Recent inbox messages"> <span class="hidden-text">Inbox</span> <span class="unread-count" style="display:none"></span> </a> 
+     <a href="#" class="topbar-icon icon-achievements yes-hover js-achievements-button " data-unread-class="" title="Recent achievements: reputation, badges, and privileges earned"> <span class="hidden-text">Reputation and Badges</span> <span class="unread-count" style="display:none"> </span> </a> 
+    </div> 
+    <div class="topbar-links"> 
+     <div class="links-container"> 
+      <span class="topbar-menu-links"> <a href="https://cstheory.stackexchange.com/users/signup?ssrc=head&amp;returnurl=http%3a%2f%2fcstheory.stackexchange.com%2f" class="login-link">sign up</a> <a href="https://cstheory.stackexchange.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fcstheory.stackexchange.com%2f" class="login-link">log in</a> <a href="/tour">tour</a> <a href="#" class="icon-help js-help-button" title="Help Center and other resources"> help <span class="triangle"></span> </a> 
+       <div class="topbar-dialog help-dialog js-help-dialog dno"> 
+        <div class="modal-content"> 
+         <ul> 
+          <li> <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"> Tour <span class="item-summary"> Start here for a quick overview of the site </span> </a> </li> 
+          <li> <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"> Help Center <span class="item-summary"> Detailed answers to any questions you might have </span> </a> </li> 
+          <li> <a href="//meta.cstheory.stackexchange.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"> Meta <span class="item-summary"> Discuss the workings and policies of this site </span> </a> </li> 
+          <li> <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })"> About Us <span class="item-summary"> Learn more about Stack Overflow the company </span> </a> </li> 
+          <li> <a href="https://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })"> Business <span class="item-summary"> Learn more about hiring developers or posting ads with us </span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> </span> 
+     </div> 
+     <div class="search-container"> 
+      <form id="search" action="/search" method="get" autocomplete="off"> 
+       <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240"> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script> 
+  <div class="container"> 
+   <div id="header"> 
+    <br class="cbt"> 
+    <div id="hlogo"> 
+     <a href="/"> Theoretical Computer Science </a> 
+    </div> 
+    <div id="hmenus"> 
+     <div class="nav mainnavs"> 
+      <ul> 
+       <li><a id="nav-questions" href="/questions">Questions</a></li> 
+       <li><a id="nav-tags" href="/tags">Tags</a></li> 
+       <li><a id="nav-users" href="/users">Users</a></li> 
+       <li><a id="nav-badges" href="/help/badges">Badges</a></li> 
+       <li><a id="nav-unanswered" href="/unanswered">Unanswered</a></li> 
+      </ul> 
+     </div> 
+     <div class="nav askquestion"> 
+      <ul> 
+       <li> <a id="nav-askquestion" href="/questions/ask">Ask Question</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="content"> 
+    <div id="herobox"> 
+     <div id="hero-content"> 
+      <div id="close">
+       <a title="click to minimize">_</a>
+      </div> 
+      <div id="blurb">
+        Theoretical Computer Science Stack Exchange is a question and answer site for theoretical computer scientists and researchers in related fields. It's 100% free, no registration required. 
+       <br> 
+       <br> 
+       <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fcstheory.stackexchange.com%2f" id="tell-me-more" class="button">Sign up</a> 
+      </div> 
+      <div id="desc"> 
+       <b>Here's how it works:</b> 
+       <ol id="hiw"> 
+        <li id="q">Anybody can ask a question </li> 
+        <li id="an">Anybody can answer </li> 
+        <li id="b">The best answers are voted up and rise to the top </li> 
+       </ol> 
+      </div> 
+      <div style="clear: both"></div> 
+     </div> 
+     <script>
+        StackExchange.ready(function () {
+
+            var location = 0;
+            if ($("body").hasClass("questions-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("question-page")) {
+                location = 1;;
+            } else if ($("body").hasClass("faq-page")) {
+                location = 5;;
+            } else if ($("body").hasClass("home-page")) {
+                location = 3;;
+            }
+
+            $('#tell-me-more').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+                });
+            });
+            $('#herobox #close').click(function () {
+                StackExchange.using("gps", function () {
+                    StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+                });
+                $.cookie("hero", "mini", { path: "/", expires: 365 });
+                $.ajax({
+                    url: "/hero-mini",
+                    success: function (data) {
+                        $("#herobox").fadeOut("fast", function () {
+                            $("#herobox").replaceWith(data);
+                            $("#herobox-mini").fadeIn("fast");
+                        });
+                    }
+                });
+                return false;
+            });
+        });
+
+    </script> 
+    </div> 
+    <script>
+        StackExchange.using("gps", function () {
+            StackExchange.gps.track("hero.show", { hero_type: "hero", location: 3 }, true);
+        });
+    </script> 
+    <div id="mainbar"> 
+     <div class="subheader"> 
+      <h1 id="h-top-questions">Explore Our Questions</h1> 
+      <div id="tabs"> 
+       <a href="?tab=active" data-nav-xhref="" title="Questions that have been asked, answered, or updated recently" data-value="active"> active</a> 
+       <a href="?tab=featured" data-nav-xhref="" title="Questions with an active bounty" data-value="featured"> <span class="bounty-indicator-tab">1</span> featured</a> 
+       <a href="?tab=hot" data-nav-xhref="" title="Questions with the most views, answers, and votes over the last few days" data-value="hot"> hot</a> 
+       <a href="?tab=week" data-nav-xhref="" title="Questions with the most views, answers, and votes this week" data-value="week"> week</a> 
+       <a href="?tab=month" data-nav-xhref="" title="Questions with the most views, answers, and votes this month" data-value="month"> month</a> 
+      </div> 
+     </div> 
+     <div id="explore-tags"> 
+      <a href="/?tags=cc.complexity-theory" class="post-tag no-tag-menu" title="Show questions relating to cc.complexity-theory" rel="tag">cc.complexity-theory</a>
+      <a href="/?tags=ds.algorithms" class="post-tag no-tag-menu" title="Show questions relating to ds.algorithms" rel="tag">ds.algorithms</a>
+      <a href="/?tags=reference-request" class="post-tag no-tag-menu" title="Show questions relating to reference-request" rel="tag">reference-request</a>
+      <a href="/?tags=graph-theory" class="post-tag no-tag-menu" title="Show questions relating to graph-theory" rel="tag">graph-theory</a>
+      <a href="/?tags=graph-algorithms" class="post-tag no-tag-menu" title="Show questions relating to graph-algorithms" rel="tag">graph-algorithms</a>
+      <a href="/?tags=co.combinatorics" class="post-tag no-tag-menu" title="Show questions relating to co.combinatorics" rel="tag">co.combinatorics</a>
+      <a href="/?tags=np-hardness" class="post-tag no-tag-menu" title="Show questions relating to np-hardness" rel="tag">np-hardness</a>
+      <a href="/?tags=complexity-classes" class="post-tag no-tag-menu" title="Show questions relating to complexity-classes" rel="tag">complexity-classes</a>
+      <a href="/?tags=lo.logic" class="post-tag no-tag-menu" title="Show questions relating to lo.logic" rel="tag">lo.logic</a>
+      <a href="/?tags=approximation-algorithms" class="post-tag no-tag-menu" title="Show questions relating to approximation-algorithms" rel="tag">approximation-algorithms</a> 
+      <a class="more-tags" href="/tags">more&nbsp;tags</a> 
+     </div> 
+     <div id="qlist-wrapper"> 
+      <div id="question-mini-list"> 
+       <div class="question-summary narrow" id="question-summary-34756"> 
+        <div onclick="window.location.href='/questions/34756/are-there-analogues-of-specker-sequences-for-other-complexity-classes'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="26 views">26</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34756/are-there-analogues-of-specker-sequences-for-other-complexity-classes" class="question-hyperlink" title="Consider the standard definition of computable real numbers: a real number $r$ is computable just in case $r$ is the limit of a sequence $(a_i)_{i \in \mathbb{N}}$ such that (1) the function $i ...">Are there analogues of Specker sequences for other complexity classes?</a></h3> 
+         <div class="tags t-complexity-classes t-computability t-computing-over-reals"> 
+          <a href="/questions/tagged/complexity-classes" class="post-tag" title="show questions tagged 'complexity-classes'" rel="tag">complexity-classes</a> 
+          <a href="/questions/tagged/computability" class="post-tag" title="show questions tagged 'computability'" rel="tag">computability</a> 
+          <a href="/questions/tagged/computing-over-reals" class="post-tag" title="show questions tagged 'computing-over-reals'" rel="tag">computing-over-reals</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34756/are-there-analogues-of-specker-sequences-for-other-complexity-classes" class="started-link">asked <span title="2016-05-14 01:13:14Z" class="relativetime">15 hours ago</span></a> 
+          <a href="/users/39023/beau-madison-mount">Beau Madison Mount</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">4</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34749"> 
+        <div onclick="window.location.href='/questions/34749/label-disjoint-paths-in-directed-graphs'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="7 votes">7</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="56 views">56</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34749/label-disjoint-paths-in-directed-graphs" class="question-hyperlink" title="Checking if there are two edge-disjoint paths from $s$ to $t$ 
+in a given graph $G$ is in P via a standard solution based on maxflow. 
+I am interested in the complexity of the following edge-labeled ...">Label-disjoint paths in directed graphs</a></h3> 
+         <div class="tags t-dsûalgorithms t-graph-theory t-graph-algorithms t-disjoint-paths"> 
+          <a href="/questions/tagged/ds.algorithms" class="post-tag" title="show questions tagged 'ds.algorithms'" rel="tag">ds.algorithms</a> 
+          <a href="/questions/tagged/graph-theory" class="post-tag" title="show questions tagged 'graph-theory'" rel="tag">graph-theory</a> 
+          <a href="/questions/tagged/graph-algorithms" class="post-tag" title="show questions tagged 'graph-algorithms'" rel="tag">graph-algorithms</a> 
+          <a href="/questions/tagged/disjoint-paths" class="post-tag" title="show questions tagged 'disjoint-paths'" rel="tag">disjoint-paths</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34749/label-disjoint-paths-in-directed-graphs/?lastactivity" class="started-link">modified <span title="2016-05-13 22:57:54Z" class="relativetime">18 hours ago</span></a> 
+          <a href="/users/3247/marzio-de-biasi">Marzio De Biasi</a> 
+          <span class="reputation-score" title="reputation score 15,657" dir="ltr">15.7k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34064"> 
+        <div onclick="window.location.href='/questions/34064/construction-of-a-global-isomorphismpermutation-for-graph-isomorphism-using-lo'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="289 views">289</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34064/construction-of-a-global-isomorphismpermutation-for-graph-isomorphism-using-lo" class="question-hyperlink" title="Given two graphs $G, H$ (each has $n$ vertices). We, split $G$ into subgraphs $G_1, G_2... G_x$ (total $x$ vertex set). Similarly,assume  $H$ has  subgraphs $H_1, H_2... H_x$ (total $x$ vertex set).
+
+...">Construction of a Global Isomorphism(permutation) for Graph Isomorphism using Local Isomorphism</a></h3> 
+         <div class="tags t-grûgroup-theory t-graph-theory t-dsûalgorithms"> 
+          <a href="/questions/tagged/gr.group-theory" class="post-tag" title="show questions tagged 'gr.group-theory'" rel="tag">gr.group-theory</a> 
+          <a href="/questions/tagged/graph-theory" class="post-tag" title="show questions tagged 'graph-theory'" rel="tag">graph-theory</a> 
+          <a href="/questions/tagged/ds.algorithms" class="post-tag" title="show questions tagged 'ds.algorithms'" rel="tag">ds.algorithms</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34064/construction-of-a-global-isomorphismpermutation-for-graph-isomorphism-using-lo/?lastactivity" class="started-link">answered <span title="2016-05-12 20:03:55Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/27242/jim">Jim</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">231</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34733"> 
+        <div onclick="window.location.href='/questions/34733/for-which-regular-expressions-alpha-is-beta-mid-l-alpha-l-beta'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="18 votes">18</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="198 views">198</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34733/for-which-regular-expressions-alpha-is-beta-mid-l-alpha-l-beta" class="question-hyperlink" title="It is well known that the following problem is PSPACE-complete:
+
+
+  Given regular expression $\beta$, does $L(\beta) = \Sigma^*$?
+
+
+What about determining equivalence to other (fixed) regular ...">For which regular expressions $\alpha$ is $\{ \beta \mid L(\alpha) = L(\beta) \}$ PSPACE-complete?</a></h3> 
+         <div class="tags t-ccûcomplexity-theory t-automata-theory t-regular-expressions t-pspace"> 
+          <a href="/questions/tagged/cc.complexity-theory" class="post-tag" title="show questions tagged 'cc.complexity-theory'" rel="tag">cc.complexity-theory</a> 
+          <a href="/questions/tagged/automata-theory" class="post-tag" title="show questions tagged 'automata-theory'" rel="tag">automata-theory</a> 
+          <a href="/questions/tagged/regular-expressions" class="post-tag" title="show questions tagged 'regular-expressions'" rel="tag">regular-expressions</a> 
+          <a href="/questions/tagged/pspace" class="post-tag" title="show questions tagged 'pspace'" rel="tag">pspace</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34733/for-which-regular-expressions-alpha-is-beta-mid-l-alpha-l-beta/?lastactivity" class="started-link">modified <span title="2016-05-12 19:40:11Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/3247/marzio-de-biasi">Marzio De Biasi</a> 
+          <span class="reputation-score" title="reputation score 15,657" dir="ltr">15.7k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34729"> 
+        <div onclick="window.location.href='/questions/34729/vertex-disjoint-path-covers-of-hypercube-like-graphs'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="5 votes">5</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="56 views">56</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <div class="bounty-indicator" title="this question has an open bounty worth 100 reputation">
+          +100
+         </div> 
+         <h3><a href="/questions/34729/vertex-disjoint-path-covers-of-hypercube-like-graphs" class="question-hyperlink" title="This is a followup question relating to an older question I posted, namely: Decomposing the n-cube into vertex-disjoint paths.
+
+Given a graph $G = (V, E)$ and sets of distinct vertices $S = \{s_1, ...">Vertex Disjoint Path Covers of Hypercube-Like Graphs</a></h3> 
+         <div class="tags t-dsûalgorithms t-graph-theory t-reference-request"> 
+          <a href="/questions/tagged/ds.algorithms" class="post-tag" title="show questions tagged 'ds.algorithms'" rel="tag">ds.algorithms</a> 
+          <a href="/questions/tagged/graph-theory" class="post-tag" title="show questions tagged 'graph-theory'" rel="tag">graph-theory</a> 
+          <a href="/questions/tagged/reference-request" class="post-tag" title="show questions tagged 'reference-request'" rel="tag">reference-request</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34729/vertex-disjoint-path-covers-of-hypercube-like-graphs" class="started-link">modified <span title="2016-05-12 18:46:26Z" class="relativetime">yesterday</span></a> 
+          <a href="/users/30541/user340082710">user340082710</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">26</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34732"> 
+        <div onclick="window.location.href='/questions/34732/confusion-about-the-text-of-the-np-complete-and-p-treewidth-problems'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="64 views">64</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34732/confusion-about-the-text-of-the-np-complete-and-p-treewidth-problems" class="question-hyperlink" title="I am confused about the text of the two classes of treewidth problems one of which is in NP-complete and the other is in P.
+
+Let me first quote them from Treewidth, partial k-trees, and chordal ...">Confusion about the text of the NP-complete and P treewidth problems</a></h3> 
+         <div class="tags t-graph-theory t-np-hardness t-tree t-np-complete t-treewidth"> 
+          <a href="/questions/tagged/graph-theory" class="post-tag" title="show questions tagged 'graph-theory'" rel="tag">graph-theory</a> 
+          <a href="/questions/tagged/np-hardness" class="post-tag" title="show questions tagged 'np-hardness'" rel="tag">np-hardness</a> 
+          <a href="/questions/tagged/tree" class="post-tag" title="show questions tagged 'tree'" rel="tag">tree</a> 
+          <a href="/questions/tagged/np-complete" class="post-tag" title="show questions tagged 'np-complete'" rel="tag">np-complete</a> 
+          <a href="/questions/tagged/treewidth" class="post-tag" title="show questions tagged 'treewidth'" rel="tag">treewidth</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34732/confusion-about-the-text-of-the-np-complete-and-p-treewidth-problems" class="started-link">asked <span title="2016-05-12 01:35:10Z" class="relativetime">2 days ago</span></a> 
+          <a href="/users/13408/omar-shehab">Omar Shehab</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">557</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34721"> 
+        <div onclick="window.location.href='/questions/34721/the-complexity-of-the-disjoint-union-of-a-sequence-of-complete-problems'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="3 votes">3</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="125 views">125</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34721/the-complexity-of-the-disjoint-union-of-a-sequence-of-complete-problems" class="question-hyperlink" title="Suppose that for every $k \in \mathbb{N}$ the decision problem $A_k$ is hard for $\mathsf{N}k\text{-}\mathsf{ExpTime}$.
+
+What is the complexity of their disjoint union $A = \{ (k,x) \mid k\in ...">The complexity of the disjoint union of a sequence of complete problems</a></h3> 
+         <div class="tags t-ccûcomplexity-theory t-complexity-classes t-computability"> 
+          <a href="/questions/tagged/cc.complexity-theory" class="post-tag" title="show questions tagged 'cc.complexity-theory'" rel="tag">cc.complexity-theory</a> 
+          <a href="/questions/tagged/complexity-classes" class="post-tag" title="show questions tagged 'complexity-classes'" rel="tag">complexity-classes</a> 
+          <a href="/questions/tagged/computability" class="post-tag" title="show questions tagged 'computability'" rel="tag">computability</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34721/the-complexity-of-the-disjoint-union-of-a-sequence-of-complete-problems" class="started-link">modified <span title="2016-05-11 18:19:48Z" class="relativetime">2 days ago</span></a> 
+          <a href="/users/186/kaveh">Kaveh</a> 
+          <span class="reputation-score" title="reputation score 14,707" dir="ltr">14.7k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-1532"> 
+        <div onclick="window.location.href='/questions/1532/what-is-the-correct-definition-of-k-tree'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="10 votes">10</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts warm">
+           <span title="2293 views">2k</span>
+          </div> 
+          <div class="warm">
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/1532/what-is-the-correct-definition-of-k-tree" class="question-hyperlink" title="As the title says, what is the correct definition of $k$-tree? There are several papers that talk about $k$-trees and partial $k$-trees as alternative definitions for graphs with bounded treewidth, ...">What is the correct definition of $k$-tree?</a></h3> 
+         <div class="tags t-graph-theory t-treewidth"> 
+          <a href="/questions/tagged/graph-theory" class="post-tag" title="show questions tagged 'graph-theory'" rel="tag">graph-theory</a> 
+          <a href="/questions/tagged/treewidth" class="post-tag" title="show questions tagged 'treewidth'" rel="tag">treewidth</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/1532/what-is-the-correct-definition-of-k-tree/?lastactivity" class="started-link">modified <span title="2016-05-11 13:05:57Z" class="relativetime">May 11 at 13:05</span></a> 
+          <a href="/users/25504/isaacg">isaacg</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">168</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34713"> 
+        <div onclick="window.location.href='/questions/34713/maximum-weight-triangles-in-dense-graphs'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="4 votes">4</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="80 views">80</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34713/maximum-weight-triangles-in-dense-graphs" class="question-hyperlink" title="There are multiple results (Vassilevska and Williams STOC09, for instance) on computing efficiently minimal-weight triangles (or more generally patterns) in node-weighted graphs.
+Several of these ...">Maximum weight triangles in dense graphs</a></h3> 
+         <div class="tags t-graph-algorithms t-reductions t-boolean-matrix"> 
+          <a href="/questions/tagged/graph-algorithms" class="post-tag" title="show questions tagged 'graph-algorithms'" rel="tag">graph-algorithms</a> 
+          <a href="/questions/tagged/reductions" class="post-tag" title="show questions tagged 'reductions'" rel="tag">reductions</a> 
+          <a href="/questions/tagged/boolean-matrix" class="post-tag" title="show questions tagged 'boolean-matrix'" rel="tag">boolean-matrix</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34713/maximum-weight-triangles-in-dense-graphs" class="started-link">modified <span title="2016-05-10 15:43:45Z" class="relativetime">May 10 at 15:43</span></a> 
+          <a href="/users/20726/joseph-stack">Joseph Stack</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">758</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-33117"> 
+        <div onclick="window.location.href='/questions/33117/complexity-of-a-problem-over-acyclic-context-free-grammars'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="7 votes">7</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="172 views">172</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/33117/complexity-of-a-problem-over-acyclic-context-free-grammars" class="question-hyperlink" title="Let $G$ be an acyclic, context-free grammar over a fixed alphabet $\Sigma=\{a_1,\dots,a_k\}$ with the restriction (without loss of generality) that $|w|=2$ for each rule $A\to w$ in the grammar. ...">Complexity of a problem over acyclic context-free grammars</a></h3> 
+         <div class="tags t-ccûcomplexity-theory t-circuit-complexity t-np t-grammars t-context-free"> 
+          <a href="/questions/tagged/cc.complexity-theory" class="post-tag" title="show questions tagged 'cc.complexity-theory'" rel="tag">cc.complexity-theory</a> 
+          <a href="/questions/tagged/circuit-complexity" class="post-tag" title="show questions tagged 'circuit-complexity'" rel="tag">circuit-complexity</a> 
+          <a href="/questions/tagged/np" class="post-tag" title="show questions tagged 'np'" rel="tag">np</a> 
+          <a href="/questions/tagged/grammars" class="post-tag" title="show questions tagged 'grammars'" rel="tag">grammars</a> 
+          <a href="/questions/tagged/context-free" class="post-tag" title="show questions tagged 'context-free'" rel="tag">context-free</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/33117/complexity-of-a-problem-over-acyclic-context-free-grammars" class="started-link">modified <span title="2016-05-10 12:39:43Z" class="relativetime">May 10 at 12:39</span></a> 
+          <a href="/users/21809/danny">Danny</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">250</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34715"> 
+        <div onclick="window.location.href='/questions/34715/constant-time-bounds-on-offline-2-choice-hashing'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="4 votes">4</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered"> 
+          <div class="mini-counts">
+           <span title="2 answers">2</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="106 views">106</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34715/constant-time-bounds-on-offline-2-choice-hashing" class="question-hyperlink" title="I'm reading up on cuckoo hashing and came across Michael Mitzenmacher's blog posts on the subject. In his motivation of why cuckoo hashing seems like a reasonable strategy, he mentions a connection to ...">Constant-time bounds on offline 2-choice hashing?</a></h3> 
+         <div class="tags t-reference-request t-dsûdata-structures"> 
+          <a href="/questions/tagged/reference-request" class="post-tag" title="show questions tagged 'reference-request'" rel="tag">reference-request</a> 
+          <a href="/questions/tagged/ds.data-structures" class="post-tag" title="show questions tagged 'ds.data-structures'" rel="tag">ds.data-structures</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34715/constant-time-bounds-on-offline-2-choice-hashing/?lastactivity" class="started-link">answered <span title="2016-05-09 22:19:41Z" class="relativetime">May 9 at 22:19</span></a> 
+          <a href="/users/38960/michael-mitzenmacher">Michael Mitzenmacher</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">61</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34709"> 
+        <div onclick="window.location.href='/questions/34709/is-alogtime-ph-hard-to-prove-and-unknown'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="9 votes">9</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status answered-accepted" title="one of the answers was accepted as the correct answer"> 
+          <div class="mini-counts">
+           <span title="1 answer">1</span>
+          </div> 
+          <div>
+           answer
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="603 views">603</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34709/is-alogtime-ph-hard-to-prove-and-unknown" class="question-hyperlink" title="Lance Fortnow recently claimed that proving L != NP should be easier than proving P != NP:
+
+
+  
+  Separate NP from Logarithmic space. I gave four approaches in a pre-blog 2001 survey on ...">Is ALogTime != PH hard to prove (and unknown)?</a></h3> 
+         <div class="tags t-ccûcomplexity-theory t-reductions t-relativization"> 
+          <a href="/questions/tagged/cc.complexity-theory" class="post-tag" title="show questions tagged 'cc.complexity-theory'" rel="tag">cc.complexity-theory</a> 
+          <a href="/questions/tagged/reductions" class="post-tag" title="show questions tagged 'reductions'" rel="tag">reductions</a> 
+          <a href="/questions/tagged/relativization" class="post-tag" title="show questions tagged 'relativization'" rel="tag">relativization</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34709/is-alogtime-ph-hard-to-prove-and-unknown/?lastactivity" class="started-link">answered <span title="2016-05-09 07:07:04Z" class="relativetime">May 9 at 7:07</span></a> 
+          <a href="/users/225/ryan-williams">Ryan Williams</a> 
+          <span class="reputation-score" title="reputation score 20,398" dir="ltr">20.4k</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34703"> 
+        <div onclick="window.location.href='/questions/34703/beating-naive-dynamic-programming-examples-similar-to-integer-partitions'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="4 votes">4</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="91 views">91</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34703/beating-naive-dynamic-programming-examples-similar-to-integer-partitions" class="question-hyperlink" title="Let $p(n)$ denote the number of partitions of $n\in\mathbb{N}$ (briefly, number of ways to split a pile of $n$ stones into $\geq1$ unordered nonempty parts). The classical dynamic programming ...">Beating naive dynamic programming: examples similar to integer partitions?</a></h3> 
+         <div class="tags t-ccûcomplexity-theory t-dsûalgorithms t-dynamic-programming"> 
+          <a href="/questions/tagged/cc.complexity-theory" class="post-tag" title="show questions tagged 'cc.complexity-theory'" rel="tag">cc.complexity-theory</a> 
+          <a href="/questions/tagged/ds.algorithms" class="post-tag" title="show questions tagged 'ds.algorithms'" rel="tag">ds.algorithms</a> 
+          <a href="/questions/tagged/dynamic-programming" class="post-tag" title="show questions tagged 'dynamic-programming'" rel="tag">dynamic-programming</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34703/beating-naive-dynamic-programming-examples-similar-to-integer-partitions" class="started-link">asked <span title="2016-05-08 22:19:48Z" class="relativetime">May 8 at 22:19</span></a> 
+          <a href="/users/38932/amakelov">amakelov</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">34</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="question-summary narrow" id="question-summary-34702"> 
+        <div onclick="window.location.href='/questions/34702/the-relation-between-oracle-complexity-classes-and-arithmetical-hierarchy'" class="cp"> 
+         <div class="votes"> 
+          <div class="mini-counts">
+           <span title="0 votes">0</span>
+          </div> 
+          <div>
+           votes
+          </div> 
+         </div> 
+         <div class="status unanswered"> 
+          <div class="mini-counts">
+           <span title="0 answers">0</span>
+          </div> 
+          <div>
+           answers
+          </div> 
+         </div> 
+         <div class="views"> 
+          <div class="mini-counts">
+           <span title="46 views">46</span>
+          </div> 
+          <div>
+           views
+          </div> 
+         </div> 
+        </div> 
+        <div class="summary"> 
+         <h3><a href="/questions/34702/the-relation-between-oracle-complexity-classes-and-arithmetical-hierarchy" class="question-hyperlink" title="I am new to Oracle Complexity and I was trying to find out the Relation between Oracle complexity classes and Arithmetical Hierarchy. So can anyone introduce me a good document or manual about it.
+">The Relation between Oracle complexity classes and Arithmetical Hierarchy</a></h3> 
+         <div class="tags t-complexity-classes t-oracles t-polynomial-hierarchy"> 
+          <a href="/questions/tagged/complexity-classes" class="post-tag" title="show questions tagged 'complexity-classes'" rel="tag">complexity-classes</a> 
+          <a href="/questions/tagged/oracles" class="post-tag" title="show questions tagged 'oracles'" rel="tag">oracles</a> 
+          <a href="/questions/tagged/polynomial-hierarchy" class="post-tag" title="show questions tagged 'polynomial-hierarchy'" rel="tag">polynomial-hierarchy</a> 
+         </div> 
+         <div class="started"> 
+          <a href="/questions/34702/the-relation-between-oracle-complexity-classes-and-arithmetical-hierarchy" class="started-link">asked <span title="2016-05-08 21:29:12Z" class="relativetime">May 8 at 21:29</span></a> 
+          <a href="/users/38947/mhm">MHM</a> 
+          <span class="reputation-score" title="reputation score " dir="ltr">1</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div> 
+      <a id="home-browse" class="button" href="/questions">Browse More Questions</a> 
+     </div> 
+     <script>
+        StackExchange.using('exploreQuestions', function() {
+                StackExchange.exploreQuestions.init({count:14});
+                            StackExchange.exploreQuestions.gps();
+        });
+    </script> 
+     <script>
+    StackExchange.ready(function() { StackExchange.question.initShareLinks(); });
+</script>
+    </div> 
+    <div id="sidebar"> 
+     <div style="margin-bottom: 10px;"> 
+      <style type="text/css">
+#newsletter-ad {
+    width: 270px;
+    height: 250px;
+    overflow: hidden;
+    background: url('//cdn.sstatic.net/Sites/cstheory/img/newsletter-ad.png?v=4');
+    padding: 0 15px 0 15px;
+}
+#newsletter-ad-header {
+    margin-top: 60px;
+}
+#newsletter-ad ul {
+    margin: 1em 0 1em 1.5em;
+}
+#newsletter-ad ul li {
+    margin-bottom: 5px;
+}
+#newsletter-signup-container {
+    text-align: center;
+}
+#newsletter-preview-container {
+    margin-top: 10px;
+    text-align: center;
+}
+#newsletter-email-input {
+    width: 200px;
+}
+</style> 
+      <script>
+    StackExchange.ready(function () {
+        StackExchange.newsletterAd.init();
+    });
+</script> 
+      <div id="newsletter-ad"> 
+       <p id="newsletter-ad-header">Get the <b>weekly newsletter!</b> In it, you'll get:</p> 
+       <ul> 
+        <li>The week's top questions and answers</li> 
+        <li>Important community announcements</li> 
+        <li>Questions that need answers</li> 
+       </ul> 
+       <div id="newsletter-signup-container">
+        <input id="newsletter-signup" type="button" value="Sign up for the newsletter">
+       </div> 
+       <p id="newsletter-preview-container">see an <a href="//stackexchange.com/newsletters/newsletter?site=cstheory.stackexchange.com" id="newsletter-preview">example newsletter</a></p> 
+       <div class="dno"> 
+        <p class="privacy-policy-agreement"> By subscribing, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p> 
+        <input type="hidden" name="legalLinksShown" value="1"> 
+       </div> 
+      </div> 
+     </div>
+     <style type="text/css">
+    .ads { margin-left: 60px; }
+    .ad-container { width: 300px; height: 250px; margin-right: 20px; margin-bottom: 20px; }
+    .ad-container .ad { height: 250px; }
+    .ad-container .footer-container { overflow: hidden; height: 30px; position: relative; top: -30px; }
+    .ad-container .footer-container .footer { font-family: Arial,Helvetic,Sans-Serif; font-size: 12px; text-align: center; padding-top: 9px; background-color: #000; color: #EFF; opacity: 0.9; filter: alpha(opacity=90); top: 30px; height: 30px; position: relative; }
+    .ad-container a:hover { text-decoration: underline; }
+    #adzerk2 { height: 250px; }
+</style> 
+     <script>
+    StackExchange.ready(function () {
+        $(".ad-container").hover(
+            function () {
+                $(".ad-container .footer-container .footer").stop(true, true).animate({ top: "0px" }, "fast");
+            },
+            function () {
+                $(".ad-container .footer-container .footer").animate({ top: "30px" }, "fast");
+            });
+    });
+</script> 
+     <script>
+        var ados = ados || {};ados.run = ados.run || [];
+        ados.run.push(function () { ados_add_placement(22, 12057, "adcm2", [5,17]).setZone(76); });
+    </script> 
+     <div class="everyonelovesstackoverflow" id="adcm2"> 
+     </div> 
+     <script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script> 
+     <script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                ados_setKeywords('cc.complexity-theory,derandomization,conditional-results,randomized-algorithms,x-host-cstheory.stackexchange.com');; ados_load();
+        });   
+        
+</script> 
+     <div id="hot-network-questions" class="module"> 
+      <h4> <a href="//stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:8 })"> Hot Network Questions </a> </h4> 
+      <ul> 
+       <li> 
+        <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/41594/klemperer-rosette-vs-relativistic-kill-vehicles" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:579 }); posts_hot_network.click({ item_type:2, location:8 })"> Klemperer rosette vs Relativistic Kill Vehicles </a> </li> 
+       <li> 
+        <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/89925/in-english-literature-or-in-the-english-literature" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:481 }); posts_hot_network.click({ item_type:2, location:8 })"> "In English literature" or "In the English literature"? </a> </li> 
+       <li> 
+        <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/94090/where-did-the-3-dot-user-is-typing-feedback-you-see-on-messenger-apps-originat" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:102 }); posts_hot_network.click({ item_type:2, location:8 })"> Where did the 3 dot 'user is typing' feedback you see on messenger apps originate? </a> </li> 
+       <li> 
+        <div class="favicon favicon-dba" title="Database Administrators Stack Exchange"></div><a href="http://dba.stackexchange.com/questions/138540/data-inconsistency-prohibition-if-table-reffer-to-another-via-two-many2many-rela" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:182 }); posts_hot_network.click({ item_type:2, location:8 })"> Data inconsistency prohibition if table reffer to another via two many2many relations </a> </li> 
+       <li> 
+        <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37221259/passing-parameters-to-lambda-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:1 }); posts_hot_network.click({ item_type:2, location:8 })"> Passing parameters to lambda in C++ </a> </li> 
+       <li> 
+        <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/123045/is-it-acceptable-practice-to-only-increment-a-number-when-changing-a-password" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:162 }); posts_hot_network.click({ item_type:2, location:8 })"> Is it acceptable practice to only increment a number when changing a password? </a> </li> 
+       <li> 
+        <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1785074/what-should-the-fundamental-theorem-of-linear-algebra-assert" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:69 }); posts_hot_network.click({ item_type:2, location:8 })"> What should "The Fundamental Theorem of Linear Algebra" assert? </a> </li> 
+       <li> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68707/how-common-is-it-for-submitted-papers-to-have-minor-errors" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> How common is it for submitted papers to have minor errors? </a> </li> 
+       <li> 
+        <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/318395/are-so-called-cross-cutting-concerns-a-valid-excuse-to-break-solid-di-ioc" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:131 }); posts_hot_network.click({ item_type:2, location:8 })"> Are so called "cross-cutting concerns" a valid excuse to break SOLID/DI/IoC? </a> </li> 
+       <li> 
+        <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/325593/what-do-you-call-a-person-who-suggests-ideas" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:97 }); posts_hot_network.click({ item_type:2, location:8 })"> What do you call a person who suggests ideas? </a> </li> 
+       <li> 
+        <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/67134/is-it-unethical-to-notify-a-company-about-an-employee-who-is-seeking-employment" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:423 }); posts_hot_network.click({ item_type:2, location:8 })"> Is it unethical to notify a company about an employee who is seeking employment elsewhere? </a> </li> 
+       <li> 
+        <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68320/to-travel-30-km-from-india-to-sri-lanka-do-i-really-have-to-take-a-1500-km-20" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:273 }); posts_hot_network.click({ item_type:2, location:8 })"> To travel 30 km from India to Sri Lanka, do I really have to take a 1500 km, 20 hour detour? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/127843/in-star-wars-a-new-hope-why-was-one-officer-dressed-in-white" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:186 }); posts_hot_network.click({ item_type:2, location:8 })"> In Star Wars: A New Hope, why was one officer dressed in white? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68541/what-happens-if-a-math-phd-student-fails-to-find-a-proof-that-is-the-main-object" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> What happens if a math PhD student fails to find a proof that is the main objective of his/her thesis topic? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="http://skeptics.stackexchange.com/questions/32829/has-a-fifteen-year-old-from-canada-discovered-a-hidden-mayan-city" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:212 }); posts_hot_network.click({ item_type:2, location:8 })"> Has a fifteen year old from Canada discovered a hidden Mayan city? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/255353/why-does-a-system-try-to-minimize-its-total-energy" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:151 }); posts_hot_network.click({ item_type:2, location:8 })"> Why does a system try to minimize its total energy? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/68259/clapping-applause-when-a-planes-lands" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:273 }); posts_hot_network.click({ item_type:2, location:8 })"> Clapping / applause when a planes lands? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-sqa" title="Software Quality Assurance &amp; Testing Stack Exchange"></div><a href="http://sqa.stackexchange.com/questions/18655/tell-me-a-reason-behind-bellow-given-webdriver-exception-and-how-will-you-resolv" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:244 }); posts_hot_network.click({ item_type:2, location:8 })"> Tell me a reason behind bellow given WebDriver exception and how will you resolve It? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/80093/how-can-i-keep-players-whose-characters-are-unconscious-entertained" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:122 }); posts_hot_network.click({ item_type:2, location:8 })"> How can I keep players, whose characters are unconscious, entertained? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/37227300/why-doesnt-c-use-stdnested-exception-to-allow-throwing-from-destructor" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:1 }); posts_hot_network.click({ item_type:2, location:8 })"> Why doesn't C++ use std::nested_exception to allow throwing from destructor? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-blender" title="Blender Stack Exchange"></div><a href="http://blender.stackexchange.com/questions/52587/how-to-create-a-flashlight-light" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:502 }); posts_hot_network.click({ item_type:2, location:8 })"> How to create a flashlight light </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/68605/how-to-read-papers-without-falling-into-a-rabbit-hole" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:415 }); posts_hot_network.click({ item_type:2, location:8 })"> How to read papers without falling into a rabbit hole? </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/308600/how-to-include-a-lenny-face-in-a-latex-document-e-g-%cd%a1-%cd%9c%ca%96-%cd%a1" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:85 }); posts_hot_network.click({ item_type:2, location:8 })"> How to include a Lenny face in a LaTeX document? e.g. ( ͡° ͜ʖ ͡°) </a> </li> 
+       <li class="dno js-hidden"> 
+        <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/52980/why-is-the-discovery-covered-in-sulphur-in-2010-the-year-we-make-contact" class="js-gps-track" data-gps-track="site.switch({ item_type:8, target_site:367 }); posts_hot_network.click({ item_type:2, location:8 })"> Why is the Discovery covered in sulphur in "2010: The Year We Make Contact"? </a> </li> 
+      </ul> 
+      <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:8 })"> more hot questions </a> 
+     </div> 
+    </div> 
+    <div id="feed-link"> 
+     <div id="feed-link-text"> 
+      <a href="/feeds" title="the 30 most recent questions"> <span class="feed-icon"></span>recent questions feed </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer" class="categories"> 
+   <div class="footerwrap"> 
+    <div id="footer-menu"> 
+     <div class="top-footer-links"> 
+      <a href="http://stackoverflow.com/company/about">about us</a> 
+      <a href="/tour">tour</a> 
+      <a href="/help">help</a> 
+      <a href="http://cstheory.blogoverflow.com?blb=1">blog</a> 
+      <a href="http://chat.stackexchange.com">chat</a> 
+      <a href="http://data.stackexchange.com">data</a> 
+      <a href="http://stackexchange.com/legal">legal</a> 
+      <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> 
+      <a href="http://stackoverflow.com/company/work-here">work here</a> 
+      <a href="http://stackexchange.com/mediakit">advertising info</a> 
+      <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a> 
+      <b><a href="/contact">contact us</a></b> 
+      <b><a href="http://meta.cstheory.stackexchange.com">feedback</a></b> 
+     </div> 
+     <div id="footer-sites"> 
+      <table> 
+       <tbody>
+        <tr> 
+         <th colspan="3"> Technology </th> 
+         <th> Life / Arts </th> 
+         <th> Culture / Recreation </th> 
+         <th> Science </th> 
+         <th> Other </th> 
+        </tr> 
+        <tr> 
+         <td> 
+          <ol> 
+           <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li> 
+           <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li> 
+           <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li> 
+           <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li> 
+           <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li> 
+           <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li> 
+           <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li> 
+           <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li> 
+           <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li> 
+           <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li> 
+           <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li> 
+           <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li> 
+           <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li> 
+           <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li> 
+           <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li> 
+          </ol></td>
+         <td>
+          <ol> 
+           <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li> 
+           <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li> 
+           <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li> 
+           <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li> 
+           <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li> 
+           <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li> 
+           <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li> 
+           <li> <a href="http://stackexchange.com/sites#technology" class="more"> more (13) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li> 
+           <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li> 
+           <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li> 
+           <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li> 
+           <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li> 
+           <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li> 
+           <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li> 
+           <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li> 
+           <li> <a href="http://stackexchange.com/sites#lifearts" class="more"> more (9) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li> 
+           <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li> 
+           <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li> 
+           <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li> 
+           <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li> 
+           <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li> 
+           <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li> 
+           <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li> 
+           <li> <a href="http://stackexchange.com/sites#culturerecreation" class="more"> more (21) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li> 
+           <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li> 
+           <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li> 
+           <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li> 
+           <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li> 
+           <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li> 
+           <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li> 
+           <li> <a href="http://stackexchange.com/sites#science" class="more"> more (5) </a> </li> 
+          </ol> </td> 
+         <td> 
+          <ol> 
+           <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li> 
+           <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li> 
+           <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li> 
+           <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li> 
+          </ol> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </div> 
+    <div id="copyright">
+      site design / logo © 2016 Stack Exchange Inc; user contributions licensed under 
+     <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> with 
+     <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a> 
+    </div> 
+    <div id="svnrev">
+      rev 2016.5.13.3573 
+    </div> 
+   </div> 
+  </div> 
+  <noscript> 
+   <div id="noscript-warning">
+    Theoretical Computer Science Stack Exchange works best with JavaScript enabled
+    <img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+   </div> 
+  </noscript> 
+  <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>  
+ </body>
+</html>

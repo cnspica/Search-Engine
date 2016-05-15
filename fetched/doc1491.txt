@@ -1,0 +1,647 @@
+https://stackexchange.com/newsletters/newsletter?site=askubuntu.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <title>Ask Ubuntu Newsletter</title> 
+  <style type="text/css"> 
+        #outlook a { padding: 0; } 
+        body { width: 100% !important; font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif; } .ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width */
+        body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; } /* Prevent Webkit and Windows Mobile platforms from changing default font sizes. */
+ 
+        /* Reset Styles */
+        img { height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        table td { border-collapse: collapse; }
+
+        .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { color: black; text-decoration: none !important; border-bottom: none !important; background: none !important; } /* Body text color for the New Yahoo.  This example sets the font of Yahoo's Shortcuts to black. */
+        
+    </style> 
+ </head> 
+ <body style="margin: 0; padding: 0;"> 
+  <style>
+    body { 
+        margin-top: 44px !important;
+    }
+
+    .promotion-banner-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid #DDD;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        z-index: 2;
+        min-height: 44px;
+    }
+
+    .promotion-banner {
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px 0;
+        overflow: auto;
+        font-size: 12px;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    
+    .promotion-title {
+        color: #444444;
+        float: left;
+        margin-top: 4px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .promotion-message {
+        margin-top: 4px;
+        font-size: 13px;
+    }
+    
+    .promotion-message p {
+        margin: 0 0 5px 0;
+    }
+    
+    .promotion-title a {
+        color: #444444;
+    }
+    
+    .promotion-subscribe {
+        float: right;
+    }
+    
+    .promotion-banner a {
+        color: #366FB3;
+        text-decoration: none;
+    }
+
+    .promotion-banner a:hover {
+        color: #4CA3D7;
+    }
+
+    .promotion-banner a:visited {
+        color: #12457C;
+    }
+    
+    .promotion-error {
+        color: red;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    
+    input[type=submit], input[type=button], .btn
+    {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.3em 0.7em;
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        color: #fff!important;
+        border: 1px solid #c47b07;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fba00c), to(#f67c16));
+        background: -moz-linear-gradient(top, #fba00c, #f67c16);
+        background: -o-linear-gradient(top, #fba00c, #f67c16);
+        background: linear-gradient(to top, #fba00c, #f67c16);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fba00c', endColorstr='#f67c16');
+        font-size: 1em;
+        line-height: 1.5;
+        border-radius: 6px;
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus, .btn:hover {
+        background: #f88912;
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+    }
+
+    input[type=submit]:active, input[type=button]:active, .btn:active {
+        background: #f88912;
+        -moz-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        -webkit-box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+        box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.4) inset;
+    }
+</style> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script type="text/javascript">
+    $(function () {
+        var savedEmail;
+
+        $("#subscribe-button").click(function () {
+                
+                $('.promotion-banner').html([
+                    '<div class="promotion-message">',
+                        '<p><strong><a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3daskubuntu.com">Create a Stack Exchange account</a>',
+                            ' or <a href="/users/login?returnurl=%2fnewsletters%2fnewsletter%3fsite%3daskubuntu.com">log in</a> if you already have one.</strong></p>',
+                        '<form>Or, send newsletter emails to: <input id="subscribe-anon-email" type="text" style="width: 200px;" /> <span class="subscribe-button-container"><input type="submit" value="Subscribe" /></span></form>',
+                        '<div class="promotion-error"></div>',
+                    '</div>'
+                ].join(''));
+
+                $('#subscribe-anon-email').focus();
+                
+
+            return false;
+        });
+
+        $('.promotion-banner').delegate('form', 'submit', function () {
+            var email = $.trim($('#subscribe-anon-email').val());
+            if (email.length > 0) {
+                subscribe(email, $('#subscribe-anon-button').parent());
+            }
+            return false;
+        });
+
+        $('.promotion-banner').delegate('#resend-confirmation', 'click', function () {
+            var $that = $(this);
+
+            StackExchange.helpers.addSpinner($(this));
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/resend-confirmation',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 31, 'email': savedEmail },
+                success: function() {
+                    $that.replaceWith('<strong>sent!</strong>');
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+
+            return false;
+        });
+
+        function subscribe(email) {
+            StackExchange.helpers.addSpinner('.subscribe-button-container');
+
+            $.ajax({
+                type: 'POST',
+                url: '/newsletters/subscribe',
+                data: { 'fkey': '71fb98341fa62b820a5808f83f182453', 'siteId': 31, 'email': email },
+                dataType: 'json',
+                success: function (data) {
+                    $('.promotion-banner').html('<div class="promotion-message"><p><strong>You have subscribed to the Ask Ubuntu Weekly Newsletter!</strong></p></div>');
+                    
+                    if (data == "unconfirmed") {
+                        savedEmail = email;
+                        $('.promotion-message').append('<p>Please click the link in the confirmation email to activate your subscription.</p><p><a href="#" id="resend-confirmation">(re-send confirmation)</a></p>');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    var response = eval('(' + jqXHR.responseText + ')');
+                    var error = (!!response && !!response.ErrorMessage) ? response.ErrorMessage : 'An error occurred while subscribing';
+                    $('.promotion-error').html(error);
+                },
+                complete: function () {
+                    StackExchange.helpers.removeSpinner();
+                }
+            });
+        }
+    });
+</script> 
+  <div class="promotion-banner-container"> 
+   <div class="promotion-banner"> 
+    <div class="promotion-title"> 
+     <a href="http://askubuntu.com">Ask Ubuntu</a> Weekly Newsletter 
+    </div> 
+    <div class="promotion-subscribe"> 
+     <span class="subscribe-button-container"><input id="subscribe-button" type="button" value="Subscribe"></span> &nbsp; or 
+     <a href="/newsletters">see more newsletters</a> 
+    </div> 
+    <div class="promotion-error"></div> 
+   </div> 
+  </div> 
+  <table cellpadding="0" cellspacing="0" border="0" style="height: 100% !important; margin: 0; padding: 0; width: 100% !important;background-color: #f7f7f7; background-image: url('//sstatic.net/stackexchange/Img/newsletters/askubuntu-bg.png'); font-family: 'Ubuntu Beta',UbuntuBeta,Ubuntu,'Bitstream Vera Sans','DejaVu Sans',Tahoma,sans-serif!important;" background="//sstatic.net/stackexchange/Img/newsletters/askubuntu-bg.png"> 
+   <tbody>
+    <tr> 
+     <td align="center" height="89"> <img src="//sstatic.net/stackexchange/img/newsletters/askubuntu-header.png" alt="Ask Ubuntu Weekly Newsletter"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="margin-bottom: 20px; text-align: left;background: #fdfdfd;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Top new questions this week:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/769580/get-sudo-emails-for-specific-user" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">Get `sudo` emails for specific user</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a server set-up and I let somebody that I trust with a little bit of sudo access have it. However, I also want an email anytime that they use sudo. I know that I can use Defaults mail_always ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/sudo" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">sudo</a> <a href="http://askubuntu.com/questions/tagged/visudo" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">visudo</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/bsaY0.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/323419/the-brown-one" target="_blank" style="color: #DD4814; text-decoration: none!important;">The Brown One</a> 14 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/bsaY0.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://askubuntu.com/users/323419/the-brown-one" target="_blank" style="color: #DD4814; text-decoration: none!important;">The Brown One</a> 20 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/771627/14-04-network-manager-stopped-working" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">14.04 - Network manager stopped working</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">When I started my laptop, there was no network service, and also no network icon in the top bar. It gives an error when I start OS like "Sorry, Ubuntu 14.04 experienced an internal error". When I ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/14.04" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">14.04</a> <a href="http://askubuntu.com/questions/tagged/networking" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">networking</a> <a href="http://askubuntu.com/questions/tagged/internet" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">internet</a> <a href="http://askubuntu.com/questions/tagged/network-manager" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">network-manager</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/rImzu.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/30528/talha06" target="_blank" style="color: #DD4814; text-decoration: none!important;">talha06</a> 11 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/d24af8451ba25cee09398952a9b13f53?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://askubuntu.com/users/543259/tamkderplar" target="_blank" style="color: #DD4814; text-decoration: none!important;">tamkderplar</a> 11 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/770108/changes-in-free-from-14-04-to-16-04" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">Changes in `free` from 14.04 to 16.04?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I noticed that the free command reporting has changed somewhere between Trusty and Xenial. Here is what `free -m' shows on one of my Trusty computers: $ free -m total used ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/16.04" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">16.04</a> <a href="http://askubuntu.com/questions/tagged/memory-usage" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">memory-usage</a> <a href="http://askubuntu.com/questions/tagged/free" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">free</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/2j0mf.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/72457/otus" target="_blank" style="color: #DD4814; text-decoration: none!important;">otus</a> 8 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/afc9686c3ca7e7473b2a7183a53a4a60?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://askubuntu.com/users/11932/saji89" target="_blank" style="color: #DD4814; text-decoration: none!important;">saji89</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/770850/make-a-new-archive-once-per-minute-using-crontab" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">Make a new archive once per minute using "crontab"</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am trying to make a crontab that makes a new .tar file each minute every business day by using the following code: */1 * * * 1,2,3,4,5 tar -cf /home/user/Archiv/$(date +"%Y%m%d%H%M").tar ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/cron" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">cron</a> <a href="http://askubuntu.com/questions/tagged/tar" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">tar</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/GkQJb.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/339599/luxs" target="_blank" style="color: #DD4814; text-decoration: none!important;">LUXS</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/8mGqv.gif?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://askubuntu.com/users/216503/heemayl" target="_blank" style="color: #DD4814; text-decoration: none!important;">heemayl</a> 11 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/770254/how-can-i-keep-ssh-or-another-command-alive-on-the-terminal-app-of-my-ubuntu-p" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">How can I keep ssh (or another command) alive on the terminal app of my Ubuntu phone?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">When starting the terminal app on my Nexus 4 (OTA 10.1), I connect to my server via ssh &lt;user&gt;@&lt;serverdomain&gt;. Swiping to another app and swiping back to the terminal kills the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/ubuntu-touch" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">ubuntu-touch</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/32f7f9542bd11f6d2f67813a83a5ef18?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/541950/frunu" target="_blank" style="color: #DD4814; text-decoration: none!important;">Frunu</a> 7 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/7uDO8.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://askubuntu.com/users/482569/dufte" target="_blank" style="color: #DD4814; text-decoration: none!important;">dufte</a> 10 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/769518/how-to-remove-brackets-around-ip-address-from-traceroute-output" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">How to remove brackets () around ip address from traceroute output</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I need to extract the 2nd IP address from a traceroute like so traceroute -m2 8.8.8.8 |grep .net |awk '{print $3}' (111.222.333.4444) No matter what I try I can't seem to work out how to remove the ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/command-line" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">command-line</a> <a href="http://askubuntu.com/questions/tagged/text-processing" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">text-processing</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://lh3.googleusercontent.com/-zOOZmpeqmWM/AAAAAAAAAAI/AAAAAAAAAlg/afpo_25WQp8/photo.jpg?sz=128" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/443079/spud" target="_blank" style="color: #DD4814; text-decoration: none!important;">Spud</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/lHOxp.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://askubuntu.com/users/295286/serg" target="_blank" style="color: #DD4814; text-decoration: none!important;">Serg</a> 9 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/769558/how-to-tell-if-current-version-was-upgraded-or-a-fresh-install" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">How to tell if current version was upgraded or a fresh install</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a number of installation of ubuntu 16.04. Some of them were upgraded from a previous version. Some of them were fresh installs. Some of my installations have problems that that I don't ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/upgrade" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">upgrade</a> <a href="http://askubuntu.com/questions/tagged/version-control" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">version-control</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/WAqIT.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/29012/l-d-james" target="_blank" style="color: #DD4814; text-decoration: none!important;">L. D. James</a> 5 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Greatest hits from previous weeks:</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/162391/how-do-i-fix-my-locale-issue" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">How do I fix my locale issue?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I am getting this message every time I do something like starting or stopping a service. perl: warning: Setting locale failed. perl: warning: Please check that your locale settings: ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/command-line" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">command-line</a> <a href="http://askubuntu.com/questions/tagged/server" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">server</a> <a href="http://askubuntu.com/questions/tagged/locale" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">locale</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/f486d3f0381e98e0287d45ebc6e1fc6e?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/20245/hacktohell" target="_blank" style="color: #DD4814; text-decoration: none!important;">HackToHell</a> 263 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/83369cbc1bf635373f515339ba83b5a3?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://askubuntu.com/users/113824/otto-kek%c3%a4l%c3%a4inen" target="_blank" style="color: #DD4814; text-decoration: none!important;">Otto Kekäläinen</a> 246 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/426750/how-can-i-update-my-nodejs-to-the-latest-version" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">How can I update my nodeJS to the latest version?</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have installed nodeJS on Ubuntu with following code sudo apt-get install nodejs Since I am a new user for ubuntu I also ran this code too sudo apt-get install npm Now when I type nodejs ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/apt" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">apt</a> <a href="http://askubuntu.com/questions/tagged/nodejs" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">nodejs</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/OdP6i.jpg?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/252675/kanishka-panamaldeniya" target="_blank" style="color: #DD4814; text-decoration: none!important;">Kanishka Panamaldeniya</a> 166 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/1fc16d6608a1467c1394b7b96903e0e2?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> answered by <a href="http://askubuntu.com/users/291751/eballeste" target="_blank" style="color: #DD4814; text-decoration: none!important;">eballeste</a> 307 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; padding-top: 20px;"> <h2 style="color: #666!important; font-size: 18px!important; line-height: 1.3!important; font-weight: bold!important; margin-top: 15px!important;">Can you answer these?</h2> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/772034/extra-nic-extranet-ip-issues" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">Extra NIC extranet IP issues</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">For the question scroll down past italic font :) A quick recap: Started with FreeBSD but it was a pain to install on Hyper-V environment, then tried with CentOS, easy install but I found ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/apache2" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">apache2</a> <a href="http://askubuntu.com/questions/tagged/16.04" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">16.04</a> <a href="http://askubuntu.com/questions/tagged/ping" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">ping</a> <a href="http://askubuntu.com/questions/tagged/nic" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">nic</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/9d66df060008b1690a94a304a34f64be?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/543550/matis-petersen" target="_blank" style="color: #DD4814; text-decoration: none!important;">Matis Petersen</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/769866/upgrading-from-10-04-to-12-04-gives-restoring-original-system-state-aborting" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">Upgrading from 10.04 to 12.04 gives "Restoring original system state, Aborting"</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I'm trying to upgrade a PC, which was installed as a desktop PC but repurposed as a server, from the unsupported Ubuntu 10.04 to the supported Ubuntu 12.04. I have ssh -X access to this machine; I ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/12.04" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">12.04</a> <a href="http://askubuntu.com/questions/tagged/do-release-upgrade" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">do-release-upgrade</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://www.gravatar.com/avatar/ead9263d3f0f0cc74f54d5d9fdbaa4cd?s=128&amp;d=identicon&amp;r=PG&amp;s=18" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/232993/damian-yerrick" target="_blank" style="color: #DD4814; text-decoration: none!important;">Damian Yerrick</a> 2 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+        <tr> 
+         <td width="580" valign="top" style="padding-top: 0; border-bottom: 1px solid #e0e0e0;"> <h3 style="margin: 10px 0;"> <a href="http://askubuntu.com/questions/771191/torrents-blocked-by-isp-in-ubuntu-but-on-windows-works-fine" target="_blank" style="color: #333!important; font-size: 17px!important; text-decoration: underline!important; font-weight: normal!important;">Torrents blocked by ISP in Ubuntu but on Windows works fine</a> </h3> <p style="margin: 1em 0;font-size: 13px; color: #444;">I have a dual boot system: Ubuntu and Windows. When I use Transmission for torrents, it doesn't download anything and in the browser torrents sites are blocked, But if I do same thing on Windows in ... </p> 
+          <table width="580" cellpadding="0" cellspacing="0" border="0"> 
+           <tbody>
+            <tr> 
+             <td align="left" valign="top"> <a href="http://askubuntu.com/questions/tagged/networking" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">networking</a> <a href="http://askubuntu.com/questions/tagged/dual-boot" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">dual-boot</a> <a href="http://askubuntu.com/questions/tagged/windows" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">windows</a> <a href="http://askubuntu.com/questions/tagged/security" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">security</a> <a href="http://askubuntu.com/questions/tagged/transmission" target="_blank" style="display: inline-block; white-space: nowrap; overflow: visible;height: 14px; font-size: 11px; vertical-align: middle; color: #5E5E5E; text-decoration: none; padding: 3px 5px 2px 5px; background-color: #E8E7E5; margin: 2px 2px 6px 0; line-height: 12px;">transmission</a> </td> 
+             <td style="padding-top: 0; color: #888; font-size: 11px;" width="20">&nbsp;</td> 
+             <td valign="top" width="225"> 
+              <table width="225" cellpadding="0" cellspacing="0" border="0"> 
+               <tbody>
+                <tr> 
+                 <td> 
+                  <table> 
+                   <tbody>
+                    <tr> 
+                     <td style="padding-top: 0;"> <img src="https://i.stack.imgur.com/SiKZ8.png?s=128&amp;g=1" align="right" width="18" height="18"> </td> 
+                     <td style="padding-top: 0; color: #888; font-size: 11px;"> asked by <a href="http://askubuntu.com/users/167990/digvijay-yadav" target="_blank" style="color: #DD4814; text-decoration: none!important;">Digvijay Yadav</a> 3 votes </td> 
+                    </tr> 
+                   </tbody>
+                  </table> </td> 
+                </tr> 
+               </tbody>
+              </table> </td> 
+            </tr> 
+           </tbody>
+          </table> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> 
+      <table cellpadding="10" cellspacing="0" border="0" style="color: #666; font-size: 10px; text-align: left;background: #fdfdfd;"> 
+       <tbody>
+        <tr> 
+         <td width="580" valign="top"> 
+          <center>
+           <a href="http://stackexchange.com/newsletters" style="color: #DD4814; text-decoration: none!important; font-size: 16px; font-weight: bold;" target="_blank">Subscribe to more Stack Exchange newsletters</a>
+          </center> 
+          <hr size="1"> <br> <a href="http://www.youtube.com/watch?v=q44qwyHlMfk" target="_blank" style="color: #DD4814; text-decoration: none!important;">Unsubscribe from this newsletter</a> or change your email preferences by visiting your <a href="http://www.youtube.com/watch?v=wZZ7oFKsKzY" target="_blank" style="color: #DD4814; text-decoration: none!important;">subscriptions page on stackexchange.com</a>. <br> <br> Questions? Comments? Let us know on our <a href="http://meta.stackexchange.com" target="_blank" style="color: #DD4814; text-decoration: none!important;">feedback site</a>. If you no longer want to receive mail from Stack Exchange, <a href="http://www.youtube.com/watch?v=R6LzEbuI7e8" target="_blank" style="color: #DD4814; text-decoration: none!important;">unsubscribe from all stackexchange.com emails</a>. <br> <br> Stack Exchange, Inc. 110 William St, 28th Floor, NY NY 10038 <span title="because we care" style="color:maroon">&lt;3</span> </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table>  
+ </body>
+</html>

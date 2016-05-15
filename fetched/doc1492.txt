@@ -1,0 +1,1082 @@
+https://stackexchange.com/leagues/105/alltime/sharepoint
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta name="globalsign-domain-verification" content="ZjrAvK_A6dWV7rk42ZzORiOAGOfHsDCi8viChOIoKF"> 
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+  <title>
+    User Reputation Leagues - SharePoint - All Time - Stack Exchange
+</title> 
+  <link rel="stylesheet" href="//cdn.sstatic.net/Shared/TopBar/topbar.css" type="text/css"> 
+  <link rel="stylesheet" href="//sstatic.net/stackexchange/all.css?v=4a0e8017e478" type="text/css"> 
+  <link rel="shortcut icon" href="//sstatic.net/stackexchange/img/favicon.ico"> 
+  <link rel="apple-touch-icon" href="//sstatic.net/stackexchange/img/apple-touch-icon.png"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Exchange" href="/opensearch.xml"> 
+  <!--[if IE]>
+    <script src="//sstatic.net/stackexchange//js/third-party/html5shiv.js"></script>
+    <![endif]--> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/master.js"></script> 
+  <script src="//sstatic.net/stackexchange//js/universal-login.js"></script> 
+  <script>$(function() { UniversalAuth.performAuth(); });</script> 
+  <link rel="canonical" href="http://stackexchange.com/leagues/105/alltime/sharepoint/2011-04-07"> 
+  <script src="//sstatic.net/stackexchange//js/league.js"></script> 
+  <script>
+        $(function() {                
+            $("#userfilter").typeWatch({ highlight: true, wait: 500, captureLength: -1, callback: finished });
+
+            $('.clear-search').click(function() {
+                $('#userfilter').val('').focus();
+                finished('');
+            });
+        });
+
+        function finished(txt) {
+            $(".searchLoader").css("display", "inline-block");
+            $('.clear-search').hide();
+
+            $.ajax({
+                type: "GET",
+                url: "/leagues/filter-users/105/AllTime/2011-04-07/?filter=" + encodeURIComponent($.trim(txt.toLowerCase())) + "&sort=reputationchange&page=1&pagesize=30",
+                dataType: "html",
+                success: function (result) {
+                    $(".searchLoader").hide();
+
+                    var domelement = $(result);
+                    $("#leagueUserList").html(domelement);
+
+                    if (!!txt && txt.length >= 2) {
+                        $('.clear-search').css('display', 'inline-block');
+                    }
+                },
+                error: function() {
+                    $(".searchLoader").hide();
+                }
+            });
+        }
+    </script> 
+ </head> 
+ <body> 
+  <noscript>
+   <div id="noscript-padding"></div>
+  </noscript> 
+  <div class="wrapper"> 
+   <div id="overlay-header"></div> 
+   <section class="topbar"> 
+    <div class="topbar-wrapper"> 
+     <div class="js-topbar-dialog-corral"> 
+     </div> 
+     <div class="network-items"> 
+      <a href="//stackexchange.com" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 159 Stack Exchange sites"> <span class="hidden-text">Stack Exchange</span> </a> 
+     </div> 
+     <div class="topbar-links"> 
+      <div class="links-container"> 
+       <span class="topbar-menu-links"> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f105%2falltime%2fsharepoint#create-account">sign up</a> <a href="https://stackexchange.com/users/login?returnurl=https%3a%2f%2fstackexchange.com%2fleagues%2f105%2falltime%2fsharepoint">log in</a> <a data-loc="2" class="tour-link" href="/tour">tour</a> <a href="/about">about us</a> <a href="http://meta.stackexchange.com">meta</a> </span> 
+      </div> 
+      <div class="search-container"> 
+       <form action="/search" method="get" autocomplete="off"> 
+        <input name="q" id="search" type="text" placeholder="search all sites" tabindex="1" autocomplete="off" maxlength="240"> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <script src="//sstatic.net/stackexchange//js/topbar.js"></script> 
+   <header> 
+    <div class="contentWrapper"> 
+     <a href="/"><h1>Stack Exchange</h1></a> 
+     <ul class="navMain"> 
+      <li><a href="/sites">All Sites</a></li> 
+      <li><a href="/leagues" class="current">Top Users</a></li> 
+      <li><a href="/newsletters">Newsletters</a></li> 
+      <li><a href="/blogs">Blogs</a></li> 
+     </ul> 
+    </div> 
+   </header> 
+   <section id="content"> 
+    <div class="contentWrapper"> 
+     <div class="siteOptionsNav"> 
+      <div class="fl"> 
+       <select onchange="$(this).siblings('.loader').remove(); $(this).after('<img class=\'loader\' src=\'//sstatic.net/stackexchange/img/stream-loader.gif\' />'); window.location.href = $(this).val(); return false;"> <option value="/leagues/1/alltime/stackoverflow/2011-04-07?sort=reputationchange"> Stack Overflow </option> <option value="/leagues/3/alltime/superuser/2011-04-07?sort=reputationchange"> Super User </option> <option value="/leagues/21/alltime/math/2011-04-07?sort=reputationchange"> Mathematics </option> <option value="/leagues/31/alltime/askubuntu/2011-04-07?sort=reputationchange"> Ask Ubuntu </option> <option value="/leagues/2/alltime/serverfault/2011-04-07?sort=reputationchange"> Server Fault </option> <option value="/leagues/35/alltime/english/2011-04-07?sort=reputationchange"> English Language &amp; Usage </option> <option value="/leagues/40/alltime/unix/2011-04-07?sort=reputationchange"> Unix &amp; Linux </option> <option value="/leagues/46/alltime/apple/2011-04-07?sort=reputationchange"> Ask Different </option> <option value="/leagues/7/alltime/gaming/2011-04-07?sort=reputationchange"> Arqade </option> <option value="/leagues/52/alltime/programmers/2011-04-07?sort=reputationchange"> Programmers </option> <option value="/leagues/29/alltime/tex/2011-04-07?sort=reputationchange"> TeX - LaTeX </option> <option value="/leagues/54/alltime/android/2011-04-07?sort=reputationchange"> Android Enthusiasts </option> <option value="/leagues/4/alltime/meta/2011-04-07?sort=reputationchange"> Meta Stack Exchange </option> <option value="/leagues/58/alltime/electronics/2011-04-07?sort=reputationchange"> Electrical Engineering </option> <option value="/leagues/62/alltime/physics/2011-04-07?sort=reputationchange"> Physics </option> <option value="/leagues/19/alltime/stats/2011-04-07?sort=reputationchange"> Cross Validated </option> <option value="/leagues/78/alltime/dba/2011-04-07?sort=reputationchange"> Database Administrators </option> <option value="/leagues/355/alltime/ru-stackoverflow/2011-04-07?sort=reputationchange"> Stack Overflow на русском </option> <option value="/leagues/66/alltime/security/2011-04-07?sort=reputationchange"> Information Security </option> <option value="/leagues/86/alltime/codereview/2011-04-07?sort=reputationchange"> Code Review </option> <option value="/leagues/42/alltime/wordpress/2011-04-07?sort=reputationchange"> WordPress Development </option> <option value="/leagues/27/alltime/gis/2011-04-07?sort=reputationchange"> Geographic Information Systems </option> <option value="/leagues/82/alltime/scifi/2011-04-07?sort=reputationchange"> Science Fiction &amp; Fantasy </option> <option value="/leagues/251/alltime/mathoverflow/2011-04-07?sort=reputationchange"> MathOverflow </option> <option value="/leagues/23/alltime/diy/2011-04-07?sort=reputationchange"> Home Improvement </option> <option value="/leagues/5/alltime/webapps/2011-04-07?sort=reputationchange"> Web Applications </option> <option value="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange" selected> SharePoint </option> <option value="/leagues/11/alltime/cooking/2011-04-07?sort=reputationchange"> Seasoned Advice </option> <option value="/leagues/80/alltime/graphicdesign/2011-04-07?sort=reputationchange"> Graphic Design </option> <option value="/leagues/13/alltime/gamedev/2011-04-07?sort=reputationchange"> Game Development </option> <option value="/leagues/99/alltime/drupal/2011-04-07?sort=reputationchange"> Drupal Answers </option> <option value="/leagues/38/alltime/ux/2011-04-07?sort=reputationchange"> User Experience </option> <option value="/leagues/229/alltime/ell/2011-04-07?sort=reputationchange"> English Language Learners </option> <option value="/leagues/273/alltime/pt-stackoverflow/2011-04-07?sort=reputationchange"> Stack Overflow em Português </option> <option value="/leagues/9/alltime/webmasters/2011-04-07?sort=reputationchange"> Webmasters </option> <option value="/leagues/227/alltime/magento/2011-04-07?sort=reputationchange"> Magento </option> <option value="/leagues/191/alltime/academia/2011-04-07?sort=reputationchange"> Academia </option> <option value="/leagues/125/alltime/travel/2011-04-07?sort=reputationchange"> Travel </option> <option value="/leagues/213/alltime/salesforce/2011-04-07?sort=reputationchange"> Salesforce </option> <option value="/leagues/195/alltime/workplace/2011-04-07?sort=reputationchange"> The Workplace </option> <option value="/leagues/17/alltime/photo/2011-04-07?sort=reputationchange"> Photography </option> <option value="/leagues/177/alltime/mathematica/2011-04-07?sort=reputationchange"> Mathematica </option> <option value="/leagues/207/alltime/raspberrypi/2011-04-07?sort=reputationchange"> Raspberry Pi </option> <option value="/leagues/33/alltime/money/2011-04-07?sort=reputationchange"> Personal Finance &amp; Money </option> <option value="/leagues/167/alltime/movies/2011-04-07?sort=reputationchange"> Movies &amp; TV </option> <option value="/leagues/48/alltime/rpg/2011-04-07?sort=reputationchange"> Role-playing Games </option> <option value="/leagues/193/alltime/cs/2011-04-07?sort=reputationchange"> Computer Science </option> <option value="/leagues/88/alltime/codegolf/2011-04-07?sort=reputationchange"> Programming Puzzles &amp; Code Golf </option> <option value="/leagues/199/alltime/chemistry/2011-04-07?sort=reputationchange"> Chemistry </option> <option value="/leagues/101/alltime/mechanics/2011-04-07?sort=reputationchange"> Motor Vehicle Maintenance &amp; Repair </option> <option value="/leagues/50/alltime/bicycles/2011-04-07?sort=reputationchange"> Bicycles </option> <option value="/leagues/249/alltime/blender/2011-04-07?sort=reputationchange"> Blender </option> <option value="/leagues/359/alltime/rus/2011-04-07?sort=reputationchange"> Русский язык </option> <option value="/leagues/109/alltime/music/2011-04-07?sort=reputationchange"> Music: Practice &amp; Theory </option> <option value="/leagues/171/alltime/biology/2011-04-07?sort=reputationchange"> Biology </option> <option value="/leagues/139/alltime/christianity/2011-04-07?sort=reputationchange"> Christianity </option> <option value="/leagues/95/alltime/skeptics/2011-04-07?sort=reputationchange"> Skeptics </option> <option value="/leagues/225/alltime/anime/2011-04-07?sort=reputationchange"> Anime &amp; Manga </option> <option value="/leagues/129/alltime/crypto/2011-04-07?sort=reputationchange"> Cryptography </option> <option value="/leagues/141/alltime/bitcoin/2011-04-07?sort=reputationchange"> Bitcoin </option> <option value="/leagues/103/alltime/parenting/2011-04-07?sort=reputationchange"> Parenting </option> <option value="/leagues/243/alltime/networkengineering/2011-04-07?sort=reputationchange"> Network Engineering </option> <option value="/leagues/44/alltime/cstheory/2011-04-07?sort=reputationchange"> Theoretical Computer Science </option> <option value="/leagues/307/alltime/puzzling/2011-04-07?sort=reputationchange"> Puzzling </option> <option value="/leagues/327/alltime/worldbuilding/2011-04-07?sort=reputationchange"> Worldbuilding </option> <option value="/leagues/113/alltime/judaism/2011-04-07?sort=reputationchange"> Mi Yodeya </option> <option value="/leagues/97/alltime/fitness/2011-04-07?sort=reputationchange"> Physical Fitness </option> <option value="/leagues/115/alltime/german/2011-04-07?sort=reputationchange"> German Language </option> <option value="/leagues/275/alltime/aviation/2011-04-07?sort=reputationchange"> Aviation </option> <option value="/leagues/288/alltime/arduino/2011-04-07?sort=reputationchange"> Arduino </option> <option value="/leagues/60/alltime/boardgames/2011-04-07?sort=reputationchange"> Board &amp; Card Games </option> <option value="/leagues/135/alltime/dsp/2011-04-07?sort=reputationchange"> Signal Processing </option> <option value="/leagues/111/alltime/sqa/2011-04-07?sort=reputationchange"> Software Quality Assurance &amp; Testing </option> <option value="/leagues/283/alltime/softwarerecs/2011-04-07?sort=reputationchange"> Software Recommendations </option> <option value="/leagues/121/alltime/philosophy/2011-04-07?sort=reputationchange"> Philosophy </option> <option value="/leagues/149/alltime/history/2011-04-07?sort=reputationchange"> History </option> <option value="/leagues/123/alltime/gardening/2011-04-07?sort=reputationchange"> Gardening &amp; Landscaping </option> <option value="/leagues/117/alltime/japanese/2011-04-07?sort=reputationchange"> Japanese Language </option> <option value="/leagues/68/alltime/writers/2011-04-07?sort=reputationchange"> Writers </option> <option value="/leagues/37/alltime/stackapps/2011-04-07?sort=reputationchange"> Stack Apps </option> <option value="/leagues/259/alltime/sound/2011-04-07?sort=reputationchange"> Sound Design </option> <option value="/leagues/211/alltime/islam/2011-04-07?sort=reputationchange"> Islam </option> <option value="/leagues/93/alltime/pm/2011-04-07?sort=reputationchange"> Project Management </option> <option value="/leagues/91/alltime/quant/2011-04-07?sort=reputationchange"> Quantitative Finance </option> <option value="/leagues/333/alltime/ja-stackoverflow/2011-04-07?sort=reputationchange"> スタック・オーバーフロー </option> <option value="/leagues/341/alltime/lifehacks/2011-04-07?sort=reputationchange"> Lifehacks </option> <option value="/leagues/137/alltime/french/2011-04-07?sort=reputationchange"> French Language </option> <option value="/leagues/165/alltime/scicomp/2011-04-07?sort=reputationchange"> Computational Science </option> <option value="/leagues/163/alltime/spanish/2011-04-07?sort=reputationchange"> Spanish Language </option> <option value="/leagues/127/alltime/productivity/2011-04-07?sort=reputationchange"> Personal Productivity </option> <option value="/leagues/265/alltime/pets/2011-04-07?sort=reputationchange"> Pets </option> <option value="/leagues/255/alltime/space/2011-04-07?sort=reputationchange"> Space Exploration </option> <option value="/leagues/305/alltime/datascience/2011-04-07?sort=reputationchange"> Data Science </option> <option value="/leagues/64/alltime/homebrew/2011-04-07?sort=reputationchange"> Homebrewing </option> <option value="/leagues/221/alltime/expressionengine/2011-04-07?sort=reputationchange"> ExpressionEngine® Answers </option> <option value="/leagues/147/alltime/hermeneutics/2011-04-07?sort=reputationchange"> Biblical Hermeneutics </option> <option value="/leagues/70/alltime/video/2011-04-07?sort=reputationchange"> Video Production </option> <option value="/leagues/197/alltime/windowsphone/2011-04-07?sort=reputationchange"> Windows Phone </option> <option value="/leagues/181/alltime/outdoors/2011-04-07?sort=reputationchange"> The Great Outdoors </option> <option value="/leagues/329/alltime/emacs/2011-04-07?sort=reputationchange"> Emacs </option> <option value="/leagues/189/alltime/sports/2011-04-07?sort=reputationchange"> Sports </option> <option value="/leagues/237/alltime/reverseengineering/2011-04-07?sort=reputationchange"> Reverse Engineering </option> <option value="/leagues/169/alltime/chinese/2011-04-07?sort=reputationchange"> Chinese Language </option> <option value="/leagues/179/alltime/cogsci/2011-04-07?sort=reputationchange"> Cognitive Sciences </option> <option value="/leagues/201/alltime/chess/2011-04-07?sort=reputationchange"> Chess </option> <option value="/leagues/143/alltime/linguistics/2011-04-07?sort=reputationchange"> Linguistics </option> <option value="/leagues/261/alltime/astronomy/2011-04-07?sort=reputationchange"> Astronomy </option> <option value="/leagues/219/alltime/robotics/2011-04-07?sort=reputationchange"> Robotics </option> <option value="/leagues/245/alltime/opendata/2011-04-07?sort=reputationchange"> Open Data </option> <option value="/leagues/215/alltime/patents/2011-04-07?sort=reputationchange"> Ask Patents </option> <option value="/leagues/381/alltime/es-stackoverflow/2011-04-07?sort=reputationchange"> Stack Overflow en español </option> <option value="/leagues/263/alltime/tor/2011-04-07?sort=reputationchange"> Tor </option> <option value="/leagues/223/alltime/politics/2011-04-07?sort=reputationchange"> Politics </option> <option value="/leagues/315/alltime/hinduism/2011-04-07?sort=reputationchange"> Hinduism </option> <option value="/leagues/247/alltime/freelancing/2011-04-07?sort=reputationchange"> Freelancing </option> <option value="/leagues/347/alltime/vi/2011-04-07?sort=reputationchange"> Vi and Vim </option> <option value="/leagues/311/alltime/craftcms/2011-04-07?sort=reputationchange"> Craft CMS </option> <option value="/leagues/303/alltime/joomla/2011-04-07?sort=reputationchange"> Joomla </option> <option value="/leagues/321/alltime/startups/2011-04-07?sort=reputationchange"> Startups </option> <option value="/leagues/343/alltime/engineering/2011-04-07?sort=reputationchange"> Engineering </option> <option value="/leagues/313/alltime/buddhism/2011-04-07?sort=reputationchange"> Buddhism </option> <option value="/leagues/209/alltime/russian/2011-04-07?sort=reputationchange"> Russian Language </option> <option value="/leagues/339/alltime/economics/2011-04-07?sort=reputationchange"> Economics </option> <option value="/leagues/363/alltime/law/2011-04-07?sort=reputationchange"> Law </option> <option value="/leagues/155/alltime/bricks/2011-04-07?sort=reputationchange"> LEGO® Answers </option> <option value="/leagues/289/alltime/expatriates/2011-04-07?sort=reputationchange"> Expatriates </option> <option value="/leagues/233/alltime/tridion/2011-04-07?sort=reputationchange"> Tridion </option> <option value="/leagues/291/alltime/matheducators/2011-04-07?sort=reputationchange"> Mathematics Educators </option> <option value="/leagues/299/alltime/earthscience/2011-04-07?sort=reputationchange"> Earth Science </option> <option value="/leagues/185/alltime/martialarts/2011-04-07?sort=reputationchange"> Martial Arts </option> <option value="/leagues/367/alltime/elementaryos/2011-04-07?sort=reputationchange"> elementary OS </option> <option value="/leagues/267/alltime/ham/2011-04-07?sort=reputationchange"> Amateur Radio </option> <option value="/leagues/353/alltime/civicrm/2011-04-07?sort=reputationchange"> CiviCRM </option> <option value="/leagues/357/alltime/health/2011-04-07?sort=reputationchange"> Health </option> <option value="/leagues/351/alltime/woodworking/2011-04-07?sort=reputationchange"> Woodworking </option> <option value="/leagues/277/alltime/ebooks/2011-04-07?sort=reputationchange"> Ebooks </option> <option value="/leagues/386/alltime/ethereum/2011-04-07?sort=reputationchange"> Ethereum </option> <option value="/leagues/231/alltime/sustainability/2011-04-07?sort=reputationchange"> Sustainable Living </option> <option value="/leagues/217/alltime/genealogy/2011-04-07?sort=reputationchange"> Genealogy &amp; Family History </option> <option value="/leagues/271/alltime/italian/2011-04-07?sort=reputationchange"> Italian Language </option> <option value="/leagues/279/alltime/alcohol/2011-04-07?sort=reputationchange"> Beer, Wine &amp; Spirits </option> <option value="/leagues/173/alltime/poker/2011-04-07?sort=reputationchange"> Poker </option> <option value="/leagues/365/alltime/opensource/2011-04-07?sort=reputationchange"> Open Source </option> <option value="/leagues/335/alltime/hsm/2011-04-07?sort=reputationchange"> History of Science and Mathematics </option> <option value="/leagues/349/alltime/musicfans/2011-04-07?sort=reputationchange"> Music Fans </option> <option value="/leagues/345/alltime/coffee/2011-04-07?sort=reputationchange"> Coffee </option> <option value="/leagues/371/alltime/portuguese/2011-04-07?sort=reputationchange"> Portuguese Language </option> <option value="/leagues/379/alltime/hardwarerecs/2011-04-07?sort=reputationchange"> Hardware Recommendations </option> <option value="/leagues/377/alltime/computergraphics/2011-04-07?sort=reputationchange"> Computer Graphics </option> <option value="/leagues/319/alltime/communitybuilding/2011-04-07?sort=reputationchange"> Community Building </option> <option value="/leagues/361/alltime/mythology/2011-04-07?sort=reputationchange"> Mythology </option> <option value="/leagues/384/alltime/3dprinting/2011-04-07?sort=reputationchange"> 3D Printing </option> <option value="/leagues/388/alltime/latin/2011-04-07?sort=reputationchange"> Latin Language </option> <option value="/leagues/392/alltime/retrocomputing/2011-04-07?sort=reputationchange"> Retrocomputing </option> <option value="/leagues/390/alltime/languagelearning/2011-04-07?sort=reputationchange"> Language Learning </option> </select> 
+      </div> 
+      <div class="subheader" style="clear: none;"> 
+       <div class="tabs"> 
+        <a href="/leagues/105/week/sharepoint">Week</a> 
+        <a href="/leagues/105/month/sharepoint">Month</a> 
+        <a href="/leagues/105/quarter/sharepoint">Quarter</a> 
+        <a href="/leagues/105/year/sharepoint">Year</a> 
+        <a href="/leagues/105/alltime/sharepoint" class="youarehere">All Time</a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="mainArea"> 
+      <div class="league"> 
+       <a href="http://sharepoint.stackexchange.com"> 
+        <div class="site-bubble" style="background-color: #031a2b; border-color: #031a2b;"> 
+         <img src="http://cdn.sstatic.net/Sites/sharepoint/img/icon-48.png?v=031a2b" alt="SharePoint" class="site-icon"> 
+        </div> </a> 
+       <div class="league-item league-item-narrow"> 
+        <h2><a href="http://sharepoint.stackexchange.com">SharePoint</a></h2> 
+        <p> Q&amp;A for SharePoint enthusiasts <span class="league-user-count">(33,805 total users)</span> </p> 
+       </div> 
+       <div class="dateNavBox"> 
+        <h3>All Time</h3> 
+       </div> 
+      </div> 
+      <div class="league-container separator userfilterBox"> 
+       <div class="fl">
+        Type to find users: 
+        <input type="text" id="userfilter" class="search-box">
+        <span class="searchLoader"></span> 
+        <span class="clear-search" title="clear search results"></span>
+       </div> 
+      </div> 
+      <div id="leagueUserList"> 
+       <div class="league-container"> 
+        <a name="1806"></a> 
+        <div class="user user-1806"> 
+         <a href="http://sharepoint.stackexchange.com/users/1806/eric-alexander">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/BjaxL.jpg?s=128&amp;g=1&amp;s=48" title="Eric Alexander">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/1806/eric-alexander">Eric Alexander</a></h2> 
+          <span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span> 
+          <span title="32 silver badges"><span class="badge2"></span><span class="badgecount">32</span></span> 
+          <span title="72 bronze badges"><span class="badge3"></span><span class="badgecount">72</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 6 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/1806?sort=reputationchange#1806">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#1</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">32,093</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="21563"></a> 
+        <div class="user user-21563"> 
+         <a href="http://sharepoint.stackexchange.com/users/21563/waqas-sarwar-mcse">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/b815062198071691d2717bdc96d43ed5?s=128&amp;d=identicon&amp;r=PG&amp;f=1&amp;s=48" title="Waqas Sarwar MCSE">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/21563/waqas-sarwar-mcse">Waqas Sarwar MCSE</a></h2> 
+          <span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span> 
+          <span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span> 
+          <span title="41 bronze badges"><span class="badge3"></span><span class="badgecount">41</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/21563?sort=reputationchange#21563">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#2</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">28,745</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="990"></a> 
+        <div class="user user-990"> 
+         <a href="http://sharepoint.stackexchange.com/users/990/per-jakobsen">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/619c981c74f084006e6dd8e8498ca7a8?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Per Jakobsen">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/990/per-jakobsen">Per Jakobsen</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span> 
+          <span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/990?sort=reputationchange#990">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#3</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">28,230</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="10610"></a> 
+        <div class="user user-10610"> 
+         <a href="http://sharepoint.stackexchange.com/users/10610/vadim-gremyachev">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/65c86dd2b869571f56e7826026d44dc4?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Vadim Gremyachev">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/10610/vadim-gremyachev">Vadim Gremyachev</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="26 silver badges"><span class="badge2"></span><span class="badgecount">26</span></span> 
+          <span title="76 bronze badges"><span class="badge3"></span><span class="badgecount">76</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/10610?sort=reputationchange#10610">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#4</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">27,645</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="549"></a> 
+        <div class="user user-549"> 
+         <a href="http://sharepoint.stackexchange.com/users/549/james-love">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/TSvEq.jpg?s=128&amp;g=1&amp;s=48" title="James Love">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/549/james-love">James Love</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="32 silver badges"><span class="badge2"></span><span class="badgecount">32</span></span> 
+          <span title="67 bronze badges"><span class="badge3"></span><span class="badgecount">67</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/549?sort=reputationchange#549">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#5</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">23,622</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="34350"></a> 
+        <div class="user user-34350"> 
+         <a href="http://sharepoint.stackexchange.com/users/34350/amal-hashim">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/2gXDu.jpg?s=128&amp;g=1&amp;s=48" title="Amal Hashim">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/34350/amal-hashim">Amal Hashim</a></h2> 
+          <span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span> 
+          <span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span> 
+          <span title="43 bronze badges"><span class="badge3"></span><span class="badgecount">43</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 7 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/34350?sort=reputationchange#34350">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#6</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">18,793</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="15141"></a> 
+        <div class="user user-15141"> 
+         <a href="http://sharepoint.stackexchange.com/users/15141/robert-lindgren">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/0n541.jpg?s=128&amp;g=1&amp;s=48" title="Robert Lindgren">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/15141/robert-lindgren">Robert Lindgren</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="28 silver badges"><span class="badge2"></span><span class="badgecount">28</span></span> 
+          <span title="48 bronze badges"><span class="badge3"></span><span class="badgecount">48</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/15141?sort=reputationchange#15141">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#7</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">17,947</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="11"></a> 
+        <div class="user user-11"> 
+         <a href="http://sharepoint.stackexchange.com/users/11/anders-rask">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/1cf349aea02c67fca273a5428cbdd26d?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Anders Rask">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/11/anders-rask">Anders Rask</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="27 silver badges"><span class="badge2"></span><span class="badgecount">27</span></span> 
+          <span title="63 bronze badges"><span class="badge3"></span><span class="badgecount">63</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/11?sort=reputationchange#11">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#8</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">16,811</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2868"></a> 
+        <div class="user user-2868"> 
+         <a href="http://sharepoint.stackexchange.com/users/2868/wictor-wilen-mca-mcm-mvp">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/841f957308ac0528f371f04eefd9d2bd?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Wictor Wilen MCA MCM MVP">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/2868/wictor-wilen-mca-mcm-mvp">Wictor Wilen MCA MCM MVP</a></h2> 
+          <span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span> 
+          <span title="55 bronze badges"><span class="badge3"></span><span class="badgecount">55</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/2868?sort=reputationchange#2868">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#9</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">16,533</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1874"></a> 
+        <div class="user user-1874"> 
+         <a href="http://sharepoint.stackexchange.com/users/1874/falak-mahmood">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/WFJmS.jpg?s=128&amp;g=1&amp;s=48" title="Falak Mahmood">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/1874/falak-mahmood">Falak Mahmood</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="24 silver badges"><span class="badge2"></span><span class="badgecount">24</span></span> 
+          <span title="57 bronze badges"><span class="badge3"></span><span class="badgecount">57</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/1874?sort=reputationchange#1874">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#10</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">15,280</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1430"></a> 
+        <div class="user user-1430"> 
+         <a href="http://sharepoint.stackexchange.com/users/1430/andrey-markeev">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/c173ac7eac99b485f4a87e1ce2a7a9b5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Andrey Markeev">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/1430/andrey-markeev">Andrey Markeev</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="25 silver badges"><span class="badge2"></span><span class="badgecount">25</span></span> 
+          <span title="59 bronze badges"><span class="badge3"></span><span class="badgecount">59</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/1430?sort=reputationchange#1430">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#11</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">14,629</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="10008"></a> 
+        <div class="user user-10008"> 
+         <a href="http://sharepoint.stackexchange.com/users/10008/ali-sharepoint">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/i1WY3.jpg?s=128&amp;g=1&amp;s=48" title="ali Sharepoint">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/10008/ali-sharepoint">ali Sharepoint</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span> 
+          <span title="34 bronze badges"><span class="badge3"></span><span class="badgecount">34</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 9 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/10008?sort=reputationchange#10008">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#12</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">14,377</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="9472"></a> 
+        <div class="user user-9472"> 
+         <a href="http://sharepoint.stackexchange.com/users/9472/nadeem-yousuf">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/WeVKy.jpg?s=128&amp;g=1&amp;s=48" title="Nadeem Yousuf">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/9472/nadeem-yousuf">Nadeem Yousuf</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span> 
+          <span title="39 bronze badges"><span class="badge3"></span><span class="badgecount">39</span></span> 
+          <br> 
+          <span class="faintText">member for: 3 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/9472?sort=reputationchange#9472">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#13</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">13,857</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6382"></a> 
+        <div class="user user-6382"> 
+         <a href="http://sharepoint.stackexchange.com/users/6382/benny-skogberg">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/6kV99.jpg?s=128&amp;g=1&amp;s=48" title="Benny Skogberg">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/6382/benny-skogberg">Benny Skogberg</a></h2> 
+          <span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span> 
+          <span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span> 
+          <span title="93 bronze badges"><span class="badge3"></span><span class="badgecount">93</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/6382?sort=reputationchange#6382">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#14</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">13,278</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2648"></a> 
+        <div class="user user-2648"> 
+         <a href="http://sharepoint.stackexchange.com/users/2648/dave-wise">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/eac661dab8783a038b42145c0c48643f?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Dave Wise">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/2648/dave-wise">Dave Wise</a></h2> 
+          <span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span> 
+          <span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 2 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/2648?sort=reputationchange#2648">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#15</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,711</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="5306"></a> 
+        <div class="user user-5306"> 
+         <a href="http://sharepoint.stackexchange.com/users/5306/marius-constantinescu-mvp">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/ac59d5dbb40f0a4d94f1451e0710420d?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Marius Constantinescu - MVP">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/5306/marius-constantinescu-mvp">Marius Constantinescu - MVP</a></h2> 
+          <span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span> 
+          <span title="25 bronze badges"><span class="badge3"></span><span class="badgecount">25</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/5306?sort=reputationchange#5306">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#16</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">12,068</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4100"></a> 
+        <div class="user user-4100"> 
+         <a href="http://sharepoint.stackexchange.com/users/4100/arsalan-adam-khatri">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/Arp7q.jpg?s=128&amp;g=1&amp;s=48" title="Arsalan Adam Khatri">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/4100/arsalan-adam-khatri">Arsalan Adam Khatri</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span> 
+          <span title="40 bronze badges"><span class="badge3"></span><span class="badgecount">40</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 10 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/4100?sort=reputationchange#4100">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#17</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">11,529</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3719"></a> 
+        <div class="user user-3719"> 
+         <a href="http://sharepoint.stackexchange.com/users/3719/mike-oryszak">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/46e66362e30f01146b98cffef10e8d86?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Mike Oryszak">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/3719/mike-oryszak">Mike Oryszak</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span> 
+          <span title="36 bronze badges"><span class="badge3"></span><span class="badgecount">36</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/3719?sort=reputationchange#3719">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#18</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10,884</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="4713"></a> 
+        <div class="user user-4713"> 
+         <a href="http://sharepoint.stackexchange.com/users/4713/john-chapman">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/XGp6v.jpg?s=128&amp;g=1&amp;s=48" title="John Chapman">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/4713/john-chapman">John Chapman</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span> 
+          <span title="57 bronze badges"><span class="badge3"></span><span class="badgecount">57</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 8 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/4713?sort=reputationchange#4713">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#19</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10,730</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="1669"></a> 
+        <div class="user user-1669"> 
+         <a href="http://sharepoint.stackexchange.com/users/1669/ashish-patel">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/252f5427ad95c4059a23f2224632cdb5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Ashish Patel">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/1669/ashish-patel">Ashish Patel</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span> 
+          <span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/1669?sort=reputationchange#1669">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#20</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">10,729</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3227"></a> 
+        <div class="user user-3227"> 
+         <a href="http://sharepoint.stackexchange.com/users/3227/jesus-shelby">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/0mwZ1.jpg?s=128&amp;g=1&amp;s=48" title="Jesus Shelby">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/3227/jesus-shelby">Jesus Shelby</a></h2> 
+          <span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span> 
+          <span title="42 bronze badges"><span class="badge3"></span><span class="badgecount">42</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/3227?sort=reputationchange#3227">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#21</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">9,887</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="32871"></a> 
+        <div class="user user-32871"> 
+         <a href="http://sharepoint.stackexchange.com/users/32871/danny-engelman-nvp">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/60edc4072807728bf0f69a8af73f716c?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Danny Engelman NVP">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/32871/danny-engelman-nvp">Danny Engelman NVP</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span> 
+          <span title="36 bronze badges"><span class="badge3"></span><span class="badgecount">36</span></span> 
+          <br> 
+          <span class="faintText">member for: 1 year, 8 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/32871?sort=reputationchange#32871">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#22</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,892</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="62"></a> 
+        <div class="user user-62"> 
+         <a href="http://sharepoint.stackexchange.com/users/62/spdoctor">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/y8ou2.jpg?s=128&amp;g=1&amp;s=48" title="SPDoctor">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/62/spdoctor">SPDoctor</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="23 silver badges"><span class="badge2"></span><span class="badgecount">23</span></span> 
+          <span title="57 bronze badges"><span class="badge3"></span><span class="badgecount">57</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/62?sort=reputationchange#62">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#23</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,748</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="82"></a> 
+        <div class="user user-82"> 
+         <a href="http://sharepoint.stackexchange.com/users/82/marc-d-anderson">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/152629bd7ea49737f9a5efea442619b5?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Marc D Anderson">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/82/marc-d-anderson">Marc D Anderson</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="25 silver badges"><span class="badge2"></span><span class="badgecount">25</span></span> 
+          <span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 7 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/82?sort=reputationchange#82">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#24</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,516</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3221"></a> 
+        <div class="user user-3221"> 
+         <a href="http://sharepoint.stackexchange.com/users/3221/vardhaman-deshpande">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/Hr3iz.png?s=128&amp;g=1&amp;s=48" title="Vardhaman Deshpande">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/3221/vardhaman-deshpande">Vardhaman Deshpande</a></h2> 
+          <span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span> 
+          <span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span> 
+          <span title="39 bronze badges"><span class="badge3"></span><span class="badgecount">39</span></span> 
+          <br> 
+          <span class="faintText">member for: 5 years <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/3221?sort=reputationchange#3221">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#25</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">8,504</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="3513"></a> 
+        <div class="user user-3513"> 
+         <a href="http://sharepoint.stackexchange.com/users/3513/vedran-rasol">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/898cd10e6d35e91e5f53b7c821609200?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Vedran Rasol">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/3513/vedran-rasol">Vedran Rasol</a></h2> 
+          <span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span> 
+          <span title="42 bronze badges"><span class="badge3"></span><span class="badgecount">42</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 11 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/3513?sort=reputationchange#3513">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#26</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">7,868</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="2853"></a> 
+        <div class="user user-2853"> 
+         <a href="http://sharepoint.stackexchange.com/users/2853/mike">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/ThhqL.jpg?s=128&amp;g=1&amp;s=48" title="Mike">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/2853/mike">Mike</a></h2> 
+          <span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span> 
+          <span title="27 silver badges"><span class="badge2"></span><span class="badgecount">27</span></span> 
+          <span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 1 month <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/2853?sort=reputationchange#2853">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#27</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">7,837</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="6183"></a> 
+        <div class="user user-6183"> 
+         <a href="http://sharepoint.stackexchange.com/users/6183/muhammad-raja">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/K1VDh.png?s=128&amp;g=1&amp;s=48" title="Muhammad Raja">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/6183/muhammad-raja">Muhammad Raja</a></h2> 
+          <span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span> 
+          <span title="28 silver badges"><span class="badge2"></span><span class="badgecount">28</span></span> 
+          <span title="69 bronze badges"><span class="badge3"></span><span class="badgecount">69</span></span> 
+          <br> 
+          <span class="faintText">member for: 4 years, 4 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/6183?sort=reputationchange#6183">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#28</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">7,761</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="233"></a> 
+        <div class="user user-233"> 
+         <a href="http://sharepoint.stackexchange.com/users/233/steve-lineberry">
+          <div class="faviconBox">
+           <img src="https://www.gravatar.com/avatar/251135b96d3bd5cd7f02463d844e20aa?s=128&amp;d=identicon&amp;r=PG&amp;s=48" title="Steve Lineberry">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/233/steve-lineberry">Steve Lineberry</a></h2> 
+          <span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span> 
+          <span title="24 bronze badges"><span class="badge3"></span><span class="badgecount">24</span></span> 
+          <br> 
+          <span class="faintText">member for: 6 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/233?sort=reputationchange#233">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#29</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">7,590</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="league-container"> 
+        <a name="21421"></a> 
+        <div class="user user-21421"> 
+         <a href="http://sharepoint.stackexchange.com/users/21421/atish-dipongkor">
+          <div class="faviconBox">
+           <img src="https://i.stack.imgur.com/oGgOy.jpg?s=128&amp;g=1&amp;s=48" title="Atish Dipongkor">
+          </div></a> 
+         <div class="userInfo"> 
+          <h2><a href="http://sharepoint.stackexchange.com/users/21421/atish-dipongkor">Atish Dipongkor</a></h2> 
+          <span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span> 
+          <span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span> 
+          <span title="30 bronze badges"><span class="badge3"></span><span class="badgecount">30</span></span> 
+          <br> 
+          <span class="faintText">member for: 2 years, 5 months <span class="permalink" style="display: none;"><a href="/leagues/105/alltime/sharepoint/2011-04-07/21421?sort=reputationchange#21421">link</a></span></span> 
+         </div>
+        </div> 
+        <div class="statsWrapper"> 
+         <div class="statsBox statsBoxWide"> 
+          <span class="number">#30</span> all time rank 
+         </div> 
+         <div class="statsBox statsBoxWider"> 
+          <span class="number">7,564</span> all time reputation 
+         </div> 
+        </div> 
+       </div> 
+       <div class="page-sizer fr">
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;pagesize=15" title="show 15 items per page" class="page-numbers">15</a> 
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;pagesize=30" title="show 30 items per page" class="current page-numbers">30</a> 
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;pagesize=50" title="show 50 items per page" class="page-numbers">50</a> 
+        <span class="page-numbers desc">per page</span> 
+       </div> 
+       <div class="pager fl"> 
+        <span class="page-numbers current">1</span> 
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;page=2" title="go to page 2"><span class="page-numbers">2</span></a> 
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;page=3" title="go to page 3"><span class="page-numbers">3</span></a> 
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;page=4" title="go to page 4"><span class="page-numbers">4</span></a> 
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;page=5" title="go to page 5"><span class="page-numbers">5</span></a> 
+        <span class="page-numbers dots">…</span> 
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;page=39" title="go to page 39"><span class="page-numbers">39</span></a> 
+        <a href="/leagues/105/alltime/sharepoint/2011-04-07?sort=reputationchange&amp;page=2" title="go to page 2" rel="next"><span class="page-numbers next"> next</span></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="sideBar"> 
+      <div class="module newuser"> 
+       <p> When your fellow users vote up your questions and answers on a Stack Exchange site, you generate <b>reputation</b>. Reputation is a rough measure of:</p> 
+       <ul> 
+        <li>how much the community trusts you</li> 
+        <li>your communication skills</li> 
+        <li>the quality and relevancy of your questions and answers</li> 
+       </ul> 
+       <p>These friendly <b>reputation leagues</b> are an informal way of tracking your reputation within the community on a particular Stack Exchange.</p> 
+       <p>Reputation is capped at <b>200</b> per day, but remember that bounty awards and accepted answers are immune to this daily reputation cap.</p> 
+      </div> 
+      <div class="module"> 
+       <h3>Reputation Change</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr>
+          <th>Rep Change*</th>
+          <th>Users</th>
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr>
+          <td>10,000+</td>
+          <td class="count">20</td>
+         </tr> 
+         <tr>
+          <td>5,000+</td>
+          <td class="count">48</td>
+         </tr> 
+         <tr>
+          <td>2,500+</td>
+          <td class="count">100</td>
+         </tr> 
+         <tr>
+          <td>1,000+</td>
+          <td class="count">247</td>
+         </tr> 
+         <tr>
+          <td>500+</td>
+          <td class="count">498</td>
+         </tr> 
+         <tr>
+          <td>250+</td>
+          <td class="count">994</td>
+         </tr> 
+         <tr>
+          <td>100+</td>
+          <td class="count">1,168</td>
+         </tr> 
+         <tr>
+          <td>50+</td>
+          <td class="count">1,168</td>
+         </tr> 
+         <tr>
+          <td>1+</td>
+          <td class="count">1,168</td>
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+      <div class="module"> 
+       <h3>Total Reputation</h3> 
+       <table class="sidebar-stats"> 
+        <thead> 
+         <tr> 
+          <th>Total Rep*</th> 
+          <th>Users</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td>25,000+</td> 
+          <td class="count">4</td> 
+         </tr> 
+         <tr> 
+          <td>10,000+</td> 
+          <td class="count">20</td> 
+         </tr> 
+         <tr> 
+          <td>5,000+</td> 
+          <td class="count">48</td> 
+         </tr> 
+         <tr> 
+          <td>3,000+</td> 
+          <td class="count">89</td> 
+         </tr> 
+         <tr> 
+          <td>2,000+</td> 
+          <td class="count">118</td> 
+         </tr> 
+         <tr> 
+          <td>1,000+</td> 
+          <td class="count">247</td> 
+         </tr> 
+         <tr> 
+          <td>500+</td> 
+          <td class="count">498</td> 
+         </tr> 
+         <tr> 
+          <td>200+</td> 
+          <td class="count">1,168</td> 
+         </tr> 
+         <tr> 
+          <td>1+</td> 
+          <td class="count">31,613</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <p>* users with less than 200 reputation are not tracked in the leagues</p> 
+      </div> 
+     </div> 
+     <br class="cbo"> 
+    </div> 
+   </section> 
+   <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-5620270-24']);
+            _gaq.push(['_setDomainName', '.stackexchange.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            _qoptions = { qacct: "p-c1rF4kxgLUzNc" };
+        </script> 
+  </div> 
+  <!-- end wrapper --> 
+  <footer id="footer"> 
+   <div class="contentWrapper"> 
+    <div class="footerLinksSpaced"> 
+     <p> <a href="/about">about us</a> <a href="/work-here">work here</a> <a href="http://blog.stackoverflow.com">blog</a> <a href="/legal">legal</a> <a href="/legal/privacy-policy">privacy policy</a> <a href="/about/contact">contact us</a> <a href="http://meta.stackexchange.com">feedback always welcome</a> <a href="https://plus.google.com/+StackExchange" class="google-plus-icon" title="follow us on Google+"></a> <a href="http://www.facebook.com/stackexchange" class="facebook-icon" title="like us on Facebook"></a> <a href="http://twitter.com/stackexchange" class="twitter-icon" title="follow us on Twitter"></a> </p> 
+    </div> 
+    <p>site design / logo © 2016 Stack Exchange, Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a></p> 
+    <div class="footer-meta-info">
+      2016.5.9.6944 
+    </div> 
+   </div> 
+  </footer> 
+  <script type="text/javascript">
+        /**
+        * jQuery.ScrollTo - Easy element scrolling using jQuery.
+        * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+        * Dual licensed under MIT and GPL.
+        * Date: 5/25/2009
+        * @author Ariel Flesler
+        * @version 1.4.2
+        *
+        * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+        */
+        ; (function (d) { var k = d.scrollTo = function (a, i, e) { d(window).scrollTo(a, i, e) }; k.defaults = { axis: 'xy', duration: parseFloat(d.fn.jquery) >= 1.3 ? 0 : 1 }; k.window = function (a) { return d(window)._scrollable() }; d.fn._scrollable = function () { return this.map(function () { var a = this, i = !a.nodeName || d.inArray(a.nodeName.toLowerCase(), ['iframe', '#document', 'html', 'body']) != -1; if (!i) return a; var e = (a.contentWindow || a).document || a.ownerDocument || a; return d.browser.safari || e.compatMode == 'BackCompat' ? e.body : e.documentElement }) }; d.fn.scrollTo = function (n, j, b) { if (typeof j == 'object') { b = j; j = 0 } if (typeof b == 'function') b = { onAfter: b }; if (n == 'max') n = 9e9; b = d.extend({}, k.defaults, b); j = j || b.speed || b.duration; b.queue = b.queue && b.axis.length > 1; if (b.queue) j /= 2; b.offset = p(b.offset); b.over = p(b.over); return this._scrollable().each(function () { var q = this, r = d(q), f = n, s, g = {}, u = r.is('html,body'); switch (typeof f) { case 'number': case 'string': if (/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)) { f = p(f); break } f = d(f, this); case 'object': if (f.is || f.style) s = (f = d(f)).offset() } d.each(b.axis.split(''), function (a, i) { var e = i == 'x' ? 'Left' : 'Top', h = e.toLowerCase(), c = 'scroll' + e, l = q[c], m = k.max(q, i); if (s) { g[c] = s[h] + (u ? 0 : l - r.offset()[h]); if (b.margin) { g[c] -= parseInt(f.css('margin' + e)) || 0; g[c] -= parseInt(f.css('border' + e + 'Width')) || 0 } g[c] += b.offset[h] || 0; if (b.over[h]) g[c] += f[i == 'x' ? 'width' : 'height']() * b.over[h] } else { var o = f[h]; g[c] = o.slice && o.slice(-1) == '%' ? parseFloat(o) / 100 * m : o } if (/^\d+$/.test(g[c])) g[c] = g[c] <= 0 ? 0 : Math.min(g[c], m); if (!a && b.queue) { if (l != g[c]) t(b.onAfterFirst); delete g[c] } }); t(b.onAfter); function t(a) { r.animate(g, j, b.easing, a && function () { a.call(this, n, b) }) } }).end() }; k.max = function (a, i) { var e = i == 'x' ? 'Width' : 'Height', h = 'scroll' + e; if (!d(a).is('html,body')) return a[h] - d(a)[e.toLowerCase()](); var c = 'client' + e, l = a.ownerDocument.documentElement, m = a.ownerDocument.body; return Math.max(l[h], m[h]) - Math.min(l[c], m[c]) }; function p(a) { return typeof a == 'object' ? a : { top: a, left: a} } })(jQuery);
+
+        $(function () {
+            $(".league-container").live("hover", function (event) {
+                if (event.type == "mouseenter") {
+                    $(".permalink", this).show();
+                }
+                else {
+                    $(".permalink", this).hide();
+                }
+            });
+
+            var highlight = $(".highlight");
+            if (highlight.length)
+                $.scrollTo(highlight);
+        });
+    </script> 
+  <noscript> 
+   <div id="noscript-warning">
+    Stack Exchange works best with JavaScript enabled
+   </div> 
+  </noscript> 
+  <script>
+        var settings = {
+            contentPath: "//sstatic.net/stackexchange"
+        };
+        $(function() {
+            StackExchange.init({"serverTime":1463245292});
+            StackExchange.topbar.init();
+        });
+    </script>   
+ </body>
+</html>

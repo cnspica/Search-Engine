@@ -1,0 +1,822 @@
+http://tutorialspoint.com/shorttutorials
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head profile="http://gmpg.org/xfn/11"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title></title> 
+  <meta name="description" content=""> 
+  <meta name="Keywords" content="Short, articles, tutorials, latest, technologies, simple, easy, steps, specialized, Mobile Computing, Cloud Computing, Open Source, Linux, Microsoft, General IT, Computer Hardware."> 
+  <link rel="stylesheet" type="text/css" href="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/style.css" media="screen"> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #316441 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #316441 !important;}
+.submenu-item{ border-bottom: 2px solid #316441 !important; border-top: 2px solid #316441 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <!--
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="/images/shared-tutorials.png" alt="Shared tutorials" />
+</div>
+<ul class="nav nav-list primary left-menu" >
+<li class="heading">Short Tutorials</li><li class="cat-item cat-item-1 current-cat"><a href="/shorttutorials/" title="Short Tutorial">Home</a></li>                      	<li class="cat-item cat-item-25"><a href="http://www.tutorialspoint.com/articles/category/apple" >Apple</a>
+</li>
+	<li class="cat-item cat-item-605"><a href="http://www.tutorialspoint.com/articles/category/applications" >Applications</a>
+</li>
+	<li class="cat-item cat-item-517"><a href="http://www.tutorialspoint.com/articles/category/big-data" >Big Data</a>
+</li>
+	<li class="cat-item cat-item-75"><a href="http://www.tutorialspoint.com/articles/category/business" >Business</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://www.tutorialspoint.com/articles/category/cloud-computing" >Cloud Computing</a>
+</li>
+	<li class="cat-item cat-item-772"><a href="http://www.tutorialspoint.com/articles/category/competitive-exams" >Competitive Exams</a>
+</li>
+	<li class="cat-item cat-item-525"><a href="http://www.tutorialspoint.com/articles/category/design" >Design</a>
+</li>
+	<li class="cat-item cat-item-523"><a href="http://www.tutorialspoint.com/articles/category/education-2" >Education</a>
+</li>
+	<li class="cat-item cat-item-622"><a href="http://www.tutorialspoint.com/articles/category/engineering" >Engineering</a>
+</li>
+	<li class="cat-item cat-item-673"><a href="http://www.tutorialspoint.com/articles/category/financial-awareness" >Financial Awareness</a>
+</li>
+	<li class="cat-item cat-item-522"><a href="http://www.tutorialspoint.com/articles/category/games" >Games</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.tutorialspoint.com/articles/category/computer-hardware" >Hardware</a>
+</li>
+	<li class="cat-item cat-item-521"><a href="http://www.tutorialspoint.com/articles/category/health" >Health</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.tutorialspoint.com/articles/category/information-technology" title="Categories to keep general tutorials on Information technology subjects.">Information Technology</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.tutorialspoint.com/articles/category/linux-operating-system" >Linux</a>
+</li>
+	<li class="cat-item cat-item-524"><a href="http://www.tutorialspoint.com/articles/category/management" >Management</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.tutorialspoint.com/articles/category/microsoft-technologies" >Microsoft</a>
+</li>
+	<li class="cat-item cat-item-519"><a href="http://www.tutorialspoint.com/articles/category/miscellaneous" >Miscellaneous</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.tutorialspoint.com/articles/category/mobile-technologies" >Mobile</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://www.tutorialspoint.com/articles/category/open-source" >Open Source</a>
+</li>
+	<li class="cat-item cat-item-518"><a href="http://www.tutorialspoint.com/articles/category/programming" >Programming</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://www.tutorialspoint.com/articles/category/social-media" >Social Media</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.tutorialspoint.com/articles/category/soft-skills" >Soft Skills</a>
+</li>
+	<li class="cat-item cat-item-527"><a href="http://www.tutorialspoint.com/articles/category/sports" >Sports</a>
+</li>
+	<li class="cat-item cat-item-516"><a href="http://www.tutorialspoint.com/articles/category/technology-news" >Tech News</a>
+</li>
+	<li class="cat-item cat-item-526"><a href="http://www.tutorialspoint.com/articles/category/technology" >Technology</a>
+</li>
+	<li class="cat-item cat-item-702"><a href="http://www.tutorialspoint.com/articles/category/travel-desitnations" >Travel Desitnations</a>
+</li>
+	<li class="cat-item cat-item-520"><a href="http://www.tutorialspoint.com/articles/category/viral" >Viral</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://www.tutorialspoint.com/articles/category/web-design" >Web Design</a>
+</li>
+        </ul>
+<ul class="nav nav-list primary left-menu" ><li class="heading">Meta Links</li></ul>			<ul>
+						<li><a href="http://www.tutorialspoint.com/articles/wp-login.php">Log in</a></li>
+			<li><a href="http://www.tutorialspoint.com/articles/feed">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.tutorialspoint.com/articles/comments/feed">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</aside>
+</div>
+--> 
+    <!-- PRINTING STARTS HERE --> 
+    <div class="row"> 
+     <div class="content"> 
+      <div class="col-md-7 middle-col"> 
+       <h1>Short Articles</h1> 
+       <div class="center"> 
+        <small>The shortest articles on the hottest topics</small> 
+       </div> 
+       <div class="clearer"></div> 
+       <div class="topgooglead"> 
+        <hr> 
+        <div class="post"> 
+         <div id="post-11245" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/about-articles-on-tutorialspoint-com" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/08/article_thumb.png	&amp;h=200&amp;w=200&amp;zc=1" alt="About Articles on Tutorialspoint.com"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/about-articles-on-tutorialspoint-com" rel="bookmark" title="Permanent Link to About Articles on Tutorialspoint.com">About Articles on Tutorialspoint.com</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/omer" title="Posts by Omer" rel="author">Omer</a> on August 17, 2015</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           What are articles? Don’t have time to read articles in long-form or want to read something new? Tutorialspoint has Articles for you that are precise, fun, brain picking, truly useful and focused on the... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17774" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-install-noise-music-player-on-ubuntu" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/05/tumblr_static_ic_mysoundcloud512full.png	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Install Noise  Music Player on Ubuntu"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-install-noise-music-player-on-ubuntu" rel="bookmark" title="Permanent Link to How to Install Noise  Music Player on Ubuntu">How to Install Noise Music Player on Ubuntu</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/sairam" title="Posts by Sairam Krishna" rel="author">Sairam Krishna</a> on May 13, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           Noise is a fast and beautiful GTK3 audio player with a focus on music and libraries. It handles external devices, CDs, and album art. Noise utilizes Granite for a consistent and slick UI.&nbsp;Elementary OS... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17629" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-install-webmin-on-ubuntu" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/05/web-1024x490.png	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Install Webmin on Ubuntu"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-install-webmin-on-ubuntu" rel="bookmark" title="Permanent Link to How to Install Webmin on Ubuntu">How to Install Webmin on Ubuntu</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/sairam" title="Posts by Sairam Krishna" rel="author">Sairam Krishna</a> on May 13, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           Webmin is a web-based interface for system administration in Unix. Using any modern web browser, you can setup user accounts, Apache, DNS, file sharing and much more. Webmin removes the need to manually... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17618" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-install-taskwarrior-terminal-based-todo-application" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/04/2-1.jpg	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Install Taskwarrior (Terminal Based Todo Application)"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-install-taskwarrior-terminal-based-todo-application" rel="bookmark" title="Permanent Link to How to Install Taskwarrior (Terminal Based Todo Application)">How to Install Taskwarrior (Terminal Based Todo Application)</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/sairam" title="Posts by Sairam Krishna" rel="author">Sairam Krishna</a> on May 12, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           Taskwarrior is an open-source, cross-platform time and task management tool. It has a command-line interface rather than a graphical user interface. If you spend a lot of time on Linux terminal (as a developer... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17814" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-count-the-number-of-threads-in-a-process-on-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/05/Linux-process-count.jpg	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Count the Number of Threads in a Process on Linux"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-count-the-number-of-threads-in-a-process-on-linux" rel="bookmark" title="Permanent Link to How to Count the Number of Threads in a Process on Linux">How to Count the Number of Threads in a Process on Linux</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/ckadarla" title="Posts by Chandra Prakash" rel="author">Chandra Prakash</a> on May 11, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           In this article, we will know how to count the number of threads in a process on Linux environment, there are several ways to do it, but we will learn using ‘/proc’ and ‘ps’ command. Using&nbsp;... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17579" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-setup-ssl-for-mysql-server-and-client-on-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/04/mysql_ssl.jpg	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Setup SSL for MySQL Server and Client on Linux"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-setup-ssl-for-mysql-server-and-client-on-linux" rel="bookmark" title="Permanent Link to How to Setup SSL for MySQL Server and Client on Linux">How to Setup SSL for MySQL Server and Client on Linux</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/ckadarla" title="Posts by Chandra Prakash" rel="author">Chandra Prakash</a> on May 11, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           In this tutorial, I will be explaining about – how to set up a secure connection to MySQL server using an SSH connection for encryption so that data in the database will be in safe and which is impossible... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17821" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-install-lynis-2-2-0" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/05/2.jpg	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Install Lynis 2.2.0 – Security Auditing Tool for Linux"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-install-lynis-2-2-0" rel="bookmark" title="Permanent Link to How to Install Lynis 2.2.0 – Security Auditing Tool for Linux">How to Install Lynis 2.2.0 – Security Auditing Tool for Linux</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/sairam" title="Posts by Sairam Krishna" rel="author">Sairam Krishna</a> on May 10, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           Lynis is a security audit tool for Unix and Linux based systems. It assists auditor in scanning the system and its security defenses helps in improving system hardening. This software will determine system... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17825" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/clementine-1-3-a-modern-music-player-for-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/05/11.jpg	&amp;h=200&amp;w=200&amp;zc=1" alt="Clementine 1.3 A Modern Music Player for Linux"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/clementine-1-3-a-modern-music-player-for-linux" rel="bookmark" title="Permanent Link to Clementine 1.3 A Modern Music Player for Linux">Clementine 1.3 A Modern Music Player for Linux</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/sairam" title="Posts by Sairam Krishna" rel="author">Sairam Krishna</a> on May 9, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           Clementine is a freely available cross-platform open source, Qt based music player inspired by Amarok 1.4. The latest stable available which is version 1.3 was released after a year of development and... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17811" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-install-and-configure-squid-proxy-server-on-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/05/squid-proxy.jpg	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Install and Configure Squid Proxy Server on Linux"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-install-and-configure-squid-proxy-server-on-linux" rel="bookmark" title="Permanent Link to How to Install and Configure Squid Proxy Server on Linux">How to Install and Configure Squid Proxy Server on Linux</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/ckadarla" title="Posts by Chandra Prakash" rel="author">Chandra Prakash</a> on May 9, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           In this article,&nbsp;we will learn how to install and configure the Squid proxy server. A Squid proxy server is an open source and GPLD proxy with web cache. The Squid proxy server has &nbsp;various uses as we... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17795" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-make-password-asterisks-visible-in-the-terminal-window-in-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/05/password.jpg	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Make Password Asterisks Visible in the Terminal Window in Linux"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-make-password-asterisks-visible-in-the-terminal-window-in-linux" rel="bookmark" title="Permanent Link to How to Make Password Asterisks Visible in the Terminal Window in Linux">How to Make Password Asterisks Visible in the Terminal Window in Linux</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/sairam" title="Posts by Sairam Krishna" rel="author">Sairam Krishna</a> on May 6, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           When you run a command using sudo in Linux, the terminal asks you to type in your password with no visual feedback as you type. This article gives a quick tweak that will show asterisks (*) when you type... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="post"> 
+         <div id="post-17800" class="postbox"> 
+          <div class="post-thumb"> 
+           <a href="http://www.tutorialspoint.com/articles/how-to-install-best-open-source-text-editors" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2016/05/1.jpg	&amp;h=200&amp;w=200&amp;zc=1" alt="How to Install Best Open Source Text Editors"></a> 
+          </div> 
+          <!--end .post-thumb--> 
+          <h2><a href="http://www.tutorialspoint.com/articles/how-to-install-best-open-source-text-editors" rel="bookmark" title="Permanent Link to How to Install Best Open Source Text Editors">How to Install Best Open Source Text Editors</a></h2> 
+          <div class="post-date"> 
+           <em>Posted by <a href="http://www.tutorialspoint.com/articles/author/sairam" title="Posts by Sairam Krishna" rel="author">Sairam Krishna</a> on May 4, 2016</em> 
+          </div> 
+          <!--end .post-date--> 
+          <div class="post-exerpt">
+           Text editors can be used for writing code, editing text files such as configuration files, creating user instruction files and many more. In Linux, text editors&nbsp;are of two kinds ie.,&nbsp;graphical user interface... 
+          </div> 
+          <!--end .post-excerpt--> 
+          <div class="clear"></div> 
+         </div> 
+         <!--end .postbox--> 
+        </div> 
+        <!--end .post--> 
+        <div class="clear"></div> 
+        <div class="pagination"> 
+         <div class="left"></div> 
+         <div class="right">
+          <a href="http://www.tutorialspoint.com/articles/page/2">Next »</a>
+         </div>
+         <div class="clear"></div> 
+        </div> 
+        <!--end .pagination--> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-2"> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="heading" style="font-size: 153%;; text-align: center;width: 267px;position: relative;left: -5px;">Popular Articles</li> 
+       </ul> 
+       <div class="widget" id="infinite_scroll"> 
+        <div id="tabber"> 
+         <div class="inside"> 
+          <div id="popular-posts" style="display: block;"> 
+           <ul> 
+            <li> <a href="http://www.tutorialspoint.com/articles/about-articles-on-tutorialspoint-com" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/08/article_thumb.png	&amp;h=46&amp;w=46&amp;zc=1" alt="About Articles on Tutorialspoint.com"></a> 
+             <div class="info"> 
+              <a title="About Articles on Tutorialspoint.com" href="http://www.tutorialspoint.com/articles/about-articles-on-tutorialspoint-com">About Articles on Tutorialspoint.com</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/how-to-create-lvm-using-vgcreate-lvcreate-and-lvextend-lvm2-commands" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=wp-content/themes/bigfoot/images/image-pending.gif&amp;h=46&amp;w=46&amp;zc=1" alt="How To Create LVM Using Vgcreate, Lvcreate and Lvextend Lvm2 Commands"></a> 
+             <div class="info"> 
+              <a title="How To Create LVM Using Vgcreate, Lvcreate and Lvextend Lvm2 Commands" href="http://www.tutorialspoint.com/articles/how-to-create-lvm-using-vgcreate-lvcreate-and-lvextend-lvm2-commands">How To Create LVM Using Vgcreate, Lvcreate and Lvextend Lvm2 Commands</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/monitoring-network-traffic-with-nethogs" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/NetHogs-200x200.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Monitoring Network Traffic with Nethogs"></a> 
+             <div class="info"> 
+              <a title="Monitoring Network Traffic with Nethogs" href="http://www.tutorialspoint.com/articles/monitoring-network-traffic-with-nethogs">Monitoring Network Traffic with Nethogs</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/install-node-js-on-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/Installing-Node-js-on-Linux-200x200.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Install Node.js on Linux"></a> 
+             <div class="info"> 
+              <a title="Install Node.js on Linux" href="http://www.tutorialspoint.com/articles/install-node-js-on-linux">Install Node.js on Linux</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/swot-for-growth" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/image-2-2.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="SWOT for Growth"></a> 
+             <div class="info"> 
+              <a title="SWOT for Growth" href="http://www.tutorialspoint.com/articles/swot-for-growth">SWOT for Growth</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/install-and-configure-apache-server-on-centos-7" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/apache.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Install and Configure Apache Server on Centos 7"></a> 
+             <div class="info"> 
+              <a title="Install and Configure Apache Server on Centos 7" href="http://www.tutorialspoint.com/articles/install-and-configure-apache-server-on-centos-7">Install and Configure Apache Server on Centos 7</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/emerging-innovations-in-3d-printing" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/mink.png	&amp;h=46&amp;w=46&amp;zc=1" alt="Emerging Innovations in 3D Printing"></a> 
+             <div class="info"> 
+              <a title="Emerging Innovations in 3D Printing" href="http://www.tutorialspoint.com/articles/emerging-innovations-in-3d-printing">Emerging Innovations in 3D Printing</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/four-great-ways-to-convert-text-to-speech-on-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/textspeech_sml_0.gif	&amp;h=46&amp;w=46&amp;zc=1" alt="Simple Ways to Convert Text to Speech in Linux"></a> 
+             <div class="info"> 
+              <a title="Simple Ways to Convert Text to Speech in Linux" href="http://www.tutorialspoint.com/articles/four-great-ways-to-convert-text-to-speech-on-linux">Simple Ways to Convert Text to Speech in Linux</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/run-sudo-command-without-a-password-on-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/sudo-without-password.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Run Sudo command without a Password on Linux"></a> 
+             <div class="info"> 
+              <a title="Run Sudo command without a Password on Linux" href="http://www.tutorialspoint.com/articles/run-sudo-command-without-a-password-on-linux">Run Sudo command without a Password on Linux</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/restrict-ssh-user-to-specific-directory-by-setting-chrooted-jail" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/linux-logo-200x200.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Restrict SSH user to specific directory by setting chrooted jail"></a> 
+             <div class="info"> 
+              <a title="Restrict SSH user to specific directory by setting chrooted jail" href="http://www.tutorialspoint.com/articles/restrict-ssh-user-to-specific-directory-by-setting-chrooted-jail">Restrict SSH user to specific directory by setting chrooted jail</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/porters-5-forces" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/14768879_xxl1.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Porter’s 5 Forces"></a> 
+             <div class="info"> 
+              <a title="Porter’s 5 Forces" href="http://www.tutorialspoint.com/articles/porters-5-forces">Porter’s 5 Forces</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/linux-firewall-open-and-deny-port-commands" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/firewall-port-commands.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Linux Firewall Open and Deny Port Commands"></a> 
+             <div class="info"> 
+              <a title="Linux Firewall Open and Deny Port Commands" href="http://www.tutorialspoint.com/articles/linux-firewall-open-and-deny-port-commands">Linux Firewall Open and Deny Port Commands</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/how-to-e-file-income-tax-return-by-any-individualhuf" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/12/Form-5-2.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="How to E-File Income Tax Return by any Individual/HUF"></a> 
+             <div class="info"> 
+              <a title="How to E-File Income Tax Return by any Individual/HUF" href="http://www.tutorialspoint.com/articles/how-to-e-file-income-tax-return-by-any-individualhuf">How to E-File Income Tax Return by any Individual/HUF</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/how-to-compress-and-decompress-a-bz2-tbz2-files" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/12/BZ2-File-Compress-and-Decompress.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="How to Compress and Decompress a .bz2/.tbz2 Files"></a> 
+             <div class="info"> 
+              <a title="How to Compress and Decompress a .bz2/.tbz2 Files" href="http://www.tutorialspoint.com/articles/how-to-compress-and-decompress-a-bz2-tbz2-files">How to Compress and Decompress a .bz2/.tbz2 Files</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/best-practices-to-protect-yourself-from-cyber-security" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/12/33532457_xxl-e1449209216585.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Best Practices to Protect Yourself from Cyber Security"></a> 
+             <div class="info"> 
+              <a title="Best Practices to Protect Yourself from Cyber Security" href="http://www.tutorialspoint.com/articles/best-practices-to-protect-yourself-from-cyber-security">Best Practices to Protect Yourself from Cyber Security</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/how-to-monitor-logging-activity-of-linux-process" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/12/monitor-logging-activity.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="How to Monitor Logging Activity of Linux Process"></a> 
+             <div class="info"> 
+              <a title="How to Monitor Logging Activity of Linux Process" href="http://www.tutorialspoint.com/articles/how-to-monitor-logging-activity-of-linux-process">How to Monitor Logging Activity of Linux Process</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/influential-experts-provide-top-money-tips-for-2016" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/12/Untitled.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Influential Experts Provide Top Money Tips for 2016"></a> 
+             <div class="info"> 
+              <a title="Influential Experts Provide Top Money Tips for 2016" href="http://www.tutorialspoint.com/articles/influential-experts-provide-top-money-tips-for-2016">Influential Experts Provide Top Money Tips for 2016</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/top-tools-to-monitor-linux-performance" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/12/top-tools-to-monitor-process-200x200-1.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Top Tools to Monitor Linux Performance"></a> 
+             <div class="info"> 
+              <a title="Top Tools to Monitor Linux Performance" href="http://www.tutorialspoint.com/articles/top-tools-to-monitor-linux-performance">Top Tools to Monitor Linux Performance</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/samsung-galaxy-s6-vs-iphone-6-which-one-is-better" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/12/iPhone-6-S6-edge.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Samsung Galaxy S6 Vs iPhone 6 – Which One is Better?"></a> 
+             <div class="info"> 
+              <a title="Samsung Galaxy S6 Vs iPhone 6 – Which One is Better?" href="http://www.tutorialspoint.com/articles/samsung-galaxy-s6-vs-iphone-6-which-one-is-better">Samsung Galaxy S6 Vs iPhone 6 – Which One is Better?</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/log-in-to-linux-desktop-with-google-authenticator" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/12/Login-into-linux-desktop-with-google-authenticator.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Log in to Linux Desktop with Google Authenticator"></a> 
+             <div class="info"> 
+              <a title="Log in to Linux Desktop with Google Authenticator" href="http://www.tutorialspoint.com/articles/log-in-to-linux-desktop-with-google-authenticator">Log in to Linux Desktop with Google Authenticator</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/top-3-free-anti-virus-applications-for-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/Top-3-Linux-anti-virus-200X200.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Top 3  Free Anti-Virus Applications for Linux"></a> 
+             <div class="info"> 
+              <a title="Top 3  Free Anti-Virus Applications for Linux" href="http://www.tutorialspoint.com/articles/top-3-free-anti-virus-applications-for-linux">Top 3 Free Anti-Virus Applications for Linux</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/popular-utility-based-mobile-apps-in-india" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/8989835_m.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Popular Utility Based Mobile Apps in India"></a> 
+             <div class="info"> 
+              <a title="Popular Utility Based Mobile Apps in India" href="http://www.tutorialspoint.com/articles/popular-utility-based-mobile-apps-in-india">Popular Utility Based Mobile Apps in India</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/install-google-chrome-on-centos-rhel" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/200x200-icon.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Install Google Chrome on CentOS / RHEL"></a> 
+             <div class="info"> 
+              <a title="Install Google Chrome on CentOS / RHEL" href="http://www.tutorialspoint.com/articles/install-google-chrome-on-centos-rhel">Install Google Chrome on CentOS / RHEL</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/top-10-worlds-best-places-to-visit" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/Hong-Kong.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Top 10 World’s Best Places to Visit"></a> 
+             <div class="info"> 
+              <a title="Top 10 World’s Best Places to Visit" href="http://www.tutorialspoint.com/articles/top-10-worlds-best-places-to-visit">Top 10 World’s Best Places to Visit</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/centos-7-step-by-step-installation-quick-guide" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/centos7installation.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="CentOS 7 Step by Step Installation Quick Guide"></a> 
+             <div class="info"> 
+              <a title="CentOS 7 Step by Step Installation Quick Guide" href="http://www.tutorialspoint.com/articles/centos-7-step-by-step-installation-quick-guide">CentOS 7 Step by Step Installation Quick Guide</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/whatsapp-as-a-marketing-tool" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/WhatsApp.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="WhatsApp as a Marketing Tool"></a> 
+             <div class="info"> 
+              <a title="WhatsApp as a Marketing Tool" href="http://www.tutorialspoint.com/articles/whatsapp-as-a-marketing-tool">WhatsApp as a Marketing Tool</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/cloud-security-you-can-rely-upon" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/nodes1.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Cloud Security: You can Rely Upon"></a> 
+             <div class="info"> 
+              <a title="Cloud Security: You can Rely Upon" href="http://www.tutorialspoint.com/articles/cloud-security-you-can-rely-upon">Cloud Security: You can Rely Upon</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/algorithm-to-remove-reflection-from-photos-taken-through-windows" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/Untitled.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Algorithm to Remove Reflection from Photos Taken Through Windows"></a> 
+             <div class="info"> 
+              <a title="Algorithm to Remove Reflection from Photos Taken Through Windows" href="http://www.tutorialspoint.com/articles/algorithm-to-remove-reflection-from-photos-taken-through-windows">Algorithm to Remove Reflection from Photos Taken Through Windows</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/managing-change-in-life" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/2-2.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Managing Change in Life"></a> 
+             <div class="info"> 
+              <a title="Managing Change in Life" href="http://www.tutorialspoint.com/articles/managing-change-in-life">Managing Change in Life</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/the-need-for-social-responsibility-of-business-enterprises" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/4P-e1447324981857.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="The Need for Social Responsibility of Business Enterprises"></a> 
+             <div class="info"> 
+              <a title="The Need for Social Responsibility of Business Enterprises" href="http://www.tutorialspoint.com/articles/the-need-for-social-responsibility-of-business-enterprises">The Need for Social Responsibility of Business Enterprises</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/market-research-to-understand-customer-view-point-2" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/shutterstock_good2.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Market Research to Understand Customer View Point"></a> 
+             <div class="info"> 
+              <a title="Market Research to Understand Customer View Point" href="http://www.tutorialspoint.com/articles/market-research-to-understand-customer-view-point-2">Market Research to Understand Customer View Point</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/top-it-business-certifications-in-demand" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/8901863_xxl.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Top IT and Business Certifications in Demand"></a> 
+             <div class="info"> 
+              <a title="Top IT and Business Certifications in Demand" href="http://www.tutorialspoint.com/articles/top-it-business-certifications-in-demand">Top IT and Business Certifications in Demand</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/are-you-sad-microsoft-unveils-tools-to-guess-human-emotions" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/Facial-2.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Are you Sad? Microsoft Unveils Tools to Guess Human Emotions"></a> 
+             <div class="info"> 
+              <a title="Are you Sad? Microsoft Unveils Tools to Guess Human Emotions" href="http://www.tutorialspoint.com/articles/are-you-sad-microsoft-unveils-tools-to-guess-human-emotions">Are you Sad? Microsoft Unveils Tools to Guess Human Emotions</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/best-way-of-converting-html-pages-to-pdf-in-linux" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/html-to-pdf.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Best Way of Converting HTML pages to PDF in Linux"></a> 
+             <div class="info"> 
+              <a title="Best Way of Converting HTML pages to PDF in Linux" href="http://www.tutorialspoint.com/articles/best-way-of-converting-html-pages-to-pdf-in-linux">Best Way of Converting HTML pages to PDF in Linux</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/tips-to-increase-battery-life-of-your-gadgets" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/Feature-Pic1.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Tips to Increase Battery Life of your Gadgets"></a> 
+             <div class="info"> 
+              <a title="Tips to Increase Battery Life of your Gadgets" href="http://www.tutorialspoint.com/articles/tips-to-increase-battery-life-of-your-gadgets">Tips to Increase Battery Life of your Gadgets</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/simple-tips-to-control-your-anger" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/8685781_xl-11.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Simple Tips to Control Your Anger"></a> 
+             <div class="info"> 
+              <a title="Simple Tips to Control Your Anger" href="http://www.tutorialspoint.com/articles/simple-tips-to-control-your-anger">Simple Tips to Control Your Anger</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/postfix.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu"></a> 
+             <div class="info"> 
+              <a title="Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu" href="http://www.tutorialspoint.com/articles/install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu">Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/transformation-of-mobile-gaming-experience" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/12330940_xxl-e1448005506186.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Transformation of Mobile Gaming Experience"></a> 
+             <div class="info"> 
+              <a title="Transformation of Mobile Gaming Experience" href="http://www.tutorialspoint.com/articles/transformation-of-mobile-gaming-experience">Transformation of Mobile Gaming Experience</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/installing-linux-apache-mysql-php-lamp-stack-on-ubuntu-15-10" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/Linux.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Installing Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 15.10"></a> 
+             <div class="info"> 
+              <a title="Installing Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 15.10" href="http://www.tutorialspoint.com/articles/installing-linux-apache-mysql-php-lamp-stack-on-ubuntu-15-10">Installing Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 15.10</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/understanding-share-quote-table-in-a-financial-newspaper" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/Google_Finance3.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Understanding Share Quote Table in a Financial Newspaper"></a> 
+             <div class="info"> 
+              <a title="Understanding Share Quote Table in a Financial Newspaper" href="http://www.tutorialspoint.com/articles/understanding-share-quote-table-in-a-financial-newspaper">Understanding Share Quote Table in a Financial Newspaper</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+            <li> <a href="http://www.tutorialspoint.com/articles/microsoft-edge-an-improved-version-with-value-addition" rel="bookmark"><img class="thumb" src="http://www.tutorialspoint.com/articles/wp-content/themes/bigfoot/includes/timthumb.php?src=	http://www.tutorialspoint.com/articles/wp-content/uploads/2015/11/hub-highlighted-e1447843584564.jpg	&amp;h=46&amp;w=46&amp;zc=1" alt="Microsoft Edge – An Improved Version with Value Addition"></a> 
+             <div class="info"> 
+              <a title="Microsoft Edge – An Improved Version with Value Addition" href="http://www.tutorialspoint.com/articles/microsoft-edge-an-improved-version-with-value-addition">Microsoft Edge – An Improved Version with Value Addition</a> 
+              <span class="meta"><span class="comments-link"></span></span> 
+             </div> 
+             <!--end .info--> 
+             <div class="clear"></div> </li> 
+           </ul> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <script>
+$(window).load(function() {
+    if( $('.middle-col').height() > $('#infinite_scroll').height()){
+         var ht = $('.middle-col').height() - 44;
+         $('#infinite_scroll').css("height", ht);
+    }
+});
+</script> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/articles/','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/articles/','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/articles/&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/articles/','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/articles/&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/articles/&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
+ </body>
+</html>

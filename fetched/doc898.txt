@@ -1,0 +1,406 @@
+http://tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+ <!--<![endif]-->
+ <head> 
+  <meta charset="utf-8"> 
+  <title>Data Structures &amp; Algorithms Binary Search</title> 
+  <meta name="Description" content="Data Structures &amp; Algorithms Binary Search - Learn Data Structures &amp; Algorithm using c, C++ and Java in simple and easy steps using this beginner's tutorial containing basic to advanced knowledge starting from Algorithm, Data Structures, Array, Linked List, Doubly Linked List, Circular List, Stack, Parsing Expression, Queue, Priority queue, Tree, Binary Search Tree, B+, AVL, Spanning, Tower of Hanoi, Hash Table, Heap, Graph, Search techniques, Sorting techniques, Recursion."> 
+  <meta name="Keywords" content="Algorithm, Data Structures, Array, Linked List, Doubly Linked List, Circular List, Stack, Parsing Expression, Queue, Priority queue, Tree, Binary Search Tree, B+, AVL, Spanning, Tower of Hanoi, Hash Table, Heap, Graph, Search techniques, Sorting techniques, Recursion."> 
+  <base href="http://www.tutorialspoint.com/"> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
+  <style>
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+pre.prettyprint.tryit {min-height:37px; background: #eee url(data_structures_algorithms/images/try-it.jpg) top right no-repeat !important}div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #cd3300 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #cd3300 !important;}
+.submenu-item{ border-bottom: 2px solid #cd3300 !important; border-top: 2px solid #cd3300 !important }
+</style> 
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/data_structures_algorithms/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/data_structures_algorithms/images/data-structure-mini-logo.jpg" alt="Data Structures &amp; Algorithms Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Data Structures &amp; Algorithms</li> 
+        <li><a href="/data_structures_algorithms/index.htm">DSA - Home</a></li> 
+        <li><a href="/data_structures_algorithms/data_structure_overview.htm">DSA - Overview</a></li> 
+        <li><a href="/data_structures_algorithms/data_structure_environment.htm">DSA - Environment Setup</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Algorithm</li> 
+        <li><a href="/data_structures_algorithms/algorithms_basics.htm">DSA - Algorithms Basics</a></li> 
+        <li><a href="/data_structures_algorithms/asymptotic_analysis.htm">DSA - Asymptotic Analysis</a></li> 
+        <li><a href="/data_structures_algorithms/greedy_algorithms.htm">DSA - Greedy Algorithms</a></li> 
+        <li><a href="/data_structures_algorithms/divide_and_conquer.htm">DSA - Divide and Conquer</a></li> 
+        <li><a href="/data_structures_algorithms/dynamic_programming.htm">DSA - Dynamic Programming</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Data Structures</li> 
+        <li><a href="/data_structures_algorithms/data_structures_basics.htm">DSA - Data Structure Basics</a></li> 
+        <li><a href="/data_structures_algorithms/array_data_structure.htm">DSA - Array Data Structure</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Linked Lists</li> 
+        <li><a href="/data_structures_algorithms/linked_list_algorithms.htm">DSA - Linked List Basics</a></li> 
+        <li><a href="/data_structures_algorithms/doubly_linked_list_algorithm.htm">DSA - Doubly Linked List</a></li> 
+        <li><a href="/data_structures_algorithms/circular_linked_list_algorithm.htm">DSA - Circular Linked List</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Stack &amp; Queue</li> 
+        <li><a href="/data_structures_algorithms/stack_algorithm.htm">DSA - Stack</a></li> 
+        <li><a href="/data_structures_algorithms/expression_parsing.htm">DSA - Expression Parsing</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_queue.htm">DSA - Queue</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Searching Techniques</li> 
+        <!--<li style="background:yellow;"><a href="/data_structures_algorithms/searching_algorithms.htm">DSA - Searching Algorithms</a></li>--> 
+        <li><a href="/data_structures_algorithms/linear_search_algorithm.htm">DSA - Linear Search</a></li> 
+        <li><a href="/data_structures_algorithms/binary_search_algorithm.htm">DSA - Binary Search</a></li> 
+        <li><a href="/data_structures_algorithms/interpolation_search_algorithm.htm">DSA - Interpolation Search</a></li> 
+        <li><a href="/data_structures_algorithms/hash_data_structure.htm">DSA - Hash Table</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Sorting Techniques</li> 
+        <li><a href="/data_structures_algorithms/sorting_algorithms.htm">DSA - Sorting Algorithms</a></li> 
+        <li><a href="/data_structures_algorithms/bubble_sort_algorithm.htm">DSA - Bubble Sort</a></li> 
+        <li><a href="/data_structures_algorithms/insertion_sort_algorithm.htm">DSA - Insertion Sort</a></li> 
+        <li><a href="/data_structures_algorithms/selection_sort_algorithm.htm">DSA - Selection Sort</a></li> 
+        <li><a href="/data_structures_algorithms/merge_sort_algorithm.htm">DSA - Merge Sort</a></li> 
+        <li><a href="/data_structures_algorithms/shell_sort_algorithm.htm">DSA - Shell Sort</a></li> 
+        <li><a href="/data_structures_algorithms/quick_sort_algorithm.htm">DSA - Quick Sort</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Graph Data Structure</li> 
+        <li><a href="/data_structures_algorithms/graph_data_structure.htm">DSA - Graph Data Structure</a></li> 
+        <li><a href="/data_structures_algorithms/depth_first_traversal.htm">DSA - Depth First Traversal</a></li> 
+        <li><a href="/data_structures_algorithms/breadth_first_traversal.htm">DSA - Breadth First Traversal</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Tree Data Structure</li> 
+        <li><a href="/data_structures_algorithms/tree_data_structure.htm">DSA - Tree Data Structure</a></li> 
+        <li><a href="/data_structures_algorithms/tree_traversal.htm">DSA - Tree Traversal</a></li> 
+        <li><a href="/data_structures_algorithms/binary_search_tree.htm">DSA - Binary Search Tree</a></li> 
+        <li><a href="/data_structures_algorithms/avl_tree_algorithm.htm">DSA - AVL Tree</a></li> 
+        <li><a href="/data_structures_algorithms/spanning_tree.htm">DSA - Spanning Tree</a></li> 
+        <li><a href="/data_structures_algorithms/heap_data_structure.htm">DSA - Heap</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Recursion</li> 
+        <li><a href="/data_structures_algorithms/recursion_basics.htm">DSA - Recursion Basics</a></li> 
+        <li><a href="/data_structures_algorithms/tower_of_hanoi.htm">DSA - Tower of Hanoi</a></li> 
+        <li><a href="/data_structures_algorithms/fibonacci_series.htm">DSA - Fibonacci Series</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">DSA Useful Resources</li> 
+        <!--<li><a href="/data_structures_algorithms/dsa_quick_guide.htm">DSA - Quick Guide</a></li>--> 
+        <li><a href="/data_structures_algorithms/data_structures_algorithms_questions_answers.htm">DSA - Questions and Answers</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_useful_resources.htm">DSA - Useful Resources</a></li> 
+        <li><a href="/data_structures_algorithms/dsa_discussion.htm">DSA - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <h1>Data Structure - Binary Search</h1> 
+        <div class="topgooglead"> 
+         <hr> 
+         <div style="padding-bottom:5px;padding-left:10px;">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/data_structures_algorithms/linear_search_algorithm.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/data_structures_algorithms/interpolation_search_algorithm.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <p>Binary search is a fast search algorithm with run-time complexity of Ο(log n). This search algorithm works on the principle of divide and conquer. For this algorithm to work properly the data collection should be in sorted form.</p> 
+        <p>Binary search search a particular item by comparing the middle most item of the collection. If match occurs then index of item is returned. If middle item is greater than item then item is searched in sub-array to the right of the middle item other wise item is search in sub-array to the left of the middle item. This process continues on sub-array as well until the size of subarray reduces to zero.</p> 
+        <h2>How binary search works?</h2> 
+        <p>For a binary search to work, it is mandatory for the target array to be sorted. We shall learn the process of binary search with an pictorial example. The below given is our sorted array and assume that we need to search location of value 31 using binary search.</p> 
+        <img src="/data_structures_algorithms/images/binary_search_0.jpg" alt="Binary search"> 
+        <p>First, we shall determine the half of the array by using this formula −</p> 
+        <pre class="result notranslate">
+mid = low + (high - low) / 2
+</pre> 
+        <p>Here it is, 0 + (9 - 0 ) / 2 = 4 (integer value of 4.5). So 4 is the mid of array.</p> 
+        <img src="/data_structures_algorithms/images/binary_search_1.jpg" alt="Binary search"> 
+        <p>Now we compare the value stored at location 4, with the value being searched i.e. 31. We find that value at location 4 is 27, which is not a match. Because value is greater than 27 and we have a sorted array so we also know that target value must be in upper portion of the array.</p> 
+        <img src="/data_structures_algorithms/images/binary_search_2.jpg" alt="Binary search"> 
+        <p>We change our low to mid + 1 and find the new mid value again.</p> 
+        <pre class="result notranslate">
+low = mid + 1
+mid = low + (high - low) / 2
+</pre> 
+        <p>Our new mid is 7 now. We compare the value stored at location 7 with our target value 31.</p> 
+        <img src="/data_structures_algorithms/images/binary_search_3.jpg" alt="Binary search"> 
+        <p>The value stored at location 7 is not a match, rather it is less that what we are looking for. So the value must be in lower part from this location.</p> 
+        <img src="/data_structures_algorithms/images/binary_search_4.jpg" alt="Binary search"> 
+        <p>So we calculate the mid again. This time it is 5.</p> 
+        <img src="/data_structures_algorithms/images/binary_search_5.jpg" alt="Binary search"> 
+        <p>We compare the value stored ad location 5 with our target value. We find that it is a match.</p> 
+        <img src="/data_structures_algorithms/images/binary_search_6.jpg" alt="Binary search"> 
+        <p>We conclude that the target value 31 is stored at location 5.</p> 
+        <p>Binary search halves the searchable items and thus reduces the count of comparisons to be made to very less numbers.</p> 
+        <h2>Pseudocode</h2> 
+        <p>The pseudocode of binary search algorithm should look like this −</p> 
+        <pre class="result notranslate">
+Procedure binary_search
+   A ← sorted array
+   n ← size of array
+   x ← value ot be searched
+
+   Set lowerBound = 1
+   Set upperBound = n 
+
+   while x not found
+   
+      if upperBound &lt; lowerBound 
+         EXIT: x does not exists.
+   
+      set midPoint = lowerBound + ( upperBound - lowerBound ) / 2
+      
+      if A[midPoint] &lt; x
+         set lowerBound = midPoint + 1
+         
+      if A[midPoint] &gt; x
+         set upperBound = midPoint - 1 
+
+      if A[midPoint] = x 
+         EXIT: x found at location midPoint
+
+   end while
+   
+end procedure
+</pre> 
+        <p>To see binary search implementation using array in C programming language, please <a href="/data_structures_algorithms/binary_search_program_in_c.htm">click here</a>.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/data_structures_algorithms/linear_search_algorithm.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="pdf-btn"> 
+         <a href="/data_structures_algorithms/pdf/binary_search_algorithm.pdf" title="Data Structures &amp; Algorithms Binary Search" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/data_structures_algorithms/interpolation_search_algorithm.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
+  <script src="http://www.google-analytics.com/urchin.js">
+</script> 
+  <script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script> 
+  <script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript">
+   var tryit = new $.TryIt('data_structures_algorithms/try_dsa.php');
+   tryit.compile();
+</script>   
+ </body>
+</html>
