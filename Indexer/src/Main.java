@@ -25,15 +25,14 @@ public class Main {
 
         //Feeding the indexer
 
-//        numberOfThreads = 8;
-//        Thread[] threads = new Thread[numberOfThreads];
-//        for (int i = 0; i < numberOfThreads; i++) {
-//            threads[i] = new Thread(Indexer.getInstance());
-//            threads[i].start();
-//        }
+        numberOfThreads = 8;
+        Thread[] threads = new Thread[numberOfThreads];
+        for (int i = 0; i < numberOfThreads; i++) {
+            threads[i] = new Thread(Indexer.getInstance());
+            threads[i].start();
+        }
 
-           Controller c =new Controller();
-           c.calculateIDF();
+
         //testing retrieval from the index
 //        SearchResult SR=new SearchResult("contact",new Controller());
 //        SR.Print();

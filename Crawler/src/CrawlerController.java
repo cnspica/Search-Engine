@@ -7,7 +7,7 @@ public class CrawlerController {
 
 	private void seed(String seedFile) {
 		// insert the seed into DB
-		DBManager dbManager = new DBManager("jdbc:mysql://localhost/search_engine", "root", "");
+		DBManager dbManager = new DBManager("jdbc:mysql://localhost:3306/search_engine", "root", "");
 		Scanner seed=null;
 		try {
 			seed = new Scanner(new File(seedFile));
@@ -16,7 +16,7 @@ public class CrawlerController {
 		}
 
 		// set fetched, inCount, outCount to 0 in URLs Table
-		boolean b = dbManager.ExecuteNonQuery("UPDATE URLs SET status = 0, inCount = 0, outCount = 0, title = NULL, doc=NULL");
+		boolean b = dbManager.ExecuteNonQuery("UPDATE URLs SET status = 0, inCount = 0, outCount = 0, title = NULL, doc=NULL, rank = 1");
 
 		// read the seed URLs
 		StringBuilder query = new StringBuilder("INSERT INTO URLs(URL, status, inCount) VALUES");
@@ -37,7 +37,7 @@ public class CrawlerController {
 		Thread[] t = new Thread[threadCount];
 		Lock lock = new Lock();
 		for (int i=0; i < threadCount; i++){
-			Crawler test = new Crawler("jdbc:mysql://localhost/search_engine", "root", "", lock);
+			Crawler test = new Crawler("jdbc:mysql://localhost:3306/search_engine", "root", "", lock);
 			test.setSize(size);
 			t[i]=new Thread(test);
 			t[i].start();

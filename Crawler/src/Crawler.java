@@ -1,9 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.net.InetAddress;
 import java.net.MalformedURLException;
+import java.net.UnknownHostException;
 import java.nio.file.Paths;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.net.URL;
@@ -71,21 +74,40 @@ public class Crawler implements Runnable {
 		return dbManager.ExecuteNonQuery("DELETE FROM URLs WHERE URL = '" + url + "'");
 	}
 
-	private void updateInCountBatch(Elements links) {
-		StringBuilder query = new StringBuilder("UPDATE URLs SET inCount = inCount + 1 WHERE URL in (");
+	private void updateInCountBatch(Elements links, int url_id) {
+		StringBuilder query;// = new StringBuilder("UPDATE URLs SET inCount = inCount + 1 WHERE URL in (");
+		StringBuilder queryPointers = new StringBuilder("SELECT url_id from URLs WHERE URL in(");
 		for (Element link: links){
 			String u = isValidURL(link.attr("abs:href"));
 			if (u.equals(""))
 				continue;
 			try {
 				u = new URL(u).toString();
-				query.append("'" + u.toString() + "', ");
+				//query.append("'" + u.toString() + "', ");
+				queryPointers.append("'" + u.toString() + "', ");
 			} catch (MalformedURLException e) {
 				//e.printStackTrace();
 			}
 		}
-		dbManager.ExecuteNonQuery(query.substring(0, query.length() - 2) + ")");
+		//dbManager.ExecuteNonQuery(query.substring(0, query.length() - 2) + ")");
+		try {
+			// query database
+			ResultSet results = dbManager.ExecuteQuery(queryPointers.substring(0, queryPointers.length() - 2) + ")");
+			query = new StringBuilder("INSERT INTO url_pointers(url_id, pointer_id) VALUES ");
+			while (results.next()) {
+				int ID = results.getInt("url_id");
+				if (ID == url_id)
+					continue;
+				query.append("(" + ID +", "+ url_id +"), ");
+			}
+			dbManager.ExecuteNonQuery(query.substring(0, query.length() - 2));
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+
 	}
+
 
 	public void run(){
 		RobotExclusion robotExclusion = new RobotExclusion();
@@ -112,7 +134,7 @@ public class Crawler implements Runnable {
 				// update outCount of url and title
 				incrementURLOutCount(toFetch, links.size());
 				updateTitle(toFetch, doc.title());
-				updateInCountBatch(links);
+				updateInCountBatch(links, getURL_ID(toFetch));
 
 				// save document and continue
 				saveDocument(doc, toFetch);
@@ -168,7 +190,21 @@ public class Crawler implements Runnable {
 	}
 	
 	private boolean insertURLIntoDB(String url){
-		return dbManager.ExecuteNonQuery("INSERT INTO URLs(URL, status, inCount) VALUES ('" + url + "', false, 1)");
+		try {
+			InetAddress address = InetAddress.getByName(new URL(url).getHost());
+			String ip = address.getHostAddress();
+			return dbManager.ExecuteNonQuery("INSERT INTO URLs(URL, status, inCount) VALUES ('" + url + "', false, 1)");
+		} catch (Exception e) {}
+		return false;
+	}
+
+	private int getURL_ID(String url){
+		ResultSet res =  dbManager.ExecuteQuery("SELECT url_id from URLs WHERE URL = '" + url + "'");
+		try {
+			res.next();
+			return res.getInt("url_id");
+		} catch (SQLException e) {}
+		return -1;
 	}
 
 	private boolean incrementURLOutCount(String url, int count){
@@ -224,7 +260,7 @@ public class Crawler implements Runnable {
 				Elements links = doc.select("a");
 				incrementURLOutCount(toFetch, links.size());    // update outCount
 				updateTitle(toFetch, doc.title());    // update title
-				updateInCountBatch(links);		// update inCount
+				updateInCountBatch(links, getURL_ID(toFetch));		// update inCount
 
 				// write page to file
 				saveDocument(doc, toFetch);

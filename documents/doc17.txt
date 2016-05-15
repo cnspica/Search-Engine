@@ -1,518 +1,278 @@
-http://tutorialspoint.com/ipython_terminal_online.php
+http://tutorialspoint.com/apache_spark/index.htm
 <!doctype html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
 <html>
+ <!--<![endif]-->
  <head> 
-  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
-  <title>iPython Terminal Online</title> 
-  <meta name="Description" content="iPython Terminal Online - Try and experience the best cloud computing where you can edit, compile, execute and share your varities of projects with the help of simple clicks. You can save your projects at Dropbox, GitHub, GoogleDrive and OneDrive to be accessed anywhere and any time. We support almost all the popular programming languages including Java, JSP, Cold Fusion, C, C++, Hadoop, PL/SQL, SQL, NumPy, SymPy, Octave, CentOS, iPython, Pascal, Fortran, PHP, Perl, Ruby, Python and many more other programming languages using your browsers, iPhones, iPads or any other online device like smart TV."> 
-  <meta name="Keywords" content="iPython Terminal Online, compile, execute, programs, online, linux, experience, cloud, computing, source code, dropbox, googledrive, onedrive, programming, java, jsp, cold fusion, c, c++, pascal, fortran, php, perl, ruby, python, browsers, iphones, ipads, smart tv."> 
+  <!-- Basic --> 
+  <meta charset="utf-8"> 
+  <title>Apache Spark Tutorial</title> 
+  <meta name="description" content="Apache Spark Tutorial - Learn Apache Spark in simple and easy steps starting from Introduction, RDD, Installation, Core Programming, Deployment, Advanced Spark Programming."> 
+  <meta name="keywords" content="Apache Spark, Tutorial, Learning, Beginners, Introduction, RDD, Installation, Core Programming, Deployment, Advanced Spark Programming."> 
   <base href="http://www.tutorialspoint.com/"> 
-  <link rel="shortcut icon" href="/codingground/images/favicon.ico" type="image/x-icon"> 
-  <script src="/codingground/scripts/jquery.min.js"></script> 
-  <script src="/codingground/scripts/jquery.easyui.min.js"></script> 
-  <script src="/codingground/ace/src-min/ace.js" type="text/javascript" charset="utf-8"></script> 
-  <script src="/codingground/scripts/spectrum.js"></script> 
-  <link rel="stylesheet" type="text/css" href="/codingground/themes/gray/easyui.css"> 
-  <link rel="stylesheet" type="text/css" href="/codingground/themes/icon.css"> 
-  <link rel="stylesheet" type="text/css" href="/codingground/style/spectrum.css"> 
-  <link rel="stylesheet" type="text/css" href="/codingground/style/cg.css"> 
-  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script> 
-  <script src="/codingground/node_modules/term.js/src/term.js"></script> 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="website"> 
+  <meta property="fb:app_id" content="471319149685276"> 
+  <meta property="og:site_name" content="www.tutorialspoint.com"> 
+  <meta name="robots" content="index, follow"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="author" content="tutorialspoint.com"> 
+  <script type="text/javascript" src="/theme/js/script-min-v4.js"></script> 
+  <link rel="stylesheet" href="/theme/css/style-min.css"> 
+  <!-- Head Libs --> 
+  <!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]--> 
   <style>
-.main-title{
-    border-left: 1px solid #ccc;
-    height: 17px;
-    color: #000;
-    font-size: 100%;
-    float: left;
-    margin: 21px 5px 0px 5px;
-    padding: 6px 0px 0px 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 4px;
-}
-#east a img:hover{
-   opacity:0.5;
-}
-#east a img{
-   padding-top:10px;
-   padding-left:10px;
-   width:80px !important;
-   height:60px !important;
-   
-}
+.fa-camera:before{content:"\f03d";font-family:FontAwesome;font-style:normal;font-size:100%}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #e77215 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #e77215 !important;}
+.submenu-item{ border-bottom: 2px solid #e77215 !important; border-top: 2px solid #e77215 !important }
 </style> 
-  <script type="text/javascript">
-var port = "0";
-var sessionid = "";
-var HOME="";
-var terminal="";
-var server="";
+  <script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
 </script> 
-  <script src="/codingground/scripts/cg.js"></script> 
+ </head> 
+ <body onload="prettyPrint()"> 
+  <div class="wrapLoader"> 
+   <div class="imgLoader"> 
+    <img src="/images/loading-cg.gif" alt="" width="70" height="70"> 
+   </div> 
+  </div> 
+  <header> 
+   <div class="submenu-item sub-main-menu" id="top-sub-menu"></div> 
+   <div class="container"> 
+    <h1 class="logo"> <a href="index.htm" title="tutorialspoint"> <img alt="tutorialspoint" src="/apache_spark/images/logo.png"> </a> </h1> 
+    <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull"> <i class="icon icon-bars"></i> </button> 
+    <div class="navbar nav-main"> 
+     <div class="container"> 
+      <nav class="nav-main mega-menu"> 
+       <ul class="nav nav-pills nav-main" id="mainMenu"> 
+        <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li> 
+        <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li> 
+        <li class="dropdown no-sub-menu"><a class="dropdown" href="online_dev_tools.htm"><span class="dev-tools-menu"> Tools</span></a></li> 
+       </ul> 
+      </nav> 
+      <div class="searchform-popup"> 
+       <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off"> 
+       <div class="magnifying-glass">
+        <i class="icon-search"></i> Search 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </header> 
+  <div style="clear:both;"></div> 
+  <div role="main" class="main"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-md-2"> 
+      <aside class="sidebar"> 
+       <div class="mini-logo"> 
+        <img src="/apache_spark/images/apache-spark-mini-logo.jpg" alt="Apache Spark Tutorial"> 
+       </div> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Apache Spark Tutorial</li> 
+        <li><a href="/apache_spark/index.htm">Apache Spark - Home</a></li> 
+        <li><a href="/apache_spark/apache_spark_introduction.htm">Apache Spark - Introduction</a></li> 
+        <li><a href="/apache_spark/apache_spark_rdd.htm">Apache Spark - RDD</a></li> 
+        <li><a href="/apache_spark/apache_spark_installation.htm">Apache Spark - Installation</a></li> 
+        <li><a href="/apache_spark/apache_spark_core_programming.htm">Apache Spark - Core Programming</a></li> 
+        <li><a href="/apache_spark/apache_spark_deployment.htm">Apache Spark - Deployment</a></li> 
+        <li><a href="/apache_spark/advanced_spark_programming.htm">Advanced Spark Programming</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary left-menu"> 
+        <li class="heading">Apache Spark Useful Resources</li> 
+        <li><a href="/apache_spark/apache_spark_quick_guide.htm">Apache Spark - Quick Guide</a></li> 
+        <li><a href="/apache_spark/apache_spark_useful_resources.htm">Apache Spark - Useful Resources</a></li> 
+        <li><a href="/apache_spark/apache_spark_discussion.htm">Apache Spark - Discussion</a></li> 
+       </ul> 
+       <ul class="nav nav-list primary push-bottom left-menu special"> 
+        <li class="sreading">Selected Reading</li> 
+        <li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li> 
+        <li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li> 
+        <li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li> 
+        <li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li> 
+        <li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li> 
+        <li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li> 
+       </ul> 
+      </aside> 
+     </div> 
+     <!-- PRINTING STARTS HERE --> 
+     <div class="row"> 
+      <div class="content"> 
+       <div class="col-md-7 middle-col"> 
+        <div class="cover"> 
+         <img class="img-responsive" src="/apache_spark/images/apache-spark.jpg" alt="Apache Spark Tutorial"> 
+        </div> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/apache_spark/apache_spark_introduction.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <div class="clearer"></div> 
+        <hr> 
+        <h1>Apache Spark Tutorial</h1> 
+        <div class="center-aligned tutorial-menu"> 
+         <form action="/job_search.php" method="POST"> 
+          <input type="hidden" name="search_string" value="Apache Spark"> 
+          <button type="button" class="btn btn-default btn-sm btn-buy-tutorial"><i class="icon  icon-file-pdf-o"></i><a href="/apache_spark/apache_spark_pdf_version.htm"> PDF Version</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-quick-guide"><i class="icon  icon-book"></i><a href="/apache_spark/apache_spark_quick_guide.htm"> Quick Guide</a></button> 
+          <button type="button" class="btn btn-default btn-sm btn-extra-links"><i class="icon  icon-external-link"></i><a href="/apache_spark/apache_spark_useful_resources.htm"> Resources</a></button> 
+          <button type="submit" class="btn btn-default btn-sm btn-job-search"><i class="icon  icon-suitcase"></i> Job Search</button> 
+          <button type="button" class="btn btn-default btn-sm btn-job-search"><i class="fa fa-wechat"></i><a href="/apache_spark/apache_spark_discussion.htm"> Discussion</a></button> 
+         </form> 
+        </div> 
+        <p>Apache Spark is a lightning-fast cluster computing designed for fast computation. It was built on top of Hadoop MapReduce and it extends the MapReduce model to efficiently use more types of computations which includes Interactive Queries and Stream Processing. This is a brief tutorial that explains the basics of Spark Core programming.</p> 
+        <h1>Audience</h1> 
+        <p>This tutorial has been prepared for professionals aspiring to learn the basics of Big Data Analytics using Spark Framework and become a Spark Developer. In addition, it would be useful for Analytics Professionals and ETL developers as well.</p> 
+        <h1>Prerequisites</h1> 
+        <p>Before you start proceeding with this tutorial, we assume that you have prior exposure to Scala programming, database concepts, and any of the Linux operating system flavors.</p> 
+        <hr> 
+        <div class="pre-btn"> 
+         <a href="/index.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a> 
+        </div> 
+        <div class="print-btn center"> 
+         <a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a> 
+        </div> 
+        <div class="nxt-btn"> 
+         <a href="/apache_spark/apache_spark_introduction.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a> 
+        </div> 
+        <hr> 
+        <!-- PRINTING ENDS HERE --> 
+        <div class="bottomgooglead"> 
+         <div class="bottomadtag">
+          Advertisements
+         </div> 
+         <script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row"> 
+       <div class="col-md-3" id="rightbar"> 
+        <div class="simple-ad"> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com//apache_spark/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/facebookIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://twitter.com/share?url=' + 'http://www.tutorialspoint.com//apache_spark/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/twitterIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com//apache_spark/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/linkedinIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com//apache_spark/index.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/googlePlusIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com//apache_spark/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;"> <img src="/images/StumbleUponIcon.jpg" alt="img"> </a> 
+         <a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('http://reddit.com/submit?url=http://www.tutorialspoint.com//apache_spark/index.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;"> <img src="/images/reddit.jpg" alt="img"> </a> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script> 
+         <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+        <div class="rightgooglead"> 
+         <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script> 
+         <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-copyright"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-md-1"> 
+       <a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <nav id="sub-menu"> 
+        <ul> 
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li> 
+         <li><a href="/about/faq.htm">FAQ's</a></li> 
+         <li><a href="/about/about_helping.htm">Helping</a></li> 
+         <li><a href="/about/contact_us.htm">Contact</a></li> 
+        </ul> 
+       </nav> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12"> 
+       <p>© Copyright 2016. All Rights Reserved.</p> 
+      </div> 
+      <div class="col-md-4 col-sm-12 col-xs-12"> 
+       <div class="news-group"> 
+        <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}"> 
+        <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span> 
+        <div id="newsresponse"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- Libs --> 
+  <script type="text/javascript" src="/theme/js/custom-min.js"></script> 
   <script src="http://www.google-analytics.com/urchin.js">
 </script> 
   <script type="text/javascript">
-_uacct = "UA-32077377-1";
+_uacct = "UA-232293-6";
 urchinTracker();
-</script> 
-  <script type="text/javascript">
-   function shutdown() {
-      $.messager.defaults.ok = "Yes";
-      $.messager.defaults.cancel = "No";
-      $.messager.confirm('Confirmation','Do you really want to shut down the system?', function(r){
-         if (r){
-            // Make Ajax call to redirect to dropbox
-            var url = HOME + ':'  + '8080' + '/shut_down?port=' + port + "&sessionid=" + sessionid;
-            var inputs = {"hello":"bye"};
-            $.ajax({
-               type: "GET",
-               url: url,
-               data: inputs,
-               dataType: 'json',
-               beforeSend: function(  ) {
-                  $("#loading").css({"visibility":"visible"});
-               },
-               success: function(data){
-           }
-            });
-            window.onbeforeunload = null;
-            $("#loading").css({"visibility":"hidden"});
-            window.location = "http://www.tutorialspoint.com/codingground.htm";
-         }
-      }).window({  width:400 }); 
-   }
-</script> 
- </head> 
- <body class="easyui-layout" id="cc"> 
-  <div id="loading"></div> 
-  <form id="ff"> 
-   <div id="sign" class="easyui-window" title="Coding Ground" data-options="iconCls:'icon-login',modal:true, maximizable:false, closed:true, minimizable:false" style="width:530px;height:475px;padding:10px;"></div> 
-   <div id="dircontext" class="easyui-menu" style="width:150px;"> 
-    <div onclick="newFile()" data-options="iconCls:'icon-add-file'">
-     Create File
-    </div> 
-    <div onclick="saveFiles( function( status ){ return true; })" data-options="iconCls:'icon-save-project'">
-     Save Files
-    </div> 
-    <div onclick="openFileUpload()" data-options="iconCls:'icon-upload-file'">
-     Upload File
-    </div> 
-    <div onclick="newDir()" data-options="iconCls:'icon-add-dir'">
-     New Directory
-    </div> 
-    <div onclick="deleteDir()" data-options="iconCls:'icon-delete-file'">
-     Delete Directory
-    </div> 
-    <div onclick="renameFile()" data-options="iconCls:'icon-rename-file'">
-     Rename Directory
-    </div> 
-    <div onclick="reloadTree()" data-options="iconCls:'icon-refresh-project'">
-     Refresh Files
-    </div> 
-   </div> 
-   <div id="filecontext" class="easyui-menu" style="width:150px;"> 
-    <div onclick="loadFile(false, false)" data-options="iconCls:'icon-save-file'">
-     Open File
-    </div> 
-    <div onclick="saveFiles( function( status ){ return true; })" data-options="iconCls:'icon-save-project'">
-     Save File
-    </div> 
-    <div onclick="deleteFile()" data-options="iconCls:'icon-delete-file'">
-     Delete File
-    </div> 
-    <div onclick="renameFile()" data-options="iconCls:'icon-rename-file'">
-     Rename File
-    </div> 
-    <div onclick="downloadFile()" data-options="iconCls:'icon-download-file'">
-     Download File
-    </div> 
-    <div onclick="reloadTree()" data-options="iconCls:'icon-refresh-project'">
-     Refresh Files
-    </div> 
-   </div> 
-   <iframe id="download" style="display:hidden"></iframe> 
-   <div data-options="region:'north'" style="height:65px; width:100%;overflow:hidden;background:url(/codingground/images/top_bg.png);"> 
-    <a href="http://www.tutorialspoint.com/codingground.htm"> <img src="/codingground/images/logo.png" style="padding:5px; float:left; margin-top: 0px; width:200px; height:56px"> </a> 
-    <h1 class="main-title">iPython Terminal Online</h1> 
-    <div class="easyui-panel,border:false,doSize:false" style="margin:18px 0px 0px 0px; float:right;"> 
-     <a id="help" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-help', plain:true" style="float:right">Help</a> 
-     <a id="shutdown" href="javascript:shutdown();" class="easyui-linkbutton" data-options="iconCls:'icon-exit', plain:true" style="float:right">Shut Down</a> 
-     <a id="view" href="#" class="easyui-menubutton" data-options="menu:'#mm3',iconCls:'icon-view'" style="float:right">View</a> 
-     <a id="edit" href="#" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'icon-edit'" style="float:right">Edit</a> 
-     <a id="edit" href="#" class="easyui-menubutton" data-options="menu:'#mm1', iconCls:'icon-file'" style="float:right">File</a> 
-     <a id="project" href="#" class="easyui-menubutton" data-options="menu:'#mm4', plain:true, iconCls:'icon-project'" style="float:right">Project</a> 
-    </div> 
-    <div id="mm1" style="width:200px;"> 
-     <div onclick="newFile()" data-options="iconCls:'icon-add-file'">
-      Create File
-     </div> 
-     <div onclick="saveFiles( function( status ){ return true; })" data-options="iconCls:'icon-save-project'">
-      Save Files
-     </div> 
-     <div onclick="deleteFile()" data-options="iconCls:'icon-delete-file'">
-      Delete File
-     </div> 
-     <div onclick="renameFile()" data-options="iconCls:'icon-rename-file'">
-      Rename File
-     </div> 
-     <div onclick="downloadFile()" data-options="iconCls:'icon-download-file'">
-      Download File
-     </div> 
-     <div onclick="openFileUpload()" data-options="iconCls:'icon-upload-file'">
-      Upload File
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="newDir()" data-options="iconCls:'icon-add-dir'">
-      New Directory
-     </div> 
-     <div onclick="deleteDir()" data-options="iconCls:'icon-delete-file'">
-      Delete Directory
-     </div> 
-     <div onclick="renameFile()" data-options="iconCls:'icon-rename-file'">
-      Rename Directory
-     </div> 
-    </div> 
-    <div id="mm2" style="width:200px;"> 
-     <div id="undo" data-options="iconCls:'icon-undo'">
-      Undo
-     </div> 
-     <div id="redo" data-options="iconCls:'icon-redo'">
-      Redo
-     </div> 
-     <div class="menu-sep"></div> 
-     <div id="cut" data-options="iconCls:'icon-cut'">
-      Cut
-     </div> 
-     <div id="copy" data-options="iconCls:'icon-copy'">
-      Copy
-     </div> 
-     <div id="paste" data-options="iconCls:'icon-paste'">
-      Paste
-     </div> 
-     <div id="delete" data-options="iconCls:'icon-delete'">
-      Delete
-     </div> 
-     <div id="select" data-options="iconCls:'icon-select'">
-      Select All
-     </div> 
-     <div class="menu-sep"></div> 
-     <div id="find" data-options="iconCls:'icon-find'">
-      Find
-     </div> 
-     <div id="findreplace" data-options="iconCls:'icon-replace'">
-      Find and Replace
-     </div> 
-    </div> 
-    <div id="mm3" style="width:200px;"> 
-     <div id="editor-theme" data-options="iconCls:'icon-editor-theme'">
-      <span>Editor Theme</span> 
-      <div> 
-       <div onclick="setEditorTheme('chrome');">
-        Chrome
-       </div> 
-       <div onclick="setEditorTheme('crimson_editor');">
-        Crimson Editor
-       </div> 
-       <div onclick="setEditorTheme('dreamweaver');">
-        Dreamweaver
-       </div> 
-       <div onclick="setEditorTheme('eclipse');">
-        Eclipse
-       </div> 
-       <div onclick="setEditorTheme('github');">
-        Github
-       </div> 
-       <div onclick="setEditorTheme('kuroir');">
-        Kuroir
-       </div> 
-       <div onclick="setEditorTheme('solarized_light');">
-        Solarized Light
-       </div> 
-       <div onclick="setEditorTheme('solarized_dark');">
-        Solarized Dark
-       </div> 
-       <div onclick="setEditorTheme('xcode');">
-        XCode
-       </div> 
-       <div onclick="setEditorTheme('ambiance');">
-        Ambiance
-       </div> 
-       <div onclick="setEditorTheme('cobalt');">
-        Cobalt
-       </div> 
-       <div onclick="setEditorTheme('idle_fingers');">
-        idle Fingers
-       </div> 
-       <div onclick="setEditorTheme('kr_theme');">
-        krTheme
-       </div> 
-       <div onclick="setEditorTheme('mono_industrial');">
-        Mono Industrial
-       </div> 
-       <div onclick="setEditorTheme('monokai');">
-        Monokai
-       </div> 
-       <div onclick="setEditorTheme('terminal');">
-        Terminal
-       </div> 
-       <div onclick="setEditorTheme('textmate');">
-        Textmate
-       </div> 
-       <div onclick="setEditorTheme('tomorrow');">
-        Tomorrow
-       </div> 
-       <div onclick="setEditorTheme('twilight');">
-        Twilight
-       </div> 
-       <div onclick="setEditorTheme('vibrant_ink');">
-        Vibrant Ink
-       </div> 
-      </div> 
-     </div> 
-     <div id="font-size" data-options="iconCls:'icon-font-size'">
-      <span>Font Size</span> 
-      <div> 
-       <div onclick="setEditorFontSize('8');">
-        8px
-       </div> 
-       <div onclick="setEditorFontSize('9');">
-        9px
-       </div> 
-       <div onclick="setEditorFontSize('10');">
-        10px
-       </div> 
-       <div onclick="setEditorFontSize('11');">
-        11px
-       </div> 
-       <div onclick="setEditorFontSize('12');">
-        12px
-       </div> 
-       <div onclick="setEditorFontSize('13');">
-        13px
-       </div> 
-       <div onclick="setEditorFontSize('14');">
-        14px
-       </div> 
-       <div onclick="setEditorFontSize('15');">
-        15px
-       </div> 
-       <div onclick="setEditorFontSize('16');">
-        16px
-       </div> 
-       <div onclick="setEditorFontSize('17');">
-        17px
-       </div> 
-       <div onclick="setEditorFontSize('18');">
-        18px
-       </div> 
-       <div onclick="setEditorFontSize('20');">
-        20px
-       </div> 
-       <div onclick="setEditorFontSize('22');">
-        22px
-       </div> 
-       <div onclick="setEditorFontSize('24');">
-        24px
-       </div> 
-      </div> 
-     </div> 
-     <div id="tab-size" data-options="iconCls:'icon-tab-size'">
-      <span>Tab Size</span> 
-      <div> 
-       <div onclick="setEditorTabSize('1');">
-        1
-       </div> 
-       <div onclick="setEditorTabSize('2');">
-        2
-       </div> 
-       <div onclick="setEditorTabSize('3');">
-        3
-       </div> 
-       <div onclick="setEditorTabSize('4');">
-        4
-       </div> 
-       <div onclick="setEditorTabSize('5');">
-        5
-       </div> 
-       <div onclick="setEditorTabSize('6');">
-        6
-       </div> 
-       <div onclick="setEditorTabSize('7');">
-        7
-       </div> 
-       <div onclick="setEditorTabSize('8');">
-        8
-       </div> 
-      </div> 
-     </div> 
-     <div id="soft-wrap" data-options="iconCls:'icon-soft-wrap'">
-      <span>Soft Wrap</span> 
-      <div> 
-       <div onclick="setEditorSoftWrap('true');">
-        On
-       </div> 
-       <div onclick="setEditorSoftWrap('false');">
-        Off
-       </div> 
-       <div onclick="setEditorSoftWrap('40');">
-        40 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('60');">
-        60 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('80');">
-        80 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('100');">
-        100 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('120');">
-        120 Chars
-       </div> 
-       <div onclick="setEditorSoftWrap('140');">
-        140 Chars
-       </div> 
-      </div> 
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="setEditorInvisible(true);" data-options="iconCls:'icon-show-invisible'">
-      Show Invisible
-     </div> 
-     <div onclick="setEditorInvisible(false);" data-options="iconCls:'icon-hide-invisible'">
-      Hide Invisible
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="setEditorGutter(true);" data-options="iconCls:'icon-show-gutter'">
-      Show Gutter
-     </div> 
-     <div onclick="setEditorGutter(false);" data-options="iconCls:'icon-hide-gutter'">
-      Hide Gutter
-     </div> 
-    </div> 
-    <div id="mm4" style="width:200px;"> 
-     <div onclick="createProject('http://www.tutorialspoint.com/codingground.htm')" data-options="iconCls:'icon-create-project'">
-      <span>New Project</span> 
-     </div> 
-     <!--
-     <div onclick="refreshProject();" data-options="iconCls:'icon-refresh-project'">Refresh Project</div>
---> 
-     <div onclick="renameProject();" data-options="iconCls:'icon-rename-file'">
-      Rename Project
-     </div> 
-     <div class="menu-sep"></div> 
-     <div data-options="iconCls:'icon-save-project'">
-      <span>Save Project</span> 
-      <div> 
-       <div onclick="saveAtDropbox()" data-options="iconCls:'icon-dropbox'">
-        Save at Dropbox
-       </div> 
-       <div onclick="saveAtGithub()" data-options="iconCls:'icon-github'">
-        Save at GitHub
-       </div> 
-       <div onclick="saveAtGoogleDrive()" data-options="iconCls:'icon-google-drive'">
-        Save at Google Drive
-       </div> 
-       <div onclick="saveAtOneDrive()" data-options="iconCls:'icon-one-drive'">
-        Save at OneDrive
-       </div> 
-      </div> 
-     </div> 
-     <div data-options="iconCls:'icon-export-project'">
-      <span>Import Project</span> 
-      <div> 
-       <div onclick="listDropboxProjects()" data-options="iconCls:'icon-dropbox'">
-        Import Project from Dropbox
-       </div> 
-       <div onclick="listGithubProjects()" data-options="iconCls:'icon-github'">
-        Import Project from GitHub
-       </div> 
-       <div onclick="listGoogleDriveProjects()" data-options="iconCls:'icon-google-drive'">
-        Import Project from Google Drive
-       </div> 
-       <div onclick="listOneDriveProjects()" data-options="iconCls:'icon-one-drive'">
-        Import Project from OneDrive
-       </div> 
-      </div> 
-     </div> 
-     <div data-options="iconCls:'icon-delete-file'">
-      <span>Delete Project</span> 
-      <div> 
-       <div onclick="listDropboxProjects()" data-options="iconCls:'icon-dropbox'">
-        Delete Project from Dropbox
-       </div> 
-       <div onclick="listGithubProjects()" data-options="iconCls:'icon-github'">
-        Delete Project from GitHub
-       </div> 
-       <div onclick="listGoogleDriveProjects()" data-options="iconCls:'icon-google-drive'">
-        Delete Project from Google Drive
-       </div> 
-       <div onclick="listOneDriveProjects()" data-options="iconCls:'icon-one-drive'">
-        Delete Project from OneDrive
-       </div> 
-      </div> 
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="downloadProject()" data-options="iconCls:'icon-download-file'">
-      Download Project
-     </div> 
-     <div onclick="openUploadProject()" data-options="iconCls:'icon-upload-file'">
-      Upload Project
-     </div> 
-     <div class="menu-sep"></div> 
-     <div onclick="openShareProject()" data-options="iconCls:'icon-share-project'">
-      Share Project
-     </div> 
-     <div class="menu-sep"></div> 
-     <div id="compileoptions" onclick="openCompileOptions()" data-options="iconCls:'icon-execute-project'">
-      Compile Options
-     </div> 
-    </div> 
-   </div>
-   <!--HEADER ENDS --> 
-   <div id="east" data-options="region:'east',iconCls:'icon-library', title:'Tutorials', split:true" style="width:105px; border-left:5px solid #eee; overflow:hidden; background:#285627;"> 
-    <a href="/cplusplus/index.htm" title="Learn C++" target="_blank"> <img style="width:100px; height:80px;" src="/images/cplusplus_icon.png" alt="Learn C++"> </a> 
-    <a href="/java/index.htm" title="Learn Java" target="_blank"> <img style="width:100px; height:80px;" src="/images/java_icon.png" alt="Learn Java"> </a> 
-    <a href="/python/index.htm" title="Learn Python" target="_blank"> <img style="width:100px; height:80px;" src="/images/python_icon.png" alt="Learn Python"> </a> 
-    <a href="/ruby/index.htm" title="Learn Ruby" target="_blank"> <img style="width:100px; height:80px;" src="/images/ruby_icon.png" alt="Learn Ruby"> </a> 
-    <a href="/swift/index.htm" title="Learn Swift Programming" target="_blank"> <img style="width:100px; height:80px;" src="/images/swift_icon.png" alt="Learn Swift Programming"> </a> 
-    <a href="/scala/index.htm" title="Learn Scala" target="_blank"> <img style="width:100px; height:80px;" src="/images/scala_icon.png" alt="Learn Scala"> </a> 
-   </div> 
-   <div id="spectrum-tools" style="position:relative; display:none;"> 
-    <input type="text" id="spectrum"> 
-   </div> 
-   <div id="terminal-tools" style="position:relative;"> 
-    <a href="javascript:void(0);" onclick="setSpectrum()" class="icon-color"></a> 
-   </div> 
-   <div data-options="region:'west',onCollapse:doVertical, title:'Project',iconCls:'icon-project', split:true, tools: [{ iconCls:'icon-save-project', handler:function(){saveFiles( function( status ){ return true; } )} },{ iconCls:'icon-refresh-project', handler:function(){reloadTree()} },{ iconCls:'icon-add-file', handler:function(){newFile()} }]" style="width:250px;"> 
-    <ul id="home" class="easyui-tree" data-options="method:'GET', animate:true,lines:true"> 
-     <div id="treewait"> 
-      <img style="margin-left:4px;margin-top:3px;width:28px; height:28px;" src="/codingground/images/loading.gif"> 
-     </div> 
-    </ul> 
-   </div> 
-   <div id="south" data-options="region:'south', iconCls:'icon-terminal', split:true, tools:'#terminal-tools',title:'Terminal'" style="width:300px;">
-    <!--FOOTER STARTS --> 
-    <div id="terminal" style="padding:0px; margin:0px;overflow:hidden;"></div> 
-   </div>
-   <!--FOOTER ENDS --> 
-   <div data-options="region:'center'" style="padding:0px;background:#eee;">
-    <!--CODE AREA STARTS --> 
-    <div data-options="fit:true,border:false,tools:'#tab-tools',toolPosition:'left'" id="codebox" class="easyui-tabs" style="width:55%;"> 
-    </div> 
-    <div id="tab-tools" style="border-top:0px; border-right:0px;"> 
-     <div id="wait" style="display:none"> 
-      <img style="margin-left:4px;margin-top:3px;width:28px; height:28px;" src="/codingground/images/loading.gif"> 
-     </div> 
-     <a href="javascript:void(0)" id="compile" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-execute-project'" style="white-space:nowrap;"><b>Compile</b></a> 
-     <a href="javascript:void(0)" id="preview" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-execute-project'" style="white-space:nowrap;"><b>Preview</b></a> 
-     <a href="javascript:void(0)" id="separator" class="easyui-linkbutton" data-options="plain:true" style="white-space:nowrap;"><b>|</b></a> 
-     <a href="javascript:void(0)" id="execute" class="easyui-linkbutton" data-options="plain:true" style="white-space:nowrap;"><b>Execute</b></a> 
-     <a href="javascript:void(0)" id="separator" class="easyui-linkbutton" data-options="plain:true" style="white-space:nowrap;"><b>|</b></a> 
-     <a href="javascript:void(0)" id="share" onclick="openShareProject()" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-share-project'" style="white-space:nowrap;"><b>Share Project</b></a> 
-    </div> 
-   </div>
-   <!--CODE AREA STARTS -->   
-  </form>
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>    
  </body>
 </html>
