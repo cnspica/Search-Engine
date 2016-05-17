@@ -23,8 +23,8 @@ public class Client {
         searchEngineInterface = service.getPort(SearchEngineInterface.class);
     }
 
-    public String search(String query){
-        return searchEngineInterface.search(query);
+    public String search(String searchString){
+        return searchEngineInterface.search(searchString);
     }
 
     public static void main(String[] args) throws MalformedURLException {

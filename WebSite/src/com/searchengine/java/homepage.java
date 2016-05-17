@@ -22,16 +22,8 @@ public class homepage extends HttpServlet{
                       HttpServletResponse response)
             throws ServletException, IOException
     {
-        // Set response content type
+        response.setStatus(200);
         response.setContentType("text/html");
-
-//        ServletContext context = getServletContext();
-//        String path = context.getRealPath("/res/html/homepage.html");
-
-//        PrintWriter out = response.getWriter();
-//        out.println("<h1>" + "Hello This is the Homepage" +  "</h1>");
-//        out.println("<p>"+" the current dir is : "+path+"</p>");
-
         RequestDispatcher rd = request.getRequestDispatcher("/res/html/homepage.html");
         rd.forward(request, response);
     }

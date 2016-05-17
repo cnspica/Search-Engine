@@ -13,6 +13,6 @@ public class SearchEngineWebService implements SearchEngineInterface{
     public String search(String query)
     {
         // Use the other Search Engine Parts to get the results of the Search then return
-        return query;
+        return "Client Succeeded";
     }
 }
