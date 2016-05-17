@@ -22,9 +22,9 @@ public class search extends HttpServlet {
         Client client = new Client();
         response.setStatus(200);
         response.setContentType("text/html");
-        String feedback = client.search(request.getParameter("q"));
+        String results = client.search(request.getParameter("q"));
         PrintWriter out = response.getWriter();
-        out.println("<h1>" + "This is the Search Page: " + feedback+ "</h1>");
+        out.println("<h1>" + "This is the Search Page: " + results+ "</h1>");
 
 //        RequestDispatcher rd = request.getRequestDispatcher("");
 //        rd.forward(request, response);
