@@ -25,8 +25,8 @@ public class homepage extends HttpServlet{
         // Set response content type
         response.setContentType("text/html");
 
-        ServletContext context = getServletContext();
-        String path = context.getRealPath("/res/html/homepage.html");
+//        ServletContext context = getServletContext();
+//        String path = context.getRealPath("/res/html/homepage.html");
 
 //        PrintWriter out = response.getWriter();
 //        out.println("<h1>" + "Hello This is the Homepage" +  "</h1>");
