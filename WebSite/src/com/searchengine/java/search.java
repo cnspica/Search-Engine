@@ -6,7 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+import java.util.List;
+import com.searchengine.queryprocessors.PhraseDocument;
+import com.searchengine.queryprocessors.QueryResult;
 import com.searchengine.ws.Client;
 
 /**
@@ -22,10 +24,11 @@ public class search extends HttpServlet {
         Client client = new Client();
         response.setStatus(200);
         response.setContentType("text/html");
-        String feedback = client.search(request.getParameter("q"));
+        List<QueryResult> feedback = client.search(request.getParameter("q"));
         PrintWriter out = response.getWriter();
-        out.println("<h1>" + "This is the Search Page: " + feedback+ "</h1>");
-
+        for(QueryResult t : feedback){
+        out.println("<a href=\"" +t.getUrl() + "\"/>" + t.getTitle() + "<br/>");
+        }
 //        RequestDispatcher rd = request.getRequestDispatcher("");
 //        rd.forward(request, response);
     }

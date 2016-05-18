@@ -1,9 +1,12 @@
 package com.searchengine.ws;
+import com.searchengine.queryprocessors.*;
+import com.searchengine.queryprocessors.PhraseDocument;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
 /**
  * Author : mostafa
@@ -23,7 +26,7 @@ public class Client {
         searchEngineInterface = service.getPort(SearchEngineInterface.class);
     }
 
-    public String search(String searchString){
+    public List<QueryResult> search(String searchString){
         return searchEngineInterface.search(searchString);
     }
 
@@ -32,6 +35,6 @@ public class Client {
         qName = new QName("http://ws.searchengine.com/", "SearchEngineWebServiceService");
         service = Service.create(url, qName);
         searchEngineInterface = service.getPort(SearchEngineInterface.class);
-        System.out.println(searchEngineInterface.search("Query"));
+        System.out.println(((List<QueryResult>)(searchEngineInterface.search("Ruby on Rails"))).get(0).getUrl());
     }
 }
