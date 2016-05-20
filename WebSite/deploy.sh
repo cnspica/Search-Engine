@@ -2,6 +2,10 @@
 set -e
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
+echo "cleaning..."
+sudo rm -rf /var/lib/tomcat7/webapps/ROOT/WEB-INF/classes/*
+sudo rm -rf /var/lib/tomcat7/webapps/ROOT/res/
+sudo mkdir -p /var/lib/tomcat7/webapps/ROOT/WEB-INF/classes/com/searchengine/
 echo "Deploying to tomcat...."
 sudo cp ../out/production/WebSite/web.xml /var/lib/tomcat7/webapps/ROOT/WEB-INF/
 sudo cp -r ../out/production/WebSite/com /var/lib/tomcat7/webapps/ROOT/WEB-INF/classes/
