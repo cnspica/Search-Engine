@@ -3,11 +3,11 @@ APT Project
 
 To run this project:
 
-1- make the project
-2- run the SearchEnginePublisher main function
-3- run as sudo the deploy file located at the WebSite module
-4- visit http://127.0.0.1:8080/
-5- have fun
+- make the project
+- run the SearchEnginePublisher main function
+- run as sudo the deploy file located at the WebSite module
+- visit http://127.0.0.1:8080/
+- have fun
 
 
 Dev Instructions:
