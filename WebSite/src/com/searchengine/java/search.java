@@ -1,11 +1,11 @@
 package com.searchengine.java;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import com.searchengine.ws.Client;
 
@@ -22,11 +22,16 @@ public class search extends HttpServlet {
         Client client = new Client();
         response.setStatus(200);
         response.setContentType("text/html");
-       // String results = client.search(request.getParameter("q"));
-        PrintWriter out = response.getWriter();
-        out.println("<h1>" + "This is the Search Page: </h1>");
-
-//        RequestDispatcher rd = request.getRequestDispatcher("");
-//        rd.forward(request, response);
+        String query = request.getParameter("q");
+        if (query == null){
+            RequestDispatcher rd = request.getRequestDispatcher("home");
+            rd.forward(request, response);
+        }else {
+            String results = client.search(query);
+            RequestDispatcher rd = request.getRequestDispatcher("/res/html/search.jsp");
+            request.setAttribute("searchResults",results);
+            request.setAttribute("searchText",query);
+            rd.forward(request, response);
+        }
     }
 }

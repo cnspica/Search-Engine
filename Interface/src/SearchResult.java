@@ -2,6 +2,7 @@
  * Created by hanaa mohamed on 3/29/16.
  */
 
+import com.searchengine.queryprocessors.Controller;
 import org.tartarus.snowball.SnowballStemmer;
 
 import java.sql.ResultSet;

@@ -1,11 +1,7 @@
 package com.searchengine.ws;
 
-import com.searchengine.queryprocessors.PhraseDocument;
-import com.searchengine.queryprocessors.QueryResult;
-
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-import java.util.List;
 
 /**
  * Author : mostafa
@@ -16,5 +12,5 @@ import java.util.List;
 @WebService
 public interface SearchEngineInterface {
     @WebMethod
-    List<QueryResult> search(String query);
+    String search(String query);
 }

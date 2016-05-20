@@ -1,8 +1,9 @@
 package com.searchengine.ws;
-import javax.jws.WebService;
-import com.searchengine.queryprocessors.*;
 
-import java.util.List;
+import javax.jws.WebService;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.searchengine.queryprocessors.*;
 
 /**
  * Author : mostafa
@@ -14,11 +15,16 @@ import java.util.List;
 public class SearchEngineWebService implements SearchEngineInterface{
 
     @Override
-    public List<QueryResult> search(String query)
+    public String search(String query)
     {
-       QueryProcessor p = new QueryProcessor();
+        Gson gson = new Gson();
 
-        // Use the other Search Engine Parts to get the results of the Search then return
-        return p.find(query);
+        //TODO: Hanaa & Nems Should fill this spot with whatever code they like and return a json object
+        PhraseSearch p = new PhraseSearch();
+
+        //TODO: Assuming p.find() returns the result
+        String results = gson.toJson(p.searchForPhrase(query));
+        results = results.replace("\\\"","&quot;");
+        return results;
     }
 }
