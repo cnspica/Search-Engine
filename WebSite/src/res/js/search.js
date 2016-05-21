@@ -103,6 +103,10 @@ function generateResults(){
 }
 
 function generateResult(index){
+    if(links[index].snippet === undefined){
+        links[index].snippet = "This is Just a Snippet that is too long and have no idea what is that site or what it is about";
+    }
+
     var $result = $(document.createElement('div'));
     $result.addClass("result");
     
@@ -119,7 +123,7 @@ function generateResult(index){
     
     var $resultSnippet = $(document.createElement('div'));
     $resultSnippet.addClass("resultSnippet");
-    $resultSnippet.html("This is Just a Snippet that is too long and have no idea what is that site or what it is about");
+    $resultSnippet.html(links[index].snippet);
     
     var $resultExtra = $(document.createElement('div'));
     $resultExtra.addClass("resultExtra");
